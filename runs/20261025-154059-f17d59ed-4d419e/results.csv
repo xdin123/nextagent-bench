@@ -1,2 +1,0 @@
-﻿task,outcome,score,reward,model,framework_sha,attempt,sessionId,elapsed_seconds,agent_seconds,model_rounds,tool_calls,input_tokens,output_tokens,skills_provided,skills_discoverable,skills_invoked,failed_tests,error,evidence_complete,evidence
-3d-scan-calc,PREFLIGHT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,463.594,,,,,,mesh-analysis,,,,NextAgent bootstrap did not become ready,True,C:\Project\nextagent-bench\runs\20261025-154059-f17d59ed-4d419e\tasks\3d-scan-calc\attempt-001

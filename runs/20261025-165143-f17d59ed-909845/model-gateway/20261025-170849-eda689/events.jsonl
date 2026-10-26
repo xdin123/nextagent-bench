@@ -1,2 +1,0 @@
-{"event": "model.proxy.ready", "credentials": ["default", "shared-01", "shared-02", "shared-03", "shared-04"], "quota_shared": true}
-{"event": "model.proxy.attempt", "request": "b82671224e5f4d7ca9c2d7d52b93dea4", "attempt": 1, "credential": "default", "status": 200, "duration_seconds": 20.462, "group_cooldown_seconds": 0, "credential_disabled": false, "response_started": true, "error_kind": null, "context": {"task": "schema-probe", "attempt": 1, "purpose": "analysis"}}

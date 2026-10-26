@@ -1,7 +1,0 @@
-{
-  "status": "ANALYSIS_INCOMPLETE",
-  "created_at": "2026-10-25T09:07:09.424850+00:00",
-  "directory": "C:\\Project\\nextagent-bench\\runs\\20261025-165143-f17d59ed-909845\\tasks\\3d-scan-calc\\attempt-001\\analysis\\20261025-170234",
-  "error": "Diagnostic output is missing required sections",
-  "note": "Evidence packet retained where available; no unsupported root cause asserted. Retry diagnostics without rerunning the task."
-}

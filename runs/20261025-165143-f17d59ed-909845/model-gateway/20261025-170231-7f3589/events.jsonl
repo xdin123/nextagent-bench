@@ -1,2 +1,0 @@
-{"event": "model.proxy.ready", "credentials": ["default"], "quota_shared": true}
-{"event": "model.proxy.attempt", "request": "27271d79166348f0833aacce7aef8f36", "attempt": 1, "credential": "default", "status": 200, "duration_seconds": 270.928, "group_cooldown_seconds": 0, "credential_disabled": false, "response_started": true, "error_kind": null, "context": {"task": "3d-scan-calc", "attempt": 1, "purpose": "analysis"}}

@@ -5,7 +5,7 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T05:35:00.419912+00:00",
-  "phase": "container_setup",
+  "phase": "agent",
   "status": "RUNNING",
   "budgets": {
     "task": "setup-fuzzing-py",
@@ -23,12 +23,16 @@
   "reward": null,
   "phase_seconds": {
     "queued": 460.235,
-    "build": 1446.625
+    "build": 1446.625,
+    "container_setup": 897.937,
+    "bootstrap": 5.469,
+    "skill_preflight": 0.484,
+    "workspace_preflight": 16.36
   },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 1906.86,
+  "elapsed_seconds": 2827.625,
   "environment": {
     "image_id": "sha256:eab4346303b9703ca6256085d60b156c42bb826bcda0f912f572814343be37f1",
     "environment_sha": "68881085b80a0dd4ab00f05f4339a288438798c4f09326a4833dd580e40cbd5f",
@@ -54,5 +58,16 @@
       "description": "When given a Python project codebase, this skill helps the agent to set up virtual environments, install dependencies, and run scripts.",
       "sha256": "7b95dc92985ab21b131c5f1d14ec05cf27d145c5384e28bbf3022c7ea89f4202"
     }
-  ]
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-setup-fuzzing-py-1",
+  "skills_discoverable": [
+    "discover-important-function",
+    "fuzzing-python",
+    "setup-env"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-7d8fe2a3-2c0d-4371-95b0-bb12d56e1316",
+  "runId": "run-53327e5e-13fb-4db6-8178-59a4485b457d",
+  "requestId": "request-c485f205-a843-4f53-bef1-f114bbf22240",
+  "accepted_at": "2026-10-26T06:22:08.045803+00:00"
 }

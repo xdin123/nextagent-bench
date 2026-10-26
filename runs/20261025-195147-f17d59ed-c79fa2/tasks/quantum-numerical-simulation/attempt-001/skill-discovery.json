@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "qutip"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "qutip"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "discover-important-function",
+    "fuzzing-python",
+    "setup-env"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "discover-important-function"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "fuzzing-python"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "setup-env"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}
