@@ -38,6 +38,21 @@ class PathAdaptationTests(unittest.TestCase):
 
 
 class ConfigurationTests(unittest.TestCase):
+    def test_legacy_exclusion_setting_cannot_remove_configured_hook(self):
+        import shutil
+        import yaml
+        from nextagent_bench.settings import load_settings
+        project = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(project / "profiles", root / "profiles")
+            config = yaml.safe_load((project / "evaluation.yaml").read_text(encoding="utf-8"))
+            config["excluded_agent_hooks"] = ["developer-hook-trace.loop-raw-boundary"]
+            (root / "evaluation.yaml").write_text(yaml.safe_dump(config), encoding="utf-8")
+            effective = load_settings(root)
+            template = yaml.safe_load((root / "profiles/agent.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(effective["effective_agent"]["hooks"], template["hooks"])
+
     def test_yaml_task_budgets_are_nested(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)
@@ -50,11 +65,11 @@ class ConfigurationTests(unittest.TestCase):
     def test_two_config_files_preserve_user_settings_and_record_overrides(self):
         system = {"models": {"profiles": [{"models": [{"temperature": 0.2, "maxOutputTokens": 10240}]}]}, "memory": {"enabled": True}, "paths": {"agentRoot": "agents"}}
         agent = {"agentId": "default-agent", "runtimeSettings": {"guardrailEnabled": False, "maxTurns": 50}, "hooks": [{"hookId": "developer-hook-trace.loop-raw-boundary"}, {"hookId": "user-query-memory-recall"}]}
-        config, definition, changes = effective_configs(system, agent, ["developer-hook-trace.loop-raw-boundary"])
+        config, definition, changes = effective_configs(system, agent)
         self.assertEqual(config["models"], system["models"])
         self.assertFalse(definition["runtimeSettings"]["guardrailEnabled"])
         self.assertEqual(definition["runtimeSettings"]["maxTurns"], 50)
-        self.assertEqual(definition["hooks"], [{"hookId": "user-query-memory-recall"}])
+        self.assertEqual(definition["hooks"], agent["hooks"])
         self.assertTrue(changes)
         self.assertEqual(len(agent["hooks"]), 2)
 

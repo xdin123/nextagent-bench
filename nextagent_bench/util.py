@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import hashlib
+import contextlib
 import json
 import os
 import re
+import signal
 import subprocess
 import uuid
 from datetime import datetime, timezone
@@ -16,14 +18,25 @@ def now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def fs_path(path: Path) -> Path:
+    """Extended Windows path for local Python I/O; keep CLI arguments unchanged."""
+    if os.name != "nt":
+        return path
+    value = os.path.abspath(path)
+    if value.startswith("\\\\?\\"):
+        return Path(value)
+    return Path("\\\\?\\UNC\\" + value[2:] if value.startswith("\\\\") else "\\\\?\\" + value)
+
+
 def read_document(path: Path) -> dict:
-    value = yaml.safe_load(path.read_text(encoding="utf-8-sig"))
+    value = yaml.safe_load(fs_path(path).read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
         raise ValueError(f"Expected a mapping: {path}")
     return value
 
 
 def write_json(path: Path, value: object) -> None:
+    path = fs_path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + f".{uuid.uuid4().hex}.tmp")
     temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -31,7 +44,7 @@ def write_json(path: Path, value: object) -> None:
 
 
 def read_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(fs_path(path).read_text(encoding="utf-8"))
 
 
 def digest(value: object) -> str:
@@ -39,11 +52,12 @@ def digest(value: object) -> str:
 
 
 def file_sha(path: Path) -> str:
-    with path.open("rb") as stream:
+    with fs_path(path).open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
 def tree_manifest(root: Path, exclude: tuple[str, ...] = ()) -> dict[str, str]:
+    root = fs_path(root)
     output = {}
     for path in sorted(root.rglob("*")):
         relative = path.relative_to(root)
@@ -74,16 +88,31 @@ class CommandError(RuntimeError):
     pass
 
 
+def _stop_process_tree(process: subprocess.Popen) -> None:
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/PID", str(process.pid), "/T", "/F"],
+                       capture_output=True, timeout=10, check=False,
+                       creationflags=subprocess.CREATE_NO_WINDOW)
+    else:
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+    if process.poll() is None:
+        process.kill()
+    process.wait(timeout=10)
+
+
 def archive_from_container(container: str, source: str, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = destination.with_suffix(".partial.tar")
     with temporary.open("wb") as stream:
-        process = subprocess.Popen(["docker", "cp", container + ":" + source, "-"], stdout=stream, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["docker", "cp", container + ":" + source, "-"], stdout=stream, stderr=subprocess.PIPE,
+                                   start_new_session=os.name != "nt")
         try:
             _, errors = process.communicate(timeout=600)
         except BaseException:
-            process.kill()
-            process.wait()
+            _stop_process_tree(process)
             raise
     if process.returncode:
         raise CommandError(sanitize("Archive export failed: " + errors.decode("utf-8", errors="replace")[-800:]))
@@ -94,16 +123,21 @@ def command(args: list[str], *, timeout: float = 120, input_text: str | None = N
             log: Path | None = None, check: bool = True, env: dict | None = None) -> subprocess.CompletedProcess:
     if log:
         log.parent.mkdir(parents=True, exist_ok=True)
-        # Build/verifier artifacts remain readable while the process is running.
-        # Secrets are never supplied as build arguments or verifier environment.
-        with log.open("w", encoding="utf-8") as stream:
-            completed = subprocess.run(args, input=input_text, stdout=stream, stderr=subprocess.STDOUT,
-                                       text=True, encoding="utf-8", errors="replace", timeout=timeout, env=env)
-        tail = log.read_text(encoding="utf-8", errors="replace")[-3000:] if completed.returncode else ""
-        result = subprocess.CompletedProcess(args, completed.returncode, "", sanitize(tail))
-    else:
-        result = subprocess.run(args, input=input_text, capture_output=True, text=True,
-                                encoding="utf-8", errors="replace", timeout=timeout, env=env)
+    with contextlib.ExitStack() as stack:
+        stream = stack.enter_context(log.open("w", encoding="utf-8")) if log else subprocess.PIPE
+        process = subprocess.Popen(args, stdin=subprocess.PIPE if input_text is not None else None,
+                                   stdout=stream, stderr=subprocess.STDOUT if log else subprocess.PIPE,
+                                   text=True, encoding="utf-8", errors="replace", env=env,
+                                   start_new_session=os.name != "nt")
+        try:
+            output, errors = process.communicate(input_text, timeout=timeout)
+        except BaseException:
+            _stop_process_tree(process)
+            process.communicate(timeout=10)
+            raise
+    if log:
+        errors = log.read_text(encoding="utf-8", errors="replace")[-3000:] if process.returncode else ""
+    result = subprocess.CompletedProcess(args, process.returncode, output or "", sanitize(errors or ""))
     if check and result.returncode:
         raise CommandError(sanitize(f"{args[0]} exited {result.returncode}: {(result.stderr or result.stdout)[-3000:]}"))
     return result

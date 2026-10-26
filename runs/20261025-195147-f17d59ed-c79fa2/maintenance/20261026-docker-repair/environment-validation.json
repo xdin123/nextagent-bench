@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-26T09:16:17.552917+00:00",
+  "purpose": "Environment preparation only; no Agent/model/verifier rerun, no historical result changes.",
+  "tasks": [
+    {
+      "task": "threejs-to-obj",
+      "image": "nextagent-bench/environment:8439f3456dc22cb5bd02",
+      "status": "SUCCEEDED",
+      "image_id": "sha256:54444a185a0e5d0d8f1b9bceec9f15347e395a7b4bca8f429cec0fd2a60f5cfe",
+      "workdir": "/root",
+      "frozen_environment_unchanged": true
+    },
+    {
+      "task": "paratransit-routing",
+      "image": "nextagent-bench/environment:60d9ebf7da0d52ae2e1a",
+      "status": "SUCCEEDED",
+      "image_id": "sha256:77bd2a3caefddf5e3833ef9975119c708cea8cdc681f47513734c2bbe4a89694",
+      "workdir": "/root",
+      "frozen_environment_unchanged": true
+    }
+  ],
+  "status": "SUCCEEDED",
+  "finished_at": "2026-10-26T09:27:18.951378+00:00"
+}

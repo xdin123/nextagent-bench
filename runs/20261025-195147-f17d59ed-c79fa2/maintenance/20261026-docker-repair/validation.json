@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-26T09:35:58.466860+00:00",
+  "source_adapter_sha": "f194e76e20c46541ca19117cf27257846c27aeca7f485cdb0ce73baecbfb2856",
+  "tests": {
+    "command": "NAB_DOCKER_TESTS=1 python -m unittest discover -s tests",
+    "total": 65,
+    "passed": 65,
+    "skipped": 0
+  },
+  "hook_policy": "Use both profile files unchanged for plugins/hooks; filter removed; no new startup checks.",
+  "red_reproductions": [
+    "configured hook was omitted",
+    "relocated /tmp mode was 0755 instead of 1777",
+    "timed-out command left owned child running / delayed pipe closure"
+  ],
+  "original_result_and_config_hashes_unchanged": 94,
+  "agent_reruns": 0,
+  "global_docker_wsl_changes": true,
+  "model_calls": 0,
+  "historical_result_policy": "All previous scores, attempts, frozen configs and execution source snapshots retained.",
+  "source_snapshot": "source",
+  "environment_prebuild_status": "SUCCEEDED",
+  "tmp_apt_probe_status": "SUCCEEDED",
+  "global_change_authorized": true,
+  "memory_change_validation": "memory-change-validation.json",
+  "druid_16g_admission": "VERIFIED"
+}

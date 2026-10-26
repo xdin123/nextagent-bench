@@ -1,0 +1,16 @@
+{
+  "image": "nextagent-bench/environment:60d9ebf7da0d52ae2e1a",
+  "context": "C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\paratransit-routing\\environment",
+  "budget_seconds": 600,
+  "attempts": [
+    {
+      "number": 1,
+      "log": "environment-build.log",
+      "timeout_seconds": 600.0,
+      "elapsed_seconds": 106.57900000002701,
+      "outcome": "SUCCEEDED",
+      "retry": false
+    }
+  ],
+  "status": "SUCCEEDED"
+}

@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import json
+import contextlib
 import os
+import re
 import shutil
+import subprocess
 import tarfile
+import time
 from pathlib import Path
 
 import yaml
@@ -15,6 +19,52 @@ NODE = "/opt/na-eval/node/bin/node"
 HELPER = "/opt/na-eval/runtime/helper.mjs"
 
 
+def build_image(image: str, context: Path, timeout: float, log: Path) -> None:
+    """Retry only transient downloads, within one unchanged build-time budget."""
+    deadline = time.monotonic() + timeout
+    audit = {"image": image, "context": str(context), "budget_seconds": timeout, "attempts": [], "status": "RUNNING"}
+    audit_path = log.with_name(log.name + ".attempts.json")
+    network = re.compile(r"502\s+Bad Gateway|503\s+Service Unavailable|504\s+Gateway Timeout|"
+                         r"(?:Unable|Could not|Failed) to connect|Connection (?:failed|reset|timed out)|"
+                         r"Temporary failure resolving|Could not resolve host|SSLEOFError|"
+                         r"SSL:.*(?:EOF|TLS)|TLS handshake timeout|ReadTimeoutError|"
+                         r"unexpected EOF|failed to do request:.*\bEOF\b", re.IGNORECASE)
+    for number in range(1, 4):
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            audit["status"] = "FAILED"
+            write_json(audit_path, audit)
+            raise subprocess.TimeoutExpired(["docker", "build", image], timeout)
+        attempt_log = log if number == 1 else log.with_name(f"{log.stem}.retry-{number:03d}{log.suffix}")
+        started = time.monotonic()
+        try:
+            command(["docker", "build", "--progress=plain", "-t", image, str(context)],
+                    timeout=remaining, log=attempt_log)
+        except (CommandError, subprocess.TimeoutExpired) as error:
+            text = str(error)
+            if attempt_log.exists():
+                text += attempt_log.read_text(encoding="utf-8", errors="replace")[-65536:]
+            transient = isinstance(error, CommandError) and bool(network.search(text))
+            delay = 2 ** number
+            retry = transient and number < 3 and deadline - time.monotonic() > delay
+            audit["attempts"].append({"number": number, "log": attempt_log.name,
+                                      "timeout_seconds": remaining, "elapsed_seconds": time.monotonic() - started,
+                                      "outcome": "TIMEOUT" if isinstance(error, subprocess.TimeoutExpired) else
+                                      "TRANSIENT_NETWORK_ERROR" if transient else "BUILD_ERROR", "retry": retry})
+            audit["status"] = "RUNNING" if retry else "FAILED"
+            write_json(audit_path, audit)
+            if not retry:
+                raise
+            time.sleep(delay)
+        else:
+            audit["attempts"].append({"number": number, "log": attempt_log.name,
+                                      "timeout_seconds": remaining, "elapsed_seconds": time.monotonic() - started,
+                                      "outcome": "SUCCEEDED", "retry": False})
+            audit["status"] = "SUCCEEDED"
+            write_json(audit_path, audit)
+            return
+
+
 def ensure_task_image(project: Path, task: Path, framework_image: str, node_version: str, budget: dict,
                       log_dir: Path, legacy_image: str | None = None) -> tuple[str, dict]:
     environment_sha = digest(tree_manifest(task / "environment"))
@@ -22,7 +72,7 @@ def ensure_task_image(project: Path, task: Path, framework_image: str, node_vers
     if legacy_image:
         base = legacy_image
     elif command(["docker", "image", "inspect", base], check=False).returncode:
-        command(["docker", "build", "-t", base, str(task / "environment")], timeout=budget["build_timeout"], log=log_dir / "environment-build.log")
+        build_image(base, task / "environment", budget["build_timeout"], log_dir / "environment-build.log")
     fingerprint = digest({"base_id": json.loads(command(["docker", "image", "inspect", base]).stdout)[0]["Id"],
                           "framework": framework_image, "node": node_version})
     image = "nextagent-bench/task:" + fingerprint[:20]
@@ -36,7 +86,7 @@ def ensure_task_image(project: Path, task: Path, framework_image: str, node_vers
             "COPY --from=node_runtime /usr/local/bin/node /opt/na-eval/node/bin/node\n"
             f"COPY --from={framework_image} /opt/nextagent/ /opt/nextagent/\n"
             f"COPY --from={framework_image} /opt/na-eval/runtime/ /opt/na-eval/runtime/\n", encoding="utf-8")
-        command(["docker", "build", "-t", image, str(context)], timeout=budget["build_timeout"], log=log_dir / "agent-layer-build.log")
+        build_image(image, context, budget["build_timeout"], log_dir / "agent-layer-build.log")
     inspected = json.loads(command(["docker", "image", "inspect", image]).stdout)[0]
     return image, {"image_id": inspected["Id"], "environment_sha": environment_sha,
                    "workdir": inspected["Config"].get("WorkingDir") or "/root",
@@ -50,7 +100,7 @@ class Container:
         self.compose: list[str] | None = None
         self.created = False
 
-    def start(self, image: str, run_id: str) -> None:
+    def start(self, image: str, run_id: str, build_gate=None) -> None:
         composition = next((self.task / "environment" / name for name in ("docker-compose.yaml", "docker-compose.yml", "compose.yaml", "compose.yml")
                             if (self.task / "environment" / name).exists()), None)
         if composition:
@@ -85,7 +135,8 @@ class Container:
             self.compose = ["docker", "compose", "--project-directory", str(composition.parent), "-p", self.project_name, "-f", str(target)]
             write_json(self.directory / "compose-owner.json", {"project": self.project_name, "directory": str(composition.parent)})
             self.created = True
-            command(self.compose + ["up", "-d", "--build"], timeout=self.budget["build_timeout"], log=self.directory / "compose-start.log")
+            with (build_gate if build_gate is not None else contextlib.nullcontext()):
+                command(self.compose + ["up", "-d", "--build"], timeout=self.budget["build_timeout"], log=self.directory / "compose-start.log")
             self.name = command(self.compose + ["ps", "-q", main]).stdout.strip()
             if not self.name:
                 raise CommandError("Compose main container not found")

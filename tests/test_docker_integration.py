@@ -63,6 +63,14 @@ class DockerContractTests(unittest.TestCase):
         self.assertEqual(result[HOME + "/skills/fixture/SKILL.md"], "fixture")
         self.assertIsNone(result[HOME + "/skills/skills/fixture/SKILL.md"])
 
+    def test_tmp_bridge_preserves_sticky_permissions_for_unprivileged_tools(self):
+        self.container.exec(["sh", "-c", f"mkdir -p {HOME}/workspaces/execution/test/workspace; chmod 1777 /tmp"])
+        self.container.helper("bridge", {"mappings": make_mappings("/fixture", [])})
+        self.assertEqual(self.container.exec(["stat", "-c", "%a", "/tmp/."]).stdout.strip(), "1777")
+        result = command(["docker", "exec", "--user", "65534:65534", self.container.name, "sh", "-c",
+                          "p=$(mktemp /tmp/bench-permission.XXXXXX) && echo writable > \"$p\" && rm \"$p\""])
+        self.assertEqual(result.returncode, 0)
+
     def test_archive_preserves_workspace_and_extracts_only_logs(self):
         self.container.exec(["sh", "-c", f"mkdir -p {HOME}/logs {HOME}/workspaces; echo log > {HOME}/logs/run.jsonl; echo output > {HOME}/workspaces/result.txt; ln -s result.txt {HOME}/workspaces/link.txt"])
         target = self.directory / "nextagent-home.tar"

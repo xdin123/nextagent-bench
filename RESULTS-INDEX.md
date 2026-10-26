@@ -1,5 +1,8 @@
 # 评测结果入口
 
+- [历史失败原因与逐题证据](runs/20261025-195147-f17d59ed-c79fa2/failure-review/report.md)。
+- [评测工程修复说明](docs/maintenance-20261026.md)：按配置保留 Hook、临时目录权限、构建超时清理与有界重试。
+
 - [原全量结果整理](runs/20261025-195147-f17d59ed-c79fa2/RESULTS-SUMMARY.md)：87 题，39 题有评分；人工停止，未取得完整总分。
 - [原全量 Excel](runs/20261025-195147-f17d59ed-c79fa2/results.xlsx)。
 - [两题 Hook 补测结果](runs/20261026-161356-f17d59ed-b0c82d/RERUN-SUMMARY.md)：已完成，两题均因重复输出检测终止，原分数保留。

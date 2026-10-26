@@ -1,0 +1,8 @@
+{
+  "task": "manufacturing-equipment-maintenance",
+  "kind": "Fresh environment probe; no Agent or original verifier rerun",
+  "status": "SUCCEEDED",
+  "tmp_mode": "1777",
+  "apt_get_update_exit_code": 0,
+  "permission_denied_observed": false
+}

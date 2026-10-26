@@ -1,0 +1,2426 @@
+{
+  "runs": {
+    "20261025-195147-f17d59ed-c79fa2": {
+      "latest_outcomes": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 14,
+        "TIMEOUT": 8,
+        "ENVIRONMENT_ERROR": 39,
+        "TASK_FAILED": 10,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "INTERRUPTED": 3,
+        "NOT_STARTED": 2
+      },
+      "categories": {
+        "PASSED": 7,
+        "FRAMEWORK_MODEL_DUPLICATION_INTERACTION": 7,
+        "MODEL_PROVIDER_OR_TRANSPORT": 3,
+        "AGENT_TIME_BUDGET_EXCEEDED": 8,
+        "APT_OR_DEPENDENCY_NETWORK": 16,
+        "VERIFIER_ASSERTIONS_NOT_MET": 10,
+        "BUILD_TIMEOUT_CAUSE_UNPROVEN": 18,
+        "MODEL_RESPONSE_PROTOCOL_OR_NORMALIZATION": 1,
+        "DOCKER_MEMORY_CAPACITY": 1,
+        "MODEL_ACCOUNT_AUTH_OR_BILLING": 3,
+        "PREFLIGHT_INTERRUPTED_NOT_DIRECT_MODEL_ERROR": 1,
+        "HARNESS_TMP_PERMISSION_REGRESSION": 1,
+        "FRAMEWORK_OR_HARNESS_UNRESOLVED": 2,
+        "DEPENDENCY_DOWNLOAD_TLS_OR_NETWORK": 3,
+        "DOCKER_REGISTRY_TRANSPORT": 1,
+        "INTERRUPTED_NOT_MODEL_FAILURE": 3,
+        "NOT_EXECUTED": 2
+      }
+    },
+    "20261026-161356-f17d59ed-b0c82d": {
+      "latest_outcomes": {
+        "EXECUTION_FAILED": 2
+      },
+      "categories": {
+        "FRAMEWORK_MODEL_DUPLICATION_INTERACTION": 2
+      }
+    }
+  },
+  "tasks": [
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "3d-scan-calc",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 244.593,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/3d-scan-calc/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "ada-bathroom-plan-repair",
+      "attempt": 2,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 2400,
+      "agent_seconds": 933.453,
+      "failed_tests": [
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/ada-bathroom-plan-repair/attempt-002/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "adaptive-cruise-control",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_PROVIDER_ERROR",
+      "failed_phase": null,
+      "category": "MODEL_PROVIDER_OR_TRANSPORT",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 815.0,
+      "failed_tests": [
+        "test_outputs.py::TestPIDController::test_pid_controller",
+        "test_outputs.py::TestACCSystem::test_acc_system",
+        "test_outputs.py::TestTuningResults::test_tuning_results",
+        "test_outputs.py::TestSimulationResults::test_simulation_results",
+        "test_outputs.py::TestReport::test_report_keywords",
+        "test_outputs.py::TestSpeedControl::test_speed_control",
+        "test_outputs.py::TestDistanceControl::test_distance_control",
+        "test_outputs.py::TestSafety::test_safety",
+        "test_outputs.py::TestScenario::test_scenario",
+        "test_outputs.py::TestSimulationExecution::test_simulation_execution",
+        "test_outputs.py::TestAntiCheat::test_anti_cheat"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/adaptive-cruise-control/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_PROVIDER_ERROR; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "azure-bgp-oscillation-route-leak",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 308.25,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        },
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.WG46ea - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.YBc8yo - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "bike-rebalance",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 900.5,
+      "failed_tests": [
+        "test_outputs.py::TestSchema::test_top_level_fields",
+        "test_outputs.py::TestSchema::test_summary_fields",
+        "test_outputs.py::TestSchema::test_vehicle_entries_and_ids",
+        "test_outputs.py::TestSchema::test_vehicle_fields",
+        "test_outputs.py::TestSchema::test_stop_fields",
+        "test_outputs.py::TestSchema::test_station_entries_and_fields",
+        "test_outputs.py::TestRoutes::test_routes_start_and_end_at_depots",
+        "test_outputs.py::TestRoutes::test_all_route_stations_exist",
+        "test_outputs.py::TestRoutes::test_stops_match_non_depot_route_sequence",
+        "test_outputs.py::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle",
+        "test_outputs.py::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs",
+        "test_outputs.py::TestVehicleBikeFlow::test_vehicle_loads_within_capacity",
+        "test_outputs.py::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop",
+        "test_outputs.py::TestStationBalances::test_station_aggregates_match_route_stops",
+        "test_outputs.py::TestStationBalances::test_station_inventory_and_capacity",
+        "test_outputs.py::TestStationBalances::test_station_net_change_and_unmet_amount",
+        "test_outputs.py::TestObjectiveConsistency::test_travel_distance_matches_route_geometry",
+        "test_outputs.py::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet",
+        "test_outputs.py::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty",
+        "test_outputs.py::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/bike-rebalance/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "citation-check",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/citation-check/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/citation-check/attempt-001/environment-build.log",
+          "line": 369,
+          "fact": "#6 259.5   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/citation-check/attempt-001/environment-build.log",
+          "line": 373,
+          "fact": "#6 259.5   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "civ6-adjacency-optimizer",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1800.469,
+      "failed_tests": [
+        "test_outputs.py::TestFormat::test_solution_file_exists",
+        "test_outputs.py::TestFormat::test_solution_is_valid_json",
+        "test_outputs.py::TestEvaluation::test_evaluate_scenario"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/civ6-adjacency-optimizer/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "court-form-filling",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1457.625,
+      "failed_tests": [
+        "test_outputs.py::TestRequiredContent::test_content_present"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/court-form-filling/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "crystallographic-wyckoff-position-analysis",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 182.719,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/crystallographic-wyckoff-position-analysis/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "dapt-intrusion-detection",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/dapt-intrusion-detection/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/dapt-intrusion-detection/attempt-001/environment-build.log",
+          "line": 165,
+          "fact": "#6 98.30   502  Bad Gateway [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/dapt-intrusion-detection/attempt-001/environment-build.log",
+          "line": 529,
+          "fact": "#6 180.6   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "data-to-d3",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/data-to-d3/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "debug-trl-grpo",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.6,
+      "reward": 0.6,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 1040.766,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/debug-trl-grpo/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "dialogue-parser",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 690.25,
+      "failed_tests": [
+        "test_outputs.py::test_system_basics",
+        "test_outputs.py::test_narrative_content",
+        "test_outputs.py::test_graph_logic",
+        "test_outputs.py::test_content_integrity",
+        "test_outputs.py::test_structural_integrity"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/dialogue-parser/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "drone-planning-control",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 850.422,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/drone-planning-control/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "dynamic-object-aware-egomotion",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_RESPONSE_INVALID",
+      "failed_phase": null,
+      "category": "MODEL_RESPONSE_PROTOCOL_OR_NORMALIZATION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1200,
+      "agent_seconds": 420.641,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/dynamic-object-aware-egomotion/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_RESPONSE_INVALID; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "earthquake-phase-association",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/earthquake-phase-association/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "earthquake-plate-calculation",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 900.469,
+      "failed_tests": [
+        "test_outputs.py::TestEarthquakeTask::test_distance_within_tolerance",
+        "test_outputs.py::TestEarthquakeTask::test_earthquake_id_correct",
+        "test_outputs.py::TestEarthquakeTask::test_latitude_within_tolerance",
+        "test_outputs.py::TestEarthquakeTask::test_longitude_within_tolerance",
+        "test_outputs.py::TestEarthquakeTask::test_magnitude_within_tolerance",
+        "test_outputs.py::TestEarthquakeTask::test_output_file_and_structure",
+        "test_outputs.py::TestEarthquakeTask::test_place_correct",
+        "test_outputs.py::TestEarthquakeTask::test_time_correct"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/earthquake-plate-calculation/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        },
+        {
+          "file": "tasks/earthquake-plate-calculation/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.lLdPAu - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/earthquake-plate-calculation/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.ZNJEIB - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "econ-detrending-correlation",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 269.407,
+      "failed_tests": [
+        "test_outputs.py::TestEconomicsTask::test_correlation_value_correct"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/econ-detrending-correlation/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        },
+        {
+          "file": "tasks/econ-detrending-correlation/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.3iOyGm - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/econ-detrending-correlation/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.gIVqct - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "edit-pdf",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 396.109,
+      "failed_tests": [
+        "test_outputs.py::test_form_student_name",
+        "test_outputs.py::test_redact_student_id",
+        "test_outputs.py::test_form_school_email",
+        "test_outputs.py::test_form_date_of_birth",
+        "test_outputs.py::test_form_phone_number",
+        "test_outputs.py::test_form_appeal_reason",
+        "test_outputs.py::test_signature_added",
+        "test_outputs.py::test_todays_date_added",
+        "test_outputs.py::test_labels_not_covered"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/edit-pdf/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "energy-ac-optimal-power-flow",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 1237.937,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/energy-ac-optimal-power-flow/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "energy-market-pricing",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1800.453,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/energy-market-pricing/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "energy-unit-commitment",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 900.469,
+      "failed_tests": [
+        "test_outputs.py::TestSchema::test_required_schema",
+        "test_outputs.py::TestSchema::test_arrays_align_with_case",
+        "test_outputs.py::TestBinaryLogic::test_startup_shutdown_match_commitment",
+        "test_outputs.py::TestBinaryLogic::test_no_simultaneous_startup_shutdown",
+        "test_outputs.py::TestBinaryLogic::test_reported_transition_counts",
+        "test_outputs.py::TestThermalFeasibility::test_must_run_units_online",
+        "test_outputs.py::TestThermalFeasibility::test_output_limits_and_offline_zeroes",
+        "test_outputs.py::TestThermalFeasibility::test_deliverable_reserve_and_ramping",
+        "test_outputs.py::TestSystemFeasibility::test_demand_and_reserve",
+        "test_outputs.py::TestSystemFeasibility::test_renewable_limits",
+        "test_outputs.py::TestSystemFeasibility::test_hourly_summary_matches_schedule",
+        "test_outputs.py::TestMinimumUpDown::test_initial_and_in_horizon_obligations",
+        "test_outputs.py::TestCostAndQuality::test_reported_cost_matches_schedule",
+        "test_outputs.py::TestCostAndQuality::test_cost_within_benchmark_gap"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/energy-unit-commitment/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "enterprise-information-search",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1134.468,
+      "failed_tests": [
+        "test_outputs.py::TestOutputs::test_answer_structure_and_values",
+        "test_outputs.py::TestOutputs::test_tokens_efficient"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/enterprise-information-search/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "exam-block-sequencing",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1500,
+      "agent_seconds": 235.797,
+      "failed_tests": [
+        "test_outputs.py::TestOutputs::test_objective_value_is_reported_correctly",
+        "test_outputs.py::TestOutputs::test_solution_is_feasible",
+        "test_outputs.py::TestOutputs::test_verifier_objective_is_no_worse_than_oracle"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/exam-block-sequencing/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "exceltable-in-ppt",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/exceltable-in-ppt/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/exceltable-in-ppt/attempt-001/environment-build.log",
+          "line": 1578,
+          "fact": "#6 298.3   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/exceltable-in-ppt/attempt-001/environment-build.log",
+          "line": 1580,
+          "fact": "#6 298.3   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "exoplanet-detection-period",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 2399.14,
+      "failed_tests": [
+        "test_outputs.py::TestExoplanetPeriod::test_period_file_exists"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/exoplanet-detection-period/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        },
+        {
+          "file": "tasks/exoplanet-detection-period/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.I3FTcJ - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/exoplanet-detection-period/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.xdlr7e - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "financial-modeling-qa",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/financial-modeling-qa/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/financial-modeling-qa/attempt-001/environment-build.log",
+          "line": 483,
+          "fact": "#6 122.3   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/financial-modeling-qa/attempt-001/environment-build.log",
+          "line": 485,
+          "fact": "#6 122.4   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "fix-build-agentops",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 7200,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/fix-build-agentops/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "fix-build-google-auto",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/fix-build-google-auto/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "fix-druid-loophole-cve",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "queued",
+      "category": "DOCKER_MEMORY_CAPACITY",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/fix-druid-loophole-cve/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=queued"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "fix-erlang-ssh-cve",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/fix-erlang-ssh-cve/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/fix-erlang-ssh-cve/attempt-001/environment-build.log",
+          "line": 370,
+          "fact": "#5 309.7   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/fix-erlang-ssh-cve/attempt-001/environment-build.log",
+          "line": 372,
+          "fact": "#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "fix-visual-stability",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3000,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/fix-visual-stability/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "flink-query",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/flink-query/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "flood-risk-analysis",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 7200,
+      "agent_seconds": 514.188,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/flood-risk-analysis/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "glm-lake-mendota",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 1137.922,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/glm-lake-mendota/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "gravitational-wave-detection",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 1168.015,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/gravitational-wave-detection/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "grid-dispatch-operator",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_AUTHENTICATION_FAILED",
+      "failed_phase": null,
+      "category": "MODEL_ACCOUNT_AUTH_OR_BILLING",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1192.062,
+      "failed_tests": [
+        "test_outputs.py::TestSchema::test_report_schema",
+        "test_outputs.py::TestFeasibility::test_power_balance",
+        "test_outputs.py::TestFeasibility::test_generator_bounds",
+        "test_outputs.py::TestFeasibility::test_reserve_constraints",
+        "test_outputs.py::TestFeasibility::test_internal_consistency",
+        "test_outputs.py::TestOptimality::test_cost_is_optimal"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/grid-dispatch-operator/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_AUTHENTICATION_FAILED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "hvac-control",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 387.781,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/hvac-control/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "invoice-fraud-detection",
+      "attempt": 1,
+      "outcome": "PREFLIGHT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "workspace_preflight",
+      "category": "PREFLIGHT_INTERRUPTED_NOT_DIRECT_MODEL_ERROR",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/invoice-fraud-detection/attempt-001/result.json",
+          "fact": "outcome=PREFLIGHT_ERROR; code=None; phase=workspace_preflight"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "jax-computing-basics",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_AUTHENTICATION_FAILED",
+      "failed_phase": null,
+      "category": "MODEL_ACCOUNT_AUTH_OR_BILLING",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 600,
+      "agent_seconds": 199.797,
+      "failed_tests": [
+        "test_outputs.py::TestOutputFilesExist::test_all_output_files_exist",
+        "test_outputs.py::TestOutputShapes::test_shapes_match",
+        "test_outputs.py::TestNumericalCorrectness::test_allclose"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/jax-computing-basics/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_AUTHENTICATION_FAILED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "jpg-ocr-stat",
+      "attempt": 1,
+      "outcome": "PREFLIGHT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "workspace_preflight",
+      "category": "MODEL_ACCOUNT_AUTH_OR_BILLING",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/jpg-ocr-stat/attempt-001/result.json",
+          "fact": "outcome=PREFLIGHT_ERROR; code=None; phase=workspace_preflight"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "lab-unit-harmonization",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/lab-unit-harmonization/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/lab-unit-harmonization/attempt-001/environment-build.log",
+          "line": 183,
+          "fact": "#6 179.9   502  Bad Gateway [IP: 198.18.0.103 80]"
+        },
+        {
+          "file": "tasks/lab-unit-harmonization/attempt-001/environment-build.log",
+          "line": 204,
+          "fact": "#6 208.8 E: Failed to fetch http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17030-1_all.deb  502  Bad Gateway [IP: 198.18.0.103 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "lake-warming-attribution",
+      "attempt": 2,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 300,
+      "agent_seconds": 195.922,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/lake-warming-attribution/attempt-002/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "latex-formula-extraction",
+      "attempt": 2,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/latex-formula-extraction/attempt-002/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "lean4-proof",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/lean4-proof/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "llm-prefix-cache-replay",
+      "attempt": 1,
+      "outcome": "PASSED",
+      "score": 1.0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "PASSED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 108.265,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/llm-prefix-cache-replay/attempt-001/result.json",
+          "fact": "outcome=PASSED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "manufacturing-codebook-normalization",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1800.485,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/manufacturing-codebook-normalization/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        },
+        {
+          "file": "tasks/manufacturing-codebook-normalization/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.nMs8ap - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/manufacturing-codebook-normalization/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.unnfDI - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "manufacturing-equipment-maintenance",
+      "attempt": 1,
+      "outcome": "VERIFIER_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "HARNESS_TMP_PERMISSION_REGRESSION",
+      "docker_or_harness_environment": true,
+      "confidence": "REPRODUCED_AND_FIXED",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1097.141,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/manufacturing-equipment-maintenance/attempt-001/result.json",
+          "fact": "outcome=VERIFIER_ERROR; code=None; phase=None"
+        },
+        {
+          "file": "maintenance/20261026-docker-repair/tmp-apt-validation/proof.json",
+          "fact": "Repaired bridge: mode=1777; apt-get update succeeds."
+        },
+        {
+          "file": "tasks/manufacturing-equipment-maintenance/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.KrFT9e - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/manufacturing-equipment-maintenance/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.4fYajg - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "manufacturing-fjsp-optimization",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": null,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 684.0,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/manufacturing-fjsp-optimization/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        },
+        {
+          "file": "tasks/manufacturing-fjsp-optimization/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.6IfM4m - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/manufacturing-fjsp-optimization/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.iSdgYa - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "mario-coin-counting",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/mario-coin-counting/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "mars-clouds-clustering",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "INTERNAL_ERROR",
+      "failed_phase": null,
+      "category": "FRAMEWORK_OR_HARNESS_UNRESOLVED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 225.531,
+      "failed_tests": [
+        "test_outputs.py::TestParetoFrontier::test_result_file_exists",
+        "test_outputs.py::TestParetoFrontier::test_result_file_not_empty",
+        "test_outputs.py::TestParetoFrontier::test_required_columns",
+        "test_outputs.py::TestParetoFrontier::test_f1_values_valid",
+        "test_outputs.py::TestParetoFrontier::test_delta_values_positive",
+        "test_outputs.py::TestParetoFrontier::test_hyperparameter_ranges",
+        "test_outputs.py::TestParetoFrontier::test_is_valid_pareto_frontier",
+        "test_outputs.py::TestParetoFrontier::test_all_expected_points_found"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/mars-clouds-clustering/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=INTERNAL_ERROR; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "multilingual-video-dubbing",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 2700,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/multilingual-video-dubbing/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/multilingual-video-dubbing/attempt-001/environment-build.log",
+          "line": 1182,
+          "fact": "#6 372.6   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/multilingual-video-dubbing/attempt-001/environment-build.log",
+          "line": 1184,
+          "fact": "#6 372.6   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "offer-letter-generator",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/offer-letter-generator/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/offer-letter-generator/attempt-001/environment-build.log",
+          "line": 190,
+          "fact": "#6 161.9   502  Bad Gateway [IP: 198.18.0.105 80]"
+        },
+        {
+          "file": "tasks/offer-letter-generator/attempt-001/environment-build.log",
+          "line": 192,
+          "fact": "#6 167.0   502  Bad Gateway [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "organize-messy-files",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/organize-messy-files/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/organize-messy-files/attempt-001/environment-build.log",
+          "line": 24,
+          "fact": "#6 5.245   502  Bad Gateway [IP: 198.18.0.106 80]"
+        },
+        {
+          "file": "tasks/organize-messy-files/attempt-001/environment-build.log",
+          "line": 26,
+          "fact": "#6 5.247   502  Bad Gateway [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "paper-anonymizer",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 1000,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/paper-anonymizer/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/paper-anonymizer/attempt-001/environment-build.log",
+          "line": 24,
+          "fact": "#6 5.166   502  Bad Gateway [IP: 198.18.0.106 80]"
+        },
+        {
+          "file": "tasks/paper-anonymizer/attempt-001/environment-build.log",
+          "line": 26,
+          "fact": "#6 5.166   502  Bad Gateway [IP: 198.18.0.105 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "parallel-tfidf-search",
+      "attempt": 1,
+      "outcome": "PREFLIGHT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "workspace_preflight",
+      "category": "MODEL_PROVIDER_OR_TRANSPORT",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/parallel-tfidf-search/attempt-001/result.json",
+          "fact": "outcome=PREFLIGHT_ERROR; code=None; phase=workspace_preflight"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "paratransit-routing",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "DEPENDENCY_DOWNLOAD_TLS_OR_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/paratransit-routing/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/paratransit-routing/attempt-001/environment-build.log",
+          "line": 26,
+          "fact": "=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/"
+        },
+        {
+          "file": "tasks/paratransit-routing/attempt-001/environment-build.log",
+          "line": 27,
+          "fact": "=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "pddl-airport-planning",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "DEPENDENCY_DOWNLOAD_TLS_OR_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/pddl-airport-planning/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/pddl-airport-planning/attempt-001/environment-build.log",
+          "line": 29,
+          "fact": "4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/"
+        },
+        {
+          "file": "tasks/pddl-airport-planning/attempt-001/environment-build.log",
+          "line": 30,
+          "fact": "3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "pddl-tpp-planning",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "DEPENDENCY_DOWNLOAD_TLS_OR_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/pddl-tpp-planning/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/pddl-tpp-planning/attempt-001/environment-build.log",
+          "line": 29,
+          "fact": "#7 5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 "
+        },
+        {
+          "file": "tasks/pddl-tpp-planning/attempt-001/environment-build.log",
+          "line": 34,
+          "fact": "5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 "
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "pdf-excel-diff",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/pdf-excel-diff/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "powerlifting-coef-calc",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/powerlifting-coef-calc/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "pptx-reference-formatting",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 500.671,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/pptx-reference-formatting/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "protein-expression-analysis",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/protein-expression-analysis/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "python-scala-translation",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/python-scala-translation/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "quantum-numerical-simulation",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "REQUEST_EXECUTION_FAILED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_OR_HARNESS_UNRESOLVED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 7200,
+      "agent_seconds": 3602.484,
+      "failed_tests": [
+        "test_outputs.py::test_all_files_exist",
+        "test_outputs.py::test_grid_dimensions",
+        "test_outputs.py::test_values_are_real_and_finite",
+        "test_outputs.py::test_csv_sums_to_one",
+        "test_outputs.py::test_cases_are_distinct",
+        "test_outputs.py::test_wigner_diagonal_sum_matches_reference",
+        "test_outputs.py::test_wigner_values_match_reference"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/quantum-numerical-simulation/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=REQUEST_EXECUTION_FAILED; phase=None"
+        },
+        {
+          "file": "tasks/quantum-numerical-simulation/attempt-001/verifier-stdout.txt",
+          "line": 2,
+          "fact": "  502  Bad Gateway [IP: 146.75.114.132 80]"
+        },
+        {
+          "file": "tasks/quantum-numerical-simulation/attempt-001/verifier-stdout.txt",
+          "line": 5,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.GyTZsH - GetTempFile (13: Permission denied)"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "r2r-mpc-control",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_PROVIDER_ERROR",
+      "failed_phase": null,
+      "category": "MODEL_PROVIDER_OR_TRANSPORT",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1200,
+      "agent_seconds": 1050.39,
+      "failed_tests": [
+        "test_outputs.py::TestControllerParams::test_controller_params",
+        "test_outputs.py::TestControllerParams::test_linearization_correctness",
+        "test_outputs.py::TestControlLog::test_control_log",
+        "test_outputs.py::TestMetrics::test_metrics",
+        "test_outputs.py::TestPerformance::test_performance",
+        "test_outputs.py::TestSafety::test_safety"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/r2r-mpc-control/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_PROVIDER_ERROR; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "radar-vital-signs",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 1.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1200,
+      "agent_seconds": 1200.5,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/radar-vital-signs/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "react-performance-debugging",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/react-performance-debugging/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "reserves-at-risk-calc",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/reserves-at-risk-calc/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "sales-pivot-analysis",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": 413.329,
+      "failed_tests": [
+        "test_outputs.py::TestPivotTableConfiguration::test_pivot_row_is_state",
+        "test_outputs.py::TestPivotTableConfiguration::test_pivot_uses_correct_aggregation",
+        "test_outputs.py::TestSourceDataContent::test_state_values_are_valid",
+        "test_outputs.py::TestDataTransformationCorrectness::test_pivot_cache_has_fields"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/sales-pivot-analysis/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "sec-financial-report",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/sec-financial-report/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "seismic-phase-picking",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/seismic-phase-picking/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "setup-fuzzing-py",
+      "attempt": 1,
+      "outcome": "TIMEOUT",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "AGENT_TIME_BUDGET_EXCEEDED",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1800.515,
+      "failed_tests": [
+        "test_setup.py::test_discovery"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/setup-fuzzing-py/attempt-001/result.json",
+          "fact": "outcome=TIMEOUT; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "shock-analysis-demand",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/shock-analysis-demand/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/shock-analysis-demand/attempt-001/environment-build.log",
+          "line": 463,
+          "fact": "#6 446.3   502  Bad Gateway [IP: 91.189.92.23 80]"
+        },
+        {
+          "file": "tasks/shock-analysis-demand/attempt-001/environment-build.log",
+          "line": 486,
+          "fact": "#6 521.2   502  Bad Gateway [IP: 91.189.92.23 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "shock-analysis-supply",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 2700,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/shock-analysis-supply/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/shock-analysis-supply/attempt-001/environment-build.log",
+          "line": 25,
+          "fact": "#6 5.186   502  Bad Gateway [IP: 185.125.190.81 80]"
+        },
+        {
+          "file": "tasks/shock-analysis-supply/attempt-001/environment-build.log",
+          "line": 60,
+          "fact": "#6 249.0   502  Bad Gateway [IP: 91.189.92.23 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "simpo-code-reproduction",
+      "attempt": 1,
+      "outcome": "TASK_FAILED",
+      "score": 0.0,
+      "reward": 0.0,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "VERIFIER_ASSERTIONS_NOT_MET",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": 1323.781,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/simpo-code-reproduction/attempt-001/result.json",
+          "fact": "outcome=TASK_FAILED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "software-dependency-audit",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/software-dependency-audit/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/software-dependency-audit/attempt-001/environment-build.log",
+          "line": 24,
+          "fact": "#6 5.316   502  Bad Gateway [IP: 199.232.162.132 80]"
+        },
+        {
+          "file": "tasks/software-dependency-audit/attempt-001/environment-build.log",
+          "line": 27,
+          "fact": "#6 13.00   502  Bad Gateway [IP: 199.232.162.132 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "spring-boot-jakarta-migration",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 900,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/spring-boot-jakarta-migration/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/spring-boot-jakarta-migration/attempt-001/environment-build.log",
+          "line": 24,
+          "fact": "#6 5.164   502  Bad Gateway [IP: 185.125.190.81 80]"
+        },
+        {
+          "file": "tasks/spring-boot-jakarta-migration/attempt-001/environment-build.log",
+          "line": 27,
+          "fact": "#6 11.04   502  Bad Gateway [IP: 91.189.92.23 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "suricata-custom-exfil",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "DOCKER_REGISTRY_TRANSPORT",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/suricata-custom-exfil/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/suricata-custom-exfil/attempt-001/environment-build.log",
+          "line": 8,
+          "fact": "#2 ERROR: failed to do request: Head \"https://registry-1.docker.io/v2/jasonish/suricata/manifests/7.0.11\": EOF"
+        },
+        {
+          "file": "tasks/suricata-custom-exfil/attempt-001/environment-build.log",
+          "line": 18,
+          "fact": "d: failed to solve: jasonish/suricata:7.0.11: failed to resolve source metadata for docker.io/jasonish/suricata:7.0.11: failed to do request: Head \"https://registry-1.docker.io/v2/jasonish/suricata/manifests/7.0.11\": EOF"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "syzkaller-ppdev-syzlang",
+      "attempt": 1,
+      "outcome": "INTERRUPTED",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": null,
+      "category": "INTERRUPTED_NOT_MODEL_FAILURE",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1400,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/syzkaller-ppdev-syzlang/attempt-001/result.json",
+          "fact": "outcome=INTERRUPTED; code=None; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "threejs-structure-parser",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/threejs-structure-parser/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/threejs-structure-parser/attempt-001/environment-build.log",
+          "line": 25,
+          "fact": "#6 5.217   502  Bad Gateway [IP: 91.189.91.82 80]"
+        },
+        {
+          "file": "tasks/threejs-structure-parser/attempt-001/environment-build.log",
+          "line": 29,
+          "fact": "#6 15.84   502  Bad Gateway [IP: 91.189.91.82 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "threejs-to-obj",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "APT_OR_DEPENDENCY_NETWORK",
+      "docker_or_harness_environment": true,
+      "confidence": "DIRECT_RECORDED_EVIDENCE",
+      "agent_budget_seconds": 300,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/threejs-to-obj/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        },
+        {
+          "file": "tasks/threejs-to-obj/attempt-001/environment-build.log",
+          "line": 27,
+          "fact": "#6 10.15   502  Bad Gateway [IP: 91.189.91.82 80]"
+        },
+        {
+          "file": "tasks/threejs-to-obj/attempt-001/environment-build.log",
+          "line": 30,
+          "fact": "#6 15.16   502  Bad Gateway [IP: 91.189.91.82 80]"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "tictoc-unnecessary-abort-detection",
+      "attempt": 1,
+      "outcome": "INTERRUPTED",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "bootstrap",
+      "category": "INTERRUPTED_NOT_MODEL_FAILURE",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 1800,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/tictoc-unnecessary-abort-detection/attempt-001/result.json",
+          "fact": "outcome=INTERRUPTED; code=None; phase=bootstrap"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "travel-planning",
+      "attempt": 1,
+      "outcome": "INTERRUPTED",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "bootstrap",
+      "category": "INTERRUPTED_NOT_MODEL_FAILURE",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/travel-planning/attempt-001/result.json",
+          "fact": "outcome=INTERRUPTED; code=None; phase=bootstrap"
+        },
+        {
+          "file": "tasks/travel-planning/attempt-001/environment-build.log",
+          "line": 26,
+          "fact": "l=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/pandas/"
+        },
+        {
+          "file": "tasks/travel-planning/attempt-001/environment-build.log",
+          "line": 27,
+          "fact": "l=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/pandas/"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "video-silence-remover",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "reward": null,
+      "terminal_code": null,
+      "failed_phase": "build",
+      "category": "BUILD_TIMEOUT_CAUSE_UNPROVEN",
+      "docker_or_harness_environment": true,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": null,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/video-silence-remover/attempt-001/result.json",
+          "fact": "outcome=ENVIRONMENT_ERROR; code=None; phase=build"
+        }
+      ]
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "weighted-gdp-calc",
+      "outcome": "NOT_STARTED",
+      "category": "NOT_EXECUTED",
+      "evidence": []
+    },
+    {
+      "run": "20261025-195147-f17d59ed-c79fa2",
+      "task": "xlsx-recover-data",
+      "outcome": "NOT_STARTED",
+      "category": "NOT_EXECUTED",
+      "evidence": []
+    },
+    {
+      "run": "20261026-161356-f17d59ed-b0c82d",
+      "task": "ada-bathroom-plan-repair",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 2400,
+      "agent_seconds": 1563.093,
+      "failed_tests": [
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout",
+        "test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably"
+      ],
+      "evidence": [
+        {
+          "file": "tasks/ada-bathroom-plan-repair/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        }
+      ]
+    },
+    {
+      "run": "20261026-161356-f17d59ed-b0c82d",
+      "task": "azure-bgp-oscillation-route-leak",
+      "attempt": 1,
+      "outcome": "EXECUTION_FAILED",
+      "score": 0,
+      "reward": 0.0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "failed_phase": null,
+      "category": "FRAMEWORK_MODEL_DUPLICATION_INTERACTION",
+      "docker_or_harness_environment": false,
+      "confidence": "OBSERVED_OUTCOME_ROOT_CAUSE_UNPROVEN",
+      "agent_budget_seconds": 3600,
+      "agent_seconds": 263.562,
+      "failed_tests": [],
+      "evidence": [
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/result.json",
+          "fact": "outcome=EXECUTION_FAILED; code=MODEL_DUPLICATION_DETECTED; phase=None"
+        },
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/verifier-stdout.txt",
+          "line": 3,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.rEIoHx - GetTempFile (13: Permission denied)"
+        },
+        {
+          "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/verifier-stdout.txt",
+          "line": 6,
+          "fact": "  Unable to mkstemp /tmp/apt.sig.NlL8Ji - GetTempFile (13: Permission denied)"
+        }
+      ]
+    }
+  ],
+  "scope": "Latest attempts per run. Reruns are shown separately; original scores are not replaced.",
+  "limits": "Classification follows recorded evidence. A terminal code does not prove a model or framework root cause. Timeout-only builds are not automatically labelled network failures."
+}

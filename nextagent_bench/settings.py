@@ -6,14 +6,14 @@ from pathlib import Path
 
 import yaml
 
-from .util import digest, read_document
+from .util import digest, fs_path, read_document
 
 HOME = "/opt/na-eval/home"
 PORT = 31872
 
 
 def load_task(path: Path) -> dict:
-    text = (path / "task.md").read_text(encoding="utf-8-sig")
+    text = fs_path(path / "task.md").read_text(encoding="utf-8-sig")
     if not text.startswith("---"):
         raise ValueError(f"Missing task frontmatter: {path}")
     front = yaml.safe_load(text.split("---", 2)[1])
@@ -33,7 +33,7 @@ def load_task(path: Path) -> dict:
     return values
 
 
-def effective_configs(system: dict, agent: dict, excluded_hooks: list[str]) -> tuple[dict, dict, list[dict]]:
+def effective_configs(system: dict, agent: dict) -> tuple[dict, dict, list[dict]]:
     system, agent = copy.deepcopy(system), copy.deepcopy(agent)
     changes = []
 
@@ -53,11 +53,6 @@ def effective_configs(system: dict, agent: dict, excluded_hooks: list[str]) -> t
     if not isinstance(agent_id, str) or not agent_id or "/" in agent_id or ".." in agent_id:
         raise ValueError("Invalid agentId in the agent template")
     set_value(system.setdefault("agents", {}), "activeAgentId", agent_id, "agents.activeAgentId")
-    hooks = agent.get("hooks", [])
-    removed = [item for item in hooks if item.get("hookId") in excluded_hooks]
-    if removed:
-        changes.append({"field": "agent.hooks", "removed": removed, "reason": "Explicit compatibility policy in evaluation.yaml"})
-        agent["hooks"] = [item for item in hooks if item not in removed]
     if system.get("deployment", {}).get("mode", "LOCAL") != "LOCAL":
         raise ValueError("This evaluation profile requires LOCAL Gateway")
     return system, agent, changes
@@ -67,7 +62,7 @@ def load_settings(root: Path) -> dict:
     config = read_document(root / "evaluation.yaml")
     system = read_document(root / "profiles" / "default-system.yaml")
     agent = read_document(root / "profiles" / "agent.yaml")
-    system, agent, changes = effective_configs(system, agent, config.get("excluded_agent_hooks", []))
+    system, agent, changes = effective_configs(system, agent)
     if not config.get("model") or not config.get("base_url"):
         raise ValueError("Set model and base_url in evaluation.yaml")
     config["effective_system"], config["effective_agent"], config["config_changes"] = system, agent, changes

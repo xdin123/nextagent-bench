@@ -29,6 +29,7 @@ async function relocate(source, target) {
     const real = await fs.realpath(source);
     if (real === target) return;
     if (target.startsWith(real + '/') || real.startsWith(target + '/')) throw new Error('Overlapping roots');
+    const metadata = await fs.stat(source);
     const entries = await fs.readdir(source);
     await fs.mkdir(target, { recursive: true });
     for (const name of entries) {
@@ -41,6 +42,11 @@ async function relocate(source, target) {
         await fs.rm(from, { recursive: true, force: true });
       }
     }
+    const targetMetadata = await fs.stat(target);
+    if (targetMetadata.uid !== metadata.uid || targetMetadata.gid !== metadata.gid) {
+      await fs.chown(target, metadata.uid, metadata.gid);
+    }
+    await fs.chmod(target, metadata.mode & 0o7777);
     await fs.rm(source, { recursive: true, force: true });
   } else {
     await fs.mkdir(target, { recursive: true });

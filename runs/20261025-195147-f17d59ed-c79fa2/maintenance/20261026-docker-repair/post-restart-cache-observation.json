@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-26T10:03:45.733500+00:00",
+  "observed": "nextagent-bench image tags absent after restart; no image prune/reset action executed by this change",
+  "limit": "Image inventory immediately before restart was not captured, so absence cannot be causally attributed to restart.",
+  "matching_backend_log_lines": [
+    "[2026-10-26T09:48:10.370700400Z][com.docker.backend.exe.component] [engine.Settings] <- {\"UseContainerdSnapshotter\":true}",
+    "[2026-10-26T09:48:10.378052000Z][com.docker.backend.exe.component] [analyticssettings.Settings] <- {\"UseContainerdSnapshotter\":true}",
+    "[2026-10-26T09:48:10.382211000Z][com.docker.backend.exe.component] [app.Settings] <- {\"UseContainerdSnapshotter\":true}",
+    "[2026-10-26T09:48:10.847582900Z][com.docker.backend.exe.ipc] (f69f81da) 1332e4da-BackendAPI S->C Docker-Desktop/4.96.3 (Windows; x64; GUI) GET /app/settings/gui (516.3µs): {\"metadata\":{\"inference.gpuVariant.enabled\":{\"disabled\":true},\"runWinServiceInWslMode\":{\"disabled\":true,\"disabledReason\":\"Per-user installations can't run the privileged helper service\"},\"",
+    "[2026-10-26T09:48:11.097841400Z][com.docker.backend.exe.wslmigrate] provisioning the WSL2 engine using a data disk",
+    "[2026-10-26T09:48:11.136273700Z][com.docker.backend.exe.distro] setting up data disk",
+    "[2026-10-26T09:48:12.757629000Z][com.docker.backend.exe.wsl] [2026-10-26T09:48:12.757697780Z][wsl-bootstrap] provisioning data via data disk with id: 0383d100-cd9f-a447-8de3-af042e6136e0",
+    "[2026-10-26T09:48:18.149396200Z][com.docker.backend.exe.heartbeat] settings data added: OnlyMarketplaceExtensions, DefaultNetworkingMode, DNSInhibition, AutoPauseTimeoutSeconds, AutomaticUpdates, KubernetesMode, KubernetesNodesCount, KubernetesNodesVersion, LicenseTermsVersion, NetworkType, ShowAnnouncementNotifications, ShowGeneralNotifications, ShowPromoti",
+    "[2026-10-26T09:48:18.986547700Z][com.docker.backend.exe.analytics.tracker] sending event: containerdSnapshotterStart c6e69349-f0d9-4de4-a9a2-4105d440847a",
+    "[2026-10-26T09:57:30.534610900Z][com.docker.backend.exe.distro] unmounting data disk",
+    "[2026-10-26T09:57:30.672154900Z][com.docker.backend.exe.distro] compacting data disk",
+    "[2026-10-26T09:57:30.672154900Z][com.docker.backend.exe.distro] skipping data disk compaction"
+  ]
+}

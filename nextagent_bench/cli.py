@@ -27,11 +27,15 @@ def resources(config: dict, framework: str | None, dataset: str | None) -> tuple
     artifact_path = resolve_path(framework or config["framework"])
     if (artifact_path / "bundle.tar.gz").exists() and (artifact_path / "manifest.json").exists():
         artifact = read_json(artifact_path / "manifest.json")
+        if artifact_path.resolve() != (PROJECT / "artifacts" / artifact["sha256"]).resolve():
+            artifact = import_framework(PROJECT, artifact_path / "bundle.tar.gz")
     else:
         artifact = import_framework(PROJECT, artifact_path)
     dataset_path = resolve_path(dataset or config["dataset"])
     if (dataset_path / "manifest.json").exists() and (dataset_path / "files.json").exists():
         data = read_json(dataset_path / "manifest.json")
+        if dataset_path.resolve() != (PROJECT / "datasets" / data["sha256"]).resolve():
+            data = import_dataset(PROJECT, dataset_path)
     else:
         data = import_dataset(PROJECT, dataset_path)
     return artifact, data
@@ -79,9 +83,19 @@ def main(argv=None) -> int:
                       "credential_present": bool(os.environ.get("OPENAI_API_KEY") or os.environ.get("NAB_API_KEYS")),
                       "shared_quota": config["quota"], "config_changes": config["config_changes"]}
             if not args.offline:
-                result["docker"] = command(["docker", "info", "--format", "{{json .}}"], timeout=30).returncode == 0
+                info = json.loads(command(["docker", "info", "--format", "{{json .}}"], timeout=30).stdout)
+                result["docker"] = True
+                result["docker_environment"] = {"os": info.get("OSType"), "architecture": info.get("Architecture"),
+                                                "memory_total_mib": int(info["MemTotal"]) // (1024 * 1024),
+                                                "memory_budget_mib": int((int(info["MemTotal"]) // (1024 * 1024)) * 0.8)}
+                result["linux_amd64_engine"] = info.get("OSType") == "linux" and info.get("Architecture") in {"x86_64", "amd64"}
+                result["compose_available"] = command(["docker", "compose", "version", "--short"], check=False).returncode == 0
+                result["inputs_present"] = {"framework": resolve_path(config["framework"]).exists(),
+                                             "dataset": resolve_path(config["dataset"]).exists()}
+                result["basic_environment_ready"] = (result["linux_amd64_engine"] and result["compose_available"]
+                                                       and all(result["inputs_present"].values()) and result["credential_present"])
             print(json.dumps(result, ensure_ascii=False, indent=2))
-            return 0
+            return 0 if args.offline or result["basic_environment_ready"] else 1
         if args.action in {"prepare", "run", "plan"}:
             artifact, dataset = resources(config, args.framework, args.dataset)
             tasks = args.tasks or config.get("suites", {}).get(args.suite)
@@ -155,6 +169,7 @@ def main(argv=None) -> int:
                 rows.append({"task": task, "phase": latest.get("phase", "pending"), "outcome": latest.get("outcome"),
                              "score": latest.get("score"), "attempt": latest.get("attempt")})
             print(json.dumps({"run": str(directory), "status": manifest["status"], "model": manifest["model"],
+                              "runner_pid": manifest.get("runner_pid"), "runner_lock_present": (directory / "runner.lock").exists(),
                               "target_concurrency": read_concurrency(directory, manifest["jobs"]), "tasks": rows}, ensure_ascii=False, indent=2))
         elif args.action == "resume":
             check_resume(directory)

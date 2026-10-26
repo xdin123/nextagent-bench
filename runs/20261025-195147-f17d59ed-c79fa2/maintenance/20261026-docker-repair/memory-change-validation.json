@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-26T09:48:46.331504+00:00",
+  "docker_mem_total_bytes": 23085326336,
+  "docker_mem_total_gib": 21.5,
+  "memory_gate_budget_mib": 17612,
+  "memory_gate_budget_gib": 17.199,
+  "task_required_mib": 16384,
+  "task_reservation_succeeded": true,
+  "reservation_released": true,
+  "kernel": "6.18.54.1-microsoft-standard-WSL2",
+  "docker_running_containers": 0,
+  "global_restart_completed": true,
+  "agent_evaluation_started": false,
+  "historical_results_modified": false,
+  "docker_16g_container_boot": "PASSED",
+  "container_cgroup_memory_limit_bytes": 17179869184,
+  "container_removed_automatically": true,
+  "prepared_environment_images_retained_after_restart": false,
+  "image_cache_observation": "Prepared nextagent-bench environment tags were not present after restart; cause is not yet established. No image pruning or reset command was run.",
+  "image_cache_timing_limit": "No immediate pre-restart image inventory; cause of absent cached tags is unestablished."
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-26T11:24:04.080735+00:00",
+  "status": "SUCCEEDED",
+  "source_adapter_sha": "2dfb3da48480081777355bcf331ad2b1440f490f66451582f4029f1433807ab5",
+  "archive": "C:\\Project\\nextagent-bench\\dist\\nextagent-bench-ready.zip",
+  "archive_sha256": "024efc1414641427800b36d6e317621b28dae9266db248ce0233b260e95213ce",
+  "archive_bytes": 375054951,
+  "archive_files": 2220,
+  "tasks": 87,
+  "frozen_task_files_verified": 2160,
+  "framework_only_prepare_passed": true,
+  "dataset_argument_supplied": false,
+  "profiles_byte_identical": true,
+  "contains_credentials": false,
+  "contains_historical_results": false,
+  "agent_runs": 0,
+  "model_requests": 0,
+  "tests": {
+    "total": 70,
+    "passed": 62,
+    "skipped_docker_opt_in": 8,
+    "previous_docker_tests_passed": 8
+  }
+}

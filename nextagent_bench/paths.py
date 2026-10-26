@@ -4,7 +4,7 @@ import difflib
 import re
 from pathlib import Path, PurePosixPath
 
-from .util import file_sha, write_json
+from .util import file_sha, fs_path, write_json
 
 
 def predict_workdir(dockerfile: Path) -> str:
@@ -12,7 +12,7 @@ def predict_workdir(dockerfile: Path) -> str:
     import posixpath
     import shlex
     variables, workdir = {}, "/root"
-    text = re.sub(r"\\\r?\n", " ", dockerfile.read_text(encoding="utf-8"))
+    text = re.sub(r"\\\r?\n", " ", fs_path(dockerfile).read_text(encoding="utf-8"))
     for line in text.splitlines():
         words = line.strip().split(None, 1)
         if len(words) != 2:
@@ -83,6 +83,7 @@ def adapt_task(task_dir: Path, destination: Path, mappings: list[dict]) -> dict:
     """Only agent-facing task/Skill text changes. Verifier/oracle stay untouched."""
     import shutil
 
+    task_dir, destination = fs_path(task_dir), fs_path(destination)
     destination.mkdir(parents=True, exist_ok=True)
     source = task_dir / "task.md"
     original = source.read_text(encoding="utf-8")

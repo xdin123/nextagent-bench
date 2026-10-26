@@ -15,7 +15,7 @@ def credential_ring() -> list[dict]:
     raw = os.environ.get("NAB_API_KEYS")
     keys = json.loads(raw) if raw else [{"name": "environment", "key": os.environ.get("OPENAI_API_KEY", "")}]
     if not isinstance(keys, list) or not keys:
-        raise ValueError("No model credentials. Register keys with Set-ModelCredential.ps1")
+        raise ValueError("No model credentials. Set OPENAI_API_KEY or NAB_API_KEYS, or use bench.py --credentials-file. Windows users may also use Set-ModelCredential.ps1")
     names, values, output = set(), set(), []
     for item in keys:
         name, key = item.get("name", ""), item.get("key", "")
@@ -81,7 +81,8 @@ class ModelGateway:
             context.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, context / "model_proxy.py")
             (context / "Dockerfile").write_text('FROM python:3.12-slim\nCOPY model_proxy.py /opt/model_proxy.py\nENTRYPOINT ["python", "-u", "/opt/model_proxy.py"]\n', encoding="utf-8")
-            command(["docker", "build", "-t", image, str(context)], timeout=600, log=self.output / "build.log")
+            from .docker import build_image
+            build_image(image, context, 600, self.output / "build.log")
         keys = credential_ring()
         config = {"upstream": self.manifest["base_url"], "quota": self.manifest["quota"],
                   "capture_model_exchanges": self.manifest.get("analysis", {}).get("capture_model_exchanges", True)}

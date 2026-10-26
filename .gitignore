@@ -11,6 +11,8 @@ datasets/
 launches/
 prepared.json
 path-plan.log
+dist/
+credentials.local.json
 *.tmp
 
 # files over GitHub's 100MB limit (excluded from push)

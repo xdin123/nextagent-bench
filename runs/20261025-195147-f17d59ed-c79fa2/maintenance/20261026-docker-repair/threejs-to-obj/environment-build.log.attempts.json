@@ -1,0 +1,16 @@
+{
+  "image": "nextagent-bench/environment:8439f3456dc22cb5bd02",
+  "context": "C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\threejs-to-obj\\environment",
+  "budget_seconds": 600,
+  "attempts": [
+    {
+      "number": 1,
+      "log": "environment-build.log",
+      "timeout_seconds": 600.0,
+      "elapsed_seconds": 554.375,
+      "outcome": "SUCCEEDED",
+      "retry": false
+    }
+  ],
+  "status": "SUCCEEDED"
+}

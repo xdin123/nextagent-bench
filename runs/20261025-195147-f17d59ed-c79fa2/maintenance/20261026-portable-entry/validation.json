@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-26T10:47:40.030786+00:00",
+  "source_adapter_sha": "2dfb3da48480081777355bcf331ad2b1440f490f66451582f4029f1433807ab5",
+  "source_zip": "C:\\Project\\nextagent-bench\\dist\\nextagent-bench-portable.zip",
+  "source_zip_sha256": "b26011f0f1a336a6bc594c99d51f4ce2130ac60bf99373cfe7efeac106563351",
+  "source_zip_bytes": 112928,
+  "source_files": 54,
+  "tests": {
+    "platform": "Windows",
+    "total": 69,
+    "passed": 69,
+    "docker_contract_tests": 8,
+    "skipped": 0
+  },
+  "windows_clean_environment_validation": "windows-validation.json",
+  "linux_fresh_container_validation": "linux-validation.json",
+  "cross_platform_effective_profile_sha": "20428bcd542b6a1a7b662d59d116abdb77418c41b62d02275da6202a4b3d1b1f",
+  "both_framework_profile_files_packaged_byte_identically": true,
+  "credentials_and_execution_data_packaged": false,
+  "windows_legacy_long_paths_fixed_without_global_registry_changes": true,
+  "historical_result_and_config_hashes_unchanged": 94,
+  "real_model_requests": 0,
+  "additional_agent_evaluations": 0,
+  "macos_real_machine_validation": "Not performed; documented environment requirements apply."
+}

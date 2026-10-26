@@ -1,0 +1,33 @@
+{
+  "status": "APPLIED_AND_CAPACITY_VERIFIED",
+  "task": "fix-druid-loophole-cve",
+  "required_task_mib": 16384,
+  "host_physical_gib": 31.7,
+  "docker_current_total_bytes": 16598831104,
+  "memory_gate_fraction": 0.8,
+  "minimum_docker_total_mib": 20480,
+  "suggested_wsl_memory_limit_gib": 22,
+  "target_file": "C:\\Users\\xiaodongma\\.wslconfig",
+  "file_currently_exists": false,
+  "proposed_content": "[wsl2]\nmemory=22GB\n",
+  "action": "After current preparation completes, configure WSL2 memory and restart Docker/WSL; re-read actual Docker MemTotal before admitting the 16-GiB task.",
+  "impact": "Global WSL/Docker restart can stop other WSL work; a 22-GiB ceiling leaves roughly 9.7 GiB of host physical memory outside that ceiling.",
+  "approval_basis": "User previously required confirmation before global Docker/WSL memory changes or restart.",
+  "applied": true,
+  "approved_at": "2026-10-26T09:47:23.356405+00:00",
+  "user_approval": "允许调整至22 GiB并重启 Docker/WSL",
+  "before": {
+    "wslconfig_exists": false,
+    "docker_mem_total_bytes": 16598831104,
+    "running_docker_containers": 0
+  },
+  "applied_at": "2026-10-26T09:52:24.494639+00:00",
+  "validation": "memory-change-validation.json",
+  "after": {
+    "docker_mem_total_bytes": 23085326336,
+    "memory_gate_budget_mib": 17612,
+    "task_reservation_succeeded": true,
+    "container_16g_boot_succeeded": true
+  },
+  "pending_user_approval": false
+}

@@ -1,0 +1,107 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 436B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 2.87MB 0.2s done
+#5 DONE 0.2s
+
+#6 [2/7] RUN pip install --no-cache-dir     ortools==9.11.4210     pandas==2.2.3     numpy==1.26.4     pytest==8.3.4     pytest-json-ctrf==0.3.5
+#6 2.179 Collecting ortools==9.11.4210
+#6 4.049   Downloading ortools-9.11.4210-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+#6 5.516 Collecting pandas==2.2.3
+#6 5.706   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#6 7.698 Collecting numpy==1.26.4
+#6 7.892   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#6 8.920 Collecting pytest==8.3.4
+#6 9.737   Downloading pytest-8.3.4-py3-none-any.whl.metadata (7.5 kB)
+#6 10.17 Collecting pytest-json-ctrf==0.3.5
+#6 10.59   Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+#6 10.80 Collecting absl-py>=2.0.0 (from ortools==9.11.4210)
+#6 11.64   Downloading absl_py-2.5.1-py3-none-any.whl.metadata (3.3 kB)
+#6 12.61 Collecting protobuf<5.27,>=5.26.1 (from ortools==9.11.4210)
+#6 12.80   Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+#6 13.00 Collecting immutabledict>=3.0.0 (from ortools==9.11.4210)
+#6 13.84   Downloading immutabledict-4.3.1-py3-none-any.whl.metadata (3.5 kB)
+#6 14.04 Collecting python-dateutil>=2.8.2 (from pandas==2.2.3)
+#6 15.40   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+#6 15.96 Collecting pytz>=2020.1 (from pandas==2.2.3)
+#6 16.15   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+#6 18.67 Collecting tzdata>=2022.7 (from pandas==2.2.3)
+#6 19.51   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+#6 19.71 Collecting iniconfig (from pytest==8.3.4)
+#6 19.90   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#6 20.55 Collecting packaging (from pytest==8.3.4)
+#6 21.54   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#6 22.36 Collecting pluggy<2,>=1.5 (from pytest==8.3.4)
+#6 22.55   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+#6 23.30 Collecting six>=1.6 (from python-dateutil>=2.8.2->pandas==2.2.3)
+#6 23.49   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#6 23.90 Downloading ortools-9.11.4210-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28.1 MB)
+#6 68.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 28.1/28.1 MB 930.5 kB/s eta 0:00:00
+#6 68.83 Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+#6 75.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 2.1 MB/s eta 0:00:00
+#6 75.38 Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+#6 84.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 2.0 MB/s eta 0:00:00
+#6 85.04 Downloading pytest-8.3.4-py3-none-any.whl (343 kB)
+#6 86.21 Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+#6 86.40 Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+#6 86.87 Downloading immutabledict-4.3.1-py3-none-any.whl (5.0 kB)
+#6 87.24 Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+#6 87.67 Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl (302 kB)
+#6 88.47 Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+#6 88.72 Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+#6 90.12 Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+#6 91.17 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#6 91.36 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#6 91.96 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#6 92.28 Installing collected packages: pytz, tzdata, six, protobuf, pluggy, packaging, numpy, iniconfig, immutabledict, absl-py, python-dateutil, pytest, pytest-json-ctrf, pandas, ortools
+#6 97.04 Successfully installed absl-py-2.5.1 immutabledict-4.3.1 iniconfig-2.3.1 numpy-1.26.4 ortools-9.11.4210 packaging-26.3 pandas-2.2.3 pluggy-1.7.0 protobuf-5.26.1 pytest-8.3.4 pytest-json-ctrf-0.3.5 python-dateutil-3.0.0 pytz-2026.5 six-1.17.0 tzdata-2026.5
+#6 97.04 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#6 98.29 
+#6 98.29 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#6 98.29 [notice] To update, run: pip install --upgrade pip
+#6 DONE 98.5s
+
+#7 [3/7] WORKDIR /root
+#7 DONE 0.1s
+
+#8 [4/7] COPY model-and-data.md /root/model-and-data.md
+#8 DONE 0.0s
+
+#9 [5/7] COPY requests.json /root/requests.json
+#9 DONE 0.0s
+
+#10 [6/7] COPY t_matrix.csv /root/t_matrix.csv
+#10 DONE 0.0s
+
+#11 [7/7] COPY instance_config.json /root/instance_config.json
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 5.8s done
+#12 exporting manifest sha256:3c7332941da91f457d5961f65efa79759e96dd84780eec2de4af8e1c7e093e77 done
+#12 exporting config sha256:7e87446ac04bd4cbf7823061918b61bee86095ac954788674a41b32c21aed6ce done
+#12 exporting attestation manifest sha256:de87d3544284d83e7d56e64ed7f9755aac4ca1334d15c32f1eb63c4ad89dcb65 done
+#12 exporting manifest list sha256:77bd2a3caefddf5e3833ef9975119c708cea8cdc681f47513734c2bbe4a89694 done
+#12 naming to docker.io/nextagent-bench/environment:60d9ebf7da0d52ae2e1a done
+#12 unpacking to docker.io/nextagent-bench/environment:60d9ebf7da0d52ae2e1a
+#12 unpacking to docker.io/nextagent-bench/environment:60d9ebf7da0d52ae2e1a 1.3s done
+#12 DONE 7.2s

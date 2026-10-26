@@ -8,7 +8,8 @@ import tarfile
 import tempfile
 from pathlib import Path, PurePosixPath
 
-from .util import adapter_sha, command, digest, file_sha, now, read_json, tree_manifest, write_json
+from .util import adapter_sha, command, digest, file_sha, fs_path, now, read_json, tree_manifest, write_json
+from .docker import build_image
 
 RUNTIME_DIRS = ('logs', 'run', 'workspaces', 'data', '__pycache__')
 
@@ -90,7 +91,7 @@ def import_framework(project: Path, source: Path) -> dict:
 
 
 def import_dataset(project: Path, source: Path) -> dict:
-    source = source.resolve()
+    project, source = fs_path(project), fs_path(source.resolve())
     if not (source / 'tasks').is_dir():
         if source.name == 'tasks':
             source = source.parent
@@ -139,5 +140,5 @@ def framework_image(project: Path, artifact: dict, log: Path) -> str:
         f'FROM node:{version}-bookworm-slim AS unpack\nCOPY bundle.tar.gz /tmp/bundle.tar.gz\n'
         f'RUN mkdir -p /opt/nextagent && tar -xzf /tmp/bundle.tar.gz -C /opt/nextagent --strip-components={strip} && rm -rf {cleanup}\n'
         'FROM scratch\nCOPY --from=unpack /opt/nextagent/ /opt/nextagent/\nCOPY runtime/ /opt/na-eval/runtime/\n', encoding='utf-8')
-    command(['docker', 'build', '-t', image, str(context)], timeout=1200, log=log)
+    build_image(image, context, 1200, log)
     return image

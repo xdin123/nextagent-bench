@@ -198,6 +198,8 @@ def execute_task(project: Path, run_dir: Path, manifest: dict, task_id: str, ima
                 return result
             phase("build")
             with build_gate:
+                if (run_dir / "STOP").exists():
+                    raise InterruptedError("Stop requested while waiting for build")
                 task_image, image_metadata = ensure_task_image(project, task, image, manifest["framework"]["candidate"].get("nodeVersion", "v22.22.0"),
                                                                budget, attempt, manifest.get("legacy_environment_images", {}).get(task_id))
             if (run_dir / "STOP").exists():
@@ -208,9 +210,10 @@ def execute_task(project: Path, run_dir: Path, manifest: dict, task_id: str, ima
             audit = adapt_task(task, attempt / "agent-facing", mappings)
             result["provided_skills"] = audit["provided_skills"]
             phase("container_setup")
-            with build_gate:
-                container.start(task_image, manifest["run_id"])
-                gateway.connect(container.name)
+            if (run_dir / "STOP").exists():
+                raise InterruptedError("Stop requested before container setup")
+            container.start(task_image, manifest["run_id"], build_gate)
+            gateway.connect(container.name)
             result["container"] = container.name
             write_json(attempt / "container-inspect.json", json.loads(command(["docker", "inspect", "--format", "{{json .HostConfig}}", container.name]).stdout))
             definition = read_json(run_dir / "config" / "agent.yaml")
