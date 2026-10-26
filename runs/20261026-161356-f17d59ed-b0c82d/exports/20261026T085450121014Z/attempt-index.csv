@@ -1,0 +1,3 @@
+﻿task,attempt,outcome,score,terminal_status,terminal_code,native_files,native_records,duplication_detected_records,output_capacity_handling_records,terminal_duplication_failure,terminal_output_capacity_failure,result_file
+ada-bathroom-plan-repair,1,EXECUTION_FAILED,0,REQUEST_FAILED,MODEL_DUPLICATION_DETECTED,1,259,4,3,True,False,tasks/ada-bathroom-plan-repair/attempt-001/result.json
+azure-bgp-oscillation-route-leak,1,EXECUTION_FAILED,0,REQUEST_FAILED,MODEL_DUPLICATION_DETECTED,1,134,4,0,True,False,tasks/azure-bgp-oscillation-route-leak/attempt-001/result.json

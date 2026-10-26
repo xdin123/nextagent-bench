@@ -1,0 +1,80 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [1/6] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#1 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.76kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:24.04
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 43.21kB done
+#5 DONE 0.0s
+
+#6 [ 2/11] RUN apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*
+#6 5.164 Err:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+#6 5.164   502  Bad Gateway [IP: 185.125.190.81 80]
+#6 6.023 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#6 11.04 Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+#6 11.04   502  Bad Gateway [IP: 91.189.92.23 80]
+#6 14.88 Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#6 19.89 Ign:5 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages
+#6 23.52 Get:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#6 33.39 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#6 93.56 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 96.61 Get:9 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#6 97.90 Get:10 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#6 98.46 Get:11 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#6 100.8 Get:5 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#6 160.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 167.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 172.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 172.9   Connection failed [IP: 91.189.92.23 80]
+#6 177.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 182.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 182.9   Connection failed [IP: 91.189.92.23 80]
+#6 187.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 193.0 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 193.0   Connection failed [IP: 91.189.92.23 80]
+#6 193.0 Reading package lists...
+#6 193.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+#6 193.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+#6 193.0 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.92.23 80]
+#6 193.0 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+#6 ERROR: process "/bin/sh -c apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [ 2/11] RUN apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*:
+182.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+182.9   Connection failed [IP: 91.189.92.23 80]
+187.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+193.0 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+193.0   Connection failed [IP: 91.189.92.23 80]
+193.0 Reading package lists...
+193.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+193.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+193.0 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.92.23 80]
+193.0 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+------
+Dockerfile:10
+--------------------
+   9 |     # Install essential packages
+  10 | >>> RUN apt-get update && apt-get install -y \
+  11 | >>>     curl \
+  12 | >>>     wget \
+  13 | >>>     git \
+  14 | >>>     unzip \
+  15 | >>>     zip \
+  16 | >>>     vim \
+  17 | >>>     nano \
+  18 | >>>     && rm -rf /var/lib/apt/lists/*
+  19 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100

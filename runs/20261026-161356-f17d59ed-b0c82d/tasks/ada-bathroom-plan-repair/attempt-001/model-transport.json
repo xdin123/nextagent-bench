@@ -1,0 +1,6 @@
+{
+  "model": "qwen3.8-27b",
+  "internal_url": "http://nab-model-20261026-161356-f17d59ed-b0c82d:8787/tasks/ada-bathroom-plan-repair/attempts/1/v1",
+  "upstream": "https://maas.qianwenaiapi.com/compatible-mode/v1",
+  "credential": "temporary gateway token; upstream keys stay in the sidecar"
+}

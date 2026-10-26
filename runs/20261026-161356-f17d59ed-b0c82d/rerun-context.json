@@ -1,0 +1,26 @@
+{
+  "authorization": "User explicitly requested enabling complete diagnostic Hook and rerunning exactly ada-bathroom-plan-repair and azure-bgp-oscillation-route-leak.",
+  "parent_run": "20261025-195147-f17d59ed-c79fa2",
+  "tasks": [
+    "ada-bathroom-plan-repair",
+    "azure-bgp-oscillation-route-leak"
+  ],
+  "reason": "Collect developer-hook-trace loop boundary diagnostics previously excluded by evaluation policy.",
+  "changed_inputs": [
+    "agent.hooks: restore developer-hook-trace.loop-raw-boundary at all six declared stages",
+    "evaluation compatibility exclusion removed",
+    "concurrency=2 under current shared account quota; original frozen quota max differs"
+  ],
+  "unchanged_inputs": [
+    "framework artifact",
+    "dataset",
+    "model/base URL",
+    "system configuration",
+    "all other agent configuration",
+    "path mappings",
+    "verifier/oracle"
+  ],
+  "score_policy": "Separate diagnostic rerun; never replace original first valid scores.",
+  "max_completed_attempts_per_task": 1,
+  "validation": "Bootstrap/Hook loading before model-consuming evaluation; no framework product patches."
+}

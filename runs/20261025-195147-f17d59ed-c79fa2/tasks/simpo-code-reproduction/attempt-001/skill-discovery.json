@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "nlp-research-repo-package-installment",
+    "pdf"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "nlp-research-repo-package-installment"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pdf"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

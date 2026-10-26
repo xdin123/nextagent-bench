@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "qutip",
+      "directory": "qutip",
+      "description": "Quantum mechanics simulations and analysis using QuTiP (Quantum Toolbox in Python). Use when working with quantum systems including: (1) quantum states (kets, bras, density matrices), (2) quantum operators and gates, (3) time evolution and dynamics (Schrödinger, master equations, Monte Carlo), (4) open quantum systems with dissipation, (5) quantum measurements and entanglement, (6) visualization (Bloch sphere, Wigner functions), (7) steady states and correlation functions, or (8) advanced methods (Floquet theory, HEOM, stochastic solvers). Handles both closed and open quantum systems across various domains including quantum optics, quantum computing, and condensed matter physics.",
+      "sha256": "25d79e95290fe27f6e7360dfb816fb0f0082b6c9c846e02d94402d93c3974673"
+    }
+  ],
+  "verifier_sha": "e0a58d1317b855dc70e09fd85d68e97568cb608de52330b9de955b115b8ad9ce",
+  "prompt_sha": "631bedad67e51c735ac70c476b2dc4be7a886002e1d5286b19be63c43d498d59"
+}

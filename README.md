@@ -2,11 +2,11 @@
 
 独立项目：`C:\Project\nextagent-bench`。接受新的 Linux x64 NextAgent 编译包，使用 Docker 执行题目；不修改 NextAgent 产品代码，不自动给新包套用历史补丁。
 
-旧 session 与旧工程的复盘保存在 [历史评测复盘](docs/legacy-review-20261025.md)。该文是建设前的调查结论；最终已实施的运行方式以本文及 [验证记录](VALIDATION.md) 为准。
+旧 session 与旧工程的复盘保存在 [历史评测复盘](docs/legacy-review-20261025.md)。该文是建设前的调查结论；最终已实施的运行方式以本文及 [验证记录](docs/VALIDATION.md) 为准。
 
-最新单题已通过；实际耗时、5-key 轮换、代理断连修复，以及“支持可配置并发但当前有效并发为1”的边界，见 [本次冒烟记录](SMOKE-20261025.md)。
+历史单题曾通过；实际耗时、5-key 轮换、代理断连修复，以及“支持可配置并发但当时有效并发为1”的边界，见 [冒烟记录](docs/SMOKE-20261025.md)。
 
-后续全量批次已按用户授权升为 2 并发，并支持同批次运行中调节；上述冒烟记录的并发 1 是当时状态。当前全量批次为 `20261025-195147-f17d59ed-c79fa2`，已完成题保留并跳过。
+原全量批次 `20261025-195147-f17d59ed-c79fa2` 已按用户要求停止，原始结果保留。结果入口见 [评测结果索引](RESULTS-INDEX.md)。用户于 2026-10-26 单独批准恢复诊断 Hook 后重跑 `ada-bathroom-plan-repair` 和 `azure-bgp-oscillation-route-leak`，补测批次为 `20261026-161356-f17d59ed-b0c82d`；不自动恢复原全量剩余任务，也不覆盖首测分数。
 
 ```mermaid
 flowchart LR
@@ -85,7 +85,7 @@ cd C:\Project\nextagent-bench
 
 每次运行生成并冻结实际配置，默认仅做必要的评测隔离：四个路径指向本题独立 NEXTAGENT_HOME；HTTP 使用容器内部 31872 端口，避免与网页任务的 3000 端口冲突；信任身份只使用容器内 LOCAL auth none；activeAgentId 对应本地定义。修改列表写入 `runs/<run-id>/config/changes.json`。
 
-旧工程本地 Agent 引用 `developer-hook-trace.loop-raw-boundary` 会启动失败，因此当前 `evaluation.yaml` 明确列出该 hook 的排除策略。原始模板仍保留 hook，实际移除有记录。新框架解决此问题后，应从 `excluded_agent_hooks` 删除该项并建立新批次。
+`developer-hook-trace.loop-raw-boundary` 在当前评测模板中启用六个阶段，`excluded_agent_hooks` 为空。旧工程曾因 `Unknown lifecycle hook` 排除该绑定，导致原全量批次缺少 `DEVELOPER_HOOK_TRACE/boundary`；这个历史缺口不能事后补回。2026-10-26 使用同一框架工件、相同启动入口和恢复后的 Hook 配置完成了不调用模型的 Docker bootstrap 验证，并在两题补测中核实实际生成边界日志；无需修改框架代码。证据在补测批次的 `validation/hook-startup/`、`validation/live-hook-counts.json` 和各题原生日志。配置变化使用独立补测批次，原批次冻结配置保持原样。
 
 有效 Agent 定义会在启动前放入 `NEXTAGENT_HOME/agents/<agentId>/agent.yaml`，并用 bootstrap.guardrail 核对实际护栏值，防止回退到 guard=true 的内置定义。题目系统 Skills 在启动前准备。Web `/api/v1/skills` 只列出 user-invocable Skills，因此还会读取结构化 system-local 注册诊断，验证模型可发现的普通 Skills；证据分别保存，缺失时停止该题接入，不把“文件已复制”当作加载成功。
 
@@ -245,5 +245,5 @@ $env:NAB_DOCKER_TESTS = '1'
 Remove-Item Env:\NAB_DOCKER_TESTS
 ```
 
-Docker fixture 只验证路径、文件可见性、分页、HTTP 和拒绝系统根，不作为真实 NextAgent/SkillsBench 分数。真实冒烟结果及执行范围见 `VALIDATION.md`。
+Docker fixture 只验证路径、文件可见性、分页、HTTP 和拒绝系统根，不作为真实 NextAgent/SkillsBench 分数。真实冒烟结果及执行范围见 `docs/VALIDATION.md`。
 

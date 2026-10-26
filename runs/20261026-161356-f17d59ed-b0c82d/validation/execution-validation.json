@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-26T08:27:04.581722+00:00",
+  "contract_tests": {
+    "command": "python -m unittest discover -s tests -p test_contracts.py",
+    "passed": 11,
+    "failed": 0
+  },
+  "hook_startup_proof": "validation/hook-startup/proof.json",
+  "actual_hook_records_seen_in_both_tasks": true,
+  "initial_model_requests_http200": true,
+  "original_result_and_config_sha_checks": 94,
+  "framework_code_modified": false,
+  "first_score_replacement": false,
+  "temporary_cleanup": {
+    "status": "COMPLETED",
+    "freed_bytes": 941876472,
+    "protected_hashes_unchanged": 94,
+    "method": "Each file was enumerated and validated inside the reviewed workspace; exact literal file paths were deleted without -Recurse or -Force, then verified-empty directories were removed."
+  },
+  "final_validation": {
+    "status": "FINISHED",
+    "task_count": 2,
+    "runner_alive": false,
+    "remaining_run_containers": 0,
+    "merged_records": 393,
+    "native_archive_hash_checks": 2,
+    "analysis_status": "ANALYSIS_INCOMPLETE for both tasks; raw evidence preserved."
+  }
+}

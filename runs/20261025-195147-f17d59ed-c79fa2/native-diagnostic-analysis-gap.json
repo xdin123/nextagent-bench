@@ -31,5 +31,33 @@
   ],
   "confirmed_gap": "analysis.py build_packet filters top-level event/modelInput/modelOutput/toolInput/toolOutput/rawExceptionData and does not unfold this plugin artifact payload/snapshots. Original file is preserved, but these nested records are not ingested directly into the semantic diagnosis evidence.",
   "implementation_constraint": "No source edits or adapter-hash changes while original runner/analysis is active. After original run closes, add/test schema-aware bounded native diagnostic ingestion with invocation/request correlation; retain provenance and redact credentials, omit provider reasoning. Record genuine analysis implementation version.",
-  "scoring_constraint": "Diagnostics-only followup; no Agent rerun or scoring edits for this gap. Reanalyze only incomplete or demonstrably affected diagnoses when needed; preserve all old analysis artifacts."
+  "scoring_constraint": "Diagnostics-only followup; no Agent rerun or scoring edits for this gap. Reanalyze only incomplete or demonstrably affected diagnoses when needed; preserve all old analysis artifacts.",
+  "additional_collection_policy_gap": {
+    "excluded_hook": "developer-hook-trace.loop-raw-boundary",
+    "configuration": "evaluation.yaml:7-8",
+    "frozen_audit": "config/changes.json",
+    "removed_binding": [
+      {
+        "field": "agent.hooks",
+        "removed": [
+          {
+            "hookId": "developer-hook-trace.loop-raw-boundary",
+            "enabled": true,
+            "stages": [
+              "BEFORE_PLANNING",
+              "BEFORE_MODEL_INVOKE",
+              "AFTER_MODEL_RESULT",
+              "BEFORE_CAPABILITY_INVOKE",
+              "AFTER_CAPABILITY_RESULT",
+              "BEFORE_AGENT_TERMINAL"
+            ]
+          }
+        ],
+        "reason": "Explicit compatibility policy in evaluation.yaml"
+      }
+    ],
+    "legacy_reason_documented": "README.md:88 states old local Agent hook binding caused startup failure; exclusion was retained as a compatibility policy. Necessity for the current bundled version has not been independently established.",
+    "effect": "The configured plugin remains loaded, but this Agent hook binding is removed. DEVELOPER_HOOK_TRACE boundary records from that hook are absent. Built-in model recovery diagnostics still use the same file writer."
+  },
+  "coverage_warning": "Fixing nested payload/snapshots ingestion alone will not recover missing developer-hook-trace records. Native model-recovery diagnostics, operational diagnostics and model gateway captures are separate evidence surfaces."
 }

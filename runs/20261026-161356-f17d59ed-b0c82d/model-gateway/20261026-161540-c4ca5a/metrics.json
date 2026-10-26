@@ -1,0 +1,49 @@
+{
+  "quota": {
+    "shared_account": true,
+    "max_concurrency": 2,
+    "requests_per_minute": null,
+    "tokens_per_minute": null,
+    "min_interval_seconds": 2,
+    "max_attempts": 3,
+    "max_wait_seconds": 90,
+    "upstream_idle_timeout_seconds": 120
+  },
+  "active": 0,
+  "cooldown_remaining_seconds": 0,
+  "statuses": {
+    "200": 26
+  },
+  "credentials": [
+    {
+      "name": "default",
+      "requests": 7,
+      "disabled": false,
+      "active": 0
+    },
+    {
+      "name": "shared-01",
+      "requests": 3,
+      "disabled": false,
+      "active": 0
+    },
+    {
+      "name": "shared-02",
+      "requests": 5,
+      "disabled": false,
+      "active": 0
+    },
+    {
+      "name": "shared-03",
+      "requests": 4,
+      "disabled": false,
+      "active": 0
+    },
+    {
+      "name": "shared-04",
+      "requests": 7,
+      "disabled": false,
+      "active": 0
+    }
+  ]
+}

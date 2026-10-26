@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-26T07:08:01.522961+00:00",
+  "current_record_family": {
+    "schemaVersion": 1,
+    "pluginId": "framework-model-recovery",
+    "artifactType": "model-recovery",
+    "payload_stage": "MODEL_RECOVERY"
+  },
+  "native_file_is_framework_generated": true,
+  "sample_archive_and_extracted_sha256_identical": true,
+  "sample_native_sha256": "59ab962961f04d33df8637d9672b3841377eefb5eed3638c9db1fd9a6125c66c",
+  "writer_modules": [
+    {
+      "frozen_member": "node_modules/@nextagent/agent-log/dist/developer-diagnostic-artifact-writer.js",
+      "copied_source": "diagnostic-format-review\\developer-diagnostic-artifact-writer.js",
+      "same_bytes_as_original_download": true
+    },
+    {
+      "frozen_member": "node_modules/@nextagent/agent-common/dist/logging/model-recovery-diagnostics.js",
+      "copied_source": "diagnostic-format-review\\model-recovery-diagnostics.js",
+      "same_bytes_as_original_download": true
+    },
+    {
+      "frozen_member": "node_modules/@nextagent/agent-plugin-sdk/dist/workflow-trace-collector.js",
+      "copied_source": "diagnostic-format-review\\workflow-trace-collector.js",
+      "same_bytes_as_original_download": true
+    },
+    {
+      "frozen_member": "node_modules/@nextagent/agent-plugin-runtime/dist/plugin-loader.js",
+      "copied_source": "diagnostic-format-review\\plugin-loader.js",
+      "same_bytes_as_original_download": true
+    }
+  ],
+  "collection_policy_gap": {
+    "excluded_hook": "developer-hook-trace.loop-raw-boundary",
+    "configuration": "evaluation.yaml:7-8",
+    "frozen_audit": "config/changes.json",
+    "removed_binding": [
+      {
+        "field": "agent.hooks",
+        "removed": [
+          {
+            "hookId": "developer-hook-trace.loop-raw-boundary",
+            "enabled": true,
+            "stages": [
+              "BEFORE_PLANNING",
+              "BEFORE_MODEL_INVOKE",
+              "AFTER_MODEL_RESULT",
+              "BEFORE_CAPABILITY_INVOKE",
+              "AFTER_CAPABILITY_RESULT",
+              "BEFORE_AGENT_TERMINAL"
+            ]
+          }
+        ],
+        "reason": "Explicit compatibility policy in evaluation.yaml"
+      }
+    ],
+    "legacy_reason_documented": "README.md:88 states old local Agent hook binding caused startup failure; exclusion was retained as a compatibility policy. Necessity for the current bundled version has not been independently established.",
+    "effect": "The configured plugin remains loaded, but this Agent hook binding is removed. DEVELOPER_HOOK_TRACE boundary records from that hook are absent. Built-in model recovery diagnostics still use the same file writer."
+  },
+  "generation_chain": [
+    "Framework model invocation/validation/recovery emits a model-recovery diagnostic record",
+    "Unified developer diagnostic writer wraps schemaVersion/recordedAt/pluginId/artifactType/coordinates/payload",
+    "File rolling uses date-sequence naming",
+    "Benchmark archives the container home and copies log members without changing original file bytes"
+  ],
+  "export_difference": "Only completed-framework-traces.ndjson adds _bench task/attempt/source metadata. The per-task native file is not reformatted.",
+  "limits": "Existing model-recovery records do not replace the missing developer-hook-trace boundary records. Parsing cannot reconstruct events that were not collected. Current frozen configuration must remain unchanged; any new Agent execution or recapture needs user approval."
+}

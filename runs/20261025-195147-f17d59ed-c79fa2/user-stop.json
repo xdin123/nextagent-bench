@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-26T07:57:50.081242+00:00",
+  "user_instruction": "结束评测任务吧",
+  "status": "STOPPED",
+  "runner_pid": 37716,
+  "runner_alive": false,
+  "runner_lock_present": false,
+  "run_containers_remaining": 0,
+  "automation_id": "nextagent",
+  "automation_deleted": true,
+  "counts": {
+    "PASSED": 7,
+    "EXECUTION_FAILED": 14,
+    "TIMEOUT": 8,
+    "ENVIRONMENT_ERROR": 39,
+    "TASK_FAILED": 10,
+    "PREFLIGHT_ERROR": 3,
+    "VERIFIER_ERROR": 1,
+    "INTERRUPTED": 3
+  },
+  "numeric_scored_tasks": 39,
+  "score_sum": 7.6,
+  "interrupted_tasks": [
+    "syzkaller-ppdev-syzlang",
+    "tictoc-unnecessary-abort-detection",
+    "travel-planning"
+  ],
+  "not_started_tasks": [
+    "weighted-gdp-calc",
+    "xlsx-recover-data"
+  ],
+  "reports": [
+    {
+      "name": "report.md",
+      "exists": true,
+      "bytes": 14332,
+      "modified_at": "2026-10-26T07:56:53.817919+00:00"
+    },
+    {
+      "name": "results.xlsx",
+      "exists": true,
+      "bytes": 60968,
+      "modified_at": "2026-10-26T07:56:53.817919+00:00"
+    },
+    {
+      "name": "results.json",
+      "exists": true,
+      "bytes": 382260,
+      "modified_at": "2026-10-26T07:56:53.507306+00:00"
+    },
+    {
+      "name": "summary.json",
+      "exists": true,
+      "bytes": 1002,
+      "modified_at": "2026-10-26T07:56:53.499026+00:00"
+    }
+  ],
+  "source_frozen_inputs_and_existing_scores_changed": false,
+  "automatic_resume_or_retry_allowed": false,
+  "continuation_policy": "Require a new explicit user instruction before resuming or replaying tasks. Preserve all existing attempts, results and native diagnostic artifacts."
+}

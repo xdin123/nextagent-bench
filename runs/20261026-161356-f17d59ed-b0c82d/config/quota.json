@@ -1,0 +1,10 @@
+{
+  "shared_account": true,
+  "max_concurrency": 2,
+  "requests_per_minute": null,
+  "tokens_per_minute": null,
+  "min_interval_seconds": 2,
+  "max_attempts": 3,
+  "max_wait_seconds": 90,
+  "upstream_idle_timeout_seconds": 120
+}

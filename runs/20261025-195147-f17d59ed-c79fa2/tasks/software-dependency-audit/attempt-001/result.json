@@ -1,0 +1,38 @@
+{
+  "task": "software-dependency-audit",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T07:19:03.471101+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "software-dependency-audit",
+    "agent_timeout": 900,
+    "verifier_timeout": 240,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 227.735,
+    "build": 634.156,
+    "collect": 0.0
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 861.907,
+  "failed_phase": "build",
+  "error": "docker exited 1: /debian trixie InRelease\n#6 5.316   502  Bad Gateway [IP: 199.232.162.132 80]\n#6 7.991 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\n#6 13.00 Err:3 http://deb.debian.org/debian-security trixie-security InRelease\n#6 13.00   502  Bad Gateway [IP: 199.232.162.132 80]\n#6 18.01 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n#6 23.02 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n#6 23.02   502  Bad Gateway [IP: 199.232.162.132 80]\n#6 28.04 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n#6 33.05 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n#6 33.05   502  Bad Gateway [IP: 199.232.162.132 80]\n#6 33.05 Reading package lists...\n#6 33.06 E: Failed to fetch http://deb.debian.org/debian/dists/trixie/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]\n#6 33.06 E: The repository 'http://deb.debian.org/debian trixie InRelease' is no longer signed.\n#6 33.06 E: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]\n#6 33.06 E: The repository 'http://deb.debian.org/debian-security trixie-security InRelease' is no longer signed.\n#6 ERROR: process \"/bin/sh -c apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n------\n > [2/6] RUN apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*:\n23.02 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n23.02   502  Bad Gateway [IP: 199.232.162.132 80]\n28.04 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n33.05 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages\n33.05   502  Bad Gateway [IP: 199.232.162.132 80]\n33.05 Reading package lists...\n33.06 E: Failed to fetch http://deb.debian.org/debian/dists/trixie/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]\n33.06 E: The repository 'http://deb.debian.org/debian trixie InRelease' is no longer signed.\n33.06 E: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]\n33.06 E: The repository 'http://deb.debian.org/debian-security trixie-security InRelease' is no longer signed.\n------\nDockerfile:6\n--------------------\n   5 |     # Install dependencies\n   6 | >>> RUN apt-get update && apt-get install -y \\\n   7 | >>>     curl \\\n   8 | >>>     wget \\\n   9 | >>>     gnupg2 \\\n  10 | >>>     lsb-release \\\n  11 | >>>     git \\\n  12 | >>>     unzip \\\n  13 | >>>     && rm -rf /var/lib/apt/lists/*\n  14 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T07:33:25.376862+00:00",
+  "evidence_complete": false
+}

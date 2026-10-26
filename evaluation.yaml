@@ -4,8 +4,7 @@ model: qwen3.8-27b
 base_url: https://maas.qianwenaiapi.com/compatible-mode/v1
 jobs: 2
 skill_mode: with-skill
-excluded_agent_hooks:
-- developer-hook-trace.loop-raw-boundary
+excluded_agent_hooks: []
 suites:
   smoke:
   - 3d-scan-calc

@@ -1,0 +1,38 @@
+{
+  "task": "threejs-to-obj",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T07:40:59.110544+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "threejs-to-obj",
+    "agent_timeout": 300,
+    "verifier_timeout": 300,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 4096,
+    "storage_mb": 8192,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.109,
+    "build": 177.938,
+    "collect": 0.015
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 178.062,
+  "failed_phase": "build",
+  "error": "docker exited 1: ntu.com/ubuntu noble/universe amd64 Packages\n#6 73.58 Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]\n#6 74.13 Err:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages\n#6 74.13   502  Bad Gateway [IP: 91.189.91.82 80]\n#6 74.14 Reading package lists...\n#6 74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]\n#6 74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.\n#6 74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]\n#6 74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.\n#6 ERROR: process \"/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n------\n > [2/6] RUN apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*:\n68.10 Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]\n69.11 Ign:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages\n73.58 Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]\n74.13 Err:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages\n74.13   502  Bad Gateway [IP: 91.189.91.82 80]\n74.14 Reading package lists...\n74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]\n74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.\n74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]\n74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.\n------\nDockerfile:6\n--------------------\n   5 |     # Install Node.js, npm, and Python\n   6 | >>> RUN apt-get update && apt-get install -y \\\n   7 | >>>     curl \\\n   8 | >>>     python3 \\\n   9 | >>>     python3-pip \\\n  10 | >>>     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \\\n  11 | >>>     && apt-get install -y nodejs \\\n  12 | >>>     && apt-get clean \\\n  13 | >>>     && rm -rf /var/lib/apt/lists/*\n  14 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T07:43:57.173053+00:00",
+  "evidence_complete": false
+}

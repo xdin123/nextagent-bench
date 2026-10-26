@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "transaction-concurrency-control-foundations",
+      "directory": "transaction-concurrency-control-foundations",
+      "description": "Provides database transaction concurrency-control background. Use when reasoning about transactions, commits and aborts, serializability, isolation anomalies, conflicts, dependencies, and protocol families such as locking, timestamp ordering, OCC, MVCC, SSI, TicToc, hybrid protocols.",
+      "sha256": "e547c7f2b5ae65f6543d34c58d5b5db71145ee9f8dc8683a845671258937282e"
+    },
+    {
+      "name": "transaction-protocol-reasoning",
+      "directory": "transaction-protocol-reasoning",
+      "description": "Teaches how to reason from a transaction protocol’s rules to a working model. Use when analyzing a concurrency-control paper, spec, or algorithm to identify state, metadata, invariants, operation rules, examples, counterexamples, guarantees, false aborts, unsafe commits, or tradeoffs before inspecting concrete traces.",
+      "sha256": "8ce9b3a2c3b86940063505013d15bb477c2bb164fcc0fe6f0736383476da103b"
+    },
+    {
+      "name": "transaction-trace-analysis",
+      "directory": "transaction-trace-analysis",
+      "description": "Teaches evidence-based analysis of transaction logs and traces. Use when reconstructing transaction behavior from tables, TSV/CSV files, timestamps, counters, object histories, validation records, abort records, retries, partial logs, or when producing classified transaction outputs from trace evidence.",
+      "sha256": "c44409caad70c655144b26ec53e50d727dc2c9d0e0c244d648a0f99e5d51b929"
+    }
+  ],
+  "verifier_sha": "d8e804b647681f1ce4c1a691b7e9fac1b2a3b56d885474a0a95330bb3b260aeb",
+  "prompt_sha": "268a17d43cfe3ac68e01b821d3033972ee40774a9692272adca88f1889a73f17"
+}

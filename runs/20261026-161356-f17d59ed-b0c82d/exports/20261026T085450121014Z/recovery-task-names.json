@@ -1,0 +1,15 @@
+{
+  "terminal_duplication_failure_tasks": [
+    "ada-bathroom-plan-repair",
+    "azure-bgp-oscillation-route-leak"
+  ],
+  "terminal_output_capacity_failure_tasks": [],
+  "formal_output_capacity_handling_tasks": [
+    "ada-bathroom-plan-repair"
+  ],
+  "formal_duplication_detected_tasks": [
+    "ada-bathroom-plan-repair",
+    "azure-bgp-oscillation-route-leak"
+  ],
+  "interpretation": "Observed recovery handling is not proof it caused a task failure. Terminal codes identify direct termination; causal attribution still requires snapshot and tool/provider evidence. Preflight records are excluded from these task-level handling sets."
+}

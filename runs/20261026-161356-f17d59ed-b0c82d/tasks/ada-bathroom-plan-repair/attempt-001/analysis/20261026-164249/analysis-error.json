@@ -1,0 +1,7 @@
+{
+  "status": "ANALYSIS_INCOMPLETE",
+  "created_at": "2026-10-26T08:46:50.190123+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261026-161356-f17d59ed-b0c82d\\tasks\\ada-bathroom-plan-repair\\attempt-001\\analysis\\20261026-164249",
+  "error": "Diagnostic request failed: ANALYSIS_TRANSPORT_OR_PROTOCOL_ERROR",
+  "note": "Evidence packet retained where available; no unsupported root cause asserted. Retry diagnostics without rerunning the task."
+}

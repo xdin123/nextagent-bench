@@ -1,0 +1,84 @@
+[
+  {
+    "task": "ada-bathroom-plan-repair",
+    "attempt": 1,
+    "outcome": "EXECUTION_FAILED",
+    "score": 0,
+    "terminal_code": "MODEL_DUPLICATION_DETECTED",
+    "files": [
+      {
+        "file": "tasks/ada-bathroom-plan-repair/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+        "sha256": "b738b9a9b250ab31e7ed3b514321e0ef021d28476bc6b4aa811bb19669c09e80",
+        "bytes": 4786426
+      }
+    ],
+    "rows": 259,
+    "invalid_rows": 0,
+    "plugin_records": {
+      "developer-hook-trace": 78,
+      "framework-model-recovery": 181
+    },
+    "formal_hook_stages": {
+      "BEFORE_PLANNING": 11,
+      "BEFORE_MODEL_INVOKE": 13,
+      "AFTER_MODEL_RESULT": 11,
+      "BEFORE_CAPABILITY_INVOKE": 16,
+      "AFTER_CAPABILITY_RESULT": 16
+    },
+    "all_request_hook_stages": {
+      "BEFORE_PLANNING": 13,
+      "BEFORE_MODEL_INVOKE": 16,
+      "AFTER_MODEL_RESULT": 14,
+      "BEFORE_CAPABILITY_INVOKE": 17,
+      "AFTER_CAPABILITY_RESULT": 17,
+      "BEFORE_AGENT_TERMINAL": 1
+    },
+    "formal_hook_records_with_boundary": 67,
+    "all_six_formal_stages_present": false,
+    "missing_formal_stages": [
+      "BEFORE_AGENT_TERMINAL"
+    ],
+    "collection_limits": "Framework-native bounded diagnostic output. Six configured stages do not guarantee execution on every failure path. Existing semantic analysis parser does not fully consume nested native payloads."
+  },
+  {
+    "task": "azure-bgp-oscillation-route-leak",
+    "attempt": 1,
+    "outcome": "EXECUTION_FAILED",
+    "score": 0,
+    "terminal_code": "MODEL_DUPLICATION_DETECTED",
+    "files": [
+      {
+        "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+        "sha256": "79cfe7fba3accc08ae33529e6d4f12a376d7a5dc8aea9e5e5efe79fff6351078",
+        "bytes": 1723267
+      }
+    ],
+    "rows": 134,
+    "invalid_rows": 0,
+    "plugin_records": {
+      "developer-hook-trace": 41,
+      "framework-model-recovery": 93
+    },
+    "formal_hook_stages": {
+      "BEFORE_PLANNING": 4,
+      "BEFORE_MODEL_INVOKE": 5,
+      "AFTER_MODEL_RESULT": 3,
+      "BEFORE_CAPABILITY_INVOKE": 9,
+      "AFTER_CAPABILITY_RESULT": 9
+    },
+    "all_request_hook_stages": {
+      "BEFORE_PLANNING": 6,
+      "BEFORE_MODEL_INVOKE": 8,
+      "AFTER_MODEL_RESULT": 6,
+      "BEFORE_CAPABILITY_INVOKE": 10,
+      "AFTER_CAPABILITY_RESULT": 10,
+      "BEFORE_AGENT_TERMINAL": 1
+    },
+    "formal_hook_records_with_boundary": 30,
+    "all_six_formal_stages_present": false,
+    "missing_formal_stages": [
+      "BEFORE_AGENT_TERMINAL"
+    ],
+    "collection_limits": "Framework-native bounded diagnostic output. Six configured stages do not guarantee execution on every failure path. Existing semantic analysis parser does not fully consume nested native payloads."
+  }
+]

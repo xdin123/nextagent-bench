@@ -1,0 +1,89 @@
+{
+  "agentId": "default-agent",
+  "agentVersion": "v2",
+  "duplicationDetectionSwitch": true,
+  "displayName": "NextAgent telecom agent",
+  "description": "Default telecom network operations agent.",
+  "capabilityBindings": [
+    {
+      "capabilityId": "network-explorer",
+      "capabilityType": "AGENT",
+      "providerId": "builtin-agents",
+      "enabled": false
+    },
+    {
+      "capabilityId": "search_memory",
+      "capabilityType": "TOOL",
+      "providerId": "memory-tools",
+      "enabled": true
+    },
+    {
+      "capabilityId": "get_memory_detail",
+      "capabilityType": "TOOL",
+      "providerId": "memory-tools",
+      "enabled": true
+    },
+    {
+      "capabilityId": "add_memory",
+      "capabilityType": "TOOL",
+      "providerId": "memory-tools",
+      "enabled": true
+    },
+    {
+      "capabilityId": "Rag",
+      "capabilityType": "TOOL",
+      "providerId": "builtin-tools",
+      "enabled": true
+    }
+  ],
+  "hooks": [
+    {
+      "hookId": "user-query-memory-recall",
+      "stages": [
+        "BEFORE_MODEL_INVOKE"
+      ],
+      "enabled": true
+    },
+    {
+      "hookId": "developer-hook-trace.loop-raw-boundary",
+      "enabled": true,
+      "stages": [
+        "BEFORE_PLANNING",
+        "BEFORE_MODEL_INVOKE",
+        "AFTER_MODEL_RESULT",
+        "BEFORE_CAPABILITY_INVOKE",
+        "AFTER_CAPABILITY_RESULT",
+        "BEFORE_AGENT_TERMINAL"
+      ]
+    }
+  ],
+  "capability-result-presentation": {
+    "default-level": "SUMMARY",
+    "rules": [
+      {
+        "capability-id": "Rag",
+        "level": "SUMMARY"
+      },
+      {
+        "capability-id": "AskUserQuestion",
+        "level": "SUMMARY"
+      },
+      {
+        "capability-id": "TodoWrite",
+        "level": "SUMMARY"
+      },
+      {
+        "capability-id": "Cron",
+        "level": "SUMMARY"
+      }
+    ]
+  },
+  "runtimeSettings": {
+    "guardrailEnabled": false,
+    "defaultLanguage": "zh-CN",
+    "maxTurns": 50,
+    "maxToolCallsPerTurn": 30,
+    "requestTimeoutMs": 3600000
+  },
+  "resources": []
+}

@@ -1,0 +1,7 @@
+{
+  "status": "ANALYSIS_INCOMPLETE",
+  "created_at": "2026-10-26T08:51:55.877809+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261026-161356-f17d59ed-b0c82d\\tasks\\azure-bgp-oscillation-route-leak\\attempt-001\\analysis\\20261026-164650",
+  "error": "Diagnostic request failed: ANALYSIS_TIMEOUT",
+  "note": "Evidence packet retained where available; no unsupported root cause asserted. Retry diagnostics without rerunning the task."
+}

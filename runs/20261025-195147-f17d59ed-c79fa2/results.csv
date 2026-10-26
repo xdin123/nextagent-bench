@@ -435,31 +435,255 @@ Dockerfile:23
 --------------------
 ERROR: failed to build: failed to solve: process ""/bin/sh -c curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx"" did not complete successfully: exit code: 1
 ",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-tpp-planning\attempt-001\analysis\20261026-103324\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-tpp-planning\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
-pdf-excel-diff,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-powerlifting-coef-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-pptx-reference-formatting,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-protein-expression-analysis,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-python-scala-translation,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-quantum-numerical-simulation,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-r2r-mpc-control,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-radar-vital-signs,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-react-performance-debugging,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-reserves-at-risk-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-sales-pivot-analysis,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-sec-financial-report,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-seismic-phase-picking,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-setup-fuzzing-py,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-shock-analysis-demand,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-shock-analysis-supply,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-simpo-code-reproduction,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-software-dependency-audit,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-spring-boot-jakarta-migration,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-suricata-custom-exfil,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-syzkaller-ppdev-syzlang,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-threejs-structure-parser,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-threejs-to-obj,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-tictoc-unnecessary-abort-detection,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-travel-planning,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
-video-silence-remover,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+pdf-excel-diff,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,2444.516,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:8fb3108cfe4365a33fe0', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\pdf-excel-diff\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pdf-excel-diff\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+powerlifting-coef-calc,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1800.563,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:8003fb7d912e2224836d', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\powerlifting-coef-calc\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\powerlifting-coef-calc\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+pptx-reference-formatting,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-868633eb-0450-4b28-8eee-74f0ec329b1c,3578.156,500.671,25,34,810459,13281,pptx,pptx,pptx,pptx,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pptx-reference-formatting\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+protein-expression-analysis,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,2745.547,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:d9cdd873b77b544796c3', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\protein-expression-analysis\\environment']' timed out after 900.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\protein-expression-analysis\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+python-scala-translation,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1244.172,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:81f676554b93b6d46aef', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\python-scala-translation\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\python-scala-translation\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+quantum-numerical-simulation,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-de4a62dd-4973-4ea0-b158-39d6fdcfd174,11129.688,3602.484,21,22,662937,127908,qutip,qutip,qutip,qutip,test_outputs.py::test_all_files_exist; test_outputs.py::test_grid_dimensions; test_outputs.py::test_values_are_real_and_finite; test_outputs.py::test_csv_sums_to_one; test_outputs.py::test_cases_are_distinct; test_outputs.py::test_wigner_diagonal_sum_matches_reference; test_outputs.py::test_wigner_values_match_reference,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\quantum-numerical-simulation\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+r2r-mpc-control,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-fc4afe91-74fd-4753-a1c0-b3c45b834253,3915.641,1050.39,3,7,91732,43859,finite-horizon-lqr; integral-action-design; mpc-horizon-tuning; state-space-linearization,finite-horizon-lqr; integral-action-design; mpc-horizon-tuning; state-space-linearization,,,test_outputs.py::TestControllerParams::test_controller_params; test_outputs.py::TestControllerParams::test_linearization_correctness; test_outputs.py::TestControlLog::test_control_log; test_outputs.py::TestMetrics::test_metrics; test_outputs.py::TestPerformance::test_performance; test_outputs.py::TestSafety::test_safety,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\r2r-mpc-control\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+radar-vital-signs,TIMEOUT,0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-78d77ff2-41d0-42a1-9e68-162d78a07ae3,3522.953,1200.5,15,17,468582,60204,radar-signal-processing; radar-vital-signs; vital-sign-extraction,radar-signal-processing; radar-vital-signs; vital-sign-extraction,radar-vital-signs,radar-vital-signs,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\radar-vital-signs\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+react-performance-debugging,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1910.922,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:987dcf47146a00260317', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\react-performance-debugging\\environment']' timed out after 1200.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\react-performance-debugging\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+reserves-at-risk-calc,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,601.906,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:04455a0338c84a104ced', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\reserves-at-risk-calc\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\reserves-at-risk-calc\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+sales-pivot-analysis,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-4e51a62e-4c9a-4307-b094-96bf5123382e,600.813,413.329,15,16,448039,16141,pdf; xlsx,pdf; xlsx,pdf,pdf,test_outputs.py::TestPivotTableConfiguration::test_pivot_row_is_state; test_outputs.py::TestPivotTableConfiguration::test_pivot_uses_correct_aggregation; test_outputs.py::TestSourceDataContent::test_state_values_are_valid; test_outputs.py::TestDataTransformationCorrectness::test_pivot_cache_has_fields,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\sales-pivot-analysis\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+sec-financial-report,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,600.968,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:db6c1e3425e48d1ab8d1', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\sec-financial-report\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\sec-financial-report\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+seismic-phase-picking,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1402.156,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:26e650c9aa2659152a46', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\seismic-phase-picking\\environment']' timed out after 900.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\seismic-phase-picking\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+setup-fuzzing-py,TIMEOUT,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-7d8fe2a3-2c0d-4371-95b0-bb12d56e1316,4698.438,1800.515,44,110,1645428,62764,discover-important-function; fuzzing-python; setup-env,discover-important-function; fuzzing-python; setup-env,discover-important-function; fuzzing-python; setup-env,discover-important-function; fuzzing-python; setup-env,test_setup.py::test_discovery,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\setup-fuzzing-py\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+shock-analysis-demand,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,6610.75,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:2cd84b4898a3cf148f01', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\shock-analysis-demand\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\shock-analysis-demand\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+shock-analysis-supply,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,6004.281,,,,,,,,,,,"docker exited 1: buntu noble-backports/universe amd64 Packages [31.0 kB]
+#6 212.7 Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+#6 218.8 Ign:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages
+#6 223.8 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+#6 228.8 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages
+#6 233.9 Ign:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages
+#6 238.9 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+#6 244.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages
+#6 249.0 Err:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages
+#6 249.0   502  Bad Gateway [IP: 91.189.92.23 80]
+#6 254.0 Err:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+#6 254.0   502  Bad Gateway [IP: 91.189.92.23 80]
+#6 259.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages
+#6 259.0 Reading package lists...
+#6 259.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+#6 259.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*:
+238.9 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+244.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages
+249.0 Err:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages
+249.0   502  Bad Gateway [IP: 91.189.92.23 80]
+254.0 Err:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+254.0   502  Bad Gateway [IP: 91.189.92.23 80]
+259.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages
+259.0 Reading package lists...
+259.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+259.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # Install Python, pip, LibreOffice for Excel formula evaluation
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     python3-venv \
+  10 | >>>     libreoffice \
+  11 | >>>     && rm -rf /var/lib/apt/lists/*
+  12 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\shock-analysis-supply\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+simpo-code-reproduction,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-499d97ce-ef84-41d1-ae65-19097119b673,1544.578,1323.781,51,64,1657073,40062,nlp-research-repo-package-installment; pdf,nlp-research-repo-package-installment; pdf,nlp-research-repo-package-installment,,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\simpo-code-reproduction\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+software-dependency-audit,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,861.907,,,,,,,,,,,"docker exited 1: /debian trixie InRelease
+#6 5.316   502  Bad Gateway [IP: 199.232.162.132 80]
+#6 7.991 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#6 13.00 Err:3 http://deb.debian.org/debian-security trixie-security InRelease
+#6 13.00   502  Bad Gateway [IP: 199.232.162.132 80]
+#6 18.01 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+#6 23.02 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+#6 23.02   502  Bad Gateway [IP: 199.232.162.132 80]
+#6 28.04 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+#6 33.05 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+#6 33.05   502  Bad Gateway [IP: 199.232.162.132 80]
+#6 33.05 Reading package lists...
+#6 33.06 E: Failed to fetch http://deb.debian.org/debian/dists/trixie/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]
+#6 33.06 E: The repository 'http://deb.debian.org/debian trixie InRelease' is no longer signed.
+#6 33.06 E: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]
+#6 33.06 E: The repository 'http://deb.debian.org/debian-security trixie-security InRelease' is no longer signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/6] RUN apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*:
+23.02 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+23.02   502  Bad Gateway [IP: 199.232.162.132 80]
+28.04 Ign:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+33.05 Err:4 http://deb.debian.org/debian trixie-updates/main amd64 Packages
+33.05   502  Bad Gateway [IP: 199.232.162.132 80]
+33.05 Reading package lists...
+33.06 E: Failed to fetch http://deb.debian.org/debian/dists/trixie/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]
+33.06 E: The repository 'http://deb.debian.org/debian trixie InRelease' is no longer signed.
+33.06 E: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  502  Bad Gateway [IP: 199.232.162.132 80]
+33.06 E: The repository 'http://deb.debian.org/debian-security trixie-security InRelease' is no longer signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # Install dependencies
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     curl \
+   8 | >>>     wget \
+   9 | >>>     gnupg2 \
+  10 | >>>     lsb-release \
+  11 | >>>     git \
+  12 | >>>     unzip \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     curl     wget     gnupg2     lsb-release     git     unzip     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\software-dependency-audit\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+spring-boot-jakarta-migration,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1085.578,,,,,,,,,,,"docker exited 1: ges [117 kB]
+#6 160.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 167.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 172.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 172.9   Connection failed [IP: 91.189.92.23 80]
+#6 177.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 182.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 182.9   Connection failed [IP: 91.189.92.23 80]
+#6 187.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 193.0 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 193.0   Connection failed [IP: 91.189.92.23 80]
+#6 193.0 Reading package lists...
+#6 193.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+#6 193.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+#6 193.0 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.92.23 80]
+#6 193.0 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [ 2/11] RUN apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*:
+182.9 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+182.9   Connection failed [IP: 91.189.92.23 80]
+187.9 Ign:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+193.0 Err:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+193.0   Connection failed [IP: 91.189.92.23 80]
+193.0 Reading package lists...
+193.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]
+193.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+193.0 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.92.23 80]
+193.0 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+------
+Dockerfile:10
+--------------------
+   9 |     # Install essential packages
+  10 | >>> RUN apt-get update && apt-get install -y \
+  11 | >>>     curl \
+  12 | >>>     wget \
+  13 | >>>     git \
+  14 | >>>     unzip \
+  15 | >>>     zip \
+  16 | >>>     vim \
+  17 | >>>     nano \
+  18 | >>>     && rm -rf /var/lib/apt/lists/*
+  19 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     curl     wget     git     unzip     zip     vim     nano     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\spring-boot-jakarta-migration\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+suricata-custom-exfil,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,513.75,,,,,,,,,,,"docker exited 1: #0 building with ""desktop-linux"" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.45kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/jasonish/suricata:7.0.11
+#2 ERROR: failed to do request: Head ""https://registry-1.docker.io/v2/jasonish/suricata/manifests/7.0.11"": EOF
+------
+ > [internal] load metadata for docker.io/jasonish/suricata:7.0.11:
+------
+Dockerfile:1
+--------------------
+   1 | >>> FROM jasonish/suricata:7.0.11
+   2 |     
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+--------------------
+ERROR: failed to build: failed to solve: jasonish/suricata:7.0.11: failed to resolve source metadata for docker.io/jasonish/suricata:7.0.11: failed to do request: Head ""https://registry-1.docker.io/v2/jasonish/suricata/manifests/7.0.11"": EOF
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\suricata-custom-exfil\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+syzkaller-ppdev-syzlang,INTERRUPTED,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1396.984,,,,,,,,,,,,False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\syzkaller-ppdev-syzlang\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+threejs-structure-parser,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,296.812,,,,,,,,,,,"docker exited 1: gn:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages
+#6 72.77 Err:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+#6 72.77   502  Bad Gateway [IP: 91.189.91.82 80]
+#6 76.00 Err:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages
+#6 76.00   502  Bad Gateway [IP: 91.189.92.24 80]
+#6 76.01 Reading package lists...
+#6 76.01 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+#6 76.01 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+#6 76.01 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+#6 76.01 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/6] RUN apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*:
+70.99 Ign:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages
+72.77 Err:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+72.77   502  Bad Gateway [IP: 91.189.91.82 80]
+76.00 Err:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages
+76.00   502  Bad Gateway [IP: 91.189.92.24 80]
+76.01 Reading package lists...
+76.01 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+76.01 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+76.01 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+76.01 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # Install Node.js, npm, and Python
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     curl \
+   8 | >>>     python3 \
+   9 | >>>     python3-pip \
+  10 | >>>     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+  11 | >>>     && apt-get install -y nodejs \
+  12 | >>>     && apt-get clean \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\threejs-structure-parser\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+threejs-to-obj,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,178.062,,,,,,,,,,,"docker exited 1: ntu.com/ubuntu noble/universe amd64 Packages
+#6 73.58 Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+#6 74.13 Err:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+#6 74.13   502  Bad Gateway [IP: 91.189.91.82 80]
+#6 74.14 Reading package lists...
+#6 74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+#6 74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+#6 74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+#6 74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/6] RUN apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*:
+68.10 Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+69.11 Ign:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+73.58 Get:3 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+74.13 Err:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+74.13   502  Bad Gateway [IP: 91.189.91.82 80]
+74.14 Reading package lists...
+74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+74.23 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 91.189.91.82 80]
+74.23 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # Install Node.js, npm, and Python
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     curl \
+   8 | >>>     python3 \
+   9 | >>>     python3-pip \
+  10 | >>>     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+  11 | >>>     && apt-get install -y nodejs \
+  12 | >>>     && apt-get clean \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     curl     python3     python3-pip     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash -     && apt-get install -y nodejs     && apt-get clean     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\threejs-to-obj\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+tictoc-unnecessary-abort-detection,INTERRUPTED,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,918.953,,,,,,transaction-concurrency-control-foundations; transaction-protocol-reasoning; transaction-trace-analysis,,,,,Stop requested,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\tictoc-unnecessary-abort-detection\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+travel-planning,INTERRUPTED,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,842.812,,,,,,search-accommodations; search-attractions; search-cities; search-driving-distance; search-flights; search-restaurants,,,,,Stop requested,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\travel-planning\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
+video-silence-remover,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,763.078,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:61ba44051c2945cb6276', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\video-silence-remover\\environment']' timed out after 600.0 seconds",False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\video-silence-remover\attempt-001,351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5,4
 weighted-gdp-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
 xlsx-recover-data,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,

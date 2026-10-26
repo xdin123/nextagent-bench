@@ -1,0 +1,46 @@
+{
+  "run_id": "20261026-161356-f17d59ed-b0c82d",
+  "created_at": "20261026T085450121014Z",
+  "merged_file": "C:\\Project\\nextagent-bench\\runs\\20261026-161356-f17d59ed-b0c82d\\exports\\20261026T085450121014Z\\completed-framework-traces.ndjson",
+  "merged_sha256": "da41e39207ea0f9e62720a43d525f44399d5a2b5a9d3e7c993a565cd3201ee84",
+  "merged_bytes": 6634967,
+  "records": 393,
+  "ended_attempts": 2,
+  "tasks_with_records": 2,
+  "attempts_with_records": 2,
+  "source_files": [
+    {
+      "file": "tasks/ada-bathroom-plan-repair/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "b738b9a9b250ab31e7ed3b514321e0ef021d28476bc6b4aa811bb19669c09e80",
+      "bytes": 4786426,
+      "exported_records": 259
+    },
+    {
+      "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "79cfe7fba3accc08ae33529e6d4f12a376d7a5dc8aea9e5e5efe79fff6351078",
+      "bytes": 1723267,
+      "exported_records": 134
+    }
+  ],
+  "trace_scopes": {
+    "workspace_preflight": 90,
+    "formal_task": 301,
+    "other_or_unknown": 2
+  },
+  "registered_credential_redactions": 0,
+  "invalid_lines": [],
+  "ordering": "task_id, attempt_directory, source_file, source_line; original per-file order retained",
+  "record_format": "Original framework object with additional _bench provenance; native source files unchanged",
+  "selection": "All attempts with result.status=FINISHED, including failed and interrupted attempts; source-less attempts listed in attempt-index.csv",
+  "export_script_sha256": "db929146a8b5acd582762732705ae529497706efb203dd75975ca04c57265f15",
+  "collection_coverage": {
+    "developer_hook_restored": true,
+    "developer_hook_records": 119,
+    "recovery_records": 274,
+    "formal_terminal_hook_missing_tasks": [
+      "ada-bathroom-plan-repair",
+      "azure-bgp-oscillation-route-leak"
+    ],
+    "scope_note": "All framework-generated records preserved. Both duplication-failure paths lack a formal terminal Hook record; preflight terminal records are not substituted."
+  }
+}

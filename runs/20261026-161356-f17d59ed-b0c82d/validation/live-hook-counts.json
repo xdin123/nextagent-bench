@@ -1,0 +1,18 @@
+[
+  {
+    "task": "ada-bathroom-plan-repair",
+    "status": "FINISHED",
+    "phase": "finished",
+    "outcome": "EXECUTION_FAILED",
+    "score": 0,
+    "elapsed_seconds": 1625.203
+  },
+  {
+    "task": "azure-bgp-oscillation-route-leak",
+    "status": "FINISHED",
+    "phase": "finished",
+    "outcome": "EXECUTION_FAILED",
+    "score": 0,
+    "elapsed_seconds": 329.891
+  }
+]

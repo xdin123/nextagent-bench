@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "azure-bgp",
+      "directory": "azure-bgp",
+      "description": "Analyze and resolve BGP oscillation and BGP route leaks in Azure Virtual WAN–style hub-and-spoke topologies (and similar cloud-managed BGP environments). Detect preference cycles, identify valley-free violations, and propose allowed policy-level mitigations while rejecting prohibited fixes.",
+      "sha256": "f66f553092bf7831bf944f4d26690c8e2825b1640c5ce0993bad6f9251d3d669"
+    }
+  ],
+  "verifier_sha": "fe7195562321b71ace6e1f6858994939238cc7ce0ec2d0ae3b610278489a42b7",
+  "prompt_sha": "1f4944a1642cb2b3e86c5df447805501cc630803a5d5681b32d51a92e3969612"
+}

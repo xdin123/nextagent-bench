@@ -1,0 +1,12 @@
+{
+  "uses_actual_framework_artifact": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "model_requests": 0,
+  "hook_id": "developer-hook-trace.loop-raw-boundary",
+  "result": "BOOTSTRAP_READY",
+  "archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 599040,
+    "extracted_log_files": 3,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  }
+}

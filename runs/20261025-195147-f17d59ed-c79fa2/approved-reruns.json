@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED",
+  "authorization": "User explicitly approved exactly these two tasks with restored full diagnostic Hook.",
+  "rerun_run": "20261026-161356-f17d59ed-b0c82d",
+  "tasks": [
+    {
+      "task": "ada-bathroom-plan-repair",
+      "parent_attempt": 2,
+      "parent_score": 0,
+      "rerun_attempt": 1,
+      "rerun_score": 0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "analysis_status": "ANALYSIS_INCOMPLETE",
+      "trace_coverage": "tasks/ada-bathroom-plan-repair/attempt-001/trace-coverage.json"
+    },
+    {
+      "task": "azure-bgp-oscillation-route-leak",
+      "parent_attempt": 1,
+      "parent_score": 0,
+      "rerun_attempt": 1,
+      "rerun_score": 0,
+      "terminal_code": "MODEL_DUPLICATION_DETECTED",
+      "analysis_status": "ANALYSIS_INCOMPLETE",
+      "trace_coverage": "tasks/azure-bgp-oscillation-route-leak/attempt-001/trace-coverage.json"
+    }
+  ],
+  "replaces_original_scores": false,
+  "original_frozen_inputs_unchanged": true,
+  "requires_approval_for_other_reruns": true,
+  "merged_trace": "C:\\Project\\nextagent-bench\\runs\\20261026-161356-f17d59ed-b0c82d\\exports\\20261026T085450121014Z\\completed-framework-traces.ndjson"
+}

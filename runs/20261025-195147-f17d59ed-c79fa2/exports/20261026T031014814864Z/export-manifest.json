@@ -236,5 +236,8 @@
   "ordering": "task_id, attempt_directory, source_file, source_line; original per-file order retained",
   "record_format": "Original framework object with additional _bench provenance; native source files unchanged",
   "selection": "All attempts with result.status=FINISHED, including failed and interrupted attempts; source-less attempts listed in attempt-index.csv",
-  "export_script_sha256": "db929146a8b5acd582762732705ae529497706efb203dd75975ca04c57265f15"
+  "export_script_sha256": "db929146a8b5acd582762732705ae529497706efb203dd75975ca04c57265f15",
+  "coverage_warning": "Fixing nested payload/snapshots ingestion alone will not recover missing developer-hook-trace records. Native model-recovery diagnostics, operational diagnostics and model gateway captures are separate evidence surfaces.",
+  "excluded_agent_hook": "developer-hook-trace.loop-raw-boundary",
+  "native_collection_findings": "../../diagnostic-format-review/findings.json"
 }

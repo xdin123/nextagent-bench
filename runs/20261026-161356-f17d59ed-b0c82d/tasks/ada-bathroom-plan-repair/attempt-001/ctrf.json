@@ -1,0 +1,92 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 0,
+      "failed": 6,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1793004166.137627,
+      "stop": 1793004166.7498477
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0005345899999156245,
+        "start": 1793004166.6453815,
+        "stop": 1793004166.6676238,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x79320e1a2e40>\n\n    def test_required_outputs_are_valid_json_and_match_schemas(self):\n        for output_name, schema_name in REQUIRED_OUTPUTS.items():\n            output_path = OUTPUT_DIR / output_name\n            schema_path = SCHEMA_DIR / schema_name\n>           assert output_path.exists(), f'Missing required output {output_path}'\nE           AssertionError: Missing required output /root/output/layer_inventory.json\nE           assert False\nE            +  where False = exists()\nE            +    where exists = PosixPath('/root/output/layer_inventory.json').exists\n\n/verifier/test_outputs.py:328: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0004897559999790246,
+        "start": 1793004166.6679509,
+        "stop": 1793004166.6870885,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x793242e39550>\n\n    def test_layer_inventory_and_original_extraction_match_cad(self):\n>       inventory = load_json(OUTPUT_DIR / 'layer_inventory.json')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:335: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:113: in load_json\n    with path.open('r', encoding='utf-8') as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/root/output/layer_inventory.json'), mode = 'r'\nbuffering = -1, encoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/layer_inventory.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0005389319999267173,
+        "start": 1793004166.687451,
+        "stop": 1793004166.705745,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x79320ce1c830>\n\n    def test_violation_list_is_consistent_with_plan_view_rules(self):\n        rules = load_json(RULES_PATH)\n>       extracted = load_json(OUTPUT_DIR / 'extracted_original_layout.json')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:381: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:113: in load_json\n    with path.open('r', encoding='utf-8') as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/root/output/extracted_original_layout.json'), mode = 'r'\nbuffering = -1, encoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/extracted_original_layout.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0005138750002515735,
+        "start": 1793004166.7060442,
+        "stop": 1793004166.7241933,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x79320d8b56d0>\n\n    def test_repaired_layout_satisfies_accessibility_rules(self):\n        rules = load_json(RULES_PATH)\n>       repaired = load_json(OUTPUT_DIR / 'repaired_layout.json')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:397: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:113: in load_json\n    with path.open('r', encoding='utf-8') as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/root/output/repaired_layout.json'), mode = 'r'\nbuffering = -1, encoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/repaired_layout.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0005117439998230111,
+        "start": 1793004166.7244902,
+        "stop": 1793004166.7314315,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x79320cdcd8b0>\n\n    def test_repaired_dxf_is_modified_and_matches_repaired_layout(self):\n>       assert REPAIRED_DXF_PATH.exists(), 'Missing required CAD output /root/output/repaired_plan.dxf.'\nE       AssertionError: Missing required CAD output /root/output/repaired_plan.dxf.\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/output/repaired_plan.dxf').exists\n\n/verifier/test_outputs.py:445: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0004926119997890055,
+        "start": 1793004166.7317421,
+        "stop": 1793004166.7497165,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x79320c878e90>\n\n    def test_repair_preserves_the_existing_layout_reasonably(self):\n>       repaired = load_json(OUTPUT_DIR / 'repaired_layout.json')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:466: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:113: in load_json\n    with path.open('r', encoding='utf-8') as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = PosixPath('/root/output/repaired_layout.json'), mode = 'r'\nbuffering = -1, encoding = 'utf-8', errors = None, newline = None\n\n    def open(self, mode='r', buffering=-1, encoding=None,\n             errors=None, newline=None):\n        \"\"\"\n        Open the file pointed to by this path and return a file object, as\n        the built-in open() function does.\n        \"\"\"\n        if \"b\" not in mode:\n            encoding = io.text_encoding(encoding)\n>       return io.open(self, mode, buffering, encoding, errors, newline)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/repaired_layout.json'\n\n/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      }
+    ]
+  }
+}

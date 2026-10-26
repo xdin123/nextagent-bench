@@ -1,0 +1,91 @@
+{
+  "task": "travel-planning",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T07:42:42.114715+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "travel-planning",
+    "agent_timeout": 600,
+    "verifier_timeout": 300,
+    "build_timeout": 600,
+    "cpus": 2.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.328,
+    "build": 237.656,
+    "container_setup": 602.828,
+    "bootstrap": 0.204,
+    "collect": 1.796
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 842.812,
+  "environment": {
+    "image_id": "sha256:f957d628f6e81ef3733de1304e237d1a0b888715e9a265f1b5b8f53372cc397f",
+    "environment_sha": "f5d18ceda20d4e091a572b74fc6d300cf20f2bfb008f92b1ffede5e8479c8e92",
+    "workdir": "/app",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "search-accommodations",
+      "directory": "search-accommodations",
+      "description": "Lookup accommodations by city from the bundled dataset. Use this skill when you need to recommend places to stay in a given city or filter lodging options before building an itinerary.",
+      "sha256": "b4d84f0d8f5ca68d6d9da711041be8208d509a8137c01cd7edcb9726b03a9e81"
+    },
+    {
+      "name": "search-attractions",
+      "directory": "search-attractions",
+      "description": "Retrieve attractions by city from the bundled dataset. Use this skill when surfacing points of interest or building sightseeing suggestions for a destination.",
+      "sha256": "1a022a9c7ddfaed2f02a668535c491bd44e3196258258d5d84f00d8a26c0e7d8"
+    },
+    {
+      "name": "search-cities",
+      "directory": "search-cities",
+      "description": "List cities for a given state using the bundled background data. Use this skill to validate state inputs or expand destination choices before flight/restaurant/attraction/driving/accommodation lookups.",
+      "sha256": "93df8526bfaa429af0770e9c8483ba4d183e6ab259dfb26c60ca4dcd5fcc0b0f"
+    },
+    {
+      "name": "search-driving-distance",
+      "directory": "search-driving-distance",
+      "description": "Estimate driving/taxi duration, distance, and rough cost between two cities using the bundled distance matrix CSV. Use this skill when comparing ground travel options or validating itinerary legs.",
+      "sha256": "4d5c8c0b4249c47cda8d8b5c6400a085999c437c7c6837dfd81dd4ea01ec91d2"
+    },
+    {
+      "name": "search-flights",
+      "directory": "search-flights",
+      "description": "Search flights by origin, destination, and departure date using the bundled flights dataset. Use this skill when proposing flight options or checking whether a route/date combination exists.",
+      "sha256": "455734cb845620f57b39341a6f4372d28a084e70c741ce277a6a6f4323d46e06"
+    },
+    {
+      "name": "search-restaurants",
+      "directory": "search-restaurants",
+      "description": "Retrieve restaurants by city from the bundled dataset. Use this skill when recommending places to eat or validating dining options for a destination.",
+      "sha256": "6a33f2c46d214f14ad02ad0c47613d2cf4ce816a3aaf41adc1ac549c755780d6"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-travel-planning-1",
+  "failed_phase": "bootstrap",
+  "error": "Stop requested",
+  "outcome": "INTERRUPTED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 48128,
+    "extracted_log_files": 0,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "finished_at": "2026-10-26T07:56:44.926429+00:00",
+  "evidence_complete": true
+}

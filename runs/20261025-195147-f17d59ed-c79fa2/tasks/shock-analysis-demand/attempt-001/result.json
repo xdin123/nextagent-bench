@@ -5,8 +5,8 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T05:42:40.703501+00:00",
-  "phase": "queued",
-  "status": "RUNNING",
+  "phase": "finished",
+  "status": "FINISHED",
   "budgets": {
     "task": "shock-analysis-demand",
     "agent_timeout": 1800,
@@ -21,9 +21,18 @@
   },
   "score": null,
   "reward": null,
-  "phase_seconds": {},
+  "phase_seconds": {
+    "queued": 6010.5,
+    "build": 600.25,
+    "collect": 0.0
+  },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 0.0
+  "elapsed_seconds": 6610.75,
+  "failed_phase": "build",
+  "error": "Command '['docker', 'build', '-t', 'nextagent-bench/environment:2cd84b4898a3cf148f01', 'C:\\\\Project\\\\nextagent-bench\\\\datasets\\\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\\\tasks\\\\shock-analysis-demand\\\\environment']' timed out after 600.0 seconds",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T07:32:51.466301+00:00",
+  "evidence_complete": false
 }

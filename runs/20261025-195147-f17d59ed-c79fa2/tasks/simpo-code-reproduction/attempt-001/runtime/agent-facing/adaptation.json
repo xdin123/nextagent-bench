@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "nlp-research-repo-package-installment",
+      "directory": "nlp-research-repo-package-installment",
+      "description": "Align Python version and repo-declared dependencies (requirements.txt / environment.yml) before installing packages for NLP research code reproduction.",
+      "sha256": "7010a09d0ed2ccba3cd6e5b1d369bb4448d5cdc93e8df472576c8cbfab042e2e"
+    },
+    {
+      "name": "pdf",
+      "directory": "pdf",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+      "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb"
+    }
+  ],
+  "verifier_sha": "f928e6fe316f52fd90700fe9e26a290047638269fe8436409e2ffdfe242bf475",
+  "prompt_sha": "b22420489be3cd48a7ac7aa53d5e72214d1bc730d9a89f514537b33cabe4f257"
+}

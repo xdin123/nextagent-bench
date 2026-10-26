@@ -1,0 +1,42 @@
+## Summary of Verified Results
+
+### Completed work
+
+**1. Paper analysis (SimPO loss definition) — DONE**
+From `workspace/SimPO/paper.json` (the paper text), the SimPO objective is verified:
+- Reward (Eq. 4): `r(x,y) = (β/|y|) · Σᵢ log π_θ(yᵢ|x, y<ᵢ)` — length-normalized log-prob
+- Objective (Eq. 6): `L_SimPO = −log σ( (β/|y_w|)log π_θ(y_w|x) − (β/|y_l|)log π_θ(y_l|x) − γ )`
+
+**2. Code inspection — DONE**
+- `workspace/SimPO/unit_test/unit_test_1.py` (full content read, must not be modified): builds `SimPOConfig(output_dir="./simpo_output")`, `SimPOTrainer(model="sshleifer/tiny-gpt2", args=...)`, loads `unit_test/tensors/policy_chosen_logps.pt` / `policy_rejected_logps.pt` (relative paths → must run from `workspace/SimPO/`), calls `simpo_loss(chosen, rejected)`, unpacks `(losses, chosen_rewards, rejected_rewards)`, and saves `np.savez("loss.npz", losses=losses.detach().cpu().numpy())` — **hardcoded path `loss.npz`**, so a copy to `workspace/loss.npz` will be needed afterward.
+- `simpo_trainer.py`: `simpo_loss` stub at line 560 currently returns undefined variables. `compute_loss` (line 685–690) calls `self.simpo_loss(...)` then `loss = losses.mean()` → **`simpo_loss` must return per-example losses**. `get_batch_logps` is called with `average_log_prob=True` (line 614) → inputs are per-token **averaged** logps, so no division by sequence length is needed inside the loss. `__init__` is mostly commented out; the active part only sets `self.beta = args.beta`, `self.gamma_beta_ratio`, `self.sft_weight`, `self.label_smoothing`, `self.loss_type`, `self._stored_metrics` — **no model download, no network needed** despite the `model="sshleifer/tiny-gpt2"` arg.
+- `environment.yml` pins: `torch==2.2.2`, `transformers==4.44.2`, `trl==0.9.6`, `datasets==2.18.0`, `accelerate==0.27.2`, `peft==0.10.0`, etc.
+
+**3. Environment assessment — DONE**
+- Python 3.12.3 (system); environment is bare — torch/transformers/trl/datasets/accelerate/peft all **not installed**.
+- `pip` binary works; PyPI is reachable; verified `torch==2.2.2` has a cp312 wheel (pinned versions are installable on Python 3.12).
+- Sandbox constraints observed: `python -m ...` invocations are blocked in Bash (use the `pip` binary or script files in `temp/`); shell redirections like `2>&1` get tokenized as arguments (avoid them); the Python tool sandbox is unavailable (use Bash + script files).
+
+**4. Implementation plan (derived, not yet written)**
+```python
+def simpo_loss(self, policy_chosen_logps, policy_rejected_logps):
+    beta = self.beta
+    gamma = self.gamma_beta_ratio * self.beta
+    losses = -F.logsigmoid(beta * policy_chosen_logps - beta * policy_rejected_logps - gamma)
+    chosen_rewards = beta * policy_chosen_logps
+    rejected_rewards = beta * policy_rejected_logps
+    return losses, chosen_rewards, rejected_rewards
+```
+This matches the paper's Eq. 6 given length-normalized logps, and matches the official SimPO implementation's return contract (per-example losses; rewards = β·logps).
+
+### Incomplete work
+1. **Edit `simpo_loss`** in `workspace/SimPO/scripts/simpo_trainer.py` (implementation above; `F`/`torch.nn.functional` import must be verified present).
+2. **Install dependencies** (torch 2.2.2, transformers 4.44.2, trl 0.9.6, datasets 2.18.0, accelerate, peft, numpy) via the `pip` binary.
+3. **Run the unit test** from `workspace/SimPO/` (writes `loss.npz`), then copy it to **`workspace/loss.npz`** (key `losses`).
+4. **Log `python -VV` and `python -m pip freeze`** to `workspace/python_info.txt` (note: `python -m pip` is sandbox-blocked in Bash; `pip freeze` via the binary is the fallback to log, or find a way to satisfy the exact requested commands).
+5. **Verify** `workspace/loss.npz` loads with key `losses` and values are finite/reasonable (losses should be positive scalars per example).
+
+### Open items to check on resumption
+- Exact default values of `beta` and `gamma_beta_ratio` in `simpo_config.py` (file was read but content compacted; paper defaults are β=2.0, γ_β_ratio=0.5 — implementation uses `self.beta`/`self.gamma_beta_ratio` regardless, so only verification is needed).
+- Whether `workspace/SimPO/scripts/` has an `__init__.py` (test imports `from scripts.simpo_trainer import ...`).
+- Whether `loss.npz` is writable and copyable to `workspace/loss.npz` given the sandbox's absolute-path restrictions.

@@ -1,0 +1,8 @@
+[
+  {
+    "field": "channel.web.port",
+    "before": 3000,
+    "after": 31872,
+    "reason": "Isolated evaluation paths / internal HTTP transport"
+  }
+]

@@ -270,10 +270,10 @@
     ],
     "note": "Snapshot of existing locally adapted dataset; original verifier/oracle preserved byte-for-byte."
   },
-  "status": "RUNNING",
+  "status": "STOPPED",
   "legacy_environment_images": {},
   "resume_identity": "494ddba0a2b80972cc1d5bf2d47ae724a0c0be99d2e1059ce4d880c1581feb60",
   "runner_pid": 37716,
-  "finished_at": "2026-10-26T02:25:51.261436+00:00",
+  "finished_at": "2026-10-26T07:56:44.933910+00:00",
   "runtime_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5"
 }

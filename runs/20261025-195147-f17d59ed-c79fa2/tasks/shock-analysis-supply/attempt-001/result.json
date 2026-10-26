@@ -5,8 +5,8 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T05:57:40.995016+00:00",
-  "phase": "queued",
-  "status": "RUNNING",
+  "phase": "finished",
+  "status": "FINISHED",
   "budgets": {
     "task": "shock-analysis-supply",
     "agent_timeout": 2700,
@@ -21,9 +21,18 @@
   },
   "score": null,
   "reward": null,
-  "phase_seconds": {},
+  "phase_seconds": {
+    "queued": 5110.219,
+    "build": 894.047,
+    "collect": 0.015
+  },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 0.0
+  "elapsed_seconds": 6004.281,
+  "failed_phase": "build",
+  "error": "docker exited 1: buntu noble-backports/universe amd64 Packages [31.0 kB]\n#6 212.7 Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]\n#6 218.8 Ign:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages\n#6 223.8 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n#6 228.8 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages\n#6 233.9 Ign:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages\n#6 238.9 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n#6 244.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages\n#6 249.0 Err:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages\n#6 249.0   502  Bad Gateway [IP: 91.189.92.23 80]\n#6 254.0 Err:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n#6 254.0   502  Bad Gateway [IP: 91.189.92.23 80]\n#6 259.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages\n#6 259.0 Reading package lists...\n#6 259.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]\n#6 259.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.\n#6 ERROR: process \"/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n------\n > [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*:\n238.9 Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n244.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages\n249.0 Err:6 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages\n249.0   502  Bad Gateway [IP: 91.189.92.23 80]\n254.0 Err:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n254.0   502  Bad Gateway [IP: 91.189.92.23 80]\n259.0 Ign:12 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages\n259.0 Reading package lists...\n259.0 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 185.125.190.81 80]\n259.0 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.\n------\nDockerfile:6\n--------------------\n   5 |     # Install Python, pip, LibreOffice for Excel formula evaluation\n   6 | >>> RUN apt-get update && apt-get install -y \\\n   7 | >>>     python3 \\\n   8 | >>>     python3-pip \\\n   9 | >>>     python3-venv \\\n  10 | >>>     libreoffice \\\n  11 | >>>     && rm -rf /var/lib/apt/lists/*\n  12 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T07:37:45.268686+00:00",
+  "evidence_complete": false
 }

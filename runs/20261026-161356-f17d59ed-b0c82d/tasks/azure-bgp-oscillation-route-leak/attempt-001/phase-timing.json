@@ -1,0 +1,12 @@
+{
+  "queued": 0.109,
+  "build": 1.657,
+  "container_setup": 30.781,
+  "bootstrap": 8.25,
+  "skill_preflight": 0.484,
+  "workspace_preflight": 19.063,
+  "agent": 263.562,
+  "stop_application": 0.406,
+  "verifier": 3.922,
+  "collect": 1.657
+}

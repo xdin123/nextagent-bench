@@ -3,8 +3,8 @@
 Run: 20261025-195147-f17d59ed-c79fa2
 Model: qwen3.8-27b
 Framework: f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5
-Status: HALTED
-Scored coverage: 32/87
+Status: STOPPED
+Scored coverage: 39/87
 Full-suite score: None
 
 | Task | First outcome | Score | Verifier reward | Evidence |
@@ -68,31 +68,31 @@ Full-suite score: None
 | paratransit-routing | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\paratransit-routing\attempt-001 |
 | pddl-airport-planning | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-airport-planning\attempt-001 |
 | pddl-tpp-planning | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-tpp-planning\attempt-001 |
-| pdf-excel-diff | PENDING | None | None |  |
-| powerlifting-coef-calc | PENDING | None | None |  |
-| pptx-reference-formatting | PENDING | None | None |  |
-| protein-expression-analysis | PENDING | None | None |  |
-| python-scala-translation | PENDING | None | None |  |
-| quantum-numerical-simulation | PENDING | None | None |  |
-| r2r-mpc-control | PENDING | None | None |  |
-| radar-vital-signs | PENDING | None | None |  |
-| react-performance-debugging | PENDING | None | None |  |
-| reserves-at-risk-calc | PENDING | None | None |  |
-| sales-pivot-analysis | PENDING | None | None |  |
-| sec-financial-report | PENDING | None | None |  |
-| seismic-phase-picking | PENDING | None | None |  |
-| setup-fuzzing-py | PENDING | None | None |  |
-| shock-analysis-demand | PENDING | None | None |  |
-| shock-analysis-supply | PENDING | None | None |  |
-| simpo-code-reproduction | PENDING | None | None |  |
-| software-dependency-audit | PENDING | None | None |  |
-| spring-boot-jakarta-migration | PENDING | None | None |  |
-| suricata-custom-exfil | PENDING | None | None |  |
-| syzkaller-ppdev-syzlang | PENDING | None | None |  |
-| threejs-structure-parser | PENDING | None | None |  |
-| threejs-to-obj | PENDING | None | None |  |
-| tictoc-unnecessary-abort-detection | PENDING | None | None |  |
-| travel-planning | PENDING | None | None |  |
-| video-silence-remover | PENDING | None | None |  |
+| pdf-excel-diff | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pdf-excel-diff\attempt-001 |
+| powerlifting-coef-calc | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\powerlifting-coef-calc\attempt-001 |
+| pptx-reference-formatting | EXECUTION_FAILED | 0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pptx-reference-formatting\attempt-001 |
+| protein-expression-analysis | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\protein-expression-analysis\attempt-001 |
+| python-scala-translation | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\python-scala-translation\attempt-001 |
+| quantum-numerical-simulation | EXECUTION_FAILED | 0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\quantum-numerical-simulation\attempt-001 |
+| r2r-mpc-control | EXECUTION_FAILED | 0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\r2r-mpc-control\attempt-001 |
+| radar-vital-signs | TIMEOUT | 0 | 1.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\radar-vital-signs\attempt-001 |
+| react-performance-debugging | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\react-performance-debugging\attempt-001 |
+| reserves-at-risk-calc | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\reserves-at-risk-calc\attempt-001 |
+| sales-pivot-analysis | TASK_FAILED | 0.0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\sales-pivot-analysis\attempt-001 |
+| sec-financial-report | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\sec-financial-report\attempt-001 |
+| seismic-phase-picking | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\seismic-phase-picking\attempt-001 |
+| setup-fuzzing-py | TIMEOUT | 0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\setup-fuzzing-py\attempt-001 |
+| shock-analysis-demand | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\shock-analysis-demand\attempt-001 |
+| shock-analysis-supply | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\shock-analysis-supply\attempt-001 |
+| simpo-code-reproduction | TASK_FAILED | 0.0 | 0.0 | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\simpo-code-reproduction\attempt-001 |
+| software-dependency-audit | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\software-dependency-audit\attempt-001 |
+| spring-boot-jakarta-migration | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\spring-boot-jakarta-migration\attempt-001 |
+| suricata-custom-exfil | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\suricata-custom-exfil\attempt-001 |
+| syzkaller-ppdev-syzlang | INTERRUPTED | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\syzkaller-ppdev-syzlang\attempt-001 |
+| threejs-structure-parser | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\threejs-structure-parser\attempt-001 |
+| threejs-to-obj | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\threejs-to-obj\attempt-001 |
+| tictoc-unnecessary-abort-detection | INTERRUPTED | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\tictoc-unnecessary-abort-detection\attempt-001 |
+| travel-planning | INTERRUPTED | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\travel-planning\attempt-001 |
+| video-silence-remover | ENVIRONMENT_ERROR | None | None | C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\video-silence-remover\attempt-001 |
 | weighted-gdp-calc | PENDING | None | None |  |
 | xlsx-recover-data | PENDING | None | None |  |

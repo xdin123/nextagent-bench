@@ -1,0 +1,14 @@
+[
+  {
+    "task": "ada-bathroom-plan-repair",
+    "archive_member": "home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+    "matches_extracted_native": true,
+    "sha256": "b738b9a9b250ab31e7ed3b514321e0ef021d28476bc6b4aa811bb19669c09e80"
+  },
+  {
+    "task": "azure-bgp-oscillation-route-leak",
+    "archive_member": "home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+    "matches_extracted_native": true,
+    "sha256": "79cfe7fba3accc08ae33529e6d4f12a376d7a5dc8aea9e5e5efe79fff6351078"
+  }
+]

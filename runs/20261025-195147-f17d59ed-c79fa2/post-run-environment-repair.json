@@ -155,6 +155,46 @@
       "task": "seismic-phase-picking",
       "attempt": 1,
       "failed_phase": "build"
+    },
+    {
+      "task": "shock-analysis-demand",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "shock-analysis-supply",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "software-dependency-audit",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "spring-boot-jakarta-migration",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "suricata-custom-exfil",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "threejs-structure-parser",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "threejs-to-obj",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "video-silence-remover",
+      "attempt": 1,
+      "failed_phase": "build"
     }
   ],
   "repair_scope": [
@@ -177,7 +217,7 @@
   },
   "version_policy": "If bench runtime/build scripts need repair after the initial run, test and record a genuine new source snapshot/upgrade; never forge old hashes or edit frozen input snapshots.",
   "reporting": "Regenerate combined report using first valid scored attempt, retain all initial invalid attempts and every retest. If remediation remains blocked, report facts rather than retry indefinitely.",
-  "last_observed_at": "2026-10-26T06:29:08.074827+00:00",
+  "last_observed_at": "2026-10-26T07:57:08.975496+00:00",
   "additional_environment_blockers": [
     {
       "task": "fix-druid-loophole-cve",

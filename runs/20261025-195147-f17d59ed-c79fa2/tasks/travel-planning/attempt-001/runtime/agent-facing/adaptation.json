@@ -1,0 +1,69 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "search-accommodations",
+      "directory": "search-accommodations",
+      "description": "Lookup accommodations by city from the bundled dataset. Use this skill when you need to recommend places to stay in a given city or filter lodging options before building an itinerary.",
+      "sha256": "b4d84f0d8f5ca68d6d9da711041be8208d509a8137c01cd7edcb9726b03a9e81"
+    },
+    {
+      "name": "search-attractions",
+      "directory": "search-attractions",
+      "description": "Retrieve attractions by city from the bundled dataset. Use this skill when surfacing points of interest or building sightseeing suggestions for a destination.",
+      "sha256": "1a022a9c7ddfaed2f02a668535c491bd44e3196258258d5d84f00d8a26c0e7d8"
+    },
+    {
+      "name": "search-cities",
+      "directory": "search-cities",
+      "description": "List cities for a given state using the bundled background data. Use this skill to validate state inputs or expand destination choices before flight/restaurant/attraction/driving/accommodation lookups.",
+      "sha256": "93df8526bfaa429af0770e9c8483ba4d183e6ab259dfb26c60ca4dcd5fcc0b0f"
+    },
+    {
+      "name": "search-driving-distance",
+      "directory": "search-driving-distance",
+      "description": "Estimate driving/taxi duration, distance, and rough cost between two cities using the bundled distance matrix CSV. Use this skill when comparing ground travel options or validating itinerary legs.",
+      "sha256": "4d5c8c0b4249c47cda8d8b5c6400a085999c437c7c6837dfd81dd4ea01ec91d2"
+    },
+    {
+      "name": "search-flights",
+      "directory": "search-flights",
+      "description": "Search flights by origin, destination, and departure date using the bundled flights dataset. Use this skill when proposing flight options or checking whether a route/date combination exists.",
+      "sha256": "455734cb845620f57b39341a6f4372d28a084e70c741ce277a6a6f4323d46e06"
+    },
+    {
+      "name": "search-restaurants",
+      "directory": "search-restaurants",
+      "description": "Retrieve restaurants by city from the bundled dataset. Use this skill when recommending places to eat or validating dining options for a destination.",
+      "sha256": "6a33f2c46d214f14ad02ad0c47613d2cf4ce816a3aaf41adc1ac549c755780d6"
+    }
+  ],
+  "verifier_sha": "b09819e924a6b9f2dad0c23c717992d0ea7bdb69b9a1c87599c22f42cae26d0e",
+  "prompt_sha": "87beda915e1ab082bbaa7c8d83b60f23b67ff6739e6e5629153ad8a2fa3bb37d"
+}

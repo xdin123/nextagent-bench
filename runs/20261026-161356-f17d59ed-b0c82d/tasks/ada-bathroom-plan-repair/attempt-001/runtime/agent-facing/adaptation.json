@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "ada-plan-view-accessibility",
+      "directory": "ada-plan-view-accessibility",
+      "description": "Use when checking simplified ADA-derived plan-view bathroom accessibility constraints such as turning space, door clear width, toilet centerline, grab bars, and lavatory knee/toe clearance.",
+      "sha256": "d6177e0345a6b98f8d6f085a1dc8ccaad6ea4f5f3404387ece958d3c9af6ac83"
+    },
+    {
+      "name": "architectural-dxf-extraction",
+      "directory": "architectural-dxf-extraction",
+      "description": "Use when extracting plan-view architectural geometry from DXF files with semantic CAD layers, especially when outputs must normalize rooms, doors, fixtures, clearances, and grab bars into machine-checkable JSON.",
+      "sha256": "843682ecc8b8230245fa52e3e1f00f48bec3df2e669516fb7a0ac3ead62ebb98"
+    },
+    {
+      "name": "geometric-layout-repair",
+      "directory": "geometric-layout-repair",
+      "description": "Use when producing a minimally changed repaired 2D layout in JSON from extracted architectural geometry and rule-based clearance constraints.",
+      "sha256": "a343abee610a10982f291465f9d50329d4c5881af4dee3cb8352c4220dab000a"
+    }
+  ],
+  "verifier_sha": "5c6221915e19bc16b6873b0dcc984c6993b8ecc83cc0869d8ed9534819ba6fab",
+  "prompt_sha": "bc90745ed5ccc27668283b799806a53f6059cdf103596e4ac82619dd744b45dd"
+}

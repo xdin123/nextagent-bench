@@ -1,0 +1,29 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Err:1 http://archive.ubuntu.com/ubuntu noble InRelease
+  Couldn't create temporary file /tmp/apt.conf.UA9bj4 for passing config to apt-key
+Err:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+  Couldn't create temporary file /tmp/apt.conf.To49RU for passing config to apt-key
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+  Couldn't create temporary file /tmp/apt.conf.z3pm4C for passing config to apt-key
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  Couldn't create temporary file /tmp/apt.conf.LdcdkG for passing config to apt-key
+Reading package lists...
+W: GPG error: http://archive.ubuntu.com/ubuntu noble InRelease: Couldn't create temporary file /tmp/apt.conf.UA9bj4 for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+W: GPG error: http://security.ubuntu.com/ubuntu noble-security InRelease: Couldn't create temporary file /tmp/apt.conf.To49RU for passing config to apt-key
+E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-updates InRelease: Couldn't create temporary file /tmp/apt.conf.z3pm4C for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-backports InRelease: Couldn't create temporary file /tmp/apt.conf.LdcdkG for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package curl
+/verifier/test.sh: line 9: curl: command not found
+/verifier/test.sh: line 11: /root/.local/bin/env: No such file or directory
+/verifier/test.sh: line 17: uv: command not found
+/verifier/test.sh: line 19: uvx: command not found

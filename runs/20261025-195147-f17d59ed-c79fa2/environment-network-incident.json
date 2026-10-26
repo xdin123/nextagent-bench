@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-26T07:45:43.711479+00:00",
+  "status": "DRAIN_REQUESTED_ENVIRONMENT_NETWORK_OUTAGE",
+  "scope": "environment builds; same original batch only",
+  "evidence": [
+    {
+      "task": "shock-analysis-demand",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:32:51.466301+00:00",
+      "result": "tasks\\shock-analysis-demand\\attempt-001\\result.json"
+    },
+    {
+      "task": "shock-analysis-supply",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:37:45.268686+00:00",
+      "result": "tasks\\shock-analysis-supply\\attempt-001\\result.json"
+    },
+    {
+      "task": "software-dependency-audit",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:33:25.376862+00:00",
+      "result": "tasks\\software-dependency-audit\\attempt-001\\result.json"
+    },
+    {
+      "task": "spring-boot-jakarta-migration",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:40:59.097147+00:00",
+      "result": "tasks\\spring-boot-jakarta-migration\\attempt-001\\result.json"
+    },
+    {
+      "task": "suricata-custom-exfil",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:41:25.236461+00:00",
+      "result": "tasks\\suricata-custom-exfil\\attempt-001\\result.json"
+    },
+    {
+      "task": "threejs-structure-parser",
+      "attempt": 1,
+      "outcome": "ENVIRONMENT_ERROR",
+      "score": null,
+      "failed_phase": "build",
+      "finished_at": "2026-10-26T07:42:42.091754+00:00",
+      "result": "tasks\\threejs-structure-parser\\attempt-001\\result.json"
+    }
+  ],
+  "safe_failure_signatures": [
+    "Ubuntu/Debian apt HTTP502",
+    "Ubuntu apt connection failed",
+    "Docker Hub manifest HEAD EOF",
+    "600-second build timeout; network cause unconfirmed for timeout-only task"
+  ],
+  "model_gateway": {
+    "http_200": 212,
+    "http_502": 2,
+    "new_transport_errors_since_last_poll": 0,
+    "credential_rejection": false
+  },
+  "action": {
+    "supported_cli": "python -m nextagent_bench drain 20261025-195147-f17d59ed-c79fa2",
+    "DRAIN_present": true,
+    "active_tasks_cancelled": false,
+    "automatic_task_retries": false,
+    "global_proxy_docker_wsl_changed": false,
+    "concurrency_changed": false
+  },
+  "continuation": "Let active tasks finish. Keep original pending tasks for default incremental resume after network recovery; do not clear DRAIN automatically. Completed tasks require explicit approval for any replay.",
+  "source_or_frozen_input_changed": false
+}

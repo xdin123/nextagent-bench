@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "ada-plan-view-accessibility",
+    "architectural-dxf-extraction",
+    "geometric-layout-repair"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "ada-plan-view-accessibility"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "architectural-dxf-extraction"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "geometric-layout-repair"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}
