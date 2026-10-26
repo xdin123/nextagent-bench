@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "cache-policy-comparison",
+    "prefix-cache-replay"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "cache-policy-comparison"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "prefix-cache-replay"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

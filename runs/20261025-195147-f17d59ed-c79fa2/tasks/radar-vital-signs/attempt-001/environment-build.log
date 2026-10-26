@@ -1,0 +1,126 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 862B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [ 1/12] FROM docker.io/library/python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377
+#4 resolve docker.io/library/python:3.11-slim@sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 14.45MB 1.0s done
+#5 DONE 1.0s
+
+#6 [ 2/12] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     ca-certificates     curl     gnupg     && curl -fsSL https://deb.nodesource.com/setup_22.x | bash -     && apt-get install -y --no-install-recommends nodejs     && npm install -g @zed-industries/claude-agent-acp@latest     && apt-get purge -y --auto-remove curl gnupg     && rm -rf /var/lib/apt/lists/*
+#6 1.467 Hit:1 http://deb.debian.org/debian trixie InRelease
+#6 3.511 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#6 5.360 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#6 17.61 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#6 18.93 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#6 21.63 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#6 21.65 Fetched 10.0 MB in 21s (469 kB/s)
+#6 21.65 Reading package lists...
+#6 22.05 Reading package lists...
+#6 22.44 Building dependency tree...
+#6 22.53 Reading state information...
+#6 22.65 ca-certificates is already the newest version (20250419+deb13u1).
+#6 22.65 The following additional packages will be installed:
+#6 22.65   binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-14
+#6 22.65   cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu dirmngr dpkg-dev g++ g++-14
+#6 22.65   g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
+#6 22.65   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu gnupg-l10n gpg gpg-agent
+#6 22.65   gpgconf gpgsm libasan8 libassuan9 libatomic1 libbinutils libbrotli1
+#6 22.65   libc-dev-bin libc6-dev libcc1-0 libcom-err2 libcrypt-dev libctf-nobfd0
+#6 22.65   libctf0 libcurl4t64 libdpkg-perl libgcc-14-dev libgcrypt20
+#6 22.65   libgdbm-compat4t64 libgnutls30t64 libgomp1 libgpg-error0 libgprofng0
+#6 22.65   libgssapi-krb5-2 libhwasan0 libidn2-0 libisl23 libitm1 libjansson4
+#6 22.65   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libksba8 libldap2
+#6 22.65   liblsan0 libmpc3 libmpfr6 libnghttp2-14 libnghttp3-9 libnpth0t64 libp11-kit0
+#6 22.65   libperl5.40 libpsl5t64 libquadmath0 librtmp1 libsasl2-2 libsasl2-modules-db
+#6 22.65   libsframe1 libssh2-1t64 libstdc++-14-dev libtasn1-6 libtsan2 libubsan1
+#6 22.65   libunistring5 linux-libc-dev make patch perl perl-modules-5.40
+#6 22.65   pinentry-curses rpcsvc-proto xz-utils
+#6 22.65 Suggested packages:
+#6 22.65   binutils-doc gprofng-gui binutils-gold bzip2-doc cpp-doc gcc-14-locales
+#6 22.65   cpp-14-doc dbus-user-session libpam-systemd pinentry-gnome3 tor
+#6 22.65   debian-keyring debian-tag2upload-keyring g++-multilib g++-14-multilib
+#6 22.65   gcc-14-doc gcc-multilib manpages-dev autoconf automake libtool flex bison
+#6 22.65   gdb gcc-doc gcc-14-multilib gdb-x86-64-linux-gnu gpg-wks-server parcimonie
+#6 22.65   xloadimage scdaemon tpm2daemon libc-devtools glibc-doc sensible-utils git
+#6 22.65   bzr rng-tools gnutls-bin krb5-doc krb5-user libstdc++-14-doc make-doc ed
+#6 22.65   diffutils-doc perl-doc libterm-readline-gnu-perl
+#6 22.65   | libterm-readline-perl-perl libtap-harness-archive-perl pinentry-doc
+#6 22.65 Recommended packages:
+#6 22.65   bash-completion fakeroot libalgorithm-merge-perl gnupg-utils gpg-wks-client
+#6 22.65   gpgv manpages manpages-dev libfile-fcntllock-perl liblocale-gettext-perl
+#6 22.65   libgpg-error-l10n krb5-locales libldap-common publicsuffix libsasl2-modules
+#6 22.88 The following NEW packages will be installed:
+#6 22.88   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 cpp
+#6 22.88   cpp-14 cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu curl dirmngr dpkg-dev
+#6 22.88   g++ g++-14 g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
+#6 22.88   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu gnupg gnupg-l10n gpg gpg-agent
+#6 22.88   gpgconf gpgsm libasan8 libassuan9 libatomic1 libbinutils libbrotli1
+#6 22.88   libc-dev-bin libc6-dev libcc1-0 libcom-err2 libcrypt-dev libctf-nobfd0
+#6 22.88   libctf0 libcurl4t64 libdpkg-perl libgcc-14-dev libgcrypt20
+#6 22.88   libgdbm-compat4t64 libgnutls30t64 libgomp1 libgpg-error0 libgprofng0
+#6 22.88   libgssapi-krb5-2 libhwasan0 libidn2-0 libisl23 libitm1 libjansson4
+#6 22.88   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libksba8 libldap2
+#6 22.88   liblsan0 libmpc3 libmpfr6 libnghttp2-14 libnghttp3-9 libnpth0t64 libp11-kit0
+#6 22.89   libperl5.40 libpsl5t64 libquadmath0 librtmp1 libsasl2-2 libsasl2-modules-db
+#6 22.89   libsframe1 libssh2-1t64 libstdc++-14-dev libtasn1-6 libtsan2 libubsan1
+#6 22.89   libunistring5 linux-libc-dev make patch perl perl-modules-5.40
+#6 22.89   pinentry-curses rpcsvc-proto xz-utils
+#6 23.96 0 upgraded, 87 newly installed, 0 to remove and 1 not upgraded.
+#6 23.96 Need to get 91.6 MB of archives.
+#6 23.96 After this operation, 364 MB of additional disk space will be used.
+#6 23.96 Get:1 http://deb.debian.org/debian trixie/main amd64 bzip2 amd64 1.0.8-6 [40.5 kB]
+#6 29.35 Get:2 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1 [3014 kB]
+#6 30.79 Get:3 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+#6 47.73 Get:4 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1 [4326 kB]
+#6 51.00 Get:5 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1 [268 kB]
+#6 54.79 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 xz-utils amd64 5.8.1-1+deb13u2 [660 kB]
+#6 56.72 Get:7 http://deb.debian.org/debian trixie/main amd64 libsframe1 amd64 2.44-3 [78.4 kB]
+#6 63.75 Get:8 http://deb.debian.org/debian trixie/main amd64 binutils-common amd64 2.44-3 [2509 kB]
+#6 67.86 Get:9 http://deb.debian.org/debian trixie/main amd64 libbinutils amd64 2.44-3 [534 kB]
+#6 70.44 Get:10 http://deb.debian.org/debian trixie/main amd64 libgprofng0 amd64 2.44-3 [808 kB]
+#6 72.31 Get:11 http://deb.debian.org/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3 [156 kB]
+#6 74.83 Get:12 http://deb.debian.org/debian trixie/main amd64 libctf0 amd64 2.44-3 [88.6 kB]
+#6 76.59 Get:13 http://deb.debian.org/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3 [39.8 kB]
+#6 81.88 Get:14 http://deb.debian.org/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3 [1014 kB]
+#6 85.27 Get:15 http://deb.debian.org/debian trixie/main amd64 binutils amd64 2.44-3 [265 kB]
+#6 86.54 Get:16 http://deb.debian.org/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u4 [60.0 kB]
+#6 101.2 Get:17 http://deb.debian.org/debian-security trixie-security/main amd64 linux-libc-dev all 6.12.113-1 [3021 kB]
+#6 104.9 Get:18 http://deb.debian.org/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1 [119 kB]
+#6 106.3 Get:19 http://deb.debian.org/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1 [63.3 kB]
+#6 112.9 Get:20 http://deb.debian.org/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u4 [1995 kB]
+#6 116.1 Get:21 http://deb.debian.org/debian trixie/main amd64 libisl23 amd64 0.27-1 [659 kB]
+#6 119.5 Get:22 http://deb.debian.org/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1 [729 kB]
+#6 120.7 Get:23 http://deb.debian.org/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3 [52.2 kB]
+#6 140.6 Get:24 http://deb.debian.org/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19 [11.0 MB]
+#6 143.7 Get:25 http://deb.debian.org/debian trixie/main amd64 cpp-14 amd64 14.2.0-19 [1280 B]
+#6 145.3 Get:26 http://deb.debian.org/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1 [4840 B]
+#6 146.0 Get:27 http://deb.debian.org/debian trixie/main amd64 cpp amd64 4:14.2.0-1 [1568 B]
+#6 147.1 Get:28 http://deb.debian.org/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19 [42.8 kB]
+#6 149.7 Get:29 http://deb.debian.org/debian trixie/main amd64 libgomp1 amd64 14.2.0-19 [137 kB]
+#6 151.7 Get:30 http://deb.debian.org/debian trixie/main amd64 libitm1 amd64 14.2.0-19 [26.0 kB]
+#6 152.4 Get:31 http://deb.debian.org/debian trixie/main amd64 libatomic1 amd64 14.2.0-19 [9308 B]
+#6 162.3 Get:32 http://deb.debian.org/debian trixie/main amd64 libasan8 amd64 14.2.0-19 [2725 kB]
+#6 169.3 Get:33 http://deb.debian.org/debian trixie/main amd64 liblsan0 amd64 14.2.0-19 [1204 kB]
+#6 183.5 Get:34 http://deb.debian.org/debian trixie/main amd64 libtsan2 amd64 14.2.0-19 [2460 kB]
+#6 187.2 Get:35 http://deb.debian.org/debian trixie/main amd64 libubsan1 amd64 14.2.0-19 [1074 kB]
+#6 191.3 Get:36 http://deb.debian.org/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19 [1488 kB]
+#6 193.9 Get:37 http://deb.debian.org/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19 [145 kB]
+#6 201.5 Get:38 http://deb.debian.org/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19 [2672 kB]
+#6 230.1 Get:39 http://deb.debian.org/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19 [21.4 MB]
+#6 236.2 Get:40 http://deb.debian.org/debian trixie/main amd64 gcc-14 amd64 14.2.0-19 [540 kB]
+#6 236.8 Get:41 http://deb.debian.org/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1 [1436 B]
+#6 237.5 Get:42 http://deb.debian.org/debian trixie/main amd64 gcc amd64 4:14.2.0-1 [5136 B]
+#6 247.0 Get:43 http://deb.debian.org/debian trixie/main amd64 libstdc++-14-dev amd64 14.2.0-19 [2376 kB]

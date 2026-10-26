@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "pptx"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pptx"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

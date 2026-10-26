@@ -1,0 +1,1037 @@
+{
+  "task": "debug-trl-grpo",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T13:21:58.938184+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "debug-trl-grpo",
+    "agent_timeout": 3600,
+    "verifier_timeout": 120,
+    "build_timeout": 2400,
+    "cpus": 4.0,
+    "memory_mb": 2048,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": 0.6,
+  "reward": 0.6,
+  "phase_seconds": {
+    "queued": 0.125,
+    "build": 1044.141,
+    "container_setup": 200.0,
+    "bootstrap": 5.297,
+    "skill_preflight": 0.453,
+    "workspace_preflight": 13.547,
+    "agent": 1040.766,
+    "stop_application": 0.406,
+    "verifier": 3.406,
+    "collect": 1.719
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 2,
+  "elapsed_seconds": 2309.875,
+  "environment": {
+    "image_id": "sha256:3ae9c3ea05dd51a4e6cf52cee2191603d2006d623011331bf034252a1e3d0c5a",
+    "environment_sha": "b426be92e4c7ffc37bf81d6b57d4a8835ab27753d2b099b2d65ace3c88935d42",
+    "workdir": "/app",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "grpo",
+      "directory": "grpo",
+      "description": "Reference for the GRPO (Group Relative Policy Optimization) algorithm. Use when implementing, debugging, or verifying a GRPO training pipeline — covers the mathematical formulation (group-relative advantages, clipped surrogate loss, KL penalty), the training loop (generate → score → advantage → loss), log-probability computation, advantage estimation, and relationship to PPO/REINFORCE.",
+      "sha256": "90ef5f123f4b6107d85c69d53d6878aec29e5c08950dc52b9bd6fd872187804c"
+    },
+    {
+      "name": "rl-post-training",
+      "directory": "rl-post-training",
+      "description": "Diagnostic guide for RL-based post-training of language models (GRPO, PPO, REINFORCE, DPO). Use proactively when debugging a training pipeline that shows no improvement, loss anomalies, reward stagnation, NaN gradients, or other unexpected behavior during reinforcement learning fine-tuning. Work through all pipeline stages — reward, advantages, log-probs, loss, generation/decoding — before concluding the diagnosis is complete; stopping after one or two fixes is a common failure mode. Covers log-probability math, advantage estimation, numerical stability, reward processing, and generation/decoding pipeline issues.",
+      "sha256": "3ff7177b02003bb50dc6a9783fec7a7835b3aeb184b0f161d649de498f65eb99"
+    },
+    {
+      "name": "trl",
+      "directory": "trl",
+      "description": "Reference for the TRL (Transformer Reinforcement Learning) library codebase. Use proactively before reading or editing any file under `trl/` so you have the intended contracts and invariants in mind, not just what the current code says. Covers trainer hierarchy (SFT, DPO, GRPO, KTO), shared utility functions (selective_log_softmax, decode_and_strip_padding, padding helpers), configuration system, model wrappers, and how data flows through any TRL trainer.",
+      "sha256": "96e11df1379f5488435028ea9c073006917319d29540cd42baca0a97c6f2edcd"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-debug-trl-grpo-1",
+  "skills_discoverable": [
+    "grpo",
+    "rl-post-training",
+    "trl"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-a4bab4cf-dd00-4315-8390-53f11db5401f",
+  "runId": "run-b1c5f8e6-7c2c-49e5-9f59-0b99f32a3419",
+  "requestId": "request-958733d2-6858-4fd1-8d36-2559c7ec69ef",
+  "accepted_at": "2026-10-25T13:43:02.950563+00:00",
+  "terminal": {
+    "status": "REQUEST_COMPLETED",
+    "payload": {
+      "rootMessageId": "request-958733d2-6858-4fd1-8d36-2559c7ec69ef",
+      "requestId": "request-958733d2-6858-4fd1-8d36-2559c7ec69ef",
+      "runId": "run-b1c5f8e6-7c2c-49e5-9f59-0b99f32a3419",
+      "requestContextId": "context-9cccd3d7-c05c-48cd-9a9d-1612acf185b8",
+      "status": "COMPLETED",
+      "content": "` tag. Removed the branch (3 lines) with Python.\n   - Bug 3: Advantage scaling (grpo_trainer.py:1090): `+ 1e4` should be `+ 1e-4`. Fixed with Edit.\n4. Verification:\n   - Ran the pre-fix verification script and confirmed all 3 bugs (sign inversion hypothesis True, got max = 7.18 > 0, \"no tag\" and \"prefix only\" were blanked out, max|adv| = 7.5e-05).\n   - Post-fix: re-ran the script — max|ref-got| = 0.0, got max = -2.31 ≤ 0, all degenerate shapes preserved, max|adv| = 1.5.\n   - Ran the skill's verify_pipeline.py — all invariants pass.\n   - Ran unit tests: 11 passed (decode/log_softmax/logprob/pad tests in test_utils.py).\n\nIncomplete / not verified:\n- I did not run the full GRPO trainer test suite (test_grpo_trainer.py) — I only ran the targeted utils tests.\n- I did not run an actual end-to-end training run to confirm model improvement (would require downloading the model, and the task was to fix the bugs).\n- I did not check every file in the TRL source for other potential bugs — I focused on the GRPO path (grpo_trainer.py, utils.py, grpo_config.py). I reviewed the generation phase, loss computation, and reference model handling, and they matched upstream. But a full audit of every file was not performed.\n\nLet me summarize clearly, distinguishing between completed and incomplete work.\n\nThe task states: \"The source code is in workspace/trl. Check whether there are bugs and fix them.\" So the main deliverable is finding and fixing bugs. I found and fixed 3 bugs, and verified them with numerical checks, the skill's verification script, and unit tests.\n\nLet me write a concise summary.\n</think>\n\n## Summary\n\nI found and fixed **3 bugs** in the GRPO training path under `workspace/trl`. I did not touch `train_grpo.py` or `reward_fn.py`.\n\n### Completed & verified\n\n**Bug 1 — Sign error in `selective_log_softmax`** (`trl/trainer/utils.py`)\nThe float32/float64 branch computed `logsumexp_values - selected_logits`, the *negative* of `log_softmax`. Log-probs came out positive (max ≈ +7.2), violating the `log_prob ≤ 0` invariant and corrupting the importance ratio and KL term in the loss.\n- Fixed to `selected_logits - logsumexp_values`.\n- Verified: now matches `F.log_softmax(...).gather(...)` exactly (max diff 0.0); max log-prob = −2.31 (≤ 0).\n\n**Bug 2 — `decode_and_strip_padding` blanked valid completions** (`trl/trainer/utils.py`)\nAn `else: text = \"\"` branch emptied any completion lacking a `</think>` tag (e.g. direct answers, truncated generations), so the reward function saw empty text → reward 0.0 → zero learning signal.\n- Removed the blanking branch; text is now preserved when the tag is absent (matches upstream and the existing unit-test contract).\n- Verified: \"no tags at all\" and \"only prefix\" cases now return their content instead of `''`.\n\n**Bug 3 — Advantage scaling constant** (`trl/trainer/grpo_trainer.py`, line 1090)\n`advantages / (std_grouped_rewards + 1e4)` divided advantages by ~10⁴, shrinking the policy-gradient signal to ~10⁻⁴ of intended (max|adv| ≈ 7.5e-05).\n- Fixed to `+ 1e-4` (upstream value).\n- Verified: max|adv| now 1.5.\n\n**Cross-checks that passed**\n- Skill's `verify_pipeline.py`: all invariants green (log-probs non-positive, match `F.log_softmax` to float32 tolerance, dominant-token ≈ 0, no non-empty decode becomes empty).\n- `tests/test_utils.py` (decode / log_softmax / logprob / pad): **11 passed**.\n\n### Incomplete / not verified\n- I did **not** run the full `test_grpo_trainer.py` suite or an end-to-end training run, so I have not empirically confirmed reward/loss curves improve over steps — only that each bug is fixed and the affected invariants hold.\n- I audited the GRPO path (`grpo_trainer.py`, `utils.py`, `grpo_config.py`); config defaults, generation, loss, and reference-model handling matched upstream. I did not exhaustively audit every other file in the package.\n\nIf you'd like, I can run the full GRPO trainer test suite next to close out the remaining verification.",
+      "text": "` tag. Removed the branch (3 lines) with Python.\n   - Bug 3: Advantage scaling (grpo_trainer.py:1090): `+ 1e4` should be `+ 1e-4`. Fixed with Edit.\n4. Verification:\n   - Ran the pre-fix verification script and confirmed all 3 bugs (sign inversion hypothesis True, got max = 7.18 > 0, \"no tag\" and \"prefix only\" were blanked out, max|adv| = 7.5e-05).\n   - Post-fix: re-ran the script — max|ref-got| = 0.0, got max = -2.31 ≤ 0, all degenerate shapes preserved, max|adv| = 1.5.\n   - Ran the skill's verify_pipeline.py — all invariants pass.\n   - Ran unit tests: 11 passed (decode/log_softmax/logprob/pad tests in test_utils.py).\n\nIncomplete / not verified:\n- I did not run the full GRPO trainer test suite (test_grpo_trainer.py) — I only ran the targeted utils tests.\n- I did not run an actual end-to-end training run to confirm model improvement (would require downloading the model, and the task was to fix the bugs).\n- I did not check every file in the TRL source for other potential bugs — I focused on the GRPO path (grpo_trainer.py, utils.py, grpo_config.py). I reviewed the generation phase, loss computation, and reference model handling, and they matched upstream. But a full audit of every file was not performed.\n\nLet me summarize clearly, distinguishing between completed and incomplete work.\n\nThe task states: \"The source code is in workspace/trl. Check whether there are bugs and fix them.\" So the main deliverable is finding and fixing bugs. I found and fixed 3 bugs, and verified them with numerical checks, the skill's verification script, and unit tests.\n\nLet me write a concise summary.\n</think>\n\n## Summary\n\nI found and fixed **3 bugs** in the GRPO training path under `workspace/trl`. I did not touch `train_grpo.py` or `reward_fn.py`.\n\n### Completed & verified\n\n**Bug 1 — Sign error in `selective_log_softmax`** (`trl/trainer/utils.py`)\nThe float32/float64 branch computed `logsumexp_values - selected_logits`, the *negative* of `log_softmax`. Log-probs came out positive (max ≈ +7.2), violating the `log_prob ≤ 0` invariant and corrupting the importance ratio and KL term in the loss.\n- Fixed to `selected_logits - logsumexp_values`.\n- Verified: now matches `F.log_softmax(...).gather(...)` exactly (max diff 0.0); max log-prob = −2.31 (≤ 0).\n\n**Bug 2 — `decode_and_strip_padding` blanked valid completions** (`trl/trainer/utils.py`)\nAn `else: text = \"\"` branch emptied any completion lacking a `</think>` tag (e.g. direct answers, truncated generations), so the reward function saw empty text → reward 0.0 → zero learning signal.\n- Removed the blanking branch; text is now preserved when the tag is absent (matches upstream and the existing unit-test contract).\n- Verified: \"no tags at all\" and \"only prefix\" cases now return their content instead of `''`.\n\n**Bug 3 — Advantage scaling constant** (`trl/trainer/grpo_trainer.py`, line 1090)\n`advantages / (std_grouped_rewards + 1e4)` divided advantages by ~10⁴, shrinking the policy-gradient signal to ~10⁻⁴ of intended (max|adv| ≈ 7.5e-05).\n- Fixed to `+ 1e-4` (upstream value).\n- Verified: max|adv| now 1.5.\n\n**Cross-checks that passed**\n- Skill's `verify_pipeline.py`: all invariants green (log-probs non-positive, match `F.log_softmax` to float32 tolerance, dominant-token ≈ 0, no non-empty decode becomes empty).\n- `tests/test_utils.py` (decode / log_softmax / logprob / pad): **11 passed**.\n\n### Incomplete / not verified\n- I did **not** run the full `test_grpo_trainer.py` suite or an end-to-end training run, so I have not empirically confirmed reward/loss curves improve over steps — only that each bug is fixed and the affected invariants hold.\n- I audited the GRPO path (`grpo_trainer.py`, `utils.py`, `grpo_config.py`); config defaults, generation, loss, and reference-model handling matched upstream. I did not exhaustively audit every other file in the package.\n\nIf you'd like, I can run the full GRPO trainer test suite next to close out the remaining verification.",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-702075e8-0b69-44f6-86de-e1539dda450f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0049db95-f047-45c7-9658-411f545fd8f4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-51cc38a8-738d-4b73-88ba-20cc7ffbd8e1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c1015bfe-5493-43de-ae2a-dee2094c73c8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3bad56e6-559f-4a6f-abbe-19db3a35cf94",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-2be2518e-78e3-4f11-83d2-332821618ecb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4fde9168-5aa5-4684-9395-33f8b8ce781c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-25e5072f-2ac4-4791-a426-a553135a4e3f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-eadf14c0-2d3d-462f-9095-197fb6c1431b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0a9f390f-b300-4cce-811a-12ec80ade75e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-8e88a18b-fa12-4062-809d-b2571f9f31fd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ec0f0571-e147-4d07-a44d-c65c21c9846f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c6119dc9-f35c-4364-b2df-dde0f1e38b6a",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-baecb741-5bcf-4ee8-92dc-55475b5ac6d2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-89eed28c-c6e6-4324-8327-348992471c12",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-257effac-962c-4f03-8f0f-cabe4b9cda4c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-375538f3-26e8-4827-959e-cc7fd8bc6b0b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f2f979f4-1e89-430a-90c4-c6150da685af",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-f86af9bd-d4d0-4888-a3b3-5245750b205b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-10af9fb1-05e3-47ba-bb69-6d929052e5d0",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-883613db-c33e-4e74-bf5d-35939624c321",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cd5c0f57-e6de-46db-a660-11985681d1da",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-2f7fec31-e954-4e09-8f88-d9a8a4d389a3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5c56c898-082b-4626-a249-20c921e53522",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-14e42992-62bd-4862-b20d-e1d996409806",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-1ed21fc8-3d3e-4aa6-8728-d4added9485b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ea288d85-4262-4862-99d0-2b5e7ff62670",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-04889b4c-1035-4b3a-90f6-1d5f6afe9dd8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-086288c5-c7b7-40b8-acdf-43d60a669193",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e0467781-2a45-4eba-8b7b-d21479f18c6f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-34d69739-655a-4641-a54a-95f098d0bafc",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9566d194-9fe7-4597-8ba3-ac50d2d05804",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c562e344-0412-4142-a314-3d6013fdf569",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-36432c09-f0ca-46ee-bfe4-c15849b9faf5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-62e2564d-ba69-419d-82d2-42ce803b8238",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-00bf2628-f830-4ac1-b457-5cf436471569",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-3e6cf8b9-0754-4a34-a1a2-a2b1be5c86be",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-0e16d286-b215-44bd-a5de-f6c8506a99c7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0413e884-6a2e-449a-96cc-519890493ef5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a80864df-d6f0-44d2-8246-431ead1f2a71",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cf756b05-5102-45de-a264-af43fc3ec9f8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-df4ea0a4-cf36-44a9-866b-b52430dd1089",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-12d10ec6-4a07-4dc5-8ed6-9ee043380fce",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3da0b8c9-81c5-4ece-bea3-42b446afef1f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cdb214c9-13f8-4a38-ba67-f93f3048e07c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-2348e196-45ce-4e49-adf0-4e12b976a7f4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-28c0c789-1e4f-4a59-8c5d-14e362385124",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4cd17353-e05a-40ad-ad4a-1ecb48eb7cd5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-4629cb9d-62e1-4d61-9cce-2e4b27aa86e4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f47e6cd3-0f11-4148-96b2-ba7fde9f34ff",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c6053fef-59e3-47e9-b318-0f7f4db952e0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6fcd4bfd-4768-4992-a14a-ee4e2702d490",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-71e3763b-68a6-44af-ab5d-84c1a669acab",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-85aea7ba-5fc2-4762-98a4-b35b13c82bbb",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e123ac18-eaed-48a3-9302-cbee3b0fb20e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-856a898f-1f59-49e5-a8c7-23219c3ddb3c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a23604e5-36b4-4044-bb74-fc0ee340b4db",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4a385f5a-9661-4707-95a4-e98a7688a94d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-53559ab9-7726-4f2e-aee8-f5262674cc17",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-f8f114f3-a67a-4436-a3dc-18c00f705016",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7e0d404d-999d-439c-97b2-c01181efca3e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-f4c2d52d-41c5-43d1-aa76-4a5618809cf0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a9349bc6-6be7-4b55-bd39-cb4486c0e6b2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-57a60b1e-94e2-4e65-9b09-0d5d9dde230e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c144475a-09d5-4739-b096-b743b40c8222",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-bd5fc77e-21bb-4c88-923f-e6956673ae9d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-50373e17-be26-4ab3-9f4a-b9100f334c90",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9162e549-ca14-43d7-b003-1b47d71a1408",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ee8b1e12-b437-4ef9-a79e-d6a0110ee202",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-950c14ae-bed3-44d1-bb2a-fef5fbf80b81",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ddc52e37-5b6d-4e9d-b84e-b5630ac1eeb6",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-10c18a7e-7d75-49a3-a439-34e4addb7ebf",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-317020e5-a12d-4d77-9bce-f25533e2f82f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-648a8e64-1498-439a-b7de-fa98a6ae11ed",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-2b480ea7-810f-419c-938d-5777e54280c1",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-34674084-e7a5-433d-b5f9-fb8f941387b2",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b2e1ce89-ed64-48e7-92e3-60860863398f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-1593489b-988b-401b-943f-e6396b536946",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-47046439-a850-44c9-8d06-fcd14132e421",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a1afb6f3-bbd5-46b3-afc6-fd3831df4a95",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-44660972-1f3b-406f-8ec0-d58b8eb18fd1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b3531b14-26c5-4ab5-beec-f1b1510e26ad",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-4a64f552-1c8a-4f84-86d8-9f9c2acd75f0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8a105f53-f1f9-4856-8249-50d4a586645a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9edfbec0-9d96-4bd6-b841-53f67bade093",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-abb9e7d7-2eea-43a0-b5c5-a82e292986fa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-69daf2cc-4683-4b19-a7e5-120a003f70e7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-79f9e1cc-9a6d-4f39-843d-f2185031223c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-801d2634-65b5-4362-a544-53e771d97554",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d11bdc39-fc38-48b1-ba8f-1e0318dc5779",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-4fd264b6-af55-48ae-8075-d91b826fa6fd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a4f8b0a5-a328-489b-b29c-c5d85a6b7f45",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ea319be5-28fb-443b-a117-6efd2fc08530",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-63461472-afa0-4785-ac95-a0b1467e7f06",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-20176851-97c3-4325-9ed7-88cebbe5a0a2",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b9687b36-c423-4aa1-b9b7-7a96c7215514",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-16c8fda1-ab1b-4d4e-b131-028ca20d7b64",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ba213b3f-8b41-4d0a-a80a-0cc0af43deaa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ce8f810e-548d-425a-9d7e-974386dc21ab",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f7c9921c-0237-4f7c-af70-530741911e87",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6b774844-e2c8-4b6e-a686-ac222043a45b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5a5c1622-9bef-4ca5-b3b9-1ddcbaa8890f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3e351a9b-5a57-4823-9840-220a8072c287",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-622a0bf3-4680-49f4-aaff-eb2756deff29",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-b41a805a-a7ed-4d67-9575-b667a5e14ead",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a70d42b7-2263-4e6d-a4c3-b5194cee3e59",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-60f7cd59-47a8-4359-b406-d76288f7a209",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7d94a686-2deb-4efb-9b8a-8c39e82d6f0e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-20ce46f7-0c8a-454a-9052-6e377c1487c5",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6914779a-92fd-44f6-a258-c0b404f721b9",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3163d9d8-77cd-4546-ad81-c47cb1df8aa8",
+          "hookId": "system.output-redaction-guard",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-043b8a45-3029-4937-9d77-e411bbcfacef",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        }
+      ],
+      "completionLimitations": [
+        "AGENT_TURN_LIMIT_REACHED"
+      ],
+      "terminalMessageId": "assistant-7b381835-1789-4863-92f4-3b57cfa496d4"
+    },
+    "sequence": 523
+  },
+  "terminal_at": "2026-10-25T14:00:23.256943+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.6,
+    "failed_tests": [],
+    "exit_code": 0
+  },
+  "outcome": "TASK_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 29462016,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 51,
+  "tool_calls": 59,
+  "skills_invoked": [
+    "rl-post-training",
+    "trl"
+  ],
+  "skills_loaded": [
+    "rl-post-training",
+    "trl"
+  ],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 51,
+    "LLM_CONTENT_DELTA": 41,
+    "CAPABILITY_STARTED": 59,
+    "CAPABILITY_COMPLETED": 59,
+    "BACKGROUND_TASK_STARTED": 9,
+    "BACKGROUND_TASK_FAILED": 2,
+    "BACKGROUND_TASK_COMPLETED": 7,
+    "REQUEST_COMPLETED": 1
+  },
+  "finished_at": "2026-10-25T14:00:28.800742+00:00",
+  "evidence_complete": true
+}

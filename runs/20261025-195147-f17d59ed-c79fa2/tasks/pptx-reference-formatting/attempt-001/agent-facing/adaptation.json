@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "pptx",
+      "directory": "pptx",
+      "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+      "sha256": "7d39d6f9917d87886ebb89a3696394d7295f2dc1dd9bc1376bfa31d81e139532"
+    }
+  ],
+  "verifier_sha": "1b9d59e84e8ea942ecf4a01766ad53589e6483d26fb6547571f6a2379cd75267",
+  "prompt_sha": "923f0751f923279547ec537d526be2f84e27a6fa0029c7005db039172038535c"
+}

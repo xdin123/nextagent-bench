@@ -1,0 +1,41 @@
+## Summary of the session
+
+### Verified facts established in the transcript
+
+**Workspace structure**
+- `workspace/commands/` holds 30 command files: `001.txt` … `030.txt`.
+- `workspace/system_params.yaml` is present.
+- `workspace/skills/` contains 6 skill documents: `flight-plan-parser`, `motor-model-dynamics`, `position-controller-trajectory-planner`, `attitude-controller-planner`, `plot-quadrotor`, `stepinfo-3d`.
+- No existing `.py`, `.npy`, or `.json` files are present, and there is **no** `workspace/results/` directory yet — the implementation is starting from an empty workspace.
+
+**System parameters** (from `system_params.yaml`)
+- `sample_rate: 200 Hz`, `mass: 0.770 kg`, `gravity: 9.80665`, `arm_length: 0.1103`, `thrust_coefficient: 8.07e-9`, `moment_scale: 1.3719e-10`, `motor_constant: 36.5`, `rpm_min: 3000`, `rpm_max: 20000`, `inertia: [0.0033, 0.0033, 0.005]`, `COM_vertical_offset: 0.05`.
+- Acceleration limits: `accel_limit_up: 6.962`, `accel_limit_down: 9.429`, `accel_limit_horiz: 13.602` (m/s²).
+
+**Skill specifications read in full**
+- **Planner**: 15×`max_iter` state matrix (rows 0:3 pos, 3:6 vel, 6:9 orientation, 9:12 ang-vel, 12:15 acc); cubic-spline segments for takeoff/fly/land, constant for hover.
+- **Motor/dynamics**: 4×4 X-frame propeller allocation, first-order motor lag, RK45 integration, 16-element state vector.
+- **Position controller**: PID on position/velocity error → thrust `F` + desired acceleration.
+- **Attitude controller/planner**: inverse kinematics for φ/θ, PID → moments `M = I @ (...)`.
+- **Metrics (`stepinfo_3d`)**: RiseTime, SettlingTime, Overshoot_pct, SteadyStateError with `settling_threshold=0.02`.
+- **Plots**: `desired_vs_actual.png`, `errors.png`, `cumulative_errors.png` (5×3 grids).
+
+**Task requirements captured**
+- Per-command output folder `workspace/results/<label>/` with `metrics_3d.json`, `tuning_results.json`, `planned_trajectory.npy`, `actual_trajectory.npy`, and `plots/`.
+- Success criteria: `SteadyStateError < 0.05 m`, `Overshoot_pct < 5%`, planned trajectory within acceleration limits at every timestep, and per-timestep position error `< 0.05 m` at every timestep.
+- Four supported command types: take off, hover, land, fly.
+
+### Completed work
+- Explored the workspace and confirmed it is empty of code/results.
+- Read and understood all 6 skill documents and `system_params.yaml`.
+- Identified the full set of deliverables, output schemas, and acceptance criteria.
+
+### Incomplete work (nothing built or run yet)
+- **No code has been written**: no modules for the flight-plan parser, motor model, dynamics, trajectory planner, position/attitude controllers, metrics, or plotting.
+- **No simulation executed**; no PID tuning performed.
+- **No `workspace/results/` outputs generated** for any of the 30 commands.
+
+### Verifiable limitation
+- The **exact text of the individual command files** (specific heights/times/coordinates) was read earlier in the session but those tool results have since been compacted and are **not currently verifiable in the transcript**. The 30 files' existence and the four command types are confirmed; the per-file numeric parameters would need to be re-read before implementation to guarantee correctness.
+
+The next step (not yet started) is to re-read the 30 command files and then implement the simulator, planner, controllers, and per-command tuning loop.

@@ -1,0 +1,53 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 728B done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.4
+#2 DONE 2.0s
+
+#3 docker-image://docker.io/docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc
+#3 resolve docker.io/docker/dockerfile:1.4@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc 0.0s done
+#3 CACHED
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/python:3.12-slim
+#5 DONE 0.0s
+
+#6 [1/6] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#6 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 150.46kB 0.0s done
+#7 DONE 0.0s
+
+#8 [2/6] RUN mkdir -p /app/data /app/output /app/environment/data
+#8 DONE 0.2s
+
+#9 [3/6] COPY data /app/environment/data
+#9 DONE 0.0s
+
+#10 [4/6] COPY generate_data.py /app/environment/generate_data.py
+#10 DONE 0.0s
+
+#11 [5/6] RUN python3 /app/environment/generate_data.py
+#11 0.227 Generated BGP topology and configuration files in /app/data/
+#11 DONE 0.2s
+
+#12 [6/6] WORKDIR /app
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.2s done
+#13 exporting manifest sha256:14899210e54d7bd8d50a3ee9ef7f28e0c88677f3fcb93a893f4a9113e9d4a4b2 0.0s done
+#13 exporting config sha256:8414af87df7a9073237404442beb4d17dbbc1b54fe4f6d92c634bc8523035451 done
+#13 exporting attestation manifest sha256:c1a132b2f22f05af08275e7929853cd3fc79f6802b410177621b40920943a747 0.0s done
+#13 exporting manifest list sha256:349d8fe273bfe2dc062b9626fba8e0829caa2d3d2ec1530b8826997cc04fa98c done
+#13 naming to docker.io/nextagent-bench/environment:3249aa9430e16f7375e6 done
+#13 unpacking to docker.io/nextagent-bench/environment:3249aa9430e16f7375e6 0.1s done
+#13 DONE 0.3s

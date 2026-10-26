@@ -1,0 +1,41 @@
+{
+  "terminal_duplication_failure_tasks": [
+    "ada-bathroom-plan-repair",
+    "azure-bgp-oscillation-route-leak",
+    "dialogue-parser",
+    "edit-pdf",
+    "exam-block-sequencing",
+    "manufacturing-fjsp-optimization"
+  ],
+  "terminal_output_capacity_failure_tasks": [],
+  "formal_output_capacity_handling_tasks": [
+    "ada-bathroom-plan-repair",
+    "adaptive-cruise-control",
+    "bike-rebalance",
+    "civ6-adjacency-optimizer",
+    "dialogue-parser",
+    "drone-planning-control",
+    "earthquake-plate-calculation",
+    "energy-ac-optimal-power-flow",
+    "energy-market-pricing",
+    "energy-unit-commitment",
+    "grid-dispatch-operator",
+    "manufacturing-codebook-normalization"
+  ],
+  "formal_duplication_detected_tasks": [
+    "ada-bathroom-plan-repair",
+    "adaptive-cruise-control",
+    "azure-bgp-oscillation-route-leak",
+    "court-form-filling",
+    "dialogue-parser",
+    "econ-detrending-correlation",
+    "edit-pdf",
+    "energy-market-pricing",
+    "enterprise-information-search",
+    "exam-block-sequencing",
+    "manufacturing-codebook-normalization",
+    "manufacturing-equipment-maintenance",
+    "manufacturing-fjsp-optimization"
+  ],
+  "interpretation": "Observed recovery handling is not proof it caused a task failure. Terminal codes identify direct termination; causal attribution still requires snapshot and tool/provider evidence. Preflight records are excluded from these task-level handling sets."
+}

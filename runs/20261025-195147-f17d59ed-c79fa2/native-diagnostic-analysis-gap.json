@@ -1,0 +1,35 @@
+{
+  "status": "CONFIRMED_DEFERRED_UNTIL_RUNNING_VERSION_FINISHES",
+  "detected_at": "2026-10-26T01:34:56.179280+00:00",
+  "source": "User highlighted framework-native nextagent-plugin-diagnostic.*.ndjson trajectory artifacts",
+  "native_artifacts_preserved": true,
+  "native_file_count_observed": 29,
+  "example": {
+    "task": "3d-scan-calc",
+    "attempt": 1,
+    "file": "tasks/3d-scan-calc/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+    "records": 234,
+    "artifactType": "model-recovery"
+  },
+  "native_structure": [
+    "artifactType",
+    "recordedAt",
+    "sessionId",
+    "requestId",
+    "runId",
+    "payload.event",
+    "payload.snapshots.source",
+    "payload.snapshots.body"
+  ],
+  "observed_events": [
+    "model.invocation.started",
+    "model.invocation.summary",
+    "model.validation.finished",
+    "model.recovery.action",
+    "model.recovery.decision",
+    "model.recovery.finished"
+  ],
+  "confirmed_gap": "analysis.py build_packet filters top-level event/modelInput/modelOutput/toolInput/toolOutput/rawExceptionData and does not unfold this plugin artifact payload/snapshots. Original file is preserved, but these nested records are not ingested directly into the semantic diagnosis evidence.",
+  "implementation_constraint": "No source edits or adapter-hash changes while original runner/analysis is active. After original run closes, add/test schema-aware bounded native diagnostic ingestion with invocation/request correlation; retain provenance and redact credentials, omit provider reasoning. Record genuine analysis implementation version.",
+  "scoring_constraint": "Diagnostics-only followup; no Agent rerun or scoring edits for this gap. Reanalyze only incomplete or demonstrably affected diagnoses when needed; preserve all old analysis artifacts."
+}

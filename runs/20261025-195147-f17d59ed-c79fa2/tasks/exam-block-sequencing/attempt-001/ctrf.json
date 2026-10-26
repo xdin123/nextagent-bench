@@ -1,0 +1,56 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.3.3"
+    },
+    "summary": {
+      "tests": 3,
+      "passed": 0,
+      "failed": 3,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792943715.3490672,
+      "stop": 1792943715.4462342
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestOutputs::test_objective_value_is_reported_correctly",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.020854248003161047,
+        "start": 1792943715.3732834,
+        "stop": 1792943715.4071343,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestOutputs object at 0x7d7060e5da60>\n\n    def test_objective_value_is_reported_correctly(self):\n        instance = load_instance()\n        blocks = [int(b) for b in instance[\"all_blocks\"]]\n        pair_counts = load_pair_counts(blocks)\n        triplet_counts = load_triplet_counts(blocks)\n    \n>       schedule = read_schedule(SCHEDULE_PATH)\n\n/verifier/test_outputs.py:618: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npath = PosixPath('/root/output/schedule.csv')\n\n    def read_schedule(path: Path):\n>       assert path.exists(), f\"Missing schedule file: {path}\"\nE       AssertionError: Missing schedule file: /root/output/schedule.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/output/schedule.csv').exists\n\n/verifier/test_outputs.py:304: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::TestOutputs::test_solution_is_feasible",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0006839289926574565,
+        "start": 1792943715.407469,
+        "stop": 1792943715.4162571,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestOutputs object at 0x7d70602c0b90>\n\n    def test_solution_is_feasible(self):\n        instance = load_instance()\n>       schedule = read_schedule(SCHEDULE_PATH)\n\n/verifier/test_outputs.py:655: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npath = PosixPath('/root/output/schedule.csv')\n\n    def read_schedule(path: Path):\n>       assert path.exists(), f\"Missing schedule file: {path}\"\nE       AssertionError: Missing schedule file: /root/output/schedule.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/output/schedule.csv').exists\n\n/verifier/test_outputs.py:304: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::TestOutputs::test_verifier_objective_is_no_worse_than_oracle",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.021085074993607122,
+        "start": 1792943715.4164963,
+        "stop": 1792943715.4461212,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestOutputs object at 0x7d70602c05c0>\n\n    def test_verifier_objective_is_no_worse_than_oracle(self):\n        instance = load_instance()\n        blocks = [int(b) for b in instance[\"all_blocks\"]]\n        pair_counts = load_pair_counts(blocks)\n        triplet_counts = load_triplet_counts(blocks)\n    \n>       schedule = read_schedule(SCHEDULE_PATH)\n\n/verifier/test_outputs.py:673: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\npath = PosixPath('/root/output/schedule.csv')\n\n    def read_schedule(path: Path):\n>       assert path.exists(), f\"Missing schedule file: {path}\"\nE       AssertionError: Missing schedule file: /root/output/schedule.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/output/schedule.csv').exists\n\n/verifier/test_outputs.py:304: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      }
+    ]
+  }
+}

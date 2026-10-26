@@ -1,0 +1,44 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792918527.1813598,
+            "stop": 1792918527.2006772
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestOutputs::test_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0005104719984956319,
+                "start": 1792918527.189182,
+                "stop": 1792918527.1963856,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "self = <test_outputs.TestOutputs object at 0x76818e3d9d00>\n\n    def test_file_exists(self):\n        \"\"\"Check output file was created.\"\"\"\n>       assert os.path.exists(\"/root/mass_report.json\"), \"Output file not found\"\nE       AssertionError: Output file not found\nE       assert False\nE        +  where False = <function exists at 0x76818e977560>('/root/mass_report.json')\nE        +    where <function exists at 0x76818e977560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:11: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::TestOutputs::test_values_correct",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002095628000461147,
+                "start": 1792918527.1966207,
+                "stop": 1792918527.2005978,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "self = <test_outputs.TestOutputs object at 0x76818dc66600>\n\n    def test_values_correct(self):\n        \"\"\"Validate submission against ground truth.\"\"\"\n        expected_mass, expected_vol, expected_id = self._get_ground_truth()\n    \n>       with open(\"/root/mass_report.json\") as f:\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/mass_report.json'\n\n/verifier/test_outputs.py:90: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

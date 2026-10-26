@@ -1,0 +1,8 @@
+{
+  "status": "ANALYSIS_INCOMPLETE",
+  "created_at": "2026-10-26T02:27:05.547298+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\tasks\\dapt-intrusion-detection\\attempt-001\\analysis\\20261026-102657",
+  "error": "Diagnostic request failed: HTTP_502",
+  "note": "Evidence packet retained where available; no unsupported root cause asserted. Retry diagnostics without rerunning the task.",
+  "report": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\tasks\\dapt-intrusion-detection\\attempt-001\\analysis\\20261026-102657\\report.md"
+}

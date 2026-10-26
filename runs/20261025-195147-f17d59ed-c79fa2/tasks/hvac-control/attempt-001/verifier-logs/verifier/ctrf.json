@@ -1,0 +1,83 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792949766.6933703,
+            "stop": 1792949766.9299734
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestCalibrationLog::test_calibration_log",
+                "status": "passed",
+                "duration": 0.0006735170027241111,
+                "start": 1792949766.923226,
+                "stop": 1792949766.9242373,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestEstimatedParams::test_estimated_params",
+                "status": "passed",
+                "duration": 0.0003968560049543157,
+                "start": 1792949766.9245126,
+                "stop": 1792949766.9251795,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestTunedGains::test_tuned_gains",
+                "status": "passed",
+                "duration": 0.0002630439994391054,
+                "start": 1792949766.9254038,
+                "stop": 1792949766.9258876,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestControlLog::test_control_log",
+                "status": "passed",
+                "duration": 0.0005341980140656233,
+                "start": 1792949766.9260905,
+                "stop": 1792949766.9268534,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestMetrics::test_metrics",
+                "status": "passed",
+                "duration": 0.0005980700079817325,
+                "start": 1792949766.9270556,
+                "stop": 1792949766.9278817,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestPerformance::test_performance",
+                "status": "passed",
+                "duration": 0.000517232998390682,
+                "start": 1792949766.9280927,
+                "stop": 1792949766.928841,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestSafety::test_safety",
+                "status": "passed",
+                "duration": 0.0006316560029517859,
+                "start": 1792949766.9290347,
+                "stop": 1792949766.9298878,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

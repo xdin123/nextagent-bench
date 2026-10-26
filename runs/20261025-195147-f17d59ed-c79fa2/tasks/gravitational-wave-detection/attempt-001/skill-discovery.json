@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "conditioning",
+    "matched-filtering"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "conditioning"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "matched-filtering"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

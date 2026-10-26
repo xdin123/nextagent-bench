@@ -1,0 +1,63 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "excitation-signal-design",
+      "directory": "excitation-signal-design",
+      "description": "Design effective excitation signals (step tests) for system identification and parameter estimation in control systems.",
+      "sha256": "2a95543b6a10befec4f4ab98c9912d93af2c3fa54397a2a1d421db5c2e59d7c9"
+    },
+    {
+      "name": "first-order-model-fitting",
+      "directory": "first-order-model-fitting",
+      "description": "Fit first-order dynamic models to experimental step response data and extract K (gain) and tau (time constant) parameters.",
+      "sha256": "96c792fe902e2a22ba2afb5bd0b02823fe200a4fb40197825f4e06cd49d0c865"
+    },
+    {
+      "name": "imc-tuning-rules",
+      "directory": "imc-tuning-rules",
+      "description": "Calculate PI/PID controller gains using Internal Model Control (IMC) tuning rules for first-order systems.",
+      "sha256": "2388dcb94f078c67d69acd615adb336d4604aecfdb198302ce880f872282e7cf"
+    },
+    {
+      "name": "safety-interlocks",
+      "directory": "safety-interlocks",
+      "description": "Implement safety interlocks and protective mechanisms to prevent equipment damage and ensure safe control system operation.",
+      "sha256": "2f655c05c1a8262b23af135f24e72fed0f0bee9634ad84efa4c3f94c2bf9da45"
+    },
+    {
+      "name": "scipy-curve-fit",
+      "directory": "scipy-curve-fit",
+      "description": "Use scipy.optimize.curve_fit for nonlinear least squares parameter estimation from experimental data.",
+      "sha256": "a250a563dcb8cd453070bc47db9e520e70bfb7253b5abb13b8b02afe0e57ef85"
+    }
+  ],
+  "verifier_sha": "3f17ee3710e4797165d3e7e704a4acf15e279a8c797ed2692976b55fea23cd90",
+  "prompt_sha": "5ea7ad456d1fb83188cdf402af15e4913aa2bc11cdab1ed054650c0ef047ed1a"
+}

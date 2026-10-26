@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "timeseries-detrending",
+      "directory": "timeseries-detrending",
+      "description": "Tools and techniques for detrending time series data in macroeconomic analysis. Use when working with economic time series that need to be decomposed into trend and cyclical components. Covers HP filter, log transformations for growth series, and correlation analysis of business cycles.",
+      "sha256": "1169a82443b6b4571dbc37017c41e1b2b1e05e86e9d0b304af726c711111d4cd"
+    }
+  ],
+  "verifier_sha": "c51f1d7aec614fda9fedf6db675921bad464e31cc66151bb40684b874f463223",
+  "prompt_sha": "b0c6e6bbf73f441e458f57547ee990ac5d4a985dbf6ee833a2792e5351bd4fae"
+}

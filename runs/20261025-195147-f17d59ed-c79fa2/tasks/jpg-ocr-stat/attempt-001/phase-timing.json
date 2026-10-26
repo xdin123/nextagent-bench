@@ -1,0 +1,9 @@
+{
+  "queued": 0.156,
+  "build": 686.031,
+  "container_setup": 211.719,
+  "bootstrap": 5.297,
+  "skill_preflight": 0.437,
+  "workspace_preflight": 2.782,
+  "collect": 1.687
+}

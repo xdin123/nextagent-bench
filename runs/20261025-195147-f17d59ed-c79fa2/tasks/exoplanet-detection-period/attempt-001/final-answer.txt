@@ -1,0 +1,32 @@
+## Session Summary
+
+### Completed (verified)
+
+**1. Data exploration**
+- `workspace/data/tess_lc.txt`: ~16,669 points, time span ~25.43 days, ~2-min median cadence, one ~2.2-day gap.
+- All quality flags are 0 (good data); flux scatter ~0.41% — confirms strong stellar activity contamination.
+
+**2. Filtering**
+- Quality-flag filter applied (all points passed).
+- Iterative 3σ outlier clipping applied; cleaned data saved to `temp/clean.npz`.
+
+**3. Stellar activity removal**
+- Raw Lomb–Scargle periodogram showed a dominant peak at **P ≈ 1.40 days** (S/N ~700) — the stellar rotation period, masking the transit signal.
+- GP detrending with a quasi-periodic kernel (rotation period 1.39974 d) + long-term Matérn 5/2 trend, implemented in pure NumPy (sklearn runs repeatedly failed with sandbox gateway errors; adaptive jitter fixed a near-singular kernel fit).
+- Residual scatter dropped from **0.41% → 0.12%**; detrended data saved to `temp/detrended.npz`.
+- LS periodogram on detrended data shows no strong sinusoidal peaks — expected, since transits are box-shaped dips (TLS is the right tool).
+
+**4. TLS API characterization (done, search not yet run)**
+- Installed `transitleastsquares` is the older class-based API: constructor is `transitleastsquares(t, y, dy=None, verbose=True)`; search parameters (`period_min`, `period_max`, `n_transits_min`, `R_star`, `transit_template`, …) go to the `.power()` method, not the constructor.
+- Two search attempts failed on API mismatch (imported nonexistent `tls` function; passed `period_min` to `__init__`). Correct invocation pattern identified from source inspection.
+
+### Incomplete
+
+- **Actual TLS period search** on the detrended light curve (0.5–15 d, box template) — not yet executed successfully.
+- Candidate period refinement.
+- Validation (phase-fold, SDE, odd/even transit consistency).
+- **`workspace/period.txt` has NOT been written** — no final period value exists yet.
+
+### Next step (when resuming)
+
+Run the corrected TLS call — construct `tls.transitleastsquares(t, f, e)` from `temp/detrended.npz`, then call `.power(period_min=0.5, period_max=15, n_transits_min=2, R_star=1.0, M_star=1.0, transit_template="box", ...)` — take the top SDE peak, refine in a narrow window, phase-fold to validate, and write the period (5 decimal places) to `workspace/period.txt`.

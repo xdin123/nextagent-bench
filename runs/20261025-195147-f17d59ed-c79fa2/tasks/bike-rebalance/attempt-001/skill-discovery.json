@@ -1,0 +1,27 @@
+{
+  "registered": [
+    "geospatial-routing-data",
+    "logistics-rules-to-optimization",
+    "routing-subtour-elimination",
+    "scip-opt"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "geospatial-routing-data"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "logistics-rules-to-optimization"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "routing-subtour-elimination"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "scip-opt"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

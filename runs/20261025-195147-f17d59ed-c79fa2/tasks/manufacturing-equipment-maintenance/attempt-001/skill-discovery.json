@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "reflow-machine-maintenance-guidance",
+    "reflow-profile-compliance-toolkit"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "reflow-machine-maintenance-guidance"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "reflow-profile-compliance-toolkit"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

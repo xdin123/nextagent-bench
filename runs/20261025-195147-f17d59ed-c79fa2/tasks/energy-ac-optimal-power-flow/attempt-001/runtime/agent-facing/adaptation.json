@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "ac-branch-pi-model",
+      "directory": "ac-branch-pi-model",
+      "description": "AC branch pi-model power flow equations (P/Q and |S|) with transformer tap ratio and phase shift, matching `acopf-math-model.md` and MATPOWER branch fields. Use when computing branch flows in either direction, aggregating bus injections for nodal balance, checking MVA (rateA) limits, computing branch loading %, or debugging sign/units issues in AC power flow.",
+      "sha256": "4633b85efdfe0bca84e484b186e5f3980e438693018159d9c97bc9019e26319c"
+    },
+    {
+      "name": "casadi-ipopt-nlp",
+      "directory": "casadi-ipopt-nlp",
+      "description": "Nonlinear optimization with CasADi and IPOPT solver. Use when building and solving NLP problems: defining symbolic variables, adding nonlinear constraints, setting solver options, handling multiple initializations, and extracting solutions. Covers power systems optimization patterns including per-unit scaling and complex number formulations.",
+      "sha256": "f207a0b131e41bb3d2954038e08d491b6674d87358537c8331d6d5996622ff0c"
+    },
+    {
+      "name": "power-flow-data",
+      "directory": "power-flow-data",
+      "description": "Power system network data formats and topology. Use when parsing bus, generator, and branch data for power flow analysis.",
+      "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+    }
+  ],
+  "verifier_sha": "37e038940579be6aca02a6c5567d3749afd848021f91cf264d0c8d97b66144ba",
+  "prompt_sha": "79041b44234fb76343b60ad8cb2b769419a81615c8784bdf709dc3da0b90f0ef"
+}

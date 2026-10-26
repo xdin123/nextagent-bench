@@ -1,0 +1,20 @@
+--- prompt.original
++++ prompt.effective
+@@ -10,7 +10,7 @@
+ ## Scenario
+ 
+ Solve the scenario located at:
+-- `/data/scenario_3/scenario.json`
++- `workspace/_roots/data/scenario_3/scenario.json`
+ 
+ ## Input
+ 
+@@ -28,7 +28,7 @@
+ ## Output
+ 
+ Write your solution to:
+-- `/output/scenario_3.json`
++- `workspace/_roots/output/scenario_3.json`
+ 
+ **Single city:**
+ ```json

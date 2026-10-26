@@ -1,0 +1,64 @@
+{
+  "task": "r2r-mpc-control",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T04:27:24.054956+00:00",
+  "phase": "container_setup",
+  "status": "RUNNING",
+  "budgets": {
+    "task": "r2r-mpc-control",
+    "agent_timeout": 1200,
+    "verifier_timeout": 1200,
+    "build_timeout": 600,
+    "cpus": 4.0,
+    "memory_mb": 4096,
+    "storage_mb": 5120,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 531.469,
+    "build": 470.391
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 1001.86,
+  "environment": {
+    "image_id": "sha256:de9624434f102176b0b90841da7baf9107200034b5064cbdba6ee5eae9a960cc",
+    "environment_sha": "1f2a515d7d7b7b7fcf5378a5bd98829c49ce8070e61a37d0bf34a6742095e13f",
+    "workdir": "/root",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "finite-horizon-lqr",
+      "directory": "finite-horizon-lqr",
+      "description": "Solving finite-horizon LQR via dynamic programming for MPC.",
+      "sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f"
+    },
+    {
+      "name": "integral-action-design",
+      "directory": "integral-action-design",
+      "description": "Adding integral action to MPC for offset-free tension tracking.",
+      "sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220"
+    },
+    {
+      "name": "mpc-horizon-tuning",
+      "directory": "mpc-horizon-tuning",
+      "description": "Selecting MPC prediction horizon and cost matrices for web handling.",
+      "sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123"
+    },
+    {
+      "name": "state-space-linearization",
+      "directory": "state-space-linearization",
+      "description": "Linearizing nonlinear dynamics around operating points for control design.",
+      "sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+    }
+  ]
+}

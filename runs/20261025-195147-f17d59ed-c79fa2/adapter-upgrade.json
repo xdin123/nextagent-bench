@@ -1,0 +1,10 @@
+{
+  "from_sha": "c061278083dd48be77590d81afde8ed5b37fc578f598cc7570c58723582fcd7d",
+  "previous_runtime_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "to_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "profile_sha": "307952176eeea4d02c12954e30489711f886af9bf08a5bfb668c5afbab1e58a2",
+  "source": "adapter-upgrades\\351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5\\source",
+  "at": "2026-10-26T03:26:54.893110+00:00",
+  "authorization": "User explicitly requested same-batch rerun of verified network-failed tasks after the previous runner/analysis stopped.",
+  "scope": "Exact persistent task retry selection and per-attempt retry provenance only; framework, dataset, model, frozen configs and first-score reporting unchanged."
+}

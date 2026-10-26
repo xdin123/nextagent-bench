@@ -1,0 +1,59 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 4,
+      "passed": 3,
+      "failed": 1,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792939499.0018299,
+      "stop": 1792939499.0206285
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestEconomicsTask::test_answer_file_exists",
+        "status": "passed",
+        "duration": 0.0003892299973813351,
+        "start": 1792939499.0075517,
+        "stop": 1792939499.0082524,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestEconomicsTask::test_answer_format",
+        "status": "passed",
+        "duration": 0.0004332169992267154,
+        "start": 1792939499.0084875,
+        "stop": 1792939499.009203,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestEconomicsTask::test_answer_is_valid_number",
+        "status": "passed",
+        "duration": 0.0003903479955624789,
+        "start": 1792939499.0094862,
+        "stop": 1792939499.0101087,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestEconomicsTask::test_correlation_value_correct",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0004993939983251039,
+        "start": 1792939499.0103753,
+        "stop": 1792939499.0204892,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestEconomicsTask testMethod=test_correlation_value_correct>\n\n    def test_correlation_value_correct(self):\n        \"\"\"\n        Verify the computed correlation matches the expected value.\n    \n        The correlation should be approximately 0.689, indicating that\n        consumption and investment are strongly procyclical and move\n        together over the business cycle.\n        \"\"\"\n        path = self.get_answer_path()\n        if path is None:\n            self.skipTest(\"Answer file not found\")\n    \n        with open(path) as f:\n            content = f.read().strip()\n    \n        try:\n            computed = float(content)\n        except ValueError:\n            self.fail(f\"Answer '{content}' is not a valid number\")\n    \n        print(f\"Agent's answer: {content}\")\n        print(f\"Expected: {self.EXPECTED_CORRELATION}\")\n        print(f\"Tolerance: ±{self.TOLERANCE}\")\n    \n>       self.assertAlmostEqual(\n            computed,\n            self.EXPECTED_CORRELATION,\n            delta=self.TOLERANCE,\n            msg=(f\"Correlation mismatch. \" f\"Expected {self.EXPECTED_CORRELATION} ± {self.TOLERANCE}, \" f\"got {computed}\"),\n        )\nE       AssertionError: 0.9925 != 0.68885 within 0.001 delta (0.3036500000000001 difference) : Correlation mismatch. Expected 0.68885 ± 0.001, got 0.9925\n\n/verifier/test_outputs.py:75: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      }
+    ]
+  }
+}

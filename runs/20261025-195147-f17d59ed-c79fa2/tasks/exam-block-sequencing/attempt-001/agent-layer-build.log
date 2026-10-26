@@ -1,0 +1,55 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 412B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22.22.0-bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nextagent-bench/environment:14db183c46fcabe7c418
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/nextagent-bench/framework:a2557a60be376973cf6c
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [stage-1 1/4] FROM docker.io/nextagent-bench/environment:14db183c46fcabe7c418@sha256:bbb4a77f57faec937b5e539c5c9786e2adcfe39f1a1cc2fb17e1fca94b4ad26e
+#6 resolve docker.io/nextagent-bench/environment:14db183c46fcabe7c418@sha256:bbb4a77f57faec937b5e539c5c9786e2adcfe39f1a1cc2fb17e1fca94b4ad26e 0.0s done
+#6 DONE 0.0s
+
+#7 [node_runtime 1/1] FROM docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94
+#7 resolve docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94
+#7 resolve docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94 0.0s done
+#7 CACHED
+
+#8 FROM docker.io/nextagent-bench/framework:a2557a60be376973cf6c@sha256:7ad8fcafa7af28dd7e74ed98ff81daee49964a9fd7d8723f46b4a3e6c2f029c1
+#8 resolve docker.io/nextagent-bench/framework:a2557a60be376973cf6c@sha256:7ad8fcafa7af28dd7e74ed98ff81daee49964a9fd7d8723f46b4a3e6c2f029c1 0.0s done
+#8 CACHED
+
+#6 [stage-1 1/4] FROM docker.io/nextagent-bench/environment:14db183c46fcabe7c418@sha256:bbb4a77f57faec937b5e539c5c9786e2adcfe39f1a1cc2fb17e1fca94b4ad26e
+#6 DONE 0.0s
+
+#9 [stage-1 2/4] COPY --from=node_runtime /usr/local/bin/node /opt/na-eval/node/bin/node
+#9 DONE 0.4s
+
+#10 [stage-1 3/4] COPY --from=nextagent-bench/framework:a2557a60be376973cf6c /opt/nextagent/ /opt/nextagent/
+#10 DONE 3.1s
+
+#11 [stage-1 4/4] COPY --from=nextagent-bench/framework:a2557a60be376973cf6c /opt/na-eval/runtime/ /opt/na-eval/runtime/
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 10.0s done
+#12 exporting manifest sha256:2fc43c5ad531a1c00783d01c5045cab3a47c1bca4f539b6740b72b06ec3d6b3d done
+#12 exporting config sha256:c9baa9cb2dcfe257521e6fc6a1ad920948f06efc422d02186a527cd02e2396d8 done
+#12 exporting attestation manifest sha256:82a1bfb2889b54bd84bc62ee27830c59bf5bbb3af046107bd37ed0218b938a11 done
+#12 exporting manifest list sha256:0c888a01048f24191877b794f9a8ae490bef3554837fdfdc40a064171e796815 done
+#12 naming to docker.io/nextagent-bench/task:6954882bf635f6f6ad73 done
+#12 unpacking to docker.io/nextagent-bench/task:6954882bf635f6f6ad73
+#12 unpacking to docker.io/nextagent-bench/task:6954882bf635f6f6ad73 5.7s done
+#12 DONE 15.7s

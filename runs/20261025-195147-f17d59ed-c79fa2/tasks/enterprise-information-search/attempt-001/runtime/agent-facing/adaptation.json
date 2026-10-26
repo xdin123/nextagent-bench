@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "enterprise-artifact-search",
+      "directory": "enterprise-artifact-search",
+      "description": "Multi-hop evidence search + structured extraction over enterprise artifact datasets (docs/chats/meetings/PRs/URLs). Strong disambiguation to prevent cross-product leakage; returns JSON-ready entities plus evidence pointers.",
+      "sha256": "5c36be0be24aa8c22023640eef31f85da7c0daa4a3aa96af2fda6f784402772a"
+    }
+  ],
+  "verifier_sha": "fe7195562321b71ace6e1f6858994939238cc7ce0ec2d0ae3b610278489a42b7",
+  "prompt_sha": "05848019fde510291758648f1d27e01de9cfab3ab552b2b85284798132c5dfdf"
+}

@@ -1,0 +1,11 @@
+--- skills/glm-basics/SKILL.md.original
++++ skills/glm-basics/SKILL.md
+@@ -12,7 +12,7 @@
+ 
+ ## Running GLM
+ ```bash
+-cd /root
++cd workspace
+ glm
+ ```
+ 

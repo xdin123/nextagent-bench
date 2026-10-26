@@ -1,0 +1,82 @@
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-json-ctrf==0.3.5
+  Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: numpy==1.26.4 in /usr/local/lib/python3.12/dist-packages (1.26.4)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=20 (from pytest==8.4.1)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.5/365.5 kB 594.8 kB/s eta 0:00:00
+Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 4.9 MB/s eta 0:00:00
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.6 MB/s eta 0:00:00
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.1 pytest-json-ctrf-0.3.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+=== Contents of /tests ===
+total 28
+drwxr-xr-x 2 root root  4096 Oct 13 05:44 .
+drwxr-xr-x 1 root root  4096 Oct 25 17:35 ..
+-rwxr-xr-x 1 root root  1035 Oct 13 05:44 test.sh
+-rwxr-xr-x 1 root root 11601 Oct 13 05:44 test_outputs.py
+-rwxr-xr-x 1 root root    58 Oct 13 05:44 verification_params.json
+=== Contents of /root ===
+total 144
+drwxr-xr-x 6 root root  4096 Oct 25 17:35 .
+drwxr-xr-x 6 root root  4096 Oct 25 17:29 ..
+-rw-r--r-- 1 root root  3106 Apr 22  2024 .bashrc
+drwxr-xr-x 3 root root  4096 Oct 25 17:29 .cache
+-rw-r--r-- 1 root root   161 Apr 22  2024 .profile
+drwxr-xr-x 2 root root  4096 Oct 25 17:34 __pycache__
+-rw------- 1 root root  1297 Oct 25 17:33 calibrate.py
+-rw-r--r-- 1 root root 21762 Oct 25 17:34 calibration_log.json
+-rw------- 1 root root  3199 Oct 25 17:33 control.py
+-rw-r--r-- 1 root root 44444 Oct 25 17:34 control_log.json
+-rw------- 1 root root  1785 Oct 25 17:33 estimate_params.py
+-rw-r--r-- 1 root root    88 Oct 25 17:34 estimated_params.json
+-rwxr-xr-x 1 root root  5916 Oct 13 05:44 hvac_simulator.py
+-rw-r--r-- 1 root root   128 Oct 25 17:34 metrics.json
+-rwxr-xr-x 1 root root   130 Oct 13 05:44 room_config.json
+drwxr-xr-x 7 root root  4096 Oct 25 17:29 skills
+drwxr-xr-x 2 root root  4096 Oct 25 17:29 tool-results
+-rw------- 1 root root   839 Oct 25 17:33 tune_gains.py
+-rw-r--r-- 1 root root    72 Oct 25 17:34 tuned_gains.json
+-rw------- 1 root root  2320 Oct 25 17:35 verify.py
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 7 items
+
+../../../../../../../verifier/test_outputs.py::TestCalibrationLog::test_calibration_log PASSED [ 14%]
+../../../../../../../verifier/test_outputs.py::TestEstimatedParams::test_estimated_params PASSED [ 28%]
+../../../../../../../verifier/test_outputs.py::TestTunedGains::test_tuned_gains PASSED [ 42%]
+../../../../../../../verifier/test_outputs.py::TestControlLog::test_control_log PASSED [ 57%]
+../../../../../../../verifier/test_outputs.py::TestMetrics::test_metrics PASSED [ 71%]
+../../../../../../../verifier/test_outputs.py::TestPerformance::test_performance PASSED [ 85%]
+../../../../../../../verifier/test_outputs.py::TestSafety::test_safety PASSED [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../../../../../../../verifier/test_outputs.py::TestCalibrationLog::test_calibration_log
+PASSED ../../../../../../../verifier/test_outputs.py::TestEstimatedParams::test_estimated_params
+PASSED ../../../../../../../verifier/test_outputs.py::TestTunedGains::test_tuned_gains
+PASSED ../../../../../../../verifier/test_outputs.py::TestControlLog::test_control_log
+PASSED ../../../../../../../verifier/test_outputs.py::TestMetrics::test_metrics
+PASSED ../../../../../../../verifier/test_outputs.py::TestPerformance::test_performance
+PASSED ../../../../../../../verifier/test_outputs.py::TestSafety::test_safety
+============================== 7 passed in 0.24s ===============================
+Pytest exit code: 0
+All tests passed!
+Test run complete. Results in /logs/verifier/

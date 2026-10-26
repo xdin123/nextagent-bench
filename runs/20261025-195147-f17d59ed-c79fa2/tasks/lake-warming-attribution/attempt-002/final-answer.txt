@@ -1,0 +1,28 @@
+Both analyses are complete. Here's a summary:
+
+## 1. Trend Analysis — `workspace/output/trend_result.csv`
+
+Using Sen's slope with the Mann-Kendall test (16 years, 2006–2022):
+
+| slope (°C/year) | p-value |
+|---|---|
+| 0.0879 | 0.0343 |
+
+**Yes, there is a statistically significant long-term warming trend** (p < 0.05): the lake surface warms by ~0.09 °C per year. (For reference, linear regression gave slope = 0.0805, p = 0.0548 — marginally significant; Sen's slope is the more robust estimate for environmental data.)
+
+## 2. Dominant Driving Factor — `workspace/output/dominant_factor.csv`
+
+| variable | contribution |
+|---|---|
+| Heat | 53.21 |
+
+**Heat is the most important category, contributing ~53% of the explained variance in water temperature.**
+
+Method: the 9 variables were classified as Heat (AirTempLake, Shortwave, Longwave), Flow (Precip, Inflow, Outflow), Wind (WindSpeedLake), Human (DevelopedArea, AgricultureArea), then a single global PCA with varimax rotation (4 factors) was run on all variables, and R² decomposition (drop-one-factor) was applied to the factor scores:
+
+- **Heat: 53.2%** (dominated by the air-temperature/longwave component)
+- Human: 3.4%
+- Flow: 0.2%
+- Wind: ~0%
+
+The full model explains ~58% of water-temperature variance, and the heat component — primarily AirTempLake — accounts for the large majority of it, consistent with the physical expectation that air temperature is the main energy input to lake surface water.

@@ -1,0 +1,57 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "finite-horizon-lqr",
+      "directory": "finite-horizon-lqr",
+      "description": "Solving finite-horizon LQR via dynamic programming for MPC.",
+      "sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f"
+    },
+    {
+      "name": "integral-action-design",
+      "directory": "integral-action-design",
+      "description": "Adding integral action to MPC for offset-free tension tracking.",
+      "sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220"
+    },
+    {
+      "name": "mpc-horizon-tuning",
+      "directory": "mpc-horizon-tuning",
+      "description": "Selecting MPC prediction horizon and cost matrices for web handling.",
+      "sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123"
+    },
+    {
+      "name": "state-space-linearization",
+      "directory": "state-space-linearization",
+      "description": "Linearizing nonlinear dynamics around operating points for control design.",
+      "sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+    }
+  ],
+  "verifier_sha": "26911f6bad5e450bef1f7d7f4cb15e45c1b0dd7359aa0a3a808d6b10762889b4",
+  "prompt_sha": "826ed1b6a44658cd07d302e5cbe90d7d69b4875c01bf14af0456092abe619dac"
+}

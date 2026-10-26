@@ -1,0 +1,1335 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.16kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:24.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#4 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 59.31kB done
+#5 DONE 0.0s
+
+#6 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends     git curl ca-certificates build-essential vim unzip  && rm -rf /var/lib/apt/lists/*
+#6 1.678 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#6 1.750 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#6 2.921 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#6 3.871 Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1549 kB]
+#6 10.70 Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]
+#6 13.10 Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1411 kB]
+#6 14.56 Get:7 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#6 34.08 Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#6 35.77 Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#6 46.95 Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#6 49.64 Get:11 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#6 50.76 Get:12 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#6 51.86 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#6 53.90 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2170 kB]
+#6 55.88 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1733 kB]
+#6 58.33 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2231 kB]
+#6 59.32 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#6 60.17 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#6 61.21 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#6 61.22 Fetched 33.6 MB in 1min 1s (551 kB/s)
+#6 61.22 Reading package lists...
+#6 61.78 Reading package lists...
+#6 62.35 Building dependency tree...
+#6 62.46 Reading state information...
+#6 62.58 The following additional packages will be installed:
+#6 62.58   binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-13
+#6 62.58   cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev g++ g++-13
+#6 62.58   g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base
+#6 62.58   gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu git-man libasan8 libatomic1
+#6 62.58   libbinutils libbrotli1 libc-dev-bin libc6-dev libcc1-0 libcrypt-dev
+#6 62.58   libctf-nobfd0 libctf0 libcurl3t64-gnutls libcurl4t64 libdpkg-perl
+#6 62.58   liberror-perl libexpat1 libgcc-13-dev libgdbm-compat4t64 libgdbm6t64
+#6 62.58   libgomp1 libgpm2 libgprofng0 libgssapi-krb5-2 libhwasan0 libisl23 libitm1
+#6 62.58   libjansson4 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2
+#6 62.58   liblsan0 liblzma5 libmpc3 libmpfr6 libnghttp2-14 libperl5.38t64 libpsl5t64
+#6 62.58   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0
+#6 62.58   libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules-db libsframe1
+#6 62.58   libsodium23 libsqlite3-0 libssh-4 libstdc++-13-dev libtsan2 libubsan1
+#6 62.58   linux-libc-dev lto-disabled-list make media-types netbase openssl patch perl
+#6 62.58   perl-modules-5.38 readline-common rpcsvc-proto tzdata vim-common vim-runtime
+#6 62.58   xz-utils
+#6 62.58 Suggested packages:
+#6 62.58   binutils-doc gprofng-gui bzip2-doc cpp-doc gcc-13-locales cpp-13-doc
+#6 62.58   debian-keyring g++-multilib g++-13-multilib gcc-13-doc gcc-multilib
+#6 62.58   manpages-dev autoconf automake libtool flex bison gdb gcc-doc
+#6 62.58   gcc-13-multilib gdb-x86-64-linux-gnu gettext-base git-daemon-run
+#6 62.58   | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs
+#6 62.58   git-mediawiki git-svn glibc-doc gnupg | sq | sqop | pgpainless-cli
+#6 62.58   | sequoia-chameleon-gnupg bzr gdbm-l10n gpm krb5-doc krb5-user
+#6 62.58   libstdc++-13-doc make-doc ed diffutils-doc perl-doc
+#6 62.58   libterm-readline-gnu-perl | libterm-readline-perl-perl
+#6 62.58   libtap-harness-archive-perl readline-doc zip ctags vim-doc vim-scripts
+#6 62.58 Recommended packages:
+#6 62.58   fakeroot gnupg | sq | sqop | pgpainless-cli | sequoia-chameleon-gnupg
+#6 62.58   libalgorithm-merge-perl less ssh-client manpages manpages-dev libc-devtools
+#6 62.58   libfile-fcntllock-perl liblocale-gettext-perl krb5-locales libldap-common
+#6 62.58   publicsuffix libsasl2-modules xxd
+#6 62.66 The following NEW packages will be installed:
+#6 62.66   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2
+#6 62.66   ca-certificates cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu curl
+#6 62.66   dpkg-dev g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13
+#6 62.66   gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu git git-man
+#6 62.66   libasan8 libatomic1 libbinutils libbrotli1 libc-dev-bin libc6-dev libcc1-0
+#6 62.66   libcrypt-dev libctf-nobfd0 libctf0 libcurl3t64-gnutls libcurl4t64
+#6 62.66   libdpkg-perl liberror-perl libexpat1 libgcc-13-dev libgdbm-compat4t64
+#6 62.66   libgdbm6t64 libgomp1 libgpm2 libgprofng0 libgssapi-krb5-2 libhwasan0
+#6 62.66   libisl23 libitm1 libjansson4 libk5crypto3 libkeyutils1 libkrb5-3
+#6 62.66   libkrb5support0 libldap2 liblsan0 libmpc3 libmpfr6 libnghttp2-14
+#6 62.66   libperl5.38t64 libpsl5t64 libpython3.12-minimal libpython3.12-stdlib
+#6 62.66   libpython3.12t64 libquadmath0 libreadline8t64 librtmp1 libsasl2-2
+#6 62.66   libsasl2-modules-db libsframe1 libsodium23 libsqlite3-0 libssh-4
+#6 62.66   libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev lto-disabled-list make
+#6 62.66   media-types netbase openssl patch perl perl-modules-5.38 readline-common
+#6 62.66   rpcsvc-proto tzdata unzip vim vim-common vim-runtime xz-utils
+#6 62.66 The following packages will be upgraded:
+#6 62.66   liblzma5
+#6 65.30 1 upgraded, 92 newly installed, 0 to remove and 3 not upgraded.
+#6 65.30 Need to get 105 MB of archives.
+#6 65.30 After this operation, 408 MB of additional disk space will be used.
+#6 65.30 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.6 [3110 kB]
+#6 66.43 Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+#6 67.07 Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+#6 70.82 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.6 [4864 kB]
+#6 72.34 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.6 [231 kB]
+#6 73.82 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblzma5 amd64 5.6.1+really5.4.5-1ubuntu0.4 [128 kB]
+#6 75.67 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.16 [1004 kB]
+#6 77.09 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.1 [139 kB]
+#6 78.13 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+#6 79.00 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]
+#6 80.14 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]
+#6 80.79 Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+#6 82.39 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]
+#6 83.60 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]
+#6 85.14 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+#6 85.99 Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+#6 86.83 Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+#6 88.10 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026e-0ubuntu0.24.04.1 [282 kB]
+#6 89.15 Get:19 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+#6 90.44 Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+#6 92.22 Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+#6 94.48 Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+#6 96.23 Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-common all 2:9.1.0016-1ubuntu7.20 [389 kB]
+#6 97.20 Get:24 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpm2 amd64 1.20.7-11 [14.1 kB]
+#6 98.21 Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]
+#6 99.20 Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.4 [74.6 kB]
+#6 100.3 Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+#6 101.8 Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xz-utils amd64 5.6.1+really5.4.5-1ubuntu0.4 [267 kB]
+#6 103.3 Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-common amd64 2.42-4ubuntu2.10 [240 kB]
+#6 104.0 Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsframe1 amd64 2.42-4ubuntu2.10 [15.7 kB]
+#6 105.5 Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbinutils amd64 2.42-4ubuntu2.10 [577 kB]
+#6 106.7 Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf-nobfd0 amd64 2.42-4ubuntu2.10 [98.0 kB]
+#6 107.7 Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf0 amd64 2.42-4ubuntu2.10 [94.5 kB]
+#6 109.7 Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgprofng0 amd64 2.42-4ubuntu2.10 [849 kB]
+#6 111.8 Get:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.42-4ubuntu2.10 [2463 kB]
+#6 112.9 Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils amd64 2.42-4ubuntu2.10 [18.2 kB]
+#6 113.8 Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9 [20.4 kB]
+#6 115.8 Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147 [1595 kB]
+#6 117.0 Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1 [112 kB]
+#6 118.2 Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7 [67.4 kB]
+#6 120.4 Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9 [2126 kB]
+#6 121.5 Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]
+#6 123.4 Get:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+#6 124.8 Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpfr6 amd64 4.2.1-1build1.1 [353 kB]
+#6 125.7 Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+#6 132.9 Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [10.7 MB]
+#6 134.5 Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04.1 [1042 B]
+#6 135.1 Get:48 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]
+#6 136.1 Get:49 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+#6 137.2 Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1 [48.0 kB]
+#6 138.6 Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1 [148 kB]
+#6 139.6 Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.7 kB]
+#6 140.4 Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.5 kB]
+#6 142.9 Get:54 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1 [3027 kB]
+#6 144.8 Get:55 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1 [1322 kB]
+#6 147.6 Get:56 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1 [2772 kB]
+#6 149.6 Get:57 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1184 kB]
+#6 151.6 Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1 [1641 kB]
+#6 153.0 Get:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [153 kB]
+#6 155.5 Get:60 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2681 kB]
+#6 169.5 Get:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [21.1 MB]
+#6 172.7 Get:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1 [494 kB]
+#6 173.6 Get:63 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1212 B]
+#6 174.4 Get:64 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5018 B]
+#6 176.6 Get:65 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2420 kB]
+#6 185.2 Get:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [12.2 MB]
+#6 187.0 Get:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1 [16.0 kB]
+#6 187.6 Get:68 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [964 B]
+#6 188.2 Get:69 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1 [1100 B]
+#6 189.7 Get:70 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]
+#6 191.0 Get:71 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6 [268 kB]
+#6 192.0 Get:72 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1ubuntu0.1 [34.6 kB]
+#6 193.3 Get:73 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3 [104 kB]
+#6 194.1 Get:74 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47 [12.4 kB]
+#6 196.1 Get:75 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6 [1074 kB]
+#6 196.8 Get:76 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1 [4928 B]
+#6 198.1 Get:77 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+#6 199.2 Get:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+#6 200.3 Get:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+#6 201.6 Get:80 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+#6 202.5 Get:81 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+#6 203.8 Get:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5 [191 kB]
+#6 205.1 Get:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16 [344 kB]
+#6 206.6 Get:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16 [226 kB]
+#6 208.1 Get:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 [337 kB]
+#6 209.0 Get:86 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB]
+#6 211.1 Get:87 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4 [1101 kB]
+#6 214.4 Get:88 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4 [3681 kB]
+#6 217.0 Get:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17 [2348 kB]
+#6 218.5 Get:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1 [161 kB]
+#6 219.8 Get:91 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unzip amd64 6.0-28ubuntu4.1 [174 kB]
+#6 225.4 Get:92 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20 [7273 kB]
+#6 227.7 Get:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20 [1884 kB]
+#6 227.9 debconf: delaying package configuration, since apt-utils is not installed
+#6 227.9 Fetched 105 MB in 2min 45s (634 kB/s)
+#6 227.9 Selecting previously unselected package perl-modules-5.38.
+#6 227.9 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4381 files and directories currently installed.)
+#6 227.9 Preparing to unpack .../0-perl-modules-5.38_5.38.2-3.2ubuntu0.6_all.deb ...
+#6 228.0 Unpacking perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...
+#6 228.1 Selecting previously unselected package libgdbm6t64:amd64.
+#6 228.1 Preparing to unpack .../1-libgdbm6t64_1.23-5.1build1_amd64.deb ...
+#6 228.1 Unpacking libgdbm6t64:amd64 (1.23-5.1build1) ...
+#6 228.1 Selecting previously unselected package libgdbm-compat4t64:amd64.
+#6 228.1 Preparing to unpack .../2-libgdbm-compat4t64_1.23-5.1build1_amd64.deb ...
+#6 228.1 Unpacking libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+#6 228.1 Selecting previously unselected package libperl5.38t64:amd64.
+#6 228.1 Preparing to unpack .../3-libperl5.38t64_5.38.2-3.2ubuntu0.6_amd64.deb ...
+#6 228.1 Unpacking libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...
+#6 228.3 Selecting previously unselected package perl.
+#6 228.3 Preparing to unpack .../4-perl_5.38.2-3.2ubuntu0.6_amd64.deb ...
+#6 228.3 Unpacking perl (5.38.2-3.2ubuntu0.6) ...
+#6 228.3 Preparing to unpack .../5-liblzma5_5.6.1+really5.4.5-1ubuntu0.4_amd64.deb ...
+#6 228.3 Unpacking liblzma5:amd64 (5.6.1+really5.4.5-1ubuntu0.4) over (5.6.1+really5.4.5-1ubuntu0.3) ...
+#6 228.3 Setting up liblzma5:amd64 (5.6.1+really5.4.5-1ubuntu0.4) ...
+#6 228.4 Selecting previously unselected package openssl.
+#6 228.4 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6393 files and directories currently installed.)
+#6 228.4 Preparing to unpack .../00-openssl_3.0.13-0ubuntu3.16_amd64.deb ...
+#6 228.4 Unpacking openssl (3.0.13-0ubuntu3.16) ...
+#6 228.4 Selecting previously unselected package ca-certificates.
+#6 228.4 Preparing to unpack .../01-ca-certificates_20260816ubuntu0.24.04.1_all.deb ...
+#6 228.4 Unpacking ca-certificates (20260816ubuntu0.24.04.1) ...
+#6 228.4 Selecting previously unselected package libexpat1:amd64.
+#6 228.4 Preparing to unpack .../02-libexpat1_2.6.1-2ubuntu0.6_amd64.deb ...
+#6 228.4 Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+#6 228.5 Selecting previously unselected package libkrb5support0:amd64.
+#6 228.5 Preparing to unpack .../03-libkrb5support0_1.20.1-6ubuntu2.10_amd64.deb ...
+#6 228.5 Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+#6 228.5 Selecting previously unselected package libk5crypto3:amd64.
+#6 228.5 Preparing to unpack .../04-libk5crypto3_1.20.1-6ubuntu2.10_amd64.deb ...
+#6 228.5 Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+#6 228.5 Selecting previously unselected package libkeyutils1:amd64.
+#6 228.5 Preparing to unpack .../05-libkeyutils1_1.6.3-3build1_amd64.deb ...
+#6 228.5 Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+#6 228.5 Selecting previously unselected package libkrb5-3:amd64.
+#6 228.5 Preparing to unpack .../06-libkrb5-3_1.20.1-6ubuntu2.10_amd64.deb ...
+#6 228.5 Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+#6 228.5 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#6 228.5 Preparing to unpack .../07-libgssapi-krb5-2_1.20.1-6ubuntu2.10_amd64.deb ...
+#6 228.5 Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+#6 228.6 Selecting previously unselected package libpython3.12-minimal:amd64.
+#6 228.6 Preparing to unpack .../08-libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+#6 228.6 Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+#6 228.6 Selecting previously unselected package media-types.
+#6 228.6 Preparing to unpack .../09-media-types_10.1.0_all.deb ...
+#6 228.6 Unpacking media-types (10.1.0) ...
+#6 228.6 Selecting previously unselected package netbase.
+#6 228.6 Preparing to unpack .../10-netbase_6.4_all.deb ...
+#6 228.6 Unpacking netbase (6.4) ...
+#6 228.7 Selecting previously unselected package tzdata.
+#6 228.7 Preparing to unpack .../11-tzdata_2026e-0ubuntu0.24.04.1_all.deb ...
+#6 228.7 Unpacking tzdata (2026e-0ubuntu0.24.04.1) ...
+#6 228.7 Selecting previously unselected package readline-common.
+#6 228.7 Preparing to unpack .../12-readline-common_8.2-4build1_all.deb ...
+#6 228.7 Unpacking readline-common (8.2-4build1) ...
+#6 228.7 Selecting previously unselected package libreadline8t64:amd64.
+#6 228.7 Preparing to unpack .../13-libreadline8t64_8.2-4build1_amd64.deb ...
+#6 228.7 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+#6 228.7 Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+#6 228.7 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+#6 228.7 Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+#6 228.7 Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+#6 228.8 Selecting previously unselected package libsqlite3-0:amd64.
+#6 228.8 Preparing to unpack .../14-libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb ...
+#6 228.8 Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+#6 228.8 Selecting previously unselected package libpython3.12-stdlib:amd64.
+#6 228.8 Preparing to unpack .../15-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...
+#6 228.8 Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+#6 228.8 Selecting previously unselected package vim-common.
+#6 228.9 Preparing to unpack .../16-vim-common_2%3a9.1.0016-1ubuntu7.20_all.deb ...
+#6 228.9 Unpacking vim-common (2:9.1.0016-1ubuntu7.20) ...
+#6 228.9 Selecting previously unselected package libgpm2:amd64.
+#6 228.9 Preparing to unpack .../17-libgpm2_1.20.7-11_amd64.deb ...
+#6 228.9 Unpacking libgpm2:amd64 (1.20.7-11) ...
+#6 228.9 Selecting previously unselected package libjansson4:amd64.
+#6 228.9 Preparing to unpack .../18-libjansson4_2.14-2build2_amd64.deb ...
+#6 228.9 Unpacking libjansson4:amd64 (2.14-2build2) ...
+#6 228.9 Selecting previously unselected package libnghttp2-14:amd64.
+#6 228.9 Preparing to unpack .../19-libnghttp2-14_1.59.0-1ubuntu0.4_amd64.deb ...
+#6 228.9 Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+#6 228.9 Selecting previously unselected package libpsl5t64:amd64.
+#6 228.9 Preparing to unpack .../20-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+#6 229.0 Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+#6 229.0 Selecting previously unselected package xz-utils.
+#6 229.0 Preparing to unpack .../21-xz-utils_5.6.1+really5.4.5-1ubuntu0.4_amd64.deb ...
+#6 229.0 Unpacking xz-utils (5.6.1+really5.4.5-1ubuntu0.4) ...
+#6 229.0 Selecting previously unselected package binutils-common:amd64.
+#6 229.0 Preparing to unpack .../22-binutils-common_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.0 Unpacking binutils-common:amd64 (2.42-4ubuntu2.10) ...
+#6 229.0 Selecting previously unselected package libsframe1:amd64.
+#6 229.0 Preparing to unpack .../23-libsframe1_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.0 Unpacking libsframe1:amd64 (2.42-4ubuntu2.10) ...
+#6 229.0 Selecting previously unselected package libbinutils:amd64.
+#6 229.0 Preparing to unpack .../24-libbinutils_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.0 Unpacking libbinutils:amd64 (2.42-4ubuntu2.10) ...
+#6 229.1 Selecting previously unselected package libctf-nobfd0:amd64.
+#6 229.1 Preparing to unpack .../25-libctf-nobfd0_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.1 Unpacking libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...
+#6 229.1 Selecting previously unselected package libctf0:amd64.
+#6 229.1 Preparing to unpack .../26-libctf0_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.1 Unpacking libctf0:amd64 (2.42-4ubuntu2.10) ...
+#6 229.1 Selecting previously unselected package libgprofng0:amd64.
+#6 229.1 Preparing to unpack .../27-libgprofng0_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.1 Unpacking libgprofng0:amd64 (2.42-4ubuntu2.10) ...
+#6 229.1 Selecting previously unselected package binutils-x86-64-linux-gnu.
+#6 229.1 Preparing to unpack .../28-binutils-x86-64-linux-gnu_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.1 Unpacking binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...
+#6 229.2 Selecting previously unselected package binutils.
+#6 229.2 Preparing to unpack .../29-binutils_2.42-4ubuntu2.10_amd64.deb ...
+#6 229.2 Unpacking binutils (2.42-4ubuntu2.10) ...
+#6 229.2 Selecting previously unselected package libc-dev-bin.
+#6 229.2 Preparing to unpack .../30-libc-dev-bin_2.39-0ubuntu8.9_amd64.deb ...
+#6 229.2 Unpacking libc-dev-bin (2.39-0ubuntu8.9) ...
+#6 229.2 Selecting previously unselected package linux-libc-dev:amd64.
+#6 229.2 Preparing to unpack .../31-linux-libc-dev_6.8.0-147.147_amd64.deb ...
+#6 229.2 Unpacking linux-libc-dev:amd64 (6.8.0-147.147) ...
+#6 229.3 Selecting previously unselected package libcrypt-dev:amd64.
+#6 229.3 Preparing to unpack .../32-libcrypt-dev_1%3a4.4.36-4build1_amd64.deb ...
+#6 229.3 Unpacking libcrypt-dev:amd64 (1:4.4.36-4build1) ...
+#6 229.4 Selecting previously unselected package rpcsvc-proto.
+#6 229.4 Preparing to unpack .../33-rpcsvc-proto_1.4.2-0ubuntu7_amd64.deb ...
+#6 229.4 Unpacking rpcsvc-proto (1.4.2-0ubuntu7) ...
+#6 229.4 Selecting previously unselected package libc6-dev:amd64.
+#6 229.4 Preparing to unpack .../34-libc6-dev_2.39-0ubuntu8.9_amd64.deb ...
+#6 229.4 Unpacking libc6-dev:amd64 (2.39-0ubuntu8.9) ...
+#6 229.5 Selecting previously unselected package gcc-13-base:amd64.
+#6 229.5 Preparing to unpack .../35-gcc-13-base_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 229.5 Unpacking gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 229.5 Selecting previously unselected package libisl23:amd64.
+#6 229.5 Preparing to unpack .../36-libisl23_0.26-3build1.1_amd64.deb ...
+#6 229.5 Unpacking libisl23:amd64 (0.26-3build1.1) ...
+#6 229.5 Selecting previously unselected package libmpfr6:amd64.
+#6 229.5 Preparing to unpack .../37-libmpfr6_4.2.1-1build1.1_amd64.deb ...
+#6 229.5 Unpacking libmpfr6:amd64 (4.2.1-1build1.1) ...
+#6 229.5 Selecting previously unselected package libmpc3:amd64.
+#6 229.5 Preparing to unpack .../38-libmpc3_1.3.1-1build1.1_amd64.deb ...
+#6 229.5 Unpacking libmpc3:amd64 (1.3.1-1build1.1) ...
+#6 229.6 Selecting previously unselected package cpp-13-x86-64-linux-gnu.
+#6 229.6 Preparing to unpack .../39-cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 229.6 Unpacking cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 229.7 Selecting previously unselected package cpp-13.
+#6 229.7 Preparing to unpack .../40-cpp-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 229.7 Unpacking cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 229.7 Selecting previously unselected package cpp-x86-64-linux-gnu.
+#6 229.7 Preparing to unpack .../41-cpp-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 229.7 Unpacking cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 229.7 Selecting previously unselected package cpp.
+#6 229.7 Preparing to unpack .../42-cpp_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 229.7 Unpacking cpp (4:13.2.0-7ubuntu1) ...
+#6 229.8 Selecting previously unselected package libcc1-0:amd64.
+#6 229.8 Preparing to unpack .../43-libcc1-0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.8 Unpacking libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.8 Selecting previously unselected package libgomp1:amd64.
+#6 229.8 Preparing to unpack .../44-libgomp1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.8 Unpacking libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.8 Selecting previously unselected package libitm1:amd64.
+#6 229.8 Preparing to unpack .../45-libitm1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.8 Unpacking libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.8 Selecting previously unselected package libatomic1:amd64.
+#6 229.8 Preparing to unpack .../46-libatomic1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.8 Unpacking libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.8 Selecting previously unselected package libasan8:amd64.
+#6 229.8 Preparing to unpack .../47-libasan8_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.8 Unpacking libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.9 Selecting previously unselected package liblsan0:amd64.
+#6 229.9 Preparing to unpack .../48-liblsan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.9 Unpacking liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 229.9 Selecting previously unselected package libtsan2:amd64.
+#6 229.9 Preparing to unpack .../49-libtsan2_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 229.9 Unpacking libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 230.0 Selecting previously unselected package libubsan1:amd64.
+#6 230.0 Preparing to unpack .../50-libubsan1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 230.0 Unpacking libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 230.0 Selecting previously unselected package libhwasan0:amd64.
+#6 230.0 Preparing to unpack .../51-libhwasan0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 230.0 Unpacking libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 230.1 Selecting previously unselected package libquadmath0:amd64.
+#6 230.1 Preparing to unpack .../52-libquadmath0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+#6 230.1 Unpacking libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 230.1 Selecting previously unselected package libgcc-13-dev:amd64.
+#6 230.1 Preparing to unpack .../53-libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.1 Unpacking libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.1 Selecting previously unselected package gcc-13-x86-64-linux-gnu.
+#6 230.1 Preparing to unpack .../54-gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.1 Unpacking gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.4 Selecting previously unselected package gcc-13.
+#6 230.4 Preparing to unpack .../55-gcc-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.4 Unpacking gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.4 Selecting previously unselected package gcc-x86-64-linux-gnu.
+#6 230.4 Preparing to unpack .../56-gcc-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 230.4 Unpacking gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 230.4 Selecting previously unselected package gcc.
+#6 230.4 Preparing to unpack .../57-gcc_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 230.4 Unpacking gcc (4:13.2.0-7ubuntu1) ...
+#6 230.4 Selecting previously unselected package libstdc++-13-dev:amd64.
+#6 230.4 Preparing to unpack .../58-libstdc++-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.4 Unpacking libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.5 Selecting previously unselected package g++-13-x86-64-linux-gnu.
+#6 230.5 Preparing to unpack .../59-g++-13-x86-64-linux-gnu_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.5 Unpacking g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.7 Selecting previously unselected package g++-13.
+#6 230.7 Preparing to unpack .../60-g++-13_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+#6 230.7 Unpacking g++-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 230.7 Selecting previously unselected package g++-x86-64-linux-gnu.
+#6 230.7 Preparing to unpack .../61-g++-x86-64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 230.7 Unpacking g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 230.7 Selecting previously unselected package g++.
+#6 230.7 Preparing to unpack .../62-g++_4%3a13.2.0-7ubuntu1_amd64.deb ...
+#6 230.7 Unpacking g++ (4:13.2.0-7ubuntu1) ...
+#6 230.7 Selecting previously unselected package make.
+#6 230.7 Preparing to unpack .../63-make_4.3-4.1build2_amd64.deb ...
+#6 230.7 Unpacking make (4.3-4.1build2) ...
+#6 230.7 Selecting previously unselected package libdpkg-perl.
+#6 230.7 Preparing to unpack .../64-libdpkg-perl_1.22.6ubuntu6.6_all.deb ...
+#6 230.7 Unpacking libdpkg-perl (1.22.6ubuntu6.6) ...
+#6 230.8 Selecting previously unselected package bzip2.
+#6 230.8 Preparing to unpack .../65-bzip2_1.0.8-5.1ubuntu0.1_amd64.deb ...
+#6 230.8 Unpacking bzip2 (1.0.8-5.1ubuntu0.1) ...
+#6 230.8 Selecting previously unselected package patch.
+#6 230.8 Preparing to unpack .../66-patch_2.7.6-7build3_amd64.deb ...
+#6 230.8 Unpacking patch (2.7.6-7build3) ...
+#6 230.8 Selecting previously unselected package lto-disabled-list.
+#6 230.8 Preparing to unpack .../67-lto-disabled-list_47_all.deb ...
+#6 230.8 Unpacking lto-disabled-list (47) ...
+#6 230.8 Selecting previously unselected package dpkg-dev.
+#6 230.8 Preparing to unpack .../68-dpkg-dev_1.22.6ubuntu6.6_all.deb ...
+#6 230.8 Unpacking dpkg-dev (1.22.6ubuntu6.6) ...
+#6 230.8 Selecting previously unselected package build-essential.
+#6 230.8 Preparing to unpack .../69-build-essential_12.10ubuntu1_amd64.deb ...
+#6 230.9 Unpacking build-essential (12.10ubuntu1) ...
+#6 230.9 Selecting previously unselected package libbrotli1:amd64.
+#6 230.9 Preparing to unpack .../70-libbrotli1_1.1.0-2build2_amd64.deb ...
+#6 230.9 Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+#6 230.9 Selecting previously unselected package libsasl2-modules-db:amd64.
+#6 230.9 Preparing to unpack .../71-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+#6 230.9 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+#6 230.9 Selecting previously unselected package libsasl2-2:amd64.
+#6 230.9 Preparing to unpack .../72-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+#6 230.9 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+#6 230.9 Selecting previously unselected package libldap2:amd64.
+#6 230.9 Preparing to unpack .../73-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+#6 230.9 Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+#6 231.0 Selecting previously unselected package librtmp1:amd64.
+#6 231.0 Preparing to unpack .../74-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+#6 231.0 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+#6 231.0 Selecting previously unselected package libssh-4:amd64.
+#6 231.0 Preparing to unpack .../75-libssh-4_0.10.6-2ubuntu0.5_amd64.deb ...
+#6 231.0 Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+#6 231.0 Selecting previously unselected package libcurl4t64:amd64.
+#6 231.0 Preparing to unpack .../76-libcurl4t64_8.5.0-2ubuntu10.16_amd64.deb ...
+#6 231.0 Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.16) ...
+#6 231.0 Selecting previously unselected package curl.
+#6 231.0 Preparing to unpack .../77-curl_8.5.0-2ubuntu10.16_amd64.deb ...
+#6 231.0 Unpacking curl (8.5.0-2ubuntu10.16) ...
+#6 231.1 Selecting previously unselected package libcurl3t64-gnutls:amd64.
+#6 231.1 Preparing to unpack .../78-libcurl3t64-gnutls_8.5.0-2ubuntu10.16_amd64.deb ...
+#6 231.1 Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+#6 231.1 Selecting previously unselected package liberror-perl.
+#6 231.1 Preparing to unpack .../79-liberror-perl_0.17029-2_all.deb ...
+#6 231.1 Unpacking liberror-perl (0.17029-2) ...
+#6 231.1 Selecting previously unselected package git-man.
+#6 231.1 Preparing to unpack .../80-git-man_1%3a2.43.0-1ubuntu7.4_all.deb ...
+#6 231.1 Unpacking git-man (1:2.43.0-1ubuntu7.4) ...
+#6 231.1 Selecting previously unselected package git.
+#6 231.1 Preparing to unpack .../81-git_1%3a2.43.0-1ubuntu7.4_amd64.deb ...
+#6 231.1 Unpacking git (1:2.43.0-1ubuntu7.4) ...
+#6 231.2 Selecting previously unselected package libpython3.12t64:amd64.
+#6 231.2 Preparing to unpack .../82-libpython3.12t64_3.12.3-1ubuntu0.17_amd64.deb ...
+#6 231.2 Unpacking libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) ...
+#6 231.3 Selecting previously unselected package libsodium23:amd64.
+#6 231.3 Preparing to unpack .../83-libsodium23_1.0.18-1ubuntu0.24.04.1_amd64.deb ...
+#6 231.3 Unpacking libsodium23:amd64 (1.0.18-1ubuntu0.24.04.1) ...
+#6 231.3 Selecting previously unselected package unzip.
+#6 231.3 Preparing to unpack .../84-unzip_6.0-28ubuntu4.1_amd64.deb ...
+#6 231.3 Unpacking unzip (6.0-28ubuntu4.1) ...
+#6 231.3 Selecting previously unselected package vim-runtime.
+#6 231.3 Preparing to unpack .../85-vim-runtime_2%3a9.1.0016-1ubuntu7.20_all.deb ...
+#6 231.3 Adding 'diversion of /usr/share/vim/vim91/doc/help.txt to /usr/share/vim/vim91/doc/help.txt.vim-tiny by vim-runtime'
+#6 231.3 Adding 'diversion of /usr/share/vim/vim91/doc/tags to /usr/share/vim/vim91/doc/tags.vim-tiny by vim-runtime'
+#6 231.3 Unpacking vim-runtime (2:9.1.0016-1ubuntu7.20) ...
+#6 231.5 Selecting previously unselected package vim.
+#6 231.5 Preparing to unpack .../86-vim_2%3a9.1.0016-1ubuntu7.20_amd64.deb ...
+#6 231.5 Unpacking vim (2:9.1.0016-1ubuntu7.20) ...
+#6 231.6 Setting up libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+#6 231.6 Setting up media-types (10.1.0) ...
+#6 231.6 Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+#6 231.6 Setting up lto-disabled-list (47) ...
+#6 231.6 Setting up libsodium23:amd64 (1.0.18-1ubuntu0.24.04.1) ...
+#6 231.6 Setting up libgpm2:amd64 (1.20.7-11) ...
+#6 231.6 Setting up libgdbm6t64:amd64 (1.23-5.1build1) ...
+#6 231.6 Setting up libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+#6 231.6 Setting up unzip (6.0-28ubuntu4.1) ...
+#6 231.6 Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+#6 231.7 Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+#6 231.7 Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+#6 231.7 Setting up binutils-common:amd64 (2.42-4ubuntu2.10) ...
+#6 231.7 Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+#6 231.7 Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+#6 231.7 Setting up linux-libc-dev:amd64 (6.8.0-147.147) ...
+#6 231.7 Setting up libctf-nobfd0:amd64 (2.42-4ubuntu2.10) ...
+#6 231.7 Setting up libgomp1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.7 Setting up bzip2 (1.0.8-5.1ubuntu0.1) ...
+#6 231.7 Setting up libsframe1:amd64 (2.42-4ubuntu2.10) ...
+#6 231.7 Setting up libjansson4:amd64 (2.14-2build2) ...
+#6 231.7 Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+#6 231.7 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+#6 231.7 Setting up tzdata (2026e-0ubuntu0.24.04.1) ...
+#6 231.8 
+#6 231.8 Current default time zone: 'Etc/UTC'
+#6 231.8 Local time is now:      Mon Oct 26 01:27:27 UTC 2026.
+#6 231.8 Universal Time is now:  Mon Oct 26 01:27:27 UTC 2026.
+#6 231.8 Run 'dpkg-reconfigure tzdata' if you wish to change it.
+#6 231.8 
+#6 231.8 Setting up rpcsvc-proto (1.4.2-0ubuntu7) ...
+#6 231.8 Setting up vim-common (2:9.1.0016-1ubuntu7.20) ...
+#6 231.8 Setting up gcc-13-base:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 231.8 Setting up make (4.3-4.1build2) ...
+#6 231.8 Setting up libmpfr6:amd64 (4.2.1-1build1.1) ...
+#6 231.8 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+#6 231.9 Setting up xz-utils (5.6.1+really5.4.5-1ubuntu0.4) ...
+#6 231.9 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+#6 231.9 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+#6 231.9 Setting up perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...
+#6 231.9 Setting up libquadmath0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.9 Setting up libmpc3:amd64 (1.3.1-1build1.1) ...
+#6 231.9 Setting up libatomic1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.9 Setting up patch (2.7.6-7build3) ...
+#6 231.9 Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+#6 231.9 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+#6 231.9 Setting up libubsan1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.9 Setting up libhwasan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.9 Setting up libcrypt-dev:amd64 (1:4.4.36-4build1) ...
+#6 231.9 Setting up libasan8:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 231.9 Setting up git-man (1:2.43.0-1ubuntu7.4) ...
+#6 231.9 Setting up netbase (6.4) ...
+#6 232.0 Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+#6 232.0 Setting up libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...
+#6 232.0 Setting up libtsan2:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 232.0 Setting up libbinutils:amd64 (2.42-4ubuntu2.10) ...
+#6 232.0 Setting up vim-runtime (2:9.1.0016-1ubuntu7.20) ...
+#6 232.0 Setting up libisl23:amd64 (0.26-3build1.1) ...
+#6 232.0 Setting up libc-dev-bin (2.39-0ubuntu8.9) ...
+#6 232.0 Setting up openssl (3.0.13-0ubuntu3.16) ...
+#6 232.0 Setting up readline-common (8.2-4build1) ...
+#6 232.0 Setting up libcc1-0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 232.0 Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+#6 232.0 Setting up liblsan0:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 232.1 Setting up libitm1:amd64 (14.2.0-4ubuntu2~24.04.1) ...
+#6 232.1 Setting up libctf0:amd64 (2.42-4ubuntu2.10) ...
+#6 232.1 Setting up cpp-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.1 Setting up ca-certificates (20260816ubuntu0.24.04.1) ...
+#6 232.3 Updating certificates in /etc/ssl/certs...
+#6 232.6 120 added, 0 removed; done.
+#6 232.6 Setting up perl (5.38.2-3.2ubuntu0.6) ...
+#6 232.6 Setting up libgprofng0:amd64 (2.42-4ubuntu2.10) ...
+#6 232.7 Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+#6 232.7 Setting up libdpkg-perl (1.22.6ubuntu6.6) ...
+#6 232.7 Setting up libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+#6 232.7 Setting up libreadline8t64:amd64 (8.2-4build1) ...
+#6 232.7 Setting up libgcc-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.7 Setting up libc6-dev:amd64 (2.39-0ubuntu8.9) ...
+#6 232.7 Setting up libstdc++-13-dev:amd64 (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.7 Setting up binutils-x86-64-linux-gnu (2.42-4ubuntu2.10) ...
+#6 232.7 Setting up cpp-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 232.7 Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+#6 232.7 Setting up cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.7 Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.16) ...
+#6 232.7 Setting up gcc-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.7 Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+#6 232.7 Setting up binutils (2.42-4ubuntu2.10) ...
+#6 232.7 Setting up dpkg-dev (1.22.6ubuntu6.6) ...
+#6 232.8 Setting up liberror-perl (0.17029-2) ...
+#6 232.8 Setting up libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) ...
+#6 232.8 Setting up gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.8 Setting up git (1:2.43.0-1ubuntu7.4) ...
+#6 232.8 Setting up cpp (4:13.2.0-7ubuntu1) ...
+#6 232.8 Setting up curl (8.5.0-2ubuntu10.16) ...
+#6 232.8 Setting up vim (2:9.1.0016-1ubuntu7.20) ...
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/editor.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/ex.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/vi.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/view.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group view) doesn't exist
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+#6 232.8 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+#6 232.8 Setting up g++-13-x86-64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.8 Setting up gcc-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 232.9 Setting up gcc (4:13.2.0-7ubuntu1) ...
+#6 232.9 Setting up g++-x86-64-linux-gnu (4:13.2.0-7ubuntu1) ...
+#6 232.9 Setting up g++-13 (13.3.0-6ubuntu2~24.04.1) ...
+#6 232.9 Setting up g++ (4:13.2.0-7ubuntu1) ...
+#6 232.9 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+#6 232.9 update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
+#6 232.9 Setting up build-essential (12.10ubuntu1) ...
+#6 232.9 Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+#6 232.9 Processing triggers for ca-certificates (20260816ubuntu0.24.04.1) ...
+#6 232.9 Updating certificates in /etc/ssl/certs...
+#6 233.2 0 added, 0 removed; done.
+#6 233.2 Running hooks in /etc/ca-certificates/update.d...
+#6 233.2 done.
+#6 DONE 233.4s
+
+#7 [ 3/10] RUN curl -L -o /tmp/elan-v3.1.1.zip https://github.com/leanprover/elan/archive/refs/tags/v3.1.1.zip  && cd /tmp && unzip -q elan-v3.1.1.zip  && sh /tmp/elan-3.1.1/elan-init.sh -y --default-toolchain none
+#7 0.188   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+#7 0.188                                  Dload  Upload   Total   Spent    Left  Speed
+#7 0.188   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+#7 2.025 100  6138    0  6138    0     0   3340      0 --:--:--  0:00:01 --:--:--  3340100  115k    0  115k    0     0  53268      0 --:--:--  0:00:02 --:--:--  285k
+#7 2.427 info: downloading installer
+#7 DONE 8.5s
+
+#8 [ 4/10] COPY workspace /app/workspace
+#8 DONE 0.0s
+
+#9 [ 5/10] WORKDIR /app/workspace
+#9 DONE 0.0s
+
+#10 [ 6/10] RUN elan toolchain install $(cat /app/workspace/lean-toolchain) &&     elan default $(cat /app/workspace/lean-toolchain)
+#10 4.853 info: downloading https://github.com/leanprover/lean4-nightly/releases/download/nightly-2023-06-20/lean-4.0.0-nightly-2023-06-20-linux.tar.zst
+#10 99.19 info: installing /root/.elan/toolchains/leanprover--lean4-nightly---nightly-2023-06-20
+#10 100.6 
+#10 100.7 leanprover/lean4-nightly:nightly-2023-06-20 installed - Lean (version 4.0.0-nightly-2023-06-20, commit a44dd71ad62a, Release)
+#10 100.7 
+#10 100.7 info: default toolchain set to 'leanprover/lean4:nightly-2023-06-20'
+#10 DONE 101.0s
+
+#11 [ 7/10] RUN lean --version && lake --version
+#11 0.184 Lean (version 4.0.0-nightly-2023-06-20, commit a44dd71ad62a, Release)
+#11 0.235 Lake version 4.1.0-pre (Lean version 4.0.0-nightly-2023-06-20)
+#11 DONE 0.2s
+
+#12 [ 8/10] RUN lake build Library
+#12 0.377 info: cloning https://github.com/leanprover-community/mathlib4 to ./lake-packages/mathlib
+#12 262.4 info: cloning https://github.com/robertylewis/cs22-lean-autograder to ./lake-packages/autograder
+#12 265.0 info: cloning https://github.com/leanprover/std4 to ./lake-packages/std
+#12 291.3 info: cloning https://github.com/gebner/quote4 to ./lake-packages/Qq
+#12 293.3 info: cloning https://github.com/JLimperg/aesop to ./lake-packages/aesop
+#12 299.8 info: cloning https://github.com/EdAyers/ProofWidgets4 to ./lake-packages/proofwidgets
+#12 305.9 Downloading proofwidgets/v0.0.11/linux-64.tar.gz
+#12 305.9 [0/13] Building Std.Tactic.Unreachable
+#12 305.9 [0/13] Building Std.Lean.TagAttribute
+#12 305.9 [0/18] Building Std.Tactic.OpenPrivate
+#12 305.9 [0/23] Building Std.Util.TermUnsafe
+#12 305.9 [0/24] Building Std.Tactic.ByCases
+#12 305.9 [0/28] Building Std.Lean.Name
+#12 305.9 [0/28] Building Std.Lean.Position
+#12 305.9 [0/28] Building Std.Tactic.SeqFocus
+#12 305.9 [0/28] Building Std.Lean.Tactic
+#12 305.9 [0/28] Building Std.Lean.Meta.Basic
+#12 305.9 [0/28] Building Std.Lean.Parser
+#12 305.9 [0/31] Building Std.Tactic.RCases
+#12 305.9 [0/34] Building Std.Lean.Command
+#12 305.9 [0/44] Building Std.WF
+#12 305.9 [0/44] Building Std.Data.Ord
+#12 305.9 [0/71] Building Std.Lean.Delaborator
+#12 305.9 [0/74] Building Std.Lean.NameMapAttribute
+#12 305.9 [0/85] Building Std.Data.List.Init.Lemmas
+#12 305.9 [0/97] Building Std.Classes.BEq
+#12 306.0 [0/437] Building Std.Util.LibraryNote
+#12 306.1 [0/559] Building Std.Classes.Dvd
+#12 306.1 [0/559] Building Std.Lean.Meta.LCtx
+#12 306.1 [4/564] Building Std.Lean.InfoTree
+#12 306.1 [4/630] Building Std.Util.ExtendedBinder
+#12 306.1 [4/630] Building Std.Control.ForInStep.Basic
+#12 306.2 [4/630] Building Std.Tactic.HaveI
+#12 306.2 [4/630] Building Std.Data.Option.Init.Lemmas
+#12 306.3 [4/630] Building Std.Data.DList
+#12 306.3 [4/630] Building Std.Data.Fin.Lemmas
+#12 306.4 [4/630] Building Std.Data.Prod.Lex
+#12 306.4 [4/630] Building Std.Lean.Expr
+#12 306.4 [4/630] Building Std.Lean.HashMap
+#12 306.4 [4/630] Building Std.Lean.HashSet
+#12 306.4 [4/630] Building Std.Lean.Meta.Expr
+#12 306.4 [4/630] Building Std.Lean.PersistentHashMap
+#12 306.4 [4/630] Building Std.Lean.Meta.Inaccessible
+#12 306.5 [4/630] Building Std.Lean.MonadBacktrack
+#12 306.6 [4/630] Building Std.Lean.PersistentHashSet
+#12 306.6 [4/630] Building Std.Tactic.Instances
+#12 306.6 [4/630] Building Std.Tactic.Where
+#12 306.6 [4/630] Building Qq.ForLean.ReduceEval
+#12 306.6 [4/630] Building Qq.ForLean.ToExpr
+#12 306.7 [4/630] Building Qq.Typ
+#12 306.7 [4/630] Building Aesop.Check
+#12 306.8 [4/630] Building Aesop.Nanos
+#12 306.8 [4/630] Building Aesop.Options.Public
+#12 306.8 [4/630] Building Aesop.Percent
+#12 306.8 [4/630] Building Qq.ForLean.Do
+#12 306.9 [4/630] Building Qq.SortLocalDecls
+#12 307.0 [31/630] Building Std.Lean.AttributeExtra
+#12 307.0 [32/630] Building Std.Linter.UnreachableTactic
+#12 307.1 [32/630] Building Std.Control.ForInStep.Lemmas
+#12 307.1 [32/630] Building Std.Data.Int.Basic
+#12 307.2 [32/630] Building Std.Data.Nat.Basic
+#12 307.2 [32/630] Building Std.Tactic.PrintDependents
+#12 307.3 [32/630] Building Std.Tactic.CoeExt
+#12 307.3 [32/630] Building Std.CodeAction.Attr
+#12 307.3 [32/630] Building Std.Tactic.GuardExpr
+#12 307.3 [40/630] Building Std.Tactic.Lint.Basic
+#12 307.4 [41/630] Building Aesop.Constants
+#12 307.4 [41/630] Building Std.Tactic.Simpa
+#12 307.5 [41/630] Building Std.Lean.Format
+#12 307.5 [41/630] Building Std.Tactic.NoMatch
+#12 307.5 [41/630] Building Aesop.Options.Internal
+#12 307.5 [41/630] Building Std.Linter.UnnecessarySeqFocus
+#12 307.6 [47/630] Building Std.Control.ForInStep
+#12 307.7 [48/630] Building Aesop.Options
+#12 307.7 [49/630] Building Qq.Macro
+#12 307.9 [53/630] Building Std.Tactic.TryThis
+#12 308.1 [55/630] Building Std.Lean.Meta.Clear
+#12 308.1 [55/630] Building Std.Lean.Meta.SavedState
+#12 308.1 [55/630] Building Std.Lean.Meta.InstantiateMVars
+#12 308.1 [55/630] Building Std.Lean.Meta.AssertHypotheses
+#12 308.2 [56/630] Building Std.Classes.Cast
+#12 308.2 [56/630] Building Std.Tactic.NormCast.Ext
+#12 308.6 [62/630] Building Std.Tactic.Lint.Simp
+#12 308.6 [62/630] Building Std.Tactic.Lint.Frontend
+#12 308.8 [65/630] Building Std.Classes.SetNotation
+#12 308.9 [67/630] Building Std.Linter
+#12 308.9 [68/630] Building Std.Data.Array.Init.Basic
+#12 309.0 [69/630] Building Std.Tactic.ShowTerm
+#12 309.0 [69/630] Building Std.Tactic.SimpTrace
+#12 309.0 [70/630] Building Std.CodeAction.Basic
+#12 309.3 [72/630] Building Std.Data.Array.Basic
+#12 309.5 [74/630] Building Std.Tactic.NormCast.Lemmas
+#12 309.7 [75/630] Building Std.Tactic.Lint.TypeClass
+#12 309.7 [75/630] Building Std.Tactic.Lint.Misc
+#12 310.6 [81/630] Building Std.CodeAction.Misc
+#12 310.6 [81/630] Building Std.Tactic.GuardMsgs
+#12 311.1 [83/630] Building Std.Classes.Order
+#12 311.3 [84/630] Building Std.Tactic.SqueezeScope
+#12 311.3 [84/630] Building Std.Tactic.Basic
+#12 311.3 [85/630] Building Std.Tactic.Lint
+#12 312.1 [89/630] Building Std.Data.Char
+#12 312.1 [89/630] Building Std.Tactic.Ext.Attr
+#12 312.2 [91/630] Building Std.CodeAction
+#12 312.5 [94/630] Building Std.Logic
+#12 312.8 [95/630] Building Std.Tactic.Ext
+#12 312.8 Unpacking proofwidgets/v0.0.11/linux-64.tar.gz
+#12 312.9 [96/630] Building Mathlib.Tactic.Zify.Attr
+#12 312.9 [96/630] Building Mathlib.Lean.Meta.Basic
+#12 312.9 [96/630] Building Mathlib.Tactic.TypeCheck
+#12 312.9 [96/630] Building Mathlib.Util.AssertExists
+#12 312.9 [96/630] Building Mathlib.Tactic.GCongr.ForwardAttr
+#12 312.9 [96/630] Building Mathlib.Util.Syntax
+#12 312.9 [96/630] Building Mathlib.Control.SimpSet
+#12 312.9 [96/630] Building Mathlib.Tactic.NthRewrite
+#12 312.9 [96/630] Building Mathlib.Tactic.SudoSetOption
+#12 312.9 [96/630] Building Mathlib.Util.SynthesizeUsing
+#12 312.9 [96/630] Building Mathlib.Tactic.PrintPrefix
+#12 312.9 [96/630] Building Mathlib.Tactic.SimpRw
+#12 312.9 [96/630] Building Mathlib.Util.Pickle
+#12 312.9 [96/630] Building Mathlib.Util.WhatsNew
+#12 312.9 [96/630] Building Mathlib.Tactic.SimpIntro
+#12 312.9 [96/630] Building Mathlib.Tactic.ProjectionNotation
+#12 312.9 [96/630] Building Mathlib.Lean.Exception
+#12 313.1 [96/630] Building Mathlib.Tactic.Inhabit
+#12 313.1 [96/630] Building Mathlib.Lean.CoreM
+#12 313.2 [96/630] Building Mathlib.Tactic.FailIfNoProgress
+#12 313.3 [96/630] Building Mathlib.Tactic.Trace
+#12 313.3 [96/630] Building Mathlib.Lean.LocalContext
+#12 313.4 [96/630] Building Mathlib.Tactic.GuardHypNums
+#12 313.4 [96/630] Building Mathlib.Tactic.Classical
+#12 313.5 [96/630] Building Mathlib.Tactic.Coe
+#12 313.5 [96/630] Building Mathlib.Tactic.Spread
+#12 313.5 [96/630] Building Mathlib.Tactic.TryThis
+#12 313.5 [96/630] Building Mathlib.Tactic.GuardGoalNums
+#12 313.6 [96/630] Building Mathlib.Tactic.ApplyWith
+#12 313.7 [96/630] Building Mathlib.Tactic.Clear_
+#12 313.7 [96/630] Building Mathlib.Tactic.CasesM
+#12 313.7 [96/630] Building Mathlib.Tactic.Substs
+#12 313.8 [96/630] Building Mathlib.Tactic.LeftRight
+#12 313.9 [96/630] Building Mathlib.Lean.Message
+#12 314.0 [96/630] Building Mathlib.Lean.Linter
+#12 314.0 [96/630] Building Mathlib.Tactic.Use
+#12 314.0 [96/630] Building Mathlib.Tactic.LabelAttr
+#12 314.1 [96/630] Building Mathlib.Tactic.ClearExcept
+#12 314.1 [96/630] Building Mathlib.Tactic.Set
+#12 314.2 [96/630] Building Mathlib.Tactic.Constructor
+#12 314.2 [96/630] Building Mathlib.Tactic.RunCmd
+#12 314.2 [96/630] Building Mathlib.Tactic.Rename
+#12 314.3 [96/630] Building Mathlib.Lean.EnvExtension
+#12 314.3 [96/630] Building Mathlib.Tactic.SuccessIfFailWithMsg
+#12 314.4 [96/630] Building Mathlib.Data.Array.Defs
+#12 314.4 [96/630] Building Mathlib.Lean.Meta.Simp
+#12 314.4 [96/630] Building Mathlib.Init.Data.Nat.Notation
+#12 314.4 [96/630] Building Mathlib.Data.KVMap
+#12 314.5 [96/630] Building Mathlib.Mathport.Attributes
+#12 314.5 [96/630] Building Mathlib.Mathport.Rename
+#12 314.5 [96/630] Building Mathlib.Util.WithWeakNamespace
+#12 314.6 [96/630] Building Mathlib.Util.MemoFix
+#12 314.6 [96/630] Building Mathlib.Tactic.Clear!
+#12 314.7 [96/630] Building Mathlib.Tactic.Alias
+#12 314.7 [135/630] Building Library.Tactic.Define.Attr
+#12 314.7 [135/630] Building Library.Tactic.FiniteInductive
+#12 314.7 [136/630] Building Mathlib.Tactic.HigherOrder
+#12 314.7 [136/630] Building Std.Data.PairingHeap
+#12 314.8 [136/630] Building Std.Classes.LawfulMonad
+#12 314.8 [136/630] Building Library.Tactic.Use
+#12 314.9 [136/630] Building Mathlib.Tactic.UnsetOption
+#12 315.0 [141/630] Building Mathlib.Util.CountHeartbeats
+#12 315.0 [141/630] Building Std.Data.RBMap.Basic
+#12 315.0 [143/630] Building Std.Data.Nat.Lemmas
+#12 315.1 [144/630] Building Mathlib.Init.Data.Fin.Basic
+#12 315.1 [145/630] Building Mathlib.Tactic.Have
+#12 315.1 [146/630] Building Library.Tactic.Rel.Attr
+#12 315.2 [146/630] Building Mathlib.Tactic.Monotonicity.Attr
+#12 315.2 [149/630] Building Mathlib.Tactic.ScopedNS
+#12 315.2 [149/630] Building Mathlib.Util.CompileInductive
+#12 315.2 [150/630] Building Mathlib.Tactic.Conv
+#12 315.6 [154/630] Building Std.Tactic.Congr
+#12 315.9 [158/630] Building Mathlib.Algebra.Abs
+#12 315.9 [158/630] Building Mathlib.Init.Control.Combinators
+#12 315.9 [158/630] Building Mathlib.Init.Data.Bool.Basic
+#12 315.9 [158/630] Building Mathlib.Init.Function
+#12 315.9 [158/630] Building Mathlib.Init.Data.Ordering.Basic
+#12 315.9 [158/630] Building Mathlib.Init.Quot
+#12 315.9 [158/630] Building Mathlib.Init.Set
+#12 316.4 [160/630] Building Mathlib.Tactic.Replace
+#12 316.6 [165/630] Building Mathlib.Control.Basic
+#12 316.7 [167/630] Building Std.Data.Option.Basic
+#12 316.7 [167/630] Building Std.Data.Array.Init.Lemmas
+#12 316.8 [168/630] Building Mathlib.Tactic.ApplyCongr
+#12 317.4 [175/630] Building Qq.Delab
+#12 317.4 [175/630] Building Qq.MetaM
+#12 317.5 [176/630] Building Std.Data.Option.Lemmas
+#12 317.8 [178/630] Building Mathlib.Control.Functor
+#12 318.0 [180/630] Building Qq.AssertInstancesCommute
+#12 318.0 [180/630] Building Qq.Match
+#12 318.3 [183/630] Building Std.Data.String.Basic
+#12 318.3 [183/630] Building Std.Data.Array.Merge
+#12 318.3 [183/630] Building Std.Data.Nat.Gcd
+#12 318.3 [183/630] Building Std.Data.BinomialHeap
+#12 318.3 [183/630] Building Std.Data.Int.Lemmas
+#12 318.5 [185/630] Building Std.Data.List.Basic
+#12 319.2 [190/630] Building Std.Data.RBMap.WF
+#12 320.1 [191/630] Building Std.Lean.Meta.DiscrTree
+#12 321.7 [194/630] Building Std.Data.Int.DivMod
+#12 323.5 [195/630] Building Qq
+#12 323.7 [196/630] Building Mathlib.Util.Qq
+#12 324.3 [198/630] Building Std.Data.Rat.Basic
+#12 324.6 [199/630] Building Std.Data.AssocList
+#12 324.6 [199/630] Building Mathlib.Lean.Expr.Basic
+#12 324.6 [199/630] Building Mathlib.Init.Data.List.Basic
+#12 324.6 [199/630] Building Mathlib.Data.String.Defs
+#12 324.6 [199/630] Building Library.Tactic.TruthTable
+#12 324.6 [199/630] Building Std.Data.List.Lemmas
+#12 324.6 [199/630] Building Mathlib.Tactic.PermuteGoals
+#12 324.6 [199/630] Building Mathlib.Lean.Meta
+#12 325.6 [203/630] Building Std.Classes.RatCast
+#12 325.6 [203/630] Building Std.Data.Rat.Lemmas
+#12 325.8 [204/630] Building Std.Data.HashMap.Basic
+#12 326.0 [206/630] Building Mathlib.Tactic.MkIffOfInductiveProp
+#12 326.0 [206/630] Building Mathlib.Lean.Elab.Tactic.Basic
+#12 326.0 [206/630] Building Mathlib.Tactic.Relation.Symm
+#12 326.0 [206/630] Building Mathlib.Tactic.Relation.Rfl
+#12 326.1 [207/630] Building Library.Tactic.ExistsDelaborator
+#12 326.1 [207/630] Building Mathlib.Tactic.Cases
+#12 326.1 [207/630] Building Mathlib.Util.Tactic
+#12 326.1 [207/630] Building Mathlib.Lean.Expr.Traverse
+#12 326.1 [207/630] Building Mathlib.Tactic.HelpCmd
+#12 326.1 [207/630] Building Mathlib.Tactic.InferParam
+#12 326.1 [207/630] Building Mathlib.Tactic.Simps.NotationClass
+#12 326.1 [207/630] Building Mathlib.Tactic.GeneralizeProofs
+#12 326.6 [209/630] Building Mathlib.Tactic.Relation.Trans
+#12 326.9 [210/630] Building Mathlib.Tactic.RenameBVar
+#12 326.9 [210/630] Building Mathlib.Tactic.SwapVar
+#12 327.0 [212/630] Building Mathlib.Lean.Meta.DiscrTree
+#12 327.1 [212/630] Building Mathlib.Lean.Expr.ReplaceRec
+#12 327.5 [214/630] Building Mathlib.Tactic.Congr!
+#12 327.7 [216/630] Building Mathlib.Tactic.Simps.Basic
+#12 327.7 [218/630] Building Mathlib.Lean.Expr
+#12 328.0 [221/630] Building Std.Data.Rat
+#12 328.2 [224/630] Building Mathlib.Tactic.Core
+#12 328.2 [224/630] Building Mathlib.Tactic.Eqns
+#12 328.2 [224/630] Building Mathlib.Mathport.Notation
+#12 328.3 [225/630] Building Std.Data.RBMap
+#12 328.3 [225/630] Building Std.Data.RBMap.Alter
+#12 328.3 [226/630] Building Mathlib.Data.Rat.Init
+#12 329.9 [232/630] Building Mathlib.Tactic.WLOG
+#12 329.9 [233/630] Building Mathlib.Init.Core
+#12 333.1 [238/630] Building Mathlib.Tactic.Convert
+#12 333.2 [239/630] Building Std.Data.RBMap.Lemmas
+#12 333.2 [239/630] Building Std.Data.Range.Lemmas
+#12 333.2 [239/630] Building Std.Data.Array.Lemmas
+#12 333.2 [239/630] Building Std.Data.String.Lemmas
+#12 334.6 [242/630] Building Mathlib.Tactic.ToAdditive
+#12 336.1 [243/630] Building Std.Data.HashMap.WF
+#12 338.3 [246/630] Building Std.Data.String
+#12 338.6 [247/630] Building Std.Lean.Meta.UnusedNames
+#12 339.2 [249/630] Building Std.Data.HashMap
+#12 339.4 [250/630] Building Aesop.Util.UnionFind
+#12 339.4 [250/630] Building Mathlib.Data.HashMap
+#12 339.4 [250/630] Building Std
+#12 339.7 [252/630] Building Mathlib.Tactic.Basic
+#12 339.8 [253/630] Building Mathlib.Init.ZeroOne
+#12 339.9 [254/630] Building Aesop.Util.Basic
+#12 340.2 [255/630] Building Mathlib.Init.Data.Nat.Basic
+#12 340.2 [255/630] Building Mathlib.Init.Data.Int.Basic
+#12 340.9 [258/630] Building Aesop.Util.UnorderedArraySet
+#12 341.0 [258/630] Building Aesop.Util.Tactic
+#12 341.0 [258/630] Building Aesop.Tracing
+#12 341.3 [259/630] Building Mathlib.Tactic.Existsi
+#12 341.3 [259/630] Building Mathlib.Tactic.RSuffices
+#12 341.3 [259/630] Building Mathlib.Init.Logic
+#12 341.7 [263/630] Building Aesop.Util
+#12 342.0 [265/630] Building Aesop.Frontend.ElabM
+#12 342.0 [265/630] Building Aesop.Index.Basic
+#12 342.0 [265/630] Building Aesop.Rule.Name
+#12 342.0 [265/630] Building Aesop.Script
+#12 342.4 [267/630] Building Aesop.Index
+#12 342.5 [269/630] Building Mathlib.Init.Data.Bool.Lemmas
+#12 342.5 [269/630] Building Mathlib.Init.CcLemmas
+#12 342.5 [269/630] Building Mathlib.Init.Data.Quot
+#12 342.6 [269/630] Building Mathlib.Init.Data.Sigma.Basic
+#12 342.6 [269/630] Building Mathlib.Init.Data.Prod
+#12 342.6 [269/630] Building Mathlib.Init.Algebra.Classes
+#12 342.6 [269/630] Building Mathlib.Tactic.SplitIfs
+#12 342.6 [269/630] Building Mathlib.Init.Propext
+#12 342.6 [269/630] Building Mathlib.Init.Align
+#12 343.3 [275/630] Building Mathlib.Tactic.ToLevel
+#12 343.5 [278/630] Building Mathlib.Data.Option.Defs
+#12 343.5 [278/630] Building Mathlib.Logic.Basic
+#12 343.7 [279/630] Building Mathlib.Tactic.DeriveToExpr
+#12 344.1 [280/630] Building Mathlib.Data.ListM.Basic
+#12 344.7 [281/630] Building Aesop.RuleTac.Basic
+#12 345.1 [282/630] Building Aesop.RuleTac.Apply
+#12 345.1 [282/630] Building Aesop.RuleTac.Tactic
+#12 345.1 [282/630] Building Aesop.RuleTac.RuleApplicationWithMVarInfo
+#12 345.1 [282/630] Building Aesop.Rule.Basic
+#12 345.1 [282/630] Building Aesop.RuleTac.Cases
+#12 345.2 [282/630] Building Aesop.RuleTac.Forward
+#12 345.3 [283/630] Building Mathlib.Data.Prod.PProd
+#12 345.3 [283/630] Building Mathlib.Logic.Relator
+#12 345.3 [283/630] Building Mathlib.Logic.Nonempty
+#12 345.6 [284/630] Building Mathlib.Data.ListM.Heartbeats
+#12 345.7 [285/630] Building Aesop.Rule
+#12 346.1 [290/630] Building Mathlib.Tactic.Cache
+#12 346.2 [291/630] Building Mathlib.Data.Quot
+#12 346.3 [293/630] Building Mathlib.Init.Algebra.Order
+#12 346.4 [295/630] Building Aesop.Builder.Basic
+#12 346.4 [295/630] Building Aesop.Tree.UnsafeQueue
+#12 346.8 [296/630] Building Aesop.RuleTac
+#12 346.9 [298/630] Building Aesop.Builder.Apply
+#12 346.9 [298/630] Building Aesop.Builder.Cases
+#12 346.9 [298/630] Building Aesop.Builder.NormSimp
+#12 346.9 [298/630] Building Aesop.Builder.Tactic
+#12 346.9 [298/630] Building Aesop.Builder.Forward
+#12 346.9 [298/630] Building Aesop.Builder.Unfold
+#12 346.9 [299/630] Building Mathlib.Tactic.ToExpr
+#12 346.9 [299/630] Building Aesop.Tree.Data
+#12 347.2 [300/630] Building Mathlib.Tactic.Recover
+#12 347.2 [300/630] Building Mathlib.Tactic.Find
+#12 347.4 [303/630] Building Aesop.Builder.Constructors
+#12 347.7 [307/630] Building Mathlib.Tactic.PushNeg
+#12 347.7 [307/630] Building Mathlib.Algebra.NeZero
+#12 347.7 [307/630] Building Mathlib.Init.Algebra.Functions
+#12 347.7 [307/630] Building Mathlib.Init.Data.Int.Order
+#12 347.9 [308/630] Building Aesop.Builder.Default
+#12 348.0 [310/630] Building Mathlib.Tactic.FBinop
+#12 348.5 [315/630] Building Aesop.Builder
+#12 348.6 [316/630] Building Mathlib.Init.Data.Nat.Lemmas
+#12 348.7 [317/630] Building Mathlib.Tactic.Lift
+#12 348.8 [318/630] Building Aesop.RuleSet
+#12 349.2 [319/630] Building Aesop.Profiling
+#12 349.2 [319/630] Building Aesop.Tree.Traversal
+#12 349.2 [319/630] Building Aesop.Tree.RunMetaM
+#12 350.0 [320/630] Building Aesop.Tree.TreeM
+#12 350.0 [320/630] Building Aesop.Tree.Tracing
+#12 350.1 [321/630] Building Aesop.Tree.ExtractScript
+#12 350.1 [321/630] Building Aesop.Tree.State
+#12 350.5 [323/630] Building Library.Theory.Comparison
+#12 350.5 [323/630] Building Mathlib.Data.Bool.Basic
+#12 350.5 [323/630] Building Mathlib.Logic.Function.Basic
+#12 351.0 [324/630] Building Aesop.Tree.AddRapp
+#12 351.0 [324/630] Building Aesop.Tree.Free
+#12 351.1 [325/630] Building Mathlib.Data.SProd
+#12 351.6 [329/630] Building Aesop.Tree.Check
+#12 351.6 [330/630] Building Mathlib.Tactic.Contrapose
+#12 351.6 [330/630] Building Mathlib.Tactic.ByContra
+#12 351.9 [333/630] Building Aesop.Tree.ExtractProof
+#12 352.2 [334/630] Building Mathlib.Init.Data.Nat.Bitwise
+#12 353.1 [337/630] Building Mathlib.Tactic.Choose
+#12 353.1 [337/630] Building Mathlib.Data.Subtype
+#12 353.1 [337/630] Building Mathlib.Logic.Function.Conjugate
+#12 353.1 [337/630] Building Mathlib.Logic.IsEmpty
+#12 353.1 [337/630] Building Mathlib.Data.Sigma.Basic
+#12 353.1 [337/630] Building Mathlib.Data.Sum.Basic
+#12 353.8 [339/630] Building Mathlib.Init.Data.Int.Bitwise
+#12 353.8 [339/630] Building Mathlib.Data.Num.Basic
+#12 354.1 [342/630] Building Mathlib.Logic.Function.Iterate
+#12 354.3 [343/630] Building Mathlib.Tactic.IrreducibleDef
+#12 354.3 [344/630] Building Aesop.Search.Expansion.Simp.Basic
+#12 354.3 [344/630] Building Aesop.Frontend.Extension.Init
+#12 354.3 [344/630] Building Aesop.Frontend.RuleExpr
+#12 354.4 [345/630] Building Aesop.Tree
+#12 354.8 [348/630] Building Aesop.Frontend.Extension
+#12 354.8 [349/630] Building Aesop.Search.Queue.Class
+#12 355.2 [351/630] Building Aesop.Search.Queue
+#12 355.4 [352/630] Building Mathlib.Tactic.Backtracking
+#12 355.6 [353/630] Building Library.Theory.InjectiveSurjective
+#12 355.7 [355/630] Building Aesop.Search.Expansion.Simp.SimpAll
+#12 355.7 [355/630] Building Aesop.Search.Expansion.Simp.SimpGoal
+#12 355.7 [355/630] Building Aesop.Search.SearchM
+#12 356.7 [360/630] Building Mathlib.Init.Classical
+#12 357.0 [361/630] Building Aesop.Search.RuleSelection
+#12 357.0 [361/630] Building Aesop.Search.Expansion.Basic
+#12 357.1 [362/630] Building Mathlib.Tactic.GCongr.Core
+#12 357.1 [362/630] Building Mathlib.Tactic.SolveByElim
+#12 357.5 [364/630] Building Aesop.Search.Expansion.Simp
+#12 357.8 [367/630] Building Aesop.Search.Expansion.Norm
+#12 359.2 [368/630] Building Aesop.Frontend.Attribute
+#12 359.4 [369/630] Building Mathlib.Tactic.Rewrites
+#12 359.4 [369/630] Building Mathlib.Tactic.Propose
+#12 359.4 [369/630] Building Mathlib.Tactic.Tauto
+#12 359.5 [369/630] Building Mathlib.Tactic.LibrarySearch
+#12 360.1 [370/630] Building Aesop.Frontend.Command
+#12 360.1 [370/630] Building Aesop.Frontend.Tactic
+#12 360.4 [371/630] Building Aesop.Search.Expansion
+#12 360.7 [372/630] Building Library.Tactic.Rel
+#12 361.5 [376/630] Building Aesop.Frontend
+#12 361.8 [377/630] Building Aesop.BuiltinRules.Assumption
+#12 361.8 [377/630] Building Aesop.BuiltinRules.Split
+#12 361.8 [377/630] Building Aesop.BuiltinRules.Intros
+#12 361.8 [377/630] Building Aesop.BuiltinRules.Subst
+#12 361.8 [377/630] Building Aesop.BuiltinRules.ApplyHyps
+#12 361.8 [377/630] Building Aesop.BuiltinRules.DestructProducts
+#12 362.9 [386/630] Building Aesop.BuiltinRules
+#12 363.5 [388/630] Building Aesop.Search.ExpandSafePrefix
+#12 364.1 [389/630] Building Aesop.Search.Main
+#12 368.2 [390/630] Building Aesop.Main
+#12 368.7 [391/630] Building Aesop
+#12 368.9 [392/630] Building Library.Tactic.Extra.Attr
+#12 369.0 [392/630] Building Mathlib.Tactic.Common
+#12 369.4 [394/630] Building Mathlib.Logic.Unique
+#12 369.4 [394/630] Building Mathlib.Data.Option.Basic
+#12 369.4 [394/630] Building Mathlib.Data.Prod.Basic
+#12 369.4 [394/630] Building Mathlib.Logic.Relation
+#12 369.4 [394/630] Building Mathlib.Algebra.Group.Defs
+#12 370.4 [396/630] Building Mathlib.Data.Option.NAry
+#12 370.4 [397/630] Building Library.Tactic.Product
+#12 370.4 [397/630] Building Mathlib.Logic.Nontrivial
+#12 370.4 [397/630] Building Mathlib.Order.Basic
+#12 370.7 [398/630] Building Mathlib.Logic.Pairwise
+#12 371.1 [399/630] Building Mathlib.Tactic.Nontriviality.Core
+#12 372.1 [403/630] Building Mathlib.Tactic.Nontriviality
+#12 372.3 [404/630] Building Mathlib.Algebra.Group.Basic
+#12 372.3 [404/630] Building Mathlib.Data.Nat.Cast.Defs
+#12 372.3 [404/630] Building Mathlib.Algebra.GroupWithZero.Defs
+#12 372.3 [404/630] Building Mathlib.Data.Pi.Algebra
+#12 373.2 [407/630] Building Mathlib.Data.Int.Cast.Defs
+#12 373.2 [407/630] Building Mathlib.Tactic.NormCast.Tactic
+#12 373.6 [408/630] Building Mathlib.Algebra.Order.ZeroLEOne
+#12 373.6 [408/630] Building Mathlib.Data.PNat.Defs
+#12 373.7 [408/630] Building Mathlib.Order.RelClasses
+#12 373.7 [408/630] Building Mathlib.Data.Tree
+#12 375.2 [414/630] Building Mathlib.Data.List.Lex
+#12 375.8 [415/630] Building Mathlib.Data.Int.Cast.Basic
+#12 375.9 [415/630] Building Mathlib.Algebra.Ring.Defs
+#12 375.9 [415/630] Building Mathlib.Algebra.Group.Units
+#12 376.1 [416/630] Building Mathlib.Algebra.CharZero.Defs
+#12 376.1 [416/630] Building Mathlib.Tactic.NormCast
+#12 376.5 [418/630] Building Mathlib.Data.FunLike.Basic
+#12 376.7 [420/630] Building Mathlib.Algebra.Group.InjSurj
+#12 377.1 [421/630] Building Mathlib.Data.FunLike.Embedding
+#12 377.1 [421/630] Building Mathlib.Algebra.Hom.Group
+#12 377.7 [422/630] Building Mathlib.Algebra.Field.Defs
+#12 377.7 [423/630] Building Mathlib.Data.FunLike.Equiv
+#12 378.3 [424/630] Building Mathlib.Logic.Equiv.Defs
+#12 379.0 [425/630] Building Mathlib.Algebra.Group.Semiconj
+#12 380.0 [427/630] Building Mathlib.Algebra.Ring.Semiconj
+#12 380.0 [427/630] Building Mathlib.Algebra.Group.Commute
+#12 380.0 [428/630] Building Mathlib.Algebra.GroupWithZero.InjSurj
+#12 380.8 [430/630] Building Mathlib.Algebra.Opposites
+#12 380.8 [430/630] Building Mathlib.Control.EquivFunctor
+#12 380.8 [430/630] Building Mathlib.Order.Synonym
+#12 380.8 [430/630] Building Mathlib.Logic.Equiv.Basic
+#12 381.8 [433/630] Building Mathlib.Algebra.Group.OrderSynonym
+#12 381.8 [433/630] Building Mathlib.Order.Compare
+#12 381.8 [433/630] Building Mathlib.Order.Max
+#12 381.8 [434/630] Building Mathlib.Logic.Equiv.Option
+#12 382.6 [435/630] Building Mathlib.Algebra.Ring.InjSurj
+#12 383.1 [437/630] Building Mathlib.Order.Monotone.Basic
+#12 383.3 [438/630] Building Mathlib.Algebra.GroupWithZero.Basic
+#12 385.1 [440/630] Building Mathlib.Data.Nat.Basic
+#12 385.1 [440/630] Building Mathlib.Algebra.GroupWithZero.Units.Basic
+#12 385.6 [441/630] Building Mathlib.Algebra.Ring.Units
+#12 385.7 [442/630] Building Mathlib.Algebra.Divisibility.Basic
+#12 385.8 [442/630] Building Mathlib.Algebra.Ring.Basic
+#12 385.8 [442/630] Building Mathlib.Algebra.Hom.Units
+#12 385.9 [443/630] Building Mathlib.Algebra.CovariantAndContravariant
+#12 385.9 [443/630] Building Mathlib.Order.Lattice
+#12 387.1 [444/630] Building Mathlib.Algebra.GroupWithZero.Semiconj
+#12 387.3 [445/630] Building Mathlib.Algebra.Ring.Commute
+#12 387.5 [446/630] Building Mathlib.Algebra.Divisibility.Units
+#12 387.6 [447/630] Building Mathlib.Logic.Embedding.Basic
+#12 387.6 [447/630] Building Mathlib.Data.Finite.Defs
+#12 387.6 [447/630] Building Mathlib.Data.ULift
+#12 387.6 [447/630] Building Mathlib.Algebra.Hom.Equiv.Basic
+#12 387.6 [448/630] Building Mathlib.Data.Int.Basic
+#12 387.7 [449/630] Building Mathlib.Algebra.Order.Ring.Lemmas
+#12 388.1 [450/630] Building Mathlib.Algebra.GroupWithZero.Commute
+#12 388.5 [451/630] Building Mathlib.Algebra.Group.TypeTags
+#12 388.8 [454/630] Building Mathlib.Data.Nat.Bits
+#12 388.8 [454/630] Building Mathlib.Data.Nat.Units
+#12 388.8 [454/630] Building Mathlib.Data.List.Defs
+#12 389.0 [455/630] Building Mathlib.Algebra.GroupWithZero.Divisibility
+#12 389.2 [457/630] Building Mathlib.Tactic.Zify
+#12 390.1 [462/630] Building Mathlib.Algebra.Hom.Embedding
+#12 390.1 [462/630] Building Mathlib.Order.RelIso.Basic
+#12 390.3 [463/630] Building Mathlib.Order.MinMax
+#12 390.3 [463/630] Building Mathlib.Order.BoundedOrder
+#12 391.1 [467/630] Building Mathlib.Algebra.GroupPower.Basic
+#12 391.1 [467/630] Building Mathlib.GroupTheory.GroupAction.Defs
+#12 391.6 [468/630] Building Mathlib.Algebra.Order.Monoid.Lemmas
+#12 392.1 [470/630] Building Mathlib.Algebra.Hom.Equiv.Units.Basic
+#12 392.1 [470/630] Building Mathlib.Algebra.Ring.Divisibility
+#12 392.1 [470/630] Building Mathlib.Algebra.Group.Opposite
+#12 392.5 [471/630] Building Mathlib.Order.Disjoint
+#12 392.5 [471/630] Building Mathlib.Order.WithBot
+#12 393.8 [474/630] Building Mathlib.Algebra.Hom.Equiv.Units.GroupWithZero
+#12 395.5 [478/630] Building Mathlib.GroupTheory.GroupAction.Units
+#12 396.0 [479/630] Building Mathlib.Algebra.Order.Monoid.Defs
+#12 396.0 [479/630] Building Mathlib.Algebra.Order.Sub.Defs
+#12 396.0 [479/630] Building Mathlib.Algebra.Regular.Basic
+#12 396.0 [479/630] Building Mathlib.Algebra.Order.Monoid.MinMax
+#12 396.0 [479/630] Building Mathlib.Algebra.Order.Monoid.NatCast
+#12 396.8 [481/630] Building Mathlib.Algebra.Order.Monoid.Cancel.Defs
+#12 396.8 [481/630] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
+#12 397.0 [482/630] Building Mathlib.Order.PropInstances
+#12 397.0 [482/630] Building Mathlib.Algebra.Group.WithOne.Defs
+#12 397.0 [482/630] Building Mathlib.Order.Hom.Basic
+#12 397.1 [484/630] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
+#12 397.3 [486/630] Building Mathlib.Algebra.Ring.Regular
+#12 397.8 [487/630] Building Mathlib.Algebra.Order.Monoid.OrderDual
+#12 397.8 [488/630] Building Mathlib.Order.Heyting.Basic
+#12 398.5 [491/630] Building Mathlib.Algebra.Invertible
+#12 398.6 [492/630] Building Mathlib.Algebra.Order.Monoid.TypeTags
+#12 398.6 [492/630] Building Mathlib.Algebra.Order.Sub.Canonical
+#12 398.9 [494/630] Building Mathlib.Algebra.Order.Monoid.WithZero.Defs
+#12 399.8 [496/630] Building Mathlib.Algebra.Order.Monoid.WithZero.Basic
+#12 400.3 [497/630] Building Mathlib.Algebra.Order.Monoid.WithTop
+#12 401.4 [499/630] Building Mathlib.Algebra.Order.Monoid.Units
+#12 401.4 [499/630] Building Mathlib.Algebra.Order.Group.Defs
+#12 401.4 [499/630] Building Mathlib.Algebra.Order.Monoid.Basic
+#12 403.1 [504/630] Building Mathlib.Order.BooleanAlgebra
+#12 405.9 [505/630] Building Mathlib.Order.SymmDiff
+#12 406.0 [506/630] Building Mathlib.Algebra.Order.Group.Instances
+#12 406.0 [506/630] Building Mathlib.Algebra.Order.Group.OrderIso
+#12 406.0 [506/630] Building Mathlib.Algebra.Order.Group.Units
+#12 406.0 [506/630] Building Mathlib.Algebra.Order.Ring.Defs
+#12 406.7 [508/630] Building Mathlib.Algebra.Order.WithZero
+#12 407.1 [509/630] Building Mathlib.Algebra.Order.Group.Abs
+#12 408.9 [512/630] Building Mathlib.Data.Set.Basic
+#12 412.1 [513/630] Building Mathlib.Algebra.Order.Field.Defs
+#12 412.1 [513/630] Building Mathlib.Algebra.Order.Ring.Canonical
+#12 412.1 [513/630] Building Mathlib.Algebra.Order.Ring.Abs
+#12 412.1 [513/630] Building Mathlib.Algebra.Order.Ring.CharZero
+#12 412.6 [514/630] Building Mathlib.Data.Int.Order.Basic
+#12 413.2 [515/630] Building Mathlib.Data.Nat.Order.Basic
+#12 414.9 [519/630] Building Library.Tactic.Define
+#12 414.9 [519/630] Building Mathlib.Data.Set.Image
+#12 415.6 [521/630] Building Mathlib.Data.Nat.Order.Lemmas
+#12 415.6 [521/630] Building Mathlib.Data.List.Basic
+#12 417.1 [522/630] Building Mathlib.Data.Nat.GCD.Basic
+#12 418.3 [524/630] Building Mathlib.Data.Nat.Set
+#12 418.3 [524/630] Building Mathlib.Data.Bool.Set
+#12 418.3 [524/630] Building Mathlib.Data.Set.Prod
+#12 418.3 [524/630] Building Mathlib.Algebra.Hom.Ring
+#12 421.9 [527/630] Building Mathlib.Data.Set.NAry
+#12 421.9 [527/630] Building Mathlib.Data.Set.Function
+#12 421.9 [527/630] Building Mathlib.Data.Set.Intervals.Basic
+#12 422.0 [528/630] Building Mathlib.Algebra.Ring.Opposite
+#12 422.0 [528/630] Building Mathlib.Algebra.Field.Basic
+#12 422.0 [528/630] Building Mathlib.Data.Nat.Cast.Basic
+#12 422.0 [528/630] Building Mathlib.Algebra.GroupPower.Ring
+#12 424.7 [530/630] Building Mathlib.Algebra.Order.Invertible
+#12 424.7 [530/630] Building Mathlib.Data.Int.Dvd.Basic
+#12 424.7 [530/630] Building Mathlib.Data.Int.Cast.Lemmas
+#12 425.7 [532/630] Building Mathlib.Data.Int.Div
+#12 425.7 [532/630] Building Mathlib.Data.Rat.Defs
+#12 427.4 [537/630] Building Mathlib.Logic.Equiv.Set
+#12 427.4 [537/630] Building Mathlib.Data.Set.Pairwise.Basic
+#12 427.6 [538/630] Building Mathlib.Algebra.Field.Opposite
+#12 427.6 [538/630] Building Mathlib.Data.Int.Cast.Field
+#12 428.5 [539/630] Building Mathlib.Data.Int.CharZero
+#12 428.5 [540/630] Building Mathlib.Data.Rat.Basic
+#12 428.5 [540/630] Building Mathlib.Data.Rat.Lemmas
+#12 429.3 [542/630] Building Mathlib.Data.Rat.Order
+#12 429.4 [543/630] Building Mathlib.Data.List.Infix
+#12 430.1 [546/630] Building Mathlib.Algebra.GroupPower.Order
+#12 430.1 [546/630] Building Mathlib.Order.Bounds.Basic
+#12 430.9 [548/630] Building Mathlib.Order.Hom.Set
+#12 431.1 [549/630] Building Mathlib.Data.List.Forall2
+#12 431.6 [551/630] Building Mathlib.Data.Fin.Basic
+#12 433.1 [552/630] Building Mathlib.Order.Directed
+#12 433.1 [552/630] Building Mathlib.Order.Bounds.OrderIso
+#12 433.1 [552/630] Building Mathlib.Order.CompleteLattice
+#12 434.2 [554/630] Building Mathlib.Data.List.BigOperators.Basic
+#12 436.5 [556/630] Building Mathlib.Data.Nat.Pow
+#12 436.5 [556/630] Building Mathlib.Tactic.Linarith.Lemmas
+#12 436.5 [556/630] Building Mathlib.Algebra.Order.Field.Basic
+#12 437.7 [558/630] Building Mathlib.Data.Nat.Factorial.Basic
+#12 437.7 [558/630] Building Mathlib.Data.Nat.Size
+#12 437.8 [558/630] Building Mathlib.Algebra.GroupPower.Lemmas
+#12 438.9 [559/630] Building Mathlib.Data.Int.Bitwise
+#12 439.2 [560/630] Building Mathlib.Data.List.Join
+#12 439.2 [560/630] Building Mathlib.Data.List.Count
+#12 439.2 [560/630] Building Mathlib.Data.List.Zip
+#12 439.4 [561/630] Building Mathlib.Order.CompleteBooleanAlgebra
+#12 439.4 [561/630] Building Mathlib.Order.GaloisConnection
+#12 440.8 [563/630] Building Mathlib.Data.List.Permutation
+#12 441.6 [564/630] Building Mathlib.Data.List.Lattice
+#12 441.6 [564/630] Building Mathlib.Data.List.Pairwise
+#12 442.9 [568/630] Building Mathlib.Data.Set.Lattice
+#12 443.1 [569/630] Building Mathlib.Data.Set.List
+#12 443.7 [571/630] Building Mathlib.Data.List.Nodup
+#12 443.7 [571/630] Building Mathlib.Data.List.Chain
+#12 445.7 [575/630] Building Mathlib.Data.List.Range
+#12 445.9 [576/630] Building Mathlib.Data.List.Dedup
+#12 446.9 [578/630] Building Mathlib.Data.List.Perm
+#12 448.0 [579/630] Building Mathlib.Algebra.GroupWithZero.Power
+#12 450.8 [581/630] Building Mathlib.Data.Rat.Cast
+#12 453.4 [582/630] Building Mathlib.Data.Multiset.Basic
+#12 453.7 [583/630] Building Mathlib.Tactic.NormNum.Core
+#12 458.4 [584/630] Building Mathlib.Tactic.Positivity.Core
+#12 458.4 [584/630] Building Mathlib.Tactic.NormNum.Basic
+#12 461.5 [585/630] Building Mathlib.Tactic.Positivity.Basic
+#12 463.5 [586/630] Building Mathlib.Data.Multiset.Range
+#12 463.5 [586/630] Building Mathlib.Algebra.BigOperators.Multiset.Basic
+#12 467.5 [589/630] Building Mathlib.Data.Multiset.Bind
+#12 469.5 [590/630] Building Mathlib.Data.Multiset.Nodup
+#12 470.6 [591/630] Building Mathlib.Data.Multiset.Dedup
+#12 471.4 [592/630] Building Mathlib.Data.Multiset.FinsetOps
+#12 472.6 [593/630] Building Mathlib.Tactic.Positivity
+#12 472.6 [593/630] Building Mathlib.Tactic.NormNum
+#12 472.7 [594/630] Building Mathlib.Data.Finset.Basic
+#12 473.3 [595/630] Building Mathlib.Util.AtomM
+#12 473.3 [596/630] Building Mathlib.Tactic.CancelDenoms
+#12 473.3 [596/630] Building Library.Tactic.Cancel
+#12 474.2 [597/630] Building Mathlib.Tactic.Abel
+#12 474.2 [597/630] Building Mathlib.Tactic.Ring.Basic
+#12 484.1 stdout:
+#12 484.1 ./././Library/Tactic/Cancel.lean:76:28: warning: unused variable `h` [linter.unusedVariables]
+#12 484.1 [601/630] Building Mathlib.Data.Finset.Image
+#12 487.1 [602/630] Building Mathlib.Data.Fintype.Basic
+#12 489.3 [603/630] Building Mathlib.Tactic.Ring.RingNF
+#12 491.9 [604/630] Building Mathlib.Tactic.FinCases
+#12 492.9 [605/630] Building Mathlib.Tactic.Ring
+#12 493.2 [606/630] Building Mathlib.Tactic.IntervalCases
+#12 493.6 [607/630] Building Mathlib.Tactic.LinearCombination
+#12 493.6 [607/630] Building Mathlib.Tactic.Linarith.Datatypes
+#12 495.3 [608/630] Building Mathlib.Tactic.Linarith.Parsing
+#12 495.3 [608/630] Building Mathlib.Tactic.Linarith.Elimination
+#12 495.3 [608/630] Building Mathlib.Tactic.Linarith.Preprocessing
+#12 497.6 [612/630] Building Mathlib.Tactic.Linarith.Verification
+#12 507.0 [614/630] Building Mathlib.Tactic.Linarith.Frontend
+#12 508.6 [615/630] Building Mathlib.Tactic.Linarith
+#12 509.2 [616/630] Building Library.Theory.Division
+#12 509.2 [616/630] Building Library.Tactic.Induction
+#12 509.2 [616/630] Building Library.Tactic.Addarith
+#12 509.2 [616/630] Building Library.Theory.Prime
+#12 510.6 [618/630] Building Library.Theory.ModEq.Defs
+#12 510.6 [618/630] Building Library.Theory.Parity
+#12 510.8 [620/630] Building Library.Theory.GCD
+#12 511.3 [621/630] Building Library.Theory.ModEq.Lemmas
+#12 511.3 [621/630] Building Library.Tactic.Numbers
+#12 511.5 [622/630] Building Library.Theory.NumberTheory
+#12 511.5 [622/630] Building Library.Theory.ParityModular
+#12 512.5 [625/630] Building Library.Tactic.ModCases
+#12 512.5 [625/630] Building Library.Tactic.Extra
+#12 515.3 [629/630] Building Library
+#12 DONE 516.0s
+
+#13 [ 9/10] RUN cp -a /app/workspace /app/baseline &&     chown -R root:root /app/baseline && chmod -R a-w /app/baseline
+#13 DONE 4.4s
+
+#14 [10/10] RUN chmod 755 /root && chmod -R 755 /root/.elan
+#14 DONE 4.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 30.8s done
+#15 exporting manifest sha256:278b69839d479dcec3c26a2bbce7d2836bd35db93c480f610c3598b5fa0b40af done
+#15 exporting config sha256:baaa2c5109c9d6147dc091d5de6d1462b7b307a9b46eac2ee10e96202fb5496f done
+#15 exporting attestation manifest sha256:2836a117a52627717388ddc9185aecb6fc0c58065c110ccec8ee0a2ae5ec7d9a 0.0s done
+#15 exporting manifest list sha256:26927b37490cc0cd0b5d8aef428014973e2d8e4332a162432e00d80ed8b70ba5 done
+#15 naming to docker.io/nextagent-bench/environment:43b2d92186582c659aea done
+#15 unpacking to docker.io/nextagent-bench/environment:43b2d92186582c659aea
+#15 unpacking to docker.io/nextagent-bench/environment:43b2d92186582c659aea 15.2s done
+#15 DONE 46.1s

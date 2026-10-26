@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "grpo",
+      "directory": "grpo",
+      "description": "Reference for the GRPO (Group Relative Policy Optimization) algorithm. Use when implementing, debugging, or verifying a GRPO training pipeline — covers the mathematical formulation (group-relative advantages, clipped surrogate loss, KL penalty), the training loop (generate → score → advantage → loss), log-probability computation, advantage estimation, and relationship to PPO/REINFORCE.",
+      "sha256": "90ef5f123f4b6107d85c69d53d6878aec29e5c08950dc52b9bd6fd872187804c"
+    },
+    {
+      "name": "rl-post-training",
+      "directory": "rl-post-training",
+      "description": "Diagnostic guide for RL-based post-training of language models (GRPO, PPO, REINFORCE, DPO). Use proactively when debugging a training pipeline that shows no improvement, loss anomalies, reward stagnation, NaN gradients, or other unexpected behavior during reinforcement learning fine-tuning. Work through all pipeline stages — reward, advantages, log-probs, loss, generation/decoding — before concluding the diagnosis is complete; stopping after one or two fixes is a common failure mode. Covers log-probability math, advantage estimation, numerical stability, reward processing, and generation/decoding pipeline issues.",
+      "sha256": "3ff7177b02003bb50dc6a9783fec7a7835b3aeb184b0f161d649de498f65eb99"
+    },
+    {
+      "name": "trl",
+      "directory": "trl",
+      "description": "Reference for the TRL (Transformer Reinforcement Learning) library codebase. Use proactively before reading or editing any file under `trl/` so you have the intended contracts and invariants in mind, not just what the current code says. Covers trainer hierarchy (SFT, DPO, GRPO, KTO), shared utility functions (selective_log_softmax, decode_and_strip_padding, padding helpers), configuration system, model wrappers, and how data flows through any TRL trainer.",
+      "sha256": "96e11df1379f5488435028ea9c073006917319d29540cd42baca0a97c6f2edcd"
+    }
+  ],
+  "verifier_sha": "f7b834d3449e5759f5a4966e3ba0076a313225153a34200fe2e030938ff36b0c",
+  "prompt_sha": "fcb44592a54d95a43e8f815720b634c7bd9efa3dfd27faeeff0de43e129dee59"
+}

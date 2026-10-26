@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "flood-detection",
+      "directory": "flood-detection",
+      "description": "Detect flood events by comparing water levels to thresholds. Use when determining if flooding occurred, counting flood days, aggregating instantaneous data to daily values, or classifying flood severity.",
+      "sha256": "14e55948af7ac9e90e039985d116fbc2c605f12bb3996c8b49d52167ddf4696d"
+    },
+    {
+      "name": "nws-flood-thresholds",
+      "directory": "nws-flood-thresholds",
+      "description": "Download flood stage thresholds from NWS (National Weather Service). Use when determining flood levels for USGS stations, accessing action/minor/moderate/major flood stages, or matching stations to their flood thresholds.",
+      "sha256": "f0a534dad20748e094e2188b2fb8078264a4c0451757827b54f921146453418f"
+    },
+    {
+      "name": "usgs-data-download",
+      "directory": "usgs-data-download",
+      "description": "Download water level data from USGS using the dataretrieval package. Use when accessing real-time or historical streamflow data, downloading gage height or discharge measurements, or working with USGS station IDs.",
+      "sha256": "82f0ec56e7bbfdeadac0bf05a51683d3e90e183d9b27165923f70860183a825e"
+    }
+  ],
+  "verifier_sha": "3c5baf21d06f82fd4b25a3111b82e9308a9e479980c98bb87832f8b8c21ad29a",
+  "prompt_sha": "d14078852e09d1e627fbe07cd393fae624e181a7836ab5888ed1acaa77df1241"
+}

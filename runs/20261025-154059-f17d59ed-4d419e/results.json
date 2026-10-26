@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "generated_at": "2026-10-25T07:49:15.789182+00:00",
+    "run_id": "20261025-154059-f17d59ed-4d419e",
+    "status": "FINISHED",
+    "planned_tasks": 1,
+    "attempts": 1,
+    "first_attempt_outcomes": {
+      "PREFLIGHT_ERROR": 1
+    },
+    "scored_tasks": 0,
+    "coverage": 0.0,
+    "full_suite_score": null,
+    "score_sum": 0,
+    "note": "First valid scored attempt is primary. A scored failure is never replaced by a later success. All invalid/interrupted attempts remain visible."
+  },
+  "first_attempts": [
+    {
+      "task": "3d-scan-calc",
+      "outcome": "PREFLIGHT_ERROR",
+      "score": null,
+      "reward": null,
+      "model": "qwen3.8-27b",
+      "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+      "attempt": 1,
+      "sessionId": null,
+      "elapsed_seconds": 463.594,
+      "agent_seconds": null,
+      "model_rounds": null,
+      "tool_calls": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "skills_provided": "mesh-analysis",
+      "skills_discoverable": "",
+      "skills_invoked": "",
+      "failed_tests": "",
+      "error": "NextAgent bootstrap did not become ready",
+      "evidence_complete": true,
+      "evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-154059-f17d59ed-4d419e\\tasks\\3d-scan-calc\\attempt-001",
+      "usage_records": 0,
+      "usage_field_counts": {}
+    }
+  ],
+  "attempts": [
+    {
+      "task": "3d-scan-calc",
+      "outcome": "PREFLIGHT_ERROR",
+      "score": null,
+      "reward": null,
+      "model": "qwen3.8-27b",
+      "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+      "attempt": 1,
+      "sessionId": null,
+      "elapsed_seconds": 463.594,
+      "agent_seconds": null,
+      "model_rounds": null,
+      "tool_calls": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "skills_provided": "mesh-analysis",
+      "skills_discoverable": "",
+      "skills_invoked": "",
+      "failed_tests": "",
+      "error": "NextAgent bootstrap did not become ready",
+      "evidence_complete": true,
+      "evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-154059-f17d59ed-4d419e\\tasks\\3d-scan-calc\\attempt-001",
+      "usage_records": 0,
+      "usage_field_counts": {}
+    }
+  ]
+}

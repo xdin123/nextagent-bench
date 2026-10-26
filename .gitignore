@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.egg-info/
+.env
+.env.local
+.secrets/
+.state/
+cache/
+artifacts/
+datasets/
+launches/
+prepared.json
+path-plan.log
+*.tmp
+
+# files over GitHub's 100MB limit (excluded from push)
+runs/20261025-195147-f17d59ed-c79fa2/exports/20261026T031014814864Z/completed-framework-traces.ndjson
+runs/20261025-195147-f17d59ed-c79fa2/model-gateway/20261025-200449-ca2847/exchanges.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/court-form-filling/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/drone-planning-control/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/energy-ac-optimal-power-flow/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/energy-market-pricing/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/enterprise-information-search/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/exoplanet-detection-period/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/glm-lake-mendota/attempt-001/nextagent-home.tar
+runs/20261025-195147-f17d59ed-c79fa2/tasks/grid-dispatch-operator/attempt-001/nextagent-home.tar

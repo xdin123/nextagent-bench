@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "enterprise-artifact-search"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "enterprise-artifact-search"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

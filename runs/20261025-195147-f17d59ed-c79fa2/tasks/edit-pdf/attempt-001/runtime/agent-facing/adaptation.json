@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "pdf-editing",
+      "directory": "pdf-editing",
+      "description": "Complete guide for reading and editing PDF documents with PyMuPDF.",
+      "sha256": "7e0f4a10b79463733a43b80d2325e7f7ccd717d0485db7453ffb244b02c0ae88"
+    },
+    {
+      "name": "text-parser",
+      "directory": "text-parser",
+      "description": "Guide for parsing structured text input files.",
+      "sha256": "42da49f3d8f0d2ddef67fc6b7b1438fc8919b80f137f4c8efdce5f5327862123"
+    }
+  ],
+  "verifier_sha": "25362979c79858cda21cbc25400fcca9ff7db5792d6e4920caf46da134c3a5f5",
+  "prompt_sha": "4d440ac83105145c21923c4ee0100425f87d15d1b9a63b0ded78a742ab06d49f"
+}

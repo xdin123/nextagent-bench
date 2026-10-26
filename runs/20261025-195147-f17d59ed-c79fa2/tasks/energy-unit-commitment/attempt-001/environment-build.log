@@ -1,0 +1,93 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 753B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 90.59kB done
+#5 DONE 0.0s
+
+#6 [2/7] RUN apt-get update && apt-get install -y --no-install-recommends     bash     ca-certificates     && rm -rf /var/lib/apt/lists/*
+#6 0.853 Hit:1 http://deb.debian.org/debian trixie InRelease
+#6 1.589 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#6 2.356 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#6 9.366 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#6 10.54 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#6 11.69 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#6 11.72 Fetched 10.0 MB in 12s (871 kB/s)
+#6 11.72 Reading package lists...
+#6 12.11 Reading package lists...
+#6 12.49 Building dependency tree...
+#6 12.59 Reading state information...
+#6 12.75 bash is already the newest version (5.2.37-2+b10).
+#6 12.75 bash set to manually installed.
+#6 12.75 ca-certificates is already the newest version (20250419+deb13u1).
+#6 12.75 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+#6 DONE 12.8s
+
+#7 [3/7] RUN python -m pip install --no-cache-dir --upgrade     pip==25.0.1     setuptools==80.9.0     wheel==0.45.1
+#7 1.015 Requirement already satisfied: pip==25.0.1 in /usr/local/lib/python3.12/site-packages (25.0.1)
+#7 2.444 Collecting setuptools==80.9.0
+#7 3.110   Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+#7 3.318 Collecting wheel==0.45.1
+#7 3.482   Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+#7 3.649 Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+#7 4.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 2.4 MB/s eta 0:00:00
+#7 4.790 Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+#7 4.808 Installing collected packages: wheel, setuptools
+#7 5.304 Successfully installed setuptools-80.9.0 wheel-0.45.1
+#7 5.305 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#7 6.206 
+#7 6.206 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#7 6.206 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.3s
+
+#8 [4/7] RUN python -m pip install --no-cache-dir     numpy==1.26.4     scipy==1.13.1
+#8 2.544 Collecting numpy==1.26.4
+#8 3.413   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#8 3.990 Collecting scipy==1.13.1
+#8 4.150   Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+#8 4.426 Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+#8 15.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 1.6 MB/s eta 0:00:00
+#8 16.06 Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+#8 34.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.2/38.2 MB 2.1 MB/s eta 0:00:00
+#8 34.24 Installing collected packages: numpy, scipy
+#8 37.53 Successfully installed numpy-1.26.4 scipy-1.13.1
+#8 37.53 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 38.41 
+#8 38.41 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#8 38.41 [notice] To update, run: pip install --upgrade pip
+#8 DONE 38.6s
+
+#9 [5/7] WORKDIR /root
+#9 DONE 0.0s
+
+#10 [6/7] COPY network.json /root/network.json
+#10 DONE 0.0s
+
+#11 [7/7] RUN mkdir -p /logs/verifier /logs/agent /logs/artifacts
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 4.8s done
+#12 exporting manifest sha256:a29245e8438d2976dda9bf16175861de23ba4f0b48177af87c82d059a5accb94 done
+#12 exporting config sha256:3a6b263f8a04b137d4328f2e61f0f222c99642dfeb71f2c9582eb51660b7c4e8 done
+#12 exporting attestation manifest sha256:aabe47698ab020e88002bcf41db52661268fcea63707484e2160f1317f72f353 done
+#12 exporting manifest list sha256:0ad4aa50352accae04b21a7e33e95e4b680783d3b5afc62624b94c465f795d9b 0.0s done
+#12 naming to docker.io/nextagent-bench/environment:b84f95fbd9713199c28c done
+#12 unpacking to docker.io/nextagent-bench/environment:b84f95fbd9713199c28c
+#12 unpacking to docker.io/nextagent-bench/environment:b84f95fbd9713199c28c 1.0s done
+#12 DONE 5.9s

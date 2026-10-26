@@ -1,0 +1,15 @@
+services:
+  main:
+    image: nextagent-bench/task:d6d3d1450695251c050c
+    command:
+    - sh
+    - -c
+    - sleep infinity
+    network_mode: ${NETWORK_MODE:-bridge}
+    environment:
+    - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    labels:
+      nextagent-bench.run: 20261025-195147-f17d59ed-c79fa2
+    entrypoint: []
+    cpus: 1.0
+    mem_limit: 2048m

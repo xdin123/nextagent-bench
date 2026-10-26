@@ -1,0 +1,57 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "geospatial-routing-data",
+      "directory": "geospatial-routing-data",
+      "description": "Geospatial routing data handling for depot and station coordinates, route node IDs, internal index mappings, great-circle distance matrices, and route-distance reconstruction. Use when optimization or reporting tasks involve latitude/longitude, station IDs, depots, distance metrics, vehicle routes, or validating travel distance from reported paths.",
+      "sha256": "c6432a0d36fdd894da71dff8a75dffb390249972e906cea2e79cf7a1bd456b4c"
+    },
+    {
+      "name": "logistics-rules-to-optimization",
+      "directory": "logistics-rules-to-optimization",
+      "description": "Translate logistics and operations rules into optimization variables and constraints. Use when an operations problem describes vehicles, routes, depots, pickups, dropoffs, inventory, capacity, assignments, time windows, service targets, penalties, resource limits, or other business rules that need to become an optimization model.",
+      "sha256": "d7702a4eb61d1135a89824cd59e33901eb838db4412aaa0972142bcfd0174510"
+    },
+    {
+      "name": "routing-subtour-elimination",
+      "directory": "routing-subtour-elimination",
+      "description": "Subtour-elimination methods for TSP, VRP, pickup/dropoff routing, and routing MIPs with binary arc variables. Use when route-continuity constraints may permit disconnected cycles and the model needs MTZ constraints, flow-based connectivity constraints, DFJ subset cuts, or lazy/iterative subtour cuts.",
+      "sha256": "211306948184411fc1f63aee8c7a59b02673a44f942a7e86cc60ebaa6ab0d12a"
+    },
+    {
+      "name": "scip-opt",
+      "directory": "scip-opt",
+      "description": "SCIP optimization with PySCIPOpt. Use when facing an optimization problem with an objective, hard constraints, soft penalties, integer decisions, routing, assignment, scheduling, allocation, packing, capacity, inventory, or service-level rules. Prefer modeling and solving the problem with PySCIPOpt when it is available.",
+      "sha256": "17f98241df7040646ec6a5ba7285aa3337b99cb5a03efa0c38f65e6ebadb3ff2"
+    }
+  ],
+  "verifier_sha": "ee72f22b7cb8fcdfe222d36715980f08bb5c6d0273d9c7dbecfc60407331ac0f",
+  "prompt_sha": "8dc14f02f5500926ba8f55cd40ce6c57f445e15ca1e3ceb350e8af0fb1cca8b1"
+}

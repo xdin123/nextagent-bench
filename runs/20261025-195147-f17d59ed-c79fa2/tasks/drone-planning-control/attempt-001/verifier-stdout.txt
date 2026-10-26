@@ -1,0 +1,24 @@
+W: GPG error: http://security.ubuntu.com/ubuntu noble-security InRelease: Couldn't create temporary file /tmp/apt.conf.4MVy4W for passing config to apt-key
+E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble InRelease: Couldn't create temporary file /tmp/apt.conf.Z0ZWid for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-updates InRelease: Couldn't create temporary file /tmp/apt.conf.mHJUwE for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-backports InRelease: Couldn't create temporary file /tmp/apt.conf.M0HJHV for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+/verifier/test.sh: line 5: curl: command not found
+/verifier/test.sh: line 6: /root/.local/bin/env: No such file or directory
+=== Contents of /root ===
+total 36
+drwxr-xr-x 6 root root 4096 Oct 25 14:10 .
+drwxr-xr-x 6 root root 4096 Oct 25 14:10 ..
+-rw-r--r-- 1 root root 3106 Apr 22  2024 .bashrc
+drwxr-xr-x 3 root root 4096 Oct 25 14:10 .cache
+-rw-r--r-- 1 root root  161 Apr 22  2024 .profile
+drwxr-xr-x 2 root root 4096 Oct 25 14:10 commands
+drwxr-xr-x 8 root root 4096 Oct 25 14:10 skills
+-rwxr-xr-x 1 root root  627 Oct 13 05:44 system_params.yaml
+drwxr-xr-x 2 root root 4096 Oct 25 14:21 tool-results
+=== Contents of /root/plots (if exists) ===
+No /root/plots directory
+/verifier/test.sh: line 16: uvx: command not found

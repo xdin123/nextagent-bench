@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "manufacturing-failure-reason-codebook-normalization",
+      "directory": "manufacturing-failure-reason-codebook-normalization",
+      "description": "This skill should be considered when you need to normalize testing engineers' written defect reasons following the provided product codebooks. This skill will correct the typos, misused abbreviations, ambiguous descriptions, mixed Chinese-English text or misleading text and provide explanations. This skill will do segmentation, semantic matching, confidence calibration and station validation.",
+      "sha256": "3aba5be4d0f33208d296198fef4bad8816d191bbdd3ec8594cda1de7aab055f0"
+    }
+  ],
+  "verifier_sha": "42027720cc961a84910926116d7b6032c76465eb886bdcbd6ab650aa4069fdaf",
+  "prompt_sha": "b8dc4facd38ef8975ffd14af726e764085a4c4258729c795e4830f01cf2128e8"
+}

@@ -1,0 +1,33 @@
+{
+  "civ6-adjacency-optimizer": {
+    "extra_roots": [
+      "/data",
+      "/output"
+    ]
+  },
+  "fix-druid-loophole-cve": {
+    "extra_roots": [
+      "/opt/druid"
+    ]
+  },
+  "flink-query": {
+    "extra_roots": [
+      "/opt/flink"
+    ]
+  },
+  "react-performance-debugging": {
+    "extra_roots": [
+      "/services/api-simulator"
+    ]
+  },
+  "fix-visual-stability": {
+    "extra_roots": [
+      "/api"
+    ]
+  },
+  "syzkaller-ppdev-syzlang": {
+    "extra_roots": [
+      "/opt/syzkaller"
+    ]
+  }
+}

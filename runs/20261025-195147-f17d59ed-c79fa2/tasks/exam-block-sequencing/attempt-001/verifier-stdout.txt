@@ -1,0 +1,88 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.3.3, pluggy-1.7.0 -- /usr/local/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 3 items
+
+../../../../../../../verifier/test_outputs.py::TestOutputs::test_objective_value_is_reported_correctly FAILED [ 33%]
+../../../../../../../verifier/test_outputs.py::TestOutputs::test_solution_is_feasible FAILED [ 66%]
+../../../../../../../verifier/test_outputs.py::TestOutputs::test_verifier_objective_is_no_worse_than_oracle FAILED [100%]
+
+=================================== FAILURES ===================================
+____________ TestOutputs.test_objective_value_is_reported_correctly ____________
+
+self = <test_outputs.TestOutputs object at 0x7d7060e5da60>
+
+    def test_objective_value_is_reported_correctly(self):
+        instance = load_instance()
+        blocks = [int(b) for b in instance["all_blocks"]]
+        pair_counts = load_pair_counts(blocks)
+        triplet_counts = load_triplet_counts(blocks)
+    
+>       schedule = read_schedule(SCHEDULE_PATH)
+
+/verifier/test_outputs.py:618: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/output/schedule.csv')
+
+    def read_schedule(path: Path):
+>       assert path.exists(), f"Missing schedule file: {path}"
+E       AssertionError: Missing schedule file: /root/output/schedule.csv
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/output/schedule.csv').exists
+
+/verifier/test_outputs.py:304: AssertionError
+____________________ TestOutputs.test_solution_is_feasible _____________________
+
+self = <test_outputs.TestOutputs object at 0x7d70602c0b90>
+
+    def test_solution_is_feasible(self):
+        instance = load_instance()
+>       schedule = read_schedule(SCHEDULE_PATH)
+
+/verifier/test_outputs.py:655: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/output/schedule.csv')
+
+    def read_schedule(path: Path):
+>       assert path.exists(), f"Missing schedule file: {path}"
+E       AssertionError: Missing schedule file: /root/output/schedule.csv
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/output/schedule.csv').exists
+
+/verifier/test_outputs.py:304: AssertionError
+_________ TestOutputs.test_verifier_objective_is_no_worse_than_oracle __________
+
+self = <test_outputs.TestOutputs object at 0x7d70602c05c0>
+
+    def test_verifier_objective_is_no_worse_than_oracle(self):
+        instance = load_instance()
+        blocks = [int(b) for b in instance["all_blocks"]]
+        pair_counts = load_pair_counts(blocks)
+        triplet_counts = load_triplet_counts(blocks)
+    
+>       schedule = read_schedule(SCHEDULE_PATH)
+
+/verifier/test_outputs.py:673: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/root/output/schedule.csv')
+
+    def read_schedule(path: Path):
+>       assert path.exists(), f"Missing schedule file: {path}"
+E       AssertionError: Missing schedule file: /root/output/schedule.csv
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/output/schedule.csv').exists
+
+/verifier/test_outputs.py:304: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../../verifier/test_outputs.py::TestOutputs::test_objective_value_is_reported_correctly
+FAILED ../../../../../../../verifier/test_outputs.py::TestOutputs::test_solution_is_feasible
+FAILED ../../../../../../../verifier/test_outputs.py::TestOutputs::test_verifier_objective_is_no_worse_than_oracle
+============================== 3 failed in 0.10s ===============================

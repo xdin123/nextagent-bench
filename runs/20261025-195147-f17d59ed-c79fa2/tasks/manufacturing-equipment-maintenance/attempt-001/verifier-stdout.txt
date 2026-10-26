@@ -1,0 +1,16 @@
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Err:1 http://deb.debian.org/debian trixie InRelease
+  Unable to mkstemp /tmp/apt.sig.KrFT9e - GetTempFile (13: Permission denied)
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Err:2 http://deb.debian.org/debian trixie-updates InRelease
+  Unable to mkstemp /tmp/apt.sig.4fYajg - GetTempFile (13: Permission denied)
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Err:3 http://deb.debian.org/debian-security trixie-security InRelease
+  Unable to mkstemp /tmp/apt.sig.WH3UiV - GetTempFile (13: Permission denied)
+Reading package lists...
+W: OpenPGP signature verification failed: http://deb.debian.org/debian trixie InRelease: Unable to mkstemp /tmp/apt.sig.KrFT9e - GetTempFile (13: Permission denied)
+E: The repository 'http://deb.debian.org/debian trixie InRelease' is not signed.
+W: OpenPGP signature verification failed: http://deb.debian.org/debian trixie-updates InRelease: Unable to mkstemp /tmp/apt.sig.4fYajg - GetTempFile (13: Permission denied)
+E: The repository 'http://deb.debian.org/debian trixie-updates InRelease' is not signed.
+W: OpenPGP signature verification failed: http://deb.debian.org/debian-security trixie-security InRelease: Unable to mkstemp /tmp/apt.sig.WH3UiV - GetTempFile (13: Permission denied)
+E: The repository 'http://deb.debian.org/debian-security trixie-security InRelease' is not signed.

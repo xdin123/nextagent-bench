@@ -1,0 +1,35 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.1, pluggy-1.7.0 -- /usr/local/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 10 items
+
+../../../../../../../verifier/test_outputs.py::test_schema_and_totals PASSED [ 10%]
+../../../../../../../verifier/test_outputs.py::test_total_hit_tokens PASSED [ 20%]
+../../../../../../../verifier/test_outputs.py::test_overall_hit_rate PASSED [ 30%]
+../../../../../../../verifier/test_outputs.py::test_final_cache_blocks PASSED [ 40%]
+../../../../../../../verifier/test_outputs.py::test_per_request_sample[133] PASSED [ 50%]
+../../../../../../../verifier/test_outputs.py::test_per_request_sample[601] PASSED [ 60%]
+../../../../../../../verifier/test_outputs.py::test_per_request_sample[968] PASSED [ 70%]
+../../../../../../../verifier/test_outputs.py::test_per_request_sample[1459] PASSED [ 80%]
+../../../../../../../verifier/test_outputs.py::test_per_request_sample[1999] PASSED [ 90%]
+../../../../../../../verifier/test_outputs.py::test_per_request_self_consistency PASSED [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../../../../../../../verifier/test_outputs.py::test_schema_and_totals
+PASSED ../../../../../../../verifier/test_outputs.py::test_total_hit_tokens
+PASSED ../../../../../../../verifier/test_outputs.py::test_overall_hit_rate
+PASSED ../../../../../../../verifier/test_outputs.py::test_final_cache_blocks
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_sample[133]
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_sample[601]
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_sample[968]
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_sample[1459]
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_sample[1999]
+PASSED ../../../../../../../verifier/test_outputs.py::test_per_request_self_consistency
+============================== 10 passed in 0.05s ==============================

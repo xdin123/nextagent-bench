@@ -1,0 +1,969 @@
+{
+  "task": "enterprise-information-search",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T15:32:11.445103+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "enterprise-information-search",
+    "agent_timeout": 1800,
+    "verifier_timeout": 600,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 2048,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": 0.0,
+  "reward": 0.0,
+  "phase_seconds": {
+    "queued": 0.344,
+    "build": 303.719,
+    "container_setup": 228.843,
+    "bootstrap": 5.782,
+    "skill_preflight": 0.453,
+    "workspace_preflight": 17.25,
+    "agent": 1134.468,
+    "stop_application": 0.407,
+    "verifier": 47.828,
+    "collect": 2.594
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 2,
+  "elapsed_seconds": 1741.688,
+  "environment": {
+    "image_id": "sha256:612c6c0464e33c1c51cf8004e2f55a7922fec2803bcfa36e0cbe44b0a50ce536",
+    "environment_sha": "04295f525f68844df263c2120f642e9aec161bd85732fa6018af3884d8c4f4de",
+    "workdir": "/root",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "enterprise-artifact-search",
+      "directory": "enterprise-artifact-search",
+      "description": "Multi-hop evidence search + structured extraction over enterprise artifact datasets (docs/chats/meetings/PRs/URLs). Strong disambiguation to prevent cross-product leakage; returns JSON-ready entities plus evidence pointers.",
+      "sha256": "5c36be0be24aa8c22023640eef31f85da7c0daa4a3aa96af2fda6f784402772a"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-enterprise-information-search-1",
+  "skills_discoverable": [
+    "enterprise-artifact-search"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-f641be6b-4ecc-453e-b492-74fd54036d59",
+  "runId": "run-f9243168-64fd-4193-9a5d-28e229f829ec",
+  "requestId": "request-cd2bca44-d7e7-4dd6-9a63-00d56f436eee",
+  "accepted_at": "2026-10-25T15:41:28.300388+00:00",
+  "terminal": {
+    "status": "REQUEST_COMPLETED",
+    "payload": {
+      "rootMessageId": "request-cd2bca44-d7e7-4dd6-9a63-00d56f436eee",
+      "requestId": "request-cd2bca44-d7e7-4dd6-9a63-00d56f436eee",
+      "runId": "run-f9243168-64fd-4193-9a5d-28e229f829ec",
+      "requestContextId": "context-fb0711b9-5acd-44c0-b8fb-39a38e57851e",
+      "status": "COMPLETED",
+      "content": "All evidence is verified. Writing the final answer file now.\n\n",
+      "text": "All evidence is verified. Writing the final answer file now.\n\n",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-0e4ad571-ad6b-4555-96bf-d3c300d3c909",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ab53920b-0093-43cf-8a2b-121435291c68",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-77306f8e-5240-43b8-80b7-d4cd04b91c1f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-aea9fd62-6dc7-4123-8a91-0c78c0704c70",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-de01f49c-5a42-467c-b49a-e7546b202829",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-531e283e-e174-4ee7-8aa6-efc0e85fc677",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ebbbe108-f23d-44e2-9f4a-42b20c4a634e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9d0aea6a-e97d-4b45-971f-b7b6640f522d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-eb11c2d7-ad53-4727-b3b6-2631f1a97b46",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-062ceabe-0592-4a10-b1d7-b1b765c102fc",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-34d73fd4-5e28-4794-9d74-ac6622b878aa",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-1a3e3739-8d2f-4014-8abe-177304be9990",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d942d08a-0a2d-4a25-b8df-132a31dd136a",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-524f01e8-2fb9-4a20-8b10-485b6f9cb55b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-bbf61974-d00a-496f-984d-c52d57602a21",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7542328e-3a27-4cc0-ba13-79d823cbfd29",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-40b321aa-1ea0-4fac-8a32-4a02258e8090",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0d9ec8e7-3e4b-4f8d-8a21-152d2b5e9ad5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-81a7de0f-96e9-4cc5-9b44-40cdc9142ace",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d560e3e3-7104-474f-babc-499e89e75ccd",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e7b85e73-937f-4444-bdcb-ca3089fc145d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-79aefb9c-c499-4c95-97d7-c127dcdaa044",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-fb28921b-25bd-4d9d-9634-dad671d0aa2c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-eb277bac-190b-45de-aaeb-ab0d7114a1aa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-69e8115a-3081-47c9-bc7d-1120d3d4e75c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-1abe9bc4-558e-4024-bb7e-67272e4ee9e5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-2f1b2698-8e75-444b-8a5f-099eb4be3fc8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4128a4e0-432f-40b3-8909-b6d7451deb33",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c5cb7fea-47d5-46aa-8058-0ae334836a74",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-daae1e22-452e-4849-b864-20e38d645377",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d296b7fa-de6c-4bee-bb89-d7736539823e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d60868c1-dffd-4fca-b75e-b8524cd91234",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6f6dacb7-aed2-4ec2-b9f6-9fffc4a6a613",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c414eafe-7ceb-41bf-b80c-45658ad6a0c0",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-54bc1b8d-557c-4806-be3a-c4b997b9785d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-99b60082-9a9c-49b6-ba2e-8f47e9563da3",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-7c4300a5-e315-4822-8a4c-a0b14a839f30",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d6503ef4-f584-4c81-a03c-1a40f92262c6",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e8ff418a-75ab-4de2-99b8-7b2bad38139e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-afa3bde5-c4e5-4bc5-af3a-15ec9194d793",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-79fd3d92-c39e-4991-828b-1b8bdf5f4e99",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a9255b7d-d63d-4442-843e-18ba92551d77",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-baaec845-6741-4dc0-9fd8-dfd6d3833a82",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a15cb249-90e1-4041-924a-70dc59f291c8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6c5ed294-cbd7-42cd-aa76-01b589b97f39",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fdbe8a4a-c0d4-4d95-af92-79f8ee1b6f36",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-1eda7c0f-4758-4bd2-861a-c832d44ccdb0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-df36fc8e-be85-4a48-8153-a6b4ccd7de92",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-133b094e-b42e-4e9e-a5c8-b8cf48db4d68",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d3d905ca-5ab5-4946-8919-eaaa9e6902c1",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-1e56d3b7-adc0-404c-8983-1ee48efd052d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9181e306-d266-4834-add6-c7dc508a2814",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-b83ec60d-38f9-4d9b-bd79-ba739d093b73",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-24bf90cd-deb2-459c-ada5-b99dc61419a0",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-99f88c4f-a947-42c2-b393-2c8c030d2ec0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4405aa90-5a38-42f5-b8dd-60d5532a49ca",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-5e6a0120-1899-4124-936a-44719ec21b8e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-bb404ad2-0834-44d8-aace-26420c10716a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-26f1ac5b-eb3c-4242-bd60-30d43d177fdc",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d4c8e091-53cf-4cb8-8669-fa9c5d4736e0",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-37017042-c38a-410e-816a-711a875c4b3f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-09f368d5-a44f-443a-8a2e-41b3b86905f8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c428c034-c481-4f89-bc19-ac9082413266",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fac352f9-a76b-46b2-9426-7df38c6bae9b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ee5bd2b3-c002-4e87-9308-b06a60b57782",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6afdc0aa-53b9-4df3-9ba3-e92fc793a0aa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-10e055d9-1fa1-4b10-86f7-4acdd07b0417",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6c7c9c68-a12b-49cd-afef-8fa90d1eab5a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-bdefd7d1-75cb-4223-9ad7-9b6446ae34da",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-3dd6daaa-7c21-4e85-9cdd-ad1d7265f0c1",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-28a3c33b-f8ec-44b2-af7b-0972ed00238a",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e97636e0-a6ca-4efd-9fe5-ef031d867c65",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-508d185a-b350-4522-9409-e8dfbda5c868",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c8cd7107-2d4b-44e2-ad59-0929a82b8e87",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d3be22d7-6672-4caa-a3f6-8aff82d60fd7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7e831dcc-4f38-49bf-b0a4-9126b8d23f5d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a6b25986-31a8-450c-b9ec-5020bbce703c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f5ad9c39-8cac-4676-881d-1716007bc638",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-716d532d-af23-4e1e-a4ef-bc03795baafb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-21f4c09b-4868-4ae3-a3b7-cb79732196c2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-eb73a794-fba7-4456-bc2d-33645728d998",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9a7ebdac-e1b6-4fa8-9b2c-5732b71e445b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-5aad1521-58f4-4945-aa33-8147212601fb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-09dbc0eb-9d78-4893-9152-37652e3c1703",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-b6b15aa1-6e60-43ed-8fb6-d63eb30562e7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-21a4ad39-ef81-476c-b3c8-819ad70dc14b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-166e977c-604c-4d0f-9c1f-f4dc2d6b20d2",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-70952d0d-9141-4b17-903b-574a3932d103",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-44f4d298-d91c-4b02-9ab5-8d7c63cbaf0c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-47e0d9d0-ae28-4efb-9185-9aa7b3c56157",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-36ed910f-4964-4d84-ba02-d153f350ee7c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ab9e7bdc-1f8c-434e-999b-385f8eb1da36",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-13cc693d-fae3-4f09-9a63-19d7f4278e20",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b3e43283-ceb4-48ce-aaf3-4fa774543faf",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d57480b1-af2a-49cf-8268-0df41b685c00",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a4dc647f-8dd9-46b7-8530-47978be21dc7",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-cab7f6b5-3473-4ab3-98e4-644dfc890c99",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c3b595b0-e2cc-4f92-8db2-2484bf6b5baa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-144cfea8-3199-4357-939c-099f1e45c9fb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-97484c0e-bd9d-4a2d-81a0-908b4425f3dd",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-26f4669a-955a-4aad-8487-1b7cb70d20df",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0b029ada-1b7a-46bf-befb-11ef8f7bcfc8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-31da15ac-b539-4c44-816d-01a33b90b01f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-259cd001-89a3-4006-8a0a-9910d83576c2",
+          "hookId": "system.output-redaction-guard",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f1e01c97-0f2c-4fdc-b642-a63365b1e6be",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        }
+      ],
+      "completionLimitations": [
+        "AGENT_TURN_LIMIT_REACHED"
+      ],
+      "terminalMessageId": "assistant-2e992601-486e-46ce-afce-adf8038c8efd"
+    },
+    "sequence": 487
+  },
+  "terminal_at": "2026-10-25T16:00:22.306934+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.0,
+    "failed_tests": [
+      "test_outputs.py::TestOutputs::test_answer_structure_and_values",
+      "test_outputs.py::TestOutputs::test_tokens_efficient"
+    ],
+    "exit_code": 0
+  },
+  "outcome": "TASK_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 116187136,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 51,
+  "tool_calls": 51,
+  "skills_invoked": [
+    "enterprise-artifact-search"
+  ],
+  "skills_loaded": [
+    "enterprise-artifact-search"
+  ],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 51,
+    "LLM_CONTENT_DELTA": 35,
+    "CAPABILITY_STARTED": 51,
+    "BACKGROUND_TASK_STARTED": 4,
+    "CAPABILITY_COMPLETED": 51,
+    "BACKGROUND_TASK_FAILED": 1,
+    "BACKGROUND_TASK_COMPLETED": 3,
+    "LLM_OUTPUT_RETRACTED": 1,
+    "REQUEST_COMPLETED": 1
+  },
+  "finished_at": "2026-10-25T16:01:13.133247+00:00",
+  "evidence_complete": true
+}

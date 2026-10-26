@@ -1,0 +1,12 @@
+# Human-confirmed: ALL these keys share one account/project quota.
+shared_account: true
+# User-authorized starting concurrency; current batch can be ramped under observation.
+# This caps effective task concurrency as well, avoiding long model queue timeouts.
+max_concurrency: 2
+requests_per_minute: null
+tokens_per_minute: null
+min_interval_seconds: 2
+# Retry only explicit 429 / rejected credentials BEFORE any successful stream.
+max_attempts: 3
+max_wait_seconds: 90
+upstream_idle_timeout_seconds: 120

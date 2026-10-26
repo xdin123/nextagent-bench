@@ -1,0 +1,27 @@
+{
+  "registered": [
+    "dyn-object-masks",
+    "egomotion-estimation",
+    "output-validation",
+    "sampling-and-indexing"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "dyn-object-masks"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "egomotion-estimation"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "output-validation"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "sampling-and-indexing"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

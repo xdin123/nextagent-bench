@@ -1,0 +1,2360 @@
+[
+  {
+    "tool_call_id": "call_c019483786ee4671b27855c1",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/a2add3568d6c41428251e37412cb98f4/",
+    "visible_contract_check": {
+      "id": "call_c019483786ee4671b27855c1",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"ls -la workspace/ && ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4 2>&1 | head -30\", \"description\": \"Check input video file and metadata\"}",
+      "empty_id_continuations": 24,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "ls -la workspace/ && ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4 2>&1 | head -30",
+        "description": "Check input video file and metadata"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_c019483786ee4671b27855c1",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "ls -la workspace/ && ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4 2>&1 | head -30",
+          "description": "Check input video file and metadata"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:11:11.659+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 0,
+        "toolCallId": "call_c019483786ee4671b27855c1",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 1,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "ls -la workspace/ && ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4 2>&1 | head -30",
+          "description": "Check input video file and metadata"
+        },
+        "toolSafeSummary": "ls -la wo****ce/ && ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,width,height,r_frame_rate,nb_frames -of",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "total 940\ndrwxr-xr-x 4 root root   4096 Oct 25 14:10 .\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 ..\n-rw-r--r-- 1 root root   3106 Apr 22  2024 .bashrc\n-rw-r--r-- 1 root root    161 Apr 22  2024 .profile\n-rwxr-xr-x 1 root root 935109 Oct 13 05:44 input.mp4\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 skills\ndrwxr-xr-x 2 root root   4096 Oct 25 14:11 tool-results\n",
+            "stderr": "Argument '2>&1' provided as input filename, but '…/workspace/input.mp4' was already specified.\n",
+            "exitCode": 0,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "b13d14cd5947a527",
+        "stepId": "turn-1",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/ab7a3a3bdbe74e74957b3682b695f330/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_c019483786ee4671b27855c1",
+          "content": "{\"stdout\":\"total 940\\ndrwxr-xr-x 4 root root   4096 Oct 25 14:10 .\\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 ..\\n-rw-r--r-- 1 root root   3106 Apr 22  2024 .bashrc\\n-rw-r--r-- 1 root root    161 Apr 22  2024 .profile\\n-rwxr-xr-x 1 root root 935109 Oct 13 05:44 input.mp4\\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 skills\\ndrwxr-xr-x 2 root root   4096 Oct 25 14:11 tool-results\\n\",\"stderr\":\"Argument '2>&1' provided as input filename, but '/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace/input.mp4' was already specified.\\n\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/970bcf32377c4f16b8e50d8487368f35/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_c019483786ee4671b27855c1",
+          "content": "{\"stdout\":\"total 940\\ndrwxr-xr-x 4 root root   4096 Oct 25 14:10 .\\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 ..\\n-rw-r--r-- 1 root root   3106 Apr 22  2024 .bashrc\\n-rw-r--r-- 1 root root    161 Apr 22  2024 .profile\\n-rwxr-xr-x 1 root root 935109 Oct 13 05:44 input.mp4\\ndrwxr-xr-x 6 root root   4096 Oct 25 14:10 skills\\ndrwxr-xr-x 2 root root   4096 Oct 25 14:11 tool-results\\n\",\"stderr\":\"Argument '2>&1' provided as input filename, but '/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace/input.mp4' was already specified.\\n\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_4846c96beb824410b848034e",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/a2add3568d6c41428251e37412cb98f4/",
+    "visible_contract_check": {
+      "id": "call_4846c96beb824410b848034e",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"sampling-and-indexing\"}",
+      "empty_id_continuations": 5,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "sampling-and-indexing"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_4846c96beb824410b848034e",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "sampling-and-indexing"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:11:11.652+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 0,
+        "toolCallId": "call_4846c96beb824410b848034e",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 2,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "sampling-and-indexing"
+        },
+        "toolSafeSummary": "sampling-and-indexing",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "sampling-and-indexing",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "sampling-and-indexing",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:sampling-and-indexing",
+            "frontmatterHash": "sampling-and-indexing-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "69fa8503040df269",
+        "stepId": "turn-1",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/ab7a3a3bdbe74e74957b3682b695f330/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4846c96beb824410b848034e",
+          "content": "{\"name\":\"sampling-and-indexing\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/970bcf32377c4f16b8e50d8487368f35/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4846c96beb824410b848034e",
+          "content": "{\"name\":\"sampling-and-indexing\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_bea9d55d08d24f9290993f34",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/ab7a3a3bdbe74e74957b3682b695f330/",
+    "visible_contract_check": {
+      "id": "call_bea9d55d08d24f9290993f34",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,width,height,avg_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4\", \"description\": \"Probe video metadata\"}",
+      "empty_id_continuations": 17,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,width,height,avg_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4",
+        "description": "Probe video metadata"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_bea9d55d08d24f9290993f34",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,width,height,avg_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4",
+          "description": "Probe video metadata"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:11:21.323+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 1,
+        "toolCallId": "call_bea9d55d08d24f9290993f34",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,width,height,avg_frame_rate,nb_frames -of default=noprint_wrappers=1 workspace/input.mp4",
+          "description": "Probe video metadata"
+        },
+        "toolSafeSummary": "ffprobe -v error -show_entries format=duration -show_entries stream=codec_type,width,height,avg_frame_rate,nb_frames -of default=noprint_wrappers=1 wo****ce/****",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "codec_type=video\nwidth=1280\nheight=720\navg_frame_rate=60/1\nnb_frames=207\nduration=3.450000\n",
+            "stderr": "",
+            "exitCode": 0,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "88dca875e2b92446",
+        "stepId": "turn-2",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/970bcf32377c4f16b8e50d8487368f35/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_bea9d55d08d24f9290993f34",
+          "content": "{\"stdout\":\"codec_type=video\\nwidth=1280\\nheight=720\\navg_frame_rate=60/1\\nnb_frames=207\\nduration=3.450000\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/bf948d267f874d33a44732807b180535/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_bea9d55d08d24f9290993f34",
+          "content": "{\"stdout\":\"codec_type=video\\nwidth=1280\\nheight=720\\navg_frame_rate=60/1\\nnb_frames=207\\nduration=3.450000\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_d799294f2f7948cd898ae5f3",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/970bcf32377c4f16b8e50d8487368f35/",
+    "visible_contract_check": {
+      "id": "call_d799294f2f7948cd898ae5f3",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"egomotion-estimation\"}",
+      "empty_id_continuations": 6,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "egomotion-estimation"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_d799294f2f7948cd898ae5f3",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "egomotion-estimation"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:11:28.699+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 2,
+        "toolCallId": "call_d799294f2f7948cd898ae5f3",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 1,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "egomotion-estimation"
+        },
+        "toolSafeSummary": "egomotion-estimation",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "egomotion-estimation",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "egomotion-estimation",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:egomotion-estimation",
+            "frontmatterHash": "egomotion-estimation-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "22a846200d51523a",
+        "stepId": "turn-3",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/bf948d267f874d33a44732807b180535/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_d799294f2f7948cd898ae5f3",
+          "content": "{\"name\":\"egomotion-estimation\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/b6af060ac9504b358c9df32eb6b62d40/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_d799294f2f7948cd898ae5f3",
+          "content": "{\"name\":\"egomotion-estimation\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_5b740678661f44d9bc0454f5",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/970bcf32377c4f16b8e50d8487368f35/",
+    "visible_contract_check": {
+      "id": "call_5b740678661f44d9bc0454f5",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"dyn-object-masks\"}",
+      "empty_id_continuations": 5,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "dyn-object-masks"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_5b740678661f44d9bc0454f5",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "dyn-object-masks"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:11:28.707+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 2,
+        "toolCallId": "call_5b740678661f44d9bc0454f5",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 2,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "dyn-object-masks"
+        },
+        "toolSafeSummary": "dyn-object-masks",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "dyn-object-masks",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "dyn-object-masks",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:dyn-object-masks",
+            "frontmatterHash": "dyn-object-masks-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "c74ecbd1bb434ee2",
+        "stepId": "turn-3",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/bf948d267f874d33a44732807b180535/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_5b740678661f44d9bc0454f5",
+          "content": "{\"name\":\"dyn-object-masks\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/b6af060ac9504b358c9df32eb6b62d40/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_5b740678661f44d9bc0454f5",
+          "content": "{\"name\":\"dyn-object-masks\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_9c7c5e38d5bb4cf8b7af518a",
+    "tool_name": "TodoWrite",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/bf948d267f874d33a44732807b180535/",
+    "visible_contract_check": {
+      "id": "call_9c7c5e38d5bb4cf8b7af518a",
+      "name": "TodoWrite",
+      "arguments_text": "{\"todos\": \n[{\"content\": \"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\", \"status\": \"in_progress\", \"activeForm\": \"Checking environment and extracting sampled frames\"}, {\"content\": \"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\", \"status\": \"pending\", \"activeForm\": \"Estimating egomotion between sampled frames\"}, {\"content\": \"Classify motion labels per interval with tuned thresholds\", \"status\": \"pending\", \"activeForm\": \"Classifying motion labels per interval\"}, {\"content\": \"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\", \"status\": \"pending\", \"activeForm\": \"Computing dynamic object masks\"}, {\"content\": \"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\", \"status\": \"pending\", \"activeForm\": \"Writing and validating output files\"}]\n\n}",
+      "empty_id_continuations": 4,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "todos"
+        ],
+        "properties": {
+          "todos": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "content",
+                "activeForm",
+                "status"
+              ],
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "activeForm": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "status": {
+                  "enum": [
+                    "pending",
+                    "in_progress",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "arguments": {
+        "todos": [
+          {
+            "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+            "status": "in_progress",
+            "activeForm": "Checking environment and extracting sampled frames"
+          },
+          {
+            "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+            "status": "pending",
+            "activeForm": "Estimating egomotion between sampled frames"
+          },
+          {
+            "content": "Classify motion labels per interval with tuned thresholds",
+            "status": "pending",
+            "activeForm": "Classifying motion labels per interval"
+          },
+          {
+            "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+            "status": "pending",
+            "activeForm": "Computing dynamic object masks"
+          },
+          {
+            "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+            "status": "pending",
+            "activeForm": "Writing and validating output files"
+          }
+        ]
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_9c7c5e38d5bb4cf8b7af518a",
+        "toolName": "TodoWrite",
+        "arguments": {
+          "todos": [
+            {
+              "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+              "status": "in_progress",
+              "activeForm": "Checking environment and extracting sampled frames"
+            },
+            {
+              "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+              "status": "pending",
+              "activeForm": "Estimating egomotion between sampled frames"
+            },
+            {
+              "content": "Classify motion labels per interval with tuned thresholds",
+              "status": "pending",
+              "activeForm": "Classifying motion labels per interval"
+            },
+            {
+              "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+              "status": "pending",
+              "activeForm": "Computing dynamic object masks"
+            },
+            {
+              "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+              "status": "pending",
+              "activeForm": "Writing and validating output files"
+            }
+          ]
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:14:00.387+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 3,
+        "toolCallId": "call_9c7c5e38d5bb4cf8b7af518a",
+        "toolName": "TodoWrite",
+        "capabilityId": "TodoWrite",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 1,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "todos": [
+            {
+              "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+              "status": "in_progress",
+              "activeForm": "Checking environment and extracting sampled frames"
+            },
+            {
+              "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+              "status": "pending",
+              "activeForm": "Estimating egomotion between sampled frames"
+            },
+            {
+              "content": "Classify motion labels per interval with tuned thresholds",
+              "status": "pending",
+              "activeForm": "Classifying motion labels per interval"
+            },
+            {
+              "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+              "status": "pending",
+              "activeForm": "Computing dynamic object masks"
+            },
+            {
+              "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+              "status": "pending",
+              "activeForm": "Writing and validating output files"
+            }
+          ]
+        },
+        "toolSafeSummary": "todo items=5 status=pending:4,in_progress:1,completed:0",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "newTodos": [
+              {
+                "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+                "activeForm": "Checking environment and extracting sampled frames",
+                "status": "in_progress"
+              },
+              {
+                "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+                "activeForm": "Estimating egomotion between sampled frames",
+                "status": "pending"
+              },
+              {
+                "content": "Classify motion labels per interval with tuned thresholds",
+                "activeForm": "Classifying motion labels per interval",
+                "status": "pending"
+              },
+              {
+                "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+                "activeForm": "Computing dynamic object masks",
+                "status": "pending"
+              },
+              {
+                "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+                "activeForm": "Writing and validating output files",
+                "status": "pending"
+              }
+            ]
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "d70ce1bdb64495d2",
+        "stepId": "turn-4",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/b6af060ac9504b358c9df32eb6b62d40/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_9c7c5e38d5bb4cf8b7af518a",
+          "content": "{\"newTodos\":[{\"content\":\"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\",\"activeForm\":\"Checking environment and extracting sampled frames\",\"status\":\"in_progress\"},{\"content\":\"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\",\"activeForm\":\"Estimating egomotion between sampled frames\",\"status\":\"pending\"},{\"content\":\"Classify motion labels per interval with tuned thresholds\",\"activeForm\":\"Classifying motion labels per interval\",\"status\":\"pending\"},{\"content\":\"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\",\"activeForm\":\"Computing dynamic object masks\",\"status\":\"pending\"},{\"content\":\"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\",\"activeForm\":\"Writing and validating output files\",\"status\":\"pending\"}]}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1233aa5c686844909d860b3bd8e9f568/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_9c7c5e38d5bb4cf8b7af518a",
+          "content": "{\"newTodos\":[{\"content\":\"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\",\"activeForm\":\"Checking environment and extracting sampled frames\",\"status\":\"in_progress\"},{\"content\":\"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\",\"activeForm\":\"Estimating egomotion between sampled frames\",\"status\":\"pending\"},{\"content\":\"Classify motion labels per interval with tuned thresholds\",\"activeForm\":\"Classifying motion labels per interval\",\"status\":\"pending\"},{\"content\":\"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\",\"activeForm\":\"Computing dynamic object masks\",\"status\":\"pending\"},{\"content\":\"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\",\"activeForm\":\"Writing and validating output files\",\"status\":\"pending\"}]}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_44624414a49a451a9538aa08",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/bf948d267f874d33a44732807b180535/",
+    "visible_contract_check": {
+      "id": "call_44624414a49a451a9538aa08",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"python3 -c \\\"import cv2, numpy, scipy; print('cv2', cv2.__version__); print('numpy', numpy.__version__); print('scipy', scipy.__version__)\\\"\", \"description\": \"Check cv2/numpy/scipy availability\"}",
+      "empty_id_continuations": 19,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "python3 -c \"import cv2, numpy, scipy; print('cv2', cv2.__version__); print('numpy', numpy.__version__); print('scipy', scipy.__version__)\"",
+        "description": "Check cv2/numpy/scipy availability"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_44624414a49a451a9538aa08",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "python3 -c \"import cv2, numpy, scipy; print('cv2', cv2.__version__); print('numpy', numpy.__version__); print('scipy', scipy.__version__)\"",
+          "description": "Check cv2/numpy/scipy availability"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "error",
+        "timestamp": "2026-10-25T14:14:00.384+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.call.failed",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 3,
+        "toolCallId": "call_44624414a49a451a9538aa08",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 2,
+        "toolBatchSize": 2,
+        "toolInput": {
+          "command": "python3 -c \"import cv2, numpy, scipy; print('cv2', cv2.__version__); print('numpy', numpy.__version__); print('scipy', scipy.__version__)\"",
+          "description": "Check cv2/numpy/scipy availability"
+        },
+        "toolSafeSummary": "python3 -c \"import cv2, numpy, scipy; print('cv2', cv2.__version__); print('numpy', numpy.__version__); print('scipy', scipy.__version__)\"",
+        "toolOutput": {
+          "status": "FAILED",
+          "structuredPayload": {},
+          "artifactRefs": [],
+          "safeError": {
+            "code": "CAPABILITY_INPUT_INVALID",
+            "message": "Bash Python invocation mode is not supported by the sandbox.",
+            "category": "VALIDATION",
+            "retryable": true,
+            "safeDetails": {
+              "reasonCode": "BASH_PYTHON_INLINE_MODE_UNSUPPORTED",
+              "hint": "For inline Python source, call the Python tool with a code field. For existing files, call Bash as `python path/to/script.py ...` or `python -m package.module ...`."
+            }
+          },
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "safeErrorCode": "CAPABILITY_INPUT_INVALID",
+        "safeErrorCategory": "VALIDATION",
+        "safeErrorSummary": "Bash Python invocation mode is not supported by the sandbox.",
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "711e7a2078cef57f",
+        "stepId": "turn-4",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/b6af060ac9504b358c9df32eb6b62d40/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_44624414a49a451a9538aa08",
+          "content": "{\"status\":\"FAILED\",\"safeError\":{\"code\":\"CAPABILITY_INPUT_INVALID\",\"message\":\"Bash Python invocation mode is not supported by the sandbox.\",\"category\":\"VALIDATION\",\"retryable\":true,\"safeDetails\":{\"reasonCode\":\"BASH_PYTHON_INLINE_MODE_UNSUPPORTED\",\"hint\":\"For inline Python source, call the Python tool with a code field. For existing files, call Bash as `python path/to/script.py ...` or `python -m package.module ...`.\"}}}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1233aa5c686844909d860b3bd8e9f568/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_44624414a49a451a9538aa08",
+          "content": "{\"status\":\"FAILED\",\"safeError\":{\"code\":\"CAPABILITY_INPUT_INVALID\",\"message\":\"Bash Python invocation mode is not supported by the sandbox.\",\"category\":\"VALIDATION\",\"retryable\":true,\"safeDetails\":{\"reasonCode\":\"BASH_PYTHON_INLINE_MODE_UNSUPPORTED\",\"hint\":\"For inline Python source, call the Python tool with a code field. For existing files, call Bash as `python path/to/script.py ...` or `python -m package.module ...`.\"}}}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_73640f3354ea479eb7848c7d",
+    "tool_name": "Python",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/b6af060ac9504b358c9df32eb6b62d40/",
+    "visible_contract_check": {
+      "id": "call_73640f3354ea479eb7848c7d",
+      "name": "Python",
+      "arguments_text": "{\"code\": \"import cv2, numpy, scipy\\nprint('cv2', cv2.__version__)\\nprint('numpy', numpy.__version__)\\nprint('scipy', scipy.__version__)\\ncap = cv2.VideoCapture('workspace/input.mp4')\\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS), 'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\\ncap.release()\\n\", \"description\": \"Check cv2/numpy/scipy and video metadata\"}",
+      "empty_id_continuations": 39,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Python source code snippet to execute in isolation."
+          },
+          "preamble": {
+            "type": "string",
+            "description": "Variable declaration lines prepended to code at execution time."
+          },
+          "args": {
+            "type": "array",
+            "description": "Optional string arguments made available to the snippet runner.",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Requested timeout in milliseconds, capped by tool policy and invocation context."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the snippet."
+          }
+        }
+      },
+      "arguments": {
+        "code": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS), 'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n",
+        "description": "Check cv2/numpy/scipy and video metadata"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_73640f3354ea479eb7848c7d",
+        "toolName": "Python",
+        "arguments": {
+          "code": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS), 'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n",
+          "description": "Check cv2/numpy/scipy and video metadata"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "error",
+        "timestamp": "2026-10-25T14:14:10.612+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.call.failed",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 4,
+        "toolCallId": "call_73640f3354ea479eb7848c7d",
+        "toolName": "Python",
+        "capabilityId": "Python",
+        "toolInput": {
+          "code": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS), 'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n",
+          "description": "Check cv2/numpy/scipy and video metadata"
+        },
+        "toolSafeSummary": "import cv2, numpy, scipy",
+        "toolOutput": {
+          "status": "FAILED",
+          "structuredPayload": {},
+          "artifactRefs": [],
+          "safeError": {
+            "code": "SANDBOX_UNAVAILABLE",
+            "message": "The governed sandbox execution boundary is unavailable.",
+            "category": "UNAVAILABLE",
+            "retryable": false,
+            "safeDetails": {
+              "sandboxReasonCode": "PYTHON_EXECUTION_UNAVAILABLE"
+            }
+          },
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "safeErrorCode": "SANDBOX_UNAVAILABLE",
+        "safeErrorCategory": "UNAVAILABLE",
+        "safeErrorSummary": "The governed sandbox execution boundary is unavailable.",
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "3b198c9aeae5e8fb",
+        "stepId": "turn-5",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1233aa5c686844909d860b3bd8e9f568/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_73640f3354ea479eb7848c7d",
+          "content": "{\"status\":\"FAILED\",\"safeError\":{\"code\":\"SANDBOX_UNAVAILABLE\",\"message\":\"The governed sandbox execution boundary is unavailable.\",\"category\":\"UNAVAILABLE\",\"retryable\":false,\"safeDetails\":{\"sandboxReasonCode\":\"PYTHON_EXECUTION_UNAVAILABLE\"}}}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1133219c54604f2e85b9750f44e8632c/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_73640f3354ea479eb7848c7d",
+          "content": "{\"status\":\"FAILED\",\"safeError\":{\"code\":\"SANDBOX_UNAVAILABLE\",\"message\":\"The governed sandbox execution boundary is unavailable.\",\"category\":\"UNAVAILABLE\",\"retryable\":false,\"safeDetails\":{\"sandboxReasonCode\":\"PYTHON_EXECUTION_UNAVAILABLE\"}}}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_1a5caeb37a0946bebc736326",
+    "tool_name": "Write",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1233aa5c686844909d860b3bd8e9f568/",
+    "visible_contract_check": {
+      "id": "call_1a5caeb37a0946bebc736326",
+      "name": "Write",
+      "arguments_text": "{\"file_path\": \"temp/envcheck.py\", \"content\": \"import cv2, numpy, scipy\\nprint('cv2', cv2.__version__)\\nprint('numpy', numpy.__version__)\\nprint('scipy', scipy.__version__)\\ncap = cv2.VideoCapture('workspace/input.mp4')\\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\\ncap.release()\\n\"}",
+      "empty_id_continuations": 36,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file_path",
+          "content"
+        ],
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete root-qualified path to create or rewrite. Bare paths and `/work/...` are rejected; results return the canonical logical path."
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete UTF-8 text content to write."
+          }
+        }
+      },
+      "arguments": {
+        "file_path": "temp/envcheck.py",
+        "content": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_1a5caeb37a0946bebc736326",
+        "toolName": "Write",
+        "arguments": {
+          "file_path": "temp/envcheck.py",
+          "content": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:14:20.240+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 5,
+        "toolCallId": "call_1a5caeb37a0946bebc736326",
+        "toolName": "Write",
+        "capabilityId": "Write",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "file_path": "temp/envcheck.py",
+          "content": "import cv2, numpy, scipy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\nprint('scipy', scipy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+        },
+        "toolSafeSummary": "****/en****py im****ce/in****()",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "type": "create",
+            "file_path": "temp/envcheck.py"
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "1b199cdd0281afad",
+        "stepId": "turn-6",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1133219c54604f2e85b9750f44e8632c/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_1a5caeb37a0946bebc736326",
+          "content": "{\"type\":\"create\",\"file_path\":\"temp/envcheck.py\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/cb822737af814abd9eb3fd0f308d00c0/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_1a5caeb37a0946bebc736326",
+          "content": "{\"type\":\"create\",\"file_path\":\"temp/envcheck.py\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_4436160cf9c34051bc405d79",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/1133219c54604f2e85b9750f44e8632c/",
+    "visible_contract_check": {
+      "id": "call_4436160cf9c34051bc405d79",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"python3 temp/envcheck.py\", \"description\": \"Run env check script\"}",
+      "empty_id_continuations": 9,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "python3 temp/envcheck.py",
+        "description": "Run env check script"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_4436160cf9c34051bc405d79",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "python3 temp/envcheck.py",
+          "description": "Run env check script"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:14:23.761+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 6,
+        "toolCallId": "call_4436160cf9c34051bc405d79",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "python3 temp/envcheck.py",
+          "description": "Run env check script"
+        },
+        "toolSafeSummary": "python3 ****/en****py",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"temp/envcheck.py\", line 1, in <module>\n    import cv2, numpy, scipy\nModuleNotFoundError: No module named 'scipy'\n",
+            "exitCode": 1,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "274a8d3a4ca1ef11",
+        "stepId": "turn-7",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/cb822737af814abd9eb3fd0f308d00c0/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4436160cf9c34051bc405d79",
+          "content": "{\"stdout\":\"\",\"stderr\":\"Traceback (most recent call last):\\n  File \\\"temp/envcheck.py\\\", line 1, in <module>\\n    import cv2, numpy, scipy\\nModuleNotFoundError: No module named 'scipy'\\n\",\"exitCode\":1,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/595f9736dd874a94a67d2539d568a86b/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4436160cf9c34051bc405d79",
+          "content": "{\"stdout\":\"\",\"stderr\":\"Traceback (most recent call last):\\n  File \\\"temp/envcheck.py\\\", line 1, in <module>\\n    import cv2, numpy, scipy\\nModuleNotFoundError: No module named 'scipy'\\n\",\"exitCode\":1,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_e5645a010864466a8cde0bc3",
+    "tool_name": "Write",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/cb822737af814abd9eb3fd0f308d00c0/",
+    "visible_contract_check": {
+      "id": "call_e5645a010864466a8cde0bc3",
+      "name": "Write",
+      "arguments_text": "{\"file_path\": \"temp/envcheck.py\", \"content\": \"import cv2, numpy\\nprint('cv2', cv2.__version__)\\nprint('numpy', numpy.__version__)\\ncap = cv2.VideoCapture('workspace/input.mp4')\\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\\ncap.release()\\n\"}",
+      "empty_id_continuations": 31,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file_path",
+          "content"
+        ],
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete root-qualified path to create or rewrite. Bare paths and `/work/...` are rejected; results return the canonical logical path."
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete UTF-8 text content to write."
+          }
+        }
+      },
+      "arguments": {
+        "file_path": "temp/envcheck.py",
+        "content": "import cv2, numpy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_e5645a010864466a8cde0bc3",
+        "toolName": "Write",
+        "arguments": {
+          "file_path": "temp/envcheck.py",
+          "content": "import cv2, numpy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:14:29.534+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 7,
+        "toolCallId": "call_e5645a010864466a8cde0bc3",
+        "toolName": "Write",
+        "capabilityId": "Write",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "file_path": "temp/envcheck.py",
+          "content": "import cv2, numpy\nprint('cv2', cv2.__version__)\nprint('numpy', numpy.__version__)\ncap = cv2.VideoCapture('workspace/input.mp4')\nprint('frames', int(cap.get(cv2.CAP_PROP_FRAME_COUNT)), 'fps', cap.get(cv2.CAP_PROP_FPS),\n      'size', int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))\ncap.release()\n"
+        },
+        "toolSafeSummary": "****/en****py im****ce/in****()",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "type": "update",
+            "file_path": "temp/envcheck.py"
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "f9c911745963f387",
+        "stepId": "turn-8",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/595f9736dd874a94a67d2539d568a86b/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_e5645a010864466a8cde0bc3",
+          "content": "{\"type\":\"update\",\"file_path\":\"temp/envcheck.py\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/0fe4f436194c4441a3352f0eef05e740/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_e5645a010864466a8cde0bc3",
+          "content": "{\"type\":\"update\",\"file_path\":\"temp/envcheck.py\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_4d0818ef15cb4fd99e9866d1",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/595f9736dd874a94a67d2539d568a86b/",
+    "visible_contract_check": {
+      "id": "call_4d0818ef15cb4fd99e9866d1",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"python3 temp/envcheck.py\", \"description\": \"Run env check script\"}",
+      "empty_id_continuations": 9,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "python3 temp/envcheck.py",
+        "description": "Run env check script"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_4d0818ef15cb4fd99e9866d1",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "python3 temp/envcheck.py",
+          "description": "Run env check script"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:14:42.158+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 8,
+        "toolCallId": "call_4d0818ef15cb4fd99e9866d1",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "python3 temp/envcheck.py",
+          "description": "Run env check script"
+        },
+        "toolSafeSummary": "python3 ****/en****py",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "cv2 4.12.0\nnumpy 2.2.6\nframes 207 fps 60.0 size 1280 720\n",
+            "stderr": "",
+            "exitCode": 0,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "65df54a19f920b33",
+        "stepId": "turn-9",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/0fe4f436194c4441a3352f0eef05e740/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4d0818ef15cb4fd99e9866d1",
+          "content": "{\"stdout\":\"cv2 4.12.0\\nnumpy 2.2.6\\nframes 207 fps 60.0 size 1280 720\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/77c6f57de155427394f430152179bf0d/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4d0818ef15cb4fd99e9866d1",
+          "content": "{\"stdout\":\"cv2 4.12.0\\nnumpy 2.2.6\\nframes 207 fps 60.0 size 1280 720\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_4e382c26bbc64673b33c0f5f",
+    "tool_name": "TodoWrite",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/0fe4f436194c4441a3352f0eef05e740/",
+    "visible_contract_check": {
+      "id": "call_4e382c26bbc64673b33c0f5f",
+      "name": "TodoWrite",
+      "arguments_text": "{\"todos\": \n[{\"content\": \"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\", \"status\": \"completed\", \"activeForm\": \"Checking environment and extracting sampled frames\"}, {\"content\": \"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\", \"status\": \"in_progress\", \"activeForm\": \"Estimating egomotion between sampled frames\"}, {\"content\": \"Classify motion labels per interval with tuned thresholds\", \"status\": \"pending\", \"activeForm\": \"Classifying motion labels per interval\"}, {\"content\": \"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\", \"status\": \"pending\", \"activeForm\": \"Computing dynamic object masks\"}, {\"content\": \"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\", \"status\": \"pending\", \"activeForm\": \"Writing and validating output files\"}]\n\n}",
+      "empty_id_continuations": 3,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "todos"
+        ],
+        "properties": {
+          "todos": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "content",
+                "activeForm",
+                "status"
+              ],
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "activeForm": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                "status": {
+                  "enum": [
+                    "pending",
+                    "in_progress",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "arguments": {
+        "todos": [
+          {
+            "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+            "status": "completed",
+            "activeForm": "Checking environment and extracting sampled frames"
+          },
+          {
+            "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+            "status": "in_progress",
+            "activeForm": "Estimating egomotion between sampled frames"
+          },
+          {
+            "content": "Classify motion labels per interval with tuned thresholds",
+            "status": "pending",
+            "activeForm": "Classifying motion labels per interval"
+          },
+          {
+            "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+            "status": "pending",
+            "activeForm": "Computing dynamic object masks"
+          },
+          {
+            "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+            "status": "pending",
+            "activeForm": "Writing and validating output files"
+          }
+        ]
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_4e382c26bbc64673b33c0f5f",
+        "toolName": "TodoWrite",
+        "arguments": {
+          "todos": [
+            {
+              "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+              "status": "completed",
+              "activeForm": "Checking environment and extracting sampled frames"
+            },
+            {
+              "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+              "status": "in_progress",
+              "activeForm": "Estimating egomotion between sampled frames"
+            },
+            {
+              "content": "Classify motion labels per interval with tuned thresholds",
+              "status": "pending",
+              "activeForm": "Classifying motion labels per interval"
+            },
+            {
+              "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+              "status": "pending",
+              "activeForm": "Computing dynamic object masks"
+            },
+            {
+              "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+              "status": "pending",
+              "activeForm": "Writing and validating output files"
+            }
+          ]
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:15:57.413+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 9,
+        "toolCallId": "call_4e382c26bbc64673b33c0f5f",
+        "toolName": "TodoWrite",
+        "capabilityId": "TodoWrite",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 1,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "todos": [
+            {
+              "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+              "status": "completed",
+              "activeForm": "Checking environment and extracting sampled frames"
+            },
+            {
+              "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+              "status": "in_progress",
+              "activeForm": "Estimating egomotion between sampled frames"
+            },
+            {
+              "content": "Classify motion labels per interval with tuned thresholds",
+              "status": "pending",
+              "activeForm": "Classifying motion labels per interval"
+            },
+            {
+              "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+              "status": "pending",
+              "activeForm": "Computing dynamic object masks"
+            },
+            {
+              "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+              "status": "pending",
+              "activeForm": "Writing and validating output files"
+            }
+          ]
+        },
+        "toolSafeSummary": "todo items=5 status=pending:3,in_progress:1,completed:1",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "newTodos": [
+              {
+                "content": "Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps",
+                "activeForm": "Checking environment and extracting sampled frames",
+                "status": "completed"
+              },
+              {
+                "content": "Estimate egomotion (affine) between consecutive sampled frames + diagnostics",
+                "activeForm": "Estimating egomotion between sampled frames",
+                "status": "in_progress"
+              },
+              {
+                "content": "Classify motion labels per interval with tuned thresholds",
+                "activeForm": "Classifying motion labels per interval",
+                "status": "pending"
+              },
+              {
+                "content": "Compute dynamic object masks (global align + diff + threshold + morphology) per frame",
+                "activeForm": "Computing dynamic object masks",
+                "status": "pending"
+              },
+              {
+                "content": "Write pred_instructions.json and pred_dyn_masks.npz, then self-validate",
+                "activeForm": "Writing and validating output files",
+                "status": "pending"
+              }
+            ]
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "43e7fc8907dc3326",
+        "stepId": "turn-10",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/77c6f57de155427394f430152179bf0d/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4e382c26bbc64673b33c0f5f",
+          "content": "{\"newTodos\":[{\"content\":\"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\",\"activeForm\":\"Checking environment and extracting sampled frames\",\"status\":\"completed\"},{\"content\":\"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\",\"activeForm\":\"Estimating egomotion between sampled frames\",\"status\":\"in_progress\"},{\"content\":\"Classify motion labels per interval with tuned thresholds\",\"activeForm\":\"Classifying motion labels per interval\",\"status\":\"pending\"},{\"content\":\"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\",\"activeForm\":\"Computing dynamic object masks\",\"status\":\"pending\"},{\"content\":\"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\",\"activeForm\":\"Writing and validating output files\",\"status\":\"pending\"}]}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/3f1bc541c2bf47c0a36c7aa44c853066/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_4e382c26bbc64673b33c0f5f",
+          "content": "{\"newTodos\":[{\"content\":\"Check Python env (cv2/numpy/scipy) and extract sampled frames at 5fps\",\"activeForm\":\"Checking environment and extracting sampled frames\",\"status\":\"completed\"},{\"content\":\"Estimate egomotion (affine) between consecutive sampled frames + diagnostics\",\"activeForm\":\"Estimating egomotion between sampled frames\",\"status\":\"in_progress\"},{\"content\":\"Classify motion labels per interval with tuned thresholds\",\"activeForm\":\"Classifying motion labels per interval\",\"status\":\"pending\"},{\"content\":\"Compute dynamic object masks (global align + diff + threshold + morphology) per frame\",\"activeForm\":\"Computing dynamic object masks\",\"status\":\"pending\"},{\"content\":\"Write pred_instructions.json and pred_dyn_masks.npz, then self-validate\",\"activeForm\":\"Writing and validating output files\",\"status\":\"pending\"}]}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_b145e019406d493f8e8e9884",
+    "tool_name": "Write",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/0fe4f436194c4441a3352f0eef05e740/",
+    "visible_contract_check": {
+      "id": "call_b145e019406d493f8e8e9884",
+      "name": "Write",
+      "arguments_text": "{\"file_path\": \"temp/ego_diag.py\", \"content\": \"import cv2, numpy as np, json\\n\\nVIDEO = 'workspace/input.mp4'\\nFPS_SAMPLE = 5\\ncap = cv2.VideoCapture(VIDEO)\\nn = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))\\nfps = cap.get(cv2.CAP_PROP_FPS)\\nstride = int(round(fps / FPS_SAMPLE))\\nsample_ids = list(range(0, n, stride))\\nprint('n_frames', n, 'fps', fps, 'stride', stride, 'sample_ids', sample_ids)\\n\\ngrays = []\\nfor fid in sample_ids:\\n    cap.set(cv2.CAP_PROP_POS_FRAMES, fid)\\n    ok, frame = cap.read()\\n    if not ok:\\n        raise RuntimeError(f'failed to read frame {fid}')\\n    grays.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))\\ncap.release()\\n\\nH, W = grays[0].shape\\nprint('H,W', H, W)\\n\\ndef estimate(prev, curr):\\n    p0 = cv2.goodFeaturesToTrack(prev, maxCorners=1200, qualityLevel=0.01,\\n                                 minDistance=8, blockSize=7)\\n    p1, st, err = cv2.calcOpticalFlowPyrLK(prev, curr, p0, None,\\n                                           winSize=(21, 21), maxLevel=3,\\n                                           criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01))\\n    good0 = p0[st == 1]; good1 = p1[st == 1]\\n    diag = npts=int(len(good0))\\n    if len(good0) < 20:\\n        return None, diag\\n    M, inl = cv2.estimateAffinePartial2D(good0, good1, method=cv2.RANSAC,\\n                                         ransacReprojThreshold=3.0,\\n                                         confidence=0.999, maxIters=4000)\\n    if M is None:\\n        return None, diag\\n    inl = inl.reshape(-1).astype(bool)\\n    s = float(np.sqrt(M[0, 0] ** 2 + M[1, 0] ** 2))\\n    theta = float(np.arctan2(M[1, 0], M[0, 0]))\\n    tx, ty = float(M[0, 2]), float(M[1, 2])\\n    d = good1 - good0\\n    med_dx = float(np.median(d[inl, 0])) if inl.any() else float(np.median(d[:, 0]))\\n    med_dy = float(np.median(d[inl, 1])) if inl.any() else float(np.median(d[:, 1]))\\n    return (M, s, theta, tx, ty, med_dx, med_dy, int(inl.sum())), diag\\n\\nrows = []\\nfor i in range(len(grays) - 1):\\n    res, npts = estimate(grays[i], grays[i + 1])\\n    if res is None:\\n        print(f'interval {i}->{i+1}: FAILED npts={npts}')\\n        rows.append(dict(interval=f'{i}->{i+1}', failed=True, npts=npts))\\n        continue\\n    M, s, theta, tx, ty, med_dx, med_dy, ninl = res\\n    rows.append(dict(interval=f'{i}->{i+1}', failed=False, npts=npts, inliers=ninl,\\n                     tx=round(tx, 3), ty=round(ty, 3), scale=round(s, 5),\\n                     rot_deg=round(np.degrees(theta), 4),\\n                     med_dx=round(med_dx, 3), med_dy=round(med_dy, 3)))\\n    print(f'interval {i}->{i+1}: npts={npts} inl={ninl} tx={tx:8.3f} ty={ty:8.3f} '\\n          f'scale={s:.5f} rot={np.degrees(theta):8.4f}deg med_dx={med_dx:8.3f} med_dy={med_dy:8.3f}')\\n\\nwith open('temp/ego_diag.json', 'w') as f:\\n    json.dump({'sample_ids': sample_ids, 'rows': rows}, f, indent=2)\\nprint('saved temp/ego_diag.json')\\n\"}",
+      "empty_id_continuations": 286,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file_path",
+          "content"
+        ],
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete root-qualified path to create or rewrite. Bare paths and `/work/...` are rejected; results return the canonical logical path."
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete UTF-8 text content to write."
+          }
+        }
+      },
+      "arguments": {
+        "file_path": "temp/ego_diag.py",
+        "content": "import cv2, numpy as np, json\n\nVIDEO = 'workspace/input.mp4'\nFPS_SAMPLE = 5\ncap = cv2.VideoCapture(VIDEO)\nn = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))\nfps = cap.get(cv2.CAP_PROP_FPS)\nstride = int(round(fps / FPS_SAMPLE))\nsample_ids = list(range(0, n, stride))\nprint('n_frames', n, 'fps', fps, 'stride', stride, 'sample_ids', sample_ids)\n\ngrays = []\nfor fid in sample_ids:\n    cap.set(cv2.CAP_PROP_POS_FRAMES, fid)\n    ok, frame = cap.read()\n    if not ok:\n        raise RuntimeError(f'failed to read frame {fid}')\n    grays.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))\ncap.release()\n\nH, W = grays[0].shape\nprint('H,W', H, W)\n\ndef estimate(prev, curr):\n    p0 = cv2.goodFeaturesToTrack(prev, maxCorners=1200, qualityLevel=0.01,\n                                 minDistance=8, blockSize=7)\n    p1, st, err = cv2.calcOpticalFlowPyrLK(prev, curr, p0, None,\n                                           winSize=(21, 21), maxLevel=3,\n                                           criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01))\n    good0 = p0[st == 1]; good1 = p1[st == 1]\n    diag = npts=int(len(good0))\n    if len(good0) < 20:\n        return None, diag\n    M, inl = cv2.estimateAffinePartial2D(good0, good1, method=cv2.RANSAC,\n                                         ransacReprojThreshold=3.0,\n                                         confidence=0.999, maxIters=4000)\n    if M is None:\n        return None, diag\n    inl = inl.reshape(-1).astype(bool)\n    s = float(np.sqrt(M[0, 0] ** 2 + M[1, 0] ** 2))\n    theta = float(np.arctan2(M[1, 0], M[0, 0]))\n    tx, ty = float(M[0, 2]), float(M[1, 2])\n    d = good1 - good0\n    med_dx = float(np.median(d[inl, 0])) if inl.any() else float(np.median(d[:, 0]))\n    med_dy = float(np.median(d[inl, 1])) if inl.any() else float(np.median(d[:, 1]))\n    return (M, s, theta, tx, ty, med_dx, med_dy, int(inl.sum())), diag\n\nrows = []\nfor i in range(len(grays) - 1):\n    res, npts = estimate(grays[i], grays[i + 1])\n    if res is None:\n        print(f'interval {i}->{i+1}: FAILED npts={npts}')\n        rows.append(dict(interval=f'{i}->{i+1}', failed=True, npts=npts))\n        continue\n    M, s, theta, tx, ty, med_dx, med_dy, ninl = res\n    rows.append(dict(interval=f'{i}->{i+1}', failed=False, npts=npts, inliers=ninl,\n                     tx=round(tx, 3), ty=round(ty, 3), scale=round(s, 5),\n                     rot_deg=round(np.degrees(theta), 4),\n                     med_dx=round(med_dx, 3), med_dy=round(med_dy, 3)))\n    print(f'interval {i}->{i+1}: npts={npts} inl={ninl} tx={tx:8.3f} ty={ty:8.3f} '\n          f'scale={s:.5f} rot={np.degrees(theta):8.4f}deg med_dx={med_dx:8.3f} med_dy={med_dy:8.3f}')\n\nwith open('temp/ego_diag.json', 'w') as f:\n    json.dump({'sample_ids': sample_ids, 'rows': rows}, f, indent=2)\nprint('saved temp/ego_diag.json')\n"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_b145e019406d493f8e8e9884",
+        "toolName": "Write",
+        "arguments": {
+          "file_path": "temp/ego_diag.py",
+          "content": "import cv2, numpy as np, json\n\nVIDEO = 'workspace/input.mp4'\nFPS_SAMPLE = 5\ncap = cv2.VideoCapture(VIDEO)\nn = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))\nfps = cap.get(cv2.CAP_PROP_FPS)\nstride = int(round(fps / FPS_SAMPLE))\nsample_ids = list(range(0, n, stride))\nprint('n_frames', n, 'fps', fps, 'stride', stride, 'sample_ids', sample_ids)\n\ngrays = []\nfor fid in sample_ids:\n    cap.set(cv2.CAP_PROP_POS_FRAMES, fid)\n    ok, frame = cap.read()\n    if not ok:\n        raise RuntimeError(f'failed to read frame {fid}')\n    grays.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))\ncap.release()\n\nH, W = grays[0].shape\nprint('H,W', H, W)\n\ndef estimate(prev, curr):\n    p0 = cv2.goodFeaturesToTrack(prev, maxCorners=1200, qualityLevel=0.01,\n                                 minDistance=8, blockSize=7)\n    p1, st, err = cv2.calcOpticalFlowPyrLK(prev, curr, p0, None,\n                                           winSize=(21, 21), maxLevel=3,\n                                           criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01))\n    good0 = p0[st == 1]; good1 = p1[st == 1]\n    diag = npts=int(len(good0))\n    if len(good0) < 20:\n        return None, diag\n    M, inl = cv2.estimateAffinePartial2D(good0, good1, method=cv2.RANSAC,\n                                         ransacReprojThreshold=3.0,\n                                         confidence=0.999, maxIters=4000)\n    if M is None:\n        return None, diag\n    inl = inl.reshape(-1).astype(bool)\n    s = float(np.sqrt(M[0, 0] ** 2 + M[1, 0] ** 2))\n    theta = float(np.arctan2(M[1, 0], M[0, 0]))\n    tx, ty = float(M[0, 2]), float(M[1, 2])\n    d = good1 - good0\n    med_dx = float(np.median(d[inl, 0])) if inl.any() else float(np.median(d[:, 0]))\n    med_dy = float(np.median(d[inl, 1])) if inl.any() else float(np.median(d[:, 1]))\n    return (M, s, theta, tx, ty, med_dx, med_dy, int(inl.sum())), diag\n\nrows = []\nfor i in range(len(grays) - 1):\n    res, npts = estimate(grays[i], grays[i + 1])\n    if res is None:\n        print(f'interval {i}->{i+1}: FAILED npts={npts}')\n        rows.append(dict(interval=f'{i}->{i+1}', failed=True, npts=npts))\n        continue\n    M, s, theta, tx, ty, med_dx, med_dy, ninl = res\n    rows.append(dict(interval=f'{i}->{i+1}', failed=False, npts=npts, inliers=ninl,\n                     tx=round(tx, 3), ty=round(ty, 3), scale=round(s, 5),\n                     rot_deg=round(np.degrees(theta), 4),\n                     med_dx=round(med_dx, 3), med_dy=round(med_dy, 3)))\n    print(f'interval {i}->{i+1}: npts={npts} inl={ninl} tx={tx:8.3f} ty={ty:8.3f} '\n          f'scale={s:.5f} rot={np.degrees(theta):8.4f}deg med_dx={med_dx:8.3f} med_dy={med_dy:8.3f}')\n\nwith open('temp/ego_diag.json', 'w') as f:\n    json.dump({'sample_ids': sample_ids, 'rows': rows}, f, indent=2)\nprint('saved temp/ego_diag.json')\n"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:15:57.420+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 9,
+        "toolCallId": "call_b145e019406d493f8e8e9884",
+        "toolName": "Write",
+        "capabilityId": "Write",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 2,
+        "toolBatchSize": 2,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "file_path": "temp/ego_diag.py",
+          "content": "import cv2, numpy as np, json\n\nVIDEO = 'workspace/input.mp4'\nFPS_SAMPLE = 5\ncap = cv2.VideoCapture(VIDEO)\nn = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))\nfps = cap.get(cv2.CAP_PROP_FPS)\nstride = int(round(fps / FPS_SAMPLE))\nsample_ids = list(range(0, n, stride))\nprint('n_frames', n, 'fps', fps, 'stride', stride, 'sample_ids', sample_ids)\n\ngrays = []\nfor fid in sample_ids:\n    cap.set(cv2.CAP_PROP_POS_FRAMES, fid)\n    ok, frame = cap.read()\n    if not ok:\n        raise RuntimeError(f'failed to read frame {fid}')\n    grays.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))\ncap.release()\n\nH, W = grays[0].shape\nprint('H,W', H, W)\n\ndef estimate(prev, curr):\n    p0 = cv2.goodFeaturesToTrack(prev, maxCorners=1200, qualityLevel=0.01,\n                                 minDistance=8, blockSize=7)\n    p1, st, err = cv2.calcOpticalFlowPyrLK(prev, curr, p0, None,\n                                           winSize=(21, 21), maxLevel=3,\n                                           criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01))\n    good0 = p0[st == 1]; good1 = p1[st == 1]\n    diag = npts=int(len(good0))\n    if len(good0) < 20:\n        return None, diag\n    M, inl = cv2.estimateAffinePartial2D(good0, good1, method=cv2.RANSAC,\n                                         ransacReprojThreshold=3.0,\n                                         confidence=0.999, maxIters=4000)\n    if M is None:\n        return None, diag\n    inl = inl.reshape(-1).astype(bool)\n    s = float(np.sqrt(M[0, 0] ** 2 + M[1, 0] ** 2))\n    theta = float(np.arctan2(M[1, 0], M[0, 0]))\n    tx, ty = float(M[0, 2]), float(M[1, 2])\n    d = good1 - good0\n    med_dx = float(np.median(d[inl, 0])) if inl.any() else float(np.median(d[:, 0]))\n    med_dy = float(np.median(d[inl, 1])) if inl.any() else float(np.median(d[:, 1]))\n    return (M, s, theta, tx, ty, med_dx, med_dy, int(inl.sum())), diag\n\nrows = []\nfor i in range(len(grays) - 1):\n    res, npts = estimate(grays[i], grays[i + 1])\n    if res is None:\n        print(f'interval {i}->{i+1}: FAILED npts={npts}')\n        rows.append(dict(interval=f'{i}->{i+1}', failed=True, npts=npts))\n        continue\n    M, s, theta, tx, ty, med_dx, med_dy, ninl = res\n    rows.append(dict(interval=f'{i}->{i+1}', failed=False, npts=npts, inliers=ninl,\n                     tx=round(tx, 3), ty=round(ty, 3), scale=round(s, 5),\n                     rot_deg=round(np.degrees(theta), 4),\n                     med_dx=round(med_dx, 3), med_dy=round(med_dy, 3)))\n    print(f'interval {i}->{i+1}: npts={npts} inl={ninl} tx={tx:8.3f} ty={ty:8.3f} '\n          f'scale={s:.5f} rot={np.degrees(theta):8.4f}deg med_dx={med_dx:8.3f} med_dy={med_dy:8.3f}')\n\nwith open('temp/ego_diag.json', 'w') as f:\n    json.dump({'sample_ids': sample_ids, 'rows': rows}, f, indent=2)\nprint('saved temp/ego_diag.json')\n"
+        },
+        "toolSafeSummary": "****/eg****py im****ce/in****s / F****mp/eg****mp/eg****')",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "type": "create",
+            "file_path": "temp/ego_diag.py"
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "efcad7576e3ae10c",
+        "stepId": "turn-10",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/77c6f57de155427394f430152179bf0d/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_b145e019406d493f8e8e9884",
+          "content": "{\"type\":\"create\",\"file_path\":\"temp/ego_diag.py\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/3f1bc541c2bf47c0a36c7aa44c853066/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_b145e019406d493f8e8e9884",
+          "content": "{\"type\":\"create\",\"file_path\":\"temp/ego_diag.py\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_b0df40bcd47c4e70bc63b30d",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/77c6f57de155427394f430152179bf0d/",
+    "visible_contract_check": {
+      "id": "call_b0df40bcd47c4e70bc63b30d",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"python3 temp/ego_diag.py\", \"description\": \"Run egomotion diagnostics on sampled frames\", \"timeout\": 300000}",
+      "empty_id_continuations": 13,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "python3 temp/ego_diag.py",
+        "description": "Run egomotion diagnostics on sampled frames",
+        "timeout": 300000
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_b0df40bcd47c4e70bc63b30d",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "python3 temp/ego_diag.py",
+          "description": "Run egomotion diagnostics on sampled frames",
+          "timeout": 300000
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-25T14:16:18.712+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+        "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+        "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+        "round": 10,
+        "toolCallId": "call_b0df40bcd47c4e70bc63b30d",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "python3 temp/ego_diag.py",
+          "description": "Run egomotion diagnostics on sampled frames",
+          "timeout": 300000
+        },
+        "toolSafeSummary": "python3 ****/eg****py",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "n_frames 207 fps 60.0 stride 12 sample_ids [0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204]\nH,W 720 1280\ninterval 0->1: npts=1122 inl=359 tx=  -5.038 ty=  -1.724 scale=1.00438 rot=  0.0651deg med_dx=  -3.315 med_dy=  -0.481\ninterval 1->2: npts=1120 inl=409 tx=  -7.988 ty=  -2.246 scale=1.00679 rot= -0.0563deg med_dx=  -4.497 med_dy=  -1.405\ninterval 2->3: npts=1103 inl=438 tx= -11.187 ty=  -2.198 scale=1.00760 rot=  0.0648deg med_dx=  -7.708 med_dy=  -0.269\ninterval 3->4: npts=1090 inl=447 tx= -13.338 ty=  -2.498 scale=1.00979 rot= -0.0187deg med_dx=  -8.548 med_dy=  -0.482\ninterval 4->5: npts=1053 inl=433 tx= -14.733 ty=  -2.057 scale=1.00924 rot= -0.1252deg med_dx= -10.138 med_dy=  -1.090\ninterval 5->6: npts=1065 inl=423 tx= -18.486 ty=  -2.586 scale=1.01364 rot= -0.0429deg med_dx= -11.985 med_dy=  -0.382\ninterval 6->7: npts=1054 inl=464 tx= -18.717 ty=  -2.251 scale=1.01096 rot= -0.1368deg med_dx= -12.598 med_dy=  -0.665\ninterval 7->8: npts=1053 inl=451 tx= -20.658 ty=  -2.654 scale=1.01278 rot= -0.0927deg med_dx= -13.661 med_dy=  -0.391\ninterval 8->9: npts=1086 inl=415 tx= -21.067 ty=  -2.370 scale=1.01214 rot= -0.0526deg med_dx= -14.535 med_dy=  -0.175\ninterval 9->10: npts=1102 inl=346 tx= -22.090 ty=  -1.586 scale=1.01259 rot= -0.2774deg med_dx= -14.401 med_dy=  -0.836\ninterval 10->11: npts=1124 inl=382 tx= -22.374 ty=  -2.220 scale=1.01194 rot= -0.1005deg med_dx= -15.697 med_dy=  -0.210\ninterval 11->12: npts=1133 inl=366 tx= -22.828 ty=  -2.193 scale=1.01182 rot= -0.1218deg med_dx= -16.006 med_dy=  -0.415\ninterval 12->13: npts=1157 inl=430 tx= -22.458 ty=  -2.822 scale=1.01127 rot= -0.2032deg med_dx= -15.500 med_dy=  -1.565\ninterval 13->14: npts=1141 inl=430 tx= -24.903 ty=  -3.341 scale=1.01554 rot= -0.0929deg med_dx= -15.954 med_dy=  -0.430\ninterval 14->15: npts=1133 inl=377 tx= -23.805 ty=  -2.354 scale=1.01409 rot= -0.1936deg med_dx= -15.533 med_dy=  -0.659\ninterval 15->16: npts=1107 inl=426 tx= -24.286 ty=  -3.349 scale=1.01700 rot= -0.1614deg med_dx= -14.256 med_dy=  -0.515\ninterval 16->17: npts=1130 inl=447 tx= -24.947 ty=  -4.838 scale=1.01936 rot=  0.1231deg med_dx= -14.767 med_dy=   0.985\nsaved temp/ego_diag.json\n",
+            "stderr": "",
+            "exitCode": 0,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "779dfdefa81a95ea1fc68180e07ee0af",
+        "spanId": "b419a2575ce68065",
+        "stepId": "turn-11",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/3f1bc541c2bf47c0a36c7aa44c853066/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_b0df40bcd47c4e70bc63b30d",
+          "content": "{\"stdout\":\"n_frames 207 fps 60.0 stride 12 sample_ids [0, 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204]\\nH,W 720 1280\\ninterval 0->1: npts=1122 inl=359 tx=  -5.038 ty=  -1.724 scale=1.00438 rot=  0.0651deg med_dx=  -3.315 med_dy=  -0.481\\ninterval 1->2: npts=1120 inl=409 tx=  -7.988 ty=  -2.246 scale=1.00679 rot= -0.0563deg med_dx=  -4.497 med_dy=  -1.405\\ninterval 2->3: npts=1103 inl=438 tx= -11.187 ty=  -2.198 scale=1.00760 rot=  0.0648deg med_dx=  -7.708 med_dy=  -0.269\\ninterval 3->4: npts=1090 inl=447 tx= -13.338 ty=  -2.498 scale=1.00979 rot= -0.0187deg med_dx=  -8.548 med_dy=  -0.482\\ninterval 4->5: npts=1053 inl=433 tx= -14.733 ty=  -2.057 scale=1.00924 rot= -0.1252deg med_dx= -10.138 med_dy=  -1.090\\ninterval 5->6: npts=1065 inl=423 tx= -18.486 ty=  -2.586 scale=1.01364 rot= -0.0429deg med_dx= -11.985 med_dy=  -0.382\\ninterval 6->7: npts=1054 inl=464 tx= -18.717 ty=  -2.251 scale=1.01096 rot= -0.1368deg med_dx= -12.598 med_dy=  -0.665\\ninterval 7->8: npts=1053 inl=451 tx= -20.658 ty=  -2.654 scale=1.01278 rot= -0.0927deg med_dx= -13.661 med_dy=  -0.391\\ninterval 8->9: npts=1086 inl=415 tx= -21.067 ty=  -2.370 scale=1.01214 rot= -0.0526deg med_dx= -14.535 med_dy=  -0.175\\ninterval 9->10: npts=1102 inl=346 tx= -22.090 ty=  -1.586 scale=1.01259 rot= -0.2774deg med_dx= -14.401 med_dy=  -0.836\\ninterval 10->11: npts=1124 inl=382 tx= -22.374 ty=  -2.220 scale=1.01194 rot= -0.1005deg med_dx= -15.697 med_dy=  -0.210\\ninterval 11->12: npts=1133 inl=366 tx= -22.828 ty=  -2.193 scale=1.01182 rot= -0.1218deg med_dx= -16.006 med_dy=  -0.415\\ninterval 12->13: npts=1157 inl=430 tx= -22.458 ty=  -2.822 scale=1.01127 rot= -0.2032deg med_dx= -15.500 med_dy=  -1.565\\ninterval 13->14: npts=1141 inl=430 tx= -24.903 ty=  -3.341 scale=1.01554 rot= -0.0929deg med_dx= -15.954 med_dy=  -0.430\\ninterval 14->15: npts=1133 inl=377 tx= -23.805 ty=  -2.354 scale=1.01409 rot= -0.1936deg med_dx= -15.533 med_dy=  -0.659\\ninterval 15->16: npts=1107 inl=426 tx= -24.286 ty=  -3.349 scale=1.01700 rot= -0.1614deg med_dx= -14.256 med_dy=  -0.515\\ninterval 16->17: npts=1130 inl=447 tx= -24.947 ty=  -4.838 scale=1.01936 rot=  0.1231deg med_dx= -14.767 med_dy=   0.985\\nsaved temp/ego_diag.json\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_a3f1ce3c64024c39a5272c05",
+    "tool_name": "Write",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261025-200449-ca2847\\exchanges.tar!evidence/dynamic-object-aware-egomotion/attempt-1/3f1bc541c2bf47c0a36c7aa44c853066/",
+    "visible_contract_check": {
+      "id": "call_a3f1ce3c64024c39a5272c05",
+      "name": "Write",
+      "arguments_text": "{\"content\": \"import cv2, numpy as np, json\\n\\nVIDEO = 'workspace/input.mp4'\\ncap = cv2.VideoCapture(VIDEO)\\nn = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)); fps = cap.get(cv2.CAP_PROP_FPS)\\nstride = int(round(fps / 5)); sample_ids = list(range(0, n, stride))\\ngrays = []\\nfor fid in sample_ids:\\n    cap.set(cv2.CAP_PROP_POS_FRAMES, fid); ok, fr = cap.read()\\n    grays.append(cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY))\\ncap.release()\\n\\ndef robust_scale(prev, curr):\\n    p0 = cv2.goodFeaturesToTrack(prev, maxCorners=1500, qualityLevel=0.01, minDistance=8, blockSize=7)\\n    p1, st, _ = cv2.calcOpticalFlowPyrLK(prev, curr, p0, None, winSize=(21,21), maxLevel=3,\\n        criteria=(cv2.TERM_CRITERIA_EPS|cv2.TERM_CRITERIA_COUNT,30,0.01))\\n    g0 = p0[st==1]; g1 = p1[st==1]\\n    M, inl = cv2.estimateAffinePartial2D(g0, g1, method=cv2.RANSAC, ransacReprojThreshold=3.0, confidence=0.999, maxIters=4000)\\n    inl = inl.reshape(-1).astype(bool)\\n    # full affine + singular values\\n    Mf, _ = cv2.estimateAffine2D(g0[inl], g1[inl], method=cv2.RANSAC, ransacReprojThreshold=3.0)\\n    A = Mf[:2,:2]\\n    sv = np.linalg.svd(A, compute_uv=False)\\n    det = float(np.linalg.det(A))\\n    s_partial = float(np.sqrt(M[0,0]**2 + M[1,0]**2))\\n    # robust scale: median of |d1|/|d0| over random point pairs (translation-invariant)\\n    q0 = g0[inl]; q1 = g1[inl]\\n    rng = np.random.default_rng(0)\\n    idx = rng.integers(0, len(q0), size=(2000,2))\\n    d0 = np.linalg.norm(q0[idx[:,0]]-q0[idx[:,1]], axis=1)\\n    d1 = np.linalg.norm(q1[idx[:,0]]-q1[idx[:,1]], axis=1)\\n    okm",
+      "empty_id_continuations": 165,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file_path",
+          "content"
+        ],
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete root-qualified path to create or rewrite. Bare paths and `/work/...` are rejected; results return the canonical logical path."
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Complete UTF-8 text content to write."
+          }
+        }
+      },
+      "json_valid": false,
+      "json_error": "Unterminated string starting at: line 1 column 13 (char 12)"
+    },
+    "normalized_calls": [],
+    "execution_boundaries": [],
+    "subsequent_model_visible_feedback": [],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "evidence_gaps": [
+      "No matching normalized call captured",
+      "No matching tool execution boundary captured; this alone does not prove dispatch failed",
+      "No subsequent model-visible tool feedback captured; request may have terminated"
+    ]
+  }
+]

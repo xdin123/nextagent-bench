@@ -1,0 +1,46 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 445B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22.22.0-bookworm-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [unpack 1/3] FROM docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94
+#5 resolve docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94 0.0s done
+#5 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 70.41MB 5.1s
+#4 transferring context: 93.21MB 6.7s done
+#4 DONE 6.7s
+
+#6 [unpack 2/3] COPY bundle.tar.gz /tmp/bundle.tar.gz
+#6 CACHED
+
+#7 [unpack 3/3] RUN mkdir -p /opt/nextagent && tar -xzf /tmp/bundle.tar.gz -C /opt/nextagent --strip-components=0 && rm -rf /opt/nextagent/logs /opt/nextagent/run /opt/nextagent/workspaces /opt/nextagent/data /opt/nextagent/__pycache__
+#7 CACHED
+
+#8 [stage-1 1/2] COPY --from=unpack /opt/nextagent/ /opt/nextagent/
+#8 CACHED
+
+#9 [stage-1 2/2] COPY runtime/ /opt/na-eval/runtime/
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers 0.0s done
+#10 exporting manifest sha256:fac887fc32ea8b9a58e1d10e49d178b14d2d8a642f876d858f87fc5b4459e415 done
+#10 exporting config sha256:d94bf234efc73a8d423c3e53c4d1c0d2f52c712dd9d5704d92a6576f4ca77fe0 done
+#10 exporting attestation manifest sha256:6762762e58034c0ba6286a30622e9035cf7dadbb088fdd2311a37a4f179b5416 0.0s done
+#10 exporting manifest list sha256:b33467e5105f148c765a3c6dabf6e7b069e97b50c9b159fc27c89d56aeed7b94 0.0s done
+#10 naming to docker.io/nextagent-bench/framework:6cf4229631d19b4e18af done
+#10 unpacking to docker.io/nextagent-bench/framework:6cf4229631d19b4e18af 0.0s done
+#10 DONE 0.1s

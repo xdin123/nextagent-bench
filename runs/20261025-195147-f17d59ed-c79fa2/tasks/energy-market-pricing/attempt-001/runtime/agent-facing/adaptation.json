@@ -1,0 +1,57 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "dc-power-flow",
+      "directory": "dc-power-flow",
+      "description": "DC power flow analysis for power systems. Use when computing power flows using DC approximation, building susceptance matrices, calculating line flows and loading percentages, or performing sensitivity analysis on transmission networks.",
+      "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e"
+    },
+    {
+      "name": "economic-dispatch",
+      "directory": "economic-dispatch",
+      "description": "Generator economic dispatch and cost optimization for power systems. Use when minimizing generation costs, computing optimal generator setpoints, calculating operating margins, or working with generator cost functions.",
+      "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f"
+    },
+    {
+      "name": "locational-marginal-prices",
+      "directory": "locational-marginal-prices",
+      "description": "Extract locational marginal prices (LMPs) from DC-OPF solutions using dual values. Use when computing nodal electricity prices, reserve clearing prices, or performing price impact analysis.",
+      "sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac"
+    },
+    {
+      "name": "power-flow-data",
+      "directory": "power-flow-data",
+      "description": "Power system network data formats and topology. Use when parsing bus, generator, and branch data for power flow analysis.",
+      "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+    }
+  ],
+  "verifier_sha": "55a257735b8acd4fb23fdd06ebff92593842bb6dc8ee6ec67d60c06eb5382b1a",
+  "prompt_sha": "cf1ae6f4fb7132bd45f5b7bb098a07a8748edf16557c41723ef0cf30265b8788"
+}

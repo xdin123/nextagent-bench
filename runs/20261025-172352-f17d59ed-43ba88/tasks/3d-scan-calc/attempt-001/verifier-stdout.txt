@@ -1,0 +1,66 @@
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-json-ctrf==0.3.5
+  Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=20 (from pytest==8.4.1)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.5/365.5 kB 632.8 kB/s eta 0:00:00
+Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 3.5 MB/s eta 0:00:00
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 3.0 MB/s eta 0:00:00
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.1 pytest-json-ctrf-0.3.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 2 items
+
+../../../../../../../verifier/test_outputs.py::TestOutputs::test_file_exists FAILED [ 50%]
+../../../../../../../verifier/test_outputs.py::TestOutputs::test_values_correct FAILED [100%]
+
+=================================== FAILURES ===================================
+_________________________ TestOutputs.test_file_exists _________________________
+
+self = <test_outputs.TestOutputs object at 0x7f148b06bb60>
+
+    def test_file_exists(self):
+        """Check output file was created."""
+>       assert os.path.exists("/root/mass_report.json"), "Output file not found"
+E       AssertionError: Output file not found
+E       assert False
+E        +  where False = <function exists at 0x7f148b967560>('/root/mass_report.json')
+E        +    where <function exists at 0x7f148b967560> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:11: AssertionError
+_______________________ TestOutputs.test_values_correct ________________________
+
+self = <test_outputs.TestOutputs object at 0x7f148ac63d40>
+
+    def test_values_correct(self):
+        """Validate submission against ground truth."""
+        expected_mass, expected_vol, expected_id = self._get_ground_truth()
+    
+>       with open("/root/mass_report.json") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/mass_report.json'
+
+/verifier/test_outputs.py:90: FileNotFoundError
+=========================== short test summary info ============================
+FAILED ../../../../../../../verifier/test_outputs.py::TestOutputs::test_file_exists
+FAILED ../../../../../../../verifier/test_outputs.py::TestOutputs::test_values_correct
+============================== 2 failed in 0.02s ===============================

@@ -1,0 +1,10 @@
+Done. `workspace/report.json` is written with the S3FIFO replay results:
+
+- **total_requests**: 2000
+- **total_prompt_tokens**: 27,441,774
+- **total_hit_tokens**: 2,394,659
+- **overall_hit_rate**: 0.087263 (~8.73%)
+- **final_cache_blocks**: 2535 (S=410, M=2125; ghost holds 3686 metadata-only entries, excluded)
+- **per_request**: 2000 `{idx, prompt_tokens, hit_tokens}` entries in trace order
+
+Implementation notes: small queue = `round(4096 × 0.1)` = 410 blocks, main = 3686, ghost = 3686, max_freq = 3. Each request's hit is the longest contiguous prefix of resident blocks, hit tokens capped by `min(k × 512, input_length)`; every block in each request then updates/accesses the policy (freq increments on resident hits, ghost fast-track to M at freq 0, S→M promotion preserves freq, second-chance eviction on M). Sanity checks passed: per-request sums match totals, hit rate is exact, and final resident count is under capacity.

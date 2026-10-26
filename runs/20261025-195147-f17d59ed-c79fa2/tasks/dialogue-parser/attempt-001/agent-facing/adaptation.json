@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "dialogue-graph",
+      "directory": "dialogue-graph",
+      "description": "A library for building, validating, visualizing, and serializing dialogue graphs. Use this when parsing scripts or creating branching narrative structures.",
+      "sha256": "03d711b93219cec1cd70d823d595e7c5adffc058c5910b94886fe6cc374f08d8"
+    }
+  ],
+  "verifier_sha": "57d2cb2cbd76d173357da476eb525e07678aabbb4b22392563718fe867e12f67",
+  "prompt_sha": "4097ff81ce7b7f069b835dc6aa4155588e9d76305d735af5252df873dbbd3ed6"
+}

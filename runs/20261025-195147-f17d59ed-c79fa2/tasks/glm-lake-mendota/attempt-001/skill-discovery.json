@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "glm-basics",
+    "glm-calibration",
+    "glm-output"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "glm-basics"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "glm-calibration"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "glm-output"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "conditioning",
+      "directory": "conditioning",
+      "description": "Data conditioning techniques for gravitational wave detector data. Use when preprocessing raw detector strain data before matched filtering, including high-pass filtering, resampling, removing filter wraparound artifacts, and estimating power spectral density (PSD). Works with PyCBC TimeSeries data.",
+      "sha256": "bf7580c93e48e3215442820bfb8e77f372450bf56182b5efe1b8b73d875b03d2"
+    },
+    {
+      "name": "matched-filtering",
+      "directory": "matched-filtering",
+      "description": "Matched filtering techniques for gravitational wave detection. Use when searching for signals in detector data using template waveforms, including both time-domain and frequency-domain approaches. Works with PyCBC for generating templates and performing matched filtering.",
+      "sha256": "9daa057b05d878189bd5556dca8a6a18a65839ff0a5b8313fbdaa2ba10a6f4b4"
+    }
+  ],
+  "verifier_sha": "4b4ecdb3470c8000bb4fa49a7e9df3d181d242ac82f23f5abaaf8096d3336a4f",
+  "prompt_sha": "8eac5f8a83e3c312355025f73c06ff61746809ec00e3ba8a22db8347f2c24290"
+}

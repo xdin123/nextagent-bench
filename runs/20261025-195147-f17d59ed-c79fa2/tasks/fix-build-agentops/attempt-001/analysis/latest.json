@@ -1,0 +1,8 @@
+{
+  "status": "ANALYSIS_INCOMPLETE",
+  "created_at": "2026-10-26T02:29:52.447111+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\tasks\\fix-build-agentops\\attempt-001\\analysis\\20261026-102944",
+  "error": "Diagnostic request failed: HTTP_502",
+  "note": "Evidence packet retained where available; no unsupported root cause asserted. Retry diagnostics without rerunning the task.",
+  "report": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\tasks\\fix-build-agentops\\attempt-001\\analysis\\20261026-102944\\report.md"
+}

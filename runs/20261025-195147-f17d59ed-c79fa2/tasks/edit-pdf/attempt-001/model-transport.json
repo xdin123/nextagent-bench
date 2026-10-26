@@ -1,0 +1,6 @@
+{
+  "model": "qwen3.8-27b",
+  "internal_url": "http://nab-model-20261025-195147-f17d59ed-c79fa2:8787/tasks/edit-pdf/attempts/1/v1",
+  "upstream": "https://maas.qianwenaiapi.com/compatible-mode/v1",
+  "credential": "temporary gateway token; upstream keys stay in the sidecar"
+}

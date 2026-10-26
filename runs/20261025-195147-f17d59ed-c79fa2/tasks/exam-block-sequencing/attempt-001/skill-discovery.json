@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "mip-solver-and-solution-audit",
+    "ordered-window-sequencing-mip"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "mip-solver-and-solution-audit"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "ordered-window-sequencing-mip"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

@@ -1,0 +1,129 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "1.0.0",
+  "reportId": "6e298826-de5b-4338-a448-bcdded40351a",
+  "timestamp": "2026-10-25T17:51:50.150485+00:00",
+  "generatedBy": "pytest",
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "9.1.1"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 0,
+      "failed": 6,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "flaky": 0,
+      "suites": 3,
+      "start": 1792950709381,
+      "stop": 1792950710150,
+      "duration": 769
+    },
+    "environment": {
+      "osPlatform": "linux",
+      "osRelease": "6.18.54.1-microsoft-standard-WSL2",
+      "osVersion": "#1 SMP PREEMPT_DYNAMIC Tue Oct  6 19:13:07 UTC 2026"
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestSchema::test_report_schema",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 29,
+        "start": 1792950710102,
+        "stop": 1792950710131,
+        "suite": [
+          "test_outputs.py",
+          "TestSchema"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      },
+      {
+        "name": "test_outputs.py::TestFeasibility::test_power_balance",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 3,
+        "start": 1792950710132,
+        "stop": 1792950710135,
+        "suite": [
+          "test_outputs.py",
+          "TestFeasibility"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      },
+      {
+        "name": "test_outputs.py::TestFeasibility::test_generator_bounds",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 3,
+        "start": 1792950710136,
+        "stop": 1792950710139,
+        "suite": [
+          "test_outputs.py",
+          "TestFeasibility"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      },
+      {
+        "name": "test_outputs.py::TestFeasibility::test_reserve_constraints",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 3,
+        "start": 1792950710139,
+        "stop": 1792950710142,
+        "suite": [
+          "test_outputs.py",
+          "TestFeasibility"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      },
+      {
+        "name": "test_outputs.py::TestFeasibility::test_internal_consistency",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 3,
+        "start": 1792950710143,
+        "stop": 1792950710146,
+        "suite": [
+          "test_outputs.py",
+          "TestFeasibility"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      },
+      {
+        "name": "test_outputs.py::TestOptimality::test_cost_is_optimal",
+        "status": "failed",
+        "rawStatus": "setup_failed",
+        "duration": 4,
+        "start": 1792950710146,
+        "stop": 1792950710150,
+        "suite": [
+          "test_outputs.py",
+          "TestOptimality"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n        \"\"\"Load the agent's report.json.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\nE        +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:43: AssertionError",
+        "message": "AssertionError: Output file /root/report.json does not exist\nassert False\n +  where False = <function exists at 0x7e0cda20f560>('/root/report.json')\n +    where <function exists at 0x7e0cda20f560> = <module 'posixpath' (frozen)>.exists\n +      where <module 'posixpath' (frozen)> = os.path"
+      }
+    ]
+  }
+}

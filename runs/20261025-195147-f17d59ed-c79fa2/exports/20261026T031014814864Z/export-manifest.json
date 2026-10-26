@@ -1,0 +1,240 @@
+{
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "created_at": "20261026T031014814864Z",
+  "merged_file": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\exports\\20261026T031014814864Z\\completed-framework-traces.ndjson",
+  "merged_sha256": "a4bd91975c2338a02ca22edcd58a9de52185c8c3f11bae707c53e8c0e72cc31c",
+  "merged_bytes": 140756347,
+  "records": 10467,
+  "ended_attempts": 61,
+  "tasks_with_records": 36,
+  "attempts_with_records": 36,
+  "source_files": [
+    {
+      "file": "tasks/3d-scan-calc/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "59ab962961f04d33df8637d9672b3841377eefb5eed3638c9db1fd9a6125c66c",
+      "bytes": 2244793,
+      "exported_records": 234
+    },
+    {
+      "file": "tasks/ada-bathroom-plan-repair/attempt-002/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "eb3739184119cb2d82d337c7fcb74dc44ecfe5c5a166598dd798ef0c0b2e5c21",
+      "bytes": 3061987,
+      "exported_records": 225
+    },
+    {
+      "file": "tasks/adaptive-cruise-control/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "bb147e9e69db27e687d437df2f1219affad79cb9742708be075661eb291368e8",
+      "bytes": 2031726,
+      "exported_records": 168
+    },
+    {
+      "file": "tasks/azure-bgp-oscillation-route-leak/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "4658e54eda8198cd3b243242328736bba627a55396fa53f5b5069cad265ca80e",
+      "bytes": 1053510,
+      "exported_records": 93
+    },
+    {
+      "file": "tasks/bike-rebalance/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "5546a5e5eb1ea64cd579af87644cd25f7da90defa1d8eb63be0cfa6810fd58a5",
+      "bytes": 1196455,
+      "exported_records": 88
+    },
+    {
+      "file": "tasks/civ6-adjacency-optimizer/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "bbcad7b32e287564cf3325abbe783d0fdd358974e8c2380b6a625a2340c1b22a",
+      "bytes": 5250121,
+      "exported_records": 310
+    },
+    {
+      "file": "tasks/court-form-filling/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "60efbd56d719ee619dacf386f2f4330de314af3c9718ecb163ed8199b222b0f6",
+      "bytes": 8519360,
+      "exported_records": 628
+    },
+    {
+      "file": "tasks/crystallographic-wyckoff-position-analysis/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "944043781f0aaa043b318cf3f08093117248d3ac9dafd1bfb6e97cdcdb35f32b",
+      "bytes": 1534790,
+      "exported_records": 157
+    },
+    {
+      "file": "tasks/debug-trl-grpo/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "8f1cf83adafad448cdb1bd5466ce492404375fa6ec4ed7fb52ee663e779aebe7",
+      "bytes": 9747075,
+      "exported_records": 612
+    },
+    {
+      "file": "tasks/dialogue-parser/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "3957b0ede77102503eb83d0bf805449ed9afdeb31694ff78a02cdc3314965d7f",
+      "bytes": 1390723,
+      "exported_records": 104
+    },
+    {
+      "file": "tasks/drone-planning-control/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "413e4499b6a72fc4cba0ef72cf0efeae53630c6393256047af3aa62b21d8e1f9",
+      "bytes": 8726251,
+      "exported_records": 619
+    },
+    {
+      "file": "tasks/dynamic-object-aware-egomotion/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "a01d0fe4cba8583f55862092476b9d3ababa3758780c8f6f268e02d4b545d4df",
+      "bytes": 1683721,
+      "exported_records": 167
+    },
+    {
+      "file": "tasks/earthquake-plate-calculation/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "a8277c01b97e94c222ee568766d110cbeeca74a2d70cae2682e48f9336e76c9c",
+      "bytes": 2151089,
+      "exported_records": 187
+    },
+    {
+      "file": "tasks/econ-detrending-correlation/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "7848da29af7c87af488d3954e25e5fee8434de08a7d5fbdc9bdefd48ecbe11ed",
+      "bytes": 2515698,
+      "exported_records": 246
+    },
+    {
+      "file": "tasks/edit-pdf/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "265e37a86d053e1322b9565c35f4e93e606d3b03085f6d06b61aa6ba1dad2fdd",
+      "bytes": 2780865,
+      "exported_records": 236
+    },
+    {
+      "file": "tasks/energy-ac-optimal-power-flow/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "d4db0fb0788891bc31a7c8e3301c091f6fc2c49ddb315296c66461ee9d3d3521",
+      "bytes": 7814456,
+      "exported_records": 624
+    },
+    {
+      "file": "tasks/energy-market-pricing/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "c92e4a2ff4e69d7567939cd850ef4066980fdb66fda2c9ed8a3dbf62d29cff1e",
+      "bytes": 7722444,
+      "exported_records": 485
+    },
+    {
+      "file": "tasks/energy-unit-commitment/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "f9c6a1eabd2f5bb3074b18e7a6b6eb3ffabd4cdfbdcd2fc021179c6f4cd2e587",
+      "bytes": 1705753,
+      "exported_records": 143
+    },
+    {
+      "file": "tasks/enterprise-information-search/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "579fa95bd5485b6afe7be6cc9ade18079836fb2eabd0a0900aa9bc56aeef4ce8",
+      "bytes": 8948823,
+      "exported_records": 620
+    },
+    {
+      "file": "tasks/exam-block-sequencing/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "d566d6022fae4c0aaf5c83da38223991296d6be192b3114da7c0bd2f4a2a643f",
+      "bytes": 1320019,
+      "exported_records": 116
+    },
+    {
+      "file": "tasks/exoplanet-detection-period/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "68bb14394a875bc0512b58f39be4b17d8cc3e04547ed709b7c4caba9b3d0bbd9",
+      "bytes": 7737510,
+      "exported_records": 607
+    },
+    {
+      "file": "tasks/flood-risk-analysis/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "23ca748946787d890af0a54cc66b21287a06de13a86d438d61bdb1bfb2cb7a2d",
+      "bytes": 3299877,
+      "exported_records": 311
+    },
+    {
+      "file": "tasks/glm-lake-mendota/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "422558e8436a8def7b4981c4d1e32b3d8ce5e14f75e7f421e37fc2799ec52273",
+      "bytes": 7863821,
+      "exported_records": 608
+    },
+    {
+      "file": "tasks/gravitational-wave-detection/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "0e8101996bcffddd524848da27cba90669d7af41d832d2abca39e85ea75542b0",
+      "bytes": 5970515,
+      "exported_records": 487
+    },
+    {
+      "file": "tasks/grid-dispatch-operator/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "b45b5c862cd439ebf39a1352b04adc32b2a7415990271f95a82f7cf35ca9727e",
+      "bytes": 3772093,
+      "exported_records": 266
+    },
+    {
+      "file": "tasks/hvac-control/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "6321074ab2ef0009684340bbe8e7cac54e5e09ad140670f34f039be5a20d8c38",
+      "bytes": 2789317,
+      "exported_records": 245
+    },
+    {
+      "file": "tasks/invoice-fraud-detection/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "89e2b1f53e25f01bcc39f79ee014ae7d2646f6f8d9c90efe016bfb0ab0e02dea",
+      "bytes": 90884,
+      "exported_records": 7
+    },
+    {
+      "file": "tasks/jax-computing-basics/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "a4a7b2d8708bf49bdc3226bd0fb0bddb30d7b62c2198f4a5e14319253546c19c",
+      "bytes": 2346747,
+      "exported_records": 244
+    },
+    {
+      "file": "tasks/jpg-ocr-stat/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-25.1.ndjson",
+      "sha256": "6efe38428426fa9b918ac733bdf4d588ebe0001ad7a5f174cc39cebddfc47136",
+      "bytes": 95262,
+      "exported_records": 11
+    },
+    {
+      "file": "tasks/lake-warming-attribution/attempt-002/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "e244d15b8602816fff96e4963eae6056ef6010f2e5a1231b529e8e4d64e93bcc",
+      "bytes": 2309658,
+      "exported_records": 234
+    },
+    {
+      "file": "tasks/llm-prefix-cache-replay/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "7c71effba19fa985f43942f8597e23a50bb45fb438321258f05b3e10aec0dbb2",
+      "bytes": 1047456,
+      "exported_records": 124
+    },
+    {
+      "file": "tasks/manufacturing-codebook-normalization/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "5318396ee3f668fd5e177a1c81b4fe4b90bc91ce3201604729499657a530dc65",
+      "bytes": 7728022,
+      "exported_records": 443
+    },
+    {
+      "file": "tasks/manufacturing-equipment-maintenance/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "ea7d52ca2399485089ae82493bc249a74d9e2ce4c3dde218a64d2a156523a805",
+      "bytes": 9384493,
+      "exported_records": 648
+    },
+    {
+      "file": "tasks/manufacturing-fjsp-optimization/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "c7e0424d4ce9a9b80b8b4a0cb55bfbea002884ec7766f56272ffb8062ff41c6e",
+      "bytes": 1036145,
+      "exported_records": 82
+    },
+    {
+      "file": "tasks/mars-clouds-clustering/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "018325823e810ef6152382117578826bf92aeea43ee9b1e4b998dcaf7aaff775",
+      "bytes": 561302,
+      "exported_records": 67
+    },
+    {
+      "file": "tasks/parallel-tfidf-search/attempt-001/nextagent-home/logs/nextagent-plugin-diagnostic.2026-10-26.1.ndjson",
+      "sha256": "298ff9f11a366ba86bef4f62214394893a4a53411d42fd77a763a09821536ff5",
+      "bytes": 104749,
+      "exported_records": 21
+    }
+  ],
+  "trace_scopes": {
+    "workspace_preflight": 1161,
+    "formal_task": 9273,
+    "other_or_unknown": 33
+  },
+  "registered_credential_redactions": 0,
+  "invalid_lines": [],
+  "ordering": "task_id, attempt_directory, source_file, source_line; original per-file order retained",
+  "record_format": "Original framework object with additional _bench provenance; native source files unchanged",
+  "selection": "All attempts with result.status=FINISHED, including failed and interrupted attempts; source-less attempts listed in attempt-index.csv",
+  "export_script_sha256": "db929146a8b5acd582762732705ae529497706efb203dd75975ca04c57265f15"
+}

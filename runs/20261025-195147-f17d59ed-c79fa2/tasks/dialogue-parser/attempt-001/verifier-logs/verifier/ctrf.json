@@ -1,0 +1,83 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 0,
+            "failed": 5,
+            "skipped": 1,
+            "pending": 0,
+            "other": 0,
+            "start": 1792936481.1956556,
+            "stop": 1792936481.3848634
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_system_basics",
+                "status": "failed",
+                "duration": 0.783605999458814,
+                "start": 1792936481.2249558,
+                "stop": 1792936481.2366366,
+                "retries": 3,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def dialogue_data():\n        \"\"\"Load dialogue.json from expected locations.\"\"\"\n        direct_paths = [\"/app/dialogue.json\", \"dialogue.json\", \"/root/dialogue.json\"]\n        for path in direct_paths:\n            if os.path.exists(path):\n                with open(path, \"r\") as f:\n                    return json.load(f)\n    \n        for pattern in [\"/app/**/dialogue.json\", \"/root/**/dialogue.json\", \"./**/dialogue.json\"]:\n            matches = glob.glob(pattern, recursive=True)\n            if matches:\n                with open(matches[0], \"r\") as f:\n                    return json.load(f)\n    \n>       pytest.fail(\"dialogue.json not found in expected locations\")\nE       Failed: dialogue.json not found in expected locations\n\n/verifier/test_outputs.py:32: Failed"
+            },
+            {
+                "name": "test_outputs.py::test_narrative_content",
+                "status": "failed",
+                "duration": 0.2592710006865673,
+                "start": 1792936481.2519674,
+                "stop": 1792936481.2565515,
+                "retries": 8,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def dialogue_data():\n        \"\"\"Load dialogue.json from expected locations.\"\"\"\n        direct_paths = [\"/app/dialogue.json\", \"dialogue.json\", \"/root/dialogue.json\"]\n        for path in direct_paths:\n            if os.path.exists(path):\n                with open(path, \"r\") as f:\n                    return json.load(f)\n    \n        for pattern in [\"/app/**/dialogue.json\", \"/root/**/dialogue.json\", \"./**/dialogue.json\"]:\n            matches = glob.glob(pattern, recursive=True)\n            if matches:\n                with open(matches[0], \"r\") as f:\n                    return json.load(f)\n    \n>       pytest.fail(\"dialogue.json not found in expected locations\")\nE       Failed: dialogue.json not found in expected locations\n\n/verifier/test_outputs.py:32: Failed"
+            },
+            {
+                "name": "test_outputs.py::test_graph_logic",
+                "status": "failed",
+                "duration": 0.2031030053331051,
+                "start": 1792936481.2952154,
+                "stop": 1792936481.2997193,
+                "retries": 3,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def dialogue_data():\n        \"\"\"Load dialogue.json from expected locations.\"\"\"\n        direct_paths = [\"/app/dialogue.json\", \"dialogue.json\", \"/root/dialogue.json\"]\n        for path in direct_paths:\n            if os.path.exists(path):\n                with open(path, \"r\") as f:\n                    return json.load(f)\n    \n        for pattern in [\"/app/**/dialogue.json\", \"/root/**/dialogue.json\", \"./**/dialogue.json\"]:\n            matches = glob.glob(pattern, recursive=True)\n            if matches:\n                with open(matches[0], \"r\") as f:\n                    return json.load(f)\n    \n>       pytest.fail(\"dialogue.json not found in expected locations\")\nE       Failed: dialogue.json not found in expected locations\n\n/verifier/test_outputs.py:32: Failed"
+            },
+            {
+                "name": "test_outputs.py::test_visualization_validity",
+                "status": "skipped",
+                "duration": 0.5519680016732309,
+                "start": 1792936481.3148103,
+                "stop": 1792936481.3157444,
+                "retries": 3,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::viz_check::['header', 'syntax', 'shapes', 'content']"
+                ],
+                "trace": "('/verifier/test_outputs.py', 178, 'Skipped: DOT file missing (checked in test_system_basics)')"
+            },
+            {
+                "name": "test_outputs.py::test_content_integrity",
+                "status": "failed",
+                "duration": 0.1608240017958451,
+                "start": 1792936481.3182855,
+                "stop": 1792936481.322725,
+                "retries": 7,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def dialogue_data():\n        \"\"\"Load dialogue.json from expected locations.\"\"\"\n        direct_paths = [\"/app/dialogue.json\", \"dialogue.json\", \"/root/dialogue.json\"]\n        for path in direct_paths:\n            if os.path.exists(path):\n                with open(path, \"r\") as f:\n                    return json.load(f)\n    \n        for pattern in [\"/app/**/dialogue.json\", \"/root/**/dialogue.json\", \"./**/dialogue.json\"]:\n            matches = glob.glob(pattern, recursive=True)\n            if matches:\n                with open(matches[0], \"r\") as f:\n                    return json.load(f)\n    \n>       pytest.fail(\"dialogue.json not found in expected locations\")\nE       Failed: dialogue.json not found in expected locations\n\n/verifier/test_outputs.py:32: Failed"
+            },
+            {
+                "name": "test_outputs.py::test_structural_integrity",
+                "status": "failed",
+                "duration": 0.20159299674560316,
+                "start": 1792936481.3570707,
+                "stop": 1792936481.361428,
+                "retries": 5,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def dialogue_data():\n        \"\"\"Load dialogue.json from expected locations.\"\"\"\n        direct_paths = [\"/app/dialogue.json\", \"dialogue.json\", \"/root/dialogue.json\"]\n        for path in direct_paths:\n            if os.path.exists(path):\n                with open(path, \"r\") as f:\n                    return json.load(f)\n    \n        for pattern in [\"/app/**/dialogue.json\", \"/root/**/dialogue.json\", \"./**/dialogue.json\"]:\n            matches = glob.glob(pattern, recursive=True)\n            if matches:\n                with open(matches[0], \"r\") as f:\n                    return json.load(f)\n    \n>       pytest.fail(\"dialogue.json not found in expected locations\")\nE       Failed: dialogue.json not found in expected locations\n\n/verifier/test_outputs.py:32: Failed"
+            }
+        ]
+    }
+}

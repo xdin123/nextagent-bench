@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "geospatial-analysis"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "geospatial-analysis"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

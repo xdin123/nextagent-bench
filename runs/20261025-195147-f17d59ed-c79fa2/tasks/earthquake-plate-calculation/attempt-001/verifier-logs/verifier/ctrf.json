@@ -1,0 +1,100 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 8,
+            "passed": 0,
+            "failed": 8,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792940131.4648166,
+            "stop": 1792940131.497638
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_distance_within_tolerance",
+                "status": "failed",
+                "duration": 0.0002975549978145864,
+                "start": 1792940131.4708424,
+                "stop": 1792940131.4812896,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_earthquake_id_correct",
+                "status": "failed",
+                "duration": 0.00023197300106403418,
+                "start": 1792940131.4814591,
+                "stop": 1792940131.4836416,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_latitude_within_tolerance",
+                "status": "failed",
+                "duration": 0.00014609099525841884,
+                "start": 1792940131.483908,
+                "stop": 1792940131.4859688,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_longitude_within_tolerance",
+                "status": "failed",
+                "duration": 0.00013394299821811728,
+                "start": 1792940131.486095,
+                "stop": 1792940131.4881282,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_magnitude_within_tolerance",
+                "status": "failed",
+                "duration": 0.0001399530010530725,
+                "start": 1792940131.4882545,
+                "stop": 1792940131.4903421,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_output_file_and_structure",
+                "status": "failed",
+                "duration": 0.00022050700135878287,
+                "start": 1792940131.4904888,
+                "stop": 1792940131.4929898,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_place_correct",
+                "status": "failed",
+                "duration": 0.0001392539961670991,
+                "start": 1792940131.4931207,
+                "stop": 1792940131.4952812,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            },
+            {
+                "name": "test_outputs.py::TestEarthquakeTask::test_time_correct",
+                "status": "failed",
+                "duration": 0.00018216599710285664,
+                "start": 1792940131.4954531,
+                "stop": 1792940131.4975064,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "cls = <class 'test_outputs.TestEarthquakeTask'>\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Load the answer file once for all tests.\"\"\"\n        paths = [\"/root/answer.json\", \"answer.json\"]\n        path = None\n        for p in paths:\n            if os.path.exists(p):\n                path = p\n                break\n    \n        if path is None:\n>           raise FileNotFoundError(\"Answer file not found. Expected /root/answer.json\")\nE           FileNotFoundError: Answer file not found. Expected /root/answer.json\n\n/verifier/test_outputs.py:46: FileNotFoundError"
+            }
+        ]
+    }
+}

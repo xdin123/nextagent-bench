@@ -1,0 +1,38 @@
+{
+  "task": "pddl-tpp-planning",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T02:25:05.730846+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "pddl-tpp-planning",
+    "agent_timeout": 600,
+    "verifier_timeout": 600,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 2048,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.266,
+    "build": 45.266,
+    "collect": 0.0
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 45.532,
+  "failed_phase": "build",
+  "error": "docker exited 1: #0 building with \"desktop-linux\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 DONE 0.0s\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 1.25kB done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/ubuntu:24.04\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/7] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac\n#4 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done\n#4 DONE 0.0s\n\n#5 [2/7] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     python3-dev     build-essential     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*\n#5 CACHED\n\n#6 [internal] load build context\n#6 transferring context: 217.44kB 0.0s done\n#6 DONE 0.0s\n\n#7 [3/7] RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx\n#7 5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 \n#7 5.191 install: cannot stat '/root/.local/bin/uv': No such file or directory\n#7 ERROR: process \"/bin/sh -c curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx\" did not complete successfully: exit code: 1\n------\n > [3/7] RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx:\n5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 \n5.191 install: cannot stat '/root/.local/bin/uv': No such file or directory\n------\nDockerfile:23\n--------------------\n  22 |     ENV PATH=\"/root/.local/bin:${PATH}\"\n  23 | >>> RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh && \\\n  24 | >>>     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv && \\\n  25 | >>>     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx\n  26 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx\" did not complete successfully: exit code: 1\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T02:25:51.257911+00:00",
+  "evidence_complete": false
+}

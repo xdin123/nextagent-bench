@@ -1,0 +1,24 @@
+Detection complete. All three approximants independently converge on the same binary black hole signal.
+
+## Results
+
+| approximant | peak SNR | total mass (M☉) | best (m1, m2) | peak time |
+|---|---|---|---|---|
+| SEOBNRv4_opt | 17.9110 | 44 | (20, 24) | 105.00 s |
+| IMRPhenomD | 18.0696 | 44 | (23, 21) | 105.00 s |
+| TaylorT4 | 17.2744 | 44 | (22, 22) | 104.98 s |
+
+Results written to `workspace/detection_results.csv`:
+```csv
+approximant,snr,total_mass
+SEOBNRv4_opt,17.9110,44
+IMRPhenomD,18.0696,44
+TaylorT4,17.2744,44
+```
+
+## What was done
+- **Data**: `H1:TEST-STRAIN` from `PyCBC_T2_2.gwf` — 128 s at 4096 Hz.
+- **Conditioning**: high-pass at 15 Hz → resample to 2048 Hz → crop 2 s each end (124 s) → Welch PSD (4 s segments) with `inverse_spectrum_truncation`.
+- **Matched filtering**: time-domain templates (`f_lower=20 Hz`), since SEOBNRv4_opt and TaylorT4 aren't available in frequency domain in this PyCBC build. Full grid of mass1, mass2 = 10–40 (integer steps) = 2883 templates, 0 failures.
+
+The signal is unambiguous: all three waveform models locate the merger at t≈105 s with peak SNR ≈ 17–18, and all agree on a **total mass of 44 M☉** (near-equal-mass binary, ~22+22). The strongest single template is IMRPhenomD at SNR 18.07.

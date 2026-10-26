@@ -1,0 +1,6 @@
+{
+  "task": "invoice-fraud-detection",
+  "phase": "workspace_preflight",
+  "reason": "Framework tool preflight failed: {\"status\": \"INTERRUPTED\", \"payload\": {}, \"last_sequence\": 0}",
+  "at": "2026-10-25T18:00:06.312906+00:00"
+}

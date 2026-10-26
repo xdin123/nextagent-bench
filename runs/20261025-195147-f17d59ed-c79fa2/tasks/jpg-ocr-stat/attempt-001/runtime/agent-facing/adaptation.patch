@@ -1,0 +1,13 @@
+--- prompt.original
++++ prompt.effective
+@@ -1,8 +1,8 @@
+ ## Task description
+ 
+-In `/app/workspace/dataset/img`, I provide a set of scanned receipt images. Each receipt image contains text such as date, product name, unit price, total amount cost, etc. The text mainly consists of digits and English characters.
++In `workspace/dataset/img`, I provide a set of scanned receipt images. Each receipt image contains text such as date, product name, unit price, total amount cost, etc. The text mainly consists of digits and English characters.
+ 
+-Read all image files under the given path, extract their data and total amount, and write them into an excel file `/app/workspace/stat_ocr.xlsx`.
++Read all image files under the given path, extract their data and total amount, and write them into an excel file `workspace/stat_ocr.xlsx`.
+ 
+ The output file should only contain one sheet called "results". It should have 3 columns:
+ - `filename`: source filename (e.g., "000.jpg").

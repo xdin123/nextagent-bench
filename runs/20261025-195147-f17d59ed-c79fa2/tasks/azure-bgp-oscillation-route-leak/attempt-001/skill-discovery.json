@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "azure-bgp"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "azure-bgp"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "milp-solver-workflow",
+      "directory": "milp-solver-workflow",
+      "description": "Use for formulating, solving, debugging, and validating mixed-integer linear optimization models with open-source solvers, including variable indexing, sparse constraints, linearized costs, solver limits, MIP gaps, incumbent extraction, numerical tolerances, and deterministic output reporting.",
+      "sha256": "a7952b16cfda72bd0576f0f1ff1c222a0c05d5343195d00013e81ed56b8eddc4"
+    },
+    {
+      "name": "unit-commitment-data-modeling",
+      "directory": "unit-commitment-data-modeling",
+      "description": "Use for parsing structured unit commitment input data from JSON, CSV, benchmark cases, spreadsheets, databases, or nested tables; finding fields for time periods, resources, load, reserve, generator limits, initial conditions, startup data, renewable availability, and production costs without assuming one source-specific schema.",
+      "sha256": "b67192fb7fccb9c6e04df287bf2049fbc0f26571d7d702f7bcacc1c1b0566d19"
+    },
+    {
+      "name": "unit-commitment-operating-rules",
+      "directory": "unit-commitment-operating-rules",
+      "description": "Use for day-ahead or multi-period unit commitment problems, including thermal on/off schedules, dispatch, startup/shutdown logic, minimum up/down time, ramping, spinning reserve deliverability, renewable curtailment, operating-cost accounting, and independent feasibility checks for power-system operations schedules.",
+      "sha256": "e44bbc07a1f2b53a11ac0773962fc6dbf9daf1534244f358878919971d9caa2c"
+    }
+  ],
+  "verifier_sha": "d65311484d8033f915ea72c97bab33fe8026346a1a2a1e9ab841061b737e322e",
+  "prompt_sha": "9f2ebffd2253d3fc1898cfa88f79c1dedc940f2e36ae5d4a27babb8709af46f5"
+}

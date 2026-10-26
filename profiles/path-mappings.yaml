@@ -1,0 +1,12 @@
+# Full WORKDIR comes from the built image, including ENV expansion/multistage builds.
+# Extra roots retain distinct logical locations, not a lossy collapse into workspace/.
+civ6-adjacency-optimizer:
+  extra_roots: [/data, /output]
+fix-druid-loophole-cve:
+  extra_roots: [/opt/druid]
+flink-query:
+  extra_roots: [/opt/flink]
+react-performance-debugging:
+  extra_roots: [/services/api-simulator]
+syzkaller-ppdev-syzlang:
+  extra_roots: [/opt/syzkaller]

@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "dialogue-graph"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "dialogue-graph"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

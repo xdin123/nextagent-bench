@@ -1,0 +1,208 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 514B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 786.22kB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/7] RUN apt-get update && apt-get install -y --no-install-recommends     python3-pip     && rm -rf /var/lib/apt/lists/*
+#6 0.718 Hit:1 http://deb.debian.org/debian trixie InRelease
+#6 1.519 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#6 2.277 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#6 8.649 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#6 9.956 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#6 11.11 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#6 11.15 Fetched 10.0 MB in 11s (918 kB/s)
+#6 11.15 Reading package lists...
+#6 11.55 Reading package lists...
+#6 11.93 Building dependency tree...
+#6 12.01 Reading state information...
+#6 12.13 The following additional packages will be installed:
+#6 12.13   libexpat1 libpython3-stdlib libpython3.13-minimal libpython3.13-stdlib
+#6 12.13   media-types python3 python3-minimal python3-packaging python3-wheel
+#6 12.13   python3.13 python3.13-minimal
+#6 12.13 Suggested packages:
+#6 12.13   python3-doc python3-tk python3-venv python3-setuptools python3.13-venv
+#6 12.13   python3.13-doc binutils binfmt-support
+#6 12.13 Recommended packages:
+#6 12.13   build-essential python3-dev libjs-sphinxdoc
+#6 12.21 The following NEW packages will be installed:
+#6 12.21   libexpat1 libpython3-stdlib libpython3.13-minimal libpython3.13-stdlib
+#6 12.21   media-types python3 python3-minimal python3-packaging python3-pip
+#6 12.21   python3-wheel python3.13 python3.13-minimal
+#6 13.18 0 upgraded, 12 newly installed, 0 to remove and 1 not upgraded.
+#6 13.18 Need to get 7559 kB of archives.
+#6 13.18 After this operation, 34.0 MB of additional disk space will be used.
+#6 13.18 Get:1 http://deb.debian.org/debian-security trixie-security/main amd64 libexpat1 amd64 2.9.0-1~deb13u1 [126 kB]
+#6 14.60 Get:2 http://deb.debian.org/debian trixie/main amd64 libpython3.13-minimal amd64 3.13.5-2+deb13u5 [863 kB]
+#6 16.62 Get:3 http://deb.debian.org/debian trixie/main amd64 python3.13-minimal amd64 3.13.5-2+deb13u5 [2225 kB]
+#6 17.38 Get:4 http://deb.debian.org/debian trixie/main amd64 python3-minimal amd64 3.13.5-1 [27.2 kB]
+#6 18.08 Get:5 http://deb.debian.org/debian trixie/main amd64 media-types all 13.0.0 [29.3 kB]
+#6 19.90 Get:6 http://deb.debian.org/debian trixie/main amd64 libpython3.13-stdlib amd64 3.13.5-2+deb13u5 [1959 kB]
+#6 21.43 Get:7 http://deb.debian.org/debian trixie/main amd64 python3.13 amd64 3.13.5-2+deb13u5 [757 kB]
+#6 22.02 Get:8 http://deb.debian.org/debian trixie/main amd64 libpython3-stdlib amd64 3.13.5-1 [10.2 kB]
+#6 22.69 Get:9 http://deb.debian.org/debian trixie/main amd64 python3 amd64 3.13.5-1 [28.2 kB]
+#6 23.49 Get:10 http://deb.debian.org/debian trixie/main amd64 python3-packaging all 25.0-1 [56.6 kB]
+#6 24.16 Get:11 http://deb.debian.org/debian trixie/main amd64 python3-wheel all 0.46.1-2 [21.7 kB]
+#6 25.72 Get:12 http://deb.debian.org/debian trixie/main amd64 python3-pip all 25.1.1+dfsg-1 [1457 kB]
+#6 26.31 Fetched 7559 kB in 14s (558 kB/s)
+#6 26.32 Selecting previously unselected package libexpat1:amd64.
+#6 26.32 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5658 files and directories currently installed.)
+#6 26.34 Preparing to unpack .../libexpat1_2.9.0-1~deb13u1_amd64.deb ...
+#6 26.35 Unpacking libexpat1:amd64 (2.9.0-1~deb13u1) ...
+#6 26.37 Selecting previously unselected package libpython3.13-minimal:amd64.
+#6 26.38 Preparing to unpack .../libpython3.13-minimal_3.13.5-2+deb13u5_amd64.deb ...
+#6 26.38 Unpacking libpython3.13-minimal:amd64 (3.13.5-2+deb13u5) ...
+#6 26.43 Selecting previously unselected package python3.13-minimal.
+#6 26.43 Preparing to unpack .../python3.13-minimal_3.13.5-2+deb13u5_amd64.deb ...
+#6 26.44 Unpacking python3.13-minimal (3.13.5-2+deb13u5) ...
+#6 26.53 Setting up libpython3.13-minimal:amd64 (3.13.5-2+deb13u5) ...
+#6 26.54 Setting up libexpat1:amd64 (2.9.0-1~deb13u1) ...
+#6 26.55 Setting up python3.13-minimal (3.13.5-2+deb13u5) ...
+#6 26.99 Selecting previously unselected package python3-minimal.
+#6 26.99 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5992 files and directories currently installed.)
+#6 26.99 Preparing to unpack .../python3-minimal_3.13.5-1_amd64.deb ...
+#6 26.99 Unpacking python3-minimal (3.13.5-1) ...
+#6 27.01 Selecting previously unselected package media-types.
+#6 27.01 Preparing to unpack .../media-types_13.0.0_all.deb ...
+#6 27.01 Unpacking media-types (13.0.0) ...
+#6 27.03 Selecting previously unselected package libpython3.13-stdlib:amd64.
+#6 27.03 Preparing to unpack .../libpython3.13-stdlib_3.13.5-2+deb13u5_amd64.deb ...
+#6 27.03 Unpacking libpython3.13-stdlib:amd64 (3.13.5-2+deb13u5) ...
+#6 27.12 Selecting previously unselected package python3.13.
+#6 27.12 Preparing to unpack .../python3.13_3.13.5-2+deb13u5_amd64.deb ...
+#6 27.12 Unpacking python3.13 (3.13.5-2+deb13u5) ...
+#6 27.14 Selecting previously unselected package libpython3-stdlib:amd64.
+#6 27.14 Preparing to unpack .../libpython3-stdlib_3.13.5-1_amd64.deb ...
+#6 27.15 Unpacking libpython3-stdlib:amd64 (3.13.5-1) ...
+#6 27.16 Setting up python3-minimal (3.13.5-1) ...
+#6 27.26 Selecting previously unselected package python3.
+#6 27.26 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6446 files and directories currently installed.)
+#6 27.26 Preparing to unpack .../python3_3.13.5-1_amd64.deb ...
+#6 27.27 Unpacking python3 (3.13.5-1) ...
+#6 27.29 Selecting previously unselected package python3-packaging.
+#6 27.29 Preparing to unpack .../python3-packaging_25.0-1_all.deb ...
+#6 27.29 Unpacking python3-packaging (25.0-1) ...
+#6 27.31 Selecting previously unselected package python3-wheel.
+#6 27.31 Preparing to unpack .../python3-wheel_0.46.1-2_all.deb ...
+#6 27.31 Unpacking python3-wheel (0.46.1-2) ...
+#6 27.33 Selecting previously unselected package python3-pip.
+#6 27.33 Preparing to unpack .../python3-pip_25.1.1+dfsg-1_all.deb ...
+#6 27.34 Unpacking python3-pip (25.1.1+dfsg-1) ...
+#6 27.41 Setting up media-types (13.0.0) ...
+#6 27.42 Setting up libpython3.13-stdlib:amd64 (3.13.5-2+deb13u5) ...
+#6 27.42 Setting up libpython3-stdlib:amd64 (3.13.5-1) ...
+#6 27.43 Setting up python3.13 (3.13.5-2+deb13u5) ...
+#6 27.94 Setting up python3 (3.13.5-1) ...
+#6 28.00 Setting up python3-packaging (25.0-1) ...
+#6 28.08 Setting up python3-wheel (0.46.1-2) ...
+#6 28.14 Setting up python3-pip (25.1.1+dfsg-1) ...
+#6 28.64 Processing triggers for libc-bin (2.41-12+deb13u4) ...
+#6 DONE 28.7s
+
+#7 [3/7] RUN pip3 install --no-cache-dir --break-system-packages     pytest==8.4.1     pytest-json-ctrf==0.3.5     ezdxf==1.4.3     shapely==2.0.7     jsonschema==4.23.0     pillow==12.0.0
+#7 2.266 Collecting pytest==8.4.1
+#7 3.015   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+#7 3.214 Collecting pytest-json-ctrf==0.3.5
+#7 3.380   Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+#7 3.941 Collecting ezdxf==1.4.3
+#7 4.106   Downloading ezdxf-1.4.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.9 kB)
+#7 4.420 Collecting shapely==2.0.7
+#7 4.586   Downloading shapely-2.0.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#7 4.797 Collecting jsonschema==4.23.0
+#7 4.964   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+#7 5.437 Collecting pillow==12.0.0
+#7 5.600   Downloading pillow-12.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 5.799 Collecting iniconfig>=1 (from pytest==8.4.1)
+#7 5.963   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#7 6.138 Collecting packaging>=20 (from pytest==8.4.1)
+#7 6.303   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#7 6.469 Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+#7 6.632   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+#7 6.813 Collecting pygments>=2.7.2 (from pytest==8.4.1)
+#7 6.978   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#7 7.165 Collecting pyparsing>=2.0.1 (from ezdxf==1.4.3)
+#7 7.330   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+#7 7.521 Collecting typing_extensions>=4.6.0 (from ezdxf==1.4.3)
+#7 7.683   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#7 8.019 Collecting numpy (from ezdxf==1.4.3)
+#7 8.188   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#7 8.486 Collecting fonttools (from ezdxf==1.4.3)
+#7 8.650   Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+#7 9.252 Collecting attrs>=22.2.0 (from jsonschema==4.23.0)
+#7 9.419   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+#7 9.588 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.23.0)
+#7 9.753   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#7 9.925 Collecting referencing>=0.28.4 (from jsonschema==4.23.0)
+#7 10.09   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#7 10.48 Collecting rpds-py>=0.7.1 (from jsonschema==4.23.0)
+#7 10.64   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#7 10.82 Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+#7 11.27 Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+#7 11.44 Downloading ezdxf-1.4.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.8 MB)
+#7 14.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 1.8 MB/s eta 0:00:00
+#7 14.76 Downloading shapely-2.0.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.5 MB)
+#7 15.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 2.4 MB/s eta 0:00:00
+#7 15.96 Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+#7 16.14 Downloading pillow-12.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 19.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 2.0 MB/s eta 0:00:00
+#7 19.83 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#7 20.02 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#7 20.19 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#7 20.36 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#7 29.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 1.8 MB/s eta 0:00:00
+#7 30.06 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#7 30.30 Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+#7 30.48 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#7 31.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.5 MB/s eta 0:00:00
+#7 31.50 Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+#7 31.75 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#7 31.93 Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+#7 32.34 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#7 32.84 Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+#7 36.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 1.5 MB/s eta 0:00:00
+#7 36.64 Installing collected packages: typing_extensions, rpds-py, pyparsing, pygments, pluggy, pillow, packaging, numpy, iniconfig, fonttools, attrs, shapely, referencing, pytest, ezdxf, pytest-json-ctrf, jsonschema-specifications, jsonschema
+#7 40.23 Successfully installed attrs-26.1.0 ezdxf-1.4.3 fonttools-4.67.0 iniconfig-2.3.1 jsonschema-4.23.0 jsonschema-specifications-2025.9.1 numpy-2.5.4 packaging-26.3 pillow-12.0.0 pluggy-1.7.0 pygments-2.21.0 pyparsing-3.3.3 pytest-8.4.1 pytest-json-ctrf-0.3.5 referencing-0.37.0 rpds-py-2026.9.1 shapely-2.0.7 typing_extensions-4.16.0
+#7 40.23 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#7 41.11 
+#7 41.11 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#7 41.11 [notice] To update, run: pip install --upgrade pip
+#7 DONE 41.3s
+
+#8 [4/7] WORKDIR /root
+#8 DONE 0.0s
+
+#9 [5/7] COPY input /root/input
+#9 DONE 0.0s
+
+#10 [6/7] COPY output_schema /root/output_schema
+#10 DONE 0.0s
+
+#11 [7/7] RUN mkdir -p /root/output
+#11 DONE 0.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 4.3s done
+#12 exporting manifest sha256:b6c8b0dd7143ed754ff24e3386ac5fd40b4527f8c03f7bffbf7df008dd39bac3 done
+#12 exporting config sha256:6418555146f3f996f80a543c29ee24fa3de7fc31ab6de02257fb79e3bf13c730 done
+#12 exporting attestation manifest sha256:cdee5561bdc9689984e0be18dc04a489e9ea0be5cc170bf392aae4af2ed86b9d done
+#12 exporting manifest list sha256:ed1510413d9fe99ecb926f942a5c147cd410a7639b4eb08cb69787f0b037ec49 done
+#12 naming to docker.io/nextagent-bench/environment:cdbb36ee4a87c4171cad done
+#12 unpacking to docker.io/nextagent-bench/environment:cdbb36ee4a87c4171cad
+#12 unpacking to docker.io/nextagent-bench/environment:cdbb36ee4a87c4171cad 1.2s done
+#12 DONE 5.6s

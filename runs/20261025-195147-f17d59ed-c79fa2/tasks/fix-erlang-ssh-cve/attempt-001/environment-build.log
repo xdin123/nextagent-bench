@@ -1,0 +1,547 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.75kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:24.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#4 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#4 CACHED
+
+#5 [2/5] RUN set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""     && rm -rf /var/lib/apt/lists/*
+#5 0.168 + apt-get update
+#5 1.468 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#5 1.864 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#5 4.423 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#5 5.794 Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1411 kB]
+#5 5.899 Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#5 6.754 Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#5 7.086 Get:7 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#5 9.361 Get:8 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#5 9.377 Get:9 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1549 kB]
+#5 13.09 Get:10 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]
+#5 38.42 Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#5 49.30 Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#5 66.28 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2170 kB]
+#5 68.07 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#5 91.51 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2231 kB]
+#5 98.41 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1733 kB]
+#5 99.16 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#5 100.7 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#5 101.9 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#5 101.9 Fetched 33.6 MB in 1min 42s (331 kB/s)
+#5 101.9 Reading package lists...
+#5 102.5 + buildDeps=curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config
+#5 102.5 + runtimeDeps=libodbc2 libssl3 libsctp1
+#5 102.5 + apt-get install -y --no-install-recommends curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config libodbc2 libssl3 libsctp1
+#5 102.5 Reading package lists...
+#5 103.2 Building dependency tree...
+#5 103.3 Reading state information...
+#5 103.5 libssl3t64 is already the newest version (3.0.13-0ubuntu3.16).
+#5 103.5 The following additional packages will be installed:
+#5 103.5   adduser binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-13
+#5 103.5   cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu g++-13 g++-13-x86-64-linux-gnu
+#5 103.5   g++-x86-64-linux-gnu gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu
+#5 103.5   gcc-x86-64-linux-gnu git-man libasan8 libatomic1 libbinutils libbrotli1
+#5 103.5   libbsd0 libc-dev-bin libc6-dev libcbor0.10 libcc1-0 libcrypt-dev
+#5 103.5   libctf-nobfd0 libctf0 libcurl3t64-gnutls libcurl4t64 libdpkg-perl libedit2
+#5 103.5   liberror-perl libexpat1 libfido2-1 libgcc-13-dev libgdbm-compat4t64
+#5 103.5   libgdbm6t64 libgomp1 libgpm2 libgprofng0 libgssapi-krb5-2 libhwasan0
+#5 103.5   libisl23 libitm1 libjansson4 libk5crypto3 libkeyutils1 libkrb5-3
+#5 103.5   libkrb5support0 libldap2 liblsan0 libltdl7 liblzma5 libmpc3 libmpfr6
+#5 103.5   libncurses6 libnghttp2-14 libodbccr2 libodbcinst2 libperl5.38t64 libpkgconf3
+#5 103.5   libpsl5t64 libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib
+#5 103.5   libpython3.12t64 libquadmath0 libreadline8t64 librtmp1 libsasl2-2
+#5 103.5   libsasl2-modules-db libsframe1 libsodium23 libsqlite3-0 libssh-4
+#5 103.5   libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev lto-disabled-list m4
+#5 103.5   media-types netbase openssl patch perl perl-modules-5.38 pkgconf pkgconf-bin
+#5 103.5   python3-bcrypt python3-cffi-backend python3-cryptography python3-minimal
+#5 103.5   python3-nacl python3-six python3.12 python3.12-minimal readline-common
+#5 103.5   rpcsvc-proto tzdata unixodbc-common vim-common vim-runtime xz-utils
+#5 103.5 Suggested packages:
+#5 103.5   liblocale-gettext-perl cron quota ecryptfs-utils autoconf-archive
+#5 103.5   gnu-standards autoconf-doc libtool gettext binutils-doc gprofng-gui
+#5 103.5   bzip2-doc cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib
+#5 103.5   g++-13-multilib gcc-13-doc gcc-multilib manpages-dev automake flex bison gdb
+#5 103.5   gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu gettext-base git-daemon-run
+#5 103.5   | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs
+#5 103.5   git-mediawiki git-svn glibc-doc gnupg | sq | sqop | pgpainless-cli
+#5 103.5   | sequoia-chameleon-gnupg bzr gdbm-l10n gpm krb5-doc krb5-user ncurses-doc
+#5 103.5   odbc-postgresql tdsodbc lksctp-tools libssl-doc libstdc++-13-doc m4-doc
+#5 103.5   make-doc keychain libpam-ssh monkeysphere ssh-askpass ed diffutils-doc
+#5 103.5   perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+#5 103.5   libtap-harness-archive-perl python3-doc python3-tk python3-venv
+#5 103.5   python-cryptography-doc python3-cryptography-vectors python-nacl-doc
+#5 103.5   python3-gssapi python3-invoke python3.12-venv python3.12-doc binfmt-support
+#5 103.5   readline-doc ctags vim-doc vim-scripts
+#5 103.5 Recommended packages:
+#5 103.5   automake | automaken build-essential fakeroot gnupg | sq | sqop
+#5 103.5   | pgpainless-cli | sequoia-chameleon-gnupg libalgorithm-merge-perl less
+#5 103.5   manpages manpages-dev libc-devtools libfile-fcntllock-perl
+#5 103.5   liblocale-gettext-perl krb5-locales libldap-common publicsuffix
+#5 103.5   libsasl2-modules xauth xxd
+#5 103.6 The following NEW packages will be installed:
+#5 103.6   adduser autoconf binutils binutils-common binutils-x86-64-linux-gnu bzip2
+#5 103.6   ca-certificates cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu curl
+#5 103.6   dpkg-dev g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13
+#5 103.6   gcc-13-base gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu git git-man
+#5 103.6   libasan8 libatomic1 libbinutils libbrotli1 libbsd0 libc-dev-bin libc6-dev
+#5 103.6   libcbor0.10 libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libcurl3t64-gnutls
+#5 103.6   libcurl4t64 libdpkg-perl libedit2 liberror-perl libexpat1 libfido2-1
+#5 103.6   libgcc-13-dev libgdbm-compat4t64 libgdbm6t64 libgomp1 libgpm2 libgprofng0
+#5 103.6   libgssapi-krb5-2 libhwasan0 libisl23 libitm1 libjansson4 libk5crypto3
+#5 103.6   libkeyutils1 libkrb5-3 libkrb5support0 libldap2 liblsan0 libltdl7 libmpc3
+#5 103.6   libmpfr6 libncurses-dev libncurses6 libnghttp2-14 libodbc2 libodbccr2
+#5 103.6   libodbcinst2 libperl5.38t64 libpkgconf3 libpsl5t64 libpython3-stdlib
+#5 103.6   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0
+#5 103.6   libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules-db libsctp-dev libsctp1
+#5 103.6   libsframe1 libsodium23 libsqlite3-0 libssh-4 libssl-dev libstdc++-13-dev
+#5 103.6   libtsan2 libubsan1 linux-libc-dev lto-disabled-list m4 make media-types
+#5 103.6   net-tools netbase openssh-client openssl patch perl perl-modules-5.38
+#5 103.6   pkg-config pkgconf pkgconf-bin python3 python3-bcrypt python3-cffi-backend
+#5 103.6   python3-cryptography python3-minimal python3-nacl python3-paramiko
+#5 103.6   python3-six python3.12 python3.12-minimal readline-common rpcsvc-proto
+#5 103.6   tzdata unixodbc-common unixodbc-dev vim vim-common vim-runtime xz-utils
+#5 103.6 The following packages will be upgraded:
+#5 103.6   liblzma5
+#5 108.5 1 upgraded, 125 newly installed, 0 to remove and 3 not upgraded.
+#5 108.5 Need to get 114 MB of archives.
+#5 108.5 After this operation, 450 MB of additional disk space will be used.
+#5 108.5 Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+#5 109.8 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+#5 113.3 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]
+#5 114.6 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]
+#5 115.7 Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+#5 117.3 Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+#5 119.0 Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026e-0ubuntu0.24.04.1 [282 kB]
+#5 120.5 Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblzma5 amd64 5.6.1+really5.4.5-1ubuntu0.4 [128 kB]
+#5 121.8 Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+#5 122.9 Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+#5 125.7 Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+#5 142.3 Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+#5 143.9 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]
+#5 144.7 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]
+#5 145.7 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]
+#5 150.3 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.6 [3110 kB]
+#5 151.2 Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+#5 152.1 Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+#5 159.7 Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.6 [4864 kB]
+#5 161.2 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.6 [231 kB]
+#5 162.5 Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+#5 173.2 Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.16 [1004 kB]
+#5 175.6 Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.1 [139 kB]
+#5 176.9 Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+#5 178.3 Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]
+#5 180.0 Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]
+#5 181.3 Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+#5 184.8 Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]
+#5 186.2 Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]
+#5 187.3 Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-cffi-backend amd64 1.16.0-2build1 [77.3 kB]
+#5 189.3 Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-common all 2:9.1.0016-1ubuntu7.20 [389 kB]
+#5 190.1 Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB]
+#5 193.0 Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+#5 194.2 Get:34 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB]
+#5 195.0 Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpm2 amd64 1.20.7-11 [14.1 kB]
+#5 196.4 Get:36 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]
+#5 197.7 Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libncurses6 amd64 6.4+20240113-1ubuntu2.2 [112 kB]
+#5 198.8 Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.4 [74.6 kB]
+#5 199.9 Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+#5 201.4 Get:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.20 [909 kB]
+#5 202.8 Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xz-utils amd64 5.6.1+really5.4.5-1ubuntu0.4 [267 kB]
+#5 204.2 Get:42 http://archive.ubuntu.com/ubuntu noble/main amd64 m4 amd64 1.4.19-4build1 [244 kB]
+#5 206.6 Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 autoconf all 2.71-3 [339 kB]
+#5 209.6 Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-common amd64 2.42-4ubuntu2.10 [240 kB]
+#5 210.7 Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsframe1 amd64 2.42-4ubuntu2.10 [15.7 kB]
+#5 214.5 Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbinutils amd64 2.42-4ubuntu2.10 [577 kB]
+#5 215.7 Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf-nobfd0 amd64 2.42-4ubuntu2.10 [98.0 kB]
+#5 216.9 Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf0 amd64 2.42-4ubuntu2.10 [94.5 kB]
+#5 218.6 Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgprofng0 amd64 2.42-4ubuntu2.10 [849 kB]
+#5 233.7 Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.42-4ubuntu2.10 [2463 kB]
+#5 234.8 Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils amd64 2.42-4ubuntu2.10 [18.2 kB]
+#5 236.0 Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1ubuntu0.1 [34.6 kB]
+#5 237.1 Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]
+#5 239.1 Get:54 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+#5 240.7 Get:55 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpfr6 amd64 4.2.1-1build1.1 [353 kB]
+#5 241.7 Get:56 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+#5 262.1 Get:57 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [10.7 MB]
+#5 263.7 Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04.1 [1042 B]
+#5 264.5 Get:59 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]
+#5 266.5 Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+#5 267.9 Get:61 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+#5 268.7 Get:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+#5 272.4 Get:63 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+#5 302.7 Ign:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1
+#5 302.7 Ign:65 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7
+#5 302.7 Ign:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5
+#5 302.7 Ign:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16
+#5 302.7 Ign:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16
+#5 302.7 Ign:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6
+#5 302.7 Ign:70 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3
+#5 302.7 Ign:71 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2
+#5 302.7 Ign:72 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47
+#5 302.7 Ign:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6
+#5 302.7 Ign:74 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:75 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:76 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:80 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 302.7 Ign:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:87 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 302.7 Ign:88 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1
+#5 302.7 Ign:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9
+#5 302.7 Ign:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147
+#5 302.7 Ign:91 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1
+#5 302.7 Ign:92 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7
+#5 302.7 Ign:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9
+#5 302.7 Ign:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:96 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 302.7 Ign:97 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 302.7 Ign:98 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1
+#5 302.7 Ign:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16
+#5 302.7 Ign:100 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2
+#5 302.7 Ign:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4
+#5 302.7 Ign:102 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4
+#5 302.7 Ign:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1
+#5 302.7 Ign:104 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libncurses-dev amd64 6.4+20240113-1ubuntu2.2
+#5 302.7 Ign:105 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 302.7 Ign:106 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 302.7 Ign:107 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1
+#5 302.7 Ign:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 302.7 Ign:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1
+#5 302.7 Ign:110 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17
+#5 302.7 Ign:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp1 amd64 1.0.19+dfsg-2build1
+#5 302.7 Ign:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp-dev amd64 1.0.19+dfsg-2build1
+#5 302.7 Ign:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1
+#5 302.7 Ign:114 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.16
+#5 302.7 Ign:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4
+#5 302.7 Ign:116 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1
+#5 302.7 Ign:117 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1
+#5 302.7 Ign:118 http://archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1
+#5 302.7 Ign:119 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-cryptography amd64 41.0.7-4ubuntu0.4
+#5 302.7 Ign:120 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-nacl amd64 1.5.0-4build1
+#5 302.7 Ign:121 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bcrypt amd64 3.2.2-1build1
+#5 302.7 Ign:122 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-six all 1.16.0-4
+#5 302.7 Ign:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-paramiko all 2.12.0-2ubuntu4.1
+#5 302.7 Ign:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20
+#5 302.7 Ign:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20
+#5 302.7 Ign:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1
+#5 303.7 Ign:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1
+#5 303.7 Ign:65 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7
+#5 303.7 Ign:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5
+#5 303.7 Ign:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16
+#5 303.7 Ign:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16
+#5 303.7 Ign:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6
+#5 303.7 Ign:70 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3
+#5 303.7 Ign:71 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2
+#5 303.7 Ign:72 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47
+#5 303.7 Ign:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6
+#5 303.7 Ign:74 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:75 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:76 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:80 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 303.7 Ign:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:87 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 303.7 Ign:88 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1
+#5 303.7 Ign:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9
+#5 303.7 Ign:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147
+#5 303.7 Ign:91 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1
+#5 303.7 Ign:92 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7
+#5 303.7 Ign:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9
+#5 303.7 Ign:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:96 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 303.7 Ign:97 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 303.7 Ign:98 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1
+#5 303.7 Ign:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16
+#5 303.7 Ign:100 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2
+#5 303.7 Ign:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4
+#5 303.7 Ign:102 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4
+#5 303.7 Ign:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1
+#5 303.7 Ign:104 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libncurses-dev amd64 6.4+20240113-1ubuntu2.2
+#5 303.7 Ign:105 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 303.7 Ign:106 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 303.7 Ign:107 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1
+#5 303.7 Ign:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 303.7 Ign:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1
+#5 303.7 Ign:110 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17
+#5 303.7 Ign:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp1 amd64 1.0.19+dfsg-2build1
+#5 303.7 Ign:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp-dev amd64 1.0.19+dfsg-2build1
+#5 303.7 Ign:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1
+#5 303.7 Ign:114 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.16
+#5 303.7 Ign:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4
+#5 303.7 Ign:116 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1
+#5 303.7 Ign:117 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1
+#5 303.7 Ign:118 http://archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1
+#5 303.7 Ign:119 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-cryptography amd64 41.0.7-4ubuntu0.4
+#5 303.7 Ign:120 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-nacl amd64 1.5.0-4build1
+#5 303.7 Ign:121 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bcrypt amd64 3.2.2-1build1
+#5 303.7 Ign:122 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-six all 1.16.0-4
+#5 303.7 Ign:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-paramiko all 2.12.0-2ubuntu4.1
+#5 303.7 Ign:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20
+#5 303.7 Ign:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20
+#5 303.7 Ign:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1
+#5 305.7 Ign:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1
+#5 305.7 Ign:65 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7
+#5 305.7 Ign:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5
+#5 305.7 Ign:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16
+#5 305.7 Ign:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16
+#5 305.7 Ign:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6
+#5 305.7 Ign:70 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3
+#5 305.7 Ign:71 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2
+#5 305.7 Ign:72 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47
+#5 305.7 Ign:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6
+#5 305.7 Ign:74 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:75 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:76 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:80 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 305.7 Ign:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:87 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 305.7 Ign:88 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1
+#5 305.7 Ign:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9
+#5 305.7 Ign:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147
+#5 305.7 Ign:91 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1
+#5 305.7 Ign:92 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7
+#5 305.7 Ign:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9
+#5 305.7 Ign:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:96 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 305.7 Ign:97 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 305.7 Ign:98 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1
+#5 305.7 Ign:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16
+#5 305.7 Ign:100 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2
+#5 305.7 Ign:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4
+#5 305.7 Ign:102 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4
+#5 305.7 Ign:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1
+#5 305.7 Ign:104 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libncurses-dev amd64 6.4+20240113-1ubuntu2.2
+#5 305.7 Ign:105 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 305.7 Ign:106 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 305.7 Ign:107 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1
+#5 305.7 Ign:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 305.7 Ign:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1
+#5 305.7 Ign:110 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17
+#5 305.7 Ign:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp1 amd64 1.0.19+dfsg-2build1
+#5 305.7 Ign:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp-dev amd64 1.0.19+dfsg-2build1
+#5 305.7 Ign:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1
+#5 305.7 Ign:114 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.16
+#5 305.7 Ign:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4
+#5 305.7 Ign:116 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1
+#5 305.7 Ign:117 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1
+#5 305.7 Ign:118 http://archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1
+#5 305.7 Ign:119 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-cryptography amd64 41.0.7-4ubuntu0.4
+#5 305.7 Ign:120 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-nacl amd64 1.5.0-4build1
+#5 305.7 Ign:121 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bcrypt amd64 3.2.2-1build1
+#5 305.7 Ign:122 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-six all 1.16.0-4
+#5 305.7 Ign:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-paramiko all 2.12.0-2ubuntu4.1
+#5 305.7 Ign:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20
+#5 305.7 Ign:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20
+#5 305.7 Ign:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1
+#5 309.7 Err:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1
+#5 309.7   Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]
+#5 309.7 Err:65 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5
+#5 309.7 Ign:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16
+#5 309.7 Ign:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16
+#5 309.7 Ign:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6
+#5 309.7 Err:70 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:71 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:72 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6
+#5 309.7 Ign:74 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:75 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:76 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:77 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:78 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:79 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:80 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1
+#5 309.7 Ign:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Ign:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Ign:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Err:87 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:88 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9
+#5 309.7 Ign:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147
+#5 309.7 Err:91 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:92 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9
+#5 309.7 Ign:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Ign:95 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Ign:96 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1
+#5 309.7 Err:97 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:98 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16
+#5 309.7 Err:100 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:101 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4
+#5 309.7 Ign:102 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4
+#5 309.7 Err:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:104 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libncurses-dev amd64 6.4+20240113-1ubuntu2.2
+#5 309.7 Ign:105 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 309.7 Ign:106 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 309.7 Ign:107 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1
+#5 309.7 Ign:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1
+#5 309.7 Err:109 http://archive.ubuntu.com/ubuntu noble/main amd64 libpkgconf3 amd64 1.8.1-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:110 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17
+#5 309.7 Err:111 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp1 amd64 1.0.19+dfsg-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:112 http://archive.ubuntu.com/ubuntu noble/main amd64 libsctp-dev amd64 1.0.19+dfsg-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1
+#5 309.7 Ign:114 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.16
+#5 309.7 Ign:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4
+#5 309.7 Err:116 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf-bin amd64 1.8.1-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:117 http://archive.ubuntu.com/ubuntu noble/main amd64 pkgconf amd64 1.8.1-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:118 http://archive.ubuntu.com/ubuntu noble/main amd64 pkg-config amd64 1.8.1-2build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:119 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-cryptography amd64 41.0.7-4ubuntu0.4
+#5 309.7 Err:120 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-nacl amd64 1.5.0-4build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:121 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bcrypt amd64 3.2.2-1build1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:122 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-six all 1.16.0-4
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Err:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-paramiko all 2.12.0-2ubuntu4.1
+#5 309.7   Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 309.7 Ign:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20
+#5 309.7 Ign:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20
+#5 309.7 Ign:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1
+#5 311.3 Get:66 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5 [191 kB]
+#5 313.3 Get:67 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16 [344 kB]
+#5 315.0 Get:68 http://security.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.16 [226 kB]
+#5 316.4 Get:69 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6 [268 kB]
+#5 318.3 Get:73 http://security.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6 [1074 kB]
+#5 319.4 Get:74 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1 [48.0 kB]
+#5 320.7 Get:75 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1 [148 kB]
+#5 321.7 Get:76 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.7 kB]
+#5 322.4 Get:77 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.5 kB]
+#5 328.6 Get:78 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1 [3027 kB]
+#5 332.3 Get:79 http://security.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1 [1322 kB]
+#5 336.6 Get:80 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1 [2772 kB]
+#5 339.1 Get:81 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1184 kB]
+#5 342.7 Get:82 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1 [1641 kB]
+#5 344.3 Get:83 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [153 kB]
+#5 348.6 Get:84 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2681 kB]
+#5 367.2 Get:85 http://security.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [21.1 MB]
+#5 370.3 Get:86 http://security.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1 [494 kB]
+#5 371.3 Get:89 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9 [20.4 kB]
+#5 374.4 Get:90 http://security.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147 [1595 kB]
+#5 380.5 Get:93 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9 [2126 kB]
+#5 385.8 Get:94 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2420 kB]
+#5 406.6 Get:95 http://security.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [12.2 MB]
+#5 408.3 Get:96 http://security.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1 [16.0 kB]
+#5 410.4 Get:99 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 [337 kB]
+#5 414.0 Get:101 http://security.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4 [1101 kB]
+#5 420.4 Get:102 http://security.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4 [3681 kB]
+#5 422.0 Get:104 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libncurses-dev amd64 6.4+20240113-1ubuntu2.2 [384 kB]
+#5 423.5 Get:105 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libodbc2 amd64 2.3.12-1ubuntu0.24.04.1 [158 kB]
+#5 424.4 Get:106 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libodbccr2 amd64 2.3.12-1ubuntu0.24.04.1 [16.1 kB]
+#5 425.2 Get:107 http://security.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-common all 2.3.12-1ubuntu0.24.04.1 [8806 B]
+#5 426.3 Get:108 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libodbcinst2 amd64 2.3.12-1ubuntu0.24.04.1 [30.7 kB]
+#5 431.4 Get:110 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17 [2348 kB]
+#5 432.8 Get:113 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1 [161 kB]
+#5 435.7 Get:114 http://security.ubuntu.com/ubuntu noble-updates/main amd64 libssl-dev amd64 3.0.13-0ubuntu3.16 [2409 kB]
+#5 437.2 Get:115 http://security.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4 [204 kB]
+#5 439.1 Get:119 http://security.ubuntu.com/ubuntu noble-updates/main amd64 python3-cryptography amd64 41.0.7-4ubuntu0.4 [815 kB]
+#5 447.5 Get:124 http://security.ubuntu.com/ubuntu noble-updates/main amd64 vim-runtime all 2:9.1.0016-1ubuntu7.20 [7273 kB]
+#5 450.1 Get:125 http://security.ubuntu.com/ubuntu noble-updates/main amd64 vim amd64 2:9.1.0016-1ubuntu7.20 [1884 kB]
+#5 451.5 Get:126 http://security.ubuntu.com/ubuntu noble-updates/main amd64 unixodbc-dev amd64 2.3.12-1ubuntu0.24.04.1 [250 kB]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap2_2.6.10%2bdfsg-0ubuntu0.24.04.1_amd64.deb  Could not connect to archive.ubuntu.com:80 (198.18.0.105), connection timed out [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/librtmp1_2.4%2b20151223.gitfa8646d.1-2build7_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6-7build3_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/make-dfsg/make_4.3-4.1build2_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lto-disabled-list/lto-disabled-list_47_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc-x86-64-linux-gnu_13.2.0-7ubuntu1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc_13.2.0-7ubuntu1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libcrypt-dev_4.4.36-4build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.2-0ubuntu7_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/g%2b%2b-x86-64-linux-gnu_13.2.0-7ubuntu1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/g%2b%2b_13.2.0-7ubuntu1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libt/libtool/libltdl7_2.4.7-7build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/libpkgconf3_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lksctp-tools/libsctp1_1.0.19%2bdfsg-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lksctp-tools/libsctp-dev_1.0.19%2bdfsg-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf-bin_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkg-config_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-nacl/python3-nacl_1.5.0-4build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-bcrypt/python3-bcrypt_3.2.2-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/six/python3-six_1.16.0-4_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/paramiko/python3-paramiko_2.12.0-2ubuntu4.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#5 451.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#5 451.5 Fetched 113 MB in 5min 48s (325 kB/s)
+#5 ERROR: process "/bin/sh -c set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \"\"     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""     && rm -rf /var/lib/apt/lists/*:
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lksctp-tools/libsctp-dev_1.0.19%2bdfsg-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf-bin_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkg-config_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-nacl/python3-nacl_1.5.0-4build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-bcrypt/python3-bcrypt_3.2.2-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/six/python3-six_1.16.0-4_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/paramiko/python3-paramiko_2.12.0-2ubuntu4.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+451.5 Fetched 113 MB in 5min 48s (325 kB/s)
+------
+Dockerfile:10
+--------------------
+   9 |     
+  10 | >>> RUN set -xe \
+  11 | >>>     && apt-get update \
+  12 | >>>     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config' \
+  13 | >>>     && runtimeDeps='libodbc2 libssl3 libsctp1' \
+  14 | >>>     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps \
+  15 | >>>     && mkdir -p /etc/ssh \
+  16 | >>>     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N "" \
+  17 | >>>     && rm -rf /var/lib/apt/lists/*
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \"\"     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100

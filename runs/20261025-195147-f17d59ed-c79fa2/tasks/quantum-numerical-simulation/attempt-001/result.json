@@ -1,0 +1,29 @@
+{
+  "task": "quantum-numerical-simulation",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T04:17:23.818511+00:00",
+  "phase": "queued",
+  "status": "RUNNING",
+  "budgets": {
+    "task": "quantum-numerical-simulation",
+    "agent_timeout": 7200,
+    "verifier_timeout": 1800,
+    "build_timeout": 1800,
+    "cpus": 4.0,
+    "memory_mb": 10240,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {},
+  "artifact_errors": [],
+  "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 0.0
+}

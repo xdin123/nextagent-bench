@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "pymatgen",
+    "sympy"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pymatgen"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "sympy"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

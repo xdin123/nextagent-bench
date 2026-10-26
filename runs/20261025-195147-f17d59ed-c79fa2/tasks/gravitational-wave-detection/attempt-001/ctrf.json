@@ -1,0 +1,101 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792950297.2559867,
+      "stop": 1792950297.7090714
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_output_file_exists",
+        "status": "passed",
+        "duration": 0.00090015098976437,
+        "start": 1792950297.6946363,
+        "stop": 1792950297.6957488,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_output_format",
+        "status": "passed",
+        "duration": 0.0019489629994495772,
+        "start": 1792950297.695941,
+        "stop": 1792950297.6980352,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_output_types",
+        "status": "passed",
+        "duration": 0.001187711997772567,
+        "start": 1792950297.69819,
+        "stop": 1792950297.6995132,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_row_count",
+        "status": "passed",
+        "duration": 0.0007486379981855862,
+        "start": 1792950297.6996589,
+        "stop": 1792950297.7005274,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_snr_range",
+        "status": "passed",
+        "duration": 0.0010766380073619075,
+        "start": 1792950297.7006538,
+        "stop": 1792950297.7018661,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_total_mass_values",
+        "status": "passed",
+        "duration": 0.0009886179977911524,
+        "start": 1792950297.701996,
+        "stop": 1792950297.703107,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_all_approximants_tested",
+        "status": "passed",
+        "duration": 0.001670936995651573,
+        "start": 1792950297.7032368,
+        "stop": 1792950297.7050517,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_result_satisfies_grid_search_constraints",
+        "status": "passed",
+        "duration": 0.0009807929964154027,
+        "start": 1792950297.7051864,
+        "stop": 1792950297.706289,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestGravitationalWaveDetection::test_matches_expected_result",
+        "status": "passed",
+        "duration": 0.00201854500483023,
+        "start": 1792950297.7064185,
+        "stop": 1792950297.7085774,
+        "retries": 0,
+        "file_path": "test_outputs.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "pymatgen",
+      "directory": "pymatgen",
+      "description": "Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, band structure, DOS, Materials Project integration, format conversion, for computational materials science.",
+      "sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f"
+    },
+    {
+      "name": "sympy",
+      "directory": "sympy",
+      "description": "Use this skill when working with symbolic mathematics in Python. This skill should be used for symbolic computation tasks including solving equations algebraically, performing calculus operations (derivatives, integrals, limits), manipulating algebraic expressions, working with matrices symbolically, physics calculations, number theory problems, geometry computations, and generating executable code from mathematical expressions. Apply this skill when the user needs exact symbolic results rather than numerical approximations, or when working with mathematical formulas that contain variables and parameters.",
+      "sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616"
+    }
+  ],
+  "verifier_sha": "5939ecd309126463f4ada4e8d0b9d13b98ecde05eb6c201c5ab45d6bd36ac0d6",
+  "prompt_sha": "d90bf37a9be6ee44a2e468fc7412e25518731358e0bff49aaa0292dd69b2ec7c"
+}

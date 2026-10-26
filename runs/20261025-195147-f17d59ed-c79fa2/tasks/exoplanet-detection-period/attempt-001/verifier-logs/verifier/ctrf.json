@@ -1,0 +1,62 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 3,
+            "pending": 0,
+            "other": 0,
+            "start": 1792946814.6748903,
+            "stop": 1792946814.6968899
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestExoplanetPeriod::test_period_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0005231510076555423,
+                "start": 1792946814.6828516,
+                "stop": 1792946814.6948566,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "self = <test_outputs.TestExoplanetPeriod object at 0x77a93c96dac0>\n\n    def test_period_file_exists(self):\n        \"\"\"Verify period file was created.\"\"\"\n        path = self.get_period_path()\n>       assert path is not None, \"Period file not found. Expected /root/period.txt\"\nE       AssertionError: Period file not found. Expected /root/period.txt\nE       assert None is not None\n\n/verifier/test_outputs.py:35: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::TestExoplanetPeriod::test_period_is_valid_number",
+                "status": "skipped",
+                "duration": 0.000322948006214574,
+                "start": 1792946814.695112,
+                "stop": 1792946814.695639,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 41, 'Skipped: Period file not found')"
+            },
+            {
+                "name": "test_outputs.py::TestExoplanetPeriod::test_period_value_correct",
+                "status": "skipped",
+                "duration": 0.00027248699188930914,
+                "start": 1792946814.6957953,
+                "stop": 1792946814.696242,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 56, 'Skipped: Period file not found')"
+            },
+            {
+                "name": "test_outputs.py::TestExoplanetPeriod::test_period_format",
+                "status": "skipped",
+                "duration": 0.00024263999512186274,
+                "start": 1792946814.6963663,
+                "stop": 1792946814.696759,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 72, 'Skipped: Period file not found')"
+            }
+        ]
+    }
+}

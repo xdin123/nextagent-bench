@@ -1,0 +1,209 @@
+{
+  "task": "dialogue-parser",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T13:31:59.143393+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "dialogue-parser",
+    "agent_timeout": 900,
+    "verifier_timeout": 900,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": 0,
+  "reward": 0.0,
+  "phase_seconds": {
+    "queued": 0.078,
+    "build": 641.781,
+    "container_setup": 2.859,
+    "bootstrap": 5.719,
+    "skill_preflight": 0.469,
+    "workspace_preflight": 13.719,
+    "agent": 690.25,
+    "stop_application": 0.406,
+    "verifier": 7.359,
+    "collect": 1.578
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 2,
+  "elapsed_seconds": 1364.218,
+  "environment": {
+    "image_id": "sha256:5d496796fe72c21f1fcda52ea46a8aad2ef8b204d142f26f4b74e9fff8083e40",
+    "environment_sha": "ab00dca201c1f4aa49be98d8cea780dfd7e854992a5f3e715eaeace7fb3e693a",
+    "workdir": "/app",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "dialogue-graph",
+      "directory": "dialogue-graph",
+      "description": "A library for building, validating, visualizing, and serializing dialogue graphs. Use this when parsing scripts or creating branching narrative structures.",
+      "sha256": "03d711b93219cec1cd70d823d595e7c5adffc058c5910b94886fe6cc374f08d8"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-dialogue-parser-1",
+  "skills_discoverable": [
+    "dialogue-graph"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-85d00107-2d51-4b79-86d7-8671625a0a14",
+  "runId": "run-692b3afd-a0c5-4b23-b928-84363addeb69",
+  "requestId": "request-4c0c2edf-c94e-4c52-a166-c14f48c4ed5c",
+  "accepted_at": "2026-10-25T13:43:04.206957+00:00",
+  "terminal": {
+    "status": "REQUEST_FAILED",
+    "payload": {
+      "rootMessageId": "request-4c0c2edf-c94e-4c52-a166-c14f48c4ed5c",
+      "requestId": "request-4c0c2edf-c94e-4c52-a166-c14f48c4ed5c",
+      "runId": "run-692b3afd-a0c5-4b23-b928-84363addeb69",
+      "requestContextId": "context-b480fdcb-d1f9-4e10-9b11-dd1218043ed8",
+      "status": "FAILED",
+      "content": "Request failed: Model output duplication was detected.",
+      "text": "Request failed: Model output duplication was detected.",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "code": "MODEL_DUPLICATION_DETECTED",
+      "message": "The service is experiencing a minor issue, possibly due to too many requests or model generation exceptions. Please try again later or adjust your question.",
+      "category": "INTERNAL",
+      "retryable": false,
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-cfdf5c24-e9e0-4ab9-be41-21d0bb7eca81",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-41bef941-fab4-48d2-b955-f77e32833b09",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-77539658-3794-49a4-a334-58a67c8f0fdf",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e5d0bbc8-1907-4e8b-8f11-1fd0996e3d97",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8362dfaa-c022-43a7-a2d9-f533b848ab6b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-edb6796c-3204-4455-8dda-fc93acfb9ecb",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-17f6d7c2-2a60-4685-9cc8-3c636cb1135d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c9aaafd0-a316-4511-8e97-2c474f286954",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-201a8399-bf89-40e0-9784-dc8a4e13d988",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-df17039e-c2ad-4992-b51d-15cf0e10a36c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        }
+      ]
+    },
+    "sequence": 46
+  },
+  "terminal_at": "2026-10-25T13:54:34.017052+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.0,
+    "failed_tests": [
+      "test_outputs.py::test_system_basics",
+      "test_outputs.py::test_narrative_content",
+      "test_outputs.py::test_graph_logic",
+      "test_outputs.py::test_content_integrity",
+      "test_outputs.py::test_structural_integrity"
+    ],
+    "exit_code": 0
+  },
+  "outcome": "EXECUTION_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 7328768,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 3,
+  "tool_calls": 4,
+  "skills_invoked": [
+    "dialogue-graph"
+  ],
+  "skills_loaded": [
+    "dialogue-graph"
+  ],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 3,
+    "LLM_CONTENT_DELTA": 2,
+    "CAPABILITY_STARTED": 4,
+    "CAPABILITY_COMPLETED": 4,
+    "LLM_OUTPUT_RETRACTED": 2,
+    "REQUEST_FAILED": 1
+  },
+  "finished_at": "2026-10-25T13:54:43.349873+00:00",
+  "evidence_complete": true
+}

@@ -1,0 +1,465 @@
+﻿task,outcome,score,reward,model,framework_sha,attempt,sessionId,elapsed_seconds,agent_seconds,model_rounds,tool_calls,input_tokens,output_tokens,skills_provided,skills_discoverable,skills_invoked,skills_loaded,failed_tests,error,evidence_complete,analysis_status,analysis_audit_status,primary_attribution,analysis_confidence,detailed_analysis,evidence,execution_adapter_sha,execution_concurrency
+3d-scan-calc,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-4a83f319-9695-4b06-946b-e7bde4bbb5e9,278.094,244.593,17,18,405969,10764,mesh-analysis,mesh-analysis,mesh-analysis,mesh-analysis,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\3d-scan-calc\attempt-001,,
+ada-bathroom-plan-repair,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,2,session-02e6a1d1-9db4-4017-a627-29a56562a7b2,1439.265,933.453,14,23,454462,28738,ada-plan-view-accessibility; architectural-dxf-extraction; geometric-layout-repair,ada-plan-view-accessibility; architectural-dxf-extraction; geometric-layout-repair,,,test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas; test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad; test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules; test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules; test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout; test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\ada-bathroom-plan-repair\attempt-002\analysis\20261026-102552\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\ada-bathroom-plan-repair\attempt-002,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+adaptive-cruise-control,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-882b5ed7-b5b8-47db-a165-90b90d5bcaba,1328.078,815.0,9,15,334839,56433,csv-processing; pid-controller; simulation-metrics; vehicle-dynamics; yaml-config,csv-processing; pid-controller; simulation-metrics; vehicle-dynamics; yaml-config,csv-processing; pid-controller; simulation-metrics; vehicle-dynamics; yaml-config,csv-processing; pid-controller; simulation-metrics; vehicle-dynamics; yaml-config,test_outputs.py::TestPIDController::test_pid_controller; test_outputs.py::TestACCSystem::test_acc_system; test_outputs.py::TestTuningResults::test_tuning_results; test_outputs.py::TestSimulationResults::test_simulation_results; test_outputs.py::TestReport::test_report_keywords; test_outputs.py::TestSpeedControl::test_speed_control; test_outputs.py::TestDistanceControl::test_distance_control; test_outputs.py::TestSafety::test_safety; test_outputs.py::TestScenario::test_scenario; test_outputs.py::TestSimulationExecution::test_simulation_execution; test_outputs.py::TestAntiCheat::test_anti_cheat,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\adaptive-cruise-control\attempt-001\analysis\20261026-102602\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\adaptive-cruise-control\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+azure-bgp-oscillation-route-leak,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-ac889c3c-ef36-45e2-b7c9-14fe094b7fb6,358.562,308.25,3,9,64983,432,azure-bgp,azure-bgp,azure-bgp,azure-bgp,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\azure-bgp-oscillation-route-leak\attempt-001\analysis\20261026-102611\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\azure-bgp-oscillation-route-leak\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+bike-rebalance,TIMEOUT,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-32491b93-cba3-4300-9986-1247a5fee3a4,1014.954,900.5,3,4,93749,46150,geospatial-routing-data; logistics-rules-to-optimization; routing-subtour-elimination; scip-opt,geospatial-routing-data; logistics-rules-to-optimization; routing-subtour-elimination; scip-opt,scip-opt,scip-opt,test_outputs.py::TestSchema::test_top_level_fields; test_outputs.py::TestSchema::test_summary_fields; test_outputs.py::TestSchema::test_vehicle_entries_and_ids; test_outputs.py::TestSchema::test_vehicle_fields; test_outputs.py::TestSchema::test_stop_fields; test_outputs.py::TestSchema::test_station_entries_and_fields; test_outputs.py::TestRoutes::test_routes_start_and_end_at_depots; test_outputs.py::TestRoutes::test_all_route_stations_exist; test_outputs.py::TestRoutes::test_stops_match_non_depot_route_sequence; test_outputs.py::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle; test_outputs.py::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs; test_outputs.py::TestVehicleBikeFlow::test_vehicle_loads_within_capacity; test_outputs.py::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop; test_outputs.py::TestStationBalances::test_station_aggregates_match_route_stops; test_outputs.py::TestStationBalances::test_station_inventory_and_capacity; test_outputs.py::TestStationBalances::test_station_net_change_and_unmet_amount; test_outputs.py::TestObjectiveConsistency::test_travel_distance_matches_route_geometry; test_outputs.py::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet; test_outputs.py::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty; test_outputs.py::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\bike-rebalance\attempt-001\analysis\20261026-102622\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\bike-rebalance\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+citation-check,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,292.219,,,,,,,,,,,"docker exited 1: chive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#6 291.4 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*:
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd3_2.3.3-9ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libf/libfile-fcntllock-perl/libfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/n/node-jquery/libjs-jquery_3.6.1%2bdfsg%2b%7e3.5.14-1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/underscore/libjs-underscore_1.13.4%7edfsg%2b%7e1.11.4-3_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/sphinx/libjs-sphinxdoc_7.2.6-6_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap-common_2.6.10%2bdfsg-0ubuntu0.24.04.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-modules_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+291.4 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:6
+--------------------
+   5 |     # Install Python and essential tools
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     python3-venv \
+  10 | >>>     wget \
+  11 | >>>     curl \
+  12 | >>>     ca-certificates \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\citation-check\attempt-001\analysis\20261026-102630\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\citation-check\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+civ6-adjacency-optimizer,TIMEOUT,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-71734a0b-bde6-4ea4-b065-669e432cb2b1,1853.828,1800.469,24,29,972292,88140,civ6lib; hex-grid-spatial; map-optimization-strategy; sqlite-map-parser,civ6lib; hex-grid-spatial; map-optimization-strategy; sqlite-map-parser,civ6lib; hex-grid-spatial; map-optimization-strategy; sqlite-map-parser,civ6lib; hex-grid-spatial; map-optimization-strategy; sqlite-map-parser,test_outputs.py::TestFormat::test_solution_file_exists; test_outputs.py::TestFormat::test_solution_is_valid_json; test_outputs.py::TestEvaluation::test_evaluate_scenario,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\civ6-adjacency-optimizer\attempt-001\analysis\20261026-102638\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\civ6-adjacency-optimizer\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+court-form-filling,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-f1a50855-36f1-4466-bb63-6bab3f1a5653,1937.719,1457.625,51,53,1706332,49592,pdf,pdf,pdf,pdf,test_outputs.py::TestRequiredContent::test_content_present,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\court-form-filling\attempt-001\analysis\20261026-102647\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\court-form-filling\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+crystallographic-wyckoff-position-analysis,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-fca1b185-9985-4fbc-935e-92445035a616,484.578,182.719,10,12,268722,7420,pymatgen; sympy,pymatgen; sympy,,,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\crystallographic-wyckoff-position-analysis\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+dapt-intrusion-detection,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,301.359,,,,,,,,,,,"docker exited 1: ive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#6 300.6 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     unzip     git     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/6] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     unzip     git     && rm -rf /var/lib/apt/lists/*:
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd3_2.3.3-9ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libf/libfile-fcntllock-perl/libfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/n/node-jquery/libjs-jquery_3.6.1%2bdfsg%2b%7e3.5.14-1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/underscore/libjs-underscore_1.13.4%7edfsg%2b%7e1.11.4-3_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/sphinx/libjs-sphinxdoc_7.2.6-6_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap-common_2.6.10%2bdfsg-0ubuntu0.24.04.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-modules_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+300.6 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:6
+--------------------
+   5 |     # Install Python and dependencies
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     python3-venv \
+  10 | >>>     curl \
+  11 | >>>     wget \
+  12 | >>>     unzip \
+  13 | >>>     git \
+  14 | >>>     && rm -rf /var/lib/apt/lists/*
+  15 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     unzip     git     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dapt-intrusion-detection\attempt-001\analysis\20261026-102657\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dapt-intrusion-detection\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+data-to-d3,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,826.891,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:8af4744307ced4e5987d', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\data-to-d3\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\data-to-d3\attempt-001\analysis\20261026-102705\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\data-to-d3\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+debug-trl-grpo,TASK_FAILED,0.6,0.6,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-a4bab4cf-dd00-4315-8390-53f11db5401f,2309.875,1040.766,51,59,2038647,24579,grpo; rl-post-training; trl,grpo; rl-post-training; trl,rl-post-training; trl,rl-post-training; trl,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\debug-trl-grpo\attempt-001\analysis\20261026-102713\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\debug-trl-grpo\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+dialogue-parser,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-85d00107-2d51-4b79-86d7-8671625a0a14,1364.218,690.25,3,4,97684,18393,dialogue-graph,dialogue-graph,dialogue-graph,dialogue-graph,test_outputs.py::test_system_basics; test_outputs.py::test_narrative_content; test_outputs.py::test_graph_logic; test_outputs.py::test_content_integrity; test_outputs.py::test_structural_integrity,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dialogue-parser\attempt-001\analysis\20261026-102724\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dialogue-parser\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+drone-planning-control,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-9c841a50-800a-4eff-a64d-4eb843bbee5e,1826.844,850.422,51,137,1687239,46905,attitude-controller-planner; flight-plan-parser; motor-model-dynamics; plot-quadrotor; position-controller-trajectory-planner; stepinfo-3d,attitude-controller-planner; flight-plan-parser; motor-model-dynamics; plot-quadrotor; position-controller-trajectory-planner; stepinfo-3d,,,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\drone-planning-control\attempt-001\analysis\20261026-102734\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\drone-planning-control\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+dynamic-object-aware-egomotion,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a,1048.485,420.641,11,15,251498,12095,dyn-object-masks; egomotion-estimation; output-validation; sampling-and-indexing,dyn-object-masks; egomotion-estimation; output-validation; sampling-and-indexing,dyn-object-masks; egomotion-estimation; sampling-and-indexing,dyn-object-masks; egomotion-estimation; sampling-and-indexing,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dynamic-object-aware-egomotion\attempt-001\analysis\20261026-102745\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\dynamic-object-aware-egomotion\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+earthquake-phase-association,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,900.328,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:f4d510cbc11bb734fa3f', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\earthquake-phase-association\\environment']' timed out after 900.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\earthquake-phase-association\attempt-001\analysis\20261026-102754\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\earthquake-phase-association\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+earthquake-plate-calculation,TIMEOUT,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-75e4813b-d7f8-4142-af83-f1b7d7e1be14,1823.813,900.469,12,12,329800,39315,geospatial-analysis,geospatial-analysis,geospatial-analysis,geospatial-analysis,test_outputs.py::TestEarthquakeTask::test_distance_within_tolerance; test_outputs.py::TestEarthquakeTask::test_earthquake_id_correct; test_outputs.py::TestEarthquakeTask::test_latitude_within_tolerance; test_outputs.py::TestEarthquakeTask::test_longitude_within_tolerance; test_outputs.py::TestEarthquakeTask::test_magnitude_within_tolerance; test_outputs.py::TestEarthquakeTask::test_output_file_and_structure; test_outputs.py::TestEarthquakeTask::test_place_correct; test_outputs.py::TestEarthquakeTask::test_time_correct,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\earthquake-plate-calculation\attempt-001\analysis\20261026-102803\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\earthquake-plate-calculation\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+econ-detrending-correlation,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-0558681e-7a7b-46ee-a89e-29ba502330c7,724.031,269.407,17,16,414434,8633,timeseries-detrending,timeseries-detrending,,,test_outputs.py::TestEconomicsTask::test_correlation_value_correct,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\econ-detrending-correlation\attempt-001\analysis\20261026-102811\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\econ-detrending-correlation\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+edit-pdf,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-403c4ed9-8a78-4237-b8f7-92141e358e1b,861.766,396.109,16,17,420065,8741,pdf-editing; text-parser,pdf-editing; text-parser,pdf-editing,pdf-editing,test_outputs.py::test_form_student_name; test_outputs.py::test_redact_student_id; test_outputs.py::test_form_school_email; test_outputs.py::test_form_date_of_birth; test_outputs.py::test_form_phone_number; test_outputs.py::test_form_appeal_reason; test_outputs.py::test_signature_added; test_outputs.py::test_todays_date_added; test_outputs.py::test_labels_not_covered,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\edit-pdf\attempt-001\analysis\20261026-102821\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\edit-pdf\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+energy-ac-optimal-power-flow,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-5b338231-af46-4940-894e-839337881163,1287.813,1237.937,51,54,1647144,51172,ac-branch-pi-model; casadi-ipopt-nlp; power-flow-data,ac-branch-pi-model; casadi-ipopt-nlp; power-flow-data,,,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-ac-optimal-power-flow\attempt-001\analysis\20261026-102831\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-ac-optimal-power-flow\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+energy-market-pricing,TIMEOUT,0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-66455d76-6b9a-4172-9546-e3ffbe2be684,1968.015,1800.453,38,42,1482903,73516,dc-power-flow; economic-dispatch; locational-marginal-prices; power-flow-data,dc-power-flow; economic-dispatch; locational-marginal-prices; power-flow-data,dc-power-flow; economic-dispatch; locational-marginal-prices; power-flow-data,dc-power-flow; economic-dispatch; locational-marginal-prices; power-flow-data,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-market-pricing\attempt-001\analysis\20261026-102840\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-market-pricing\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+energy-unit-commitment,TIMEOUT,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-6ec01415-15af-47c2-aa90-6fdb0d74fd70,1024.282,900.469,7,10,260009,44987,milp-solver-workflow; unit-commitment-data-modeling; unit-commitment-operating-rules,milp-solver-workflow; unit-commitment-data-modeling; unit-commitment-operating-rules,milp-solver-workflow; unit-commitment-data-modeling; unit-commitment-operating-rules,milp-solver-workflow; unit-commitment-data-modeling; unit-commitment-operating-rules,test_outputs.py::TestSchema::test_required_schema; test_outputs.py::TestSchema::test_arrays_align_with_case; test_outputs.py::TestBinaryLogic::test_startup_shutdown_match_commitment; test_outputs.py::TestBinaryLogic::test_no_simultaneous_startup_shutdown; test_outputs.py::TestBinaryLogic::test_reported_transition_counts; test_outputs.py::TestThermalFeasibility::test_must_run_units_online; test_outputs.py::TestThermalFeasibility::test_output_limits_and_offline_zeroes; test_outputs.py::TestThermalFeasibility::test_deliverable_reserve_and_ramping; test_outputs.py::TestSystemFeasibility::test_demand_and_reserve; test_outputs.py::TestSystemFeasibility::test_renewable_limits; test_outputs.py::TestSystemFeasibility::test_hourly_summary_matches_schedule; test_outputs.py::TestMinimumUpDown::test_initial_and_in_horizon_obligations; test_outputs.py::TestCostAndQuality::test_reported_cost_matches_schedule; test_outputs.py::TestCostAndQuality::test_cost_within_benchmark_gap,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-unit-commitment\attempt-001\analysis\20261026-102849\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\energy-unit-commitment\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+enterprise-information-search,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-f641be6b-4ecc-453e-b492-74fd54036d59,1741.688,1134.468,51,51,1747177,40039,enterprise-artifact-search,enterprise-artifact-search,enterprise-artifact-search,enterprise-artifact-search,test_outputs.py::TestOutputs::test_answer_structure_and_values; test_outputs.py::TestOutputs::test_tokens_efficient,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\enterprise-information-search\attempt-001\analysis\20261026-102858\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\enterprise-information-search\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+exam-block-sequencing,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-57eaf34d-cb2c-495b-a775-7fe6515290a1,1271.171,235.797,4,8,85964,4029,mip-solver-and-solution-audit; ordered-window-sequencing-mip,mip-solver-and-solution-audit; ordered-window-sequencing-mip,mip-solver-and-solution-audit; ordered-window-sequencing-mip,mip-solver-and-solution-audit; ordered-window-sequencing-mip,test_outputs.py::TestOutputs::test_objective_value_is_reported_correctly; test_outputs.py::TestOutputs::test_solution_is_feasible; test_outputs.py::TestOutputs::test_verifier_objective_is_no_worse_than_oracle,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exam-block-sequencing\attempt-001\analysis\20261026-102907\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exam-block-sequencing\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,2
+exceltable-in-ppt,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,640.688,,,,,,,,,,,"docker exited 1: libgles2_1.7.0-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#6 593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/z/zutty/zutty_0.14.8.20231210%2bdfsg1-1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+#6 593.2 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     libreoffice     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     libreoffice     && rm -rf /var/lib/apt/lists/*:
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11-protocol-perl/libx11-protocol-perl_0.56-9_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml-xpathengine-perl/libxml-xpathengine-perl_0.14-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vulkan-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/x11-xserver-utils/x11-xserver-utils_7.7%2b10build2_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/xdg-utils/xdg-utils_1.1.3-4.1ubuntu3_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libg/libglvnd/libgles2_1.7.0-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/z/zutty/zutty_0.14.8.20231210%2bdfsg1-1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+593.2 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:6
+--------------------
+   5 |     
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     libreoffice \
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+  11 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     libreoffice     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exceltable-in-ppt\attempt-001\analysis\20261026-102917\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exceltable-in-ppt\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+exoplanet-detection-period,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-48c63be6-c3af-412e-9a3a-15ae03f1711a,3359.11,2399.14,51,55,1600684,22449,box-least-squares; exoplanet-workflows; light-curve-preprocessing; lomb-scargle-periodogram; transit-least-squares,box-least-squares; exoplanet-workflows; light-curve-preprocessing; lomb-scargle-periodogram; transit-least-squares,exoplanet-workflows,exoplanet-workflows,test_outputs.py::TestExoplanetPeriod::test_period_file_exists,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exoplanet-detection-period\attempt-001\analysis\20261026-102926\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\exoplanet-detection-period\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+financial-modeling-qa,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,639.735,,,,,,,,,,,"docker exited 1: /sh -c apt-get update && apt-get install -y python3 python3-pip   && pip3 install --break-system-packages pandas==2.2.3 openpyxl==3.1.5   && rm -rf /var/lib/apt/lists/*   && pip3 install --break-system-packages pypdf==5.1.0"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y python3 python3-pip   && pip3 install --break-system-packages pandas==2.2.3 openpyxl==3.1.5   && rm -rf /var/lib/apt/lists/*   && pip3 install --break-system-packages pypdf==5.1.0:
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd3_2.3.3-9ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libf/libfile-fcntllock-perl/libfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/n/node-jquery/libjs-jquery_3.6.1%2bdfsg%2b%7e3.5.14-1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/underscore/libjs-underscore_1.13.4%7edfsg%2b%7e1.11.4-3_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/sphinx/libjs-sphinxdoc_7.2.6-6_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/libldap-common_2.6.10%2bdfsg-0ubuntu0.24.04.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/libsasl2-modules_2.1.28%2bdfsg1-5ubuntu3.1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+230.1 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:13
+--------------------
+  12 |     
+  13 | >>> RUN apt-get update && apt-get install -y python3 python3-pip \
+  14 | >>>   && pip3 install --break-system-packages pandas==2.2.3 openpyxl==3.1.5 \
+  15 | >>>   && rm -rf /var/lib/apt/lists/* \
+  16 | >>>   && pip3 install --break-system-packages pypdf==5.1.0
+  17 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y python3 python3-pip   && pip3 install --break-system-packages pandas==2.2.3 openpyxl==3.1.5   && rm -rf /var/lib/apt/lists/*   && pip3 install --break-system-packages pypdf==5.1.0"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\financial-modeling-qa\attempt-001\analysis\20261026-102935\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\financial-modeling-qa\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+fix-build-agentops,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,884.844,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:6465f0538269427830a9', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\fix-build-agentops\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-build-agentops\attempt-001\analysis\20261026-102944\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-build-agentops\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+fix-build-google-auto,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1201.125,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:6d29cd4cc2c06f16f52d', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\fix-build-google-auto\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-build-google-auto\attempt-001\analysis\20261026-102952\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-build-google-auto\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+fix-druid-loophole-cve,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,0.281,,,,,,,,,,,Task declares 16384 MiB; evaluation memory budget is 12663 MiB,False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-druid-loophole-cve\attempt-001\analysis\20261026-103000\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-druid-loophole-cve\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+fix-erlang-ssh-cve,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1052.047,,,,,,,,,,,"docker exited 1:  --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N """"     && rm -rf /var/lib/apt/lists/*:
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lksctp-tools/libsctp-dev_1.0.19%2bdfsg-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf-bin_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkg-config_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-nacl/python3-nacl_1.5.0-4build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-bcrypt/python3-bcrypt_3.2.2-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/six/python3-six_1.16.0-4_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/paramiko/python3-paramiko_2.12.0-2ubuntu4.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+451.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+451.5 Fetched 113 MB in 5min 48s (325 kB/s)
+------
+Dockerfile:10
+--------------------
+   9 |     
+  10 | >>> RUN set -xe \
+  11 | >>>     && apt-get update \
+  12 | >>>     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config' \
+  13 | >>>     && runtimeDeps='libodbc2 libssl3 libsctp1' \
+  14 | >>>     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps \
+  15 | >>>     && mkdir -p /etc/ssh \
+  16 | >>>     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N """" \
+  17 | >>>     && rm -rf /var/lib/apt/lists/*
+  18 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \""\""     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-erlang-ssh-cve\attempt-001\analysis\20261026-103009\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-erlang-ssh-cve\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+fix-visual-stability,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1052.36,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:ff127528747867d9c749', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\fix-visual-stability\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-visual-stability\attempt-001\analysis\20261026-103017\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\fix-visual-stability\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+flink-query,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1200.375,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:70864fea6080b1fc240a', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\flink-query\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\flink-query\attempt-001\analysis\20261026-103025\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\flink-query\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+flood-risk-analysis,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-89d900ea-db92-47ec-adf0-2f320ff94312,2025.39,514.188,24,30,643427,9113,flood-detection; nws-flood-thresholds; usgs-data-download,flood-detection; nws-flood-thresholds; usgs-data-download,flood-detection; nws-flood-thresholds; usgs-data-download,flood-detection; nws-flood-thresholds; usgs-data-download,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\flood-risk-analysis\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+glm-lake-mendota,TASK_FAILED,0.0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-a13aadb9-23b4-4da1-9fcc-c045a995a175,2446.219,1137.922,51,58,1609567,35522,glm-basics; glm-calibration; glm-output,glm-basics; glm-calibration; glm-output,glm-basics; glm-calibration; glm-output,glm-basics; glm-calibration; glm-output,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\glm-lake-mendota\attempt-001\analysis\20261026-103033\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\glm-lake-mendota\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+gravitational-wave-detection,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-7289cb77-bd0e-4ed8-a76f-7eedc16605cb,3087.969,1168.015,40,41,1186331,24151,conditioning; matched-filtering,conditioning; matched-filtering,conditioning; matched-filtering,conditioning; matched-filtering,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\gravitational-wave-detection\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+grid-dispatch-operator,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-12057f96-aad9-4045-9351-c88206fae548,2076.156,1192.062,17,21,711047,78399,dc-power-flow; economic-dispatch; power-flow-data,dc-power-flow; economic-dispatch; power-flow-data,dc-power-flow; economic-dispatch; power-flow-data,dc-power-flow; economic-dispatch; power-flow-data,test_outputs.py::TestSchema::test_report_schema; test_outputs.py::TestFeasibility::test_power_balance; test_outputs.py::TestFeasibility::test_generator_bounds; test_outputs.py::TestFeasibility::test_reserve_constraints; test_outputs.py::TestFeasibility::test_internal_consistency; test_outputs.py::TestOptimality::test_cost_is_optimal,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\grid-dispatch-operator\attempt-001\analysis\20261026-103043\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\grid-dispatch-operator\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,3
+hvac-control,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-a62d756c-895c-4bb3-b41f-cba675c8b953,561.344,387.781,18,28,513120,17873,excitation-signal-design; first-order-model-fitting; imc-tuning-rules; safety-interlocks; scipy-curve-fit,excitation-signal-design; first-order-model-fitting; imc-tuning-rules; safety-interlocks; scipy-curve-fit,excitation-signal-design; first-order-model-fitting; imc-tuning-rules; scipy-curve-fit,excitation-signal-design; first-order-model-fitting; imc-tuning-rules; scipy-curve-fit,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\hvac-control\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+invoice-fraud-detection,PREFLIGHT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1944.562,,,,,,fuzzy-match; pdf; xlsx,fuzzy-match; pdf; xlsx,,,,"Framework tool preflight failed: {""status"": ""INTERRUPTED"", ""payload"": {}, ""last_sequence"": 0}",True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\invoice-fraud-detection\attempt-001\analysis\20261026-103053\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\invoice-fraud-detection\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+jax-computing-basics,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-be6cb2f8-334c-4ec0-b27d-d2ea1c50c9ed,714.359,199.797,18,18,420782,6027,jax-skills,jax-skills,jax-skills,jax-skills,test_outputs.py::TestOutputFilesExist::test_all_output_files_exist; test_outputs.py::TestOutputShapes::test_shapes_match; test_outputs.py::TestNumericalCorrectness::test_allclose,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\jax-computing-basics\attempt-001\analysis\20261026-103102\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\jax-computing-basics\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+jpg-ocr-stat,PREFLIGHT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,908.109,,,,,,image-ocr; openai-vision; pdf; video-frame-extraction; xlsx,image-ocr; openai-vision; pdf; video-frame-extraction; xlsx,,,,"Framework tool preflight failed: {""status"": ""REQUEST_FAILED"", ""payload"": {""rootMessageId"": ""request-dd7662aa-083f-4427-980a-b23547590178"", ""requestId"": ""request-dd7662aa-083f-4427-980a-b23547590178"", ""runId"": ""run-3825a934-d8e9-4a54-bc6a-fd62b4cb1f07"", ""requestContextId"": ""context-ee437570-c423-411e-a6c4-a03127bc7829"", ""status"": ""FAILED"", ""content"": ""Request failed: Model authentication failed."", ""text"": ""Request failed: Model authentication failed."", ""contentType"": ""PLAIN_TEXT"", ""metadata"": {""accumulated"": true}, ""code"": ""MODEL_AUTHENTICATION_FAILED"", ""message"": ""Model authentication failed. Check the model credential and provider configuration."", ""category"": ""AUTHORIZATION"", ""retryable"": false, ""hookResults"": [{""hookInvocationId"": ""hook-620f239d-7283-42c1-90d0-b3738a0abc3e"", ""hookId"": ""user-query-memory-recall"", ""stage"": ""BEFORE_MODEL_INVOKE"", ""status"": ""SUCCESS"", ""failureMode"": ""CONTINUE"", ""outcome"": ""PASS""}]}, ""sequence"": 8}",True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\jpg-ocr-stat\attempt-001\analysis\20261026-103111\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\jpg-ocr-stat\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+lab-unit-harmonization,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,711.265,,,,,,,,,,,"docker exited 1: B]
+#6 194.9 Get:101 http://deb.debian.org/debian trixie/main amd64 libxcb1 amd64 1.17.0-2+b1 [144 kB]
+#6 196.1 Get:102 http://deb.debian.org/debian trixie/main amd64 libx11-data all 2:1.8.12-1 [343 kB]
+#6 197.8 Get:103 http://deb.debian.org/debian trixie/main amd64 libx11-6 amd64 2:1.8.12-1 [815 kB]
+#6 198.6 Get:104 http://deb.debian.org/debian trixie/main amd64 libxext6 amd64 2:1.3.4-1+b3 [50.4 kB]
+#6 199.3 Get:105 http://deb.debian.org/debian trixie/main amd64 libxmuu1 amd64 2:1.1.3-3+b4 [21.9 kB]
+#6 201.2 Get:106 http://deb.debian.org/debian trixie/main amd64 manpages-dev all 6.9.1-1 [2122 kB]
+#6 202.6 Get:107 http://deb.debian.org/debian trixie/main amd64 publicsuffix all 20250328.1952-0.1 [296 kB]
+#6 207.6 Get:108 http://deb.debian.org/debian trixie/main amd64 sq amd64 1.3.1-2+b2 [5653 kB]
+#6 208.7 Get:109 http://deb.debian.org/debian trixie/main amd64 xauth amd64 1:1.1.2-1.1 [35.9 kB]
+#6 208.8 Fetched 112 MB in 3min 15s (576 kB/s)
+#6 208.8 E: Failed to fetch http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17030-1_all.deb  502  Bad Gateway [IP: 198.18.0.103 80]
+#6 208.8 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     curl     git     build-essential     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y     curl     git     build-essential     && rm -rf /var/lib/apt/lists/*:
+197.8 Get:103 http://deb.debian.org/debian trixie/main amd64 libx11-6 amd64 2:1.8.12-1 [815 kB]
+198.6 Get:104 http://deb.debian.org/debian trixie/main amd64 libxext6 amd64 2:1.3.4-1+b3 [50.4 kB]
+199.3 Get:105 http://deb.debian.org/debian trixie/main amd64 libxmuu1 amd64 2:1.1.3-3+b4 [21.9 kB]
+201.2 Get:106 http://deb.debian.org/debian trixie/main amd64 manpages-dev all 6.9.1-1 [2122 kB]
+202.6 Get:107 http://deb.debian.org/debian trixie/main amd64 publicsuffix all 20250328.1952-0.1 [296 kB]
+207.6 Get:108 http://deb.debian.org/debian trixie/main amd64 sq amd64 1.3.1-2+b2 [5653 kB]
+208.7 Get:109 http://deb.debian.org/debian trixie/main amd64 xauth amd64 1:1.1.2-1.1 [35.9 kB]
+208.8 Fetched 112 MB in 3min 15s (576 kB/s)
+208.8 E: Failed to fetch http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17030-1_all.deb  502  Bad Gateway [IP: 198.18.0.103 80]
+208.8 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:6
+--------------------
+   5 |     # Install system dependencies
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     curl \
+   8 | >>>     git \
+   9 | >>>     build-essential \
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+  11 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     curl     git     build-essential     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\lab-unit-harmonization\attempt-001\analysis\20261026-103121\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\lab-unit-harmonization\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+lake-warming-attribution,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,2,session-4a823e62-0369-432d-915a-aaf341883f65,862.735,195.922,17,19,432572,7289,contribution-analysis; meteorology-driver-classification; pca-decomposition; trend-analysis,contribution-analysis; meteorology-driver-classification; pca-decomposition; trend-analysis,contribution-analysis; meteorology-driver-classification; pca-decomposition; trend-analysis,contribution-analysis; meteorology-driver-classification; pca-decomposition; trend-analysis,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\lake-warming-attribution\attempt-002,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+latex-formula-extraction,INTERRUPTED,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,3759.985,,,,,,,,,,,,False,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\latex-formula-extraction\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+lean4-proof,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,629.719,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:43b2d92186582c659aea', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\lean4-proof\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\lean4-proof\attempt-001\analysis\20261026-103129\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\lean4-proof\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+llm-prefix-cache-replay,PASSED,1.0,1.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-9ec20710-c64c-4de0-bfbc-4def37da1dcc,778.625,108.265,7,7,164407,3972,cache-policy-comparison; prefix-cache-replay,cache-policy-comparison; prefix-cache-replay,prefix-cache-replay,prefix-cache-replay,,,True,,,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\llm-prefix-cache-replay\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+manufacturing-codebook-normalization,TIMEOUT,0,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-6c46f920-4ddf-434a-a39c-c3c63b78ddc9,1923.594,1800.485,31,35,1168203,94555,manufacturing-failure-reason-codebook-normalization,manufacturing-failure-reason-codebook-normalization,manufacturing-failure-reason-codebook-normalization,manufacturing-failure-reason-codebook-normalization,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-codebook-normalization\attempt-001\analysis\20261026-103137\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-codebook-normalization\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+manufacturing-equipment-maintenance,VERIFIER_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-44098adc-b301-4500-9d0a-ca29b6641260,1194.031,1097.141,51,66,1670109,37610,reflow-machine-maintenance-guidance; reflow-profile-compliance-toolkit,reflow-machine-maintenance-guidance; reflow-profile-compliance-toolkit,reflow-profile-compliance-toolkit,reflow-profile-compliance-toolkit,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-equipment-maintenance\attempt-001\analysis\20261026-103146\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-equipment-maintenance\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+manufacturing-fjsp-optimization,EXECUTION_FAILED,0,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-6ef455aa-2753-4de3-8e43-9563c638897f,734.297,684.0,2,7,41213,588,fjsp-baseline-repair-with-downtime-and-policy,fjsp-baseline-repair-with-downtime-and-policy,fjsp-baseline-repair-with-downtime-and-policy,fjsp-baseline-repair-with-downtime-and-policy,,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-fjsp-optimization\attempt-001\analysis\20261026-103157\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\manufacturing-fjsp-optimization\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+mario-coin-counting,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,600.312,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:19f09df440a8f7b84882', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\mario-coin-counting\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\mario-coin-counting\attempt-001\analysis\20261026-103207\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\mario-coin-counting\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+mars-clouds-clustering,EXECUTION_FAILED,0,0.0,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,session-dde68ded-5c86-416c-a13a-f86fbb03beea,1296.453,225.531,2,4,43486,1586,custom-distance-metrics; parallel-processing; pareto-optimization,custom-distance-metrics; parallel-processing; pareto-optimization,custom-distance-metrics; parallel-processing; pareto-optimization,custom-distance-metrics; parallel-processing; pareto-optimization,test_outputs.py::TestParetoFrontier::test_result_file_exists; test_outputs.py::TestParetoFrontier::test_result_file_not_empty; test_outputs.py::TestParetoFrontier::test_required_columns; test_outputs.py::TestParetoFrontier::test_f1_values_valid; test_outputs.py::TestParetoFrontier::test_delta_values_positive; test_outputs.py::TestParetoFrontier::test_hyperparameter_ranges; test_outputs.py::TestParetoFrontier::test_is_valid_pareto_frontier; test_outputs.py::TestParetoFrontier::test_all_expected_points_found,,True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\mars-clouds-clustering\attempt-001\analysis\20261026-103215\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\mars-clouds-clustering\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+multilingual-video-dubbing,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,817.828,,,,,,,,,,,"docker exited 1: ocess ""/bin/sh -c apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [ 2/16] RUN apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*:
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/s/sox/libsox-dev_14.4.2%2bgit20190427-4build4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/m/mesa/mesa-va-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vdpau-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vulkan-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/s/sox/sox_14.4.2%2bgit20190427-4build4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libv/libvdpau/vdpau-driver-all_1.5-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/p/pocketsphinx/pocketsphinx-en-us_0.8.0%2breal5prealpha%2b1-15ubuntu5_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]
+480.1 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:7
+--------------------
+   6 |     
+   7 | >>> RUN apt-get update && apt-get install -y \
+   8 | >>>     python3 python3-pip python3-dev python3-venv \
+   9 | >>>     ffmpeg espeak-ng git \
+  10 | >>>     libgomp1 libsox-dev sox wget \
+  11 | >>>     build-essential cmake \
+  12 | >>>     && rm -rf /var/lib/apt/lists/*
+  13 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\multilingual-video-dubbing\attempt-001\analysis\20261026-103224\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\multilingual-video-dubbing\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+offer-letter-generator,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,1062.906,,,,,,,,,,,"Command '['docker', 'build', '-t', 'nextagent-bench/environment:cb3fd9f64c76605d1d71', 'C:\\Project\\nextagent-bench\\datasets\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\tasks\\offer-letter-generator\\environment']' timed out after 600.0 seconds",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\offer-letter-generator\attempt-001\analysis\20261026-103233\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\offer-letter-generator\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+organize-messy-files,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,617.125,,,,,,,,,,,"docker exited 1: 8.0.105 80]
+#6 15.29 Reading package lists...
+#6 15.30 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+#6 15.30 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 198.18.0.106 80]
+#6 15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+#6 15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+#6 15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     poppler-utils     wget     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/8] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     poppler-utils     wget     && rm -rf /var/lib/apt/lists/*:
+15.28   502  Bad Gateway [IP: 198.18.0.105 80]
+15.29 Reading package lists...
+15.30 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+15.30 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 198.18.0.106 80]
+15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+15.30 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.30 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # Install dependencies
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     python3-venv \
+  10 | >>>     libreoffice \
+  11 | >>>     poppler-utils \
+  12 | >>>     wget \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     poppler-utils     wget     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\organize-messy-files\attempt-001\analysis\20261026-103241\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\organize-messy-files\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+paper-anonymizer,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,378.985,,,,,,,,,,,"docker exited 1:   502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.19 Reading package lists...
+#6 15.20 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+#6 15.20 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 198.18.0.106 80]
+#6 15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+#6 15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+#6 15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+#6 15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+#6 ERROR: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     poppler-utils     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     poppler-utils     && rm -rf /var/lib/apt/lists/*:
+15.18   502  Bad Gateway [IP: 198.18.0.105 80]
+15.19 Reading package lists...
+15.20 E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+15.20 E: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  502  Bad Gateway [IP: 198.18.0.106 80]
+15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+15.20 E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  502  Bad Gateway [IP: 198.18.0.105 80]
+15.20 E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.
+------
+Dockerfile:6
+--------------------
+   5 |     # System dependencies
+   6 | >>> RUN apt-get update && apt-get install -y \
+   7 | >>>     python3 \
+   8 | >>>     python3-pip \
+   9 | >>>     python3-venv \
+  10 | >>>     curl \
+  11 | >>>     wget \
+  12 | >>>     poppler-utils \
+  13 | >>>     && rm -rf /var/lib/apt/lists/*
+  14 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c apt-get update && apt-get install -y     python3     python3-pip     python3-venv     curl     wget     poppler-utils     && rm -rf /var/lib/apt/lists/*"" did not complete successfully: exit code: 100
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\paper-anonymizer\attempt-001\analysis\20261026-103249\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\paper-anonymizer\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+parallel-tfidf-search,PREFLIGHT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,129.094,,,,,,memory-optimization; python-parallelization; workload-balancing,memory-optimization; python-parallelization; workload-balancing,,,,"Framework tool preflight failed: {""status"": ""REQUEST_FAILED"", ""payload"": {""rootMessageId"": ""request-d780473d-bda9-40c1-a687-b66485597729"", ""requestId"": ""request-d780473d-bda9-40c1-a687-b66485597729"", ""runId"": ""run-ce569886-8e7a-4aa2-9098-7544a039f426"", ""requestContextId"": ""context-9503b979-325d-417e-b29c-f1b05ff35e2b"", ""status"": ""FAILED"", ""content"": ""Request failed: Model invocation failed safely."", ""text"": ""Request failed: Model invocation failed safely."", ""contentType"": ""PLAIN_TEXT"", ""metadata"": {""accumulated"": true}, ""code"": ""MODEL_PROVIDER_UNAVAILABLE"", ""message"": ""The model service is temporarily unavailable. Please retry later."", ""category"": ""UNAVAILABLE"", ""retryable"": false, ""hookResults"": [{""hookInvocationId"": ""hook-6f1626c4-8c99-414a-b5f4-1d9057b0b755"", ""hookId"": ""user-query-memory-recall"", ""stage"": ""BEFORE_MODEL_INVOKE"", ""status"": ""SUCCESS"", ""failureMode"": ""CONTINUE"", ""outcome"": ""PASS""}]}, ""sequence"": 8}",True,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\parallel-tfidf-search\attempt-001\analysis\20261026-103258\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\parallel-tfidf-search\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+paratransit-routing,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,87.922,,,,,,,,,,,"docker exited 1: rror(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))) - skipping
+#6 38.82 ERROR: Could not find a version that satisfies the requirement ortools==9.11.4210 (from versions: none)
+#6 43.85 ERROR: No matching distribution found for ortools==9.11.4210
+#6 ERROR: process ""/bin/sh -c pip install --no-cache-dir     ortools==9.11.4210     pandas==2.2.3     numpy==1.26.4     pytest==8.3.4     pytest-json-ctrf==0.3.5"" did not complete successfully: exit code: 1
+------
+ > [2/7] RUN pip install --no-cache-dir     ortools==9.11.4210     pandas==2.2.3     numpy==1.26.4     pytest==8.3.4     pytest-json-ctrf==0.3.5:
+6.212 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/
+11.73 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/
+17.75 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/
+24.78 WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/
+33.79 WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))': /simple/ortools/
+38.82 Could not fetch URL https://pypi.org/simple/ortools/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/ortools/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))) - skipping
+38.82 ERROR: Could not find a version that satisfies the requirement ortools==9.11.4210 (from versions: none)
+43.85 ERROR: No matching distribution found for ortools==9.11.4210
+------
+Dockerfile:5
+--------------------
+   4 |     
+   5 | >>> RUN pip install --no-cache-dir \
+   6 | >>>     ortools==9.11.4210 \
+   7 | >>>     pandas==2.2.3 \
+   8 | >>>     numpy==1.26.4 \
+   9 | >>>     pytest==8.3.4 \
+  10 | >>>     pytest-json-ctrf==0.3.5
+  11 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c pip install --no-cache-dir     ortools==9.11.4210     pandas==2.2.3     numpy==1.26.4     pytest==8.3.4     pytest-json-ctrf==0.3.5"" did not complete successfully: exit code: 1
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\paratransit-routing\attempt-001\analysis\20261026-103307\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\paratransit-routing\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+pddl-airport-planning,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,111.813,,,,,,,,,,,"docker exited 1: ess ""/bin/sh -c pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0"" did not complete successfully: exit code: 1
+------
+ > [4/6] RUN pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0:
+5.689 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+11.22 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+17.24 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+24.27 WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+33.29 WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+38.32 Could not fetch URL https://pypi.org/simple/requests/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/requests/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))) - skipping
+38.32 ERROR: Could not find a version that satisfies the requirement requests==2.32.3 (from versions: none)
+38.32 ERROR: No matching distribution found for requests==2.32.3
+------
+Dockerfile:23
+--------------------
+  22 |     # Install Python dependencies for citation verification
+  23 | >>> RUN pip3 install --break-system-packages \
+  24 | >>>     requests==2.32.3 \
+  25 | >>>     bibtexparser==1.4.2 \
+  26 | >>>     pyyaml==6.0.3 \
+  27 | >>>     numpy==2.4.1 \
+  28 | >>>     pyperplan==2.1 \
+  29 | >>>     unified_planning==1.3.0 \
+  30 | >>>     up-pyperplan==1.1.0
+  31 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0"" did not complete successfully: exit code: 1
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-airport-planning\attempt-001\analysis\20261026-103315\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-airport-planning\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+pddl-tpp-planning,ENVIRONMENT_ERROR,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,1,,45.532,,,,,,,,,,,"docker exited 1: #0 building with ""desktop-linux"" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.25kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:24.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#4 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#4 DONE 0.0s
+
+#5 [2/7] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     python3-dev     build-essential     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 217.44kB 0.0s done
+#6 DONE 0.0s
+
+#7 [3/7] RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx
+#7 5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 
+#7 5.191 install: cannot stat '/root/.local/bin/uv': No such file or directory
+#7 ERROR: process ""/bin/sh -c curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx"" did not complete successfully: exit code: 1
+------
+ > [3/7] RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx:
+5.181 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to astral.sh:443 
+5.191 install: cannot stat '/root/.local/bin/uv': No such file or directory
+------
+Dockerfile:23
+--------------------
+  22 |     ENV PATH=""/root/.local/bin:${PATH}""
+  23 | >>> RUN curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh && \
+  24 | >>>     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv && \
+  25 | >>>     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx
+  26 |     
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c curl -LsSf https://astral.sh/uv/0.9.22/install.sh | sh &&     install -m 0755 /root/.local/bin/uv /usr/local/bin/uv &&     install -m 0755 /root/.local/bin/uvx /usr/local/bin/uvx"" did not complete successfully: exit code: 1
+",False,ANALYSIS_INCOMPLETE,,,,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-tpp-planning\attempt-001\analysis\20261026-103324\report.md,C:\Project\nextagent-bench\runs\20261025-195147-f17d59ed-c79fa2\tasks\pddl-tpp-planning\attempt-001,4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064,4
+pdf-excel-diff,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+powerlifting-coef-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+pptx-reference-formatting,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+protein-expression-analysis,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+python-scala-translation,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+quantum-numerical-simulation,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+r2r-mpc-control,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+radar-vital-signs,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+react-performance-debugging,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+reserves-at-risk-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+sales-pivot-analysis,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+sec-financial-report,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+seismic-phase-picking,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+setup-fuzzing-py,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+shock-analysis-demand,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+shock-analysis-supply,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+simpo-code-reproduction,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+software-dependency-audit,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+spring-boot-jakarta-migration,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+suricata-custom-exfil,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+syzkaller-ppdev-syzlang,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+threejs-structure-parser,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+threejs-to-obj,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+tictoc-unnecessary-abort-detection,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+travel-planning,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+video-silence-remover,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+weighted-gdp-calc,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,
+xlsx-recover-data,PENDING,,,qwen3.8-27b,f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5,,,,,,,,,,,,,,,,,,,,,,,

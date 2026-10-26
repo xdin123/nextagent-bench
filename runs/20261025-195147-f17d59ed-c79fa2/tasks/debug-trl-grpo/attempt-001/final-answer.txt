@@ -1,0 +1,50 @@
+` tag. Removed the branch (3 lines) with Python.
+   - Bug 3: Advantage scaling (grpo_trainer.py:1090): `+ 1e4` should be `+ 1e-4`. Fixed with Edit.
+4. Verification:
+   - Ran the pre-fix verification script and confirmed all 3 bugs (sign inversion hypothesis True, got max = 7.18 > 0, "no tag" and "prefix only" were blanked out, max|adv| = 7.5e-05).
+   - Post-fix: re-ran the script — max|ref-got| = 0.0, got max = -2.31 ≤ 0, all degenerate shapes preserved, max|adv| = 1.5.
+   - Ran the skill's verify_pipeline.py — all invariants pass.
+   - Ran unit tests: 11 passed (decode/log_softmax/logprob/pad tests in test_utils.py).
+
+Incomplete / not verified:
+- I did not run the full GRPO trainer test suite (test_grpo_trainer.py) — I only ran the targeted utils tests.
+- I did not run an actual end-to-end training run to confirm model improvement (would require downloading the model, and the task was to fix the bugs).
+- I did not check every file in the TRL source for other potential bugs — I focused on the GRPO path (grpo_trainer.py, utils.py, grpo_config.py). I reviewed the generation phase, loss computation, and reference model handling, and they matched upstream. But a full audit of every file was not performed.
+
+Let me summarize clearly, distinguishing between completed and incomplete work.
+
+The task states: "The source code is in workspace/trl. Check whether there are bugs and fix them." So the main deliverable is finding and fixing bugs. I found and fixed 3 bugs, and verified them with numerical checks, the skill's verification script, and unit tests.
+
+Let me write a concise summary.
+</think>
+
+## Summary
+
+I found and fixed **3 bugs** in the GRPO training path under `workspace/trl`. I did not touch `train_grpo.py` or `reward_fn.py`.
+
+### Completed & verified
+
+**Bug 1 — Sign error in `selective_log_softmax`** (`trl/trainer/utils.py`)
+The float32/float64 branch computed `logsumexp_values - selected_logits`, the *negative* of `log_softmax`. Log-probs came out positive (max ≈ +7.2), violating the `log_prob ≤ 0` invariant and corrupting the importance ratio and KL term in the loss.
+- Fixed to `selected_logits - logsumexp_values`.
+- Verified: now matches `F.log_softmax(...).gather(...)` exactly (max diff 0.0); max log-prob = −2.31 (≤ 0).
+
+**Bug 2 — `decode_and_strip_padding` blanked valid completions** (`trl/trainer/utils.py`)
+An `else: text = ""` branch emptied any completion lacking a `</think>` tag (e.g. direct answers, truncated generations), so the reward function saw empty text → reward 0.0 → zero learning signal.
+- Removed the blanking branch; text is now preserved when the tag is absent (matches upstream and the existing unit-test contract).
+- Verified: "no tags at all" and "only prefix" cases now return their content instead of `''`.
+
+**Bug 3 — Advantage scaling constant** (`trl/trainer/grpo_trainer.py`, line 1090)
+`advantages / (std_grouped_rewards + 1e4)` divided advantages by ~10⁴, shrinking the policy-gradient signal to ~10⁻⁴ of intended (max|adv| ≈ 7.5e-05).
+- Fixed to `+ 1e-4` (upstream value).
+- Verified: max|adv| now 1.5.
+
+**Cross-checks that passed**
+- Skill's `verify_pipeline.py`: all invariants green (log-probs non-positive, match `F.log_softmax` to float32 tolerance, dominant-token ≈ 0, no non-empty decode becomes empty).
+- `tests/test_utils.py` (decode / log_softmax / logprob / pad): **11 passed**.
+
+### Incomplete / not verified
+- I did **not** run the full `test_grpo_trainer.py` suite or an end-to-end training run, so I have not empirically confirmed reward/loss curves improve over steps — only that each bug is fixed and the affected invariants hold.
+- I audited the GRPO path (`grpo_trainer.py`, `utils.py`, `grpo_config.py`); config defaults, generation, loss, and reference-model handling matched upstream. I did not exhaustively audit every other file in the package.
+
+If you'd like, I can run the full GRPO trainer test suite next to close out the remaining verification.

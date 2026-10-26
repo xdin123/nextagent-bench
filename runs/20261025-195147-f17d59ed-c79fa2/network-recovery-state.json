@@ -1,0 +1,24 @@
+{
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "pid": 27708,
+  "phase": "CANCELLED_BY_USER",
+  "started_at": "2026-10-26T03:28:05.969105+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\network-preparation\\20261026T032805968104Z",
+  "selected_count": 21,
+  "ready_count": 0,
+  "failed_count": 0,
+  "tasks": {
+    "citation-check": {
+      "phase": "STOPPED_BY_USER",
+      "memory_mb": 2048,
+      "started_at": "2026-10-26T03:28:18.252143+00:00"
+    },
+    "dapt-intrusion-detection": {
+      "phase": "STOPPED_BY_USER",
+      "memory_mb": 2048,
+      "started_at": "2026-10-26T03:28:18.253155+00:00"
+    }
+  },
+  "cancelled_at": "2026-10-26T03:35:19.163373+00:00",
+  "reason": "Finish original evaluation first; any completed-task rerun requires explicit new user approval."
+}

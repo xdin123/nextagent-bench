@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "generated_at": "2026-10-25T09:26:56.560163+00:00",
+    "report_adapter_sha": "fdaf52e95b1f890dac77b7b9c46e8a90cedd26cd7c362ee94186659b726304d3",
+    "execution_adapter_sha": "fdaf52e95b1f890dac77b7b9c46e8a90cedd26cd7c362ee94186659b726304d3",
+    "run_id": "20261025-172352-f17d59ed-43ba88",
+    "status": "STOPPED",
+    "planned_tasks": 1,
+    "attempts": 1,
+    "first_attempt_outcomes": {
+      "INTERRUPTED": 1
+    },
+    "scored_tasks": 0,
+    "coverage": 0.0,
+    "full_suite_score": null,
+    "score_sum": 0,
+    "note": "First valid scored attempt is primary. A scored failure is never replaced by a later success. All invalid/interrupted attempts remain visible."
+  },
+  "first_attempts": [
+    {
+      "task": "3d-scan-calc",
+      "outcome": "INTERRUPTED",
+      "score": null,
+      "reward": 0.0,
+      "model": "qwen3.8-27b",
+      "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+      "attempt": 1,
+      "sessionId": "session-58850737-c141-413f-9df4-d123c1b7339a",
+      "elapsed_seconds": 172.796,
+      "agent_seconds": 137.812,
+      "model_rounds": 1,
+      "tool_calls": 1,
+      "input_tokens": 19849,
+      "output_tokens": 219,
+      "skills_provided": "mesh-analysis",
+      "skills_discoverable": "mesh-analysis",
+      "skills_invoked": "mesh-analysis",
+      "skills_loaded": "mesh-analysis",
+      "failed_tests": "test_outputs.py::TestOutputs::test_file_exists; test_outputs.py::TestOutputs::test_values_correct",
+      "error": null,
+      "evidence_complete": true,
+      "analysis_status": null,
+      "analysis_audit_status": null,
+      "primary_attribution": null,
+      "analysis_confidence": null,
+      "detailed_analysis": null,
+      "evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-172352-f17d59ed-43ba88\\tasks\\3d-scan-calc\\attempt-001",
+      "usage_records": 2,
+      "usage_field_counts": {
+        "inputTokens": 1,
+        "outputTokens": 1
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "task": "3d-scan-calc",
+      "outcome": "INTERRUPTED",
+      "score": null,
+      "reward": 0.0,
+      "model": "qwen3.8-27b",
+      "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+      "attempt": 1,
+      "sessionId": "session-58850737-c141-413f-9df4-d123c1b7339a",
+      "elapsed_seconds": 172.796,
+      "agent_seconds": 137.812,
+      "model_rounds": 1,
+      "tool_calls": 1,
+      "input_tokens": 19849,
+      "output_tokens": 219,
+      "skills_provided": "mesh-analysis",
+      "skills_discoverable": "mesh-analysis",
+      "skills_invoked": "mesh-analysis",
+      "skills_loaded": "mesh-analysis",
+      "failed_tests": "test_outputs.py::TestOutputs::test_file_exists; test_outputs.py::TestOutputs::test_values_correct",
+      "error": null,
+      "evidence_complete": true,
+      "analysis_status": null,
+      "analysis_audit_status": null,
+      "primary_attribution": null,
+      "analysis_confidence": null,
+      "detailed_analysis": null,
+      "evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-172352-f17d59ed-43ba88\\tasks\\3d-scan-calc\\attempt-001",
+      "usage_records": 2,
+      "usage_field_counts": {
+        "inputTokens": 1,
+        "outputTokens": 1
+      }
+    }
+  ]
+}

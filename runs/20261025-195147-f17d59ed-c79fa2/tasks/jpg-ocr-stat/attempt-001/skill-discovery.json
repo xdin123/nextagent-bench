@@ -1,0 +1,32 @@
+{
+  "registered": [
+    "image-ocr",
+    "openai-vision",
+    "pdf",
+    "video-frame-extraction",
+    "xlsx"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "image-ocr"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "openai-vision"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pdf"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "video-frame-extraction"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "xlsx"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

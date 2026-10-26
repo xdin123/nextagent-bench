@@ -1,0 +1,63 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app/workspace",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "image-ocr",
+      "directory": "image-ocr",
+      "description": "Extract text content from images using Tesseract OCR via Python",
+      "sha256": "69dd1065075d53f02c33d3c9c7b3f07eaab26686048675a971fb3a2f8c297359"
+    },
+    {
+      "name": "openai-vision",
+      "directory": "openai-vision",
+      "description": "Analyze images and multi-frame sequences using OpenAI GPT vision models",
+      "sha256": "5023bf779904e73d82cd1a55373eedb001fff59fc97410e22671991c63a83e3c"
+    },
+    {
+      "name": "pdf",
+      "directory": "pdf",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+      "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb"
+    },
+    {
+      "name": "video-frame-extraction",
+      "directory": "video-frame-extraction",
+      "description": "Extract frames from video files and save them as images using OpenCV",
+      "sha256": "b8109889c9b72953b52c55d17d0fa1d6f1083f6a6d1d378cdda6b6509c38fa18"
+    },
+    {
+      "name": "xlsx",
+      "directory": "xlsx",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
+      "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01"
+    }
+  ],
+  "verifier_sha": "013e2ee5d258c992c360d5b0d48a39e3efece51d49fad9c84c66fd211905df77",
+  "prompt_sha": "a1fc803c5b5775ea8c38804e2c79ded1b8f6aeeb5b946f4793b32d13a69c2501"
+}

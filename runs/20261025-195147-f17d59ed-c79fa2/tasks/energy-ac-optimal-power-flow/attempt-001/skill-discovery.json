@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "ac-branch-pi-model",
+    "casadi-ipopt-nlp",
+    "power-flow-data"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "ac-branch-pi-model"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "casadi-ipopt-nlp"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "power-flow-data"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

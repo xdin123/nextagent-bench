@@ -1,0 +1,26 @@
+Done. **13 stations** experienced flooding during April 1–7, 2025, and the results are in `workspace/output/flood_results.csv`:
+
+| station_id | flood_days |
+|---|---|
+| 04101800 | 5 |
+| 04124000 | 5 |
+| 04097500 | 4 |
+| 04112500 | 3 |
+| 04112850 | 3 |
+| 04151500 | 3 |
+| 04164500 | 3 |
+| 04115000 | 2 |
+| 04142000 | 2 |
+| 04166500 | 2 |
+| 04117500 | 1 |
+| 04148140 | 1 |
+| 04164000 | 1 |
+
+**Method:**
+1. Read 79 station IDs from `workspace/data/michigan_stations.txt`.
+2. Downloaded the NWS bulk gauge report and matched all 79 stations to their `flood stage` thresholds.
+3. Downloaded USGS instantaneous gage height (parameter 00065, 15-min intervals) for each station via `dataretrieval.nwis.get_iv()` — all 79 stations returned data.
+4. Aggregated to daily maximum and counted days where `daily_max >= flood_stage`, restricted to April 1–7 (I verified that USGS's inclusive `endDT` returned April 8 data, but excluding it changed no counts).
+5. Kept only stations with ≥1 flood day, sorted by flood days descending.
+
+Spot-checked 04101800 (5 of 7 days at 8.5–9.3 ft vs. 8.0 ft flood stage) and 04117500 (only April 6 at 7.01 ft vs. 7.0 ft stage) — both match the output.

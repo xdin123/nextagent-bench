@@ -1,0 +1,30 @@
+## Status: Incomplete — `workspace/sc100-filled.pdf` has **not** been created yet
+
+### Completed (verified in this session)
+1. **Source form fully analyzed.** Confirmed `workspace/sc100-blank.pdf` exists; extracted all 103 form fields (`temp/sc100-fields.json`) and the complete 5-page form text (`temp/sc100-text.txt`).
+2. **Complete field map built** (`temp/sc100-fullmap.txt`): qualified names, tooltips, positions, and appearance states for every field.
+3. **Checkbox/radio structure resolved.** The Yes/No and venue checkboxes are standalone fields (each its own field name), grouped only under non-field parent objects.
+4. **pypdf fill mechanics confirmed** by reading the `update_page_form_field_values` source: it matches a field by qualified name **or** short `/T` name; for `/Btn` checkboxes it sets `/AS` to the on-state name (falling back to `/Off`).
+5. **Key pitfall identified.** Multiple checkboxes on page 3 share the short name `Checkbox5cb[0]` (a short-name collision), so they can only be targeted reliably by their full qualified name.
+6. **First fill attempt failed and the cause is understood.** `temp/fill_form.py` reported every field "missing" because it matched the full field name against the short annotation `/T`. The fix is known: match by short name per page, and by qualified name for the colliding checkbox group.
+
+### Not completed
+1. **The corrected fill script has not been run successfully**, so **`workspace/sc100-filled.pdf` does not exist yet**.
+2. **Item 3b date mapping was still being confirmed** — which of the three date fields (`Date1[0]`, `Date2[0]`, `Date3[0]`) is "Date started" vs. "Date ended." The last script (`temp/page3_raw.py`) was created but not executed.
+
+### Planned field values (from the case description — **not yet written to the PDF**)
+- **Plaintiff:** Joyce He, 655 S Fair Oaks Ave, Sunnyvale, CA 94086, 412-588-6066, he1998@gmail.com
+- **Defendant:** Zhi Chen, 299 W Washington Ave, Sunnyvale, CA 94086, 512-565-8878
+- **Claim amount:** 1500
+- **3a (why owed):** security deposit owed under the signed roommate sublease contract; requested multiple times via text; no response
+- **3b (dates):** 2025-09-30 → 2026-01-19
+- **3c (calculation):** $1,500 = deposit amount stated in the sublease contract
+- **4:** Yes (asked defendant to pay before filing)
+- **5 (venue county):** Santa Clara (defendant lives in Sunnyvale → Santa Clara County)
+- **6 (zip):** 94086
+- **7, 8, 9, 10:** No
+- **Signature:** Joyce He, dated 2026-01-19
+- **Left blank:** court-filled fields (case number, hearing date), optional item 11, and Part 2 (court use)
+
+### Next step (not yet performed)
+Re-run the fill using short-name matching per page (qualified names for the `Checkbox5cb[0]` group), confirm the 3b date-field mapping, write `workspace/sc100-filled.pdf`, then verify the output by re-reading the written field values.

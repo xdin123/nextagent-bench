@@ -1,0 +1,5 @@
+time="2026-10-25T22:25:06+08:00" level=warning msg="The \"ANTHROPIC_API_KEY\" variable is not set. Defaulting to a blank string."
+ Container nab-647f7e32593f-main-1 Stopping 
+ Container nab-647f7e32593f-main-1 Stopped 
+ Container nab-647f7e32593f-main-1 Removing 
+ Container nab-647f7e32593f-main-1 Removed 

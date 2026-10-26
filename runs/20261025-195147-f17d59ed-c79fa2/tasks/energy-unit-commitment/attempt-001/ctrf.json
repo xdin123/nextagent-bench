@@ -1,0 +1,160 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 14,
+      "passed": 0,
+      "failed": 14,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792942443.7557642,
+      "stop": 1792942444.1060412
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestSchema::test_required_schema",
+        "status": "failed",
+        "duration": 0.0005942319985479116,
+        "start": 1792942443.9425595,
+        "stop": 1792942443.9673002,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestSchema::test_arrays_align_with_case",
+        "status": "failed",
+        "duration": 0.0002483809948898852,
+        "start": 1792942443.9676037,
+        "stop": 1792942443.9778872,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestBinaryLogic::test_startup_shutdown_match_commitment",
+        "status": "failed",
+        "duration": 0.000252842997724656,
+        "start": 1792942443.978227,
+        "stop": 1792942443.9883692,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestBinaryLogic::test_no_simultaneous_startup_shutdown",
+        "status": "failed",
+        "duration": 0.00023241200688062236,
+        "start": 1792942443.9886553,
+        "stop": 1792942443.9983814,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestBinaryLogic::test_reported_transition_counts",
+        "status": "failed",
+        "duration": 0.00022300900309346616,
+        "start": 1792942443.998653,
+        "stop": 1792942444.0086706,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestThermalFeasibility::test_must_run_units_online",
+        "status": "failed",
+        "duration": 0.00027368000155547634,
+        "start": 1792942444.008937,
+        "stop": 1792942444.0192623,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestThermalFeasibility::test_output_limits_and_offline_zeroes",
+        "status": "failed",
+        "duration": 0.00042578599823173136,
+        "start": 1792942444.0196035,
+        "stop": 1792942444.0297325,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestThermalFeasibility::test_deliverable_reserve_and_ramping",
+        "status": "failed",
+        "duration": 0.00021778799418825656,
+        "start": 1792942444.0300086,
+        "stop": 1792942444.0399103,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestSystemFeasibility::test_demand_and_reserve",
+        "status": "failed",
+        "duration": 0.00033952300145756453,
+        "start": 1792942444.040263,
+        "stop": 1792942444.0500622,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestSystemFeasibility::test_renewable_limits",
+        "status": "failed",
+        "duration": 0.00023673999385209754,
+        "start": 1792942444.0504138,
+        "stop": 1792942444.0604877,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestSystemFeasibility::test_hourly_summary_matches_schedule",
+        "status": "failed",
+        "duration": 0.00022793299285694957,
+        "start": 1792942444.0607817,
+        "stop": 1792942444.071594,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestMinimumUpDown::test_initial_and_in_horizon_obligations",
+        "status": "failed",
+        "duration": 0.00027897899417439476,
+        "start": 1792942444.0719302,
+        "stop": 1792942444.083141,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestCostAndQuality::test_reported_cost_matches_schedule",
+        "status": "failed",
+        "duration": 0.0002165080004488118,
+        "start": 1792942444.0834117,
+        "stop": 1792942444.0938606,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestCostAndQuality::test_cost_within_benchmark_gap",
+        "status": "failed",
+        "duration": 0.0014429360016947612,
+        "start": 1792942444.0941718,
+        "stop": 1792942444.1058192,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "@pytest.fixture(scope=\"module\")\n    def report():\n>       assert os.path.exists(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = <function exists at 0x745844f4b600>('/root/report.json')\nE        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:500: AssertionError"
+      }
+    ]
+  }
+}

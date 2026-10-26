@@ -1,0 +1,62 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 802B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:24.04
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#4 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#4 DONE 0.0s
+
+#5 [2/6] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     python3-dev     build-essential     wget     curl     ca-certificates     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [3/6] WORKDIR /app
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 10.68MB 0.8s done
+#7 DONE 0.8s
+
+#8 [4/6] RUN pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0
+#8 5.689 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+#8 11.22 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+#8 17.24 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+#8 24.27 WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+#8 33.29 WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+#8 38.32 Could not fetch URL https://pypi.org/simple/requests/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/requests/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))) - skipping
+#8 38.32 ERROR: Could not find a version that satisfies the requirement requests==2.32.3 (from versions: none)
+#8 38.32 ERROR: No matching distribution found for requests==2.32.3
+#8 ERROR: process "/bin/sh -c pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0" did not complete successfully: exit code: 1
+------
+ > [4/6] RUN pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0:
+5.689 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+11.22 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+17.24 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+24.27 WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+33.29 WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))': /simple/requests/
+38.32 Could not fetch URL https://pypi.org/simple/requests/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/requests/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)'))) - skipping
+38.32 ERROR: Could not find a version that satisfies the requirement requests==2.32.3 (from versions: none)
+38.32 ERROR: No matching distribution found for requests==2.32.3
+------
+Dockerfile:23
+--------------------
+  22 |     # Install Python dependencies for citation verification
+  23 | >>> RUN pip3 install --break-system-packages \
+  24 | >>>     requests==2.32.3 \
+  25 | >>>     bibtexparser==1.4.2 \
+  26 | >>>     pyyaml==6.0.3 \
+  27 | >>>     numpy==2.4.1 \
+  28 | >>>     pyperplan==2.1 \
+  29 | >>>     unified_planning==1.3.0 \
+  30 | >>>     up-pyperplan==1.1.0
+  31 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c pip3 install --break-system-packages     requests==2.32.3     bibtexparser==1.4.2     pyyaml==6.0.3     numpy==2.4.1     pyperplan==2.1     unified_planning==1.3.0     up-pyperplan==1.1.0" did not complete successfully: exit code: 1

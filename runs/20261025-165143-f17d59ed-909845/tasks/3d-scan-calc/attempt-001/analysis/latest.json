@@ -1,0 +1,39 @@
+{
+  "status": "SEMANTIC_ANALYSIS_COMPLETE",
+  "created_at": "2026-10-25T09:15:07.966795+00:00",
+  "directory": "C:\\Project\\nextagent-bench\\runs\\20261025-165143-f17d59ed-909845\\tasks\\3d-scan-calc\\attempt-001\\analysis\\20261025-171200-format",
+  "report": "C:\\Project\\nextagent-bench\\runs\\20261025-165143-f17d59ed-909845\\tasks\\3d-scan-calc\\attempt-001\\analysis\\20261025-171200-format\\report.md",
+  "model": "qwen3.8-27b",
+  "root_cause": {
+    "owner": "MODEL",
+    "conclusion": "最终模型/提供方响应流未完成或协议无效：未提供 finish_reason 或终端 done 标记，框架将其拒绝为 MODEL_RESPONSE_INVALID，导致代理在写 mass_report.json 前终止；框架未重试或恢复是次要因素。具体责任组件（模型、提供方或网关）待证实。",
+    "confidence": "SUPPORTED_HYPOTHESIS",
+    "evidence_ids": [
+      "E034",
+      "E016",
+      "E001",
+      "E007",
+      "E045"
+    ],
+    "missing_evidence": [
+      "完整最终 provider 流",
+      "框架产生 MODEL_RESPONSE_INVALID 的准确验证规则",
+      "material_density_table.md 内容",
+      "最终 Write 尝试状态",
+      "BACKGROUND_TASK_FAILED 详情"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5760,
+    "total_tokens": 17150,
+    "completion_tokens": 11390,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 5760
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6453
+    }
+  },
+  "audit_status": "REVIEW_REQUIRED"
+}

@@ -1,0 +1,27 @@
+{
+  "registered": [
+    "contribution-analysis",
+    "meteorology-driver-classification",
+    "pca-decomposition",
+    "trend-analysis"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "contribution-analysis"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "meteorology-driver-classification"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pca-decomposition"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "trend-analysis"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

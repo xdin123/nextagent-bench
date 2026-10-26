@@ -1,0 +1,39 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 620B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 DONE 0.0s
+
+#5 [2/4] WORKDIR /root
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 515.20kB 0.0s done
+#6 DONE 0.0s
+
+#7 [3/4] COPY trace.jsonl /root/trace.jsonl
+#7 DONE 0.0s
+
+#8 [4/4] COPY config.json /root/config.json
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 exporting manifest sha256:2c57fe33e7460af0a85893a0e07a00b00f45cead1cc18efa19467318dc02a152 0.0s done
+#9 exporting config sha256:7c0a79b1efcae34e7a8136babc9ca0fa69ab225de8c43e6f54894c5209e96685 done
+#9 exporting attestation manifest sha256:0827a292a47a9a291111867e91fb0fdf8c2b627196edf7d553df5ed155dabb7b done
+#9 exporting manifest list sha256:8db07d229a42e292b83e1dbd9a41541f10fc70ab8be17adf5b93748a3727fab8 done
+#9 naming to docker.io/nextagent-bench/environment:0be6d1a43fb2df944c79 done
+#9 unpacking to docker.io/nextagent-bench/environment:0be6d1a43fb2df944c79 0.0s done
+#9 DONE 0.2s

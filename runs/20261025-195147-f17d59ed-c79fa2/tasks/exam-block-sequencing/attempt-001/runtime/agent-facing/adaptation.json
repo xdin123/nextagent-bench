@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "mip-solver-and-solution-audit",
+      "directory": "mip-solver-and-solution-audit",
+      "description": "Operational workflow for hard integer-programming optimization tasks: selecting an installed solver, preserving solver/incumbent certificates, extracting feasible schedules, recomputing metrics from final outputs, and writing consistent reports. Use when a task requires a MIP, solver status, objective value, bound, gap, formulation write-up, or benchmark output files.",
+      "sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7"
+    },
+    {
+      "name": "ordered-window-sequencing-mip",
+      "directory": "ordered-window-sequencing-mip",
+      "description": "Permutation and sequencing integer-programming formulations with ordered local-window variables, prefix/suffix continuity, and overlap penalties. Use when assigning exams, jobs, tasks, visits, blocks, or resources to ordered positions and costs depend on adjacent pairs, sliding triples, n-grams, short-horizon pressure, or overlapping local patterns.",
+      "sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+    }
+  ],
+  "verifier_sha": "c1b231e2c569d431c7cb20ff353ba4230f044471aa1d1a747e60cd22508b9839",
+  "prompt_sha": "7b9fedeb7de2c254b9696a2faf783ecadbc78ea3ad94cef7c6ee883e2049c176"
+}

@@ -1,0 +1,80 @@
+{
+  "task": "parallel-tfidf-search",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T02:23:21.698071+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "parallel-tfidf-search",
+    "agent_timeout": 1800,
+    "verifier_timeout": 900,
+    "build_timeout": 600,
+    "cpus": 8.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.094,
+    "build": 59.359,
+    "container_setup": 46.266,
+    "bootstrap": 2.875,
+    "skill_preflight": 0.453,
+    "workspace_preflight": 18.344,
+    "collect": 1.703
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 129.094,
+  "environment": {
+    "image_id": "sha256:b70a0145f1919f8656ffd29c5a28d56575691130d98f9a106b726c8a0ca17436",
+    "environment_sha": "95ecae2b8b66dfc063bb22d17468f36939ea813425d7d6dbc23320cfc8ecce1d",
+    "workdir": "/root",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "memory-optimization",
+      "directory": "memory-optimization",
+      "description": "Optimize Python code for reduced memory usage and improved memory efficiency. Use when asked to reduce memory footprint, fix memory leaks, optimize data structures for memory, handle large datasets efficiently, or diagnose memory issues. Covers object sizing, generator patterns, efficient data structures, and memory profiling strategies.",
+      "sha256": "cc56c4b8119265a50ae48506c20f6e495bcb7972dfb7e78adc5405b840fb2ba8"
+    },
+    {
+      "name": "python-parallelization",
+      "directory": "python-parallelization",
+      "description": "Transform sequential Python code into parallel/concurrent implementations. Use when asked to parallelize Python code, improve code performance through concurrency, convert loops to parallel execution, or identify parallelization opportunities. Handles CPU-bound (multiprocessing), I/O-bound (asyncio, threading), and data-parallel (vectorization) scenarios.",
+      "sha256": "cade40ed1ab5ae28c52ef8ebeaaf0d72b0323d73aa1886f54f5a995685a48a79"
+    },
+    {
+      "name": "workload-balancing",
+      "directory": "workload-balancing",
+      "description": "Optimize workload distribution across workers, processes, or nodes for efficient parallel execution. Use when asked to balance work distribution, improve parallel efficiency, reduce stragglers, implement load balancing, or optimize task scheduling. Covers static/dynamic partitioning, work stealing, and adaptive load balancing strategies.",
+      "sha256": "28260b9d369855ee36fab41bc2c084bb08e0473787888a3d20ca67d25d62ad5c"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-parallel-tfidf-search-1",
+  "skills_discoverable": [
+    "memory-optimization",
+    "python-parallelization",
+    "workload-balancing"
+  ],
+  "failed_phase": "workspace_preflight",
+  "error": "Framework tool preflight failed: {\"status\": \"REQUEST_FAILED\", \"payload\": {\"rootMessageId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"requestId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"runId\": \"run-ce569886-8e7a-4aa2-9098-7544a039f426\", \"requestContextId\": \"context-9503b979-325d-417e-b29c-f1b05ff35e2b\", \"status\": \"FAILED\", \"content\": \"Request failed: Model invocation failed safely.\", \"text\": \"Request failed: Model invocation failed safely.\", \"contentType\": \"PLAIN_TEXT\", \"metadata\": {\"accumulated\": true}, \"code\": \"MODEL_PROVIDER_UNAVAILABLE\", \"message\": \"The model service is temporarily unavailable. Please retry later.\", \"category\": \"UNAVAILABLE\", \"retryable\": false, \"hookResults\": [{\"hookInvocationId\": \"hook-6f1626c4-8c99-414a-b5f4-1d9057b0b755\", \"hookId\": \"user-query-memory-recall\", \"stage\": \"BEFORE_MODEL_INVOKE\", \"status\": \"SUCCESS\", \"failureMode\": \"CONTINUE\", \"outcome\": \"PASS\"}]}, \"sequence\": 8}",
+  "outcome": "PREFLIGHT_ERROR",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 1018880,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "finished_at": "2026-10-26T02:25:30.792779+00:00",
+  "evidence_complete": true
+}

@@ -1,0 +1,22 @@
+=== Running verification ===
+=== Anti-cheat checks ===
+  PASS: test_trl_source_exists
+  PASS: test_train_script_not_modified
+  PASS: test_reward_fn_not_modified
+
+=== Bug 1: selective_log_softmax (weight=0.35) ===
+  PASS: test_selective_log_softmax_correctness
+  PASS: test_log_probs_nonpositive
+  PASS: test_log_probs_highest_token
+
+=== Bug 2: advantage scaling epsilon (weight=0.25) ===
+  PASS: test_advantage_epsilon_reasonable
+  PASS: test_advantages_not_vanishing
+
+=== Bug 3: decode_and_strip_padding (weight=0.4) ===
+  PASS: test_decode_preserves_plain_completions
+  PASS: test_decode_extracts_after_think
+  FAIL: test_decode_handles_incomplete_think -- Incomplete <think> should return empty, but got: '<think>I'm still thinking and never finished'
+
+Reward: 0.6
+REWARD=0.6000

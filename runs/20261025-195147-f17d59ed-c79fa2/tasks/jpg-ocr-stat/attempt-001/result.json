@@ -1,0 +1,94 @@
+{
+  "task": "jpg-ocr-stat",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T17:44:59.841192+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "jpg-ocr-stat",
+    "agent_timeout": 1800,
+    "verifier_timeout": 600,
+    "build_timeout": 600,
+    "cpus": 4.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.156,
+    "build": 686.031,
+    "container_setup": 211.719,
+    "bootstrap": 5.297,
+    "skill_preflight": 0.437,
+    "workspace_preflight": 2.782,
+    "collect": 1.687
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 908.109,
+  "environment": {
+    "image_id": "sha256:4507d401715a4a0b32df7ded52224def06d682be9b5be3fbf802f427bc932e60",
+    "environment_sha": "9c0d75bd39bd764271743aebb106c0b07fa629f39dd83cbaf9460bfcb81b52ce",
+    "workdir": "/app/workspace",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "image-ocr",
+      "directory": "image-ocr",
+      "description": "Extract text content from images using Tesseract OCR via Python",
+      "sha256": "69dd1065075d53f02c33d3c9c7b3f07eaab26686048675a971fb3a2f8c297359"
+    },
+    {
+      "name": "openai-vision",
+      "directory": "openai-vision",
+      "description": "Analyze images and multi-frame sequences using OpenAI GPT vision models",
+      "sha256": "5023bf779904e73d82cd1a55373eedb001fff59fc97410e22671991c63a83e3c"
+    },
+    {
+      "name": "pdf",
+      "directory": "pdf",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+      "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb"
+    },
+    {
+      "name": "video-frame-extraction",
+      "directory": "video-frame-extraction",
+      "description": "Extract frames from video files and save them as images using OpenCV",
+      "sha256": "b8109889c9b72953b52c55d17d0fa1d6f1083f6a6d1d378cdda6b6509c38fa18"
+    },
+    {
+      "name": "xlsx",
+      "directory": "xlsx",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
+      "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-jpg-ocr-stat-1",
+  "skills_discoverable": [
+    "image-ocr",
+    "openai-vision",
+    "pdf",
+    "video-frame-extraction",
+    "xlsx"
+  ],
+  "failed_phase": "workspace_preflight",
+  "error": "Framework tool preflight failed: {\"status\": \"REQUEST_FAILED\", \"payload\": {\"rootMessageId\": \"request-dd7662aa-083f-4427-980a-b23547590178\", \"requestId\": \"request-dd7662aa-083f-4427-980a-b23547590178\", \"runId\": \"run-3825a934-d8e9-4a54-bc6a-fd62b4cb1f07\", \"requestContextId\": \"context-ee437570-c423-411e-a6c4-a03127bc7829\", \"status\": \"FAILED\", \"content\": \"Request failed: Model authentication failed.\", \"text\": \"Request failed: Model authentication failed.\", \"contentType\": \"PLAIN_TEXT\", \"metadata\": {\"accumulated\": true}, \"code\": \"MODEL_AUTHENTICATION_FAILED\", \"message\": \"Model authentication failed. Check the model credential and provider configuration.\", \"category\": \"AUTHORIZATION\", \"retryable\": false, \"hookResults\": [{\"hookInvocationId\": \"hook-620f239d-7283-42c1-90d0-b3738a0abc3e\", \"hookId\": \"user-query-memory-recall\", \"stage\": \"BEFORE_MODEL_INVOKE\", \"status\": \"SUCCESS\", \"failureMode\": \"CONTINUE\", \"outcome\": \"PASS\"}]}, \"sequence\": 8}",
+  "outcome": "PREFLIGHT_ERROR",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 1025024,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "finished_at": "2026-10-25T18:00:07.940566+00:00",
+  "evidence_complete": true
+}

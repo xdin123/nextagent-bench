@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "memory-optimization",
+    "python-parallelization",
+    "workload-balancing"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "memory-optimization"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "python-parallelization"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "workload-balancing"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

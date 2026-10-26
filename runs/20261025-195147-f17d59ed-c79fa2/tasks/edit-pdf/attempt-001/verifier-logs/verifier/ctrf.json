@@ -1,0 +1,128 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 9,
+            "passed": 0,
+            "failed": 9,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792940361.2225134,
+            "stop": 1792940361.3514867
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_form_student_name",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 3.515429998515174,
+                "start": 1792940361.3130608,
+                "stop": 1792940361.325276,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_form_student_name(pdf_text):\n        \"\"\"Form filled with full name 'Jinya Jiang'.\"\"\"\n>       assert text_contains(pdf_text, \"Jinya Jiang\"), \"Student name 'Jinya Jiang' not found\"\nE       AssertionError: Student name 'Jinya Jiang' not found\nE       assert False\nE        +  where False = text_contains('', 'Jinya Jiang')\n\n/verifier/test_outputs.py:164: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_redact_student_id",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.5815379990963265,
+                "start": 1792940361.3255882,
+                "stop": 1792940361.3286903,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_redact_student_id(pdf_text):\n        \"\"\"Student ID redacted, showing only last 4 digits (5678).\"\"\"\n        # Full PID should not be visible\n        assert not re.search(r\"\\bA\\d{8}\\b\", pdf_text), \"Full student PID should be redacted\"\n        # 'A' prefix should also be redacted - only last 4 digits shown\n        assert not re.search(r\"\\bA\\*+\\d{4}\\b\", pdf_text), \"'A' prefix should be redacted (only last 4 digits)\"\n        # Last 4 digits must be present\n>       assert \"5678\" in pdf_text, \"Last 4 digits (5678) not found\"\nE       AssertionError: Last 4 digits (5678) not found\nE       assert '5678' in ''\n\n/verifier/test_outputs.py:182: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_form_school_email",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.488742003653897,
+                "start": 1792940361.3289762,
+                "stop": 1792940361.3317678,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_form_school_email(pdf_text):\n        \"\"\"Form filled with school email.\"\"\"\n        # Handle OCR spacing like \"jiang@ ucsd.edu\" or \"jiang @ucsd.edu\"\n>       assert text_contains(pdf_text, \"jiang@ucsd.edu\"), \"School email 'jiang@ucsd.edu' not found\"\nE       AssertionError: School email 'jiang@ucsd.edu' not found\nE       assert False\nE        +  where False = text_contains('', 'jiang@ucsd.edu')\n\n/verifier/test_outputs.py:192: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_form_date_of_birth",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.43170999924768694,
+                "start": 1792940361.3319736,
+                "stop": 1792940361.3346698,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_form_date_of_birth(pdf_text):\n        \"\"\"Form filled with correct DOB.\"\"\"\n>       assert \"2004/06/18\" in pdf_text, \"Correct DOB (2004/06/18) not found\"\nE       AssertionError: Correct DOB (2004/06/18) not found\nE       assert '2004/06/18' in ''\n\n/verifier/test_outputs.py:201: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_form_phone_number",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.4180819996690843,
+                "start": 1792940361.334899,
+                "stop": 1792940361.3376186,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_form_phone_number(pdf_text):\n        \"\"\"Form filled with phone number.\"\"\"\n        phone_pattern = r\"\\(253\\)\\s*798-6666\"\n        count = count_occurrences(pdf_text, phone_pattern)\n>       assert count >= 1, \"Phone number not found\"\nE       AssertionError: Phone number not found\nE       assert 0 >= 1\n\n/verifier/test_outputs.py:212: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_form_appeal_reason",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.4603419984050561,
+                "start": 1792940361.3378909,
+                "stop": 1792940361.340687,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_form_appeal_reason(pdf_text):\n        \"\"\"Appeal reason filled with required content.\"\"\"\n        required_terms = [\"health insurance\", \"waiver\", \"coverage\", \"Spring 2026\", \"Jan\", \"June\"]\n        # Use OCR-tolerant matching\n        missing = [term for term in required_terms if not text_contains(pdf_text, term)]\n>       assert not missing, f\"Appeal reason missing: {missing}\"\nE       AssertionError: Appeal reason missing: ['health insurance', 'waiver', 'coverage', 'Spring 2026', 'Jan', 'June']\nE       assert not ['health insurance', 'waiver', 'coverage', 'Spring 2026', 'Jan', 'June']\n\n/verifier/test_outputs.py:224: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_signature_added",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.6791029991290998,
+                "start": 1792940361.34094,
+                "stop": 1792940361.3440917,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_signature_added(pdf_text):\n        \"\"\"Signature added (name appears at least twice - once in form, once as signature).\"\"\"\n        # Use OCR-aware counting to handle spacing issues like \"J inya J iang\"\n        count = count_occurrences_ocr(pdf_text, \"Jinya Jiang\")\n>       assert count >= 2, f\"Signature not found (name should appear at least twice, found {count})\"\nE       AssertionError: Signature not found (name should appear at least twice, found 0)\nE       assert 0 >= 2\n\n/verifier/test_outputs.py:235: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_todays_date_added",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.47378100134665146,
+                "start": 1792940361.344348,
+                "stop": 1792940361.3474767,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_todays_date_added(pdf_text):\n        \"\"\"Today's date added (Pacific timezone, \u00b11 day tolerance).\"\"\"\n        from datetime import datetime, timezone\n    \n        pacific_offset = timezone(timedelta(hours=-8))\n        today = datetime.now(pacific_offset).date()\n    \n        candidates = {today, today - timedelta(days=1), today + timedelta(days=1)}\n    \n        date_patterns = []\n        for d in candidates:\n            date_patterns.extend(\n                [\n                    d.isoformat(),\n                    d.strftime(\"%Y/%m/%d\"),\n                    d.strftime(\"%m/%d/%Y\"),\n                    d.strftime(\"%d/%m/%Y\"),\n                ]\n            )\n    \n        found = any(pat in pdf_text for pat in date_patterns)\n>       assert found, f\"Today's date not found. Expected one of: {date_patterns}\"\nE       AssertionError: Today's date not found. Expected one of: ['2026-10-26', '2026/10/26', '10/26/2026', '26/10/2026', '2026-10-24', '2026/10/24', '10/24/2026', '24/10/2026', '2026-10-25', '2026/10/25', '10/25/2026', '25/10/2026']\nE       assert False\n\n/verifier/test_outputs.py:263: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_labels_not_covered",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.5327909966581501,
+                "start": 1792940361.34771,
+                "stop": 1792940361.3512976,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "pdf_text = ''\n\n    def test_labels_not_covered(pdf_text):\n        \"\"\"Original form labels preserved (not covered by edits).\"\"\"\n        required_labels = [\"STUDENT NAME\", \"STUDENT PID\", \"UCSD E-MAIL\", \"DATE OF BIRTH\", \"PHONE NUMBER\", \"Reason for appeal\", \"Date\"]\n    \n        # Use OCR-tolerant matching for labels\n        missing = [label for label in required_labels if not text_contains(pdf_text, label)]\n>       assert not missing, f\"Form labels covered/removed: {missing}\"\nE       AssertionError: Form labels covered/removed: ['STUDENT NAME', 'STUDENT PID', 'UCSD E-MAIL', 'DATE OF BIRTH', 'PHONE NUMBER', 'Reason for appeal', 'Date']\nE       assert not ['STUDENT NAME', 'STUDENT PID', 'UCSD E-MAIL', 'DATE OF BIRTH', 'PHONE NUMBER', 'Reason for appeal', ...]\n\n/verifier/test_outputs.py:276: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

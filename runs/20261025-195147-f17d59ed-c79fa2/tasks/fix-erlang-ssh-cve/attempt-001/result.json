@@ -1,0 +1,38 @@
+{
+  "task": "fix-erlang-ssh-cve",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T16:15:59.420825+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "fix-erlang-ssh-cve",
+    "agent_timeout": 600,
+    "verifier_timeout": 1200,
+    "build_timeout": 600,
+    "cpus": 8.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 599.86,
+    "build": 452.187,
+    "collect": 0.0
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 3,
+  "elapsed_seconds": 1052.047,
+  "failed_phase": "build",
+  "error": "docker exited 1:  --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \"\"     && rm -rf /var/lib/apt/lists/*:\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/l/lksctp-tools/libsctp-dev_1.0.19%2bdfsg-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf-bin_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkg-config_1.8.1-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-nacl/python3-nacl_1.5.0-4build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-bcrypt/python3-bcrypt_3.2.2-1build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/s/six/python3-six_1.16.0-4_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/paramiko/python3-paramiko_2.12.0-2ubuntu4.1_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n451.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?\n451.5 Fetched 113 MB in 5min 48s (325 kB/s)\n------\nDockerfile:10\n--------------------\n   9 |     \n  10 | >>> RUN set -xe \\\n  11 | >>>     && apt-get update \\\n  12 | >>>     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config' \\\n  13 | >>>     && runtimeDeps='libodbc2 libssl3 libsctp1' \\\n  14 | >>>     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps \\\n  15 | >>>     && mkdir -p /etc/ssh \\\n  16 | >>>     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \"\" \\\n  17 | >>>     && rm -rf /var/lib/apt/lists/*\n  18 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c set -xe     && apt-get update     && buildDeps='curl ca-certificates autoconf dpkg-dev gcc g++ make libncurses-dev unixodbc-dev libssl-dev libsctp-dev openssh-client python3 python3-paramiko net-tools vim git pkg-config'     && runtimeDeps='libodbc2 libssl3 libsctp1'     && apt-get install -y --no-install-recommends $buildDeps $runtimeDeps     && mkdir -p /etc/ssh     && ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N \\\"\\\"     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-25T16:33:31.469545+00:00",
+  "evidence_complete": false
+}

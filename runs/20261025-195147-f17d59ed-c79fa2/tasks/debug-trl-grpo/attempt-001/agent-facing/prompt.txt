@@ -1,0 +1,6 @@
+# debug-trl-grpo
+
+I am training a countdown math task using TRL for my model with GRPO, but the new model shows no improvement. 
+The source code is at workspace/trl. Check if there is any bug and fix them. 
+
+DO NOT modify the training script (`workspace/train_grpo.py`) or reward function (`workspace/reward_fn.py`)

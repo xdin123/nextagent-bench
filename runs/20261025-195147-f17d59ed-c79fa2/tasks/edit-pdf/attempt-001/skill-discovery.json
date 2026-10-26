@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "pdf-editing",
+    "text-parser"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pdf-editing"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "text-parser"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

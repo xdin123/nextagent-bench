@@ -1,0 +1,16 @@
+framework: artifacts/f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5
+dataset: datasets/c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2
+model: qwen3.8-27b
+base_url: https://maas.qianwenaiapi.com/compatible-mode/v1
+jobs: 2
+skill_mode: with-skill
+excluded_agent_hooks:
+- developer-hook-trace.loop-raw-boundary
+suites:
+  smoke:
+  - 3d-scan-calc
+  - dialogue-parser
+  telecom:
+  - azure-bgp-oscillation-route-leak
+  - suricata-custom-exfil
+legacy_environment_images: {}

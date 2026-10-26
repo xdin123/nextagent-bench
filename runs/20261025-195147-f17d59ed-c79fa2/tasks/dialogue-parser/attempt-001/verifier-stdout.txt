@@ -1,0 +1,773 @@
++ pip3 install --break-system-packages pytest==8.3.4 pytest-json-ctrf==0.3.6
+Collecting pytest==8.3.4
+  Downloading pytest-8.3.4-py3-none-any.whl.metadata (7.5 kB)
+Collecting pytest-json-ctrf==0.3.6
+  Downloading pytest_json_ctrf-0.3.6-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig (from pytest==8.3.4)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging (from pytest==8.3.4)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.3.4)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Downloading pytest-8.3.4-py3-none-any.whl (343 kB)
+Downloading pytest_json_ctrf-0.3.6-py3-none-any.whl (6.9 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Installing collected packages: pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pytest-8.3.4 pytest-json-ctrf-0.3.6
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 24.3.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
++ mkdir -p /logs/verifier
++ pytest --ctrf /logs/verifier/ctrf.json /verifier/test_outputs.py -rA -v
++ tee /logs/verifier/pytest_output.txt
+============================= test session starts ==============================
+platform linux -- Python 3.12.8, pytest-8.3.4, pluggy-1.7.0 -- /usr/local/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.6
+collecting ... collected 35 items
+
+../../../../../../../verifier/test_outputs.py::test_system_basics[json_structure] ERROR [  2%]
+../../../../../../../verifier/test_outputs.py::test_system_basics[schema_validation] ERROR [  5%]
+../../../../../../../verifier/test_outputs.py::test_system_basics[dot_exists] ERROR [  8%]
+../../../../../../../verifier/test_outputs.py::test_system_basics[graph_size] ERROR [ 11%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Narrator] ERROR [ 14%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Barkeep] ERROR [ 17%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Merchant] ERROR [ 20%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Kira] ERROR [ 22%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[node-Start] ERROR [ 25%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[node-TavernChoice] ERROR [ 28%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[node-StrangerApproach] ERROR [ 31%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[node-CrimsonQuestStart] ERROR [ 34%]
+../../../../../../../verifier/test_outputs.py::test_narrative_content[node-KiraMeet] ERROR [ 37%]
+../../../../../../../verifier/test_outputs.py::test_graph_logic[edges_valid] ERROR [ 40%]
+../../../../../../../verifier/test_outputs.py::test_graph_logic[reachability] ERROR [ 42%]
+../../../../../../../verifier/test_outputs.py::test_graph_logic[tavern_branching] ERROR [ 45%]
+../../../../../../../verifier/test_outputs.py::test_graph_logic[multiple_endings] ERROR [ 48%]
+../../../../../../../verifier/test_outputs.py::test_visualization_validity[header] SKIPPED [ 51%]
+../../../../../../../verifier/test_outputs.py::test_visualization_validity[syntax] SKIPPED [ 54%]
+../../../../../../../verifier/test_outputs.py::test_visualization_validity[shapes] SKIPPED [ 57%]
+../../../../../../../verifier/test_outputs.py::test_visualization_validity[content] SKIPPED [ 60%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-StrangerMoreInfo-Back so soon? Afraid?] ERROR [ 62%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-MerchantShame-I light a candle for each of them] ERROR [ 65%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[edge_text-RecruitOptions-The stranger seems capable] ERROR [ 68%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-KiraWarning-She's never failed a contract] ERROR [ 71%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[node_id-HitNegotiate-None] ERROR [ 74%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[node_id-CrimsonCompromise-None] ERROR [ 77%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[dynamic_script_sample-script.txt-None] ERROR [ 80%]
+../../../../../../../verifier/test_outputs.py::test_content_integrity[first_node_check-script.txt-None] ERROR [ 82%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[Start-TavernEntry] ERROR [ 85%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernEntry-TavernChoice] ERROR [ 88%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernChoice-StrangerApproach] ERROR [ 91%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernChoice-MerchantApproach] ERROR [ 94%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[StrangerGreet-CrimsonQuestStart] ERROR [ 97%]
+../../../../../../../verifier/test_outputs.py::test_structural_integrity[CrimsonQuestStart-CrimsonWarning] ERROR [100%]
+
+==================================== ERRORS ====================================
+_____________ ERROR at setup of test_system_basics[json_structure] _____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+___________ ERROR at setup of test_system_basics[schema_validation] ____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______________ ERROR at setup of test_system_basics[dot_exists] _______________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______________ ERROR at setup of test_system_basics[graph_size] _______________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__________ ERROR at setup of test_narrative_content[speaker-Narrator] __________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__________ ERROR at setup of test_narrative_content[speaker-Barkeep] ___________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__________ ERROR at setup of test_narrative_content[speaker-Merchant] __________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+____________ ERROR at setup of test_narrative_content[speaker-Kira] ____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_____________ ERROR at setup of test_narrative_content[node-Start] _____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_________ ERROR at setup of test_narrative_content[node-TavernChoice] __________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______ ERROR at setup of test_narrative_content[node-StrangerApproach] ________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______ ERROR at setup of test_narrative_content[node-CrimsonQuestStart] _______
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+___________ ERROR at setup of test_narrative_content[node-KiraMeet] ____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______________ ERROR at setup of test_graph_logic[edges_valid] ________________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_______________ ERROR at setup of test_graph_logic[reachability] _______________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_____________ ERROR at setup of test_graph_logic[tavern_branching] _____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_____________ ERROR at setup of test_graph_logic[multiple_endings] _____________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_content_integrity[node_text-StrangerMoreInfo-Back so soon? Afraid?] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_content_integrity[node_text-MerchantShame-I light a candle for each of them] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_content_integrity[edge_text-RecruitOptions-The stranger seems capable] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_content_integrity[node_text-KiraWarning-She's never failed a contract] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_____ ERROR at setup of test_content_integrity[node_id-HitNegotiate-None] ______
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+___ ERROR at setup of test_content_integrity[node_id-CrimsonCompromise-None] ___
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_content_integrity[dynamic_script_sample-script.txt-None] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__ ERROR at setup of test_content_integrity[first_node_check-script.txt-None] __
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+________ ERROR at setup of test_structural_integrity[Start-TavernEntry] ________
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+____ ERROR at setup of test_structural_integrity[TavernEntry-TavernChoice] _____
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__ ERROR at setup of test_structural_integrity[TavernChoice-StrangerApproach] __
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+__ ERROR at setup of test_structural_integrity[TavernChoice-MerchantApproach] __
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_structural_integrity[StrangerGreet-CrimsonQuestStart] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+_ ERROR at setup of test_structural_integrity[CrimsonQuestStart-CrimsonWarning] _
+
+    @pytest.fixture(scope="module")
+    def dialogue_data():
+        """Load dialogue.json from expected locations."""
+        direct_paths = ["/app/dialogue.json", "dialogue.json", "/root/dialogue.json"]
+        for path in direct_paths:
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    return json.load(f)
+    
+        for pattern in ["/app/**/dialogue.json", "/root/**/dialogue.json", "./**/dialogue.json"]:
+            matches = glob.glob(pattern, recursive=True)
+            if matches:
+                with open(matches[0], "r") as f:
+                    return json.load(f)
+    
+>       pytest.fail("dialogue.json not found in expected locations")
+E       Failed: dialogue.json not found in expected locations
+
+/verifier/test_outputs.py:32: Failed
+=========================== short test summary info ============================
+SKIPPED [4] ../../../../../../../verifier/test_outputs.py:178: DOT file missing (checked in test_system_basics)
+ERROR ../../../../../../../verifier/test_outputs.py::test_system_basics[json_structure]
+ERROR ../../../../../../../verifier/test_outputs.py::test_system_basics[schema_validation]
+ERROR ../../../../../../../verifier/test_outputs.py::test_system_basics[dot_exists]
+ERROR ../../../../../../../verifier/test_outputs.py::test_system_basics[graph_size]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Narrator]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Barkeep]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Merchant]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[speaker-Kira]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[node-Start]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[node-TavernChoice]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[node-StrangerApproach]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[node-CrimsonQuestStart]
+ERROR ../../../../../../../verifier/test_outputs.py::test_narrative_content[node-KiraMeet]
+ERROR ../../../../../../../verifier/test_outputs.py::test_graph_logic[edges_valid]
+ERROR ../../../../../../../verifier/test_outputs.py::test_graph_logic[reachability]
+ERROR ../../../../../../../verifier/test_outputs.py::test_graph_logic[tavern_branching]
+ERROR ../../../../../../../verifier/test_outputs.py::test_graph_logic[multiple_endings]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-StrangerMoreInfo-Back so soon? Afraid?]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-MerchantShame-I light a candle for each of them]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[edge_text-RecruitOptions-The stranger seems capable]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[node_text-KiraWarning-She's never failed a contract]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[node_id-HitNegotiate-None]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[node_id-CrimsonCompromise-None]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[dynamic_script_sample-script.txt-None]
+ERROR ../../../../../../../verifier/test_outputs.py::test_content_integrity[first_node_check-script.txt-None]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[Start-TavernEntry]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernEntry-TavernChoice]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernChoice-StrangerApproach]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[TavernChoice-MerchantApproach]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[StrangerGreet-CrimsonQuestStart]
+ERROR ../../../../../../../verifier/test_outputs.py::test_structural_integrity[CrimsonQuestStart-CrimsonWarning]
+======================== 4 skipped, 31 errors in 0.19s =========================
++ RESULT=1
++ '[' -f /logs/verifier/ctrf.json ']'
+++ python3 -c 'import json; d=json.load(open('\''/logs/verifier/ctrf.json'\'')); print(d['\''results'\'']['\''summary'\'']['\''passed'\''])'
++ PASSED=0
+++ python3 -c 'import json; d=json.load(open('\''/logs/verifier/ctrf.json'\'')); print(d['\''results'\'']['\''summary'\'']['\''tests'\''])'
++ TOTAL=6
++ '[' 6 -gt 0 ']'
+++ python3 -c 'print(round(0 / 6, 3))'
+======================================
+TEST SUMMARY: 0 / 6 tests passed
+REWARD SCORE: 0.0
+======================================
++ SCORE=0.0
++ echo ======================================
++ echo 'TEST SUMMARY: 0 / 6 tests passed'
++ echo 'REWARD SCORE: 0.0'
++ echo ======================================
++ echo 0.0
++ exit 0

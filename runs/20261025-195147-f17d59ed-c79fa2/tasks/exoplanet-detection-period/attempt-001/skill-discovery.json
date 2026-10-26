@@ -1,0 +1,32 @@
+{
+  "registered": [
+    "box-least-squares",
+    "exoplanet-workflows",
+    "light-curve-preprocessing",
+    "lomb-scargle-periodogram",
+    "transit-least-squares"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "box-least-squares"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "exoplanet-workflows"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "light-curve-preprocessing"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "lomb-scargle-periodogram"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "transit-least-squares"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

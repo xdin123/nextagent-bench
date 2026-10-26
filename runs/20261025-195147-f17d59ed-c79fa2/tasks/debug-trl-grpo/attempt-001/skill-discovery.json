@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "grpo",
+    "rl-post-training",
+    "trl"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "grpo"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "rl-post-training"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "trl"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

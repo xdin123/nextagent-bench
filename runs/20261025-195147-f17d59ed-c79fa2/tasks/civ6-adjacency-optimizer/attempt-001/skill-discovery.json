@@ -1,0 +1,27 @@
+{
+  "registered": [
+    "civ6lib",
+    "hex-grid-spatial",
+    "map-optimization-strategy",
+    "sqlite-map-parser"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "civ6lib"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "hex-grid-spatial"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "map-optimization-strategy"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "sqlite-map-parser"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

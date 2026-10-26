@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.2"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792948634.9156613,
+            "stop": 1792948634.9239545
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestFloodDetection::test_csv_output_exists",
+                "status": "passed",
+                "duration": 0.506826996570453,
+                "start": 1792948634.9222367,
+                "stop": 1792948634.9230328,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::TestFloodDetection::test_correct_stations_and_flood_days",
+                "status": "passed",
+                "duration": 0.38801100163254887,
+                "start": 1792948634.9232683,
+                "stop": 1792948634.92388,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

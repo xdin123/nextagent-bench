@@ -1,0 +1,28 @@
+All done — every target met. Summary of the pipeline:
+
+**1. Calibration** (`workspace/calibrate.py` → `calibration_log.json`)
+- Step test: heater 0 → 50% held for 120 s, 241 points at dt=0.5 s
+- Temperature rose 17.88 °C → 23.69 °C (stayed well under the 30 °C safety limit)
+
+**2. Parameter estimation** (`workspace/estimate_params.py` → `estimated_params.json`)
+- `scipy curve_fit` on T(t) = T₀ + K·u·(1−e^(−t/τ)), with T₀ fit freely to absorb sensor noise
+- **K = 0.1203 °C/%, τ = 40.46 s**, R² = 0.996, RMSE = 0.102 °C (≈ sensor noise floor)
+
+**3. IMC tuning** (`workspace/tune_gains.py` → `tuned_gains.json`)
+- λ = 0.5τ = 20.23 s → **Kp = 16.63, Ki = 0.411, Kd = 0**
+- Expected settling ~4λ ≈ 81 s, comfortably under 120 s
+
+**4. Closed-loop control** (`workspace/control.py` → `control_log.json`, `metrics.json`)
+- 160 s PI run with back-calculation anti-windup, heater clamped 0–100%
+- Started at 18.07 °C, ended at 21.99 °C
+
+**Results vs. targets** (all verified against raw log data by `workspace/verify.py`):
+
+| Metric | Target | Achieved |
+|---|---|---|
+| Steady-state error | < 0.5 °C | **0.010 °C** |
+| Settling time (±2%) | < 120 s | **52.5 s** |
+| Overshoot | < 10% | **6.1%** |
+| Control duration | ≥ 150 s | **160 s** |
+| Max temperature | < 30 °C | **22.24 °C** |
+| Rise time (10–90%) | — | 36.5 s |

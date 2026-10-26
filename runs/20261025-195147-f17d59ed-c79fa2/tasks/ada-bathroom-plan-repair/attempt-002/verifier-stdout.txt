@@ -1,0 +1,206 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.1, pluggy-1.7.0 -- /usr/local/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 6 items
+
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas FAILED [ 16%]
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad FAILED [ 33%]
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules FAILED [ 50%]
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules FAILED [ 66%]
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout FAILED [ 83%]
+../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably FAILED [100%]
+
+=================================== FAILURES ===================================
+_ TestAdaBathroomRepairOutputs.test_required_outputs_are_valid_json_and_match_schemas _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da915a624e0>
+
+    def test_required_outputs_are_valid_json_and_match_schemas(self):
+        for output_name, schema_name in REQUIRED_OUTPUTS.items():
+            output_path = OUTPUT_DIR / output_name
+            schema_path = SCHEMA_DIR / schema_name
+>           assert output_path.exists(), f'Missing required output {output_path}'
+E           AssertionError: Missing required output /root/output/layer_inventory.json
+E           assert False
+E            +  where False = exists()
+E            +    where exists = PosixPath('/root/output/layer_inventory.json').exists
+
+/verifier/test_outputs.py:328: AssertionError
+_ TestAdaBathroomRepairOutputs.test_layer_inventory_and_original_extraction_match_cad _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da915a9dd00>
+
+    def test_layer_inventory_and_original_extraction_match_cad(self):
+>       inventory = load_json(OUTPUT_DIR / 'layer_inventory.json')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:335: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/verifier/test_outputs.py:113: in load_json
+    with path.open('r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/root/output/layer_inventory.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/layer_inventory.json'
+
+/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_ TestAdaBathroomRepairOutputs.test_violation_list_is_consistent_with_plan_view_rules _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da9154f56d0>
+
+    def test_violation_list_is_consistent_with_plan_view_rules(self):
+        rules = load_json(RULES_PATH)
+>       extracted = load_json(OUTPUT_DIR / 'extracted_original_layout.json')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:381: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/verifier/test_outputs.py:113: in load_json
+    with path.open('r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/root/output/extracted_original_layout.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/extracted_original_layout.json'
+
+/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_ TestAdaBathroomRepairOutputs.test_repaired_layout_satisfies_accessibility_rules _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da9154f5580>
+
+    def test_repaired_layout_satisfies_accessibility_rules(self):
+        rules = load_json(RULES_PATH)
+>       repaired = load_json(OUTPUT_DIR / 'repaired_layout.json')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:397: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/verifier/test_outputs.py:113: in load_json
+    with path.open('r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/root/output/repaired_layout.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/repaired_layout.json'
+
+/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError
+_ TestAdaBathroomRepairOutputs.test_repaired_dxf_is_modified_and_matches_repaired_layout _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da9155182f0>
+
+    def test_repaired_dxf_is_modified_and_matches_repaired_layout(self):
+>       assert REPAIRED_DXF_PATH.exists(), 'Missing required CAD output /root/output/repaired_plan.dxf.'
+E       AssertionError: Missing required CAD output /root/output/repaired_plan.dxf.
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/output/repaired_plan.dxf').exists
+
+/verifier/test_outputs.py:445: AssertionError
+_ TestAdaBathroomRepairOutputs.test_repair_preserves_the_existing_layout_reasonably _
+
+self = <test_outputs.TestAdaBathroomRepairOutputs object at 0x7da91551aa50>
+
+    def test_repair_preserves_the_existing_layout_reasonably(self):
+>       repaired = load_json(OUTPUT_DIR / 'repaired_layout.json')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:466: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/verifier/test_outputs.py:113: in load_json
+    with path.open('r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/root/output/repaired_layout.json'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/output/repaired_layout.json'
+
+/usr/local/lib/python3.12/pathlib.py:1013: FileNotFoundError
+=============================== warnings summary ===============================
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:50
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:50: PyparsingDeprecationWarning: 'addParseAction' deprecated - use 'add_parse_action'
+    number.addParseAction(lambda t: float(t[0]))  # convert to float
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:51
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:51: PyparsingDeprecationWarning: 'addParseAction' deprecated - use 'add_parse_action'
+    string_ = quotedString.addParseAction(lambda t: t[0][1:-1])  # remove quotes
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:57
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:57: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    Relation = oneOf(["==", "!=", "<", "<=", ">", ">=", "?", "!?"])
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:63
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:63: PyparsingDeprecationWarning: 'setResultsName' deprecated - use 'set_results_name'
+    ).setResultsName("EntityQuery")
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:65
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:65: PyparsingDeprecationWarning: 'infixNotation' deprecated - use 'infix_notation'
+    InfixBoolQuery = infixNotation(
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:72
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:72: PyparsingDeprecationWarning: 'setResultsName' deprecated - use 'set_results_name'
+    ).setResultsName("AttribQuery")
+
+../../../../../../../usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:74
+  /usr/local/lib/python3.12/site-packages/ezdxf/queryparser.py:74: PyparsingDeprecationWarning: 'setResultsName' deprecated - use 'set_results_name'
+    AttribQueryOptions = Literal("i").setResultsName("AttribQueryOptions")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_required_outputs_are_valid_json_and_match_schemas
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_layer_inventory_and_original_extraction_match_cad
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_violation_list_is_consistent_with_plan_view_rules
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_layout_satisfies_accessibility_rules
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repaired_dxf_is_modified_and_matches_repaired_layout
+FAILED ../../../../../../../verifier/test_outputs.py::TestAdaBathroomRepairOutputs::test_repair_preserves_the_existing_layout_reasonably
+======================== 6 failed, 7 warnings in 0.55s =========================

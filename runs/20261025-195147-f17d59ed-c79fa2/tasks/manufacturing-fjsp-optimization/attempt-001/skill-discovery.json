@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "fjsp-baseline-repair-with-downtime-and-policy"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "fjsp-baseline-repair-with-downtime-and-policy"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

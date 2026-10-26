@@ -1,0 +1,57 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "dyn-object-masks",
+      "directory": "dyn-object-masks",
+      "description": "Generate dynamic-object binary masks after global motion compensation, output CSR sparse format.",
+      "sha256": "f39ddb6700d3a0c4626b3764c3921fba7e0557433690294d852f9127b5c7c870"
+    },
+    {
+      "name": "egomotion-estimation",
+      "directory": "egomotion-estimation",
+      "description": "Estimate camera motion with optical flow + affine/homography, allow multi-label per frame.",
+      "sha256": "ae9c89b1c228c3868938cd71d474e3ac20766991d2ed94a45721842a03ad4d70"
+    },
+    {
+      "name": "output-validation",
+      "directory": "output-validation",
+      "description": "Local self-check of instructions and mask outputs (format/range/consistency) without using GT.",
+      "sha256": "fccdbde222731c06fcd34838a39b9ba4c6fe660d57a9a2b2b3f5546188545f7a"
+    },
+    {
+      "name": "sampling-and-indexing",
+      "directory": "sampling-and-indexing",
+      "description": "Standardize video sampling and frame indexing so interval instructions and mask frames stay aligned with a valid key/index scheme.",
+      "sha256": "317046cac52d42837875d1d4a24d30b3597f4bcfd67ab42fde25aaf2bf4a26f9"
+    }
+  ],
+  "verifier_sha": "65db85999d85a335bae22c33bd42bb0976b930ecbed437b8c8a37aac4726d713",
+  "prompt_sha": "52e987631f4cfab0a29b852f091539a27f7d62538a90619e08409873671b1edc"
+}

@@ -1,0 +1,60 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [stage-0  1/11] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#1 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 500B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:24.04
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [2/6] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [3/6] WORKDIR /root
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 7.11kB done
+#7 DONE 0.0s
+
+#8 [4/6] COPY r2r_simulator.py /root/r2r_simulator.py
+#8 DONE 0.0s
+
+#9 [5/6] COPY system_config.json /root/system_config.json
+#9 DONE 0.0s
+
+#10 [6/6] RUN pip3 install --break-system-packages     numpy==1.26.4     scipy==1.13.0
+#10 5.420 Collecting numpy==1.26.4
+#10 6.941   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#10 7.503      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 195.2 kB/s eta 0:00:00
+#10 9.167 Collecting scipy==1.13.0
+#10 9.603   Downloading scipy-1.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+#10 9.647      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 1.2 MB/s eta 0:00:00
+#10 10.13 Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+#10 34.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 998.9 kB/s eta 0:00:00
+#10 35.59 Downloading scipy-1.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+#10 58.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.2/38.2 MB 1.6 MB/s eta 0:00:00
+#10 58.82 Installing collected packages: numpy, scipy
+#10 62.27 Successfully installed numpy-1.26.4 scipy-1.13.0
+#10 62.27 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 DONE 62.8s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 6.0s done
+#11 exporting manifest sha256:f7c43b7b25b7e220afcc97b0486258c71722ec900d5144612f69496d3328e00f 0.0s done
+#11 exporting config sha256:4d8cf84da5768eb0ebe2112174972f372cebb83a53ab3d2c57cef0741eb39123 0.0s done
+#11 exporting attestation manifest sha256:f54f968c498062c3bb3ed26b23bcf268a81ab48f434e83e59a4ac4b7fae0a1e5 0.0s done
+#11 exporting manifest list sha256:3269d79b9d98f3cd4760127e49072e24130652cfd7dd386db816a83f9f1f8666 0.0s done
+#11 naming to docker.io/nextagent-bench/environment:1f2a515d7d7b7b7fcf53 done
+#11 unpacking to docker.io/nextagent-bench/environment:1f2a515d7d7b7b7fcf53
+#11 unpacking to docker.io/nextagent-bench/environment:1f2a515d7d7b7b7fcf53 1.0s done
+#11 DONE 7.1s

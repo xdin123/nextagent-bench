@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "manufacturing-failure-reason-codebook-normalization"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "manufacturing-failure-reason-codebook-normalization"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

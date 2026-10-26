@@ -1,0 +1,10 @@
+# Post-run diagnostics never changes task scores or fixes the tested product.
+enabled: true
+capture_model_exchanges: true
+# null follows the evaluation model; can be changed for a diagnostic rerun.
+model: null
+max_input_chars: 65000
+max_output_tokens: 10000
+timeout_seconds: 300
+max_exchanges: 6
+max_code_files: 6

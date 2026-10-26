@@ -1,0 +1,102 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 8,
+      "passed": 0,
+      "failed": 8,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792981051.8666334,
+      "stop": 1792981052.4447381
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_result_file_exists",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.000807633999556856,
+        "start": 1792981052.4092011,
+        "stop": 1792981052.4270406,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f21f51ef00>\n\n    def test_result_file_exists(self):\n        \"\"\"Test that the result file exists.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found at {self.RESULT_PATH}\"\nE       AssertionError: Result file not found at /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f21f51ef00>.RESULT_PATH\n\n/verifier/test_outputs.py:35: AssertionError",
+        "message": "The test failed in the call phase due to an assertion error"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_result_file_not_empty",
+        "status": "failed",
+        "duration": 0.00042359299959571217,
+        "start": 1792981052.4272575,
+        "stop": 1792981052.4300144,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f2021de240>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f2021de240>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_required_columns",
+        "status": "failed",
+        "duration": 0.000323945000218373,
+        "start": 1792981052.4302187,
+        "stop": 1792981052.4326527,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f201a4dcd0>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f201a4dcd0>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_f1_values_valid",
+        "status": "failed",
+        "duration": 0.0003009080000992981,
+        "start": 1792981052.4327915,
+        "stop": 1792981052.435242,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f236b858e0>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f236b858e0>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_delta_values_positive",
+        "status": "failed",
+        "duration": 0.00028157399992778664,
+        "start": 1792981052.4353867,
+        "stop": 1792981052.4376404,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f200f97fb0>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f200f97fb0>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_hyperparameter_ranges",
+        "status": "failed",
+        "duration": 0.0002678779997040692,
+        "start": 1792981052.437845,
+        "stop": 1792981052.4400349,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f200f97ce0>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f200f97ce0>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_is_valid_pareto_frontier",
+        "status": "failed",
+        "duration": 0.00026697999965108465,
+        "start": 1792981052.4401627,
+        "stop": 1792981052.4422653,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f200f97e30>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f200f97e30>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      },
+      {
+        "name": "test_outputs.py::TestParetoFrontier::test_all_expected_points_found",
+        "status": "failed",
+        "duration": 0.0002927689997704874,
+        "start": 1792981052.4423907,
+        "stop": 1792981052.4445724,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestParetoFrontier object at 0x71f200fb4080>\n\n    @pytest.fixture\n    def agent_frontier(self):\n        \"\"\"Load agent's Pareto frontier.\"\"\"\n>       assert self.RESULT_PATH.exists(), f\"Result file not found: {self.RESULT_PATH}\"\nE       AssertionError: Result file not found: /root/pareto_frontier.csv\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/pareto_frontier.csv').exists\nE        +      where PosixPath('/root/pareto_frontier.csv') = <test_outputs.TestParetoFrontier object at 0x71f200fb4080>.RESULT_PATH\n\n/verifier/test_outputs.py:25: AssertionError"
+      }
+    ]
+  }
+}

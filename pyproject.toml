@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nextagent-bench"
+version = "0.1.0"
+description = "Versioned Docker SkillsBench evaluation for NextAgent release bundles"
+requires-python = ">=3.12"
+dependencies = ["PyYAML==6.0.3", "openpyxl==3.1.5", "jsonschema==4.23.0"]
+
+[project.scripts]
+nextagent-bench = "nextagent_bench.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nextagent_bench*"]
+
+[tool.setuptools.package-data]
+nextagent_bench = ["runtime/*.mjs"]

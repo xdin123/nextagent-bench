@@ -1,0 +1,2253 @@
+{
+  "phase": "control",
+  "setpoint": 22.0,
+  "data": [
+    {
+      "time": 0.0,
+      "temperature": 18.0683,
+      "setpoint": 22.0,
+      "heater_power": 0.0,
+      "error": 3.9317
+    },
+    {
+      "time": 0.5,
+      "temperature": 18.088,
+      "setpoint": 22.0,
+      "heater_power": 66.18,
+      "error": 3.912
+    },
+    {
+      "time": 1.0,
+      "temperature": 18.1306,
+      "setpoint": 22.0,
+      "heater_power": 66.66,
+      "error": 3.8694
+    },
+    {
+      "time": 1.5,
+      "temperature": 18.3296,
+      "setpoint": 22.0,
+      "heater_power": 66.74,
+      "error": 3.6704
+    },
+    {
+      "time": 2.0,
+      "temperature": 18.3512,
+      "setpoint": 22.0,
+      "heater_power": 64.19,
+      "error": 3.6488
+    },
+    {
+      "time": 2.5,
+      "temperature": 18.5237,
+      "setpoint": 22.0,
+      "heater_power": 64.58,
+      "error": 3.4763
+    },
+    {
+      "time": 3.0,
+      "temperature": 18.681,
+      "setpoint": 22.0,
+      "heater_power": 62.43,
+      "error": 3.319
+    },
+    {
+      "time": 3.5,
+      "temperature": 18.5956,
+      "setpoint": 22.0,
+      "heater_power": 60.49,
+      "error": 3.4044
+    },
+    {
+      "time": 4.0,
+      "temperature": 18.8346,
+      "setpoint": 22.0,
+      "heater_power": 62.61,
+      "error": 3.1654
+    },
+    {
+      "time": 4.5,
+      "temperature": 18.6637,
+      "setpoint": 22.0,
+      "heater_power": 59.29,
+      "error": 3.3363
+    },
+    {
+      "time": 5.0,
+      "temperature": 18.8518,
+      "setpoint": 22.0,
+      "heater_power": 62.82,
+      "error": 3.1482
+    },
+    {
+      "time": 5.5,
+      "temperature": 19.0757,
+      "setpoint": 22.0,
+      "heater_power": 60.34,
+      "error": 2.9243
+    },
+    {
+      "time": 6.0,
+      "temperature": 19.1223,
+      "setpoint": 22.0,
+      "heater_power": 57.21,
+      "error": 2.8777
+    },
+    {
+      "time": 6.5,
+      "temperature": 19.0426,
+      "setpoint": 22.0,
+      "heater_power": 57.03,
+      "error": 2.9574
+    },
+    {
+      "time": 7.0,
+      "temperature": 19.3406,
+      "setpoint": 22.0,
+      "heater_power": 58.96,
+      "error": 2.6594
+    },
+    {
+      "time": 7.5,
+      "temperature": 19.3297,
+      "setpoint": 22.0,
+      "heater_power": 54.56,
+      "error": 2.6703
+    },
+    {
+      "time": 8.0,
+      "temperature": 19.4851,
+      "setpoint": 22.0,
+      "heater_power": 55.29,
+      "error": 2.5149
+    },
+    {
+      "time": 8.5,
+      "temperature": 19.4374,
+      "setpoint": 22.0,
+      "heater_power": 53.22,
+      "error": 2.5626
+    },
+    {
+      "time": 9.0,
+      "temperature": 19.4814,
+      "setpoint": 22.0,
+      "heater_power": 54.54,
+      "error": 2.5186
+    },
+    {
+      "time": 9.5,
+      "temperature": 19.4137,
+      "setpoint": 22.0,
+      "heater_power": 54.32,
+      "error": 2.5863
+    },
+    {
+      "time": 10.0,
+      "temperature": 19.6558,
+      "setpoint": 22.0,
+      "heater_power": 55.98,
+      "error": 2.3442
+    },
+    {
+      "time": 10.5,
+      "temperature": 19.4309,
+      "setpoint": 22.0,
+      "heater_power": 52.44,
+      "error": 2.5691
+    },
+    {
+      "time": 11.0,
+      "temperature": 19.67,
+      "setpoint": 22.0,
+      "heater_power": 56.7,
+      "error": 2.33
+    },
+    {
+      "time": 11.5,
+      "temperature": 19.8026,
+      "setpoint": 22.0,
+      "heater_power": 53.21,
+      "error": 2.1974
+    },
+    {
+      "time": 12.0,
+      "temperature": 19.9325,
+      "setpoint": 22.0,
+      "heater_power": 51.45,
+      "error": 2.0675
+    },
+    {
+      "time": 12.5,
+      "temperature": 19.8091,
+      "setpoint": 22.0,
+      "heater_power": 49.72,
+      "error": 2.1909
+    },
+    {
+      "time": 13.0,
+      "temperature": 19.9108,
+      "setpoint": 22.0,
+      "heater_power": 52.22,
+      "error": 2.0892
+    },
+    {
+      "time": 13.5,
+      "temperature": 20.1835,
+      "setpoint": 22.0,
+      "heater_power": 50.96,
+      "error": 1.8165
+    },
+    {
+      "time": 14.0,
+      "temperature": 20.0515,
+      "setpoint": 22.0,
+      "heater_power": 46.8,
+      "error": 1.9485
+    },
+    {
+      "time": 14.5,
+      "temperature": 19.9859,
+      "setpoint": 22.0,
+      "heater_power": 49.39,
+      "error": 2.0141
+    },
+    {
+      "time": 15.0,
+      "temperature": 20.2418,
+      "setpoint": 22.0,
+      "heater_power": 50.9,
+      "error": 1.7582
+    },
+    {
+      "time": 15.5,
+      "temperature": 20.2599,
+      "setpoint": 22.0,
+      "heater_power": 47.01,
+      "error": 1.7401
+    },
+    {
+      "time": 16.0,
+      "temperature": 20.1171,
+      "setpoint": 22.0,
+      "heater_power": 47.06,
+      "error": 1.8829
+    },
+    {
+      "time": 16.5,
+      "temperature": 20.259,
+      "setpoint": 22.0,
+      "heater_power": 49.82,
+      "error": 1.741
+    },
+    {
+      "time": 17.0,
+      "temperature": 20.0165,
+      "setpoint": 22.0,
+      "heater_power": 47.82,
+      "error": 1.9835
+    },
+    {
+      "time": 17.5,
+      "temperature": 20.3794,
+      "setpoint": 22.0,
+      "heater_power": 52.26,
+      "error": 1.6206
+    },
+    {
+      "time": 18.0,
+      "temperature": 20.2565,
+      "setpoint": 22.0,
+      "heater_power": 46.56,
+      "error": 1.7435
+    },
+    {
+      "time": 18.5,
+      "temperature": 20.5193,
+      "setpoint": 22.0,
+      "heater_power": 48.96,
+      "error": 1.4807
+    },
+    {
+      "time": 19.0,
+      "temperature": 20.2855,
+      "setpoint": 22.0,
+      "heater_power": 44.9,
+      "error": 1.7145
+    },
+    {
+      "time": 19.5,
+      "temperature": 20.3593,
+      "setpoint": 22.0,
+      "heater_power": 49.14,
+      "error": 1.6407
+    },
+    {
+      "time": 20.0,
+      "temperature": 20.5607,
+      "setpoint": 22.0,
+      "heater_power": 48.25,
+      "error": 1.4393
+    },
+    {
+      "time": 20.5,
+      "temperature": 20.7052,
+      "setpoint": 22.0,
+      "heater_power": 45.19,
+      "error": 1.2948
+    },
+    {
+      "time": 21.0,
+      "temperature": 20.5791,
+      "setpoint": 22.0,
+      "heater_power": 43.06,
+      "error": 1.4209
+    },
+    {
+      "time": 21.5,
+      "temperature": 20.7269,
+      "setpoint": 22.0,
+      "heater_power": 45.45,
+      "error": 1.2731
+    },
+    {
+      "time": 22.0,
+      "temperature": 20.567,
+      "setpoint": 22.0,
+      "heater_power": 43.25,
+      "error": 1.433
+    },
+    {
+      "time": 22.5,
+      "temperature": 20.7551,
+      "setpoint": 22.0,
+      "heater_power": 46.2,
+      "error": 1.2449
+    },
+    {
+      "time": 23.0,
+      "temperature": 20.8075,
+      "setpoint": 22.0,
+      "heater_power": 43.33,
+      "error": 1.1925
+    },
+    {
+      "time": 23.5,
+      "temperature": 20.7266,
+      "setpoint": 22.0,
+      "heater_power": 42.71,
+      "error": 1.2734
+    },
+    {
+      "time": 24.0,
+      "temperature": 20.9139,
+      "setpoint": 22.0,
+      "heater_power": 44.31,
+      "error": 1.0861
+    },
+    {
+      "time": 24.5,
+      "temperature": 20.8713,
+      "setpoint": 22.0,
+      "heater_power": 41.42,
+      "error": 1.1287
+    },
+    {
+      "time": 25.0,
+      "temperature": 20.8546,
+      "setpoint": 22.0,
+      "heater_power": 42.36,
+      "error": 1.1454
+    },
+    {
+      "time": 25.5,
+      "temperature": 20.8843,
+      "setpoint": 22.0,
+      "heater_power": 42.87,
+      "error": 1.1157
+    },
+    {
+      "time": 26.0,
+      "temperature": 21.1418,
+      "setpoint": 22.0,
+      "heater_power": 42.61,
+      "error": 0.8582
+    },
+    {
+      "time": 26.5,
+      "temperature": 20.8827,
+      "setpoint": 22.0,
+      "heater_power": 38.5,
+      "error": 1.1173
+    },
+    {
+      "time": 27.0,
+      "temperature": 21.0397,
+      "setpoint": 22.0,
+      "heater_power": 43.04,
+      "error": 0.9603
+    },
+    {
+      "time": 27.5,
+      "temperature": 21.0481,
+      "setpoint": 22.0,
+      "heater_power": 40.63,
+      "error": 0.9519
+    },
+    {
+      "time": 28.0,
+      "temperature": 21.1096,
+      "setpoint": 22.0,
+      "heater_power": 40.69,
+      "error": 0.8904
+    },
+    {
+      "time": 28.5,
+      "temperature": 21.087,
+      "setpoint": 22.0,
+      "heater_power": 39.85,
+      "error": 0.913
+    },
+    {
+      "time": 29.0,
+      "temperature": 21.0543,
+      "setpoint": 22.0,
+      "heater_power": 40.41,
+      "error": 0.9457
+    },
+    {
+      "time": 29.5,
+      "temperature": 21.0533,
+      "setpoint": 22.0,
+      "heater_power": 41.15,
+      "error": 0.9467
+    },
+    {
+      "time": 30.0,
+      "temperature": 21.24,
+      "setpoint": 22.0,
+      "heater_power": 41.36,
+      "error": 0.76
+    },
+    {
+      "time": 30.5,
+      "temperature": 21.2228,
+      "setpoint": 22.0,
+      "heater_power": 38.41,
+      "error": 0.7772
+    },
+    {
+      "time": 31.0,
+      "temperature": 21.2985,
+      "setpoint": 22.0,
+      "heater_power": 38.86,
+      "error": 0.7015
+    },
+    {
+      "time": 31.5,
+      "temperature": 21.2295,
+      "setpoint": 22.0,
+      "heater_power": 37.74,
+      "error": 0.7705
+    },
+    {
+      "time": 32.0,
+      "temperature": 21.2984,
+      "setpoint": 22.0,
+      "heater_power": 39.05,
+      "error": 0.7016
+    },
+    {
+      "time": 32.5,
+      "temperature": 21.1621,
+      "setpoint": 22.0,
+      "heater_power": 38.05,
+      "error": 0.8379
+    },
+    {
+      "time": 33.0,
+      "temperature": 21.2851,
+      "setpoint": 22.0,
+      "heater_power": 40.48,
+      "error": 0.7149
+    },
+    {
+      "time": 33.5,
+      "temperature": 21.315,
+      "setpoint": 22.0,
+      "heater_power": 38.59,
+      "error": 0.685
+    },
+    {
+      "time": 34.0,
+      "temperature": 21.1283,
+      "setpoint": 22.0,
+      "heater_power": 38.23,
+      "error": 0.8717
+    },
+    {
+      "time": 34.5,
+      "temperature": 21.3352,
+      "setpoint": 22.0,
+      "heater_power": 41.51,
+      "error": 0.6648
+    },
+    {
+      "time": 35.0,
+      "temperature": 21.3247,
+      "setpoint": 22.0,
+      "heater_power": 38.21,
+      "error": 0.6753
+    },
+    {
+      "time": 35.5,
+      "temperature": 21.3874,
+      "setpoint": 22.0,
+      "heater_power": 38.52,
+      "error": 0.6126
+    },
+    {
+      "time": 36.0,
+      "temperature": 21.2591,
+      "setpoint": 22.0,
+      "heater_power": 37.61,
+      "error": 0.7409
+    },
+    {
+      "time": 36.5,
+      "temperature": 21.4803,
+      "setpoint": 22.0,
+      "heater_power": 39.89,
+      "error": 0.5197
+    },
+    {
+      "time": 37.0,
+      "temperature": 21.2629,
+      "setpoint": 22.0,
+      "heater_power": 36.32,
+      "error": 0.7371
+    },
+    {
+      "time": 37.5,
+      "temperature": 21.586,
+      "setpoint": 22.0,
+      "heater_power": 40.09,
+      "error": 0.414
+    },
+    {
+      "time": 38.0,
+      "temperature": 21.3135,
+      "setpoint": 22.0,
+      "heater_power": 34.8,
+      "error": 0.6865
+    },
+    {
+      "time": 38.5,
+      "temperature": 21.4429,
+      "setpoint": 22.0,
+      "heater_power": 39.47,
+      "error": 0.5571
+    },
+    {
+      "time": 39.0,
+      "temperature": 21.6651,
+      "setpoint": 22.0,
+      "heater_power": 37.43,
+      "error": 0.3349
+    },
+    {
+      "time": 39.5,
+      "temperature": 21.4422,
+      "setpoint": 22.0,
+      "heater_power": 33.81,
+      "error": 0.5578
+    },
+    {
+      "time": 40.0,
+      "temperature": 21.4361,
+      "setpoint": 22.0,
+      "heater_power": 37.63,
+      "error": 0.5639
+    },
+    {
+      "time": 40.5,
+      "temperature": 21.3989,
+      "setpoint": 22.0,
+      "heater_power": 37.85,
+      "error": 0.6011
+    },
+    {
+      "time": 41.0,
+      "temperature": 21.5075,
+      "setpoint": 22.0,
+      "heater_power": 38.59,
+      "error": 0.4925
+    },
+    {
+      "time": 41.5,
+      "temperature": 21.5802,
+      "setpoint": 22.0,
+      "heater_power": 36.88,
+      "error": 0.4198
+    },
+    {
+      "time": 42.0,
+      "temperature": 21.4246,
+      "setpoint": 22.0,
+      "heater_power": 35.76,
+      "error": 0.5754
+    },
+    {
+      "time": 42.5,
+      "temperature": 21.5472,
+      "setpoint": 22.0,
+      "heater_power": 38.47,
+      "error": 0.4528
+    },
+    {
+      "time": 43.0,
+      "temperature": 21.5414,
+      "setpoint": 22.0,
+      "heater_power": 36.52,
+      "error": 0.4586
+    },
+    {
+      "time": 43.5,
+      "temperature": 21.5452,
+      "setpoint": 22.0,
+      "heater_power": 36.71,
+      "error": 0.4548
+    },
+    {
+      "time": 44.0,
+      "temperature": 21.4372,
+      "setpoint": 22.0,
+      "heater_power": 36.74,
+      "error": 0.5628
+    },
+    {
+      "time": 44.5,
+      "temperature": 21.4388,
+      "setpoint": 22.0,
+      "heater_power": 38.65,
+      "error": 0.5612
+    },
+    {
+      "time": 45.0,
+      "temperature": 21.4745,
+      "setpoint": 22.0,
+      "heater_power": 38.74,
+      "error": 0.5255
+    },
+    {
+      "time": 45.5,
+      "temperature": 21.596,
+      "setpoint": 22.0,
+      "heater_power": 38.26,
+      "error": 0.404
+    },
+    {
+      "time": 46.0,
+      "temperature": 21.6532,
+      "setpoint": 22.0,
+      "heater_power": 36.32,
+      "error": 0.3468
+    },
+    {
+      "time": 46.5,
+      "temperature": 21.5951,
+      "setpoint": 22.0,
+      "heater_power": 35.44,
+      "error": 0.4049
+    },
+    {
+      "time": 47.0,
+      "temperature": 21.4277,
+      "setpoint": 22.0,
+      "heater_power": 36.49,
+      "error": 0.5723
+    },
+    {
+      "time": 47.5,
+      "temperature": 21.5777,
+      "setpoint": 22.0,
+      "heater_power": 39.39,
+      "error": 0.4223
+    },
+    {
+      "time": 48.0,
+      "temperature": 21.6448,
+      "setpoint": 22.0,
+      "heater_power": 36.98,
+      "error": 0.3552
+    },
+    {
+      "time": 48.5,
+      "temperature": 21.9469,
+      "setpoint": 22.0,
+      "heater_power": 35.94,
+      "error": 0.0531
+    },
+    {
+      "time": 49.0,
+      "temperature": 21.5785,
+      "setpoint": 22.0,
+      "heater_power": 30.93,
+      "error": 0.4215
+    },
+    {
+      "time": 49.5,
+      "temperature": 21.6363,
+      "setpoint": 22.0,
+      "heater_power": 37.14,
+      "error": 0.3637
+    },
+    {
+      "time": 50.0,
+      "temperature": 21.5092,
+      "setpoint": 22.0,
+      "heater_power": 36.25,
+      "error": 0.4908
+    },
+    {
+      "time": 50.5,
+      "temperature": 21.7291,
+      "setpoint": 22.0,
+      "heater_power": 38.47,
+      "error": 0.2709
+    },
+    {
+      "time": 51.0,
+      "temperature": 21.7004,
+      "setpoint": 22.0,
+      "heater_power": 34.87,
+      "error": 0.2996
+    },
+    {
+      "time": 51.5,
+      "temperature": 21.7442,
+      "setpoint": 22.0,
+      "heater_power": 35.41,
+      "error": 0.2558
+    },
+    {
+      "time": 52.0,
+      "temperature": 21.7254,
+      "setpoint": 22.0,
+      "heater_power": 34.73,
+      "error": 0.2746
+    },
+    {
+      "time": 52.5,
+      "temperature": 21.5269,
+      "setpoint": 22.0,
+      "heater_power": 35.1,
+      "error": 0.4731
+    },
+    {
+      "time": 53.0,
+      "temperature": 22.0231,
+      "setpoint": 22.0,
+      "heater_power": 38.5,
+      "error": -0.0231
+    },
+    {
+      "time": 53.5,
+      "temperature": 21.5878,
+      "setpoint": 22.0,
+      "heater_power": 30.24,
+      "error": 0.4122
+    },
+    {
+      "time": 54.0,
+      "temperature": 21.7408,
+      "setpoint": 22.0,
+      "heater_power": 37.56,
+      "error": 0.2592
+    },
+    {
+      "time": 54.5,
+      "temperature": 21.7785,
+      "setpoint": 22.0,
+      "heater_power": 35.07,
+      "error": 0.2215
+    },
+    {
+      "time": 55.0,
+      "temperature": 21.8036,
+      "setpoint": 22.0,
+      "heater_power": 34.49,
+      "error": 0.1964
+    },
+    {
+      "time": 55.5,
+      "temperature": 21.7597,
+      "setpoint": 22.0,
+      "heater_power": 34.12,
+      "error": 0.2403
+    },
+    {
+      "time": 56.0,
+      "temperature": 21.5851,
+      "setpoint": 22.0,
+      "heater_power": 34.89,
+      "error": 0.4149
+    },
+    {
+      "time": 56.5,
+      "temperature": 21.6405,
+      "setpoint": 22.0,
+      "heater_power": 37.88,
+      "error": 0.3595
+    },
+    {
+      "time": 57.0,
+      "temperature": 21.9973,
+      "setpoint": 22.0,
+      "heater_power": 37.04,
+      "error": 0.0027
+    },
+    {
+      "time": 57.5,
+      "temperature": 21.714,
+      "setpoint": 22.0,
+      "heater_power": 31.1,
+      "error": 0.286
+    },
+    {
+      "time": 58.0,
+      "temperature": 21.6864,
+      "setpoint": 22.0,
+      "heater_power": 35.87,
+      "error": 0.3136
+    },
+    {
+      "time": 58.5,
+      "temperature": 21.9078,
+      "setpoint": 22.0,
+      "heater_power": 36.4,
+      "error": 0.0922
+    },
+    {
+      "time": 59.0,
+      "temperature": 21.7655,
+      "setpoint": 22.0,
+      "heater_power": 32.73,
+      "error": 0.2345
+    },
+    {
+      "time": 59.5,
+      "temperature": 21.6315,
+      "setpoint": 22.0,
+      "heater_power": 35.15,
+      "error": 0.3685
+    },
+    {
+      "time": 60.0,
+      "temperature": 21.7405,
+      "setpoint": 22.0,
+      "heater_power": 37.45,
+      "error": 0.2595
+    },
+    {
+      "time": 60.5,
+      "temperature": 21.646,
+      "setpoint": 22.0,
+      "heater_power": 35.69,
+      "error": 0.354
+    },
+    {
+      "time": 61.0,
+      "temperature": 21.8981,
+      "setpoint": 22.0,
+      "heater_power": 37.34,
+      "error": 0.1019
+    },
+    {
+      "time": 61.5,
+      "temperature": 21.8269,
+      "setpoint": 22.0,
+      "heater_power": 33.17,
+      "error": 0.1731
+    },
+    {
+      "time": 62.0,
+      "temperature": 21.9509,
+      "setpoint": 22.0,
+      "heater_power": 34.39,
+      "error": 0.0491
+    },
+    {
+      "time": 62.5,
+      "temperature": 21.7868,
+      "setpoint": 22.0,
+      "heater_power": 32.33,
+      "error": 0.2132
+    },
+    {
+      "time": 63.0,
+      "temperature": 21.8212,
+      "setpoint": 22.0,
+      "heater_power": 35.11,
+      "error": 0.1788
+    },
+    {
+      "time": 63.5,
+      "temperature": 21.7461,
+      "setpoint": 22.0,
+      "heater_power": 34.57,
+      "error": 0.2539
+    },
+    {
+      "time": 64.0,
+      "temperature": 21.963,
+      "setpoint": 22.0,
+      "heater_power": 35.87,
+      "error": 0.037
+    },
+    {
+      "time": 64.5,
+      "temperature": 21.8483,
+      "setpoint": 22.0,
+      "heater_power": 32.27,
+      "error": 0.1517
+    },
+    {
+      "time": 65.0,
+      "temperature": 21.8851,
+      "setpoint": 22.0,
+      "heater_power": 34.21,
+      "error": 0.1149
+    },
+    {
+      "time": 65.5,
+      "temperature": 21.9223,
+      "setpoint": 22.0,
+      "heater_power": 33.62,
+      "error": 0.0777
+    },
+    {
+      "time": 66.0,
+      "temperature": 21.8116,
+      "setpoint": 22.0,
+      "heater_power": 33.02,
+      "error": 0.1884
+    },
+    {
+      "time": 66.5,
+      "temperature": 21.8342,
+      "setpoint": 22.0,
+      "heater_power": 34.9,
+      "error": 0.1658
+    },
+    {
+      "time": 67.0,
+      "temperature": 21.7635,
+      "setpoint": 22.0,
+      "heater_power": 34.56,
+      "error": 0.2365
+    },
+    {
+      "time": 67.5,
+      "temperature": 21.7555,
+      "setpoint": 22.0,
+      "heater_power": 35.78,
+      "error": 0.2445
+    },
+    {
+      "time": 68.0,
+      "temperature": 21.7659,
+      "setpoint": 22.0,
+      "heater_power": 35.97,
+      "error": 0.2341
+    },
+    {
+      "time": 68.5,
+      "temperature": 21.8868,
+      "setpoint": 22.0,
+      "heater_power": 35.84,
+      "error": 0.1132
+    },
+    {
+      "time": 69.0,
+      "temperature": 21.7841,
+      "setpoint": 22.0,
+      "heater_power": 33.85,
+      "error": 0.2159
+    },
+    {
+      "time": 69.5,
+      "temperature": 21.8261,
+      "setpoint": 22.0,
+      "heater_power": 35.61,
+      "error": 0.1739
+    },
+    {
+      "time": 70.0,
+      "temperature": 21.8588,
+      "setpoint": 22.0,
+      "heater_power": 34.94,
+      "error": 0.1412
+    },
+    {
+      "time": 70.5,
+      "temperature": 21.821,
+      "setpoint": 22.0,
+      "heater_power": 34.43,
+      "error": 0.179
+    },
+    {
+      "time": 71.0,
+      "temperature": 21.9987,
+      "setpoint": 22.0,
+      "heater_power": 35.09,
+      "error": 0.0013
+    },
+    {
+      "time": 71.5,
+      "temperature": 21.9497,
+      "setpoint": 22.0,
+      "heater_power": 32.14,
+      "error": 0.0503
+    },
+    {
+      "time": 72.0,
+      "temperature": 21.8552,
+      "setpoint": 22.0,
+      "heater_power": 32.96,
+      "error": 0.1448
+    },
+    {
+      "time": 72.5,
+      "temperature": 21.9205,
+      "setpoint": 22.0,
+      "heater_power": 34.57,
+      "error": 0.0795
+    },
+    {
+      "time": 73.0,
+      "temperature": 21.7832,
+      "setpoint": 22.0,
+      "heater_power": 33.5,
+      "error": 0.2168
+    },
+    {
+      "time": 73.5,
+      "temperature": 21.9378,
+      "setpoint": 22.0,
+      "heater_power": 35.82,
+      "error": 0.0622
+    },
+    {
+      "time": 74.0,
+      "temperature": 21.8029,
+      "setpoint": 22.0,
+      "heater_power": 33.27,
+      "error": 0.1971
+    },
+    {
+      "time": 74.5,
+      "temperature": 21.8001,
+      "setpoint": 22.0,
+      "heater_power": 35.55,
+      "error": 0.1999
+    },
+    {
+      "time": 75.0,
+      "temperature": 21.8141,
+      "setpoint": 22.0,
+      "heater_power": 35.64,
+      "error": 0.1859
+    },
+    {
+      "time": 75.5,
+      "temperature": 21.9108,
+      "setpoint": 22.0,
+      "heater_power": 35.44,
+      "error": 0.0892
+    },
+    {
+      "time": 76.0,
+      "temperature": 21.8268,
+      "setpoint": 22.0,
+      "heater_power": 33.85,
+      "error": 0.1732
+    },
+    {
+      "time": 76.5,
+      "temperature": 21.9028,
+      "setpoint": 22.0,
+      "heater_power": 35.29,
+      "error": 0.0972
+    },
+    {
+      "time": 77.0,
+      "temperature": 21.9261,
+      "setpoint": 22.0,
+      "heater_power": 34.04,
+      "error": 0.0739
+    },
+    {
+      "time": 77.5,
+      "temperature": 21.7763,
+      "setpoint": 22.0,
+      "heater_power": 33.67,
+      "error": 0.2237
+    },
+    {
+      "time": 78.0,
+      "temperature": 22.0628,
+      "setpoint": 22.0,
+      "heater_power": 36.21,
+      "error": -0.0628
+    },
+    {
+      "time": 78.5,
+      "temperature": 22.0172,
+      "setpoint": 22.0,
+      "heater_power": 31.43,
+      "error": -0.0172
+    },
+    {
+      "time": 79.0,
+      "temperature": 22.0983,
+      "setpoint": 22.0,
+      "heater_power": 32.18,
+      "error": -0.0983
+    },
+    {
+      "time": 79.5,
+      "temperature": 21.9004,
+      "setpoint": 22.0,
+      "heater_power": 30.82,
+      "error": 0.0996
+    },
+    {
+      "time": 80.0,
+      "temperature": 21.8026,
+      "setpoint": 22.0,
+      "heater_power": 34.13,
+      "error": 0.1974
+    },
+    {
+      "time": 80.5,
+      "temperature": 21.9814,
+      "setpoint": 22.0,
+      "heater_power": 35.79,
+      "error": 0.0186
+    },
+    {
+      "time": 81.0,
+      "temperature": 21.9303,
+      "setpoint": 22.0,
+      "heater_power": 32.82,
+      "error": 0.0697
+    },
+    {
+      "time": 81.5,
+      "temperature": 21.948,
+      "setpoint": 22.0,
+      "heater_power": 33.69,
+      "error": 0.052
+    },
+    {
+      "time": 82.0,
+      "temperature": 21.8419,
+      "setpoint": 22.0,
+      "heater_power": 33.4,
+      "error": 0.1581
+    },
+    {
+      "time": 82.5,
+      "temperature": 22.0253,
+      "setpoint": 22.0,
+      "heater_power": 35.2,
+      "error": -0.0253
+    },
+    {
+      "time": 83.0,
+      "temperature": 22.0771,
+      "setpoint": 22.0,
+      "heater_power": 32.15,
+      "error": -0.0771
+    },
+    {
+      "time": 83.5,
+      "temperature": 22.0371,
+      "setpoint": 22.0,
+      "heater_power": 31.27,
+      "error": -0.0371
+    },
+    {
+      "time": 84.0,
+      "temperature": 21.9671,
+      "setpoint": 22.0,
+      "heater_power": 31.93,
+      "error": 0.0329
+    },
+    {
+      "time": 84.5,
+      "temperature": 21.8347,
+      "setpoint": 22.0,
+      "heater_power": 33.1,
+      "error": 0.1653
+    },
+    {
+      "time": 85.0,
+      "temperature": 21.7323,
+      "setpoint": 22.0,
+      "heater_power": 35.33,
+      "error": 0.2677
+    },
+    {
+      "time": 85.5,
+      "temperature": 22.0122,
+      "setpoint": 22.0,
+      "heater_power": 37.09,
+      "error": -0.0122
+    },
+    {
+      "time": 86.0,
+      "temperature": 21.956,
+      "setpoint": 22.0,
+      "heater_power": 32.43,
+      "error": 0.044
+    },
+    {
+      "time": 86.5,
+      "temperature": 21.8502,
+      "setpoint": 22.0,
+      "heater_power": 33.38,
+      "error": 0.1498
+    },
+    {
+      "time": 87.0,
+      "temperature": 21.8903,
+      "setpoint": 22.0,
+      "heater_power": 35.17,
+      "error": 0.1097
+    },
+    {
+      "time": 87.5,
+      "temperature": 21.7917,
+      "setpoint": 22.0,
+      "heater_power": 34.52,
+      "error": 0.2083
+    },
+    {
+      "time": 88.0,
+      "temperature": 21.9202,
+      "setpoint": 22.0,
+      "heater_power": 36.21,
+      "error": 0.0798
+    },
+    {
+      "time": 88.5,
+      "temperature": 21.8868,
+      "setpoint": 22.0,
+      "heater_power": 34.09,
+      "error": 0.1132
+    },
+    {
+      "time": 89.0,
+      "temperature": 22.1423,
+      "setpoint": 22.0,
+      "heater_power": 34.66,
+      "error": -0.1423
+    },
+    {
+      "time": 89.5,
+      "temperature": 22.0101,
+      "setpoint": 22.0,
+      "heater_power": 30.39,
+      "error": -0.0101
+    },
+    {
+      "time": 90.0,
+      "temperature": 22.0176,
+      "setpoint": 22.0,
+      "heater_power": 32.58,
+      "error": -0.0176
+    },
+    {
+      "time": 90.5,
+      "temperature": 21.9235,
+      "setpoint": 22.0,
+      "heater_power": 32.45,
+      "error": 0.0765
+    },
+    {
+      "time": 91.0,
+      "temperature": 22.0235,
+      "setpoint": 22.0,
+      "heater_power": 34.03,
+      "error": -0.0235
+    },
+    {
+      "time": 91.5,
+      "temperature": 22.0396,
+      "setpoint": 22.0,
+      "heater_power": 32.37,
+      "error": -0.0396
+    },
+    {
+      "time": 92.0,
+      "temperature": 21.8821,
+      "setpoint": 22.0,
+      "heater_power": 32.09,
+      "error": 0.1179
+    },
+    {
+      "time": 92.5,
+      "temperature": 21.9891,
+      "setpoint": 22.0,
+      "heater_power": 34.73,
+      "error": 0.0109
+    },
+    {
+      "time": 93.0,
+      "temperature": 22.0012,
+      "setpoint": 22.0,
+      "heater_power": 32.96,
+      "error": -0.0012
+    },
+    {
+      "time": 93.5,
+      "temperature": 21.9342,
+      "setpoint": 22.0,
+      "heater_power": 32.76,
+      "error": 0.0658
+    },
+    {
+      "time": 94.0,
+      "temperature": 21.8881,
+      "setpoint": 22.0,
+      "heater_power": 33.88,
+      "error": 0.1119
+    },
+    {
+      "time": 94.5,
+      "temperature": 21.8404,
+      "setpoint": 22.0,
+      "heater_power": 34.67,
+      "error": 0.1596
+    },
+    {
+      "time": 95.0,
+      "temperature": 21.9244,
+      "setpoint": 22.0,
+      "heater_power": 35.5,
+      "error": 0.0756
+    },
+    {
+      "time": 95.5,
+      "temperature": 22.0872,
+      "setpoint": 22.0,
+      "heater_power": 34.12,
+      "error": -0.0872
+    },
+    {
+      "time": 96.0,
+      "temperature": 22.0895,
+      "setpoint": 22.0,
+      "heater_power": 31.39,
+      "error": -0.0895
+    },
+    {
+      "time": 96.5,
+      "temperature": 21.9518,
+      "setpoint": 22.0,
+      "heater_power": 31.34,
+      "error": 0.0482
+    },
+    {
+      "time": 97.0,
+      "temperature": 21.9615,
+      "setpoint": 22.0,
+      "heater_power": 33.64,
+      "error": 0.0385
+    },
+    {
+      "time": 97.5,
+      "temperature": 21.9738,
+      "setpoint": 22.0,
+      "heater_power": 33.48,
+      "error": 0.0262
+    },
+    {
+      "time": 98.0,
+      "temperature": 21.8945,
+      "setpoint": 22.0,
+      "heater_power": 33.28,
+      "error": 0.1055
+    },
+    {
+      "time": 98.5,
+      "temperature": 21.9961,
+      "setpoint": 22.0,
+      "heater_power": 34.62,
+      "error": 0.0039
+    },
+    {
+      "time": 99.0,
+      "temperature": 21.9055,
+      "setpoint": 22.0,
+      "heater_power": 32.93,
+      "error": 0.0945
+    },
+    {
+      "time": 99.5,
+      "temperature": 21.9504,
+      "setpoint": 22.0,
+      "heater_power": 34.46,
+      "error": 0.0496
+    },
+    {
+      "time": 100.0,
+      "temperature": 22.0274,
+      "setpoint": 22.0,
+      "heater_power": 33.72,
+      "error": -0.0274
+    },
+    {
+      "time": 100.5,
+      "temperature": 21.9472,
+      "setpoint": 22.0,
+      "heater_power": 32.44,
+      "error": 0.0528
+    },
+    {
+      "time": 101.0,
+      "temperature": 22.0698,
+      "setpoint": 22.0,
+      "heater_power": 33.78,
+      "error": -0.0698
+    },
+    {
+      "time": 101.5,
+      "temperature": 21.8739,
+      "setpoint": 22.0,
+      "heater_power": 31.73,
+      "error": 0.1261
+    },
+    {
+      "time": 102.0,
+      "temperature": 21.762,
+      "setpoint": 22.0,
+      "heater_power": 35.01,
+      "error": 0.238
+    },
+    {
+      "time": 102.5,
+      "temperature": 22.0858,
+      "setpoint": 22.0,
+      "heater_power": 36.92,
+      "error": -0.0858
+    },
+    {
+      "time": 103.0,
+      "temperature": 21.8169,
+      "setpoint": 22.0,
+      "heater_power": 31.52,
+      "error": 0.1831
+    },
+    {
+      "time": 103.5,
+      "temperature": 21.8199,
+      "setpoint": 22.0,
+      "heater_power": 36.03,
+      "error": 0.1801
+    },
+    {
+      "time": 104.0,
+      "temperature": 21.9493,
+      "setpoint": 22.0,
+      "heater_power": 36.02,
+      "error": 0.0507
+    },
+    {
+      "time": 104.5,
+      "temperature": 22.0006,
+      "setpoint": 22.0,
+      "heater_power": 33.88,
+      "error": -0.0006
+    },
+    {
+      "time": 105.0,
+      "temperature": 21.9945,
+      "setpoint": 22.0,
+      "heater_power": 33.02,
+      "error": 0.0055
+    },
+    {
+      "time": 105.5,
+      "temperature": 21.8829,
+      "setpoint": 22.0,
+      "heater_power": 33.13,
+      "error": 0.1171
+    },
+    {
+      "time": 106.0,
+      "temperature": 21.9464,
+      "setpoint": 22.0,
+      "heater_power": 35.0,
+      "error": 0.0536
+    },
+    {
+      "time": 106.5,
+      "temperature": 22.0303,
+      "setpoint": 22.0,
+      "heater_power": 33.96,
+      "error": -0.0303
+    },
+    {
+      "time": 107.0,
+      "temperature": 22.1295,
+      "setpoint": 22.0,
+      "heater_power": 32.56,
+      "error": -0.1295
+    },
+    {
+      "time": 107.5,
+      "temperature": 21.9712,
+      "setpoint": 22.0,
+      "heater_power": 30.88,
+      "error": 0.0288
+    },
+    {
+      "time": 108.0,
+      "temperature": 21.9693,
+      "setpoint": 22.0,
+      "heater_power": 33.52,
+      "error": 0.0307
+    },
+    {
+      "time": 108.5,
+      "temperature": 21.9153,
+      "setpoint": 22.0,
+      "heater_power": 33.56,
+      "error": 0.0847
+    },
+    {
+      "time": 109.0,
+      "temperature": 22.0395,
+      "setpoint": 22.0,
+      "heater_power": 34.47,
+      "error": -0.0395
+    },
+    {
+      "time": 109.5,
+      "temperature": 22.0276,
+      "setpoint": 22.0,
+      "heater_power": 32.4,
+      "error": -0.0276
+    },
+    {
+      "time": 110.0,
+      "temperature": 21.9412,
+      "setpoint": 22.0,
+      "heater_power": 32.59,
+      "error": 0.0588
+    },
+    {
+      "time": 110.5,
+      "temperature": 21.9682,
+      "setpoint": 22.0,
+      "heater_power": 34.04,
+      "error": 0.0318
+    },
+    {
+      "time": 111.0,
+      "temperature": 21.9982,
+      "setpoint": 22.0,
+      "heater_power": 33.6,
+      "error": 0.0018
+    },
+    {
+      "time": 111.5,
+      "temperature": 21.9046,
+      "setpoint": 22.0,
+      "heater_power": 33.1,
+      "error": 0.0954
+    },
+    {
+      "time": 112.0,
+      "temperature": 22.0386,
+      "setpoint": 22.0,
+      "heater_power": 34.68,
+      "error": -0.0386
+    },
+    {
+      "time": 112.5,
+      "temperature": 21.9393,
+      "setpoint": 22.0,
+      "heater_power": 32.44,
+      "error": 0.0607
+    },
+    {
+      "time": 113.0,
+      "temperature": 22.0717,
+      "setpoint": 22.0,
+      "heater_power": 34.1,
+      "error": -0.0717
+    },
+    {
+      "time": 113.5,
+      "temperature": 21.8522,
+      "setpoint": 22.0,
+      "heater_power": 31.89,
+      "error": 0.1478
+    },
+    {
+      "time": 114.0,
+      "temperature": 21.9419,
+      "setpoint": 22.0,
+      "heater_power": 35.57,
+      "error": 0.0581
+    },
+    {
+      "time": 114.5,
+      "temperature": 22.0625,
+      "setpoint": 22.0,
+      "heater_power": 34.09,
+      "error": -0.0625
+    },
+    {
+      "time": 115.0,
+      "temperature": 22.0313,
+      "setpoint": 22.0,
+      "heater_power": 32.07,
+      "error": -0.0313
+    },
+    {
+      "time": 115.5,
+      "temperature": 22.1002,
+      "setpoint": 22.0,
+      "heater_power": 32.58,
+      "error": -0.1002
+    },
+    {
+      "time": 116.0,
+      "temperature": 22.0373,
+      "setpoint": 22.0,
+      "heater_power": 31.42,
+      "error": -0.0373
+    },
+    {
+      "time": 116.5,
+      "temperature": 22.0705,
+      "setpoint": 22.0,
+      "heater_power": 32.45,
+      "error": -0.0705
+    },
+    {
+      "time": 117.0,
+      "temperature": 21.7831,
+      "setpoint": 22.0,
+      "heater_power": 31.89,
+      "error": 0.2169
+    },
+    {
+      "time": 117.5,
+      "temperature": 22.013,
+      "setpoint": 22.0,
+      "heater_power": 36.71,
+      "error": -0.013
+    },
+    {
+      "time": 118.0,
+      "temperature": 22.1338,
+      "setpoint": 22.0,
+      "heater_power": 32.89,
+      "error": -0.1338
+    },
+    {
+      "time": 118.5,
+      "temperature": 21.8979,
+      "setpoint": 22.0,
+      "heater_power": 30.85,
+      "error": 0.1021
+    },
+    {
+      "time": 119.0,
+      "temperature": 22.0675,
+      "setpoint": 22.0,
+      "heater_power": 34.79,
+      "error": -0.0675
+    },
+    {
+      "time": 119.5,
+      "temperature": 21.9252,
+      "setpoint": 22.0,
+      "heater_power": 31.96,
+      "error": 0.0748
+    },
+    {
+      "time": 120.0,
+      "temperature": 21.9813,
+      "setpoint": 22.0,
+      "heater_power": 34.34,
+      "error": 0.0187
+    },
+    {
+      "time": 120.5,
+      "temperature": 22.0705,
+      "setpoint": 22.0,
+      "heater_power": 33.41,
+      "error": -0.0705
+    },
+    {
+      "time": 121.0,
+      "temperature": 21.9985,
+      "setpoint": 22.0,
+      "heater_power": 31.91,
+      "error": 0.0015
+    },
+    {
+      "time": 121.5,
+      "temperature": 21.9495,
+      "setpoint": 22.0,
+      "heater_power": 33.11,
+      "error": 0.0505
+    },
+    {
+      "time": 122.0,
+      "temperature": 21.9326,
+      "setpoint": 22.0,
+      "heater_power": 33.94,
+      "error": 0.0674
+    },
+    {
+      "time": 122.5,
+      "temperature": 21.8932,
+      "setpoint": 22.0,
+      "heater_power": 34.23,
+      "error": 0.1068
+    },
+    {
+      "time": 123.0,
+      "temperature": 21.9768,
+      "setpoint": 22.0,
+      "heater_power": 34.91,
+      "error": 0.0232
+    },
+    {
+      "time": 123.5,
+      "temperature": 21.8651,
+      "setpoint": 22.0,
+      "heater_power": 33.52,
+      "error": 0.1349
+    },
+    {
+      "time": 124.0,
+      "temperature": 22.2399,
+      "setpoint": 22.0,
+      "heater_power": 35.41,
+      "error": -0.2399
+    },
+    {
+      "time": 124.5,
+      "temperature": 21.8374,
+      "setpoint": 22.0,
+      "heater_power": 29.13,
+      "error": 0.1626
+    },
+    {
+      "time": 125.0,
+      "temperature": 22.0728,
+      "setpoint": 22.0,
+      "heater_power": 35.85,
+      "error": -0.0728
+    },
+    {
+      "time": 125.5,
+      "temperature": 21.9824,
+      "setpoint": 22.0,
+      "heater_power": 31.92,
+      "error": 0.0176
+    },
+    {
+      "time": 126.0,
+      "temperature": 21.9473,
+      "setpoint": 22.0,
+      "heater_power": 33.43,
+      "error": 0.0527
+    },
+    {
+      "time": 126.5,
+      "temperature": 21.8095,
+      "setpoint": 22.0,
+      "heater_power": 34.03,
+      "error": 0.1905
+    },
+    {
+      "time": 127.0,
+      "temperature": 21.8641,
+      "setpoint": 22.0,
+      "heater_power": 36.36,
+      "error": 0.1359
+    },
+    {
+      "time": 127.5,
+      "temperature": 22.0239,
+      "setpoint": 22.0,
+      "heater_power": 35.48,
+      "error": -0.0239
+    },
+    {
+      "time": 128.0,
+      "temperature": 21.9378,
+      "setpoint": 22.0,
+      "heater_power": 32.81,
+      "error": 0.0622
+    },
+    {
+      "time": 128.5,
+      "temperature": 21.9831,
+      "setpoint": 22.0,
+      "heater_power": 34.26,
+      "error": 0.0169
+    },
+    {
+      "time": 129.0,
+      "temperature": 22.0783,
+      "setpoint": 22.0,
+      "heater_power": 33.51,
+      "error": -0.0783
+    },
+    {
+      "time": 129.5,
+      "temperature": 21.8961,
+      "setpoint": 22.0,
+      "heater_power": 31.91,
+      "error": 0.1039
+    },
+    {
+      "time": 130.0,
+      "temperature": 21.9201,
+      "setpoint": 22.0,
+      "heater_power": 34.96,
+      "error": 0.0799
+    },
+    {
+      "time": 130.5,
+      "temperature": 21.9039,
+      "setpoint": 22.0,
+      "heater_power": 34.58,
+      "error": 0.0961
+    },
+    {
+      "time": 131.0,
+      "temperature": 21.8236,
+      "setpoint": 22.0,
+      "heater_power": 34.87,
+      "error": 0.1764
+    },
+    {
+      "time": 131.5,
+      "temperature": 21.9884,
+      "setpoint": 22.0,
+      "heater_power": 36.24,
+      "error": 0.0116
+    },
+    {
+      "time": 132.0,
+      "temperature": 21.8962,
+      "setpoint": 22.0,
+      "heater_power": 33.5,
+      "error": 0.1038
+    },
+    {
+      "time": 132.5,
+      "temperature": 22.1484,
+      "setpoint": 22.0,
+      "heater_power": 35.06,
+      "error": -0.1484
+    },
+    {
+      "time": 133.0,
+      "temperature": 21.9275,
+      "setpoint": 22.0,
+      "heater_power": 30.83,
+      "error": 0.0725
+    },
+    {
+      "time": 133.5,
+      "temperature": 21.9849,
+      "setpoint": 22.0,
+      "heater_power": 34.52,
+      "error": 0.0151
+    },
+    {
+      "time": 134.0,
+      "temperature": 21.965,
+      "setpoint": 22.0,
+      "heater_power": 33.57,
+      "error": 0.035
+    },
+    {
+      "time": 134.5,
+      "temperature": 22.0139,
+      "setpoint": 22.0,
+      "heater_power": 33.91,
+      "error": -0.0139
+    },
+    {
+      "time": 135.0,
+      "temperature": 22.0917,
+      "setpoint": 22.0,
+      "heater_power": 33.09,
+      "error": -0.0917
+    },
+    {
+      "time": 135.5,
+      "temperature": 22.0261,
+      "setpoint": 22.0,
+      "heater_power": 31.78,
+      "error": -0.0261
+    },
+    {
+      "time": 136.0,
+      "temperature": 22.0698,
+      "setpoint": 22.0,
+      "heater_power": 32.86,
+      "error": -0.0698
+    },
+    {
+      "time": 136.5,
+      "temperature": 21.9497,
+      "setpoint": 22.0,
+      "heater_power": 32.12,
+      "error": 0.0503
+    },
+    {
+      "time": 137.0,
+      "temperature": 22.0905,
+      "setpoint": 22.0,
+      "heater_power": 34.13,
+      "error": -0.0905
+    },
+    {
+      "time": 137.5,
+      "temperature": 22.0527,
+      "setpoint": 22.0,
+      "heater_power": 31.77,
+      "error": -0.0527
+    },
+    {
+      "time": 138.0,
+      "temperature": 21.9663,
+      "setpoint": 22.0,
+      "heater_power": 32.39,
+      "error": 0.0337
+    },
+    {
+      "time": 138.5,
+      "temperature": 21.9287,
+      "setpoint": 22.0,
+      "heater_power": 33.83,
+      "error": 0.0713
+    },
+    {
+      "time": 139.0,
+      "temperature": 21.952,
+      "setpoint": 22.0,
+      "heater_power": 34.47,
+      "error": 0.048
+    },
+    {
+      "time": 139.5,
+      "temperature": 22.0697,
+      "setpoint": 22.0,
+      "heater_power": 34.09,
+      "error": -0.0697
+    },
+    {
+      "time": 140.0,
+      "temperature": 21.9867,
+      "setpoint": 22.0,
+      "heater_power": 32.12,
+      "error": 0.0133
+    },
+    {
+      "time": 140.5,
+      "temperature": 22.0209,
+      "setpoint": 22.0,
+      "heater_power": 33.5,
+      "error": -0.0209
+    },
+    {
+      "time": 141.0,
+      "temperature": 21.9322,
+      "setpoint": 22.0,
+      "heater_power": 32.93,
+      "error": 0.0678
+    },
+    {
+      "time": 141.5,
+      "temperature": 22.0991,
+      "setpoint": 22.0,
+      "heater_power": 34.42,
+      "error": -0.0991
+    },
+    {
+      "time": 142.0,
+      "temperature": 21.9655,
+      "setpoint": 22.0,
+      "heater_power": 31.62,
+      "error": 0.0345
+    },
+    {
+      "time": 142.5,
+      "temperature": 22.0219,
+      "setpoint": 22.0,
+      "heater_power": 33.85,
+      "error": -0.0219
+    },
+    {
+      "time": 143.0,
+      "temperature": 22.0156,
+      "setpoint": 22.0,
+      "heater_power": 32.91,
+      "error": -0.0156
+    },
+    {
+      "time": 143.5,
+      "temperature": 21.9718,
+      "setpoint": 22.0,
+      "heater_power": 33.01,
+      "error": 0.0282
+    },
+    {
+      "time": 144.0,
+      "temperature": 21.9798,
+      "setpoint": 22.0,
+      "heater_power": 33.75,
+      "error": 0.0202
+    },
+    {
+      "time": 144.5,
+      "temperature": 22.0294,
+      "setpoint": 22.0,
+      "heater_power": 33.62,
+      "error": -0.0294
+    },
+    {
+      "time": 145.0,
+      "temperature": 22.0015,
+      "setpoint": 22.0,
+      "heater_power": 32.79,
+      "error": -0.0015
+    },
+    {
+      "time": 145.5,
+      "temperature": 21.8625,
+      "setpoint": 22.0,
+      "heater_power": 33.25,
+      "error": 0.1375
+    },
+    {
+      "time": 146.0,
+      "temperature": 21.9611,
+      "setpoint": 22.0,
+      "heater_power": 35.59,
+      "error": 0.0389
+    },
+    {
+      "time": 146.5,
+      "temperature": 21.8969,
+      "setpoint": 22.0,
+      "heater_power": 33.96,
+      "error": 0.1031
+    },
+    {
+      "time": 147.0,
+      "temperature": 21.9948,
+      "setpoint": 22.0,
+      "heater_power": 35.05,
+      "error": 0.0052
+    },
+    {
+      "time": 147.5,
+      "temperature": 21.7696,
+      "setpoint": 22.0,
+      "heater_power": 33.42,
+      "error": 0.2304
+    },
+    {
+      "time": 148.0,
+      "temperature": 22.0792,
+      "setpoint": 22.0,
+      "heater_power": 37.21,
+      "error": -0.0792
+    },
+    {
+      "time": 148.5,
+      "temperature": 21.8889,
+      "setpoint": 22.0,
+      "heater_power": 32.05,
+      "error": 0.1111
+    },
+    {
+      "time": 149.0,
+      "temperature": 21.9926,
+      "setpoint": 22.0,
+      "heater_power": 35.24,
+      "error": 0.0074
+    },
+    {
+      "time": 149.5,
+      "temperature": 21.9932,
+      "setpoint": 22.0,
+      "heater_power": 33.51,
+      "error": 0.0068
+    },
+    {
+      "time": 150.0,
+      "temperature": 22.0799,
+      "setpoint": 22.0,
+      "heater_power": 33.5,
+      "error": -0.0799
+    },
+    {
+      "time": 150.5,
+      "temperature": 22.1969,
+      "setpoint": 22.0,
+      "heater_power": 32.05,
+      "error": -0.1969
+    },
+    {
+      "time": 151.0,
+      "temperature": 22.0381,
+      "setpoint": 22.0,
+      "heater_power": 30.06,
+      "error": -0.0381
+    },
+    {
+      "time": 151.5,
+      "temperature": 21.9886,
+      "setpoint": 22.0,
+      "heater_power": 32.69,
+      "error": 0.0114
+    },
+    {
+      "time": 152.0,
+      "temperature": 21.9777,
+      "setpoint": 22.0,
+      "heater_power": 33.52,
+      "error": 0.0223
+    },
+    {
+      "time": 152.5,
+      "temperature": 21.8345,
+      "setpoint": 22.0,
+      "heater_power": 33.7,
+      "error": 0.1655
+    },
+    {
+      "time": 153.0,
+      "temperature": 21.8935,
+      "setpoint": 22.0,
+      "heater_power": 36.12,
+      "error": 0.1065
+    },
+    {
+      "time": 153.5,
+      "temperature": 22.0266,
+      "setpoint": 22.0,
+      "heater_power": 35.16,
+      "error": -0.0266
+    },
+    {
+      "time": 154.0,
+      "temperature": 21.9721,
+      "setpoint": 22.0,
+      "heater_power": 32.94,
+      "error": 0.0279
+    },
+    {
+      "time": 154.5,
+      "temperature": 22.0794,
+      "setpoint": 22.0,
+      "heater_power": 33.85,
+      "error": -0.0794
+    },
+    {
+      "time": 155.0,
+      "temperature": 21.819,
+      "setpoint": 22.0,
+      "heater_power": 32.05,
+      "error": 0.181
+    },
+    {
+      "time": 155.5,
+      "temperature": 22.074,
+      "setpoint": 22.0,
+      "heater_power": 36.42,
+      "error": -0.074
+    },
+    {
+      "time": 156.0,
+      "temperature": 22.0743,
+      "setpoint": 22.0,
+      "heater_power": 32.16,
+      "error": -0.0743
+    },
+    {
+      "time": 156.5,
+      "temperature": 21.9803,
+      "setpoint": 22.0,
+      "heater_power": 32.14,
+      "error": 0.0197
+    },
+    {
+      "time": 157.0,
+      "temperature": 21.9446,
+      "setpoint": 22.0,
+      "heater_power": 33.71,
+      "error": 0.0554
+    },
+    {
+      "time": 157.5,
+      "temperature": 21.9447,
+      "setpoint": 22.0,
+      "heater_power": 34.32,
+      "error": 0.0553
+    },
+    {
+      "time": 158.0,
+      "temperature": 22.0465,
+      "setpoint": 22.0,
+      "heater_power": 34.33,
+      "error": -0.0465
+    },
+    {
+      "time": 158.5,
+      "temperature": 22.079,
+      "setpoint": 22.0,
+      "heater_power": 32.62,
+      "error": -0.079
+    },
+    {
+      "time": 159.0,
+      "temperature": 22.002,
+      "setpoint": 22.0,
+      "heater_power": 32.07,
+      "error": -0.002
+    },
+    {
+      "time": 159.5,
+      "temperature": 22.0828,
+      "setpoint": 22.0,
+      "heater_power": 33.35,
+      "error": -0.0828
+    },
+    {
+      "time": 160.0,
+      "temperature": 21.9888,
+      "setpoint": 22.0,
+      "heater_power": 31.99,
+      "error": 0.0112
+    }
+  ]
+}

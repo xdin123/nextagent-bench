@@ -1,0 +1,22 @@
+--- skills/pptx/html2pptx.md.original
++++ skills/pptx/html2pptx.md
+@@ -219,7 +219,7 @@
+ - `htmlFile` (string): Path to HTML file (absolute or relative)
+ - `pres` (pptxgen): PptxGenJS presentation instance with layout already set
+ - `options` (object, optional):
+-  - `tmpDir` (string): Temporary directory for generated files (default: `process.env.TMPDIR || '/tmp'`)
++  - `tmpDir` (string): Temporary directory for generated files (default: `process.env.TMPDIR || 'temp'`)
+   - `slide` (object): Existing slide to reuse (default: creates new slide)
+ 
+ #### Returns
+--- skills/pptx/scripts/html2pptx.js.original
++++ skills/pptx/scripts/html2pptx.js
+@@ -895,7 +895,7 @@
+ 
+ async function html2pptx(htmlFile, pres, options = {}) {
+   const {
+-    tmpDir = process.env.TMPDIR || '/tmp',
++    tmpDir = process.env.TMPDIR || 'temp',
+     slide = null
+   } = options;
+ 

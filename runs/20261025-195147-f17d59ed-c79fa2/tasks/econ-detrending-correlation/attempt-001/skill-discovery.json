@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "timeseries-detrending"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "timeseries-detrending"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

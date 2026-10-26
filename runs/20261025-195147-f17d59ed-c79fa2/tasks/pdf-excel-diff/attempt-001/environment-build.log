@@ -1,0 +1,751 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [stage-0  1/11] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#1 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 918B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:24.04
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     libreoffice     poppler-utils     wget     && rm -rf /var/lib/apt/lists/*
+#5 1.682 Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+#5 2.156 Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+#5 3.790 Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+#5 5.420 Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+#5 7.194 Get:5 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+#5 8.291 Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1549 kB]
+#5 11.73 Get:7 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2122 kB]
+#5 17.35 Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1411 kB]
+#5 18.69 Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+#5 30.06 Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+#5 34.68 Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+#5 37.11 Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+#5 42.06 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2231 kB]
+#5 46.91 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1733 kB]
+#5 53.78 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2170 kB]
+#5 55.07 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+#5 56.47 Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+#5 57.62 Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+#5 58.47 Get:19 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+#5 58.48 Fetched 33.6 MB in 58s (577 kB/s)
+#5 58.48 Reading package lists...
+#5 59.05 Reading package lists...
+#5 59.63 Building dependency tree...
+#5 59.75 Reading state information...
+#5 59.90 The following additional packages will be installed:
+#5 59.90   adduser adwaita-icon-theme alsa-topology-conf alsa-ucm-conf apparmor
+#5 59.90   at-spi2-common at-spi2-core binutils binutils-common
+#5 59.90   binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates
+#5 59.90   ca-certificates-java cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu
+#5 59.90   dbus dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common
+#5 59.90   dbus-user-session dconf-gsettings-backend dconf-service default-jre
+#5 59.90   default-jre-headless dictionaries-common dirmngr dmsetup dpkg-dev
+#5 59.90   emacsen-common fakeroot firebird3.0-common firebird3.0-common-doc
+#5 59.90   firebird3.0-server-core firebird3.0-utils fontconfig fontconfig-config
+#5 59.90   fonts-crosextra-caladea fonts-crosextra-carlito fonts-dejavu
+#5 59.90   fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono fonts-liberation
+#5 59.90   fonts-liberation-sans-narrow fonts-linuxlibertine fonts-noto-core
+#5 59.90   fonts-noto-extra fonts-noto-mono fonts-noto-ui-core fonts-opensymbol
+#5 59.90   fonts-sil-gentium fonts-sil-gentium-basic g++ g++-13 g++-13-x86-64-linux-gnu
+#5 59.90   g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu
+#5 59.90   gcc-x86-64-linux-gnu gir1.2-girepository-2.0 gir1.2-glib-2.0 gnupg
+#5 59.90   gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpgconf gpgsm
+#5 59.90   gsettings-desktop-schemas gstreamer1.0-gl gstreamer1.0-gtk3
+#5 59.90   gstreamer1.0-plugins-base gtk-update-icon-cache hicolor-icon-theme
+#5 59.90   humanity-icon-theme hunspell-en-us iso-codes java-common javascript-common
+#5 59.90   keyboxd krb5-locales libabsl20220623t64 libabw-0.1-1 libalgorithm-diff-perl
+#5 59.90   libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libapparmor1
+#5 59.90   libargon2-1 libasan8 libasound2-data libasound2t64 libatk-bridge2.0-0t64
+#5 59.90   libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0t64 libatomic1
+#5 59.90   libatspi2.0-0t64 libauthen-sasl-perl libavahi-client3 libavahi-common-data
+#5 59.90   libavahi-common3 libbinutils libboost-iostreams1.83.0 libboost-locale1.83.0
+#5 59.90   libboost-thread1.83.0 libbrotli1 libbsd0 libbsh-java libc-dev-bin
+#5 59.90   libc-devtools libc6-dev libcairo-gobject2 libcairo2 libcap2-bin libcc1-0
+#5 59.90   libcdparanoia0 libcdr-0.1-1 libclone-perl libclucene-contribs1t64
+#5 59.90   libclucene-core1t64 libcolamd3 libcolord2 libcrypt-dev libcryptsetup12
+#5 59.90   libctf-nobfd0 libctf0 libcups2t64 libcurl3t64-gnutls libcurl4t64
+#5 59.90   libdata-dump-perl libdatrie1 libdbus-1-3 libdconf1 libdeflate0
+#5 59.90   libdevmapper1.02.1 libdpkg-perl libdrm-amdgpu1 libdrm-common libdrm-intel1
+#5 59.90   libdrm2 libdw1t64 libe-book-0.1-1 libedit2 libegl-mesa0 libegl1
+#5 59.90   libel-api-java libelf1t64 libencode-locale-perl libeot0 libepoxy0
+#5 59.90   libepubgen-0.1-1 libetonyek-0.1-1 libexpat1 libexpat1-dev
+#5 59.90   libexttextcat-2.0-0 libexttextcat-data libfakeroot libfbclient2 libfdisk1
+#5 59.90   libfile-basedir-perl libfile-desktopentry-perl libfile-fcntllock-perl
+#5 59.90   libfile-listing-perl libfile-mimeinfo-perl libfont-afm-perl libfontconfig1
+#5 59.90   libfreehand-0.1-1 libfreetype6 libfribidi0 libgbm1 libgcc-13-dev libgd3
+#5 59.90   libgdbm-compat4t64 libgdbm6t64 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
+#5 59.90   libgdk-pixbuf2.0-common libgif7 libgirepository-1.0-1 libgl1 libgl1-mesa-dri
+#5 59.90   libgles2 libglib2.0-0t64 libglib2.0-data libglvnd0 libglx-mesa0 libglx0
+#5 59.90   libgomp1 libgpgme11t64 libgpgmepp6t64 libgprofng0 libgraphene-1.0-0
+#5 59.90   libgraphite2-3 libgssapi-krb5-2 libgstreamer-gl1.0-0
+#5 59.90   libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libgtk-3-0t64 libgtk-3-bin
+#5 59.90   libgtk-3-common libgudev-1.0-0 libharfbuzz-icu0 libharfbuzz0b
+#5 59.90   libheif-plugin-aomdec libheif-plugin-aomenc libheif1 libhsqldb1.8.0-java
+#5 59.90   libhtml-form-perl libhtml-format-perl libhtml-parser-perl
+#5 59.90   libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+#5 59.90   libhttp-daemon-perl libhttp-date-perl libhttp-message-perl
+#5 59.90   libhttp-negotiate-perl libhunspell-1.7-0 libhwasan0 libhyphen0 libib-util
+#5 59.90   libice6 libicu74 libio-html-perl libio-socket-ssl-perl libio-stringy-perl
+#5 59.90   libipc-system-simple-perl libisl23 libitm1 libjansson4 libjbig0
+#5 59.90   libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore
+#5 59.90   libjson-c5 libjsp-api-java libk5crypto3 libkeyutils1 libkmod2 libkrb5-3
+#5 59.90   libkrb5support0 libksba8 liblangtag-common liblangtag1 liblcms2-2
+#5 59.90   libldap-common libldap2 liblerc4 liblibreoffice-java libllvm20
+#5 59.90   liblocale-gettext-perl liblsan0 libltdl7 liblwp-mediatypes-perl
+#5 59.90   liblwp-protocol-https-perl liblzma5 libmailtools-perl libmhash2 libmpc3
+#5 59.90   libmpfr6 libmspub-0.1-1 libmwaw-0.3-3 libmysqlclient21 libmythes-1.2-0
+#5 59.90   libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl
+#5 59.90   libnghttp2-14 libnspr4 libnss-systemd libnss3 libodfgen-0.1-1 libogg0
+#5 59.90   libopenjp2-7 libopus0 liborc-0.4-0t64 liborcus-0.18-0 liborcus-parser-0.18-0
+#5 59.90   libpagemaker-0.0-0 libpam-cap libpam-systemd libpango-1.0-0
+#5 59.90   libpangocairo-1.0-0 libpangoft2-1.0-0 libpaper-utils libpaper1 libpciaccess0
+#5 59.90   libpcsclite1 libperl5.38t64 libpixman-1-0 libpng16-16t64 libpoppler134
+#5 59.90   libpq5 libpsl5t64 libpython3-dev libpython3-stdlib libpython3.12-dev
+#5 59.90   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0
+#5 59.90   libraptor2-0 librasqal3t64 librdf0t64 libreadline8t64 libreoffice-base
+#5 59.90   libreoffice-base-core libreoffice-base-drivers libreoffice-calc
+#5 59.90   libreoffice-common libreoffice-core libreoffice-draw libreoffice-gnome
+#5 59.90   libreoffice-gtk3 libreoffice-impress libreoffice-java-common
+#5 59.90   libreoffice-math libreoffice-nlpsolver libreoffice-report-builder
+#5 59.90   libreoffice-report-builder-bin libreoffice-script-provider-bsh
+#5 59.90   libreoffice-script-provider-js libreoffice-script-provider-python
+#5 59.90   libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb libreoffice-sdbc-mysql
+#5 59.90   libreoffice-sdbc-postgresql libreoffice-style-colibre
+#5 59.90   libreoffice-style-elementary libreoffice-style-yaru
+#5 59.90   libreoffice-uiconfig-base libreoffice-uiconfig-calc
+#5 59.90   libreoffice-uiconfig-common libreoffice-uiconfig-draw
+#5 59.90   libreoffice-uiconfig-impress libreoffice-uiconfig-math
+#5 59.90   libreoffice-uiconfig-report-builder libreoffice-uiconfig-writer
+#5 59.90   libreoffice-wiki-publisher libreoffice-writer librevenge-0.0-0 librsvg2-2
+#5 59.91   librsvg2-common librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db
+#5 59.91   libsensors-config libsensors5 libservlet-api-java libservlet3.1-java
+#5 59.91   libsframe1 libsharpyuv0 libsm6 libsqlite3-0 libssh-4 libstdc++-13-dev
+#5 59.91   libsuitesparseconfig7 libsystemd-shared libsystemd0 libtext-iconv-perl
+#5 59.91   libthai-data libthai0 libtheora0 libtie-ixhash-perl libtiff6
+#5 59.91   libtimedate-perl libtommath1 libtry-tiny-perl libtsan2 libubsan1 libudev1
+#5 59.91   libuno-cppu3t64 libuno-cppuhelpergcc3-3t64 libuno-purpenvhelpergcc3-3t64
+#5 59.91   libuno-sal3t64 libuno-salhelpergcc3-3t64 libunoloader-java libunwind8
+#5 59.91   liburi-perl libvisio-0.1-1 libvisual-0.4-0 libvorbis0a libvorbisenc2
+#5 59.91   libvulkan1 libwayland-client0 libwayland-cursor0 libwayland-egl1 libwebp7
+#5 59.91   libwebsocket-api-java libwpd-0.10-10 libwpg-0.3-3 libwps-0.4-4 libwww-perl
+#5 59.91   libwww-robotrules-perl libx11-6 libx11-data libx11-protocol-perl libx11-xcb1
+#5 59.91   libxau6 libxaw7 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0
+#5 59.91   libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1
+#5 59.91   libxcomposite1 libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxft2
+#5 59.91   libxi6 libxinerama1 libxkbcommon0 libxkbfile1 libxml-parser-perl
+#5 59.91   libxml-twig-perl libxml-xpathengine-perl libxml2 libxmlsec1t64
+#5 59.91   libxmlsec1t64-nss libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender1
+#5 59.91   libxshmfence1 libxslt1.1 libxt6t64 libxtst6 libxv1 libxxf86dga1 libxxf86vm1
+#5 59.91   libyajl2 linux-libc-dev lp-solve lto-disabled-list make manpages
+#5 59.91   manpages-dev media-types mesa-libgallium mesa-vulkan-drivers mysql-common
+#5 59.91   netbase networkd-dispatcher openjdk-21-jre openjdk-21-jre-headless openssl
+#5 59.91   patch perl perl-modules-5.38 perl-openssl-defaults pinentry-curses
+#5 59.91   poppler-data publicsuffix python3-dbus python3-dev python3-gi
+#5 59.91   python3-minimal python3-pip-whl python3-pkg-resources python3-setuptools
+#5 59.91   python3-setuptools-whl python3-uno python3-wheel python3.12 python3.12-dev
+#5 59.91   python3.12-minimal python3.12-venv readline-common rpcsvc-proto
+#5 59.91   session-migration shared-mime-info systemd systemd-dev systemd-resolved
+#5 59.91   systemd-sysv systemd-timesyncd tzdata ubuntu-mono ucf uno-libs-private ure
+#5 59.91   ure-java x11-common x11-utils x11-xserver-utils xdg-user-dirs xdg-utils
+#5 59.91   xkb-data xz-utils zlib1g zlib1g-dev zutty
+#5 59.91 Suggested packages:
+#5 59.91   cron quota ecryptfs-utils apparmor-profiles-extra apparmor-utils
+#5 59.91   binutils-doc gprofng-gui bzip2-doc cpp-doc gcc-13-locales cpp-13-doc ispell
+#5 59.91   | aspell | hunspell wordlist pinentry-gnome3 tor debian-keyring
+#5 59.91   firebird3.0-server firebird3.0-doc g++-multilib g++-13-multilib gcc-13-doc
+#5 59.91   gcc-multilib autoconf automake libtool flex bison gdb gcc-doc
+#5 59.91   gcc-13-multilib gdb-x86-64-linux-gnu parcimonie xloadimage gpg-wks-server
+#5 59.91   scdaemon gvfs hunspell openoffice.org-hunspell | openoffice.org-core
+#5 59.91   isoquery apache2 | lighttpd | httpd alsa-utils libasound2-plugins
+#5 59.91   libdigest-hmac-perl libgssapi-perl glibc-doc colord cups-common git bzr
+#5 59.91   libgd-tools gdbm-l10n low-memory-monitor krb5-doc krb5-user
+#5 59.91   libvisual-0.4-plugins gstreamer1.0-tools libheif-plugin-libde265
+#5 59.91   libheif-plugin-x265 libheif-plugin-ffmpegdec libheif-plugin-jpegdec
+#5 59.91   libheif-plugin-jpegenc libheif-plugin-j2kdec libheif-plugin-j2kenc
+#5 59.91   libheif-plugin-rav1e libheif-plugin-svtenc java-virtual-machine
+#5 59.91   libhsqldb1.8.0-java-gcj libio-compress-brotli-perl liblcms2-utils
+#5 59.91   libcrypt-ssleay-perl opus-tools pciutils pcscd raptor2-utils rasqal-utils
+#5 59.91   librdf-storage-mysql librdf-storage-postgresql librdf-storage-sqlite
+#5 59.91   librdf-storage-virtuoso redland-utils cups-bsd firefox | firefox-esr
+#5 59.91   | thunderbird ghostscript gpa hyphen-hyphenation-patterns imagemagick
+#5 59.91   | graphicsmagick-imagemagick-compat libreoffice-grammarcheck
+#5 59.91   libreoffice-help libreoffice-l10n libreoffice-librelogo myspell-dictionary
+#5 59.91   mythes-thesaurus openclipart-libreoffice pstoedit unixodbc
+#5 59.91   gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad
+#5 59.91   gstreamer1.0-libav libsane1 libofficebean-java python3-access2base
+#5 59.91   libjtds-java libsqliteodbc | tdsodbc | odbc-mdbtools ocl-icd-libopencl1
+#5 59.91   | mesa-opencl-icd | beignet-opencl-icd python3-scriptforge
+#5 59.91   libreoffice-evolution seahorse libreofficekit-data bluez
+#5 59.91   libreoffice-help-common default-mysql-server | virtual-mysql-server
+#5 59.91   postgresql mediawiki librsvg2-bin libsasl2-modules-gssapi-mit
+#5 59.91   | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+#5 59.91   libsasl2-modules-sql lm-sensors libstdc++-13-doc libsub-name-perl
+#5 59.91   libbusiness-isbn-perl libregexp-ipv6-perl libauthen-ntlm-perl
+#5 59.91   libunicode-map8-perl libunicode-string-perl xml-twig-tools make-doc
+#5 59.91   man-browser iw | wireless-tools libnss-mdns fonts-ipafont-gothic
+#5 59.91   fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic ed
+#5 59.91   diffutils-doc perl-doc libterm-readline-gnu-perl
+#5 59.91   | libterm-readline-perl-perl libtap-harness-archive-perl debhelper
+#5 59.91   pinentry-doc fonts-japanese-mincho | fonts-ipafont-mincho
+#5 59.91   fonts-japanese-gothic | fonts-ipafont-gothic fonts-arphic-ukai
+#5 59.91   fonts-arphic-uming fonts-nanum python3-doc python3-tk python-dbus-doc
+#5 59.91   python-setuptools-doc python3.12-doc binfmt-support readline-doc
+#5 59.91   systemd-container systemd-homed systemd-userdbd systemd-boot libfido2-1
+#5 59.91   libip4tc2 libqrencode4 libtss2-esys-3.0.2-0 libtss2-mu-4.0.1-0 libtss2-rc0
+#5 59.91   libtss2-tcti-device0 polkitd mesa-utils nickle cairo-5c xorg-docs-core
+#5 59.91 Recommended packages:
+#5 59.91   luit
+#5 60.26 The following NEW packages will be installed:
+#5 60.26   adduser adwaita-icon-theme alsa-topology-conf alsa-ucm-conf apparmor
+#5 60.26   at-spi2-common at-spi2-core binutils binutils-common
+#5 60.26   binutils-x86-64-linux-gnu build-essential bzip2 ca-certificates
+#5 60.26   ca-certificates-java cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu
+#5 60.26   dbus dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common
+#5 60.26   dbus-user-session dconf-gsettings-backend dconf-service default-jre
+#5 60.26   default-jre-headless dictionaries-common dirmngr dmsetup dpkg-dev
+#5 60.26   emacsen-common fakeroot firebird3.0-common firebird3.0-common-doc
+#5 60.26   firebird3.0-server-core firebird3.0-utils fontconfig fontconfig-config
+#5 60.26   fonts-crosextra-caladea fonts-crosextra-carlito fonts-dejavu
+#5 60.26   fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono fonts-liberation
+#5 60.26   fonts-liberation-sans-narrow fonts-linuxlibertine fonts-noto-core
+#5 60.26   fonts-noto-extra fonts-noto-mono fonts-noto-ui-core fonts-opensymbol
+#5 60.26   fonts-sil-gentium fonts-sil-gentium-basic g++ g++-13 g++-13-x86-64-linux-gnu
+#5 60.26   g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base gcc-13-x86-64-linux-gnu
+#5 60.26   gcc-x86-64-linux-gnu gir1.2-girepository-2.0 gir1.2-glib-2.0 gnupg
+#5 60.26   gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpgconf gpgsm
+#5 60.26   gsettings-desktop-schemas gstreamer1.0-gl gstreamer1.0-gtk3
+#5 60.26   gstreamer1.0-plugins-base gtk-update-icon-cache hicolor-icon-theme
+#5 60.26   humanity-icon-theme hunspell-en-us iso-codes java-common javascript-common
+#5 60.26   keyboxd krb5-locales libabsl20220623t64 libabw-0.1-1 libalgorithm-diff-perl
+#5 60.26   libalgorithm-diff-xs-perl libalgorithm-merge-perl libaom3 libapparmor1
+#5 60.26   libargon2-1 libasan8 libasound2-data libasound2t64 libatk-bridge2.0-0t64
+#5 60.26   libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0t64 libatomic1
+#5 60.26   libatspi2.0-0t64 libauthen-sasl-perl libavahi-client3 libavahi-common-data
+#5 60.26   libavahi-common3 libbinutils libboost-iostreams1.83.0 libboost-locale1.83.0
+#5 60.26   libboost-thread1.83.0 libbrotli1 libbsd0 libbsh-java libc-dev-bin
+#5 60.26   libc-devtools libc6-dev libcairo-gobject2 libcairo2 libcap2-bin libcc1-0
+#5 60.26   libcdparanoia0 libcdr-0.1-1 libclone-perl libclucene-contribs1t64
+#5 60.26   libclucene-core1t64 libcolamd3 libcolord2 libcrypt-dev libcryptsetup12
+#5 60.26   libctf-nobfd0 libctf0 libcups2t64 libcurl3t64-gnutls libcurl4t64
+#5 60.26   libdata-dump-perl libdatrie1 libdbus-1-3 libdconf1 libdeflate0
+#5 60.26   libdevmapper1.02.1 libdpkg-perl libdrm-amdgpu1 libdrm-common libdrm-intel1
+#5 60.26   libdrm2 libdw1t64 libe-book-0.1-1 libedit2 libegl-mesa0 libegl1
+#5 60.26   libel-api-java libelf1t64 libencode-locale-perl libeot0 libepoxy0
+#5 60.26   libepubgen-0.1-1 libetonyek-0.1-1 libexpat1 libexpat1-dev
+#5 60.26   libexttextcat-2.0-0 libexttextcat-data libfakeroot libfbclient2 libfdisk1
+#5 60.26   libfile-basedir-perl libfile-desktopentry-perl libfile-fcntllock-perl
+#5 60.26   libfile-listing-perl libfile-mimeinfo-perl libfont-afm-perl libfontconfig1
+#5 60.26   libfreehand-0.1-1 libfreetype6 libfribidi0 libgbm1 libgcc-13-dev libgd3
+#5 60.26   libgdbm-compat4t64 libgdbm6t64 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
+#5 60.26   libgdk-pixbuf2.0-common libgif7 libgirepository-1.0-1 libgl1 libgl1-mesa-dri
+#5 60.26   libgles2 libglib2.0-0t64 libglib2.0-data libglvnd0 libglx-mesa0 libglx0
+#5 60.26   libgomp1 libgpgme11t64 libgpgmepp6t64 libgprofng0 libgraphene-1.0-0
+#5 60.26   libgraphite2-3 libgssapi-krb5-2 libgstreamer-gl1.0-0
+#5 60.26   libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libgtk-3-0t64 libgtk-3-bin
+#5 60.26   libgtk-3-common libgudev-1.0-0 libharfbuzz-icu0 libharfbuzz0b
+#5 60.26   libheif-plugin-aomdec libheif-plugin-aomenc libheif1 libhsqldb1.8.0-java
+#5 60.26   libhtml-form-perl libhtml-format-perl libhtml-parser-perl
+#5 60.26   libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+#5 60.26   libhttp-daemon-perl libhttp-date-perl libhttp-message-perl
+#5 60.26   libhttp-negotiate-perl libhunspell-1.7-0 libhwasan0 libhyphen0 libib-util
+#5 60.26   libice6 libicu74 libio-html-perl libio-socket-ssl-perl libio-stringy-perl
+#5 60.26   libipc-system-simple-perl libisl23 libitm1 libjansson4 libjbig0
+#5 60.26   libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore
+#5 60.26   libjson-c5 libjsp-api-java libk5crypto3 libkeyutils1 libkmod2 libkrb5-3
+#5 60.26   libkrb5support0 libksba8 liblangtag-common liblangtag1 liblcms2-2
+#5 60.26   libldap-common libldap2 liblerc4 liblibreoffice-java libllvm20
+#5 60.26   liblocale-gettext-perl liblsan0 libltdl7 liblwp-mediatypes-perl
+#5 60.26   liblwp-protocol-https-perl libmailtools-perl libmhash2 libmpc3 libmpfr6
+#5 60.26   libmspub-0.1-1 libmwaw-0.3-3 libmysqlclient21 libmythes-1.2-0
+#5 60.26   libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl
+#5 60.26   libnghttp2-14 libnspr4 libnss-systemd libnss3 libodfgen-0.1-1 libogg0
+#5 60.26   libopenjp2-7 libopus0 liborc-0.4-0t64 liborcus-0.18-0 liborcus-parser-0.18-0
+#5 60.26   libpagemaker-0.0-0 libpam-cap libpam-systemd libpango-1.0-0
+#5 60.26   libpangocairo-1.0-0 libpangoft2-1.0-0 libpaper-utils libpaper1 libpciaccess0
+#5 60.26   libpcsclite1 libperl5.38t64 libpixman-1-0 libpng16-16t64 libpoppler134
+#5 60.26   libpq5 libpsl5t64 libpython3-dev libpython3-stdlib libpython3.12-dev
+#5 60.26   libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0
+#5 60.26   libraptor2-0 librasqal3t64 librdf0t64 libreadline8t64 libreoffice
+#5 60.26   libreoffice-base libreoffice-base-core libreoffice-base-drivers
+#5 60.26   libreoffice-calc libreoffice-common libreoffice-core libreoffice-draw
+#5 60.26   libreoffice-gnome libreoffice-gtk3 libreoffice-impress
+#5 60.26   libreoffice-java-common libreoffice-math libreoffice-nlpsolver
+#5 60.26   libreoffice-report-builder libreoffice-report-builder-bin
+#5 60.26   libreoffice-script-provider-bsh libreoffice-script-provider-js
+#5 60.26   libreoffice-script-provider-python libreoffice-sdbc-firebird
+#5 60.26   libreoffice-sdbc-hsqldb libreoffice-sdbc-mysql libreoffice-sdbc-postgresql
+#5 60.26   libreoffice-style-colibre libreoffice-style-elementary
+#5 60.26   libreoffice-style-yaru libreoffice-uiconfig-base libreoffice-uiconfig-calc
+#5 60.26   libreoffice-uiconfig-common libreoffice-uiconfig-draw
+#5 60.26   libreoffice-uiconfig-impress libreoffice-uiconfig-math
+#5 60.26   libreoffice-uiconfig-report-builder libreoffice-uiconfig-writer
+#5 60.26   libreoffice-wiki-publisher libreoffice-writer librevenge-0.0-0 librsvg2-2
+#5 60.26   librsvg2-common librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db
+#5 60.26   libsensors-config libsensors5 libservlet-api-java libservlet3.1-java
+#5 60.26   libsframe1 libsharpyuv0 libsm6 libsqlite3-0 libssh-4 libstdc++-13-dev
+#5 60.26   libsuitesparseconfig7 libsystemd-shared libtext-iconv-perl libthai-data
+#5 60.26   libthai0 libtheora0 libtie-ixhash-perl libtiff6 libtimedate-perl libtommath1
+#5 60.26   libtry-tiny-perl libtsan2 libubsan1 libuno-cppu3t64
+#5 60.26   libuno-cppuhelpergcc3-3t64 libuno-purpenvhelpergcc3-3t64 libuno-sal3t64
+#5 60.26   libuno-salhelpergcc3-3t64 libunoloader-java libunwind8 liburi-perl
+#5 60.26   libvisio-0.1-1 libvisual-0.4-0 libvorbis0a libvorbisenc2 libvulkan1
+#5 60.26   libwayland-client0 libwayland-cursor0 libwayland-egl1 libwebp7
+#5 60.26   libwebsocket-api-java libwpd-0.10-10 libwpg-0.3-3 libwps-0.4-4 libwww-perl
+#5 60.26   libwww-robotrules-perl libx11-6 libx11-data libx11-protocol-perl libx11-xcb1
+#5 60.26   libxau6 libxaw7 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0
+#5 60.26   libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1
+#5 60.26   libxcomposite1 libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxft2
+#5 60.26   libxi6 libxinerama1 libxkbcommon0 libxkbfile1 libxml-parser-perl
+#5 60.26   libxml-twig-perl libxml-xpathengine-perl libxml2 libxmlsec1t64
+#5 60.26   libxmlsec1t64-nss libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender1
+#5 60.26   libxshmfence1 libxslt1.1 libxt6t64 libxtst6 libxv1 libxxf86dga1 libxxf86vm1
+#5 60.26   libyajl2 linux-libc-dev lp-solve lto-disabled-list make manpages
+#5 60.26   manpages-dev media-types mesa-libgallium mesa-vulkan-drivers mysql-common
+#5 60.26   netbase networkd-dispatcher openjdk-21-jre openjdk-21-jre-headless openssl
+#5 60.26   patch perl perl-modules-5.38 perl-openssl-defaults pinentry-curses
+#5 60.26   poppler-data poppler-utils publicsuffix python3 python3-dbus python3-dev
+#5 60.26   python3-gi python3-minimal python3-pip python3-pip-whl python3-pkg-resources
+#5 60.26   python3-setuptools python3-setuptools-whl python3-uno python3-venv
+#5 60.26   python3-wheel python3.12 python3.12-dev python3.12-minimal python3.12-venv
+#5 60.26   readline-common rpcsvc-proto session-migration shared-mime-info systemd
+#5 60.26   systemd-dev systemd-resolved systemd-sysv systemd-timesyncd tzdata
+#5 60.26   ubuntu-mono ucf uno-libs-private ure ure-java wget x11-common x11-utils
+#5 60.26   x11-xserver-utils xdg-user-dirs xdg-utils xkb-data xz-utils zlib1g-dev zutty
+#5 60.26 The following packages will be upgraded:
+#5 60.26   liblzma5 libsystemd0 libudev1 zlib1g
+#5 61.93 4 upgraded, 515 newly installed, 0 to remove and 0 not upgraded.
+#5 61.93 Need to get 530 MB of archives.
+#5 61.93 After this operation, 2069 MB of additional disk space will be used.
+#5 61.93 Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 liblocale-gettext-perl amd64 1.07-6ubuntu5 [15.8 kB]
+#5 64.80 Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+#5 67.13 Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+#5 69.19 Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 zlib1g amd64 1:1.3.dfsg-3.1ubuntu2.3 [63.2 kB]
+#5 73.10 Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]
+#5 74.60 Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]
+#5 75.60 Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+#5 76.37 Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+#5 79.60 Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026e-0ubuntu0.24.04.1 [282 kB]
+#5 81.29 Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblzma5 amd64 5.6.1+really5.4.5-1ubuntu0.4 [128 kB]
+#5 82.53 Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+#5 84.18 Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+#5 86.80 Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+#5 93.45 Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+#5 96.96 Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]
+#5 97.84 Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]
+#5 98.76 Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]
+#5 99.98 Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.9 [51.5 kB]
+#5 101.1 Get:19 http://archive.ubuntu.com/ubuntu noble/main amd64 libargon2-1 amd64 0~20190702+dfsg-4build1 [20.8 kB]
+#5 103.2 Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libudev1 amd64 255.4-1ubuntu8.18 [178 kB]
+#5 105.7 Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper1.02.1 amd64 2:1.02.185-3ubuntu3.2 [139 kB]
+#5 106.7 Get:22 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-c5 amd64 0.17-1build1 [35.3 kB]
+#5 108.6 Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcryptsetup12 amd64 2:2.7.0-1ubuntu4.2 [266 kB]
+#5 110.8 Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfdisk1 amd64 2.39.3-9ubuntu6.6 [146 kB]
+#5 113.1 Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkmod2 amd64 31+20240202-2ubuntu7.2 [51.8 kB]
+#5 116.5 Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsystemd-shared amd64 255.4-1ubuntu8.18 [2077 kB]
+#5 119.4 Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsystemd0 amd64 255.4-1ubuntu8.18 [436 kB]
+#5 120.8 Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-dev all 255.4-1ubuntu8.18 [107 kB]
+#5 128.9 Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd amd64 255.4-1ubuntu8.18 [3475 kB]
+#5 130.1 Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-sysv amd64 255.4-1ubuntu8.18 [11.9 kB]
+#5 134.7 Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.6 [3110 kB]
+#5 136.2 Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+#5 137.0 Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+#5 142.0 Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.6 [4864 kB]
+#5 144.6 Get:35 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.6 [231 kB]
+#5 149.9 Get:36 http://archive.ubuntu.com/ubuntu noble/main amd64 poppler-data all 0.4.12-1 [2060 kB]
+#5 151.4 Get:37 http://archive.ubuntu.com/ubuntu noble/main amd64 ucf all 3.0043+nmu1 [56.5 kB]
+#5 157.8 Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libreoffice-style-colibre all 4:24.2.7-0ubuntu0.24.04.7 [7277 kB]
+#5 160.8 Get:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libreoffice-uiconfig-common all 4:24.2.7-0ubuntu0.24.04.7 [343 kB]
+#5 162.8 Get:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuno-sal3t64 amd64 4:24.2.7-0ubuntu0.24.04.7 [236 kB]
+#5 163.8 Get:41 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuno-salhelpergcc3-3t64 amd64 4:24.2.7-0ubuntu0.24.04.7 [19.3 kB]
+#5 165.5 Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuno-cppu3t64 amd64 4:24.2.7-0ubuntu0.24.04.7 [91.1 kB]
+#5 167.7 Get:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 uno-libs-private amd64 4:24.2.7-0ubuntu0.24.04.7 [229 kB]
+#5 187.1 Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+#5 190.2 Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.10 [764 kB]
+#5 192.3 Get:46 http://archive.ubuntu.com/ubuntu noble/main amd64 liblangtag-common all 0.6.7-1build2 [210 kB]
+#5 193.6 Get:47 http://archive.ubuntu.com/ubuntu noble/main amd64 liblangtag1 amd64 0.6.7-1build2 [52.2 kB]
+#5 196.1 Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuno-cppuhelpergcc3-3t64 amd64 4:24.2.7-0ubuntu0.24.04.7 [363 kB]
+#5 197.3 Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuno-purpenvhelpergcc3-3t64 amd64 4:24.2.7-0ubuntu0.24.04.7 [17.4 kB]
+#5 201.1 Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ure amd64 4:24.2.7-0ubuntu0.24.04.7 [1426 kB]
+#5 224.4 Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libreoffice-common all 4:24.2.7-0ubuntu0.24.04.7 [20.3 MB]
+#5 228.4 Get:52 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+#5 230.7 Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpng16-16t64 amd64 1.6.43-5ubuntu0.7 [189 kB]
+#5 233.1 Get:54 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfreetype6 amd64 2.13.2+dfsg-1ubuntu0.2 [403 kB]
+#5 238.7 Get:55 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-mono all 2.37-8 [502 kB]
+#5 242.3 Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-core all 2.37-8 [835 kB]
+#5 245.4 Get:57 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-liberation all 1:2.1.5-3 [1603 kB]
+#5 247.8 Get:58 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-noto-mono all 20201225-2 [435 kB]
+#5 258.5 Get:59 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-noto-core all 20201225-2 [13.3 MB]
+#5 260.6 Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig-config amd64 2.15.0-1.1ubuntu2 [37.3 kB]
+#5 265.9 Get:61 http://archive.ubuntu.com/ubuntu noble/main amd64 libfontconfig1 amd64 2.15.0-1.1ubuntu2 [139 kB]
+#5 267.8 Get:62 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig amd64 2.15.0-1.1ubuntu2 [180 kB]
+#5 269.8 Get:63 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 fonts-opensymbol all 4:102.12+LibO24.2.7-0ubuntu0.24.04.7 [139 kB]
+#5 272.8 Get:64 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libabsl20220623t64 amd64 20220623.1-3.1ubuntu3.2 [423 kB]
+#5 275.1 Get:65 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-thread1.83.0 amd64 1.83.0-2.1ubuntu3.2 [276 kB]
+#5 278.4 Get:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-locale1.83.0 amd64 1.83.0-2.1ubuntu3.2 [413 kB]
+#5 280.6 Get:67 http://archive.ubuntu.com/ubuntu noble/main amd64 libpixman-1-0 amd64 0.42.2-1build1 [279 kB]
+#5 281.9 Get:68 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]
+#5 283.1 Get:69 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+#5 283.8 Get:70 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]
+#5 285.0 Get:71 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]
+#5 287.2 Get:72 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-data all 2:1.8.7-1ubuntu0.1 [116 kB]
+#5 290.1 Get:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-6 amd64 2:1.8.7-1ubuntu0.1 [653 kB]
+#5 291.2 Get:74 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-render0 amd64 1.15-1ubuntu2 [16.2 kB]
+#5 292.5 Get:75 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shm0 amd64 1.15-1ubuntu2 [5756 B]
+#5 293.7 Get:76 http://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]
+#5 294.9 Get:77 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrender1 amd64 1:0.9.10-1.1build1 [19.0 kB]
+#5 299.7 Get:78 http://archive.ubuntu.com/ubuntu noble/main amd64 libcairo2 amd64 1.18.0-3build1 [566 kB]
+#5 302.8 Get:79 http://archive.ubuntu.com/ubuntu noble/main amd64 libclucene-core1t64 amd64 2.3.3.4+dfsg-1.2ubuntu2 [565 kB]
+#5 304.6 Get:80 http://archive.ubuntu.com/ubuntu noble/main amd64 libclucene-contribs1t64 amd64 2.3.3.4+dfsg-1.2ubuntu2 [93.5 kB]
+#5 306.0 Get:81 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-common-data amd64 0.8-13ubuntu6.2 [30.1 kB]
+#5 307.1 Get:82 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-common3 amd64 0.8-13ubuntu6.2 [23.4 kB]
+#5 308.9 Get:83 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdbus-1-3 amd64 1.14.10-4ubuntu4.1 [210 kB]
+#5 309.9 Get:84 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libavahi-client3 amd64 0.8-13ubuntu6.2 [26.8 kB]
+#5 312.6 Get:85 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]
+#5 315.2 Get:86 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]
+#5 316.4 Get:87 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+#5 318.9 Get:88 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]
+#5 321.5 Get:89 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]
+#5 323.9 Get:90 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcups2t64 amd64 2.4.7-1.2ubuntu7.14 [274 kB]
+#5 324.9 Get:91 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+#5 326.9 Get:92 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+#5 330.0 Get:93 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+#5 332.1 Get:94 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.4 [74.6 kB]
+#5 335.3 Get:95 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+#5 336.7 Get:96 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+#5 342.0 Get:97 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5 [191 kB]
+#5 344.3 Get:98 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.16 [344 kB]
+#5 349.8 Get:99 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.10 [1548 kB]
+#5 351.0 Get:100 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdconf1 amd64 0.40.0-4ubuntu0.1 [39.6 kB]
+#5 353.0 Get:101 http://archive.ubuntu.com/ubuntu noble/main amd64 libeot0 amd64 0.01-5build3 [28.1 kB]
+#5 355.3 Get:102 http://archive.ubuntu.com/ubuntu noble/main amd64 libepoxy0 amd64 1.5.10-1build1 [220 kB]
+#5 357.3 Get:103 http://archive.ubuntu.com/ubuntu noble/main amd64 libexttextcat-data all 3.4.7-1build1 [193 kB]
+#5 358.2 Get:104 http://archive.ubuntu.com/ubuntu noble/main amd64 libexttextcat-2.0-0 amd64 3.4.7-1build1 [13.3 kB]
+#5 359.7 Get:105 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+#5 361.2 Get:106 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgconf amd64 2.4.4-2ubuntu17.6 [104 kB]
+#5 363.1 Get:107 http://archive.ubuntu.com/ubuntu noble/main amd64 libksba8 amd64 1.6.6-1build1 [122 kB]
+#5 365.4 Get:108 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dirmngr amd64 2.4.4-2ubuntu17.6 [323 kB]
+#5 367.2 Get:109 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg-utils amd64 2.4.4-2ubuntu17.6 [109 kB]
+#5 370.2 Get:110 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg amd64 2.4.4-2ubuntu17.6 [565 kB]
+#5 371.7 Get:111 http://archive.ubuntu.com/ubuntu noble/main amd64 pinentry-curses amd64 1.2.1-3ubuntu5 [35.2 kB]
+#5 373.9 Get:112 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg-agent amd64 2.4.4-2ubuntu17.6 [227 kB]
+#5 376.5 Get:113 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgsm amd64 2.4.4-2ubuntu17.6 [232 kB]
+#5 377.9 Get:114 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 keyboxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]
+#5 381.5 Get:115 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg all 2.4.4-2ubuntu17.6 [359 kB]
+#5 383.5 Get:116 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpgme11t64 amd64 1.18.0-4.1ubuntu4 [136 kB]
+#5 385.3 Get:117 http://archive.ubuntu.com/ubuntu noble/main amd64 libgpgmepp6t64 amd64 1.18.0-4.1ubuntu4 [119 kB]
+#5 386.7 Get:118 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgraphite2-3 amd64 1.3.14-2ubuntu0.24.04.1 [73.4 kB]
+#5 387.8 Get:119 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-common all 2.4.125-1ubuntu0.1~24.04.2 [9250 B]
+#5 388.8 Get:120 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm2 amd64 2.4.125-1ubuntu0.1~24.04.2 [41.4 kB]
+#5 389.9 Get:121 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]
+#5 392.1 Get:122 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdw1t64 amd64 0.190-1.1ubuntu0.1 [261 kB]
+#5 394.3 Get:123 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libunwind8 amd64 1.6.2-3build1.1 [55.3 kB]
+#5 395.3 Get:124 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcap2-bin amd64 1:2.66-5ubuntu2.4 [34.1 kB]
+#5 402.3 Get:125 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer1.0-0 amd64 1.24.2-1ubuntu0.1 [1165 kB]
+#5 404.0 Get:126 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liborc-0.4-0t64 amd64 1:0.4.38-1ubuntu0.1 [207 kB]
+#5 410.3 Get:127 http://archive.ubuntu.com/ubuntu noble/main amd64 iso-codes all 4.16.0-1 [3492 kB]
+#5 413.0 Get:128 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.24.2-1ubuntu0.5 [862 kB]
+#5 415.0 Get:129 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz0b amd64 8.3.0-2build2 [469 kB]
+#5 416.0 Get:130 http://archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-icu0 amd64 8.3.0-2build2 [13.3 kB]
+#5 418.9 Get:131 http://archive.ubuntu.com/ubuntu noble/main amd64 libhunspell-1.7-0 amd64 1.7.2+really1.7.2-10build3 [294 kB]
+#5 421.2 Get:132 http://archive.ubuntu.com/ubuntu noble/main amd64 libhyphen0 amd64 2.8.8-7build3 [26.5 kB]
+#5 422.4 Get:133 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-common all 1:7.7+23ubuntu3 [21.7 kB]
+#5 423.8 Get:134 http://archive.ubuntu.com/ubuntu noble/main amd64 libice6 amd64 2:1.0.10-1build3 [41.4 kB]
+#5 425.6 Get:135 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-turbo8 amd64 2.1.5-2ubuntu2 [150 kB]
+#5 427.1 Get:136 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg8 amd64 8c-2ubuntu11 [2148 B]
+#5 428.9 Get:137 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblcms2-2 amd64 2.14-2ubuntu0.1 [161 kB]
+#5 429.8 Get:138 http://archive.ubuntu.com/ubuntu noble/main amd64 libmythes-1.2-0 amd64 2:1.2.5-1build1 [8580 B]
+#5 431.3 Get:139 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]
+#5 435.3 Get:140 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3 amd64 2:3.98-1ubuntu0.3 [1445 kB]
+#5 437.3 Get:141 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libopenjp2-7 amd64 2.5.0-2ubuntu0.5 [174 kB]
+#5 440.3 Get:142 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-iostreams1.83.0 amd64 1.83.0-2.1ubuntu3.2 [260 kB]
+#5 442.9 Get:143 http://archive.ubuntu.com/ubuntu noble/main amd64 liborcus-parser-0.18-0 amd64 0.19.2-3build3 [113 kB]
+#5 445.7 Get:144 http://archive.ubuntu.com/ubuntu noble/main amd64 liborcus-0.18-0 amd64 0.19.2-3build3 [435 kB]
+#5 447.9 Get:145 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 [337 kB]
+#5 449.3 Get:146 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdeflate0 amd64 1.19-1build1.1 [43.9 kB]
+#5 451.4 Get:147 http://archive.ubuntu.com/ubuntu noble/main amd64 libjbig0 amd64 2.1-6.1ubuntu2 [29.7 kB]
+#5 453.7 Get:148 http://archive.ubuntu.com/ubuntu noble/main amd64 liblerc4 amd64 4.0.0+ds-4ubuntu2 [179 kB]
+#5 454.7 Get:149 http://archive.ubuntu.com/ubuntu noble/main amd64 libsharpyuv0 amd64 1.3.2-0.4build3 [15.8 kB]
+#5 456.7 Get:150 http://archive.ubuntu.com/ubuntu noble/main amd64 libwebp7 amd64 1.3.2-0.4build3 [230 kB]
+#5 458.6 Get:151 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtiff6 amd64 4.5.1+git230720-4ubuntu2.5 [200 kB]
+#5 463.1 Get:152 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpoppler134 amd64 24.02.0-1ubuntu9.11 [1118 kB]
+#5 464.9 Get:153 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxslt1.1 amd64 1.1.39-0exp1ubuntu0.24.04.3 [168 kB]
+#5 466.9 Get:154 http://archive.ubuntu.com/ubuntu noble/main amd64 libyajl2 amd64 2.1.0-5build1 [20.2 kB]
+#5 468.5 Get:155 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libraptor2-0 amd64 2.0.16-3ubuntu0.1 [165 kB]
+#5 470.0 Get:156 http://archive.ubuntu.com/ubuntu noble/main amd64 libltdl7 amd64 2.4.7-7build1 [40.3 kB]
+#5 471.6 Get:157 http://archive.ubuntu.com/ubuntu noble/main amd64 libmhash2 amd64 0.9.9.9-9build3 [94.2 kB]
+#5 473.3 Get:158 http://archive.ubuntu.com/ubuntu noble/main amd64 librasqal3t64 amd64 0.9.33-2.1build1 [188 kB]
+#5 476.0 Get:159 http://archive.ubuntu.com/ubuntu noble/main amd64 librdf0t64 amd64 1.0.17-3.1ubuntu3 [102 kB]
+#5 478.1 Get:160 http://archive.ubuntu.com/ubuntu noble/main amd64 librevenge-0.0-0 amd64 0.0.5-3build1 [211 kB]
+#5 480.3 Get:161 http://archive.ubuntu.com/ubuntu noble/main amd64 libsm6 amd64 2:1.2.3-1build3 [15.7 kB]
+#5 482.0 Get:162 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libx11-xcb1 amd64 2:1.8.7-1ubuntu0.1 [7796 B]
+#5 483.0 Get:163 http://archive.ubuntu.com/ubuntu noble/main amd64 libxinerama1 amd64 2:1.1.4-3build1 [6396 B]
+#5 485.3 Get:164 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64 amd64 1.2.39-5build2 [153 kB]
+#5 486.8 Get:165 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmlsec1t64-nss amd64 1.2.39-5build2 [63.0 kB]
+#5 487.9 Get:166 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrandr2 amd64 2:1.5.2-2build1 [19.7 kB]
+#5 515.1 Get:167 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libreoffice-core amd64 4:24.2.7-0ubuntu0.24.04.7 [43.0 MB]
+#5 524.7 Get:168 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.17 [2348 kB]
+#5 526.3 Get:169 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-uno amd64 4:24.2.7-0ubuntu0.24.04.7 [148 kB]
+#5 531.9 Get:170 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.16 [1004 kB]
+#5 533.9 Get:171 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260816ubuntu0.24.04.1 [139 kB]
+#5 535.1 Get:172 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-bin amd64 1.14.10-4ubuntu4.1 [39.3 kB]
+#5 536.9 Get:173 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-session-bus-common all 1.14.10-4ubuntu4.1 [80.5 kB]
+#5 539.5 Get:174 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-daemon amd64 1.14.10-4ubuntu4.1 [118 kB]
+#5 540.9 Get:175 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-system-bus-common all 1.14.10-4ubuntu4.1 [81.6 kB]
+#5 542.0 Get:176 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus amd64 1.14.10-4ubuntu4.1 [24.3 kB]
+#5 544.0 Get:177 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-systemd amd64 255.4-1ubuntu8.18 [235 kB]
+#5 544.7 Get:178 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-user-session amd64 1.14.10-4ubuntu4.1 [9968 B]
+#5 546.2 Get:179 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dmsetup amd64 2:1.02.185-3ubuntu3.2 [79.2 kB]
+#5 548.3 Get:180 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0 amd64 2.80.0-6ubuntu3.10 [183 kB]
+#5 549.7 Get:181 http://archive.ubuntu.com/ubuntu noble/main amd64 libgirepository-1.0-1 amd64 1.80.1-1 [81.9 kB]
+#5 552.1 Get:182 http://archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-girepository-2.0 amd64 1.80.1-1 [24.5 kB]
+#5 553.4 Get:183 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.10 [15.3 kB]
+#5 554.5 Get:184 http://archive.ubuntu.com/ubuntu noble/main amd64 libfribidi0 amd64 1.0.13-3build1 [26.1 kB]
+#5 555.7 Get:185 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-data all 2.80.0-6ubuntu3.10 [50.2 kB]
+#5 558.0 Get:186 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss-systemd amd64 255.4-1ubuntu8.18 [159 kB]
+#5 559.1 Get:187 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-cap amd64 1:2.66-5ubuntu2.4 [12.5 kB]
+#5 560.0 Get:188 http://archive.ubuntu.com/ubuntu noble/main amd64 libtext-iconv-perl amd64 1.7-8build3 [13.5 kB]
+#5 561.8 Get:189 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-dbus amd64 1.3.2-5build3 [100 kB]
+#5 564.1 Get:190 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-gi amd64 3.48.2-1 [232 kB]
+#5 565.1 Get:191 http://archive.ubuntu.com/ubuntu noble/main amd64 networkd-dispatcher all 2.2.4-1 [15.5 kB]
+#5 567.0 Get:192 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-pkg-resources all 68.1.2-2ubuntu1.2 [168 kB]
+#5 571.0 Get:193 http://archive.ubuntu.com/ubuntu noble/main amd64 shared-mime-info amd64 2.4-4 [474 kB]
+#5 573.5 Get:194 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-resolved amd64 255.4-1ubuntu8.18 [296 kB]
+#5 574.8 Get:195 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-timesyncd amd64 255.4-1ubuntu8.18 [35.3 kB]
+#5 575.8 Get:196 http://archive.ubuntu.com/ubuntu noble/main amd64 xdg-user-dirs amd64 0.18-1build1 [18.4 kB]
+#5 578.2 Get:197 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xkb-data all 2.41-2ubuntu1.1 [397 kB]
+#5 581.4 Get:198 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apparmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.9 [640 kB]
+#5 582.6 Get:199 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+#5 584.9 Get:200 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]
+#5 585.8 Get:201 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors-config all 1:3.6.0-9build1 [5546 B]
+#5 587.4 Get:202 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors5 amd64 1:3.6.0-9build1 [26.6 kB]
+#5 589.4 Get:203 http://archive.ubuntu.com/ubuntu noble/main amd64 libxkbcommon0 amd64 1.6.0-1build1 [122 kB]
+#5 590.6 Get:204 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B]
+#5 593.4 Get:205 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages all 6.7-2 [1384 kB]
+#5 595.1 Get:206 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+#5 598.3 Get:207 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 wget amd64 1.21.4-1ubuntu4.5 [334 kB]
+#5 600.6 Get:208 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 xz-utils amd64 5.6.1+really5.4.5-1ubuntu0.4 [267 kB]
+#5 601.5 Get:209 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf2.0-common all 2.42.10+dfsg-3ubuntu3.3 [8302 B]
+#5 603.7 Get:210 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf-2.0-0 amd64 2.42.10+dfsg-3ubuntu3.3 [147 kB]
+#5 605.2 Get:211 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gtk-update-icon-cache amd64 3.24.41-4ubuntu1.3 [51.9 kB]
+#5 606.2 Get:212 http://archive.ubuntu.com/ubuntu noble/main amd64 hicolor-icon-theme all 0.17-2 [9976 B]
+#5 610.7 Get:213 http://archive.ubuntu.com/ubuntu noble/main amd64 humanity-icon-theme all 0.6.16 [1282 kB]
+#5 612.5 Get:214 http://archive.ubuntu.com/ubuntu noble/main amd64 ubuntu-mono all 24.04-0ubuntu1 [151 kB]
+#5 615.3 Get:215 http://archive.ubuntu.com/ubuntu noble/main amd64 adwaita-icon-theme all 46.0-1 [723 kB]
+#5 618.6 Get:216 http://archive.ubuntu.com/ubuntu noble/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.5 kB]
+#5 619.6 Get:217 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2-data all 1.2.11-1ubuntu0.3 [21.4 kB]
+#5 623.5 Get:218 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasound2t64 amd64 1.2.11-1ubuntu0.3 [398 kB]
+#5 625.2 Get:219 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 alsa-ucm-conf all 1.2.10-1ubuntu5.15 [70.5 kB]
+#5 626.3 Get:220 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-common all 2.52.0-1build1 [8674 B]
+#5 627.8 Get:221 http://archive.ubuntu.com/ubuntu noble/main amd64 libxi6 amd64 2:1.8.1-1build1 [32.4 kB]
+#5 629.6 Get:222 http://archive.ubuntu.com/ubuntu noble/main amd64 libatspi2.0-0t64 amd64 2.52.0-1build1 [80.5 kB]
+#5 630.7 Get:223 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxtst6 amd64 2:1.2.3-1.1ubuntu0.1 [12.6 kB]
+#5 632.0 Get:224 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dconf-service amd64 0.40.0-4ubuntu0.1 [27.6 kB]
+#5 633.0 Get:225 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dconf-gsettings-backend amd64 0.40.0-4ubuntu0.1 [22.1 kB]
+#5 634.5 Get:226 http://archive.ubuntu.com/ubuntu noble/main amd64 session-migration amd64 0.3.9build1 [9034 B]
+#5 636.8 Get:227 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gsettings-desktop-schemas all 46.1-0ubuntu1 [35.6 kB]
+#5 638.8 Get:228 http://archive.ubuntu.com/ubuntu noble/main amd64 at-spi2-core amd64 2.52.0-1build1 [56.6 kB]
+#5 641.7 Get:229 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-common amd64 2.42-4ubuntu2.10 [240 kB]
+#5 642.5 Get:230 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsframe1 amd64 2.42-4ubuntu2.10 [15.7 kB]
+#5 645.6 Get:231 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbinutils amd64 2.42-4ubuntu2.10 [577 kB]
+#5 647.3 Get:232 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf-nobfd0 amd64 2.42-4ubuntu2.10 [98.0 kB]
+#5 650.1 Get:233 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libctf0 amd64 2.42-4ubuntu2.10 [94.5 kB]
+#5 655.2 Get:234 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgprofng0 amd64 2.42-4ubuntu2.10 [849 kB]
+#5 659.0 Get:235 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.42-4ubuntu2.10 [2463 kB]
+#5 660.3 Get:236 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 binutils amd64 2.42-4ubuntu2.10 [18.2 kB]
+#5 661.4 Get:237 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.9 [20.4 kB]
+#5 666.9 Get:238 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-147.147 [1595 kB]
+#5 668.6 Get:239 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1 [112 kB]
+#5 670.4 Get:240 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7 [67.4 kB]
+#5 677.2 Get:241 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.9 [2126 kB]
+#5 679.4 Get:242 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]
+#5 682.8 Get:243 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+#5 685.5 Get:244 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpfr6 amd64 4.2.1-1build1.1 [353 kB]
+#5 688.0 Get:245 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+#5 698.0 Get:246 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [10.7 MB]
+#5 700.4 Get:247 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04.1 [1042 B]
+#5 701.3 Get:248 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]
+#5 702.8 Get:249 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+#5 703.9 Get:250 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04.1 [48.0 kB]
+#5 706.7 Get:251 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgomp1 amd64 14.2.0-4ubuntu2~24.04.1 [148 kB]
+#5 707.9 Get:252 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.7 kB]
+#5 708.6 Get:253 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.5 kB]
+#5 715.3 Get:254 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04.1 [3027 kB]
+#5 719.2 Get:255 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04.1 [1322 kB]
+#5 728.6 Get:256 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04.1 [2772 kB]
+#5 733.1 Get:257 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1184 kB]
+#5 740.2 Get:258 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04.1 [1641 kB]
+#5 742.1 Get:259 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [153 kB]
+#5 751.0 Get:260 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2681 kB]
+#5 775.9 Get:261 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [21.1 MB]
+#5 780.8 Get:262 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04.1 [494 kB]
+#5 781.8 Get:263 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1212 B]
+#5 782.5 Get:264 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5018 B]
+#5 787.0 Get:265 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2420 kB]
+#5 802.9 Get:266 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1 [12.2 MB]
+#5 804.9 Get:267 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04.1 [16.0 kB]
+#5 805.7 Get:268 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [964 B]
+#5 806.6 Get:269 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1 [1100 B]
+#5 808.5 Get:270 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]
+#5 811.0 Get:271 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.6 [268 kB]
+#5 812.2 Get:272 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1ubuntu0.1 [34.6 kB]
+#5 813.9 Get:273 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3 [104 kB]
+#5 815.2 Get:274 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47 [12.4 kB]
+#5 820.0 Get:275 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.6 [1074 kB]
+#5 820.9 Get:276 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1 [4928 B]
+#5 821.8 Get:277 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates-java all 20240118 [11.6 kB]
+#5 822.7 Get:278 http://archive.ubuntu.com/ubuntu noble/main amd64 java-common all 0.75+exp1 [6798 B]
+#5 823.7 Get:279 http://archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]
+#5 883.8 Ign:280 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.12.1+1-1~24.04.4
+#5 886.6 Get:281 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jre-headless amd64 2:1.21-75+exp1 [3094 B]
+#5 887.8 Get:282 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk1.0-0t64 amd64 2.52.0-1build1 [55.3 kB]
+#5 891.3 Get:283 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-bridge2.0-0t64 amd64 2.52.0-1build1 [66.0 kB]
+#5 894.3 Get:284 http://archive.ubuntu.com/ubuntu noble/main amd64 libcairo-gobject2 amd64 1.18.0-3build1 [127 kB]
+#5 897.8 Get:285 http://archive.ubuntu.com/ubuntu noble/main amd64 libcolord2 amd64 1.4.7-1build2 [149 kB]
+#5 900.0 Get:286 http://archive.ubuntu.com/ubuntu noble/main amd64 libthai-data all 0.1.29-2build1 [158 kB]
+#5 901.3 Get:287 http://archive.ubuntu.com/ubuntu noble/main amd64 libdatrie1 amd64 0.2.13-3build1 [19.0 kB]
+#5 902.7 Get:288 http://archive.ubuntu.com/ubuntu noble/main amd64 libthai0 amd64 0.1.29-2build1 [18.9 kB]
+#5 904.9 Get:289 http://archive.ubuntu.com/ubuntu noble/main amd64 libpango-1.0-0 amd64 1.52.1+ds-1build1 [231 kB]
+#5 906.0 Get:290 http://archive.ubuntu.com/ubuntu noble/main amd64 libpangoft2-1.0-0 amd64 1.52.1+ds-1build1 [42.5 kB]
+#5 908.7 Get:291 http://archive.ubuntu.com/ubuntu noble/main amd64 libpangocairo-1.0-0 amd64 1.52.1+ds-1build1 [28.8 kB]
+#5 910.0 Get:292 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-client0 amd64 1.22.0-2.1build1 [26.4 kB]
+#5 910.7 Get:293 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-cursor0 amd64 1.22.0-2.1build1 [10.4 kB]
+#5 911.9 Get:294 http://archive.ubuntu.com/ubuntu noble/main amd64 libwayland-egl1 amd64 1.22.0-2.1build1 [5628 B]
+#5 912.6 Get:295 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcomposite1 amd64 1:0.4.5-1build3 [6320 B]
+#5 913.7 Get:296 http://archive.ubuntu.com/ubuntu noble/main amd64 libxfixes3 amd64 1:6.0.0-2build1 [10.8 kB]
+#5 915.5 Get:297 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcursor1 amd64 1:1.2.1-1build1 [20.7 kB]
+#5 916.6 Get:298 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdamage1 amd64 1:1.1.6-1build1 [6150 B]
+#5 921.6 Get:299 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-common all 3.24.41-4ubuntu1.3 [1426 kB]
+#5 931.3 Get:300 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-0t64 amd64 3.24.41-4ubuntu1.3 [2913 kB]
+#5 933.0 Get:301 http://archive.ubuntu.com/ubuntu noble/main amd64 libglvnd0 amd64 1.7.0-1build1 [69.6 kB]
+#5 933.9 Get:302 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri3-0 amd64 1.15-1ubuntu2 [7142 B]
+#5 935.6 Get:303 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-glx0 amd64 1.15-1ubuntu2 [24.8 kB]
+#5 936.3 Get:304 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-present0 amd64 1.15-1ubuntu2 [5676 B]
+#5 937.9 Get:305 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xfixes0 amd64 1.15-1ubuntu2 [10.2 kB]
+#5 938.9 Get:306 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86vm1 amd64 1:1.1.4-1build4 [9282 B]
+#5 940.2 Get:307 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-amdgpu1 amd64 2.4.125-1ubuntu0.1~24.04.2 [21.4 kB]
+#5 941.2 Get:308 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpciaccess0 amd64 0.17-3ubuntu0.24.04.3 [19.2 kB]
+#5 942.7 Get:309 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-intel1 amd64 2.4.125-1ubuntu0.1~24.04.2 [63.9 kB]
+#5 1002.5 Get:310 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm20 amd64 1:20.1.2-0ubuntu1~24.04.3 [30.6 MB]
+#5 1006.0 Get:311 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-randr0 amd64 1.15-1ubuntu2 [17.9 kB]
+#5 1006.9 Get:312 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-sync1 amd64 1.15-1ubuntu2 [9312 B]
+#5 1007.8 Get:313 http://archive.ubuntu.com/ubuntu noble/main amd64 libxshmfence1 amd64 1.3-1build5 [4764 B]
+#5 1017.5 Get:314 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.4 [10.8 MB]
+#5 1019.8 Get:315 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.4 [34.2 kB]
+#5 1022.1 Get:316 http://archive.ubuntu.com/ubuntu noble/main amd64 libvulkan1 amd64 1.3.275.0-1build1 [142 kB]
+#5 1023.1 Get:317 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.4 [38.0 kB]
+#5 1024.9 Get:318 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.4 [110 kB]
+#5 1026.2 Get:319 http://archive.ubuntu.com/ubuntu noble/main amd64 libglx0 amd64 1.7.0-1build1 [38.6 kB]
+#5 1027.9 Get:320 http://archive.ubuntu.com/ubuntu noble/main amd64 libgl1 amd64 1.7.0-1build1 [102 kB]
+#5 1029.0 Get:321 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgif7 amd64 5.2.2-1ubuntu1.2 [35.6 kB]
+#5 1032.8 Get:322 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre amd64 21.0.12.1+1-1~24.04.4 [233 kB]
+#5 1033.7 Get:323 http://archive.ubuntu.com/ubuntu noble/main amd64 default-jre amd64 2:1.21-75+exp1 [922 B]
+#5 1034.6 Get:324 http://archive.ubuntu.com/ubuntu noble/main amd64 emacsen-common all 3.0.5 [12.1 kB]
+#5 1036.4 Get:325 http://archive.ubuntu.com/ubuntu noble/main amd64 dictionaries-common all 1.29.7 [188 kB]
+#5 1037.6 Get:326 http://archive.ubuntu.com/ubuntu noble/main amd64 libfakeroot amd64 1.33-1 [32.4 kB]
+#5 1040.4 Get:327 http://archive.ubuntu.com/ubuntu noble/main amd64 fakeroot amd64 1.33-1 [67.2 kB]
+#5 1041.8 Get:328 http://archive.ubuntu.com/ubuntu noble/universe amd64 firebird3.0-common-doc all 3.0.11.33703.ds4-2ubuntu2 [28.5 kB]
+#5 1043.6 Get:329 http://archive.ubuntu.com/ubuntu noble/universe amd64 firebird3.0-common all 3.0.11.33703.ds4-2ubuntu2 [15.5 kB]
+#5 1045.0 Get:330 http://archive.ubuntu.com/ubuntu noble/main amd64 libtommath1 amd64 1.2.1-2build1 [54.8 kB]
+#5 1048.2 Get:331 http://archive.ubuntu.com/ubuntu noble/universe amd64 libfbclient2 amd64 3.0.11.33703.ds4-2ubuntu2 [549 kB]
+#5 1050.1 Get:332 http://archive.ubuntu.com/ubuntu noble/universe amd64 libib-util amd64 3.0.11.33703.ds4-2ubuntu2 [3270 B]
+#5 1057.3 Get:333 http://archive.ubuntu.com/ubuntu noble/universe amd64 firebird3.0-server-core amd64 3.0.11.33703.ds4-2ubuntu2 [2731 kB]
+#5 1063.9 Get:334 http://archive.ubuntu.com/ubuntu noble/universe amd64 firebird3.0-utils amd64 3.0.11.33703.ds4-2ubuntu2 [968 kB]
+#5 1066.0 Get:335 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-crosextra-caladea all 20200211-2 [127 kB]
+#5 1068.5 Get:336 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-crosextra-carlito all 20230309-2 [811 kB]
+#5 1073.2 Get:337 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-extra all 2.37-8 [1947 kB]
+#5 1074.2 Get:338 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-dejavu all 2.37-8 [3020 B]
+#5 1076.1 Get:339 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-liberation-sans-narrow all 1:1.07.6-4 [197 kB]
+#5 1083.1 Get:340 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-linuxlibertine all 5.3.0-6 [1627 kB]
+#5 1143.2 Ign:341 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-noto-extra all 20201225-2
+#5 1156.6 Get:342 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-noto-ui-core all 20201225-2 [1552 kB]
+#5 1159.8 Get:343 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-sil-gentium all 20081126:1.03-4 [245 kB]
+#5 1162.6 Get:344 http://archive.ubuntu.com/ubuntu noble/universe amd64 fonts-sil-gentium-basic all 1.102-1.1 [384 kB]
+#5 1164.9 Get:345 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg-l10n all 2.4.4-2ubuntu17.6 [66.5 kB]
+#5 1166.5 Get:346 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg-wks-client amd64 2.4.4-2ubuntu17.6 [70.9 kB]
+#5 1168.1 Get:347 http://archive.ubuntu.com/ubuntu noble/main amd64 libgraphene-1.0-0 amd64 1.10.8-3build2 [46.2 kB]
+#5 1170.0 Get:348 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libegl-mesa0 amd64 25.2.8-0ubuntu0.24.04.4 [117 kB]
+#5 1172.5 Get:349 http://archive.ubuntu.com/ubuntu noble/main amd64 libegl1 amd64 1.7.0-1build1 [28.7 kB]
+#5 1174.9 Get:350 http://archive.ubuntu.com/ubuntu noble/main amd64 libgudev-1.0-0 amd64 1:238-5ubuntu1 [15.9 kB]
+#5 1178.6 Get:351 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer-gl1.0-0 amd64 1.24.2-1ubuntu0.5 [214 kB]
+#5 1180.8 Get:352 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gstreamer1.0-gl amd64 1.24.2-1ubuntu0.5 [116 kB]
+#5 1182.1 Get:353 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gstreamer1.0-gtk3 amd64 1.24.2-1ubuntu1.8 [37.0 kB]
+#5 1183.8 Get:354 http://archive.ubuntu.com/ubuntu noble/main amd64 libcdparanoia0 amd64 3.10.2+debian-14build3 [48.5 kB]
+#5 1184.8 Get:355 http://archive.ubuntu.com/ubuntu noble/main amd64 libogg0 amd64 1.3.5-3build1 [22.7 kB]
+#5 1186.5 Get:356 http://archive.ubuntu.com/ubuntu noble/main amd64 libopus0 amd64 1.4-1build1 [208 kB]
+#5 1188.6 Get:357 http://archive.ubuntu.com/ubuntu noble/main amd64 libtheora0 amd64 1.1.1+dfsg.1-16.1build3 [211 kB]
+#5 1191.7 Get:358 http://archive.ubuntu.com/ubuntu noble/main amd64 libvisual-0.4-0 amd64 0.4.2-2build1 [115 kB]
+#5 1193.6 Get:359 http://archive.ubuntu.com/ubuntu noble/main amd64 libvorbis0a amd64 1.3.7-1build3 [97.6 kB]
+#5 1195.4 Get:360 http://archive.ubuntu.com/ubuntu noble/main amd64 libvorbisenc2 amd64 1.3.7-1build3 [80.8 kB]
+#5 1200.7 Get:361 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gstreamer1.0-plugins-base amd64 1.24.2-1ubuntu0.5 [721 kB]
+#5 1202.8 Get:362 http://archive.ubuntu.com/ubuntu noble/main amd64 hunspell-en-us all 1:2020.12.07-2 [280 kB]
+#5 1204.6 Get:363 http://archive.ubuntu.com/ubuntu noble/main amd64 javascript-common all 11+nmu1 [5936 B]
+#5 1207.2 Get:364 http://archive.ubuntu.com/ubuntu noble/main amd64 libabw-0.1-1 amd64 0.1.3-1build4 [101 kB]
+#5 1208.8 Get:365 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+#5 1209.7 Get:366 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-xs-perl amd64 0.04-8build3 [11.2 kB]
+#5 1211.0 Get:367 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-merge-perl all 0.08-5 [11.4 kB]
+#5 1216.6 Get:368 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.2 [1942 kB]
+#5 1218.8 Get:369 http://archive.ubuntu.com/ubuntu noble/main amd64 libxt6t64 amd64 1:1.2.1-1.2build1 [171 kB]
+#5 1220.8 Get:370 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmu6 amd64 2:1.1.3-3build2 [47.6 kB]
+#5 1222.9 Get:371 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxpm4 amd64 1:3.5.17-1ubuntu0.24.04.2 [36.7 kB]
+#5 1225.0 Get:372 http://archive.ubuntu.com/ubuntu noble/main amd64 libxaw7 amd64 2:1.0.14-1build2 [187 kB]
+#5 1227.1 Get:373 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shape0 amd64 1.15-1ubuntu2 [6100 B]
+#5 1228.8 Get:374 http://archive.ubuntu.com/ubuntu noble/main amd64 libxft2 amd64 2.3.6-1build1 [45.3 kB]
+#5 1230.7 Get:375 http://archive.ubuntu.com/ubuntu noble/main amd64 libxkbfile1 amd64 1:1.1.0-1build4 [70.0 kB]
+#5 1231.8 Get:376 http://archive.ubuntu.com/ubuntu noble/main amd64 libxv1 amd64 2:1.0.11-1.1build1 [10.7 kB]
+#5 1233.7 Get:377 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86dga1 amd64 2:1.1.5-1build1 [11.6 kB]
+#5 1239.2 Get:378 http://archive.ubuntu.com/ubuntu noble/main amd64 x11-utils amd64 7.7+6build2 [189 kB]
+#5 1240.9 Get:379 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java all 0.40.0-3build2 [54.3 kB]
+#5 1242.1 Get:380 http://archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java-jni amd64 0.40.0-3build2 [46.4 kB]
+#5 1246.7 Get:381 http://archive.ubuntu.com/ubuntu noble/universe amd64 libbsh-java all 2.0b4-20 [289 kB]
+#5 1247.7 Get:382 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.9 [11.9 kB]
+#5 1251.3 Get:383 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.9 [277 kB]
+#5 1253.5 Get:384 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5 [128 kB]
+#5 1254.8 Get:385 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.9 [29.3 kB]
+#5 1258.8 Get:386 http://archive.ubuntu.com/ubuntu noble/main amd64 libcdr-0.1-1 amd64 0.1.7-1build2 [389 kB]
+#5 1260.0 Get:387 http://archive.ubuntu.com/ubuntu noble/main amd64 libclone-perl amd64 0.46-1build3 [10.7 kB]
+#5 1261.0 Get:388 http://archive.ubuntu.com/ubuntu noble/main amd64 libsuitesparseconfig7 amd64 1:7.6.1+dfsg-1build1 [12.9 kB]
+#5 1262.3 Get:389 http://archive.ubuntu.com/ubuntu noble/main amd64 libcolamd3 amd64 1:7.6.1+dfsg-1build1 [19.4 kB]
+#5 1264.3 Get:390 http://archive.ubuntu.com/ubuntu noble/main amd64 libdata-dump-perl all 1.25-1 [25.9 kB]
+#5 1266.4 Get:391 http://archive.ubuntu.com/ubuntu noble/main amd64 libe-book-0.1-1 amd64 0.1.3-2build6 [149 kB]
+#5 1269.1 Get:392 http://archive.ubuntu.com/ubuntu noble/universe amd64 libel-api-java all 3.0.0-3 [64.9 kB]
+#5 1271.2 Get:393 http://archive.ubuntu.com/ubuntu noble/main amd64 libencode-locale-perl all 1.05-3 [11.6 kB]
+#5 1273.2 Get:394 http://archive.ubuntu.com/ubuntu noble/main amd64 libepubgen-0.1-1 amd64 0.1.1-1ubuntu6 [122 kB]
+#5 1276.4 Get:395 http://archive.ubuntu.com/ubuntu noble/main amd64 libetonyek-0.1-1 amd64 0.1.10-5build1 [637 kB]
+#5 1279.6 Get:396 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.6 [147 kB]
+#5 1281.6 Get:397 http://archive.ubuntu.com/ubuntu noble/main amd64 libipc-system-simple-perl all 1.30-2 [22.3 kB]
+#5 1282.5 Get:398 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-basedir-perl all 0.09-2 [14.4 kB]
+#5 1284.2 Get:399 http://archive.ubuntu.com/ubuntu noble/main amd64 liburi-perl all 5.27-1 [88.0 kB]
+#5 1285.3 Get:400 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-desktopentry-perl all 0.22-3 [16.8 kB]
+#5 1286.3 Get:401 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-fcntllock-perl amd64 0.22-4ubuntu5 [30.7 kB]
+#5 1287.8 Get:402 http://archive.ubuntu.com/ubuntu noble/main amd64 libtimedate-perl all 2.3300-2 [34.0 kB]
+#5 1288.8 Get:403 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhttp-date-perl all 6.06-1ubuntu0.24.04.1 [10.6 kB]
+#5 1290.1 Get:404 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-listing-perl all 6.16-1 [11.3 kB]
+#5 1291.3 Get:405 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-mimeinfo-perl all 0.34-1 [42.1 kB]
+#5 1292.9 Get:406 http://archive.ubuntu.com/ubuntu noble/main amd64 libfont-afm-perl all 1.20-4 [13.0 kB]
+#5 1296.4 Get:407 http://archive.ubuntu.com/ubuntu noble/main amd64 libfreehand-0.1-1 amd64 0.1.2-3build3 [269 kB]
+#5 1297.6 Get:408 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.10+dfsg-3ubuntu3.3 [13.9 kB]
+#5 1298.9 Get:409 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-3-bin amd64 3.24.41-4ubuntu1.3 [73.9 kB]
+#5 1300.1 Get:410 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.9 [14.7 kB]
+#5 1301.6 Get:411 http://archive.ubuntu.com/ubuntu noble/universe amd64 libservlet-api-java all 4.0.1-2 [81.0 kB]
+#5 1303.6 Get:412 http://archive.ubuntu.com/ubuntu noble/universe amd64 libjsp-api-java all 2.3.4-3 [53.7 kB]
+#5 1305.0 Get:413 http://archive.ubuntu.com/ubuntu noble/universe amd64 libwebsocket-api-java all 1.1-2 [40.1 kB]
+#5 1306.0 Get:414 http://archive.ubuntu.com/ubuntu noble/universe amd64 libservlet3.1-java all 1:4.0.1-2 [9276 B]
+#5 1310.2 Get:415 http://archive.ubuntu.com/ubuntu noble/universe amd64 libhsqldb1.8.0-java all 1.8.0.10+dfsg-12 [776 kB]
+#5 1311.6 Get:416 http://archive.ubuntu.com/ubuntu noble/main amd64 libhtml-tagset-perl all 3.20-6 [11.3 kB]
+#5 1313.3 Get:417 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhtml-parser-perl amd64 3.81-1ubuntu0.1 [86.0 kB]
+#5 1314.2 Get:418 http://archive.ubuntu.com/ubuntu noble/main amd64 libio-html-perl all 1.004-3 [15.9 kB]
+#5 1315.2 Get:419 http://archive.ubuntu.com/ubuntu noble/main amd64 liblwp-mediatypes-perl all 6.04-2 [20.1 kB]
+#5 1318.3 Get:420 http://archive.ubuntu.com/ubuntu noble/main amd64 libhttp-message-perl all 6.45-1ubuntu1 [78.2 kB]
+#5 1319.5 Get:421 http://archive.ubuntu.com/ubuntu noble/main amd64 libhtml-form-perl all 6.11-1 [32.1 kB]
+#5 1322.3 Get:422 http://archive.ubuntu.com/ubuntu noble/main amd64 libhtml-tree-perl all 5.07-3 [200 kB]
+#5 1323.5 Get:423 http://archive.ubuntu.com/ubuntu noble/main amd64 libhtml-format-perl all 2.16-2 [36.9 kB]
+#5 1324.6 Get:424 http://archive.ubuntu.com/ubuntu noble/main amd64 libhttp-cookies-perl all 6.11-1 [18.2 kB]
+#5 1326.2 Get:425 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhttp-daemon-perl all 6.16-1ubuntu0.24.04.1 [22.8 kB]

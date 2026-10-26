@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "glm-basics",
+      "directory": "glm-basics",
+      "description": "Basic usage of the General Lake Model (GLM) for lake temperature simulation. Use when you need to run GLM, understand input files, or modify configuration parameters.",
+      "sha256": "46d12de14b6af20a94146feb6b9cb98580d6afb317d581c6073ddd62460054d7"
+    },
+    {
+      "name": "glm-calibration",
+      "directory": "glm-calibration",
+      "description": "Calibrate GLM parameters for water temperature simulation. Use when you need to adjust model parameters to minimize RMSE between simulated and observed temperatures.",
+      "sha256": "a1342ccb629765767821481333fcbf2b5fd25d93fa8f4a41ed78c62d022a4ed1"
+    },
+    {
+      "name": "glm-output",
+      "directory": "glm-output",
+      "description": "Read and process GLM output files. Use when you need to extract temperature data from NetCDF output, convert depth coordinates, or calculate RMSE against observations.",
+      "sha256": "26530fb95a70059f6071734cca709db018dcc00ade4fe34011a7229d82bf1187"
+    }
+  ],
+  "verifier_sha": "3103c4a7a472806a6f54e4a9eb2d02a37ed5272d3c8d9ea998ebd9a009bead3a",
+  "prompt_sha": "9a4f0b367836b705358c94522ffcb59c0be2defd54bb1a16b2010d32c73c98f0"
+}

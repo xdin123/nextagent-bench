@@ -1,0 +1,56 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [stage-0  1/11] FROM docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
+#1 resolve docker.io/library/ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 534B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:24.04
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [2/5] RUN apt-get update && apt-get install -y     python3     python3-pip     python3-venv     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 287.35kB 0.0s done
+#6 DONE 0.0s
+
+#7 [3/5] RUN pip3 install --break-system-packages     lxml==5.3.0     defusedxml==0.7.1     six==1.17.0
+#7 3.796 Collecting lxml==5.3.0
+#7 5.428   Downloading lxml-5.3.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#7 5.659 Collecting defusedxml==0.7.1
+#7 5.848   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+#7 6.370 Collecting six==1.17.0
+#7 6.555   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 6.996 Downloading lxml-5.3.0-cp312-cp312-manylinux_2_28_x86_64.whl (4.9 MB)
+#7 12.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 977.9 kB/s eta 0:00:00
+#7 12.24 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+#7 12.67 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 12.70 Installing collected packages: six, lxml, defusedxml
+#7 12.81 Successfully installed defusedxml-0.7.1 lxml-5.3.0 six-1.17.0
+#7 12.81 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 DONE 12.9s
+
+#8 [4/5] WORKDIR /root
+#8 DONE 0.0s
+
+#9 [5/5] COPY Awesome-Agent-Papers.pptx /root/
+#9 DONE 0.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.5s done
+#10 exporting manifest sha256:d1d9381694f411ec69de59ff3b23e648d118a75e4ac1ec01dc055aed7e33c36e 0.0s done
+#10 exporting config sha256:1a2d201c97c8122f5b9f170f9435b04b91a54db8122236a515feb5fc7310c5ef done
+#10 exporting attestation manifest sha256:9344ca30c5b7065c8ab329409bb276ae41ba06ff47c7a0cef8307165d21aeaf9 done
+#10 exporting manifest list sha256:07280e7bda7839e365a346c8b28ae0753f535d78ad40829733b48062ace5a357 done
+#10 naming to docker.io/nextagent-bench/environment:610943893347aed456ae done
+#10 unpacking to docker.io/nextagent-bench/environment:610943893347aed456ae 0.1s done
+#10 DONE 0.7s

@@ -1,0 +1,18 @@
+{
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "scope": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be",
+  "mappings": [
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true,
+      "resolved": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace"
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true,
+      "resolved": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/temp"
+    }
+  ]
+}

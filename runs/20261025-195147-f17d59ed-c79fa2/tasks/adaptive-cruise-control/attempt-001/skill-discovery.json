@@ -1,0 +1,32 @@
+{
+  "registered": [
+    "csv-processing",
+    "pid-controller",
+    "simulation-metrics",
+    "vehicle-dynamics",
+    "yaml-config"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "csv-processing"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pid-controller"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "simulation-metrics"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "vehicle-dynamics"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "yaml-config"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

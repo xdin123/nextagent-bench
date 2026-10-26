@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "mesh-analysis",
+      "directory": "mesh-analysis",
+      "description": "Analyzes 3D mesh files (STL) to calculate geometric properties (volume, components) and extract attribute data. Use this skill to process noisy 3D scan data and filter debris.",
+      "sha256": "fd9b9a1bea170100077a3525e7c9cf73a4665e78d41b44a93fe5cfd1a84469bc"
+    }
+  ],
+  "verifier_sha": "dfb59780bbce55de353a8c7f25ad136e7c0fc75da3744bd54b273aed42a8bb16",
+  "prompt_sha": "4a7f2b824e01f6a440577d52d98a4a5d28ea8dd8294622decc268bd44fe6d5a7"
+}

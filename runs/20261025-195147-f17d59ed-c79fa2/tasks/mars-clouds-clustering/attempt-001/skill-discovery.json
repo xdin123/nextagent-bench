@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "custom-distance-metrics",
+    "parallel-processing",
+    "pareto-optimization"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "custom-distance-metrics"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "parallel-processing"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pareto-optimization"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

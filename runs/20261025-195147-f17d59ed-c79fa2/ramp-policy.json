@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "maximum_jobs": 4,
+  "step": 1,
+  "minimum_stable_minutes": 30,
+  "minimum_completed_tasks_per_level": 2,
+  "minimum_model_requests_per_level": 20,
+  "monitor_interval_minutes": 15,
+  "at": "2026-10-25T12:04:48.640418+00:00",
+  "conditions": [
+    "No new 429, credential rejection or upstream transport error",
+    "No shared quota wait timeouts or OOM",
+    "No concurrent infrastructure/preflight failure",
+    "Respect existing memory reservations; never force desired worker count"
+  ],
+  "on_instability": "Hold increases; lower one level if quota pressure, keep active attempts and all scored results"
+}

@@ -1,0 +1,91 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 590B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#5 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#5 CACHED
+
+#6 [2/6] WORKDIR /app
+#6 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.67MB 0.2s done
+#4 DONE 0.2s
+
+#7 [3/6] RUN apt-get update && apt-get install -y --no-install-recommends     bash     ca-certificates   && rm -rf /var/lib/apt/lists/*
+#7 0.829 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 1.574 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 2.328 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 10.43 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#7 11.57 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#7 12.75 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#7 12.78 Fetched 10.0 MB in 12s (805 kB/s)
+#7 12.78 Reading package lists...
+#7 13.25 Reading package lists...
+#7 13.70 Building dependency tree...
+#7 13.82 Reading state information...
+#7 13.97 bash is already the newest version (5.2.37-2+b10).
+#7 13.97 bash set to manually installed.
+#7 13.97 ca-certificates is already the newest version (20250419+deb13u1).
+#7 13.97 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+#7 DONE 14.0s
+
+#8 [4/6] RUN pip install --no-cache-dir     pandas==2.2.3
+#8 2.740 Collecting pandas==2.2.3
+#8 3.702   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#8 4.612 Collecting numpy>=1.26.0 (from pandas==2.2.3)
+#8 4.769   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 4.944 Collecting python-dateutil>=2.8.2 (from pandas==2.2.3)
+#8 5.099   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+#8 5.343 Collecting pytz>=2020.1 (from pandas==2.2.3)
+#8 5.501   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+#8 5.691 Collecting tzdata>=2022.7 (from pandas==2.2.3)
+#8 5.851   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 6.023 Collecting six>=1.6 (from python-dateutil>=2.8.2->pandas==2.2.3)
+#8 6.181   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 6.340 Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+#8 17.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 1.2 MB/s eta 0:00:00
+#8 17.45 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 30.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 1.3 MB/s eta 0:00:00
+#8 30.64 Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+#8 30.83 Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+#8 31.85 Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+#8 32.44 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 32.51 Installing collected packages: pytz, tzdata, six, numpy, python-dateutil, pandas
+#8 39.82 Successfully installed numpy-2.5.4 pandas-2.2.3 python-dateutil-3.0.0 pytz-2026.5 six-1.17.0 tzdata-2026.5
+#8 39.82 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 40.80 
+#8 40.80 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#8 40.80 [notice] To update, run: pip install --upgrade pip
+#8 DONE 41.2s
+
+#9 [5/6] RUN mkdir -p /app/data /app/output /app/gt
+#9 DONE 0.4s
+
+#10 [6/6] COPY data/ /app/data/
+#10 DONE 0.1s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 5.7s done
+#11 exporting manifest sha256:75b275c074404a6beeae496d840c835d03ac10d706efd9cd184d1a7b715d38a2 0.0s done
+#11 exporting config sha256:6e5c37a80efad8aaa8c74307a68a98be4a60bba24eba1655d5e2067133f5ba41 0.0s done
+#11 exporting attestation manifest sha256:e58baf11fd10d1eb531782f1aa1383135f614196fef7ed92381bf5b29bbc6b1e 0.0s done
+#11 exporting manifest list sha256:3d932fa515d84144bbbb0de47bd1e1818d09f3c44bc0a3cf6d00dc3867fd7482 0.0s done
+#11 naming to docker.io/nextagent-bench/environment:e95455c0afdcc831f463 done
+#11 unpacking to docker.io/nextagent-bench/environment:e95455c0afdcc831f463
+#11 unpacking to docker.io/nextagent-bench/environment:e95455c0afdcc831f463 1.2s done
+#11 DONE 7.0s

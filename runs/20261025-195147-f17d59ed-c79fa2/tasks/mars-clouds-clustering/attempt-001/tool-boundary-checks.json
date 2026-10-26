@@ -1,0 +1,554 @@
+[
+  {
+    "tool_call_id": "call_6ec0462a61094b57b98e5189",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/7b64d356807a45caab0561ebdce6c568/",
+    "visible_contract_check": {
+      "id": "call_6ec0462a61094b57b98e5189",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"custom-distance-metrics\", \"args\": {\"task\": \"DBSCAN with weighted Euclidean metric d(a,b)=sqrt((w*dx)^2+((2-w)*dy)^2) for Mars cloud clustering\"}}",
+      "empty_id_continuations": 16,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "custom-distance-metrics",
+        "args": {
+          "task": "DBSCAN with weighted Euclidean metric d(a,b)=sqrt((w*dx)^2+((2-w)*dy)^2) for Mars cloud clustering"
+        }
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_6ec0462a61094b57b98e5189",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "custom-distance-metrics",
+          "args": {
+            "task": "DBSCAN with weighted Euclidean metric d(a,b)=sqrt((w*dx)^2+((2-w)*dy)^2) for Mars cloud clustering"
+          }
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-26T02:14:17.567+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-dde68ded-5c86-416c-a13a-f86fbb03beea",
+        "requestId": "request-781e100e-573d-4916-b3ac-0c57be72ccb2",
+        "runId": "run-af4365bf-04f6-432a-bbb8-9c45abf66a03",
+        "round": 0,
+        "toolCallId": "call_6ec0462a61094b57b98e5189",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 1,
+        "toolBatchSize": 3,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "custom-distance-metrics",
+          "args": {
+            "task": "DBSCAN with weighted Euclidean metric d(a,b)=sqrt((w*dx)^2+((2-w)*dy)^2) for Mars cloud clustering"
+          }
+        },
+        "toolSafeSummary": "custom-distance-metrics DB****ng",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "custom-distance-metrics",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "custom-distance-metrics",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:custom-distance-metrics",
+            "frontmatterHash": "custom-distance-metrics-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "c4e970c6a8eaaa9aca13674c72d0b820",
+        "spanId": "f85d47561244e8b6",
+        "stepId": "turn-1",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/a9a1dc2b6efe45389d87f78a473384a7/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_6ec0462a61094b57b98e5189",
+          "content": "{\"name\":\"custom-distance-metrics\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/35454b275f644e0a91800bea90ba001e/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_6ec0462a61094b57b98e5189",
+          "content": "{\"name\":\"custom-distance-metrics\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_a9becdfc117b42d3b9f11ced",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/7b64d356807a45caab0561ebdce6c568/",
+    "visible_contract_check": {
+      "id": "call_a9becdfc117b42d3b9f11ced",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"parallel-processing\", \"args\": {\"task\": \"joblib parallel grid search over 847 DBSCAN hyperparameter combinations\"}}",
+      "empty_id_continuations": 12,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "parallel-processing",
+        "args": {
+          "task": "joblib parallel grid search over 847 DBSCAN hyperparameter combinations"
+        }
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_a9becdfc117b42d3b9f11ced",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "parallel-processing",
+          "args": {
+            "task": "joblib parallel grid search over 847 DBSCAN hyperparameter combinations"
+          }
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-26T02:14:17.553+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-dde68ded-5c86-416c-a13a-f86fbb03beea",
+        "requestId": "request-781e100e-573d-4916-b3ac-0c57be72ccb2",
+        "runId": "run-af4365bf-04f6-432a-bbb8-9c45abf66a03",
+        "round": 0,
+        "toolCallId": "call_a9becdfc117b42d3b9f11ced",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 2,
+        "toolBatchSize": 3,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "parallel-processing",
+          "args": {
+            "task": "joblib parallel grid search over 847 DBSCAN hyperparameter combinations"
+          }
+        },
+        "toolSafeSummary": "parallel-processing jo****ns",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "parallel-processing",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "parallel-processing",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:parallel-processing",
+            "frontmatterHash": "parallel-processing-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "c4e970c6a8eaaa9aca13674c72d0b820",
+        "spanId": "b59632bf13f0ed68",
+        "stepId": "turn-1",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/a9a1dc2b6efe45389d87f78a473384a7/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_a9becdfc117b42d3b9f11ced",
+          "content": "{\"name\":\"parallel-processing\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/35454b275f644e0a91800bea90ba001e/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_a9becdfc117b42d3b9f11ced",
+          "content": "{\"name\":\"parallel-processing\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_a34983b97e2a4f54bb7ed6c9",
+    "tool_name": "Skill",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/7b64d356807a45caab0561ebdce6c568/",
+    "visible_contract_check": {
+      "id": "call_a34983b97e2a4f54bb7ed6c9",
+      "name": "Skill",
+      "arguments_text": "{\"name\": \"pareto-optimization\", \"args\": {\"task\": \"Pareto frontier: maximize F1, minimize delta over filtered grid search results\"}}",
+      "empty_id_continuations": 14,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Exact name of an available Skill listed in the system prompt."
+          },
+          "args": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Task-specific JSON object data. Fields do not change runtime timeout, child budget, or provider selection."
+          }
+        }
+      },
+      "arguments": {
+        "name": "pareto-optimization",
+        "args": {
+          "task": "Pareto frontier: maximize F1, minimize delta over filtered grid search results"
+        }
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_a34983b97e2a4f54bb7ed6c9",
+        "toolName": "Skill",
+        "arguments": {
+          "name": "pareto-optimization",
+          "args": {
+            "task": "Pareto frontier: maximize F1, minimize delta over filtered grid search results"
+          }
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-26T02:14:17.561+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-dde68ded-5c86-416c-a13a-f86fbb03beea",
+        "requestId": "request-781e100e-573d-4916-b3ac-0c57be72ccb2",
+        "runId": "run-af4365bf-04f6-432a-bbb8-9c45abf66a03",
+        "round": 0,
+        "toolCallId": "call_a34983b97e2a4f54bb7ed6c9",
+        "toolName": "Skill",
+        "capabilityId": "Skill",
+        "parallelToolBatch": "same_round",
+        "toolBatchOrdinal": 3,
+        "toolBatchSize": 3,
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "name": "pareto-optimization",
+          "args": {
+            "task": "Pareto frontier: maximize F1, minimize delta over filtered grid search results"
+          }
+        },
+        "toolSafeSummary": "pareto-optimization Pa****ts",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "name": "pareto-optimization",
+            "status": "loaded"
+          },
+          "artifactRefs": [],
+          "metadata": {
+            "agenticSkillLoaded": true,
+            "skillName": "pareto-optimization",
+            "skillVersion": "unversioned",
+            "providerId": "local-skills-system",
+            "sourceIdentity": "local-skills-system:pareto-optimization",
+            "frontmatterHash": "pareto-optimization-frontmatter"
+          },
+          "generatedMessageCount": 1,
+          "generatedMessageKinds": [
+            "USER_META"
+          ]
+        },
+        "traceId": "c4e970c6a8eaaa9aca13674c72d0b820",
+        "spanId": "65922587dab74b59",
+        "stepId": "turn-1",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/a9a1dc2b6efe45389d87f78a473384a7/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_a34983b97e2a4f54bb7ed6c9",
+          "content": "{\"name\":\"pareto-optimization\",\"status\":\"loaded\"}"
+        }
+      },
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/35454b275f644e0a91800bea90ba001e/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_a34983b97e2a4f54bb7ed6c9",
+          "content": "{\"name\":\"pareto-optimization\",\"status\":\"loaded\"}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  },
+  {
+    "tool_call_id": "call_06c6a7fb0c914a99b54ca86f",
+    "tool_name": "Bash",
+    "provider_evidence": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/a9a1dc2b6efe45389d87f78a473384a7/",
+    "visible_contract_check": {
+      "id": "call_06c6a7fb0c914a99b54ca86f",
+      "name": "Bash",
+      "arguments_text": "{\"command\": \"ls -la workspace/data/ && head -5 workspace/data/citsci_train.csv && head -5 workspace/data/expert_train.csv && wc -l workspace/data/citsci_train.csv workspace/data/expert_train.csv\", \"description\": \"List data dir and preview both CSVs\"}",
+      "empty_id_continuations": 22,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096,
+            "description": "Command text to tokenize and submit through the sandbox gateway. Use either command-string mode with the full shell-like command and no `args`, or argv mode with exactly one executable token here and every other token in `args`."
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "maxLength": 16384
+            },
+            "description": "Optional structured argv entries. Use this for JSON, Gremlin, SQL, regex, natural-language, paths, or other quote-heavy arguments so each value is passed unchanged as one sandbox argv entry."
+          },
+          "env": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "PYTHONPATH": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4096,
+                "description": "Optional logical sandbox path for Python imports. Only use authorized workspace/temp/Skill resource paths; do not put this in the command string as PYTHONPATH=..."
+              }
+            },
+            "description": "Narrow structured environment override. Only PYTHONPATH is accepted; NEXTAGENT_* keys are auto-injected by the runtime and cannot be set manually. Any other key is rejected."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512,
+            "description": "Short reason for running the command."
+          },
+          "timeout": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout in milliseconds, capped by the trusted invocation context."
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 600000,
+            "description": "Requested timeout alias in milliseconds, capped by the trusted invocation context."
+          },
+          "stream_format": {
+            "type": "string",
+            "enum": [
+              "sse",
+              "ndjson"
+            ],
+            "description": "Set when the command is expected to produce streaming structured output (SSE or NDJSON). Enables per-frame TOOL_STRUCTURED_DELTA emission during execution."
+          },
+          "run_in_background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Set to true only for a persistent process or genuinely long-running command. Foreground is preferred when the command can return within the bounded timeout. A background result provides stdoutRef/stderrRef. You will not be notified when it completes, so do not promise automatic follow-up."
+          }
+        }
+      },
+      "arguments": {
+        "command": "ls -la workspace/data/ && head -5 workspace/data/citsci_train.csv && head -5 workspace/data/expert_train.csv && wc -l workspace/data/citsci_train.csv workspace/data/expert_train.csv",
+        "description": "List data dir and preview both CSVs"
+      },
+      "json_valid": true,
+      "schema_violations": [],
+      "visible_schema_valid": true
+    },
+    "normalized_calls": [
+      {
+        "toolCallId": "call_06c6a7fb0c914a99b54ca86f",
+        "toolName": "Bash",
+        "arguments": {
+          "command": "ls -la workspace/data/ && head -5 workspace/data/citsci_train.csv && head -5 workspace/data/expert_train.csv && wc -l workspace/data/citsci_train.csv workspace/data/expert_train.csv",
+          "description": "List data dir and preview both CSVs"
+        }
+      }
+    ],
+    "execution_boundaries": [
+      {
+        "level": "info",
+        "timestamp": "2026-10-26T02:14:22.639+00:00",
+        "component": "agent-core",
+        "source": "tool-loop",
+        "surface": "runtime_diagnostic",
+        "serviceVersion": "1.0.0+nextagent-fullstack-20261023091509262-linux-x64",
+        "event": "tool.payload.captured",
+        "agentId": "default-agent",
+        "sessionId": "session-dde68ded-5c86-416c-a13a-f86fbb03beea",
+        "requestId": "request-781e100e-573d-4916-b3ac-0c57be72ccb2",
+        "runId": "run-af4365bf-04f6-432a-bbb8-9c45abf66a03",
+        "round": 1,
+        "toolCallId": "call_06c6a7fb0c914a99b54ca86f",
+        "toolName": "Bash",
+        "capabilityId": "Bash",
+        "status": "SUCCEEDED",
+        "toolInput": {
+          "command": "ls -la workspace/data/ && head -5 workspace/data/citsci_train.csv && head -5 workspace/data/expert_train.csv && wc -l workspace/data/citsci_train.csv workspace/data/expert_train.csv",
+          "description": "List data dir and preview both CSVs"
+        },
+        "toolSafeSummary": "ls -la wo****ce/****/ && head -5 wo****ce/****/ci****sv && head -5 wo****ce/****/ex****sv &&",
+        "toolOutput": {
+          "status": "SUCCEEDED",
+          "structuredPayload": {
+            "stdout": "total 48168\ndrwxr-xr-x 2 root root     4096 Oct 26 02:13 .\ndrwxr-xr-x 5 root root     4096 Oct 26 02:13 ..\n-rwxr-xr-x 1 root root 46221503 Oct 26 02:13 citsci_train.csv\n-rwxr-xr-x 1 root root  3089238 Oct 26 02:13 expert_train.csv\nbase,channel,classification_id,user_name,user_id,user_ip,workflow_id,workflow_name,workflow_version,created_at,gold_standard,expert,subject_ids,x,y,tool,frame,details,tool_label,rx,ry,angle,closed,points,retired,Filename,file_log,file_rad,Ls,MY,L2_file,L1B_file,data_end_time,data_start_time,Set,package,file_stretch_0_75,file_stretch_0_85,source,session,viewport,started_at,user_agent,utc_offset,finished_at,live_project,interventions,user_language,user_group_ids,subject_dimensions,subject_selection_state,workflow_translation_id,seen_before,frame_file\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,362.5592346191406,395.2178955078125,0,0,[],Arch peak marker,,,,,,\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\"{'width': 1920, 'height': 1057}\",2022-06-28T16:48:06.881Z,\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\",14400,2022-06-28T16:48:29.392Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",38971.0,,080109120000/080110120000_A3.png\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,1255.423095703125,374.6034240722656,0,0,[],Arch peak marker,,,,,,\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\"{'width': 1920, 'height': 1057}\",2022-06-28T16:48:06.881Z,\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\",14400,2022-06-28T16:48:29.392Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",38971.0,,080109120000/080110120000_A3.png\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,1207.752197265625,383.6222534179688,0,0,[],Arch peak marker,,,,,,\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\"{'width': 1920, 'height': 1057}\",2022-06-28T16:48:06.881Z,\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\",14400,2022-06-28T16:48:29.392Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",38971.0,,080109120000/080110120000_A3.png\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,420.5374145507813,381.0454406738281,0,0,[],Arch peak marker,,,,,,\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\"{'width': 1920, 'height': 1057}\",2022-06-28T16:48:06.881Z,\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\",14400,2022-06-28T16:48:29.392Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",38971.0,,080109120000/080110120000_A3.png\nbase,channel,user_name,classification_id,user_id,user_ip,workflow_id,workflow_name,workflow_version,created_at,gold_standard,expert,subject_ids,x,y,tool,frame,details,tool_label,rx,ry,angle,closed,points,retired,Filename,file_log,file_rad,Ls,MY,L2_file,L1B_file,data_end_time,data_start_time,Set,package,file_stretch_0_75,file_stretch_0_85,source,session,viewport,started_at,user_agent,utc_offset,finished_at,live_project,interventions,user_language,user_group_ids,subject_dimensions,subject_selection_state,workflow_translation_id,seen_before,frame_file\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,362.828125,393.6875,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\"{'width': 2433, 'height': 1260}\",2022-08-07T01:39:17.738Z,\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\",25200,2022-08-07T01:39:33.683Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",57537.0,,080109120000/080110120000_A3.png\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,423.546875,381.2421875,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\"{'width': 2433, 'height': 1260}\",2022-08-07T01:39:17.738Z,\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\",25200,2022-08-07T01:39:33.683Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",57537.0,,080109120000/080110120000_A3.png\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,1253.171875,376.859375,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\"{'width': 2433, 'height': 1260}\",2022-08-07T01:39:17.738Z,\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\",25200,2022-08-07T01:39:33.683Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",57537.0,,080109120000/080110120000_A3.png\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,1217.515625,425.03125,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\"{'width': 2433, 'height': 1260}\",2022-08-07T01:39:17.738Z,\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\",25200,2022-08-07T01:39:33.683Z,True,\"{'opt_in': True, 'messageShown': False}\",en,[],\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\",\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\",57537.0,,080109120000/080110120000_A3.png\n   25857 …/data/citsci_train.csv\n    1941 …/data/expert_train.csv\n   27798 total\n",
+            "stderr": "",
+            "exitCode": 0,
+            "stdoutTruncated": false,
+            "stderrTruncated": false
+          },
+          "artifactRefs": [],
+          "generatedMessageCount": 0,
+          "generatedMessageKinds": []
+        },
+        "traceId": "c4e970c6a8eaaa9aca13674c72d0b820",
+        "spanId": "4b3a0c064b79ae8c",
+        "stepId": "turn-2",
+        "subjectId": "subject-1"
+      }
+    ],
+    "subsequent_model_visible_feedback": [
+      {
+        "location": "C:\\Project\\nextagent-bench\\runs\\20261025-195147-f17d59ed-c79fa2\\model-gateway\\20261026-092302-52f9f9\\exchanges.tar!evidence/mars-clouds-clustering/attempt-1/35454b275f644e0a91800bea90ba001e/request.json",
+        "message": {
+          "role": "tool",
+          "tool_call_id": "call_06c6a7fb0c914a99b54ca86f",
+          "content": "{\"stdout\":\"total 48168\\ndrwxr-xr-x 2 root root     4096 Oct 26 02:13 .\\ndrwxr-xr-x 5 root root     4096 Oct 26 02:13 ..\\n-rwxr-xr-x 1 root root 46221503 Oct 26 02:13 citsci_train.csv\\n-rwxr-xr-x 1 root root  3089238 Oct 26 02:13 expert_train.csv\\nbase,channel,classification_id,user_name,user_id,user_ip,workflow_id,workflow_name,workflow_version,created_at,gold_standard,expert,subject_ids,x,y,tool,frame,details,tool_label,rx,ry,angle,closed,points,retired,Filename,file_log,file_rad,Ls,MY,L2_file,L1B_file,data_end_time,data_start_time,Set,package,file_stretch_0_75,file_stretch_0_85,source,session,viewport,started_at,user_agent,utc_offset,finished_at,live_project,interventions,user_language,user_group_ids,subject_dimensions,subject_selection_state,workflow_translation_id,seen_before,frame_file\\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,362.5592346191406,395.2178955078125,0,0,[],Arch peak marker,,,,,,\\\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\\\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\\\"{'width': 1920, 'height': 1057}\\\",2022-06-28T16:48:06.881Z,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\\\",14400,2022-06-28T16:48:29.392Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",38971.0,,080109120000/080110120000_A3.png\\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,1255.423095703125,374.6034240722656,0,0,[],Arch peak marker,,,,,,\\\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\\\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\\\"{'width': 1920, 'height': 1057}\\\",2022-06-28T16:48:06.881Z,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\\\",14400,2022-06-28T16:48:29.392Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",38971.0,,080109120000/080110120000_A3.png\\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,1207.752197265625,383.6222534179688,0,0,[],Arch peak marker,,,,,,\\\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\\\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\\\"{'width': 1920, 'height': 1057}\\\",2022-06-28T16:48:06.881Z,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\\\",14400,2022-06-28T16:48:29.392Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",38971.0,,080109120000/080110120000_A3.png\\n080110120000,A3,423696622,laswett,2309767.0,14a0e95c4898a777008b,16805,arch_peak_default,11.29,2022-06-28 16:48:29 UTC,,,75332046,420.5374145507813,381.0454406738281,0,0,[],Arch peak marker,,,,,,\\\"{'id': 101781538, 'workflow_id': 16805, 'classifications_count': 20, 'created_at': '2022-04-26T23:35:56.223Z', 'updated_at': '2022-06-30T18:21:53.870Z', 'retired_at': '2022-06-30T18:21:53.863Z', 'subject_id': 75332046, 'retirement_reason': 'classification_count'}\\\",,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,4aa6402612b78576960482e2cfa87085561150b592aca3015a1a9900cc4eb32e,\\\"{'width': 1920, 'height': 1057}\\\",2022-06-28T16:48:06.881Z,\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\\\",14400,2022-06-28T16:48:29.392Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1341, 'clientHeight': 683, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-06-28T16:36:13.242Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",38971.0,,080109120000/080110120000_A3.png\\nbase,channel,user_name,classification_id,user_id,user_ip,workflow_id,workflow_name,workflow_version,created_at,gold_standard,expert,subject_ids,x,y,tool,frame,details,tool_label,rx,ry,angle,closed,points,retired,Filename,file_log,file_rad,Ls,MY,L2_file,L1B_file,data_end_time,data_start_time,Set,package,file_stretch_0_75,file_stretch_0_85,source,session,viewport,started_at,user_agent,utc_offset,finished_at,live_project,interventions,user_language,user_group_ids,subject_dimensions,subject_selection_state,workflow_translation_id,seen_before,frame_file\\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,362.828125,393.6875,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\\\"{'width': 2433, 'height': 1260}\\\",2022-08-07T01:39:17.738Z,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\\\",25200,2022-08-07T01:39:33.683Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",57537.0,,080109120000/080110120000_A3.png\\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,423.546875,381.2421875,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\\\"{'width': 2433, 'height': 1260}\\\",2022-08-07T01:39:17.738Z,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\\\",25200,2022-08-07T01:39:33.683Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",57537.0,,080109120000/080110120000_A3.png\\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,1253.171875,376.859375,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\\\"{'width': 2433, 'height': 1260}\\\",2022-08-07T01:39:17.738Z,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\\\",25200,2022-08-07T01:39:33.683Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",57537.0,,080109120000/080110120000_A3.png\\n080110120000,A3,marek_slipski,431174594,2185224.0,3a7ad715d4039f0b69dc,22124,demonstration,1.1,2022-08-07 01:40:07 UTC,,,75332046,1217.515625,425.03125,0,0,[],Arch peak marker,,,,,,,,080109120000/080110120000_A3_log.png,080109120000/080110120000_A3.png,15.51,29.0,https://atmos.nmsu.edu/PDS/data/MROM_2017/DATA/2008/200801/20080110/2008011012_DDR.TAB,https://atmos.nmsu.edu/PDS/data/MROM_1017/DATA/2008/200801/20080110/2008011012_RDR.TAB,2008-01-10 16:00:00,2008-01-10 12:00:00,set_my29_01,80109120000,080109120000/080110120000_A3_contrast_stretch_0_75.png,080109120000/080110120000_A3_contrast_stretch_0_85.png,api,cb5fab1195e94b108e0ae3c2e15cdab9bbb962e1c88262bc9eb95824f5479b90,\\\"{'width': 2433, 'height': 1260}\\\",2022-08-07T01:39:17.738Z,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36\\\",25200,2022-08-07T01:39:33.683Z,True,\\\"{'opt_in': True, 'messageShown': False}\\\",en,[],\\\"[{'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}, {'clientWidth': 1728, 'clientHeight': 880, 'naturalWidth': 1728, 'naturalHeight': 880}]\\\",\\\"{'retired': False, 'selected_at': '2022-08-07T01:32:54.635Z', 'already_seen': False, 'selection_state': 'normal', 'finished_workflow': False, 'user_has_finished_workflow': False}\\\",57537.0,,080109120000/080110120000_A3.png\\n   25857 /opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace/data/citsci_train.csv\\n    1941 /opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace/data/expert_train.csv\\n   27798 total\\n\",\"stderr\":\"\",\"exitCode\":0,\"stdoutTruncated\":false,\"stderrTruncated\":false}"
+        }
+      }
+    ],
+    "comparison_limit": "Normalized/executed values are recorded diagnostic projections. A mismatch may be caused by logging redaction/transformation; it alone does not prove runtime argument corruption.",
+    "normalized_arguments_equal_wire": [
+      true
+    ],
+    "executed_input_equal_wire": [
+      true
+    ],
+    "evidence_gaps": []
+  }
+]

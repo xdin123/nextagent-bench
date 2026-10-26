@@ -1,0 +1,37 @@
+{
+  "registered": [
+    "attitude-controller-planner",
+    "flight-plan-parser",
+    "motor-model-dynamics",
+    "plot-quadrotor",
+    "position-controller-trajectory-planner",
+    "stepinfo-3d"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "attitude-controller-planner"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "flight-plan-parser"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "motor-model-dynamics"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "plot-quadrotor"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "position-controller-trajectory-planner"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "stepinfo-3d"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

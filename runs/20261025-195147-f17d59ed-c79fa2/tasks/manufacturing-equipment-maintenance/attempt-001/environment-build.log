@@ -1,0 +1,89 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 604B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 DONE 0.0s
+
+#5 [2/6] WORKDIR /app
+#5 CACHED
+
+#6 [3/6] RUN apt-get update && apt-get install -y --no-install-recommends     bash     ca-certificates   && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 3.20MB 0.1s done
+#7 DONE 0.2s
+
+#8 [4/6] RUN pip install --no-cache-dir     pandas==2.2.3     pytest==8.4.1
+#8 2.745 Collecting pandas==2.2.3
+#8 3.421   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+#8 3.997 Collecting pytest==8.4.1
+#8 4.158   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+#8 4.686 Collecting numpy>=1.26.0 (from pandas==2.2.3)
+#8 4.849   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 5.020 Collecting python-dateutil>=2.8.2 (from pandas==2.2.3)
+#8 5.184   Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+#8 5.381 Collecting pytz>=2020.1 (from pandas==2.2.3)
+#8 5.542   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+#8 5.732 Collecting tzdata>=2022.7 (from pandas==2.2.3)
+#8 5.902   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 6.066 Collecting iniconfig>=1 (from pytest==8.4.1)
+#8 6.228   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#8 6.401 Collecting packaging>=20 (from pytest==8.4.1)
+#8 6.566   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#8 6.735 Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+#8 6.898   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+#8 7.072 Collecting pygments>=2.7.2 (from pytest==8.4.1)
+#8 7.233   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#8 7.401 Collecting six>=1.6 (from python-dateutil>=2.8.2->pandas==2.2.3)
+#8 7.565   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 7.736 Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+#8 15.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 1.6 MB/s eta 0:00:00
+#8 15.77 Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+#8 16.18 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#8 16.34 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 25.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 1.9 MB/s eta 0:00:00
+#8 25.54 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#8 25.79 Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+#8 25.97 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#8 26.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.5 MB/s eta 0:00:00
+#8 26.96 Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+#8 27.18 Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+#8 27.68 Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+#8 28.06 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 28.17 Installing collected packages: pytz, tzdata, six, pygments, pluggy, packaging, numpy, iniconfig, python-dateutil, pytest, pandas
+#8 35.76 Successfully installed iniconfig-2.3.1 numpy-2.5.4 packaging-26.3 pandas-2.2.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.1 python-dateutil-3.0.0 pytz-2026.5 six-1.17.0 tzdata-2026.5
+#8 35.76 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 36.71 
+#8 36.71 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#8 36.71 [notice] To update, run: pip install --upgrade pip
+#8 DONE 36.9s
+
+#9 [5/6] RUN mkdir -p /app/data /app/output
+#9 DONE 0.3s
+
+#10 [6/6] COPY data/ /app/data/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 4.9s done
+#11 exporting manifest sha256:0078fab390d15a61923cb7cb89c07a0da778e6ff2949b4cc2e7f2644aa0c9517 0.0s done
+#11 exporting config sha256:fea36d14c99598eb6459e27633682d0d17a8c7653c6f162c26858c99418c20d2 done
+#11 exporting attestation manifest sha256:19a5f383eab2d3f0e5a080a5f77aff5cc81406b6d95460e6983c521de95c1bba 0.0s done
+#11 exporting manifest list sha256:6d6f28f7e27181e8f0ec4eed61416e8ffc98aa48a23b73155a2bd58e2305554e done
+#11 naming to docker.io/nextagent-bench/environment:41234d791ac64aebfb16 done
+#11 unpacking to docker.io/nextagent-bench/environment:41234d791ac64aebfb16
+#11 unpacking to docker.io/nextagent-bench/environment:41234d791ac64aebfb16 1.2s done
+#11 DONE 6.2s

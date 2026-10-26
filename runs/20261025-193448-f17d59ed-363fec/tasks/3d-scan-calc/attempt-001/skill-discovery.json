@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "mesh-analysis"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "mesh-analysis"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

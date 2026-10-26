@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "dc-power-flow",
+    "economic-dispatch",
+    "power-flow-data"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "dc-power-flow"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "economic-dispatch"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "power-flow-data"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

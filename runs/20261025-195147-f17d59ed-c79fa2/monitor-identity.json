@@ -1,0 +1,12 @@
+{
+  "automation_id": "nextagent",
+  "status": "ACTIVE",
+  "interval_minutes": 15,
+  "updated_at": "2026-10-26T03:38:27.983224+00:00",
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "actual_runner_pid": 37716,
+  "launcher_pid": 39824,
+  "stdout": "launches/20261026-113636-1670.stdout.log",
+  "stderr": "launches/20261026-113636-1670.stderr.log",
+  "scope": "Original incomplete tasks only. All finished-task retests require approval."
+}

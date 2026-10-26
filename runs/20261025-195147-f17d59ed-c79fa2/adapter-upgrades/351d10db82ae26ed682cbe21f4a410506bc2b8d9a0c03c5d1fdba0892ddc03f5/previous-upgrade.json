@@ -1,0 +1,13 @@
+{
+  "from_sha": "c061278083dd48be77590d81afde8ed5b37fc578f598cc7570c58723582fcd7d",
+  "to_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "profile_sha": "307952176eeea4d02c12954e30489711f886af9bf08a5bfb668c5afbab1e58a2",
+  "source": "adapter-upgrades/4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064/source",
+  "at": "2026-10-25T12:04:48.621086+00:00",
+  "authorization": "User requested 2 concurrent tasks, observe and ramp to 3/4, continue same batch incrementally.",
+  "scope": "Runtime task admission and private shared model concurrency control. Product, model, task snapshot and frozen scoring inputs unchanged.",
+  "preserved_result_hashes": {
+    "tasks\\3d-scan-calc\\attempt-001\\result.json": "8ab44841b8291b597f624e0464b5404097693798a192d9b4b4c111a77fa47989",
+    "tasks\\ada-bathroom-plan-repair\\attempt-001\\result.json": "1ac9619547e81ca42146b376132e40dd0e4547cc644a0c0a7bd739657d5b500e"
+  }
+}

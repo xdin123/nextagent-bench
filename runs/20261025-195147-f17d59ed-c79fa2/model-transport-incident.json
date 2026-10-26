@@ -1,0 +1,30 @@
+{
+  "status": "ORIGINAL_ONLY_RESUMED_NETWORK_RETRIES_CANCELLED_BY_USER",
+  "at": "2026-10-26T03:30:43.728166+00:00",
+  "previous_halt": {
+    "task": "parallel-tfidf-search",
+    "phase": "workspace_preflight",
+    "reason": "Framework tool preflight failed: {\"status\": \"REQUEST_FAILED\", \"payload\": {\"rootMessageId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"requestId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"runId\": \"run-ce569886-8e7a-4aa2-9098-7544a039f426\", \"requestContextId\": \"context-9503b979-325d-417e-b29c-f1b05ff35e2b\", \"status\": \"FAILED\", \"content\": \"Request failed: Model invocation failed safely.\", \"text\": \"Request failed: Model invocation failed safely.\", \"contentType\": \"PLAIN_TEXT\", \"metadata\": {\"accumulated\": true}, \"code\": \"MODEL_PROVIDER_UNAVAILABLE\", \"message\": \"The model service is temporarily unavailable. Please retry later.\", \"category\": \"UNAVAILABLE\", \"retryable\": false, \"hookResults\": [{\"hookInvocationId\": \"hook-6f1626c4-8c99-414a-b5f4-1d9057b0b755\", \"hookId\": \"user-query-memory-recall\", \"stage\": \"BEFORE_MODEL_INVOKE\", \"status\": \"SUCCESS\", \"failureMode\": \"CONTINUE\", \"outcome\": \"PASS\"}]}, \"sequence\": 8}",
+    "at": "2026-10-26T02:25:29.081036+00:00"
+  },
+  "original_runner_and_gateway_closed": true,
+  "old_gateway_metrics": {
+    "200": 143,
+    "502": 55
+  },
+  "safe_halt_code": "MODEL_PROVIDER_UNAVAILABLE",
+  "attribution": "Past cross-service connectivity failure; no evidence of a Codex-specific sandbox restriction. Current host and fresh Docker HEAD checks succeeded; authenticated same-model Docker probeHTTP200. No global proxy, Docker or WSL settings changed.",
+  "network_plan": "network-retry-plan.json",
+  "recovery_state": "network-recovery-state.json",
+  "coordinator_pid": 27708,
+  "launcher_pid": 39824,
+  "stdout": "launches/20261026-112805-7375-network-recovery.stdout.log",
+  "stderr": "launches/20261026-112805-7375-network-recovery.stderr.log",
+  "original_result_hashes_preserved": true,
+  "native_trace_export": "exports\\20261026T031014814864Z",
+  "precise_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
+  "last_updated_at": "2026-10-26T03:38:27.983224+00:00",
+  "actual_runner_pid": 37716,
+  "retry_approval_policy": "retry-approval-policy.json",
+  "resume_scope": "29 originally unfinished/unstarted tasks;21 network retests cancelled before any extra Agent execution."
+}

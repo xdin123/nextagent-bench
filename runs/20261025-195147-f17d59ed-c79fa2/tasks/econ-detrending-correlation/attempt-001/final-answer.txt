@@ -1,0 +1,11 @@
+The analysis is complete. The answer file contains `0.99250`.
+
+**Summary of what was done:**
+
+1. **Extracted** PCE (Table 10, column 1 "Total") and PFI (Table 12, column 1 "Total") — annual values for 1973–2023, plus 2024 as the average of the three available quarters (PCE: 19,678.6; PFI: 5,201.1, in billions).
+2. **Deflated** each nominal series by the CPI (indexed 2024=1) to get real values.
+3. **Applied the HP filter** (λ = 100) to the natural log of each real series to extract the cyclical components.
+4. **Computed the Pearson correlation** between the two cyclical components: **0.992495664984462**.
+5. **Wrote** the result rounded to 5 decimal places to `workspace/answer.txt`: `0.99250`.
+
+The very high correlation (~0.99) is expected: consumption and investment are both strongly procyclical, so their HP-detrended components move together almost in lockstep over the business cycle.

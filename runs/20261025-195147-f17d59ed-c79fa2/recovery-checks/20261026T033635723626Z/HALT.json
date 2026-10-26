@@ -1,0 +1,6 @@
+{
+  "task": "parallel-tfidf-search",
+  "phase": "workspace_preflight",
+  "reason": "Framework tool preflight failed: {\"status\": \"REQUEST_FAILED\", \"payload\": {\"rootMessageId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"requestId\": \"request-d780473d-bda9-40c1-a687-b66485597729\", \"runId\": \"run-ce569886-8e7a-4aa2-9098-7544a039f426\", \"requestContextId\": \"context-9503b979-325d-417e-b29c-f1b05ff35e2b\", \"status\": \"FAILED\", \"content\": \"Request failed: Model invocation failed safely.\", \"text\": \"Request failed: Model invocation failed safely.\", \"contentType\": \"PLAIN_TEXT\", \"metadata\": {\"accumulated\": true}, \"code\": \"MODEL_PROVIDER_UNAVAILABLE\", \"message\": \"The model service is temporarily unavailable. Please retry later.\", \"category\": \"UNAVAILABLE\", \"retryable\": false, \"hookResults\": [{\"hookInvocationId\": \"hook-6f1626c4-8c99-414a-b5f4-1d9057b0b755\", \"hookId\": \"user-query-memory-recall\", \"stage\": \"BEFORE_MODEL_INVOKE\", \"status\": \"SUCCESS\", \"failureMode\": \"CONTINUE\", \"outcome\": \"PASS\"}]}, \"sequence\": 8}",
+  "at": "2026-10-26T02:25:29.081036+00:00"
+}

@@ -1,0 +1,194 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.6
+collecting ... collected 9 items
+
+../../../../../../../verifier/test_outputs.py::test_form_student_name FAILED [ 11%]
+../../../../../../../verifier/test_outputs.py::test_redact_student_id FAILED [ 22%]
+../../../../../../../verifier/test_outputs.py::test_form_school_email FAILED [ 33%]
+../../../../../../../verifier/test_outputs.py::test_form_date_of_birth FAILED [ 44%]
+../../../../../../../verifier/test_outputs.py::test_form_phone_number FAILED [ 55%]
+../../../../../../../verifier/test_outputs.py::test_form_appeal_reason FAILED [ 66%]
+../../../../../../../verifier/test_outputs.py::test_signature_added FAILED [ 77%]
+../../../../../../../verifier/test_outputs.py::test_todays_date_added FAILED [ 88%]
+../../../../../../../verifier/test_outputs.py::test_labels_not_covered FAILED [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_form_student_name ____________________________
+
+pdf_text = ''
+
+    def test_form_student_name(pdf_text):
+        """Form filled with full name 'Jinya Jiang'."""
+>       assert text_contains(pdf_text, "Jinya Jiang"), "Student name 'Jinya Jiang' not found"
+E       AssertionError: Student name 'Jinya Jiang' not found
+E       assert False
+E        +  where False = text_contains('', 'Jinya Jiang')
+
+/verifier/test_outputs.py:164: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+Warning: /root/output/output.pdf not found
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+____________________________ test_redact_student_id ____________________________
+
+pdf_text = ''
+
+    def test_redact_student_id(pdf_text):
+        """Student ID redacted, showing only last 4 digits (5678)."""
+        # Full PID should not be visible
+        assert not re.search(r"\bA\d{8}\b", pdf_text), "Full student PID should be redacted"
+        # 'A' prefix should also be redacted - only last 4 digits shown
+        assert not re.search(r"\bA\*+\d{4}\b", pdf_text), "'A' prefix should be redacted (only last 4 digits)"
+        # Last 4 digits must be present
+>       assert "5678" in pdf_text, "Last 4 digits (5678) not found"
+E       AssertionError: Last 4 digits (5678) not found
+E       assert '5678' in ''
+
+/verifier/test_outputs.py:182: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+____________________________ test_form_school_email ____________________________
+
+pdf_text = ''
+
+    def test_form_school_email(pdf_text):
+        """Form filled with school email."""
+        # Handle OCR spacing like "jiang@ ucsd.edu" or "jiang @ucsd.edu"
+>       assert text_contains(pdf_text, "jiang@ucsd.edu"), "School email 'jiang@ucsd.edu' not found"
+E       AssertionError: School email 'jiang@ucsd.edu' not found
+E       assert False
+E        +  where False = text_contains('', 'jiang@ucsd.edu')
+
+/verifier/test_outputs.py:192: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+___________________________ test_form_date_of_birth ____________________________
+
+pdf_text = ''
+
+    def test_form_date_of_birth(pdf_text):
+        """Form filled with correct DOB."""
+>       assert "2004/06/18" in pdf_text, "Correct DOB (2004/06/18) not found"
+E       AssertionError: Correct DOB (2004/06/18) not found
+E       assert '2004/06/18' in ''
+
+/verifier/test_outputs.py:201: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+____________________________ test_form_phone_number ____________________________
+
+pdf_text = ''
+
+    def test_form_phone_number(pdf_text):
+        """Form filled with phone number."""
+        phone_pattern = r"\(253\)\s*798-6666"
+        count = count_occurrences(pdf_text, phone_pattern)
+>       assert count >= 1, "Phone number not found"
+E       AssertionError: Phone number not found
+E       assert 0 >= 1
+
+/verifier/test_outputs.py:212: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+___________________________ test_form_appeal_reason ____________________________
+
+pdf_text = ''
+
+    def test_form_appeal_reason(pdf_text):
+        """Appeal reason filled with required content."""
+        required_terms = ["health insurance", "waiver", "coverage", "Spring 2026", "Jan", "June"]
+        # Use OCR-tolerant matching
+        missing = [term for term in required_terms if not text_contains(pdf_text, term)]
+>       assert not missing, f"Appeal reason missing: {missing}"
+E       AssertionError: Appeal reason missing: ['health insurance', 'waiver', 'coverage', 'Spring 2026', 'Jan', 'June']
+E       assert not ['health insurance', 'waiver', 'coverage', 'Spring 2026', 'Jan', 'June']
+
+/verifier/test_outputs.py:224: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+_____________________________ test_signature_added _____________________________
+
+pdf_text = ''
+
+    def test_signature_added(pdf_text):
+        """Signature added (name appears at least twice - once in form, once as signature)."""
+        # Use OCR-aware counting to handle spacing issues like "J inya J iang"
+        count = count_occurrences_ocr(pdf_text, "Jinya Jiang")
+>       assert count >= 2, f"Signature not found (name should appear at least twice, found {count})"
+E       AssertionError: Signature not found (name should appear at least twice, found 0)
+E       assert 0 >= 2
+
+/verifier/test_outputs.py:235: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+____________________________ test_todays_date_added ____________________________
+
+pdf_text = ''
+
+    def test_todays_date_added(pdf_text):
+        """Today's date added (Pacific timezone, ±1 day tolerance)."""
+        from datetime import datetime, timezone
+    
+        pacific_offset = timezone(timedelta(hours=-8))
+        today = datetime.now(pacific_offset).date()
+    
+        candidates = {today, today - timedelta(days=1), today + timedelta(days=1)}
+    
+        date_patterns = []
+        for d in candidates:
+            date_patterns.extend(
+                [
+                    d.isoformat(),
+                    d.strftime("%Y/%m/%d"),
+                    d.strftime("%m/%d/%Y"),
+                    d.strftime("%d/%m/%Y"),
+                ]
+            )
+    
+        found = any(pat in pdf_text for pat in date_patterns)
+>       assert found, f"Today's date not found. Expected one of: {date_patterns}"
+E       AssertionError: Today's date not found. Expected one of: ['2026-10-26', '2026/10/26', '10/26/2026', '26/10/2026', '2026-10-24', '2026/10/24', '10/24/2026', '24/10/2026', '2026-10-25', '2026/10/25', '10/25/2026', '25/10/2026']
+E       assert False
+
+/verifier/test_outputs.py:263: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+___________________________ test_labels_not_covered ____________________________
+
+pdf_text = ''
+
+    def test_labels_not_covered(pdf_text):
+        """Original form labels preserved (not covered by edits)."""
+        required_labels = ["STUDENT NAME", "STUDENT PID", "UCSD E-MAIL", "DATE OF BIRTH", "PHONE NUMBER", "Reason for appeal", "Date"]
+    
+        # Use OCR-tolerant matching for labels
+        missing = [label for label in required_labels if not text_contains(pdf_text, label)]
+>       assert not missing, f"Form labels covered/removed: {missing}"
+E       AssertionError: Form labels covered/removed: ['STUDENT NAME', 'STUDENT PID', 'UCSD E-MAIL', 'DATE OF BIRTH', 'PHONE NUMBER', 'Reason for appeal', 'Date']
+E       assert not ['STUDENT NAME', 'STUDENT PID', 'UCSD E-MAIL', 'DATE OF BIRTH', 'PHONE NUMBER', 'Reason for appeal', ...]
+
+/verifier/test_outputs.py:276: AssertionError
+---------------------------- Captured stdout setup -----------------------------
+pypdf extraction failed: [Errno 2] No such file or directory: '/root/output/output.pdf'
+Falling back to OCR text extraction
+=========================== short test summary info ============================
+FAILED ../../../../../../../verifier/test_outputs.py::test_form_student_name
+FAILED ../../../../../../../verifier/test_outputs.py::test_redact_student_id
+FAILED ../../../../../../../verifier/test_outputs.py::test_form_school_email
+FAILED ../../../../../../../verifier/test_outputs.py::test_form_date_of_birth
+FAILED ../../../../../../../verifier/test_outputs.py::test_form_phone_number
+FAILED ../../../../../../../verifier/test_outputs.py::test_form_appeal_reason
+FAILED ../../../../../../../verifier/test_outputs.py::test_signature_added - ...
+FAILED ../../../../../../../verifier/test_outputs.py::test_todays_date_added
+FAILED ../../../../../../../verifier/test_outputs.py::test_labels_not_covered
+============================== 9 failed in 0.13s ===============================

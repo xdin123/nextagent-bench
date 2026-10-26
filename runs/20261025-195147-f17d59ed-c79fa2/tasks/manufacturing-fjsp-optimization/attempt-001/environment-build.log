@@ -1,0 +1,45 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 602B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.35kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#5 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /app
+#6 CACHED
+
+#7 [3/6] RUN apt-get update && apt-get install -y --no-install-recommends     bash     ca-certificates   && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir     pandas==2.2.3     pytest==8.4.1
+#8 CACHED
+
+#9 [5/6] RUN mkdir -p /app/data /app/output
+#9 CACHED
+
+#10 [6/6] COPY data/ /app/data/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.1s done
+#11 exporting manifest sha256:dcaf4b2a86f29f61886cb373c5766a61613458a201d7beb279b06285418c89fd 0.0s done
+#11 exporting config sha256:af6725ea95b39699781e5aff9a96fafe109063097a82b0755c68df06bd578206 done
+#11 exporting attestation manifest sha256:01e1ef7a87c4d10242141b706b4d29b9ed04cf1cb2ced78239ab39725981f192 0.0s done
+#11 exporting manifest list sha256:33530252e79ba0d69131187ccd3498c564c99619ed073c0350e844f29378def9 0.0s done
+#11 naming to docker.io/nextagent-bench/environment:4bbd057b29ae72ea8e83 done
+#11 unpacking to docker.io/nextagent-bench/environment:4bbd057b29ae72ea8e83 0.0s done
+#11 DONE 0.1s

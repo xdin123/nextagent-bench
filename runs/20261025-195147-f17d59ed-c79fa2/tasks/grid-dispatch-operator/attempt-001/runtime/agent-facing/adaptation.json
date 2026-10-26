@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "dc-power-flow",
+      "directory": "dc-power-flow",
+      "description": "DC power flow analysis for power systems. Use when computing power flows using DC approximation, building susceptance matrices, calculating line flows and loading percentages, or performing sensitivity analysis on transmission networks.",
+      "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e"
+    },
+    {
+      "name": "economic-dispatch",
+      "directory": "economic-dispatch",
+      "description": "Generator economic dispatch and cost optimization for power systems. Use when minimizing generation costs, computing optimal generator setpoints, calculating operating margins, or working with generator cost functions.",
+      "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f"
+    },
+    {
+      "name": "power-flow-data",
+      "directory": "power-flow-data",
+      "description": "Power system network data formats and topology. Use when parsing bus, generator, and branch data for power flow analysis.",
+      "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+    }
+  ],
+  "verifier_sha": "e5e6feff7539e874cd070669556b03bd96d88ff91755973262dfec6cae9c6c05",
+  "prompt_sha": "a5326aca798a97efa87ee39d11a7dd548963e87ff5ab804c8f0bd421044e327c"
+}

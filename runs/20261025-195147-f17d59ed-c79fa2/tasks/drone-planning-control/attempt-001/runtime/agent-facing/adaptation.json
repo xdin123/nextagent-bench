@@ -1,0 +1,69 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "attitude-controller-planner",
+      "directory": "attitude-controller-planner",
+      "description": "Use this skill when implementing the inner control loop for a quadrotor — attitude (roll/pitch/yaw) PID control and attitude planning (converting desired acceleration to desired Euler angles). Covers gain layout, integral reset pattern, and the attitude planner inverse kinematics.",
+      "sha256": "e2f325e78f3f31db9d39857d2f7a6e87cacb81c7d60d570a250e7c576495a19f"
+    },
+    {
+      "name": "flight-plan-parser",
+      "directory": "flight-plan-parser",
+      "description": "Use this skill when converting natural language flight commands into waypoints and timing for a drone simulator. Covers parsing commands like \"Take off to X m height in Y seconds\", \"Hover at X m height for Y seconds\", \"Fly from (x,y,z) to (x',y',z') in T seconds\", and \"Land from X m height in Y seconds\" into structured (4×n) waypoint arrays and segment mode lists.",
+      "sha256": "74acf1d6c9d8ebbebdf5509169a6bdde674faf874968ec55e383e56a11b1f127"
+    },
+    {
+      "name": "motor-model-dynamics",
+      "directory": "motor-model-dynamics",
+      "description": "Use this skill when simulating quadrotor physical dynamics — mapping desired thrust/moments to individual motor RPMs via a propeller allocation matrix, applying first-order motor lag, and integrating the nonlinear equations of motion (translational and rotational) using RK45.",
+      "sha256": "f4e773904e97fc13334b4001bb6c4c63be5867584297e2167dd4b6e27b0602ca"
+    },
+    {
+      "name": "plot-quadrotor",
+      "directory": "plot-quadrotor",
+      "description": "Use this skill when visualising drone simulation results. Produces three matplotlib figures — desired vs actual trajectories, instantaneous error, and cumulative absolute error — for all 5 state groups (position, orientation, velocity, angular velocity, acceleration). Saves figures to a plots/ directory automatically.",
+      "sha256": "7923b718e673b1f7551c9834ad699ae30f57c336ed70394b80f00bf849f1de19"
+    },
+    {
+      "name": "position-controller-trajectory-planner",
+      "directory": "position-controller-trajectory-planner",
+      "description": "Use this skill when implementing the outer control loop for a quadrotor — position PID control (position/velocity error → thrust and desired acceleration) and trajectory planning from flight-plan waypoints (takeoff, hover, fly, land segments → smooth 15-row state matrix).",
+      "sha256": "9b98e389d748e41d47bac9499134ef3ce447a255baaada514b3d811ba724f8b7"
+    },
+    {
+      "name": "stepinfo-3d",
+      "directory": "stepinfo-3d",
+      "description": "Use this skill when computing 3D step-response performance metrics for point-to-point drone flight — rise time, settling time, percent overshoot, and steady-state error based on Euclidean distance to the final target. Use instead of 1D stepinfo for any flight where all three position axes move simultaneously.",
+      "sha256": "e139d7322aaaeeb261b2dd008920435caa375f9632137c8acc7a642605477c32"
+    }
+  ],
+  "verifier_sha": "f9076fdbe9519a47721db33c0ff4e2ce18177088f0735e68e5e30284a767c71f",
+  "prompt_sha": "05f01d7ec0c54b390fa2ab54f394714717162782de92a2ee64c69736a5935964"
+}

@@ -1,0 +1,85 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "1.0.0",
+  "reportId": "f7667331-6129-494d-bfde-1917addeed63",
+  "timestamp": "2026-10-25T15:32:08.111215+00:00",
+  "generatedBy": "pytest",
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "9.1.1"
+    },
+    "summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "flaky": 0,
+      "suites": 3,
+      "start": 1792942311267,
+      "stop": 1792942328110,
+      "duration": 16843
+    },
+    "environment": {
+      "osPlatform": "linux",
+      "osRelease": "6.18.54.1-microsoft-standard-WSL2",
+      "osVersion": "#1 SMP PREEMPT_DYNAMIC Tue Oct  6 19:13:07 UTC 2026"
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestSchema::test_report_schema",
+        "status": "passed",
+        "duration": 13,
+        "start": 1792942312002,
+        "stop": 1792942312015,
+        "suite": [
+          "test_outputs.py",
+          "TestSchema"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestFeasibility::test_internal_consistency",
+        "status": "passed",
+        "duration": 1,
+        "start": 1792942312016,
+        "stop": 1792942312017,
+        "suite": [
+          "test_outputs.py",
+          "TestFeasibility"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestOptimality::test_costs_near_optimal",
+        "status": "passed",
+        "duration": 16091,
+        "start": 1792942312017,
+        "stop": 1792942328108,
+        "suite": [
+          "test_outputs.py",
+          "TestOptimality"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py"
+      },
+      {
+        "name": "test_outputs.py::TestOptimality::test_cost_reduction_non_negative",
+        "status": "passed",
+        "duration": 2,
+        "start": 1792942328108,
+        "stop": 1792942328110,
+        "suite": [
+          "test_outputs.py",
+          "TestOptimality"
+        ],
+        "retries": 0,
+        "filePath": "test_outputs.py"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-26T02:33:37.717641+00:00",
+  "report_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_adapter_sha": "c061278083dd48be77590d81afde8ed5b37fc578f598cc7570c58723582fcd7d",
+  "runtime_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "target_concurrency": 4,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "status": "HALTED",
+  "planned_tasks": 87,
+  "attempts": 61,
+  "first_attempt_outcomes": {
+    "PASSED": 7,
+    "EXECUTION_FAILED": 11,
+    "TIMEOUT": 6,
+    "ENVIRONMENT_ERROR": 22,
+    "TASK_FAILED": 8,
+    "PREFLIGHT_ERROR": 3,
+    "INTERRUPTED": 1,
+    "VERIFIER_ERROR": 1,
+    "PENDING": 28
+  },
+  "scored_tasks": 32,
+  "coverage": 0.367816091954023,
+  "full_suite_score": null,
+  "score_sum": 7.6,
+  "note": "First valid scored attempt is primary. A scored failure is never replaced by a later success. All invalid/interrupted attempts remain visible."
+}

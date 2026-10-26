@@ -1,0 +1,57 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "contribution-analysis",
+      "directory": "contribution-analysis",
+      "description": "Calculate the relative contribution of different factors to a response variable using R² decomposition. Use when you need to quantify how much each factor explains the variance of an outcome.",
+      "sha256": "ec9531b6b06a4e7a699da04bf0e86279af14cc0b7aba77476adbfc4766015c63"
+    },
+    {
+      "name": "meteorology-driver-classification",
+      "directory": "meteorology-driver-classification",
+      "description": "Classify environmental and meteorological variables into driver categories for attribution analysis. Use when you need to group multiple variables into meaningful factor categories.",
+      "sha256": "5faebbffdf7c5a5a46c22a11b08d5950f378e71f3a4c967c9495ffb70f64fc2f"
+    },
+    {
+      "name": "pca-decomposition",
+      "directory": "pca-decomposition",
+      "description": "Reduce dimensionality of multivariate data using PCA with varimax rotation. Use when you have many correlated variables and need to identify underlying factors or reduce collinearity.",
+      "sha256": "651fe7e01b2bc9abcf21a51d213398ef27c225ad2ea1a49b5bd681e934015ac2"
+    },
+    {
+      "name": "trend-analysis",
+      "directory": "trend-analysis",
+      "description": "Detect long-term trends in time series data using parametric and non-parametric methods. Use when determining if a variable shows statistically significant increase or decrease over time.",
+      "sha256": "eec026677dd73c7407170d01fc2358ba10dacfd4b8b3b9bf669b8f922491514f"
+    }
+  ],
+  "verifier_sha": "3c5baf21d06f82fd4b25a3111b82e9308a9e479980c98bb87832f8b8c21ad29a",
+  "prompt_sha": "dc7b7f6c9f289fe3171900db1d5a8306a98f53ad011ec22c081dbacd76f2f417"
+}

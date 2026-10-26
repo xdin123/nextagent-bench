@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "reflow-machine-maintenance-guidance",
+      "directory": "reflow-machine-maintenance-guidance",
+      "description": "This skill should be considered when you need to answer reflow machine maintenance questions or provide detailed guidance based on thermocouple data, MES data or defect data and reflow technical handbooks. This skill covers how to obtain important concepts, calculations, definitions, thresholds, and others from the handbook and how to do cross validations between handbook and datasets.",
+      "sha256": "133b383e8c2d573c8c834b7d4c4acfd8a6fba688356ed5ad649f6dd0c1a678fb"
+    },
+    {
+      "name": "reflow-profile-compliance-toolkit",
+      "directory": "reflow-profile-compliance-toolkit",
+      "description": "Deterministic handbook-grounded retrieval and thermocouple computations for reflow profile compliance outputs such as ramp, TAL, peak, feasibility, and selection.",
+      "sha256": "b2c9d69cf27bb97c00ad80c3825cce5cb8904a68a2bd929366fdc551a2591d83"
+    }
+  ],
+  "verifier_sha": "9d801c4003c57596d42b953c58470a6381221893e0fe42b2ce2af71f64076126",
+  "prompt_sha": "a32b3a3c65c70b2d98a98221c18fb9cbb5f1809cb8af1eb6a9294a4b18ff7f22"
+}

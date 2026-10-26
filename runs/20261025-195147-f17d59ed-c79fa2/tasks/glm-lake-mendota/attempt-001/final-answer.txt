@@ -1,0 +1,33 @@
+## Progress Summary
+
+### Completed (verified)
+
+**Setup & baseline**
+- Loaded the GLM skills and confirmed all inputs are present: `workspace/bcs/` (meteo, yahara, pheasant, outflow), `workspace/field_temp_oxy.csv`, and `workspace/glm3.nml`.
+- Backed up the original config to `temp/glm3.nml.baseline`.
+- Ran the baseline GLM simulation successfully (~30 s per run). Output is written to `workspace/output/output.nc`, spanning **2009-01-01 → 2015-12-30** (hourly), as required.
+- **Baseline RMSE = 2.0851 °C** (23,394/23,394 obs matched) — just above the < 2 °C target.
+
+**Diagnosis**
+- Bias is a **summer warm bias** (Jun–Sep RMSE 2.5–2.65 °C; winter 0.5–1.3 °C), concentrated in the 10–20 m metalimnion.
+- A summer profile shows the **thermocline is too diffuse and the hypolimnion (13–25 m) is ~4 °C too warm**.
+
+**Single-parameter sensitivity tests (all worse than 2.0851):**
+- `Kw = 0.4` → ~2.41
+- `wind_factor = 1.1` → ~3.18
+- `lw_factor = 0.9` → worse
+- `coef_mix_hyp = 0.3` → ~2.116
+- `sed_temp_mean = 5,8,8` (deep benthic 13→8) → **2.0851 (no change)** — so the benthic heat flux is not the driver.
+
+**Bug fixes:** Corrected my vectorized RMSE script (4-D array indexing, masked `time` array, `pd.to_timedelta` for arrays). These were the cause of the earlier background-optimization crash.
+
+### Incomplete
+- **RMSE < 2 °C not yet achieved.** The baseline sits near a local minimum in every single-parameter direction tested, so no single lever has beaten 2.0851 °C. A **joint multi-parameter search** (Nelder-Mead, now fixed) is the next step but has not produced a verified result yet.
+- Final parameters have **not** been saved to `workspace/glm3.nml`, and the final run has **not** been re-verified.
+
+### Current file state
+- `workspace/glm3.nml` currently holds baseline values except `sed_temp_mean = 5, 8, 8` (from the last test).
+- `workspace/output/output.nc` holds the output of that last run (RMSE 2.0851 °C).
+- `temp/glm3.nml.baseline` preserves the original config for restoration.
+
+**Bottom line:** The pipeline runs end-to-end and the baseline is 2.0851 °C (just over target). The remaining work is the joint calibration to push RMSE below 2 °C and then write/verify the final parameters.

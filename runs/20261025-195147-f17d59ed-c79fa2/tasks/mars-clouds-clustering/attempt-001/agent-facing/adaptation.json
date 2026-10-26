@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "custom-distance-metrics",
+      "directory": "custom-distance-metrics",
+      "description": "Define custom distance/similarity metrics for clustering and ML algorithms. Use when working with DBSCAN, sklearn, or scipy distance functions with application-specific metrics.",
+      "sha256": "da204a3ce17e6a7e2eeb72e744346228284de017cb4d5c8a7082b0b37dd41370"
+    },
+    {
+      "name": "parallel-processing",
+      "directory": "parallel-processing",
+      "description": "Parallel processing with joblib for grid search and batch computations. Use when speeding up computationally intensive tasks across multiple CPU cores.",
+      "sha256": "28428c421676d35e1342ff2240e08ccbe54ce5df6326424b35a9fa02bc270cca"
+    },
+    {
+      "name": "pareto-optimization",
+      "directory": "pareto-optimization",
+      "description": "Multi-objective optimization with Pareto frontiers. Use when optimizing multiple conflicting objectives simultaneously, finding trade-off solutions, or computing Pareto-optimal points.",
+      "sha256": "ac1ed3486e61346b04f05ca7e75054593eb9aa59c874df53e912c7a0feb83b45"
+    }
+  ],
+  "verifier_sha": "9d458bd36eb6cc1fdfa135553b591af668c630c5930654c4a257156da11d0dc9",
+  "prompt_sha": "c1f10701d8d4c691974d34d0baf31b8467a39796790aa7e96075bad4c5aa07f6"
+}

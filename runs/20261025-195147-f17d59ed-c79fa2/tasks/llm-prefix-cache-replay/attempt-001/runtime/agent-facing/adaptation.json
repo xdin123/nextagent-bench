@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "cache-policy-comparison",
+      "directory": "cache-policy-comparison",
+      "description": "Compare and implement eviction policies (LRU, LFU, FIFO, S3FIFO, ARC) for bounded-capacity caches. Use when choosing or implementing an eviction policy for a buffer pool, page cache, CDN edge, or LLM KV cache, or when writing a replay simulator that supports multiple policies. Clarifies recency vs frequency semantics, queue topology, saturating counters, ghost buffers, and the second-chance rule that distinguishes modern FIFO-family policies from classic LRU.",
+      "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963"
+    },
+    {
+      "name": "prefix-cache-replay",
+      "directory": "prefix-cache-replay",
+      "description": "Replay an LLM inference request trace (Mooncake / vLLM / SGLang hash_ids format) against a block-level KV prefix cache and compute hit statistics. Use when given a request trace plus cache configuration and asked for hit rate, hit tokens, or final cache contents. Covers the longest-contiguous-prefix semantics that distinguishes KV prefix caching from full-prompt prompt caching, the policy-specific residency and eviction rules (LRU, LFU, S3FIFO), and the partial-last-block accounting rule.",
+      "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+    }
+  ],
+  "verifier_sha": "d0315e6d8e06686f40db287f9cc84b93de2ee9b1866a8349cb18bab73b7715d9",
+  "prompt_sha": "067b249e02efdb22a2300247f505c71bd965fbd4b12ca57c5f4b461c97ae99ff"
+}

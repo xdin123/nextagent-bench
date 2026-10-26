@@ -1,0 +1,7 @@
+{
+  "rise_time": 36.5,
+  "overshoot": 0.06102,
+  "settling_time": 52.5,
+  "steady_state_error": 0.01009,
+  "max_temp": 22.2399
+}

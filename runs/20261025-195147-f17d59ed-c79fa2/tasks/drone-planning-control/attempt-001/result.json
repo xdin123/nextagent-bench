@@ -1,0 +1,1685 @@
+{
+  "task": "drone-planning-control",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T13:54:43.361528+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "drone-planning-control",
+    "agent_timeout": 1800,
+    "verifier_timeout": 600,
+    "build_timeout": 600,
+    "cpus": 1.0,
+    "memory_mb": 2048,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": 0.0,
+  "reward": 0.0,
+  "phase_seconds": {
+    "queued": 0.391,
+    "build": 461.484,
+    "container_setup": 481.782,
+    "bootstrap": 8.093,
+    "skill_preflight": 0.438,
+    "workspace_preflight": 14.015,
+    "agent": 850.422,
+    "stop_application": 0.422,
+    "verifier": 4.516,
+    "collect": 5.265
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 2,
+  "elapsed_seconds": 1826.844,
+  "environment": {
+    "image_id": "sha256:5fbf45de7fe0e33fbf365f1965d6a91eb1efe96e8d33cbdad19e5b8818dedd2e",
+    "environment_sha": "0492fe5183a729e7ae125566476288b91beac0f0480f24c677bb6a5ca58dfa2e",
+    "workdir": "/root",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "attitude-controller-planner",
+      "directory": "attitude-controller-planner",
+      "description": "Use this skill when implementing the inner control loop for a quadrotor — attitude (roll/pitch/yaw) PID control and attitude planning (converting desired acceleration to desired Euler angles). Covers gain layout, integral reset pattern, and the attitude planner inverse kinematics.",
+      "sha256": "e2f325e78f3f31db9d39857d2f7a6e87cacb81c7d60d570a250e7c576495a19f"
+    },
+    {
+      "name": "flight-plan-parser",
+      "directory": "flight-plan-parser",
+      "description": "Use this skill when converting natural language flight commands into waypoints and timing for a drone simulator. Covers parsing commands like \"Take off to X m height in Y seconds\", \"Hover at X m height for Y seconds\", \"Fly from (x,y,z) to (x',y',z') in T seconds\", and \"Land from X m height in Y seconds\" into structured (4×n) waypoint arrays and segment mode lists.",
+      "sha256": "74acf1d6c9d8ebbebdf5509169a6bdde674faf874968ec55e383e56a11b1f127"
+    },
+    {
+      "name": "motor-model-dynamics",
+      "directory": "motor-model-dynamics",
+      "description": "Use this skill when simulating quadrotor physical dynamics — mapping desired thrust/moments to individual motor RPMs via a propeller allocation matrix, applying first-order motor lag, and integrating the nonlinear equations of motion (translational and rotational) using RK45.",
+      "sha256": "f4e773904e97fc13334b4001bb6c4c63be5867584297e2167dd4b6e27b0602ca"
+    },
+    {
+      "name": "plot-quadrotor",
+      "directory": "plot-quadrotor",
+      "description": "Use this skill when visualising drone simulation results. Produces three matplotlib figures — desired vs actual trajectories, instantaneous error, and cumulative absolute error — for all 5 state groups (position, orientation, velocity, angular velocity, acceleration). Saves figures to a plots/ directory automatically.",
+      "sha256": "7923b718e673b1f7551c9834ad699ae30f57c336ed70394b80f00bf849f1de19"
+    },
+    {
+      "name": "position-controller-trajectory-planner",
+      "directory": "position-controller-trajectory-planner",
+      "description": "Use this skill when implementing the outer control loop for a quadrotor — position PID control (position/velocity error → thrust and desired acceleration) and trajectory planning from flight-plan waypoints (takeoff, hover, fly, land segments → smooth 15-row state matrix).",
+      "sha256": "9b98e389d748e41d47bac9499134ef3ce447a255baaada514b3d811ba724f8b7"
+    },
+    {
+      "name": "stepinfo-3d",
+      "directory": "stepinfo-3d",
+      "description": "Use this skill when computing 3D step-response performance metrics for point-to-point drone flight — rise time, settling time, percent overshoot, and steady-state error based on Euclidean distance to the final target. Use instead of 1D stepinfo for any flight where all three position axes move simultaneously.",
+      "sha256": "e139d7322aaaeeb261b2dd008920435caa375f9632137c8acc7a642605477c32"
+    }
+  ],
+  "container": "2d5fa7480965f5bd783c4a5e8bfe565c9a5e30b235536830f14232439a77bdd5",
+  "skills_discoverable": [
+    "attitude-controller-planner",
+    "flight-plan-parser",
+    "motor-model-dynamics",
+    "plot-quadrotor",
+    "position-controller-trajectory-planner",
+    "stepinfo-3d"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-9c841a50-800a-4eff-a64d-4eb843bbee5e",
+  "runId": "run-dbd99903-4453-42b0-b5d0-f2fe3e5013d5",
+  "requestId": "request-ba51a188-f2c2-4c4b-b07f-a3ea0bf51c21",
+  "accepted_at": "2026-10-25T14:10:50.021259+00:00",
+  "terminal": {
+    "status": "REQUEST_COMPLETED",
+    "payload": {
+      "rootMessageId": "request-ba51a188-f2c2-4c4b-b07f-a3ea0bf51c21",
+      "requestId": "request-ba51a188-f2c2-4c4b-b07f-a3ea0bf51c21",
+      "runId": "run-dbd99903-4453-42b0-b5d0-f2fe3e5013d5",
+      "requestContextId": "context-68d5d8e2-1910-4ac0-8c1c-ad90c84bfa02",
+      "status": "COMPLETED",
+      "content": "## Summary of the session\n\n### Verified facts established in the transcript\n\n**Workspace structure**\n- `workspace/commands/` holds 30 command files: `001.txt` … `030.txt`.\n- `workspace/system_params.yaml` is present.\n- `workspace/skills/` contains 6 skill documents: `flight-plan-parser`, `motor-model-dynamics`, `position-controller-trajectory-planner`, `attitude-controller-planner`, `plot-quadrotor`, `stepinfo-3d`.\n- No existing `.py`, `.npy`, or `.json` files are present, and there is **no** `workspace/results/` directory yet — the implementation is starting from an empty workspace.\n\n**System parameters** (from `system_params.yaml`)\n- `sample_rate: 200 Hz`, `mass: 0.770 kg`, `gravity: 9.80665`, `arm_length: 0.1103`, `thrust_coefficient: 8.07e-9`, `moment_scale: 1.3719e-10`, `motor_constant: 36.5`, `rpm_min: 3000`, `rpm_max: 20000`, `inertia: [0.0033, 0.0033, 0.005]`, `COM_vertical_offset: 0.05`.\n- Acceleration limits: `accel_limit_up: 6.962`, `accel_limit_down: 9.429`, `accel_limit_horiz: 13.602` (m/s²).\n\n**Skill specifications read in full**\n- **Planner**: 15×`max_iter` state matrix (rows 0:3 pos, 3:6 vel, 6:9 orientation, 9:12 ang-vel, 12:15 acc); cubic-spline segments for takeoff/fly/land, constant for hover.\n- **Motor/dynamics**: 4×4 X-frame propeller allocation, first-order motor lag, RK45 integration, 16-element state vector.\n- **Position controller**: PID on position/velocity error → thrust `F` + desired acceleration.\n- **Attitude controller/planner**: inverse kinematics for φ/θ, PID → moments `M = I @ (...)`.\n- **Metrics (`stepinfo_3d`)**: RiseTime, SettlingTime, Overshoot_pct, SteadyStateError with `settling_threshold=0.02`.\n- **Plots**: `desired_vs_actual.png`, `errors.png`, `cumulative_errors.png` (5×3 grids).\n\n**Task requirements captured**\n- Per-command output folder `workspace/results/<label>/` with `metrics_3d.json`, `tuning_results.json`, `planned_trajectory.npy`, `actual_trajectory.npy`, and `plots/`.\n- Success criteria: `SteadyStateError < 0.05 m`, `Overshoot_pct < 5%`, planned trajectory within acceleration limits at every timestep, and per-timestep position error `< 0.05 m` at every timestep.\n- Four supported command types: take off, hover, land, fly.\n\n### Completed work\n- Explored the workspace and confirmed it is empty of code/results.\n- Read and understood all 6 skill documents and `system_params.yaml`.\n- Identified the full set of deliverables, output schemas, and acceptance criteria.\n\n### Incomplete work (nothing built or run yet)\n- **No code has been written**: no modules for the flight-plan parser, motor model, dynamics, trajectory planner, position/attitude controllers, metrics, or plotting.\n- **No simulation executed**; no PID tuning performed.\n- **No `workspace/results/` outputs generated** for any of the 30 commands.\n\n### Verifiable limitation\n- The **exact text of the individual command files** (specific heights/times/coordinates) was read earlier in the session but those tool results have since been compacted and are **not currently verifiable in the transcript**. The 30 files' existence and the four command types are confirmed; the per-file numeric parameters would need to be re-read before implementation to guarantee correctness.\n\nThe next step (not yet started) is to re-read the 30 command files and then implement the simulator, planner, controllers, and per-command tuning loop.",
+      "text": "## Summary of the session\n\n### Verified facts established in the transcript\n\n**Workspace structure**\n- `workspace/commands/` holds 30 command files: `001.txt` … `030.txt`.\n- `workspace/system_params.yaml` is present.\n- `workspace/skills/` contains 6 skill documents: `flight-plan-parser`, `motor-model-dynamics`, `position-controller-trajectory-planner`, `attitude-controller-planner`, `plot-quadrotor`, `stepinfo-3d`.\n- No existing `.py`, `.npy`, or `.json` files are present, and there is **no** `workspace/results/` directory yet — the implementation is starting from an empty workspace.\n\n**System parameters** (from `system_params.yaml`)\n- `sample_rate: 200 Hz`, `mass: 0.770 kg`, `gravity: 9.80665`, `arm_length: 0.1103`, `thrust_coefficient: 8.07e-9`, `moment_scale: 1.3719e-10`, `motor_constant: 36.5`, `rpm_min: 3000`, `rpm_max: 20000`, `inertia: [0.0033, 0.0033, 0.005]`, `COM_vertical_offset: 0.05`.\n- Acceleration limits: `accel_limit_up: 6.962`, `accel_limit_down: 9.429`, `accel_limit_horiz: 13.602` (m/s²).\n\n**Skill specifications read in full**\n- **Planner**: 15×`max_iter` state matrix (rows 0:3 pos, 3:6 vel, 6:9 orientation, 9:12 ang-vel, 12:15 acc); cubic-spline segments for takeoff/fly/land, constant for hover.\n- **Motor/dynamics**: 4×4 X-frame propeller allocation, first-order motor lag, RK45 integration, 16-element state vector.\n- **Position controller**: PID on position/velocity error → thrust `F` + desired acceleration.\n- **Attitude controller/planner**: inverse kinematics for φ/θ, PID → moments `M = I @ (...)`.\n- **Metrics (`stepinfo_3d`)**: RiseTime, SettlingTime, Overshoot_pct, SteadyStateError with `settling_threshold=0.02`.\n- **Plots**: `desired_vs_actual.png`, `errors.png`, `cumulative_errors.png` (5×3 grids).\n\n**Task requirements captured**\n- Per-command output folder `workspace/results/<label>/` with `metrics_3d.json`, `tuning_results.json`, `planned_trajectory.npy`, `actual_trajectory.npy`, and `plots/`.\n- Success criteria: `SteadyStateError < 0.05 m`, `Overshoot_pct < 5%`, planned trajectory within acceleration limits at every timestep, and per-timestep position error `< 0.05 m` at every timestep.\n- Four supported command types: take off, hover, land, fly.\n\n### Completed work\n- Explored the workspace and confirmed it is empty of code/results.\n- Read and understood all 6 skill documents and `system_params.yaml`.\n- Identified the full set of deliverables, output schemas, and acceptance criteria.\n\n### Incomplete work (nothing built or run yet)\n- **No code has been written**: no modules for the flight-plan parser, motor model, dynamics, trajectory planner, position/attitude controllers, metrics, or plotting.\n- **No simulation executed**; no PID tuning performed.\n- **No `workspace/results/` outputs generated** for any of the 30 commands.\n\n### Verifiable limitation\n- The **exact text of the individual command files** (specific heights/times/coordinates) was read earlier in the session but those tool results have since been compacted and are **not currently verifiable in the transcript**. The 30 files' existence and the four command types are confirmed; the per-file numeric parameters would need to be re-read before implementation to guarantee correctness.\n\nThe next step (not yet started) is to re-read the 30 command files and then implement the simulator, planner, controllers, and per-command tuning loop.",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-1b0c06ab-a93b-4b1c-bc83-da46261ec556",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0661fe9a-a340-4223-9f20-45125790202e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e0016b74-67a3-47ac-a0c9-4ac965f35424",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-de15aef3-8673-4418-bac5-18fe4071bade",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-7f39a7e3-ee95-4942-8c0c-63d0d09fb621",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fa6616b5-40b9-46f5-9e3d-168c904acbdb",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-0ea7cc0e-e97c-4196-8f7f-2853cb021661",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ccfb07f6-e85c-4bc4-bcb7-20cbe2872a9c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a753de2d-840e-4f9a-8f70-c612e8cc69d0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-964908d2-6c77-4db1-8b7c-72575dc12bf2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-688b80b1-bc38-4223-a97f-a9555a7b706f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5ae1cd1d-9650-478f-a444-2e4a56880d7d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f5d34d28-d512-4646-ac0f-83cf40d73c21",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-196dee0a-0c6c-461a-9b07-171a3d28307f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5c243c09-2969-4204-830d-bd9e123aca8f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-caae091f-d002-4ea4-b03f-dde04b75c207",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3736151c-81b0-4348-b68d-cc535a76acfa",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c1e737b0-f8ef-4c3b-a463-4fd5a2589554",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8b9e339a-1c42-4631-864b-c6725695f346",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a52ba816-1302-45b4-af6d-5d842b888806",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-24fe07c2-a6ec-4944-9b97-6db5d169f044",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f9e6b6b1-e7a1-4d8d-b5de-17f0f99d0a2c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-01e3572c-b58f-4960-b048-cdc1eaa7d48e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a07d1f3b-f299-448f-8149-f523ab082b56",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-20edd6a9-c270-48d9-8b6f-e7426b3639b6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-caf98a88-f362-4959-be85-c605bc3ae478",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-111ab303-d052-4d2d-8cab-fbd3e2f94522",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7b7e2f68-8a98-49a2-aba3-c9c679161fa9",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-eb6a2741-04cd-4bea-8cce-77a9b1e0d2de",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5a1af76a-2ef5-4e32-bb11-2fd95ee55789",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8f701605-b375-4c7d-9ca5-a45ae0187dcb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e228561e-36e7-4188-ab3c-3918a9efe75e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d439a53b-f753-4fd4-9c0d-d00cc53372da",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5cf5755a-393d-498b-a10d-0dba83037732",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-92ff1d36-917b-4987-94fd-f2ae71e35b61",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-745e71e2-8ff7-42cd-8bef-0799e694d3af",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f7db4895-8973-416a-997b-0a32f99f22c3",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ac365c2e-5a5e-4230-afa4-02214b420429",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f58bee45-ed65-4412-ae84-756b0b08dbc4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-64a52896-f691-467a-a012-c5c6f6ca10e7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-97b1e3ee-0d12-49a8-b2d1-10121c17d182",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-29cd5e93-4260-4113-877f-31abdf87af7b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-da3c65f5-839a-4c72-850a-d31502061756",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a46d43c9-cc30-40af-a936-9e3e6944db04",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-79c1f41f-4bcf-4315-8e2c-4fd5607c3880",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e31cad5b-e624-42b6-b4d6-b9b2e7a5dca6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-3c534dd0-e708-4559-8562-ae96513a4445",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-221aa901-28bf-4430-96de-677147a29ca2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-8d4df249-7fd8-4fca-83d3-8c18fd50b829",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-bc53062c-67b0-47e8-82ed-6b8c968e6a93",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-98ac9f42-0ba8-46dc-8226-67c97aad0feb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c2f96db1-d4fa-487d-8d71-a82c99bca11c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-85a48c09-7c62-4db0-b17a-7593f5e92940",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-97265813-b2e7-4c86-af39-eed90e2902a8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-2ab5f4d8-80ba-4dd1-b6f4-fe103a2afb49",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-44b6066e-71c9-4226-9300-9e2a7d1d3b62",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6beabf33-f3a7-46bb-8dc8-a01eae9270b6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9ebfe91d-ed4b-40a3-a955-ca266e3d6d53",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f37dceba-d9e5-4f03-b20c-b135af9ad13c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9ba67a77-7706-4a3a-967a-0b7df2f07de8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-be854203-18bb-40d0-a2ea-f3f48f981f1c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a5b474cb-f102-4301-bab3-52c427f00e7f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9428eb61-50c9-4c08-8a4d-85be4c6ae949",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e72a3559-0c96-44be-b49f-9a30980db648",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9843284e-d39b-45aa-b091-4658c5dcc82e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b0fe195b-1e11-4555-bdd7-a40e73aecada",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-009b0ccc-ba40-462d-aa8d-715992391716",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5329024a-0fe9-40b5-8dbc-85d862aff2d3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4156c7f4-5cdf-45d5-a5ff-dbbc37d995e1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-759b1271-dd8d-4484-9e62-41227bd0c821",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9ae485b5-95c9-452e-be4b-f8e08a1713a1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e344d9e7-da96-49cf-bf41-32e5141e9a96",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d8084738-fd96-4d78-b0e0-149eea217139",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-53fb3be2-6a62-4cfe-903c-8a5ac67247f6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-bacc4fc3-84b8-4815-bd8a-b6a325a411ea",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-53bb9c21-9d94-4797-82fe-c799ffc99a93",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-378e6cc9-157f-4244-846c-a301661a9f8a",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0beed9cd-84e7-4c2e-bad4-0aee144ed563",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-1bfacf0a-0082-4244-b533-2e7b4d567640",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-727c3f1a-b66a-483d-94a2-3d9900634dba",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-71e75a94-c495-4495-a124-9195b32b0c29",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f6b7e149-2cd0-45ee-b272-09a413ca6ed0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-844b1007-fff8-46f2-afd8-5f8a916f8833",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-eda95bed-0b7a-403b-8f82-a67a7c636c96",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0cea6f4e-ac78-4031-b96d-9a7e0e1a8a9c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7ff7d921-3074-470b-aa44-0295ac7c5699",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6209e625-fb3c-4d40-9dc5-f0966d2e054e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e7b665d7-e442-454e-8a9e-8ffd411461c2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e83e65f0-805b-4637-844f-0bec38b37e57",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0e64fff6-1b73-42b7-9ce5-dfa26b1752ad",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-93c161e0-4ae8-4f38-a529-8c4d21997742",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6a8f6b7a-e7f0-490a-8db7-f85e7252d11c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-b3fe2207-3e02-4651-890b-ff758edc01b8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-62fbd4f4-b988-4d36-ab7f-c135d0856743",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9847cf0d-330d-4363-8119-18694888269b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-620b2f34-e51b-4ac0-9647-4bf24d5cc977",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-10cdc39e-8636-4534-80a5-4359ef605960",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-10bb813d-6ac1-4100-925c-3d25e0d8507b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e61c820f-bb10-46ed-9348-1ccb46096975",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-088bccdc-4352-4506-8ee1-a3807c0163f4",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c589d433-eac6-4101-8e6e-2fec3f0ac949",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-30177e97-1ff5-4b9a-a9c2-7e87d1e063a8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b5c51f1b-49f1-4724-bb6f-dba9c9653372",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-24b9e66a-b90d-4968-9bfd-059780543edd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4fde5c75-d59c-4052-b92c-d9b7fd411fb8",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-33828718-bf44-48e2-929c-d125c0ad4ee7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6abec62f-8ef5-4f48-ae91-464060571950",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-50977fad-4033-4dd3-a9fb-cb04d8ee8203",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-88e817c4-f46f-4143-8c69-4b4910a125b3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-904352e2-1cec-46fe-9c26-879158b981d2",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ea25b989-d290-4219-adb8-aec091859059",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-8628ed84-8dfc-4627-92eb-fb3bfc5a7ec3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c333c2fd-64ac-4ff2-a099-1bd4358e17cd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-4df79511-a819-4950-8deb-7fe8f6bb4087",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cb9f2084-e331-4d41-9d17-522b252b35ed",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8e407357-9c7a-416b-a6b4-d3ef2197e910",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-3270d46e-4cf1-4163-94ae-046817fbf6f9",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-70db199c-63fc-4193-961f-0cf5f6e22898",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-8a34c52f-1b7c-4615-97e6-3b201821fcb1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e8deac1c-504f-4b87-9233-2d05fa8af5b8",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-d1bb5af2-67b3-49bd-a037-5b9144f8fade",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6b869252-b465-4102-a4c0-e8c60aa9e0e3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-917c6bb1-0ef4-43eb-9c02-9adfca25a44e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c4df7839-fdda-4090-adb3-b097a1a4cbd3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6400d6ec-3caf-438f-a0de-6bb24f308563",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-390ee4a1-b453-4e47-99ef-c852310f12c4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fc159bf8-38a8-4343-8155-9e055ff3c0aa",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-79fcbdcc-44a1-459d-b1c5-cb90f66b4647",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-6d93ab4f-b838-4308-a087-ffdad09312a3",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6f64da54-6f01-4ec2-982b-0f1a73b8177d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e61e594e-3560-44b8-ae7c-08e6f34761a7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-602087d9-4a29-4f4e-b60d-5da3f9088879",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-07af274e-5a43-4417-b8fc-7d757e913752",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-193385c2-b657-4fb0-afee-418b7560f331",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b9ea9e43-d9f3-451b-b93a-3e4659f5bea2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-699623c0-e9e3-466b-9b0e-2b15fe479328",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-04123138-599e-4138-91de-de7bd7c2eaa1",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-27fd3d6c-360c-49c1-95d4-58fd4df37868",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-be909886-f354-47b2-9119-d728c714569c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-3c2dc3c3-db65-484c-9a30-72ad67c4a0cd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cbade580-c10d-4547-9efa-fdae88be529f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-4ad0da1d-daa5-4b13-b78d-21333dad1f6c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9ddbb682-accf-44bd-b11a-e5e508353841",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-73ae9aab-2d9e-44ff-a70e-3ac567e895ff",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-81f31ca3-bb88-400b-8fd6-609a5fd56e91",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fafe4077-98b3-4041-8fcd-d61d539c8d7f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ae8a1052-85f3-412e-8a46-e4a6b321e1b3",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-86ab37ac-b66e-4dde-8c83-e536369e70db",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cf06eedc-e03f-4971-97df-666f528665f7",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-37954001-4e34-41b2-8a1c-3de3dae4a05c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d3b2b538-d0c3-4304-8e33-e5b3df15ffeb",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-18d9c15e-01e9-4636-91fb-8ec24df66bce",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-455f1c6c-5346-460c-9c1d-1658f1a5e7bd",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-a435ae4e-3226-4947-b29a-72ca649d16c0",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7a6ea46a-d9b2-4d42-9066-c78bea868e53",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e9cf8993-ef87-4f0b-888d-02d29e587445",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-021fe03e-bc47-4fd4-80b6-91c89398a359",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b1a8c3bd-5fa2-4270-aa1d-9e9d97beb6cd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c658f279-bdd4-4b77-9c78-c1043f131959",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e4a4e253-2f5a-4989-80d2-f665fabe6f81",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-154e246d-7921-426c-9346-6e8b3c18dd29",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c48083bb-d800-46f1-a707-5a47fb2209e4",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-06a8ae75-4052-4ef5-bccb-ed5ecc06035c",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-7b1833eb-85a1-454e-9d96-bfe485b26faf",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-337d4445-a4e5-4e9c-adb6-cdf81ccfad8f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-e320db89-043f-4f8a-b1de-25b0386af265",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-2675ee32-99d0-4a25-8aed-e1699901466b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c54369c7-4b72-40be-9359-c3f8f3eeb7f5",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e0898084-b454-4302-89df-706b6b2cbbaa",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-4afd86e3-b947-4537-897c-30f2216a7421",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b73fe152-4755-49cc-839e-e12668e3d32d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-62920ebc-f232-4dff-a6cc-de64b8919b03",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-99bb85d8-ba12-45a1-b800-86c012d8a8c5",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-fb16e872-4442-42f4-9ce3-763df157d492",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0c072cf1-eab4-4ebb-9086-c28600cf1123",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-7b1d1043-7d34-4168-bbd9-5204eda0d5fa",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a06fb6ba-e978-40b8-be6c-79e6c366e4f2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-de1a6072-8d32-437a-848d-73124f367785",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-5150b1bf-c126-4ea6-848d-55000d61483f",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-5fa2c53c-180b-4098-b204-290708683da9",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fa97ca7f-ea03-4e67-b1de-182cc49e5c01",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-2b402623-071d-46d9-b653-fee2734e1a19",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cc29e40b-84cd-43dc-a0a1-14b2ba53352a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-27779c04-92c7-4fb8-940d-4b2e0ec16234",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-9e38b81d-d235-499f-a5b6-abefe0cc222e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3bd316d8-3049-4c1a-b804-bc10c194e52b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-75fd9f41-2010-4229-9508-82825e7acb81",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-22817474-ff87-4b16-8e21-2b39c98d133b",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-566513a9-20b8-48c7-b96a-035d5b92626d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ab5ceef7-931d-48e3-8ee0-62c3f23ad035",
+          "hookId": "system.output-redaction-guard",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0b92d82c-e0a5-4307-8fdf-690efeab074c",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_AGENT_TERMINAL",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        }
+      ],
+      "completionLimitations": [
+        "AGENT_TURN_LIMIT_REACHED"
+      ],
+      "terminalMessageId": "assistant-b9c48cf4-4826-4113-8cb8-4dd7a9c6b064"
+    },
+    "sequence": 806
+  },
+  "terminal_at": "2026-10-25T14:24:59.986579+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.0,
+    "failed_tests": [],
+    "exit_code": 0
+  },
+  "outcome": "TASK_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 112432128,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 51,
+  "tool_calls": 137,
+  "skills_invoked": [],
+  "skills_loaded": [],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 50,
+    "LLM_CONTENT_DELTA": 29,
+    "CAPABILITY_STARTED": 137,
+    "CAPABILITY_COMPLETED": 137,
+    "BACKGROUND_TASK_STARTED": 4,
+    "BACKGROUND_TASK_FAILED": 2,
+    "BACKGROUND_TASK_COMPLETED": 2,
+    "LLM_OUTPUT_RETRACTED": 1,
+    "REQUEST_COMPLETED": 1
+  },
+  "finished_at": "2026-10-25T14:25:10.194228+00:00",
+  "evidence_complete": true
+}

@@ -1,0 +1,77 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1792978562.0333703,
+            "stop": 1792978562.08723
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_schema_and_totals",
+                "status": "passed",
+                "duration": 0.033231074999775956,
+                "start": 1792978562.045149,
+                "stop": 1792978562.0788407,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_total_hit_tokens",
+                "status": "passed",
+                "duration": 0.0005464230000598036,
+                "start": 1792978562.0791547,
+                "stop": 1792978562.080078,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_overall_hit_rate",
+                "status": "passed",
+                "duration": 0.00034838600004150067,
+                "start": 1792978562.0803702,
+                "stop": 1792978562.0810962,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_final_cache_blocks",
+                "status": "passed",
+                "duration": 0.00035787800004527526,
+                "start": 1792978562.0814161,
+                "stop": 1792978562.082038,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_per_request_sample",
+                "status": "passed",
+                "duration": 0.0003859280000142462,
+                "start": 1792978562.0823116,
+                "stop": 1792978562.0829372,
+                "retries": 4,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::idx::[133, 601, 968, 1459, 1999]"
+                ]
+            },
+            {
+                "name": "test_outputs.py::test_per_request_self_consistency",
+                "status": "passed",
+                "duration": 0.000617840999893815,
+                "start": 1792978562.0862103,
+                "stop": 1792978562.0870261,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

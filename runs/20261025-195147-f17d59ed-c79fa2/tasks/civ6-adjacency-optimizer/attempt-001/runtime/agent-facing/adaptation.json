@@ -1,0 +1,67 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/output",
+      "logical": "workspace/_roots/output",
+      "relocate": true
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/data",
+      "logical": "workspace/_roots/data",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "civ6lib",
+      "directory": "civ6lib",
+      "description": "Civilization 6 district mechanics library. Use when working with district placement validation, adjacency bonus calculations, or understanding Civ6 game rules.",
+      "sha256": "488097528b9dfca403fd079eb673c8303b1826514ea7b73e825df759d1ff12ee"
+    },
+    {
+      "name": "hex-grid-spatial",
+      "directory": "hex-grid-spatial",
+      "description": "Hex grid spatial utilities for offset coordinate systems. Use when working with hexagonal grids, calculating distances, finding neighbors, or spatial queries on hex maps.",
+      "sha256": "3370ef7f3f47f86c9ea84a336c90706da4bc8c1a95daf5801e2c4fc133e0aefc"
+    },
+    {
+      "name": "map-optimization-strategy",
+      "directory": "map-optimization-strategy",
+      "description": "Strategy for solving constraint optimization problems on spatial maps. Use when you need to place items on a grid/map to maximize some objective while satisfying constraints.",
+      "sha256": "7d712d7dd4e6ddcf0d871ce5e93081342d2477e8f83229205a739fae8b7e46ef"
+    },
+    {
+      "name": "sqlite-map-parser",
+      "directory": "sqlite-map-parser",
+      "description": "Parse SQLite databases into structured JSON data. Use when exploring unknown database schemas, understanding table relationships, and extracting map data as JSON.",
+      "sha256": "a6694d231676963073b1891422262cad009303569adbee2be7fa20a3d85dd870"
+    }
+  ],
+  "verifier_sha": "60169bb9436c7a70eda29bf6d9cfdf452207729d271784585ae4ac3581072bd2",
+  "prompt_sha": "ab0efbcd5e5c95bcc43a95bb053f49a95175e9fd38cb88baae181ce0965b7e7c"
+}

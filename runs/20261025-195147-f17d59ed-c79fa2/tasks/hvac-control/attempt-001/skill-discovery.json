@@ -1,0 +1,32 @@
+{
+  "registered": [
+    "excitation-signal-design",
+    "first-order-model-fitting",
+    "imc-tuning-rules",
+    "safety-interlocks",
+    "scipy-curve-fit"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "excitation-signal-design"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "first-order-model-fitting"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "imc-tuning-rules"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "safety-interlocks"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "scipy-curve-fit"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

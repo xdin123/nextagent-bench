@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-25T08:51:54.075682+00:00",
+  "upstream": "https://maas.qianwenaiapi.com/compatible-mode/v1",
+  "internal_url": "http://nab-model-20261025-165143-f17d59ed-909845:8787/v1",
+  "credential_aliases": [
+    "default"
+  ],
+  "quota": {
+    "shared_account": true,
+    "max_concurrency": 1,
+    "requests_per_minute": null,
+    "tokens_per_minute": null,
+    "min_interval_seconds": 2,
+    "max_attempts": 3,
+    "max_wait_seconds": 90,
+    "upstream_idle_timeout_seconds": 120
+  },
+  "image": "nextagent-bench/model-gateway:6532eabbeaebad887006",
+  "credentials_shared_account": true,
+  "host_ports_published": false
+}

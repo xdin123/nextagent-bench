@@ -1,0 +1,63 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "csv-processing",
+      "directory": "csv-processing",
+      "description": "Use this skill when reading sensor data from CSV files, writing simulation results to CSV, processing time-series data with pandas, or handling missing values in datasets.",
+      "sha256": "bba82e4a401fefe9cd040ff6ba9ccaaed6062876264e358c306089fdb7a13cee"
+    },
+    {
+      "name": "pid-controller",
+      "directory": "pid-controller",
+      "description": "Use this skill when implementing PID control loops for adaptive cruise control, vehicle speed regulation, throttle/brake management, or any feedback control system requiring proportional-integral-derivative control.",
+      "sha256": "d274422849bf5f73b7f643db36f9ebd23e488271ad69f0f62a457b3ee0b2b828"
+    },
+    {
+      "name": "simulation-metrics",
+      "directory": "simulation-metrics",
+      "description": "Use this skill when calculating control system performance metrics such as rise time, overshoot percentage, steady-state error, or settling time for evaluating simulation results.",
+      "sha256": "9e145fd19a2c4e7c20cda3343a7156caecb7b7660592c8f655de83d8e814b351"
+    },
+    {
+      "name": "vehicle-dynamics",
+      "directory": "vehicle-dynamics",
+      "description": "Use this skill when simulating vehicle motion, calculating safe following distances, time-to-collision, speed/position updates, or implementing vehicle state machines for cruise control modes.",
+      "sha256": "bc320079e421dfea427609d9e369283a8a74c5aa520204300bd70dad1c40f1cb"
+    },
+    {
+      "name": "yaml-config",
+      "directory": "yaml-config",
+      "description": "Use this skill when reading or writing YAML configuration files, loading vehicle parameters, or handling config file parsing with proper error handling.",
+      "sha256": "6a53aad718ab75c93dfc00ed0644b06a85a55e516fc7a1ed716ee4889396eff8"
+    }
+  ],
+  "verifier_sha": "943022dfd2d8270b2745d7067cf040717a7fba5f5208b4dfc14f9cc8668c0d01",
+  "prompt_sha": "c2f5457e3b9ac9a9ed660d8c001de7facda007785160956af1d8afa7b0ceda86"
+}

@@ -1,0 +1,38 @@
+{
+  "task": "multilingual-video-dubbing",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-26T01:59:42.817286+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "multilingual-video-dubbing",
+    "agent_timeout": 2700,
+    "verifier_timeout": 1350,
+    "build_timeout": 1200,
+    "cpus": 2.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": null,
+  "reward": null,
+  "phase_seconds": {
+    "queued": 0.094,
+    "build": 817.719,
+    "collect": 0.015
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 4,
+  "elapsed_seconds": 817.828,
+  "failed_phase": "build",
+  "error": "docker exited 1: ocess \"/bin/sh -c apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n------\n > [ 2/16] RUN apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*:\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/s/sox/libsox-dev_14.4.2%2bgit20190427-4build4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/manpages/manpages-dev_6.7-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/m/mesa/mesa-va-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vdpau-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa-vulkan-drivers_25.2.8-0ubuntu0.24.04.4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/w/wheel/python3-wheel_0.42.0-2_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/s/sox/sox_14.4.2%2bgit20190427-4build4_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libv/libvdpau/vdpau-driver-all_1.5-2build1_amd64.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/p/pocketsphinx/pocketsphinx-en-us_0.8.0%2breal5prealpha%2b1-15ubuntu5_all.deb  Unable to connect to archive.ubuntu.com:80: [IP: 198.18.0.105 80]\n480.1 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?\n------\nDockerfile:7\n--------------------\n   6 |     \n   7 | >>> RUN apt-get update && apt-get install -y \\\n   8 | >>>     python3 python3-pip python3-dev python3-venv \\\n   9 | >>>     ffmpeg espeak-ng git \\\n  10 | >>>     libgomp1 libsox-dev sox wget \\\n  11 | >>>     build-essential cmake \\\n  12 | >>>     && rm -rf /var/lib/apt/lists/*\n  13 |     \n--------------------\nERROR: failed to build: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y     python3 python3-pip python3-dev python3-venv     ffmpeg espeak-ng git     libgomp1 libsox-dev sox wget     build-essential cmake     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: exit code: 100\n",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T02:13:20.644441+00:00",
+  "evidence_complete": false
+}

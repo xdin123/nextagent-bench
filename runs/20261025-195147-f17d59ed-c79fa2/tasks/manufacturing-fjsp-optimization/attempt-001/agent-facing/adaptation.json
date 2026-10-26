@@ -1,0 +1,39 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "fjsp-baseline-repair-with-downtime-and-policy",
+      "directory": "fjsp-baseline-repair-with-downtime-and-policy",
+      "description": "This skill should be considered when you need to repair an infeasible or non-optimal flexible job scheduling planning schedule into a downtime-feasible, precedence-feasible one while keep no worse policy budget.",
+      "sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125"
+    }
+  ],
+  "verifier_sha": "42027720cc961a84910926116d7b6032c76465eb886bdcbd6ab650aa4069fdaf",
+  "prompt_sha": "d596e8e4d67d9bcccd3cecb31aea4e7686e5f7cbfabe3110bd7fcca332de4d31"
+}

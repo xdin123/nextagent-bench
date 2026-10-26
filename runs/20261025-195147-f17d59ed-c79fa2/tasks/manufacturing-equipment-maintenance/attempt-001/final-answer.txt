@@ -1,0 +1,35 @@
+## Summary of verified results (turn limit reached)
+
+### Completed work
+
+**1. Handbook extraction & key definitions (verified from `workspace/data/handbook.pdf`, extracted to `temp/handbook.txt`, 24 pages):**
+
+| Item | Verified value | Source |
+|---|---|---|
+| Preheat temperature region | 100°C – 150°C | "In the preheat section, the goal is to fully preheat the SMT assembly to temperatures generally between 100°C to 150°C" |
+| Ramp rate limit | rise rate < **2°C/second** | "The most critical parameter in the preheat section is to minimize the rate of rise to less than 2°C/second" |
+| Solder melting point (63/37 eutectic) | 183°C | "For 63/37 Eutectic solder, the melting temperature is 183°C" |
+| Peak requirement | liquidus + **~20°C** | "This temperature must be exceeded by approximately 20°C to ensure quality reflow" |
+| Wetting time (TAL) window | **30 – 60 seconds** | "The wetting time is normally 30 to 60 seconds for most pastes" |
+| Line speed (minimum) formula | `boards_per_min × board_length / load_factor` | "LINE SPEED (MINIMUM) = BOARDS PER MINUTE × LENGTH PER BOARD / LOAD FACTOR" |
+| Process speed formula | `oven chamber heated length / process dwell time` | "PROCESS SPEED = OVEN CHAMBER HEATED LENGTH / PROCESS DWELL TIME" |
+| Feasibility rule | actual conveyor speed must be **≥** minimum line speed | "Operating at a conveyor speed greater than the calculated speed ensures that no product jams will occur" |
+
+**2. Data structure verified (all 4 files under `workspace/data/`):**
+- `mes_log.csv`: 60 runs (R0001–R0060), 6 board families (Compute_IO, Industrial_CTRL, Mobile_PWR, RF_FrontEnd, Sensor_Module, Wearable). Fields include `conveyor_speed_cm_min` (37.1–106.7), `board_length_cm` (constant per family: 30/32/25/18/20/15), `loading_factor` (0.17–0.95, per run), `boards_per_min` (per run), `solder_liquidus_c` (values: 217, 227, 228, 229).
+- `thermocouples.csv`: 6 TCs per run (TC1–TC6, distinct locations), 12 zones, time/temperature traces.
+- `test_defects.csv`: 60 runs; each run has exactly one `SUMMARY` row with `fp_yield_pct`, `units_tested`, `units_pass`, `units_rework`, `units_scrap`, `count`, plus per-inspection-stage defect rows.
+
+**3. Skill loaded:** `reflow-profile-compliance-toolkit` — provides deterministic computation recipes (finite-difference max slope in temp band with both-endpoints filtering, interpolated time-above-threshold, tie-breaks: max-metric → highest value then smallest tc_id; min/coldest-metric → lowest value then smallest tc_id; 2-dp rounding; sorted output; null for missing data).
+
+### Incomplete work
+
+**No output files have been created yet** — `workspace/output/q01.json` through `q05.json` do not exist, and no calculations have been executed. Remaining steps:
+
+1. **Q1** — compute max preheat ramp per run (temp band 100–150°C, limit 2.0 C/s), select representative TC (max ramp, tie → smallest tc_id), list violating runs.
+2. **Q2** — compute TAL per run using each run's `solder_liquidus_c` (interpolated), window 30–60 s, per-TC results with compliant/non-compliant status.
+3. **Q3** — peak per run (coldest TC = min of per-TC peaks, tie → smallest tc_id), required peak = liquidus + 20°C; runs without TC data → failing.
+4. **Q4** — `required_min_speed = boards_per_min × board_length_cm / loading_factor` per run, compare to actual `conveyor_speed_cm_min`. Open item: the spec sheet's PROCESS SPEED table (heated length / dwell time) is garbled in extraction and the data's `oven_model` values (8Z_Convection, 10Z_Convection, 8Z_IR+Conv) do not map cleanly to spec sheet model names (4470MP/XP/HP/HN, 4480XG, 4470XN), so the "allowable conveyor speed" constraint could not be verified from the spec sheet.
+5. **Q5** — best run per board_family by quality + efficiency. The handbook contains **no explicit run-selection rule**; a deterministic criterion (e.g., highest `fp_yield_pct` from SUMMARY, tie-break by throughput/conveyor speed, then run_id) would need to be defined and applied.
+
+No hallucinated values were introduced; all numbers above are directly from the handbook text or the data files.

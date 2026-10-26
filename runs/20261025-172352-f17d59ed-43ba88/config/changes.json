@@ -1,0 +1,26 @@
+[
+  {
+    "field": "channel.web.port",
+    "before": 3000,
+    "after": 31872,
+    "reason": "Isolated evaluation paths / internal HTTP transport"
+  },
+  {
+    "field": "agent.hooks",
+    "removed": [
+      {
+        "hookId": "developer-hook-trace.loop-raw-boundary",
+        "enabled": true,
+        "stages": [
+          "BEFORE_PLANNING",
+          "BEFORE_MODEL_INVOKE",
+          "AFTER_MODEL_RESULT",
+          "BEFORE_CAPABILITY_INVOKE",
+          "AFTER_CAPABILITY_RESULT",
+          "BEFORE_AGENT_TERMINAL"
+        ]
+      }
+    ],
+    "reason": "Explicit compatibility policy in evaluation.yaml"
+  }
+]

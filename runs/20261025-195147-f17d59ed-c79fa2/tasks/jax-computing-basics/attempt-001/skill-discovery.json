@@ -1,0 +1,12 @@
+{
+  "registered": [
+    "jax-skills"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "jax-skills"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

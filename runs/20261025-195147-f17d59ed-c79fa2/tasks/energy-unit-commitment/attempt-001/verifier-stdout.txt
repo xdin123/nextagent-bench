@@ -1,0 +1,231 @@
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-json-ctrf==0.3.5
+  Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=20 (from pytest==8.4.1)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 1.1 MB/s eta 0:00:00
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.1 pytest-json-ctrf-0.3.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.1, pluggy-1.7.0 -- /usr/local/bin/python
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 14 items
+
+../../../../../../../verifier/test_outputs.py::TestSchema::test_required_schema ERROR [  7%]
+../../../../../../../verifier/test_outputs.py::TestSchema::test_arrays_align_with_case ERROR [ 14%]
+../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_startup_shutdown_match_commitment ERROR [ 21%]
+../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_no_simultaneous_startup_shutdown ERROR [ 28%]
+../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_reported_transition_counts ERROR [ 35%]
+../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_must_run_units_online ERROR [ 42%]
+../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_output_limits_and_offline_zeroes ERROR [ 50%]
+../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_deliverable_reserve_and_ramping ERROR [ 57%]
+../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_demand_and_reserve ERROR [ 64%]
+../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_renewable_limits ERROR [ 71%]
+../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_hourly_summary_matches_schedule ERROR [ 78%]
+../../../../../../../verifier/test_outputs.py::TestMinimumUpDown::test_initial_and_in_horizon_obligations ERROR [ 85%]
+../../../../../../../verifier/test_outputs.py::TestCostAndQuality::test_reported_cost_matches_schedule ERROR [ 92%]
+../../../../../../../verifier/test_outputs.py::TestCostAndQuality::test_cost_within_benchmark_gap ERROR [100%]
+
+==================================== ERRORS ====================================
+______________ ERROR at setup of TestSchema.test_required_schema _______________
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+___________ ERROR at setup of TestSchema.test_arrays_align_with_case ___________
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+___ ERROR at setup of TestBinaryLogic.test_startup_shutdown_match_commitment ___
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+___ ERROR at setup of TestBinaryLogic.test_no_simultaneous_startup_shutdown ____
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+______ ERROR at setup of TestBinaryLogic.test_reported_transition_counts _______
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_____ ERROR at setup of TestThermalFeasibility.test_must_run_units_online ______
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_ ERROR at setup of TestThermalFeasibility.test_output_limits_and_offline_zeroes _
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_ ERROR at setup of TestThermalFeasibility.test_deliverable_reserve_and_ramping _
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_______ ERROR at setup of TestSystemFeasibility.test_demand_and_reserve ________
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+________ ERROR at setup of TestSystemFeasibility.test_renewable_limits _________
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_ ERROR at setup of TestSystemFeasibility.test_hourly_summary_matches_schedule _
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_ ERROR at setup of TestMinimumUpDown.test_initial_and_in_horizon_obligations __
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+___ ERROR at setup of TestCostAndQuality.test_reported_cost_matches_schedule ___
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+_____ ERROR at setup of TestCostAndQuality.test_cost_within_benchmark_gap ______
+
+    @pytest.fixture(scope="module")
+    def report():
+>       assert os.path.exists(OUTPUT_FILE), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = <function exists at 0x745844f4b600>('/root/report.json')
+E        +    where <function exists at 0x745844f4b600> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/verifier/test_outputs.py:500: AssertionError
+=========================== short test summary info ============================
+ERROR ../../../../../../../verifier/test_outputs.py::TestSchema::test_required_schema
+ERROR ../../../../../../../verifier/test_outputs.py::TestSchema::test_arrays_align_with_case
+ERROR ../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_startup_shutdown_match_commitment
+ERROR ../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_no_simultaneous_startup_shutdown
+ERROR ../../../../../../../verifier/test_outputs.py::TestBinaryLogic::test_reported_transition_counts
+ERROR ../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_must_run_units_online
+ERROR ../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_output_limits_and_offline_zeroes
+ERROR ../../../../../../../verifier/test_outputs.py::TestThermalFeasibility::test_deliverable_reserve_and_ramping
+ERROR ../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_demand_and_reserve
+ERROR ../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_renewable_limits
+ERROR ../../../../../../../verifier/test_outputs.py::TestSystemFeasibility::test_hourly_summary_matches_schedule
+ERROR ../../../../../../../verifier/test_outputs.py::TestMinimumUpDown::test_initial_and_in_horizon_obligations
+ERROR ../../../../../../../verifier/test_outputs.py::TestCostAndQuality::test_reported_cost_matches_schedule
+ERROR ../../../../../../../verifier/test_outputs.py::TestCostAndQuality::test_cost_within_benchmark_gap
+============================== 14 errors in 0.35s ==============================

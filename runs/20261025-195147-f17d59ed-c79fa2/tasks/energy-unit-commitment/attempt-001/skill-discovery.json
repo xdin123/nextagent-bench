@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "milp-solver-workflow",
+    "unit-commitment-data-modeling",
+    "unit-commitment-operating-rules"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "milp-solver-workflow"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "unit-commitment-data-modeling"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "unit-commitment-operating-rules"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

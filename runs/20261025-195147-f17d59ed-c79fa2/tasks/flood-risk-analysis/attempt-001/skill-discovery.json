@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "flood-detection",
+    "nws-flood-thresholds",
+    "usgs-data-download"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "flood-detection"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "nws-flood-thresholds"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "usgs-data-download"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

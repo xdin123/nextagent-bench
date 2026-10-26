@@ -1,0 +1,365 @@
+{
+  "task": "dynamic-object-aware-egomotion",
+  "attempt": 1,
+  "run_id": "20261025-195147-f17d59ed-c79fa2",
+  "model": "qwen3.8-27b",
+  "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
+  "started_at": "2026-10-25T14:00:28.811368+00:00",
+  "phase": "finished",
+  "status": "FINISHED",
+  "budgets": {
+    "task": "dynamic-object-aware-egomotion",
+    "agent_timeout": 1200,
+    "verifier_timeout": 900,
+    "build_timeout": 1200,
+    "cpus": 2.0,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0,
+    "network_mode": "public",
+    "verifier_service": "main"
+  },
+  "score": 0,
+  "reward": 0.0,
+  "phase_seconds": {
+    "queued": 0.094,
+    "build": 595.344,
+    "container_setup": 3.453,
+    "bootstrap": 5.281,
+    "skill_preflight": 0.453,
+    "workspace_preflight": 16.797,
+    "agent": 420.641,
+    "stop_application": 0.406,
+    "verifier": 4.391,
+    "collect": 1.625
+  },
+  "artifact_errors": [],
+  "execution_adapter_sha": "4f5d50753f4f23abc988562533a0deb321ea508210f2a493c734457a39d64064",
+  "execution_concurrency": 2,
+  "elapsed_seconds": 1048.485,
+  "environment": {
+    "image_id": "sha256:96c563fa351ed78bbacd4af098d2dd3c2485e0400d4cb2f50281abb91318bf12",
+    "environment_sha": "b6931f0ac33e0155b07b4017808bd8cce1a92929427b4c5019fb6cfd65efeeaa",
+    "workdir": "/root",
+    "legacy_environment_override": null
+  },
+  "provided_skills": [
+    {
+      "name": "dyn-object-masks",
+      "directory": "dyn-object-masks",
+      "description": "Generate dynamic-object binary masks after global motion compensation, output CSR sparse format.",
+      "sha256": "f39ddb6700d3a0c4626b3764c3921fba7e0557433690294d852f9127b5c7c870"
+    },
+    {
+      "name": "egomotion-estimation",
+      "directory": "egomotion-estimation",
+      "description": "Estimate camera motion with optical flow + affine/homography, allow multi-label per frame.",
+      "sha256": "ae9c89b1c228c3868938cd71d474e3ac20766991d2ed94a45721842a03ad4d70"
+    },
+    {
+      "name": "output-validation",
+      "directory": "output-validation",
+      "description": "Local self-check of instructions and mask outputs (format/range/consistency) without using GT.",
+      "sha256": "fccdbde222731c06fcd34838a39b9ba4c6fe660d57a9a2b2b3f5546188545f7a"
+    },
+    {
+      "name": "sampling-and-indexing",
+      "directory": "sampling-and-indexing",
+      "description": "Standardize video sampling and frame indexing so interval instructions and mask frames stay aligned with a valid key/index scheme.",
+      "sha256": "317046cac52d42837875d1d4a24d30b3597f4bcfd67ab42fde25aaf2bf4a26f9"
+    }
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-dynamic-object-aware-egomotion-1",
+  "skills_discoverable": [
+    "dyn-object-masks",
+    "egomotion-estimation",
+    "output-validation",
+    "sampling-and-indexing"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-b46869ef-7ae1-4d38-a6a0-d730a4bdd47a",
+  "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+  "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+  "accepted_at": "2026-10-25T14:10:50.677062+00:00",
+  "terminal": {
+    "status": "REQUEST_FAILED",
+    "payload": {
+      "rootMessageId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+      "requestId": "request-9671af68-a088-434b-9988-72181e4eb1b7",
+      "runId": "run-e3bf71c1-c890-4982-8d0a-21d20ecaa700",
+      "requestContextId": "context-f2751b3d-94e8-47de-87bc-ee734f6856c2",
+      "status": "FAILED",
+      "content": "Request failed: Model invocation failed safely.",
+      "text": "Request failed: Model invocation failed safely.",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "code": "MODEL_RESPONSE_INVALID",
+      "message": "The model response did not pass output validation. No valid answer was delivered. Check the output requirements or ask an administrator to inspect the run.",
+      "category": "VALIDATION",
+      "retryable": false,
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-346d5e4d-0dad-4162-9414-547a78266c50",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ae6c25b6-e7c3-4dce-8d9e-f42215426b19",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a4afb17a-0bf2-431b-abf5-7a4516a60564",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a5557dc0-03e6-4c7b-bef0-d104d74399ed",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-85025db3-f1df-4b01-86b3-df531b4586ec",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-bec13a32-def3-4dc7-858c-4dfb8ff09c1d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-9525fa52-37c8-41c6-9e66-f6847ce28b0f",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-39be9b33-99e7-4917-9bfe-2b245e0708ae",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-7b3b5a05-3bb8-481f-ac01-184c1bc0078a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-face75fe-f3b7-4896-83cf-be17365c5e8e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f6985bcd-9f78-46bc-bd0c-48580b100288",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e463f097-d8c3-4bc2-9348-2b6371ded81a",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-69122e21-f34a-4c18-9f13-367287ee173e",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-bad3b2a4-874a-48ae-b0e3-836b37412415",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-3c663142-c9dd-41df-8cde-838835c105e6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-a6efcb11-a6ee-45a1-b58f-1767d00c7ded",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-d1008d09-1217-4b28-a923-a36405e81b58",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-e17846b4-cc18-488d-8c20-faf439d0c28b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-c7b17af7-53a2-4cf8-aa34-76ad627b0097",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-916f0c36-f65a-40d0-9085-000070221e0d",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-6c0d49f4-c84f-49c9-ac22-a55c35aaf662",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-eaac7389-dd34-4170-bfb9-7d5b15f28888",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-adbccffe-40dd-4ba7-9674-5a24d21fe349",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-cca15405-a2b8-4135-9b99-aa74eb8bf2b6",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-f8a557f7-68bd-425b-9bdf-d299dd778033",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-b8aabc63-16f8-4755-bdb8-4d6f11502487",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-fe2b5671-35ca-4ab8-96c1-ae723c36e6d2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        }
+      ]
+    },
+    "sequence": 130
+  },
+  "terminal_at": "2026-10-25T14:17:50.868710+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.0,
+    "failed_tests": [],
+    "exit_code": 127
+  },
+  "outcome": "EXECUTION_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 8109056,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 11,
+  "tool_calls": 15,
+  "skills_invoked": [
+    "dyn-object-masks",
+    "egomotion-estimation",
+    "sampling-and-indexing"
+  ],
+  "skills_loaded": [
+    "dyn-object-masks",
+    "egomotion-estimation",
+    "sampling-and-indexing"
+  ],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 11,
+    "LLM_CONTENT_DELTA": 8,
+    "CAPABILITY_STARTED": 15,
+    "BACKGROUND_TASK_STARTED": 2,
+    "CAPABILITY_COMPLETED": 15,
+    "BACKGROUND_TASK_COMPLETED": 2,
+    "REQUEST_FAILED": 1
+  },
+  "finished_at": "2026-10-25T14:17:57.290446+00:00",
+  "evidence_complete": true
+}

@@ -1,0 +1,20 @@
+## Session Summary
+
+### Completed (verified)
+
+1. **Data & model inspection** — `workspace/network.json` is MATPOWER-style with `baseMVA = 100`: 300 buses, 69 generators, 411 branches, plus `gencost` (quadratic costs, model 2), `reserve_requirement` (3697.5 MW), and `reserve_capacity` (per-generator, not used in the base-case OPF). `workspace/math-model.md` defines the complex-number AC-OPF: minimize quadratic cost subject to reference-angle, generator P/Q, voltage-magnitude, nodal power balance, π-model branch flows (tap on from-side, phase shift in angle difference), branch MVA limits, and angle-difference bounds.
+
+2. **Environment** — installed `numpy`, `scipy`, and `casadi` 3.8.1 (bundles IPOPT) via `pip3 --break-system-packages`.
+
+3. **Key technical finding (verified by test)** — CasADi 3.8.1 has **no complex SX support** (`ca.DM(1j)` raises `NotImplementedError`), so the solver was rewritten in the equivalent real-variable form (Vm/Va) with Pij/Qij/Pji/Qji expressed via cos/sin of the shifted angle difference. A numerical sanity check of the real-form flow equations passed.
+
+4. **Solver script** — `temp/acopf.py` is fully written: 738 variables (Vm, Va, Pg, Qg), 2340 constraints (nodal P/Q balance, branch MVA² limits, angle-diff bounds, ref angle, PV setpoints, V/P/Q bounds), IPOPT options set, plus a post-solve numpy verification (P/Q mismatches, voltage violations, overloads) and report generation matching the required schema.
+
+### Incomplete (blocked at last run)
+
+- **Solve failed on API error**: the script uses `opti.set_objective(cost)`, but CasADi 3.8.1's `Opti` object has no `set_objective` method (last traceback: `AttributeError: 'Opti' object has no attribute 'set_objective'`). The correct call is `opti.minimize(cost)`.
+- **Not yet done**: successful IPOPT solve, feasibility verification, and writing `workspace/report.json` — the report file does **not** exist yet.
+
+### Next step (single-line fix)
+
+Replace `opti.set_objective(cost)` with `opti.minimize(cost)` in `temp/acopf.py` and re-run `python3 temp/acopf.py`.

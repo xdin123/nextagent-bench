@@ -1,0 +1,129 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 7,
+            "pending": 0,
+            "other": 0,
+            "start": 1792933730.8454447,
+            "stop": 1792933730.8887303
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::TestFormat::test_solution_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0007519850005337503,
+                "start": 1792933730.861305,
+                "stop": 1792933730.869546,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "/verifier/test_outputs.py:68: in test_solution_file_exists\n    assert paths[\"solution\"].exists(), \\\nE   AssertionError: Solution file not found: /output/scenario_3.json\nE   assert False\nE    +  where False = exists()\nE    +    where exists = PosixPath('/output/scenario_3.json').exists",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_solution_is_valid_json",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00045492600111174397,
+                "start": 1792933730.8698347,
+                "stop": 1792933730.8724048,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "/verifier/test_outputs.py:73: in test_solution_is_valid_json\n    with open(paths[\"solution\"]) as f:\nE   FileNotFoundError: [Errno 2] No such file or directory: '/output/scenario_3.json'",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_has_placements",
+                "status": "skipped",
+                "duration": 0.00039842899786890484,
+                "start": 1792933730.8726866,
+                "stop": 1792933730.8734095,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 77, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_has_adjacency_bonuses",
+                "status": "skipped",
+                "duration": 0.00030993599648354575,
+                "start": 1792933730.8736367,
+                "stop": 1792933730.8742154,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 82, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_has_total_adjacency",
+                "status": "skipped",
+                "duration": 0.0002244890019937884,
+                "start": 1792933730.874397,
+                "stop": 1792933730.8748286,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 87, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_has_city_center",
+                "status": "skipped",
+                "duration": 0.0002286079979967326,
+                "start": 1792933730.87503,
+                "stop": 1792933730.8754854,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 92, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_placements_have_coordinates",
+                "status": "skipped",
+                "duration": 0.0003487840003799647,
+                "start": 1792933730.875659,
+                "stop": 1792933730.8762493,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 98, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_adjacency_matches_placements",
+                "status": "skipped",
+                "duration": 0.0002507660028641112,
+                "start": 1792933730.8764281,
+                "stop": 1792933730.8768916,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 106, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestFormat::test_total_adjacency_is_sum",
+                "status": "skipped",
+                "duration": 0.0002153249988623429,
+                "start": 1792933730.8770585,
+                "stop": 1792933730.8774898,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "('/verifier/test_outputs.py', 113, 'Skipped: Solution file not found: /output/scenario_3.json')"
+            },
+            {
+                "name": "test_outputs.py::TestEvaluation::test_evaluate_scenario",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.008855178999510827,
+                "start": 1792933730.8776627,
+                "stop": 1792933730.8886209,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "tags": [
+                    "parametrize::scenario_id::['scenario_3']"
+                ],
+                "trace": "/verifier/test_outputs.py:149: in test_evaluate_scenario\n    pytest.fail(f\"Solution file not found: {paths['solution']}\")\nE   Failed: Solution file not found: /output/scenario_3.json",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}
