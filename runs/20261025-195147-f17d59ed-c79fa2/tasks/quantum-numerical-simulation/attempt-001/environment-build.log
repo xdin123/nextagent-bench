@@ -1,0 +1,101 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.09kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#4 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 3.38kB done
+#5 DONE 0.0s
+
+#6 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     gfortran     libopenblas-dev     liblapack-dev     libblas-dev     && rm -rf /var/lib/apt/lists/*
+#6 1.920 Hit:1 http://deb.debian.org/debian trixie InRelease
+#6 3.980 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#6 5.046 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#6 21.64 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+#6 22.94 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [720 B]
+#6 25.17 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [270 kB]
+#6 25.20 Fetched 10.0 MB in 25s (402 kB/s)
+#6 25.20 Reading package lists...
+#6 25.63 Reading package lists...
+#6 26.09 Building dependency tree...
+#6 26.20 Reading state information...
+#6 26.33 The following additional packages will be installed:
+#6 26.33   binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-14
+#6 26.33   cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev g++ g++-14
+#6 26.33   g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
+#6 26.33   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu gfortran-14
+#6 26.33   gfortran-14-x86-64-linux-gnu gfortran-x86-64-linux-gnu libasan8 libatomic1
+#6 26.33   libbinutils libblas3 libc-dev-bin libc6-dev libcc1-0 libcrypt-dev
+#6 26.33   libctf-nobfd0 libctf0 libdpkg-perl libgcc-14-dev libgdbm-compat4t64
+#6 26.33   libgfortran-14-dev libgfortran5 libgomp1 libgprofng0 libhwasan0 libisl23
+#6 26.33   libitm1 libjansson4 liblapack3 liblsan0 libmpc3 libmpfr6
+#6 26.33   libopenblas-pthread-dev libopenblas0 libopenblas0-pthread libperl5.40
+#6 26.33   libquadmath0 libsframe1 libstdc++-14-dev libtsan2 libubsan1 linux-libc-dev
+#6 26.33   make patch perl perl-modules-5.40 rpcsvc-proto xz-utils
+#6 26.33 Suggested packages:
+#6 26.33   binutils-doc gprofng-gui binutils-gold bzip2-doc cpp-doc gcc-14-locales
+#6 26.33   cpp-14-doc debian-keyring debian-tag2upload-keyring g++-multilib
+#6 26.33   g++-14-multilib gcc-14-doc gcc-multilib manpages-dev autoconf automake
+#6 26.33   libtool flex bison gdb gcc-doc gcc-14-multilib gdb-x86-64-linux-gnu
+#6 26.33   gfortran-multilib gfortran-doc gfortran-14-multilib gfortran-14-doc
+#6 26.33   libcoarrays-dev liblapack-doc libc-devtools glibc-doc sq | sqop | rsop
+#6 26.33   | gosop | pgpainless-cli | gpg-sq | gnupg sensible-utils git bzr
+#6 26.33   libstdc++-14-doc make-doc ed diffutils-doc perl-doc
+#6 26.33   libterm-readline-gnu-perl | libterm-readline-perl-perl
+#6 26.33   libtap-harness-archive-perl
+#6 26.33 Recommended packages:
+#6 26.33   fakeroot sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg
+#6 26.33   libalgorithm-merge-perl manpages manpages-dev libfile-fcntllock-perl
+#6 26.33   liblocale-gettext-perl
+#6 26.52 The following NEW packages will be installed:
+#6 26.52   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 cpp
+#6 26.52   cpp-14 cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev g++ g++-14
+#6 26.52   g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
+#6 26.52   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu gfortran gfortran-14
+#6 26.52   gfortran-14-x86-64-linux-gnu gfortran-x86-64-linux-gnu libasan8 libatomic1
+#6 26.52   libbinutils libblas-dev libblas3 libc-dev-bin libc6-dev libcc1-0
+#6 26.52   libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libgcc-14-dev
+#6 26.52   libgdbm-compat4t64 libgfortran-14-dev libgfortran5 libgomp1 libgprofng0
+#6 26.52   libhwasan0 libisl23 libitm1 libjansson4 liblapack-dev liblapack3 liblsan0
+#6 26.52   libmpc3 libmpfr6 libopenblas-dev libopenblas-pthread-dev libopenblas0
+#6 26.52   libopenblas0-pthread libperl5.40 libquadmath0 libsframe1 libstdc++-14-dev
+#6 26.52   libtsan2 libubsan1 linux-libc-dev make patch perl perl-modules-5.40
+#6 26.52   rpcsvc-proto xz-utils
+#6 27.86 0 upgraded, 66 newly installed, 0 to remove and 1 not upgraded.
+#6 27.86 Need to get 116 MB of archives.
+#6 27.86 After this operation, 529 MB of additional disk space will be used.
+#6 27.86 Get:1 http://deb.debian.org/debian trixie/main amd64 bzip2 amd64 1.0.8-6 [40.5 kB]
+#6 36.40 Get:2 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1 [3014 kB]
+#6 37.91 Get:3 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+#6 51.10 Get:4 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1 [4326 kB]
+#6 54.27 Get:5 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1 [268 kB]
+#6 60.62 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 xz-utils amd64 5.8.1-1+deb13u2 [660 kB]
+#6 63.27 Get:7 http://deb.debian.org/debian trixie/main amd64 libsframe1 amd64 2.44-3 [78.4 kB]
+#6 67.15 Get:8 http://deb.debian.org/debian trixie/main amd64 binutils-common amd64 2.44-3 [2509 kB]
+#6 70.51 Get:9 http://deb.debian.org/debian trixie/main amd64 libbinutils amd64 2.44-3 [534 kB]
+#6 75.41 Get:10 http://deb.debian.org/debian trixie/main amd64 libgprofng0 amd64 2.44-3 [808 kB]
+#6 77.41 Get:11 http://deb.debian.org/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3 [156 kB]
+#6 81.64 Get:12 http://deb.debian.org/debian trixie/main amd64 libctf0 amd64 2.44-3 [88.6 kB]
+#6 82.93 Get:13 http://deb.debian.org/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3 [39.8 kB]
+#6 88.63 Get:14 http://deb.debian.org/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3 [1014 kB]
+#6 90.58 Get:15 http://deb.debian.org/debian trixie/main amd64 binutils amd64 2.44-3 [265 kB]
+#6 92.00 Get:16 http://deb.debian.org/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u4 [60.0 kB]
+#6 101.8 Get:17 http://deb.debian.org/debian-security trixie-security/main amd64 linux-libc-dev all 6.12.113-1 [3021 kB]
+#6 103.7 Get:18 http://deb.debian.org/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1 [119 kB]
+#6 104.9 Get:19 http://deb.debian.org/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1 [63.3 kB]
+#6 111.3 Get:20 http://deb.debian.org/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u4 [1995 kB]
+#6 115.4 Get:21 http://deb.debian.org/debian trixie/main amd64 libisl23 amd64 0.27-1 [659 kB]
+#6 121.1 Get:22 http://deb.debian.org/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1 [729 kB]
+#6 122.7 Get:23 http://deb.debian.org/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3 [52.2 kB]

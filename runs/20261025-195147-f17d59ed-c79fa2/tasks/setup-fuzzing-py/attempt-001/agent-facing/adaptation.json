@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/app",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "discover-important-function",
+      "directory": "discover-important-function",
+      "description": "When given a project codebase, this skill observes the important functions in the codebase for future action.",
+      "sha256": "d935cc481fe8700ecfec482810dbf7fb56d0ee7e5fec7221ca5a77519d29ce29"
+    },
+    {
+      "name": "fuzzing-python",
+      "directory": "fuzzing-python",
+      "description": "Creating fuzz driver for Python libraries using LibFuzzer. This skill is useful when agent needs to work with creating fuzz drivers / fuzz targets for Python project and libraries.",
+      "sha256": "718882130de22873f00e422d1c8d4d67febd002d5ee0163f314fea8890c0b835"
+    },
+    {
+      "name": "setup-env",
+      "directory": "setup-env",
+      "description": "When given a Python project codebase, this skill helps the agent to set up virtual environments, install dependencies, and run scripts.",
+      "sha256": "7b95dc92985ab21b131c5f1d14ec05cf27d145c5384e28bbf3022c7ea89f4202"
+    }
+  ],
+  "verifier_sha": "814c426cb146118933647dfa8b852eb584ec08c125b1d2e6455308e94b6f5e43",
+  "prompt_sha": "88ea9da5dfb3930efbd5d17c3093b7a601bd66885601115cb06f6110e847761c"
+}

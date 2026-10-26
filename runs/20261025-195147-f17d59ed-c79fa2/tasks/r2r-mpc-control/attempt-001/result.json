@@ -5,8 +5,8 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T04:27:24.054956+00:00",
-  "phase": "container_setup",
-  "status": "RUNNING",
+  "phase": "finished",
+  "status": "FINISHED",
   "budgets": {
     "task": "r2r-mpc-control",
     "agent_timeout": 1200,
@@ -19,16 +19,24 @@
     "network_mode": "public",
     "verifier_service": "main"
   },
-  "score": null,
-  "reward": null,
+  "score": 0,
+  "reward": 0.0,
   "phase_seconds": {
     "queued": 531.469,
-    "build": 470.391
+    "build": 470.391,
+    "container_setup": 1812.031,
+    "bootstrap": 5.406,
+    "skill_preflight": 0.485,
+    "workspace_preflight": 22.797,
+    "agent": 1050.39,
+    "stop_application": 0.422,
+    "verifier": 20.203,
+    "collect": 2.047
   },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 1001.86,
+  "elapsed_seconds": 3915.641,
   "environment": {
     "image_id": "sha256:de9624434f102176b0b90841da7baf9107200034b5064cbdba6ee5eae9a960cc",
     "environment_sha": "1f2a515d7d7b7b7fcf5378a5bd98829c49ce8070e61a37d0bf34a6742095e13f",
@@ -60,5 +68,176 @@
       "description": "Linearizing nonlinear dynamics around operating points for control design.",
       "sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
     }
-  ]
+  ],
+  "container": "nab-20261025-195147-f17d59ed-c79fa2-r2r-mpc-control-1",
+  "skills_discoverable": [
+    "finite-horizon-lqr",
+    "integral-action-design",
+    "mpc-horizon-tuning",
+    "state-space-linearization"
+  ],
+  "workspace": "/opt/na-eval/home/workspaces/execution/4d1687d33cec49be/workspace",
+  "sessionId": "session-fc4afe91-74fd-4753-a1c0-b3c45b834253",
+  "runId": "run-ec058a4e-247c-4e05-8cf6-c5cb5239e4d1",
+  "requestId": "request-8a5c75c2-803a-4349-be02-8587e9d85ea9",
+  "accepted_at": "2026-10-26T05:14:47.133033+00:00",
+  "terminal": {
+    "status": "REQUEST_FAILED",
+    "payload": {
+      "rootMessageId": "request-8a5c75c2-803a-4349-be02-8587e9d85ea9",
+      "requestId": "request-8a5c75c2-803a-4349-be02-8587e9d85ea9",
+      "runId": "run-ec058a4e-247c-4e05-8cf6-c5cb5239e4d1",
+      "requestContextId": "context-586f0c41-40bd-420b-90f9-3394ae96587e",
+      "status": "FAILED",
+      "content": "Request failed: The model response could not satisfy the required output contract.",
+      "text": "Request failed: The model response could not satisfy the required output contract.",
+      "contentType": "PLAIN_TEXT",
+      "metadata": {
+        "accumulated": true
+      },
+      "code": "MODEL_PROVIDER_ERROR",
+      "message": "Model provider is temporarily unavailable. Please retry later.",
+      "category": "UNAVAILABLE",
+      "retryable": true,
+      "hookResults": [
+        {
+          "hookInvocationId": "hook-d524ea1f-b526-4d51-8427-3cbe383c7d4b",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c93e2ee6-8f32-4e39-9d41-13877aae26cd",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-888d70c7-21f3-4664-b81d-b7c2c9b03d06",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-ef7e8185-432f-4e9b-bac2-f24bd824da6a",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-2c4b1f2c-6f27-486d-9bc2-af242b6d9e40",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-b912b9cb-d76f-425a-b486-2f2661bc77d2",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-0d364302-8917-4777-9b34-da8940e5079d",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-0cfb2128-f03b-49ab-806e-c390539c3c88",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-c066c0e0-6f43-43ca-88e0-02a8438f25f3",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-ef5ce899-5c3b-48a9-940e-4d2cac630c26",
+          "hookId": "clip-secondary-check",
+          "stage": "BEFORE_CAPABILITY_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "FAIL",
+          "outcome": "PASS"
+        },
+        {
+          "hookInvocationId": "hook-faa8fa41-7b36-44f4-9fde-777387b89918",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        },
+        {
+          "hookInvocationId": "hook-38ae6739-1eef-4721-a6d0-d9a03c472c7e",
+          "hookId": "user-query-memory-recall",
+          "stage": "BEFORE_MODEL_INVOKE",
+          "status": "SUCCESS",
+          "failureMode": "CONTINUE",
+          "outcome": "SKIP"
+        }
+      ]
+    },
+    "sequence": 54
+  },
+  "terminal_at": "2026-10-26T05:32:17.023198+00:00",
+  "application_stop": {
+    "stopped": true,
+    "forced": false
+  },
+  "verifier": {
+    "outcome": "TASK_FAILED",
+    "reward": 0.0,
+    "failed_tests": [
+      "test_outputs.py::TestControllerParams::test_controller_params",
+      "test_outputs.py::TestControllerParams::test_linearization_correctness",
+      "test_outputs.py::TestControlLog::test_control_log",
+      "test_outputs.py::TestMetrics::test_metrics",
+      "test_outputs.py::TestPerformance::test_performance",
+      "test_outputs.py::TestSafety::test_safety"
+    ],
+    "exit_code": 0
+  },
+  "outcome": "EXECUTION_FAILED",
+  "home_archive": {
+    "file": "nextagent-home.tar",
+    "size_bytes": 68167680,
+    "extracted_log_files": 5,
+    "workspace": "home/workspaces/execution/<scope>/workspace inside the archive"
+  },
+  "model_rounds": 3,
+  "tool_calls": 7,
+  "skills_invoked": [],
+  "skills_loaded": [],
+  "event_counts": {
+    "REQUEST_ACCEPTED": 1,
+    "LLM_THINKING_DELTA": 3,
+    "LLM_CONTENT_DELTA": 2,
+    "CAPABILITY_STARTED": 7,
+    "CAPABILITY_COMPLETED": 7,
+    "LLM_OUTPUT_RETRACTED": 1,
+    "REQUEST_FAILED": 1
+  },
+  "finished_at": "2026-10-26T05:32:39.692812+00:00",
+  "evidence_complete": true
 }

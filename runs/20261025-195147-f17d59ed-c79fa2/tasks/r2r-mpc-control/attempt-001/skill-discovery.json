@@ -1,0 +1,27 @@
+{
+  "registered": [
+    "finite-horizon-lqr",
+    "integral-action-design",
+    "mpc-horizon-tuning",
+    "state-space-linearization"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "finite-horizon-lqr"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "integral-action-design"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "mpc-horizon-tuning"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "state-space-linearization"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

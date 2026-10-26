@@ -5,8 +5,8 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T04:42:25.101145+00:00",
-  "phase": "build",
-  "status": "RUNNING",
+  "phase": "finished",
+  "status": "FINISHED",
   "budgets": {
     "task": "react-performance-debugging",
     "agent_timeout": 1800,
@@ -22,10 +22,17 @@
   "score": null,
   "reward": null,
   "phase_seconds": {
-    "queued": 1.094
+    "queued": 1.094,
+    "build": 1909.828,
+    "collect": 0.0
   },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 1.094
+  "elapsed_seconds": 1910.922,
+  "failed_phase": "build",
+  "error": "Command '['docker', 'build', '-t', 'nextagent-bench/environment:987dcf47146a00260317', 'C:\\\\Project\\\\nextagent-bench\\\\datasets\\\\c44fb04745607db4d1c0b07a945ec3fbdfaa2bd955ae172667aaa7edc95b4ae2\\\\tasks\\\\react-performance-debugging\\\\environment']' timed out after 1200.0 seconds",
+  "outcome": "ENVIRONMENT_ERROR",
+  "finished_at": "2026-10-26T05:14:16.021574+00:00",
+  "evidence_complete": false
 }

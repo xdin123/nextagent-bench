@@ -1,0 +1,176 @@
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-json-ctrf==0.3.5
+  Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=20 (from pytest==8.4.1)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.5/365.5 kB 222.1 kB/s eta 0:00:00
+Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 2.2 MB/s eta 0:00:00
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 222.4 kB/s eta 0:00:00
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-8.4.1 pytest-json-ctrf-0.3.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+=== Contents of /root ===
+total 40
+drwxr-xr-x 5 root root 4096 Oct 26 05:14 .
+drwxr-xr-x 6 root root 4096 Oct 26 05:14 ..
+-rw-r--r-- 1 root root 3106 Apr 22  2024 .bashrc
+drwxr-xr-x 3 root root 4096 Oct 26 05:14 .cache
+-rw-r--r-- 1 root root  161 Apr 22  2024 .profile
+-rwxr-xr-x 1 root root 6709 Oct 13 05:44 r2r_simulator.py
+drwxr-xr-x 6 root root 4096 Oct 26 05:14 skills
+-rwxr-xr-x 1 root root  304 Oct 13 05:44 system_config.json
+drwxr-xr-x 2 root root 4096 Oct 26 05:14 tool-results
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 6 items
+
+../../../../../../../verifier/test_outputs.py::TestControllerParams::test_controller_params FAILED [ 16%]
+../../../../../../../verifier/test_outputs.py::TestControllerParams::test_linearization_correctness FAILED [ 33%]
+../../../../../../../verifier/test_outputs.py::TestControlLog::test_control_log FAILED [ 50%]
+../../../../../../../verifier/test_outputs.py::TestMetrics::test_metrics FAILED [ 66%]
+../../../../../../../verifier/test_outputs.py::TestPerformance::test_performance FAILED [ 83%]
+../../../../../../../verifier/test_outputs.py::TestSafety::test_safety FAILED [100%]
+
+=================================== FAILURES ===================================
+_________________ TestControllerParams.test_controller_params __________________
+
+self = <test_outputs.TestControllerParams object at 0x77a7329a0e30>
+
+    def test_controller_params(self):
+>       params = load_json(CONTROLLER_PARAMS)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/controller_params.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/controller_params.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+_____________ TestControllerParams.test_linearization_correctness ______________
+
+self = <test_outputs.TestControllerParams object at 0x77a7375938f0>
+
+    def test_linearization_correctness(self):
+        """Verify A, B matrices are correctly derived from dynamics."""
+>       params = load_json(CONTROLLER_PARAMS)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/controller_params.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/controller_params.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+_______________________ TestControlLog.test_control_log ________________________
+
+self = <test_outputs.TestControlLog object at 0x77a73755bc80>
+
+    def test_control_log(self):
+>       data = load_json(CONTROL_LOG)
+               ^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:145: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/control_log.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+___________________________ TestMetrics.test_metrics ___________________________
+
+self = <test_outputs.TestMetrics object at 0x77a73755a000>
+
+    def test_metrics(self):
+>       metrics = load_json(METRICS)
+                  ^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/metrics.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/metrics.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+_______________________ TestPerformance.test_performance _______________________
+
+self = <test_outputs.TestPerformance object at 0x77a72b42b5f0>
+
+    def test_performance(self):
+>       control = load_json(CONTROL_LOG)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:212: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/control_log.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+____________________________ TestSafety.test_safety ____________________________
+
+self = <test_outputs.TestSafety object at 0x77a72b450050>
+
+    def test_safety(self):
+>       control = load_json(CONTROL_LOG)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+
+/verifier/test_outputs.py:259: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filepath = '/root/control_log.json'
+
+    def load_json(filepath):
+>       with open(filepath, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'
+
+/verifier/test_outputs.py:21: FileNotFoundError
+=========================== short test summary info ============================
+FAILED ../../../../../../../verifier/test_outputs.py::TestControllerParams::test_controller_params
+FAILED ../../../../../../../verifier/test_outputs.py::TestControllerParams::test_linearization_correctness
+FAILED ../../../../../../../verifier/test_outputs.py::TestControlLog::test_control_log
+FAILED ../../../../../../../verifier/test_outputs.py::TestMetrics::test_metrics
+FAILED ../../../../../../../verifier/test_outputs.py::TestPerformance::test_performance
+FAILED ../../../../../../../verifier/test_outputs.py::TestSafety::test_safety
+============================== 6 failed in 0.28s ===============================
+Pytest exit code: 1
+Some tests failed.
+Test run complete.

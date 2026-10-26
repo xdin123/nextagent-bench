@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-26T04:44:06.433612+00:00",
+  "at": "2026-10-26T05:59:05.548124+00:00",
   "current_jobs": 4,
   "level_started_at": "2026-10-26T03:36:39.236176+00:00",
   "baseline_completed_tasks": [
@@ -17151,18 +17151,5502 @@
         ],
         "explicit_retry_queue_exists": false
       }
+    },
+    {
+      "at": "2026-10-26T04:59:09.658218+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 0,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 31
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 7,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-01",
+            "requests": 6,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-02",
+            "requests": 6,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 4,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-04",
+            "requests": 8,
+            "disabled": false,
+            "active": 0
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 0
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 0,
+        "shared-01": 0,
+        "shared-02": 0,
+        "shared-03": 0,
+        "shared-04": 0
+      },
+      "level_age_minutes": 82.51,
+      "stable_minutes": 16.74,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting"
+      ],
+      "model_requests_since_level_start": 31,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 12,
+        "TIMEOUT": 6,
+        "ENVIRONMENT_ERROR": 27,
+        "TASK_FAILED": 8,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 33,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "container_setup",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "container_setup",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=0.03% MEM=40.06MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 3
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 0
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T04:59:40.069956+00:00",
+        "scoped_orphan_cleanup": [],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
+    },
+    {
+      "at": "2026-10-26T05:14:09.204478+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 0,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 31
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 7,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-01",
+            "requests": 6,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-02",
+            "requests": 6,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 4,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-04",
+            "requests": 8,
+            "disabled": false,
+            "active": 0
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 0
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 0,
+        "shared-01": 0,
+        "shared-02": 0,
+        "shared-03": 0,
+        "shared-04": 0
+      },
+      "level_age_minutes": 97.5,
+      "stable_minutes": 31.74,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting"
+      ],
+      "model_requests_since_level_start": 31,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 12,
+        "TIMEOUT": 6,
+        "ENVIRONMENT_ERROR": 27,
+        "TASK_FAILED": 8,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 33,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "container_setup",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "container_setup",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=0.01% MEM=42.28MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 3
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 0
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T05:15:07.210148+00:00",
+        "scoped_orphan_cleanup": [],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
+    },
+    {
+      "at": "2026-10-26T05:15:24.501436+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 2,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 42
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 10,
+            "disabled": false,
+            "active": 1
+          },
+          {
+            "name": "shared-01",
+            "requests": 7,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-02",
+            "requests": 9,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 6,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-04",
+            "requests": 12,
+            "disabled": false,
+            "active": 1
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 11
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 3,
+        "shared-01": 1,
+        "shared-02": 3,
+        "shared-03": 2,
+        "shared-04": 4
+      },
+      "level_age_minutes": 98.75,
+      "stable_minutes": 1.14,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting"
+      ],
+      "model_requests_since_level_start": 44,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 12,
+        "TIMEOUT": 6,
+        "ENVIRONMENT_ERROR": 28,
+        "TASK_FAILED": 8,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 33,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "agent",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "agent",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": "2026-10-26T05:14:16.021574+00:00"
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:14:16.034276+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": "2026-10-26T05:14:16.021574+00:00"
+        }
+      ],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-20261025-195147-f17d59ed-c79fa2-radar-vital-signs-1 running=true oom=false exit=0",
+        "/nab-20261025-195147-f17d59ed-c79fa2-r2r-mpc-control-1 running=true oom=false exit=0",
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-20261025-195147-f17d59ed-c79fa2-radar-vital-signs-1 CPU=2.67% MEM=404.2MiB / 2GiB",
+        "nab-20261025-195147-f17d59ed-c79fa2-r2r-mpc-control-1 CPU=10.55% MEM=457.4MiB / 4GiB",
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=1.54% MEM=45.07MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 3
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 0
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T05:15:28.968304+00:00",
+        "scoped_orphan_cleanup": [
+          {
+            "task": "react-performance-debugging",
+            "attempt": 1,
+            "pid": 33492,
+            "parent_pid": 18568,
+            "parent_absent": true,
+            "exact_image_and_context_verified": true,
+            "stopped": true
+          }
+        ],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
+    },
+    {
+      "at": "2026-10-26T05:29:49.504346+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 3,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 63
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 15,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-01",
+            "requests": 8,
+            "disabled": false,
+            "active": 1
+          },
+          {
+            "name": "shared-02",
+            "requests": 14,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 13,
+            "disabled": false,
+            "active": 1
+          },
+          {
+            "name": "shared-04",
+            "requests": 16,
+            "disabled": false,
+            "active": 1
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 21
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 5,
+        "shared-01": 1,
+        "shared-02": 5,
+        "shared-03": 7,
+        "shared-04": 4
+      },
+      "level_age_minutes": 113.17,
+      "stable_minutes": 5.53,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting"
+      ],
+      "model_requests_since_level_start": 66,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 12,
+        "TIMEOUT": 6,
+        "ENVIRONMENT_ERROR": 29,
+        "TASK_FAILED": 8,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 33,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "agent",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "agent",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": "2026-10-26T05:14:16.021574+00:00"
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:14:16.034276+00:00",
+          "finished_at": "2026-10-26T05:24:17.950866+00:00"
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "attempt": 1,
+          "phase": "agent",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:24:17.968589+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [
+        {
+          "task": "reserves-at-risk-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:14:16.034276+00:00",
+          "finished_at": "2026-10-26T05:24:17.950866+00:00"
+        }
+      ],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-20261025-195147-f17d59ed-c79fa2-sales-pivot-analysis-1 running=true oom=false exit=0",
+        "/nab-20261025-195147-f17d59ed-c79fa2-radar-vital-signs-1 running=true oom=false exit=0",
+        "/nab-20261025-195147-f17d59ed-c79fa2-r2r-mpc-control-1 running=true oom=false exit=0",
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-20261025-195147-f17d59ed-c79fa2-sales-pivot-analysis-1 CPU=8.49% MEM=348.1MiB / 4GiB",
+        "nab-20261025-195147-f17d59ed-c79fa2-radar-vital-signs-1 CPU=13.93% MEM=497.8MiB / 2GiB",
+        "nab-20261025-195147-f17d59ed-c79fa2-r2r-mpc-control-1 CPU=18.71% MEM=488MiB / 4GiB",
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=2.23% MEM=46.94MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 4
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 1
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [
+        {
+          "at": "2026-10-26T05:17:31.161355+00:00",
+          "task": "r2r-mpc-control",
+          "purpose": "evaluation",
+          "status": 200,
+          "response_started": true,
+          "classification": "UNEXPLAINED",
+          "terminal_status": null,
+          "application_stopped": false,
+          "seconds_after_terminal": null
+        }
+      ],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T05:30:39.979314+00:00",
+        "scoped_orphan_cleanup": [
+          {
+            "task": "reserves-at-risk-calc",
+            "attempt": 1,
+            "pid": 29956,
+            "parent_pid": 2032,
+            "parent_absent": true,
+            "exact_image_and_context_verified": true,
+            "stopped": true
+          }
+        ],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
+    },
+    {
+      "at": "2026-10-26T05:44:04.235284+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 0,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 78
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 17,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-01",
+            "requests": 9,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-02",
+            "requests": 17,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 16,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-04",
+            "requests": 19,
+            "disabled": false,
+            "active": 0
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 15
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 2,
+        "shared-01": 1,
+        "shared-02": 3,
+        "shared-03": 3,
+        "shared-04": 3
+      },
+      "level_age_minutes": 127.42,
+      "stable_minutes": 1.39,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting",
+        "r2r-mpc-control",
+        "radar-vital-signs",
+        "sales-pivot-analysis"
+      ],
+      "model_requests_since_level_start": 78,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 13,
+        "TIMEOUT": 7,
+        "ENVIRONMENT_ERROR": 30,
+        "TASK_FAILED": 9,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 36,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": "2026-10-26T05:32:39.692812+00:00"
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": "2026-10-26T05:35:00.398561+00:00"
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": "2026-10-26T05:14:16.021574+00:00"
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:14:16.034276+00:00",
+          "finished_at": "2026-10-26T05:24:17.950866+00:00"
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:24:17.968589+00:00",
+          "finished_at": "2026-10-26T05:34:18.793860+00:00"
+        },
+        {
+          "task": "sec-financial-report",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:32:39.710747+00:00",
+          "finished_at": "2026-10-26T05:42:40.670234+00:00"
+        },
+        {
+          "task": "seismic-phase-picking",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:34:18.818284+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:35:00.419912+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "shock-analysis-demand",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:42:40.703501+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": "2026-10-26T05:32:39.692812+00:00"
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": "2026-10-26T05:35:00.398561+00:00"
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:24:17.968589+00:00",
+          "finished_at": "2026-10-26T05:34:18.793860+00:00"
+        },
+        {
+          "task": "sec-financial-report",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:32:39.710747+00:00",
+          "finished_at": "2026-10-26T05:42:40.670234+00:00"
+        }
+      ],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=0.01% MEM=40.91MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 6
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 2
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [
+        {
+          "at": "2026-10-26T05:34:07.354611+00:00",
+          "task": "sales-pivot-analysis",
+          "purpose": "evaluation",
+          "status": 200,
+          "response_started": true,
+          "classification": "POST_TERMINAL_APPLICATION_STOP",
+          "terminal_status": "REQUEST_COMPLETED",
+          "application_stopped": true,
+          "seconds_after_terminal": 5.223027
+        },
+        {
+          "at": "2026-10-26T05:34:44.763516+00:00",
+          "task": "radar-vital-signs",
+          "purpose": "evaluation",
+          "status": 200,
+          "response_started": true,
+          "classification": "POST_TERMINAL_CANCELLATION_STOP",
+          "terminal_status": "TIMEOUT",
+          "application_stopped": true,
+          "seconds_after_terminal": 0.425473
+        }
+      ],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T05:44:16.685493+00:00",
+        "scoped_orphan_cleanup": [
+          {
+            "task": "sec-financial-report",
+            "attempt": 1,
+            "pid": 24392,
+            "parent_pid": 28580,
+            "parent_absent": true,
+            "exact_image_and_context_verified": true,
+            "stopped": true
+          }
+        ],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
+    },
+    {
+      "at": "2026-10-26T05:59:05.548124+00:00",
+      "jobs": 4,
+      "metrics": {
+        "quota": {
+          "shared_account": true,
+          "max_concurrency": 4,
+          "requests_per_minute": null,
+          "tokens_per_minute": null,
+          "min_interval_seconds": 2,
+          "max_attempts": 3,
+          "max_wait_seconds": 90,
+          "upstream_idle_timeout_seconds": 120
+        },
+        "active": 0,
+        "cooldown_remaining_seconds": 0,
+        "statuses": {
+          "200": 78
+        },
+        "credentials": [
+          {
+            "name": "default",
+            "requests": 17,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-01",
+            "requests": 9,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-02",
+            "requests": 17,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-03",
+            "requests": 16,
+            "disabled": false,
+            "active": 0
+          },
+          {
+            "name": "shared-04",
+            "requests": 19,
+            "disabled": false,
+            "active": 0
+          }
+        ]
+      },
+      "status_delta_since_last_check": {
+        "200": 0
+      },
+      "credential_requests_delta_since_last_check": {
+        "default": 0,
+        "shared-01": 0,
+        "shared-02": 0,
+        "shared-03": 0,
+        "shared-04": 0
+      },
+      "level_age_minutes": 142.44,
+      "stable_minutes": 1.41,
+      "new_scored_tasks_at_level": [
+        "pptx-reference-formatting",
+        "r2r-mpc-control",
+        "radar-vital-signs",
+        "sales-pivot-analysis"
+      ],
+      "model_requests_since_level_start": 78,
+      "outcome_counts": {
+        "PASSED": 7,
+        "EXECUTION_FAILED": 13,
+        "TIMEOUT": 7,
+        "ENVIRONMENT_ERROR": 31,
+        "TASK_FAILED": 9,
+        "PREFLIGHT_ERROR": 3,
+        "VERIFIER_ERROR": 1,
+        "RUNNING": 4
+      },
+      "scored_count": 36,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T11:51:50.368859+00:00",
+          "finished_at": "2026-10-25T11:56:28.468530+00:00"
+        },
+        {
+          "task": "ada-bathroom-plan-repair",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.285769+00:00",
+          "finished_at": "2026-10-25T12:28:59.551903+00:00"
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:05:00.287857+00:00",
+          "finished_at": "2026-10-25T12:27:08.371294+00:00"
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:27:08.375589+00:00",
+          "finished_at": "2026-10-25T12:33:06.930847+00:00"
+        },
+        {
+          "task": "bike-rebalance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:28:59.556984+00:00",
+          "finished_at": "2026-10-25T12:45:54.518700+00:00"
+        },
+        {
+          "task": "citation-check",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T12:33:06.935855+00:00",
+          "finished_at": "2026-10-25T12:37:59.151498+00:00"
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:37:59.155502+00:00",
+          "finished_at": "2026-10-25T13:08:52.986107+00:00"
+        },
+        {
+          "task": "court-form-filling",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T12:45:54.530352+00:00",
+          "finished_at": "2026-10-25T13:18:12.246417+00:00"
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:08:53.001987+00:00",
+          "finished_at": "2026-10-25T13:16:57.570346+00:00"
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:16:57.575928+00:00",
+          "finished_at": "2026-10-25T13:21:58.928231+00:00"
+        },
+        {
+          "task": "data-to-d3",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T13:18:12.252137+00:00",
+          "finished_at": "2026-10-25T13:31:59.132273+00:00"
+        },
+        {
+          "task": "debug-trl-grpo",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.6,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:21:58.938184+00:00",
+          "finished_at": "2026-10-25T14:00:28.800742+00:00"
+        },
+        {
+          "task": "dialogue-parser",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:31:59.143393+00:00",
+          "finished_at": "2026-10-25T13:54:43.349873+00:00"
+        },
+        {
+          "task": "drone-planning-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T13:54:43.361528+00:00",
+          "finished_at": "2026-10-25T14:25:10.194228+00:00"
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:00:28.811368+00:00",
+          "finished_at": "2026-10-25T14:17:57.290446+00:00"
+        },
+        {
+          "task": "earthquake-phase-association",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T14:17:57.295727+00:00",
+          "finished_at": "2026-10-25T14:32:57.619517+00:00"
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:25:10.200581+00:00",
+          "finished_at": "2026-10-25T14:55:34.014242+00:00"
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:32:57.625517+00:00",
+          "finished_at": "2026-10-25T14:45:01.646250+00:00"
+        },
+        {
+          "task": "edit-pdf",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:45:01.657087+00:00",
+          "finished_at": "2026-10-25T14:59:23.411798+00:00"
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:55:34.024249+00:00",
+          "finished_at": "2026-10-25T15:17:01.840210+00:00"
+        },
+        {
+          "task": "energy-market-pricing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T14:59:23.422799+00:00",
+          "finished_at": "2026-10-25T15:32:11.438932+00:00"
+        },
+        {
+          "task": "energy-unit-commitment",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:17:01.854914+00:00",
+          "finished_at": "2026-10-25T15:34:06.131963+00:00"
+        },
+        {
+          "task": "enterprise-information-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:32:11.445103+00:00",
+          "finished_at": "2026-10-25T16:01:13.133247+00:00"
+        },
+        {
+          "task": "exam-block-sequencing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:34:06.137535+00:00",
+          "finished_at": "2026-10-25T15:55:17.300619+00:00"
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:40:16.486946+00:00",
+          "finished_at": "2026-10-25T15:50:57.172979+00:00"
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T15:50:57.184595+00:00",
+          "finished_at": "2026-10-25T16:46:57.412054+00:00"
+        },
+        {
+          "task": "financial-modeling-qa",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T15:55:17.312202+00:00",
+          "finished_at": "2026-10-25T16:05:57.049108+00:00"
+        },
+        {
+          "task": "fix-build-agentops",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:01:13.145718+00:00",
+          "finished_at": "2026-10-25T16:15:59.112394+00:00"
+        },
+        {
+          "task": "fix-build-google-auto",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:05:57.060824+00:00",
+          "finished_at": "2026-10-25T16:25:59.296506+00:00"
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "queued",
+          "started_at": "2026-10-25T16:15:59.131243+00:00",
+          "finished_at": "2026-10-25T16:15:59.407435+00:00"
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:15:59.420825+00:00",
+          "finished_at": "2026-10-25T16:33:31.469545+00:00"
+        },
+        {
+          "task": "fix-visual-stability",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:25:59.309543+00:00",
+          "finished_at": "2026-10-25T16:43:31.658011+00:00"
+        },
+        {
+          "task": "flink-query",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T16:33:31.480828+00:00",
+          "finished_at": "2026-10-25T16:53:31.855280+00:00"
+        },
+        {
+          "task": "flood-risk-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:43:31.663315+00:00",
+          "finished_at": "2026-10-25T17:17:17.046996+00:00"
+        },
+        {
+          "task": "glm-lake-mendota",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:46:57.422654+00:00",
+          "finished_at": "2026-10-25T17:27:43.638810+00:00"
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T16:53:31.869015+00:00",
+          "finished_at": "2026-10-25T17:44:59.829379+00:00"
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:17:17.060375+00:00",
+          "finished_at": "2026-10-25T17:51:53.228627+00:00"
+        },
+        {
+          "task": "hvac-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:26:48.220207+00:00",
+          "finished_at": "2026-10-25T17:36:09.568545+00:00"
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:27:43.657574+00:00",
+          "finished_at": "2026-10-25T18:00:08.227811+00:00"
+        },
+        {
+          "task": "jax-computing-basics",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-25T17:36:09.585131+00:00",
+          "finished_at": "2026-10-25T17:48:03.947448+00:00"
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-25T17:44:59.841192+00:00",
+          "finished_at": "2026-10-25T18:00:07.940566+00:00"
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-25T17:48:03.957457+00:00",
+          "finished_at": "2026-10-25T17:59:55.229614+00:00"
+        },
+        {
+          "task": "lake-warming-attribution",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.427933+00:00",
+          "finished_at": "2026-10-26T01:37:28.164534+00:00"
+        },
+        {
+          "task": "latex-formula-extraction",
+          "attempt": 2,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.247591+00:00",
+          "finished_at": "2026-10-26T03:56:39.516822+00:00"
+        },
+        {
+          "task": "lean4-proof",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:23:05.428933+00:00",
+          "finished_at": "2026-10-26T01:33:35.146452+00:00"
+        },
+        {
+          "task": "llm-prefix-cache-replay",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PASSED",
+          "score": 1.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:23:05.429933+00:00",
+          "finished_at": "2026-10-26T01:36:04.056010+00:00"
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:33:35.158240+00:00",
+          "finished_at": "2026-10-26T02:05:38.763285+00:00"
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "VERIFIER_ERROR",
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:36:04.068299+00:00",
+          "finished_at": "2026-10-26T01:55:58.105955+00:00"
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:37:28.176541+00:00",
+          "finished_at": "2026-10-26T01:49:42.475053+00:00"
+        },
+        {
+          "task": "mario-coin-counting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:49:42.487680+00:00",
+          "finished_at": "2026-10-26T01:59:42.805287+00:00"
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T01:55:58.123869+00:00",
+          "finished_at": "2026-10-26T02:17:34.586284+00:00"
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T01:59:42.817286+00:00",
+          "finished_at": "2026-10-26T02:13:20.644441+00:00"
+        },
+        {
+          "task": "offer-letter-generator",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:05:38.782210+00:00",
+          "finished_at": "2026-10-26T02:23:21.686888+00:00"
+        },
+        {
+          "task": "organize-messy-files",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:13:20.654198+00:00",
+          "finished_at": "2026-10-26T02:23:37.792690+00:00"
+        },
+        {
+          "task": "paper-anonymizer",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:17:34.597477+00:00",
+          "finished_at": "2026-10-26T02:23:53.587004+00:00"
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "PREFLIGHT_ERROR",
+          "score": null,
+          "failed_phase": "workspace_preflight",
+          "started_at": "2026-10-26T02:23:21.698071+00:00",
+          "finished_at": "2026-10-26T02:25:30.792779+00:00"
+        },
+        {
+          "task": "paratransit-routing",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:37.804895+00:00",
+          "finished_at": "2026-10-26T02:25:05.718699+00:00"
+        },
+        {
+          "task": "pddl-airport-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:23:53.597004+00:00",
+          "finished_at": "2026-10-26T02:25:45.410169+00:00"
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T02:25:05.730846+00:00",
+          "finished_at": "2026-10-26T02:25:51.257911+00:00"
+        },
+        {
+          "task": "pdf-excel-diff",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.267891+00:00",
+          "finished_at": "2026-10-26T04:17:23.780236+00:00"
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:36:39.265890+00:00",
+          "finished_at": "2026-10-26T04:06:39.836390+00:00"
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T03:36:39.266890+00:00",
+          "finished_at": "2026-10-26T04:36:17.428016+00:00"
+        },
+        {
+          "task": "protein-expression-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T03:56:39.538350+00:00",
+          "finished_at": "2026-10-26T04:42:25.085879+00:00"
+        },
+        {
+          "task": "python-scala-translation",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:06:39.865147+00:00",
+          "finished_at": "2026-10-26T04:27:24.032280+00:00"
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:17:23.818511+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "r2r-mpc-control",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "EXECUTION_FAILED",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:27:24.054956+00:00",
+          "finished_at": "2026-10-26T05:32:39.692812+00:00"
+        },
+        {
+          "task": "radar-vital-signs",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TIMEOUT",
+          "score": 0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T04:36:17.443963+00:00",
+          "finished_at": "2026-10-26T05:35:00.398561+00:00"
+        },
+        {
+          "task": "react-performance-debugging",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T04:42:25.101145+00:00",
+          "finished_at": "2026-10-26T05:14:16.021574+00:00"
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:14:16.034276+00:00",
+          "finished_at": "2026-10-26T05:24:17.950866+00:00"
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "TASK_FAILED",
+          "score": 0.0,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:24:17.968589+00:00",
+          "finished_at": "2026-10-26T05:34:18.793860+00:00"
+        },
+        {
+          "task": "sec-financial-report",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:32:39.710747+00:00",
+          "finished_at": "2026-10-26T05:42:40.670234+00:00"
+        },
+        {
+          "task": "seismic-phase-picking",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:34:18.818284+00:00",
+          "finished_at": "2026-10-26T05:57:40.981040+00:00"
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "attempt": 1,
+          "phase": "build",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:35:00.419912+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "shock-analysis-demand",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:42:40.703501+00:00",
+          "finished_at": null
+        },
+        {
+          "task": "shock-analysis-supply",
+          "attempt": 1,
+          "phase": "queued",
+          "status": "RUNNING",
+          "outcome": null,
+          "score": null,
+          "failed_phase": null,
+          "started_at": "2026-10-26T05:57:40.995016+00:00",
+          "finished_at": null
+        }
+      ],
+      "new_finished_tasks": [
+        {
+          "task": "seismic-phase-picking",
+          "attempt": 1,
+          "phase": "finished",
+          "status": "FINISHED",
+          "outcome": "ENVIRONMENT_ERROR",
+          "score": null,
+          "failed_phase": "build",
+          "started_at": "2026-10-26T05:34:18.818284+00:00",
+          "finished_at": "2026-10-26T05:57:40.981040+00:00"
+        }
+      ],
+      "runner_alive": true,
+      "docker_inspect": [
+        "/nab-model-20261025-195147-f17d59ed-c79fa2 running=true oom=false exit=0"
+      ],
+      "docker_stats": [
+        "nab-model-20261025-195147-f17d59ed-c79fa2 CPU=0.01% MEM=40.86MiB / 256MiB"
+      ],
+      "oom_observed": false,
+      "proxy_error_kinds": {
+        "CLIENT_DISCONNECTED": 6
+      },
+      "proxy_error_delta": {
+        "CLIENT_DISCONNECTED": 0
+      },
+      "provider_incidents": [],
+      "client_disconnect_classifications": [],
+      "quota_wait_errors": 0,
+      "decision": "HOLD_4_MONITOR",
+      "reason": "Hold4: continue original batch with declared resource reservations. Review any new incidents before changing concurrency; environment remediation remains deferred until original tasks, analysis and cleanup finish.",
+      "safe_monitor_followup": {
+        "at": "2026-10-26T05:59:18.875606+00:00",
+        "scoped_orphan_cleanup": [
+          {
+            "task": "seismic-phase-picking",
+            "attempt": 1,
+            "pid": 6672,
+            "parent_pid": 2044,
+            "parent_absent": true,
+            "exact_image_and_context_verified": true,
+            "stopped": true
+          }
+        ],
+        "native_cancel_classifications_refined": [],
+        "explicit_retry_queue_exists": false
+      }
     }
   ],
   "latest_decision": {
     "jobs": 4,
     "action": "hold",
-    "at": "2026-10-26T04:44:06.433612+00:00",
+    "at": "2026-10-26T05:59:05.548124+00:00",
     "reason": "Continue original unfinished tasks only at the existing concurrency; preserve all ended results and require user approval for retests. Scoped expired-build cleanup and bounded native cancellation correlation completed; do not equate local duplication cancellation with provider throttling."
   },
-  "last_adverse_at": "2026-10-26T04:42:25.085879+00:00",
-  "stability_window_started_at": "2026-10-26T04:42:25.085879+00:00",
+  "last_adverse_at": "2026-10-26T05:57:40.981040+00:00",
+  "stability_window_started_at": "2026-10-26T05:57:40.981040+00:00",
   "stability_window_rule": "Use max(level_started_at,last_adverse_at); never reuse the previous-level stability window.",
-  "next_promotion_not_before": "2026-10-26T05:12:25.085879+00:00",
+  "next_promotion_not_before": "2026-10-26T06:27:40.981040+00:00",
   "maximum_jobs_reached": true,
   "model_access_incident": "model-access-incident.json",
   "gateway_epoch_started_at": "2026-10-26T03:36:39.236176+00:00"

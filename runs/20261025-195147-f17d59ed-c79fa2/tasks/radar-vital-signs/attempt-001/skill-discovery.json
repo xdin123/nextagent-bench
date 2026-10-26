@@ -1,0 +1,22 @@
+{
+  "registered": [
+    "radar-signal-processing",
+    "radar-vital-signs",
+    "vital-sign-extraction"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "radar-signal-processing"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "radar-vital-signs"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "vital-sign-extraction"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

@@ -1,0 +1,17 @@
+{
+  "registered": [
+    "pdf",
+    "xlsx"
+  ],
+  "diagnostics": [
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "pdf"
+    },
+    {
+      "event": "skill.discovery.registered",
+      "skillId": "xlsx"
+    }
+  ],
+  "source": "system-local structured startup discovery diagnostics"
+}

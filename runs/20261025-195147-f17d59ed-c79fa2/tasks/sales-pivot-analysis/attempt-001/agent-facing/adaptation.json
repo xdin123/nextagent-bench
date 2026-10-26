@@ -1,0 +1,45 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "pdf",
+      "directory": "pdf",
+      "description": "ALWAYS use this skill instead of the Read tool for PDF files. The Read tool cannot extract PDF tables properly. Use this skill when: (1) Reading ANY PDF file, (2) Extracting tables from PDFs, (3) Converting PDF tables to pandas DataFrames, (4) Processing multi-page PDFs",
+      "sha256": "332f39fecedcfef2fa73108937e1b2d8c6789a53067a92fed8cadd9ec9e62305"
+    },
+    {
+      "name": "xlsx",
+      "directory": "xlsx",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and pivot tables. When Claude needs to work with spreadsheets (.xlsx files) for: (1) Creating new spreadsheets with data and formatting, (2) Reading or analyzing Excel data with pandas, (3) Creating pivot tables programmatically with openpyxl, (4) Building multi-sheet workbooks with source data and pivot table sheets, or (5) Any Excel file operations",
+      "sha256": "845c73412be7cb9c1fcba4236a2102e8a52f0a83732496f03b3d95a0458c1ace"
+    }
+  ],
+  "verifier_sha": "89a25f079630a5015cafce30c8bd9d94b314de7efeaf95fbe3b6dffdae1797a1",
+  "prompt_sha": "d00566a9bdce43ffe3d04be20d90b479cde71f5972f68f3ecac7a974d99190ae"
+}

@@ -1,0 +1,43 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+HR_RAW: 15/15 within ±3.0 bpm
+BR_RAW: 15/15 within ±2.0 bpm
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-8.3.2, pluggy-1.7.0 -- /usr/local/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 13 items
+
+../../../../../../../verifier/test_outputs.py::test_all_recordings_present PASSED [  7%]
+../../../../../../../verifier/test_outputs.py::test_br_below_hr PASSED   [ 15%]
+../../../../../../../verifier/test_outputs.py::test_heart_rate[5] PASSED [ 23%]
+../../../../../../../verifier/test_outputs.py::test_heart_rate[7] PASSED [ 30%]
+../../../../../../../verifier/test_outputs.py::test_heart_rate[9] PASSED [ 38%]
+../../../../../../../verifier/test_outputs.py::test_heart_rate[11] PASSED [ 46%]
+../../../../../../../verifier/test_outputs.py::test_heart_rate[13] PASSED [ 53%]
+../../../../../../../verifier/test_outputs.py::test_breathing_rate[5] PASSED [ 61%]
+../../../../../../../verifier/test_outputs.py::test_breathing_rate[7] PASSED [ 69%]
+../../../../../../../verifier/test_outputs.py::test_breathing_rate[9] PASSED [ 76%]
+../../../../../../../verifier/test_outputs.py::test_breathing_rate[11] PASSED [ 84%]
+../../../../../../../verifier/test_outputs.py::test_breathing_rate[13] PASSED [ 92%]
+../../../../../../../verifier/test_outputs.py::test_no_harmonic_errors PASSED [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../../../../../../../verifier/test_outputs.py::test_all_recordings_present
+PASSED ../../../../../../../verifier/test_outputs.py::test_br_below_hr
+PASSED ../../../../../../../verifier/test_outputs.py::test_heart_rate[5]
+PASSED ../../../../../../../verifier/test_outputs.py::test_heart_rate[7]
+PASSED ../../../../../../../verifier/test_outputs.py::test_heart_rate[9]
+PASSED ../../../../../../../verifier/test_outputs.py::test_heart_rate[11]
+PASSED ../../../../../../../verifier/test_outputs.py::test_heart_rate[13]
+PASSED ../../../../../../../verifier/test_outputs.py::test_breathing_rate[5]
+PASSED ../../../../../../../verifier/test_outputs.py::test_breathing_rate[7]
+PASSED ../../../../../../../verifier/test_outputs.py::test_breathing_rate[9]
+PASSED ../../../../../../../verifier/test_outputs.py::test_breathing_rate[11]
+PASSED ../../../../../../../verifier/test_outputs.py::test_breathing_rate[13]
+PASSED ../../../../../../../verifier/test_outputs.py::test_no_harmonic_errors
+============================== 13 passed in 0.02s ==============================

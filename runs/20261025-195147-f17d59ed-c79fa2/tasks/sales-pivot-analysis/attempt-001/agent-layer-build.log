@@ -1,0 +1,52 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 412B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nextagent-bench/environment:e2ddac18d0fda820cb5f
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/nextagent-bench/framework:f3ac172ab414d366bbd9
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/node:22.22.0-bookworm-slim
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context:
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [node_runtime 1/1] FROM docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94
+#6 resolve docker.io/library/node:22.22.0-bookworm-slim@sha256:dd9d21971ec4395903fa6143c2b9267d048ae01ca6d3ea96f16cb30df6187d94 0.0s done
+#6 CACHED
+
+#7 FROM docker.io/nextagent-bench/framework:f3ac172ab414d366bbd9@sha256:9652230dd06c9cb4a6e05416a5bea68475b18acd0a6fe1e72795e076d123f249
+#7 resolve docker.io/nextagent-bench/framework:f3ac172ab414d366bbd9@sha256:9652230dd06c9cb4a6e05416a5bea68475b18acd0a6fe1e72795e076d123f249 0.0s done
+#7 CACHED
+
+#8 [stage-1 1/4] FROM docker.io/nextagent-bench/environment:e2ddac18d0fda820cb5f@sha256:d3d8370bd7ec4c2267244569d3ed69912edb1688291f12455cf51fcdbe75610e
+#8 resolve docker.io/nextagent-bench/environment:e2ddac18d0fda820cb5f@sha256:d3d8370bd7ec4c2267244569d3ed69912edb1688291f12455cf51fcdbe75610e 0.0s done
+#8 DONE 0.1s
+
+#9 [stage-1 2/4] COPY --from=node_runtime /usr/local/bin/node /opt/na-eval/node/bin/node
+#9 DONE 0.3s
+
+#10 [stage-1 3/4] COPY --from=nextagent-bench/framework:f3ac172ab414d366bbd9 /opt/nextagent/ /opt/nextagent/
+#10 DONE 10.4s
+
+#11 [stage-1 4/4] COPY --from=nextagent-bench/framework:f3ac172ab414d366bbd9 /opt/na-eval/runtime/ /opt/na-eval/runtime/
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 10.3s done
+#12 exporting manifest sha256:cfe268bd0670cf1379335231cfab35153b5c5a5914d842bac7a2567966df03a5 done
+#12 exporting config sha256:686d202cacb34b0a9104d1e41bc8ae890f3dcb9f21556897702d5b78fd912c27 done
+#12 exporting attestation manifest sha256:687bbc3b6e24ff5c81285b16b9b24d721fb7692f54df7ef826c77295b793e8d6 0.0s done
+#12 exporting manifest list sha256:d9a12ad21711c693ed67e5fdd1bbb546b6f9fdbf2f6d1ee54650b77b3d4332d5 0.0s done
+#12 naming to docker.io/nextagent-bench/task:7877b8862e0e161f1523 done
+#12 unpacking to docker.io/nextagent-bench/task:7877b8862e0e161f1523
+#12 unpacking to docker.io/nextagent-bench/task:7877b8862e0e161f1523 6.1s done
+#12 DONE 16.5s

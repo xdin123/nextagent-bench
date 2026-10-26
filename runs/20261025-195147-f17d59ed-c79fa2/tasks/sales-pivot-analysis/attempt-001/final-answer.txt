@@ -1,0 +1,19 @@
+Done. `workspace/demographic_analysis.xlsx` is created with all 5 sheets, and every pivot was cross-checked against the source data (all match exactly).
+
+**How the data was combined:**
+- **Population** (PDF, 74 pages): 2,454 SA2 regions with `STATE` and `POPULATION_2023`
+- **Income** (Excel, 2,450 rows): no STATE column, so I joined on `SA2_CODE`; 45 regions had `np` placeholders (treated as null)
+
+**The 5 sheets:**
+1. **Population by State** — Sum of POPULATION_2023 (total: 26,648,878)
+2. **Earners by State** — Sum of EARNERS (total: 17,191,790)
+3. **Regions by State** — Count of SA2 regions (total: 2,454)
+4. **State Income Quartile** — Sum of EARNERS by state × quartile. Quartile boundaries from MEDIAN_INCOME across all 2,405 income regions: Q1 ≤ 51,436 | Q2 ≤ 58,213 | Q3 ≤ 65,778 | Q4 > 65,778
+5. **SourceData** — all 2,454 rows with the original columns plus the two new ones:
+   - `Quarter` (Q1–Q4 by MEDIAN_INCOME; blank for the 49 regions with no income)
+   - `Total` = EARNERS × MEDIAN_INCOME (verified, max deviation 0.0)
+
+**Notes:**
+- The 4 "Other Territories" regions (Christmas Island, Cocos, Jervis Bay, Norfolk Island) have population but no income data, so they show 0 earners and blank Quarter/Total.
+- Pivot sheets include Grand Total rows; each sheet has a frozen header and the quartile sheet carries a footnote with the boundary values.
+- 8 SA2 region names differ slightly between the two sources (apostrophe/encoding artifacts from PDF extraction) — the join is keyed on SA2_CODE, so no data was affected.

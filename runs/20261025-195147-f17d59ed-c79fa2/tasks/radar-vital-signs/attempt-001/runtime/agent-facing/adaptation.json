@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "physical": "/root/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "~/.claude/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/skills",
+      "logical": "workspace/skills",
+      "relocate": false
+    },
+    {
+      "physical": "/root",
+      "logical": "workspace",
+      "relocate": true
+    },
+    {
+      "physical": "/tmp",
+      "logical": "temp",
+      "relocate": true
+    }
+  ],
+  "provided_skills": [
+    {
+      "name": "radar-signal-processing",
+      "directory": "radar-signal-processing",
+      "description": "Parse raw radar I/Q captures (CW or FMCW mmWave) and produce a cleaned 1-D slow-time signal ready for motion or vital-signs analysis. Use when Claude needs to read interleaved I/Q binary, do a Range FFT on FMCW chirps, remove static clutter, pick a subject range bin, extract phase with unwrapping, or debug why a radar pipeline is returning garbage. Not for pulse/UWB range gating, MIMO beamforming, or Doppler-only gesture radar.",
+      "sha256": "0f1194ad676bf02d4477fc14ffd799fe913dde632572cd5378788314c18f9e0f"
+    },
+    {
+      "name": "radar-vital-signs",
+      "directory": "radar-vital-signs",
+      "description": "End-to-end pipeline for extracting heart rate (HR) and breathing rate (BR) from raw short-range radar I/Q captures — both continuous-wave (CW, 24 GHz clinical boards) and FMCW mmWave (60/77 GHz, TI IWR/AWR). Use when Claude needs to parse interleaved I/Q binary, do a Range FFT on FMCW chirps, remove static clutter, pick a subject range bin, extract phase with unwrapping, design HR/BR bandpass filters, pick a peak frequency via PSD, reject the HR second harmonic that often dominates the fundamental, or handle respiration-harmonic leakage on slow breathers. Not for pulse/UWB range gating, MIMO beamforming, Doppler-only gesture radar, arrhythmia detection, or multi-subject source separation.",
+      "sha256": "b003f824a41198da0d5d3a373646edfa231d3d6a43ef4d94cb95578f5c97551a"
+    },
+    {
+      "name": "vital-sign-extraction",
+      "directory": "vital-sign-extraction",
+      "description": "Estimate heart rate (HR) and breathing rate (BR) in bpm from a cleaned 1-D physiological time series such as radar phase, WiFi CSI amplitude, PPG, or a chest-motion signal. Use when Claude needs to choose HR/BR bandpass edges, pick a peak frequency from a noisy band, reject the HR second harmonic that often dominates the fundamental, handle respiration-harmonic leakage into the HR band on slow breathers, or flag low-confidence estimates. Not for arrhythmia / beat-to-beat analysis, multi-subject source separation, or rapidly non-stationary rates.",
+      "sha256": "aff09b876c5c3069161e3b8637cb63db5b4e32904dc3671ed91e66251942c673"
+    }
+  ],
+  "verifier_sha": "88a81047a9612c44cb8ef6c72fd325924b76516e77b0bae4304a4a477026cdf0",
+  "prompt_sha": "28306305167f215a54dbebffef9beaeb71ca477db60437df57975891223dafa5"
+}

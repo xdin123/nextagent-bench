@@ -135,6 +135,26 @@
       "task": "python-scala-translation",
       "attempt": 1,
       "failed_phase": "build"
+    },
+    {
+      "task": "react-performance-debugging",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "reserves-at-risk-calc",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "sec-financial-report",
+      "attempt": 1,
+      "failed_phase": "build"
+    },
+    {
+      "task": "seismic-phase-picking",
+      "attempt": 1,
+      "failed_phase": "build"
     }
   ],
   "repair_scope": [
@@ -157,7 +177,7 @@
   },
   "version_policy": "If bench runtime/build scripts need repair after the initial run, test and record a genuine new source snapshot/upgrade; never forge old hashes or edit frozen input snapshots.",
   "reporting": "Regenerate combined report using first valid scored attempt, retain all initial invalid attempts and every retest. If remediation remains blocked, report facts rather than retry indefinitely.",
-  "last_observed_at": "2026-10-26T04:44:06.433612+00:00",
+  "last_observed_at": "2026-10-26T05:59:05.548124+00:00",
   "additional_environment_blockers": [
     {
       "task": "fix-druid-loophole-cve",

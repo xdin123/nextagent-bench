@@ -5,7 +5,7 @@
   "model": "qwen3.8-27b",
   "framework_sha": "f17d59ed60bb55878db65750eee6cc591efe52c97351fb2c1ed850f9ff6b75a5",
   "started_at": "2026-10-26T04:17:23.818511+00:00",
-  "phase": "queued",
+  "phase": "build",
   "status": "RUNNING",
   "budgets": {
     "task": "quantum-numerical-simulation",
@@ -21,9 +21,11 @@
   },
   "score": null,
   "reward": null,
-  "phase_seconds": {},
+  "phase_seconds": {
+    "queued": 6017.156
+  },
   "artifact_errors": [],
   "execution_adapter_sha": "351d10db82ae26ed682cbe21f4a410506bc2b8d9a0c03c5d1fdba0892ddc03f5",
   "execution_concurrency": 4,
-  "elapsed_seconds": 0.0
+  "elapsed_seconds": 6017.156
 }

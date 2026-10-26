@@ -1,0 +1,92 @@
+{
+  "results": {
+    "tool": {
+      "name": "pytest",
+      "version": "8.4.1"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 0,
+      "failed": 6,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1792992756.987138,
+      "stop": 1792992757.2611814
+    },
+    "tests": [
+      {
+        "name": "test_outputs.py::TestControllerParams::test_controller_params",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00046303599992825184,
+        "start": 1792992757.2256467,
+        "stop": 1792992757.2376018,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestControllerParams object at 0x77a7329a0e30>\n\n    def test_controller_params(self):\n>       params = load_json(CONTROLLER_PARAMS)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:80: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/controller_params.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/controller_params.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestControllerParams::test_linearization_correctness",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0003460769994489965,
+        "start": 1792992757.2378674,
+        "stop": 1792992757.2429533,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestControllerParams object at 0x77a7375938f0>\n\n    def test_linearization_correctness(self):\n        \"\"\"Verify A, B matrices are correctly derived from dynamics.\"\"\"\n>       params = load_json(CONTROLLER_PARAMS)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:110: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/controller_params.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/controller_params.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestControlLog::test_control_log",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00027123700056108646,
+        "start": 1792992757.2431774,
+        "stop": 1792992757.2475195,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestControlLog object at 0x77a73755bc80>\n\n    def test_control_log(self):\n>       data = load_json(CONTROL_LOG)\n               ^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:145: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/control_log.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestMetrics::test_metrics",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00027114999920740956,
+        "start": 1792992757.2478127,
+        "stop": 1792992757.2521267,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestMetrics object at 0x77a73755a000>\n\n    def test_metrics(self):\n>       metrics = load_json(METRICS)\n                  ^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:177: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/metrics.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/metrics.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestPerformance::test_performance",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.00024702499922568677,
+        "start": 1792992757.2523355,
+        "stop": 1792992757.2565374,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestPerformance object at 0x77a72b42b5f0>\n\n    def test_performance(self):\n>       control = load_json(CONTROL_LOG)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:212: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/control_log.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      },
+      {
+        "name": "test_outputs.py::TestSafety::test_safety",
+        "status": "failed",
+        "raw_status": "call_failed",
+        "duration": 0.0002599459994598874,
+        "start": 1792992757.2567701,
+        "stop": 1792992757.2610712,
+        "retries": 0,
+        "file_path": "test_outputs.py",
+        "trace": "self = <test_outputs.TestSafety object at 0x77a72b450050>\n\n    def test_safety(self):\n>       control = load_json(CONTROL_LOG)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:259: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfilepath = '/root/control_log.json'\n\n    def load_json(filepath):\n>       with open(filepath, 'r') as f:\n             ^^^^^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/root/control_log.json'\n\n/verifier/test_outputs.py:21: FileNotFoundError",
+        "message": "The test failed in the call phase"
+      }
+    ]
+  }
+}
