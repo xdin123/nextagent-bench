@@ -180,7 +180,7 @@ def main(arguments: list[str] | None = None) -> int:
         print("NextAgent benchmark: no Codex or host Node.js required.\n"
               "  python bench.py setup --framework <release.tar.gz> [--dataset <skillsbench-root>]\n"
               "  python bench.py doctor\n"
-              "  python bench.py run --suite smoke --jobs 2 [--background] [--credentials-file <keys.json>]\n"
+              "  python bench.py run --suite full --jobs 2 [--background] [--credentials-file <keys.json>]\n"
               "  python bench.py status|metrics|stop|resume|report <run-id>\n"
               "  python bench.py bundle [--with-dataset] [--output <handoff.zip>]\n"
               "Core command help: python bench.py <command> --help\n"

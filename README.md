@@ -28,11 +28,10 @@ python bench.py setup --framework /path/to/nextagent-linux-x64.tar.gz
 
 ```text
 python bench.py doctor
-python bench.py run --suite smoke --jobs 2 --credentials-file credentials.local.json
 python bench.py run --suite full --jobs 2 --credentials-file credentials.local.json --background
 ```
 
-若已设置环境变量，不需要 `--credentials-file`。环境检查不调用模型；smoke和full会实际调用模型并消耗账号配额。多个共享账号key不能叠加额度。
+若已设置环境变量，不需要 `--credentials-file`。环境检查不调用模型；正式评测会实际调用模型并消耗账号配额。多个共享账号key不能叠加额度。
 
 ## 后续换框架与管理
 

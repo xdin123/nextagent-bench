@@ -65,7 +65,7 @@ python3 bench.py doctor
 多key可复制credentials.example.json为credentials.local.json，填写自己的name/key列表：
 
 ```text
-python bench.py run --suite smoke --jobs 2 --credentials-file credentials.local.json
+python bench.py run --suite full --jobs 2 --credentials-file credentials.local.json --background
 ```
 
 该文件是明文，应限制本机访问，不发给别人，不提交Git。也支持NAB_API_KEYS JSON环境变量。Windows的Set-ModelCredential.ps1仍可保存当前用户的DPAPI加密凭据，通用入口可读取；加密文件绑定用户/机器，不能给另一个人复用。只有未提供环境凭据时才读取本机加密凭据。
@@ -75,7 +75,6 @@ doctor不调用模型，不检查余额；模型开通/余额由使用者确认�
 ## 启动与管理
 
 ```text
-python bench.py run --suite smoke --jobs 2
 python bench.py run --suite full --jobs 2 --background
 python bench.py status
 python bench.py metrics <run-id>

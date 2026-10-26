@@ -5,9 +5,6 @@ base_url: https://maas.qianwenaiapi.com/compatible-mode/v1
 jobs: 2
 skill_mode: with-skill
 suites:
-  smoke:
-  - 3d-scan-calc
-  - dialogue-parser
   telecom:
   - azure-bgp-oscillation-route-leak
   - suricata-custom-exfil
